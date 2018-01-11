@@ -1,0 +1,14 @@
+<?php
+
+/*function alapjarat_preprocess_page(&$vars){
+ $path = $_GET['q'];
+
+  if (strpos($path,'kiskutya') !== false) {
+    drupal_set_title('Alapjárat');
+  }
+}*/
+
+function alapjarat_preprocess_html(&$vars)
+{
+	$vars['head_title'] = implode(' | ', array(drupal_set_title('Alapjárat')));
+}
