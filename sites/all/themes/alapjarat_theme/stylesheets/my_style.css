@@ -1,0 +1,22 @@
+/* line 1, ../sass/my_style.sass */
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 5, ../sass/my_style.sass */
+body #main_menu {
+  background-color: #444;
+  border-top: 5px solid #d82222;
+  height: 45px;
+}
+/* line 10, ../sass/my_style.sass */
+body #main_menu li.leaf {
+  display: inline;
+}
+/* line 13, ../sass/my_style.sass */
+body #main_menu li.leaf a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  font-family: Montserrat;
+}
