@@ -1,11 +1,21 @@
+body::before
+	background-image: none
+
 body
 	font-size: 14px
 	font-family: 'Open Sans',sans-serif
+	width: 1140px
+	margin-left: auto
+	margin-right: auto
+
+	div.panel-flexible.panels-flexible-1.clearfix
+		background-color: thistle
 
 	#main_menu
 		background-color: #444
 		border-top: 5px solid #d82222
 		height: 45px
+		padding-left: 25px
 
 		li.leaf
 			display: inline
@@ -14,4 +24,9 @@ body
 				color: white
 				text-decoration: none
 				line-height: 40px
+				padding: 10px 10px 10px 10px
 				font-family: Montserrat
+
+			a:hover
+				background-color: white
+				color: #444

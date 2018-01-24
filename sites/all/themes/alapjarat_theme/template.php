@@ -103,14 +103,15 @@ function alapjarat_theme_preprocess_html(&$variables) {
   }
 
   $element = array(
-  '#tag' => 'link', // The #tag is the html tag - 
-  '#attributes' => array( // Set up an array of attributes inside the tag
-    'href' => 'https://fonts.googleapis.com/css?family=Montserrat', 
-    'rel' => 'stylesheet',
-    'type' => 'text/css',
-  ),
-);
-drupal_add_html_head($element);
+    '#tag' => 'link', // The #tag is the html tag - 
+    '#attributes' => array( // Set up an array of attributes inside the tag
+      'href' => 'https://fonts.googleapis.com/css?family=Montserrat', 
+      'rel' => 'stylesheet',
+      'type' => 'text/css',
+    ),
+  );
+  
+  drupal_add_html_head($element, 'google_font_montserrat');
 }
 
 /**

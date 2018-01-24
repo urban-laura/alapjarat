@@ -1,22 +1,41 @@
 /* line 1, ../sass/my_style.sass */
+body::before {
+  background-image: none;
+}
+
+/* line 4, ../sass/my_style.sass */
 body {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 5, ../sass/my_style.sass */
+/* line 11, ../sass/my_style.sass */
+body div.panel-flexible.panels-flexible-1.clearfix {
+  background-color: thistle;
+}
+/* line 14, ../sass/my_style.sass */
 body #main_menu {
   background-color: #444;
   border-top: 5px solid #d82222;
   height: 45px;
+  padding-left: 25px;
 }
-/* line 10, ../sass/my_style.sass */
+/* line 20, ../sass/my_style.sass */
 body #main_menu li.leaf {
   display: inline;
 }
-/* line 13, ../sass/my_style.sass */
+/* line 23, ../sass/my_style.sass */
 body #main_menu li.leaf a {
   color: white;
   text-decoration: none;
   line-height: 40px;
+  padding: 10px 10px 10px 10px;
   font-family: Montserrat;
+}
+/* line 30, ../sass/my_style.sass */
+body #main_menu li.leaf a:hover {
+  background-color: white;
+  color: #444;
 }
