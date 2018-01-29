@@ -4,17 +4,61 @@ body::before
 body
 	font-size: 14px
 	font-family: 'Open Sans',sans-serif
-	width: 1140px
+	max-width: 1140px
+	width: auto
 	margin-left: auto
 	margin-right: auto
 
-	div.panel-flexible.panels-flexible-1.clearfix
-		background-color: thistle
+div.panel-flexible.panels-flexible-1.clearfix
+	background-color: thistle
+
+.letterhead
+	height: 127px
+	padding: 0
+	margim: 0
+
+	.logo
+		padding-top: 8.5px
+		padding-left: 25px
+
+	.letterhead_banner
+		float: right
+		width: auto
+		padding-right: 25px
+
+.second_menu
+
+	li.leaf
+		display: inline
+
+	li.leaf.home
+		margin: 0
+
+	li.leaf a:hover
+		text-decoration: none
+
+	li.leaf a.active
+		color: #444
+
+	#second_menu
+		font-family: Montserrat
+		color: #444
+		font-size: 13px
+		font-weight: bold
+		border-bottom: 1px solid #EAEAEA
+		margin-left: 25px
+		margin-right: 20px
+		margin-bottom: 5px
+		padding-bottom: 5px
+
+.main_menu
+	background-color: #444
+	border-top: 5px solid #d82222
+	height: 45px
+	padding: 0
+	margim: 0
 
 	#main_menu
-		background-color: #444
-		border-top: 5px solid #d82222
-		height: 45px
 		padding-left: 25px
 
 		li.leaf
@@ -24,9 +68,33 @@ body
 				color: white
 				text-decoration: none
 				line-height: 40px
-				padding: 10px 10px 10px 10px
+				padding: 10px
 				font-family: Montserrat
 
 			a:hover
 				background-color: white
 				color: #444
+		
+	.search
+		float: right
+		width: auto
+
+		#search
+			input#edit-search-block-form--2
+				width: 166px
+				height: 34px
+				margin-top: 3px
+				margin-right: 3px
+
+#front_page_first
+	color: white
+
+	.views-field.views-field-title 
+		margin-top: -75px
+		margin-left: 10px
+
+		a
+			font-size: 24px
+			color: white
+
+				
