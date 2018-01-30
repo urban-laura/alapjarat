@@ -12,6 +12,15 @@ body
 div.panel-flexible.panels-flexible-1.clearfix
 	background-color: thistle
 
+li.first.leaf.facebook.mid-685 
+	a
+		text-indent: -9999px
+
+
+li.first.leaf.facebook.mid-685::before
+	content: "\f082"
+	font: normal normal normal 14px/1 FontAwesome
+
 .letterhead
 	height: 127px
 	padding: 0
@@ -31,14 +40,15 @@ div.panel-flexible.panels-flexible-1.clearfix
 	li.leaf
 		display: inline
 
+		a:hover
+			text-decoration: none
+
+		a.active
+		a
+			color: #444
+
 	li.leaf.home
 		margin: 0
-
-	li.leaf a:hover
-		text-decoration: none
-
-	li.leaf a.active
-		color: #444
 
 	#second_menu
 		font-family: Montserrat

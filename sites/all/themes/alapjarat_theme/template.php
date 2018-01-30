@@ -102,16 +102,32 @@ function alapjarat_theme_preprocess_html(&$variables) {
     }
   }
 
-  $element = array(
-    '#tag' => 'link', // The #tag is the html tag - 
-    '#attributes' => array( // Set up an array of attributes inside the tag
-      'href' => 'https://fonts.googleapis.com/css?family=Montserrat', 
-      'rel' => 'stylesheet',
-      'type' => 'text/css',
-    ),
-  );
+  $elements[] = array(
+    'name' => 'google_font_montserrat', 
+    'data' => array(
+      '#tag' => 'link', // The #tag is the html tag - 
+      '#attributes' => array( // Set up an array of attributes inside the tag
+        'href' => 'https://fonts.googleapis.com/css?family=Montserrat', 
+        'rel' => 'stylesheet',
+        'type' => 'text/css',
+      ),
+  ));
+
+  $elements[] = array(
+    'name' => 'font_awesome', 
+    'data' => array(
+      '#tag' => 'link', // The #tag is the html tag - 
+      '#attributes' => array( // Set up an array of attributes inside the tag
+        'href' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', 
+        'rel' => 'stylesheet',
+        'type' => 'text/css',
+      ),
+  ));
   
-  drupal_add_html_head($element, 'google_font_montserrat');
+  foreach ($elements as $element) {
+    drupal_add_html_head($element['data'], $element['name']);
+  }
+  
 }
 
 /**
