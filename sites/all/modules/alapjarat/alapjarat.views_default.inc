@@ -102,7 +102,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'alapjarat_admin',
     'image_link' => '',
   );
   /* Field: Content: Title */
@@ -172,7 +172,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'alapjarat_admin',
     'image_link' => '',
   );
   /* Field: Content: Title */

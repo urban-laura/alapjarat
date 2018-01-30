@@ -21,6 +21,46 @@ function alapjarat_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function alapjarat_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: alapjarat.
+  $styles['alapjarat'] = array(
+    'label' => 'alapjarat',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 728,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: alapjarat_admin.
+  $styles['alapjarat_admin'] = array(
+    'label' => 'alapjarat_admin',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 569,
+          'height' => 360,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function alapjarat_node_info() {

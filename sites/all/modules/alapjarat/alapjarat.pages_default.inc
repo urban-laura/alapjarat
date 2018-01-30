@@ -63,7 +63,7 @@ function alapjarat_default_page_manager_handlers() {
           1 => 'search',
         ),
         'parent' => 'main',
-        'class' => '',
+        'class' => 'main_menu',
         'hide_empty' => 0,
       ),
       2 => array(
@@ -74,7 +74,7 @@ function alapjarat_default_page_manager_handlers() {
           1 => 'banner',
         ),
         'parent' => 'main',
-        'class' => '',
+        'class' => 'letterhead',
         'hide_empty' => 0,
       ),
       3 => array(
@@ -90,7 +90,7 @@ function alapjarat_default_page_manager_handlers() {
       'logo' => array(
         'type' => 'region',
         'title' => 'logo',
-        'width' => 50,
+        'width' => '40',
         'width_type' => '%',
         'parent' => '2',
         'class' => '',
@@ -99,10 +99,10 @@ function alapjarat_default_page_manager_handlers() {
       'banner' => array(
         'type' => 'region',
         'title' => 'banner',
-        'width' => 50,
+        'width' => '60',
         'width_type' => '%',
         'parent' => '2',
-        'class' => '',
+        'class' => 'letterhead_banner',
         'hide_empty' => 0,
       ),
       'second_menu' => array(
@@ -111,13 +111,13 @@ function alapjarat_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '3',
-        'class' => '',
+        'class' => 'second_menu',
         'hide_empty' => 0,
       ),
       'main_menu' => array(
         'type' => 'region',
         'title' => 'main menu',
-        'width' => '70',
+        'width' => '79.99999450748106',
         'width_type' => '%',
         'parent' => '1',
         'class' => '',
@@ -126,10 +126,10 @@ function alapjarat_default_page_manager_handlers() {
       'search' => array(
         'type' => 'region',
         'title' => 'search',
-        'width' => '30.000000000000004',
+        'width' => '20.000005492518945',
         'width_type' => '%',
         'parent' => '1',
-        'class' => '',
+        'class' => 'search',
         'hide_empty' => 0,
       ),
       4 => array(
@@ -168,7 +168,7 @@ function alapjarat_default_page_manager_handlers() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '5',
-        'class' => '',
+        'class' => 'second_menu',
         'hide_empty' => 0,
       ),
       'footer_text' => array(
@@ -290,7 +290,10 @@ function alapjarat_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'logo',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -363,7 +366,10 @@ function alapjarat_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'search',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -386,7 +392,10 @@ function alapjarat_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'second_menu',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -410,7 +419,7 @@ function alapjarat_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'front_page';
   $page->task = 'page';
-  $page->admin_title = '';
+  $page->admin_title = 'Front page';
   $page->admin_description = '';
   $page->path = 'front-page';
   $page->access = array();
@@ -616,7 +625,10 @@ function alapjarat_default_page_manager_pages() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'front_page_first',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
