@@ -8,12 +8,12 @@
   }
 }*/
 
-function alapjarat_preprocess_html(&$vars)
+function alapjarat_common_preprocess_html(&$vars)
 {
 	$vars['head_title'] = implode(' | ', array(drupal_set_title('Alapjárat')));
 }
 
-function alapjarat_form_alter(&$form, &$form_state, $form_id)
+function alapjarat_common_form_alter(&$form, &$form_state, $form_id)
 {
 	if($form_id == 'search_block_form')
 	{
@@ -21,3 +21,11 @@ function alapjarat_form_alter(&$form, &$form_state, $form_id)
 	}
 }
 
+
+function alapjarat_common_ctools_plugin_directory($owner, $plugin_type)
+{
+	if ($owner == 'ctools' && $plugin_type == 'content_types')
+	{
+		return 'plugins/content_types';
+	}
+}

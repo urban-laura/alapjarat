@@ -16,55 +16,116 @@ body {
 
 /* line 12, ../sass/my_style.sass */
 div.panel-flexible.panels-flexible-1.clearfix {
-  background-color: thistle;
+  background: url("paper.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* line 16, ../sass/my_style.sass */
-li.first.leaf.facebook.mid-685 a {
-  text-indent: -9999px;
+/* line 18, ../sass/my_style.sass */
+#social_menu {
+  float: right;
 }
-
-/* line 20, ../sass/my_style.sass */
-li.first.leaf.facebook.mid-685::before {
+/* line 21, ../sass/my_style.sass */
+#social_menu li.leaf {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+/* line 26, ../sass/my_style.sass */
+#social_menu li.leaf a {
+  font-size: 16px;
+  margin-left: -13px;
+  opacity: 0;
+}
+/* line 31, ../sass/my_style.sass */
+#social_menu li.leaf.f {
+  margin-right: 6.6833px;
+}
+/* line 34, ../sass/my_style.sass */
+#social_menu li.leaf.t {
+  margin-right: 6.6833px;
+}
+/* line 37, ../sass/my_style.sass */
+#social_menu li.leaf.g {
+  margin-right: 4.0167px;
+}
+/* line 40, ../sass/my_style.sass */
+#social_menu li.leaf.y {
+  margin-right: 5.7833px;
+}
+/* line 43, ../sass/my_style.sass */
+#social_menu li.leaf.in {
+  margin-right: 2.7167px;
+}
+/* line 46, ../sass/my_style.sass */
+#social_menu li.leaf.p {
+  margin-right: 21px;
+}
+/* line 49, ../sass/my_style.sass */
+#social_menu li.leaf::before {
+  color: #d82222;
+  font: normal normal normal 16px/1 FontAwesome;
+}
+/* line 53, ../sass/my_style.sass */
+#social_menu li.f::before {
   content: "";
-  font: normal normal normal 14px/1 FontAwesome;
+}
+/* line 56, ../sass/my_style.sass */
+#social_menu li.t::before {
+  content: "";
+}
+/* line 59, ../sass/my_style.sass */
+#social_menu li.g::before {
+  content: "";
+}
+/* line 62, ../sass/my_style.sass */
+#social_menu li.y::before {
+  content: "";
+}
+/* line 65, ../sass/my_style.sass */
+#social_menu li.in::before {
+  content: "";
+}
+/* line 68, ../sass/my_style.sass */
+#social_menu li.p::before {
+  content: "";
 }
 
-/* line 24, ../sass/my_style.sass */
+/* line 72, ../sass/my_style.sass */
 .letterhead {
   height: 127px;
   padding: 0;
   margim: 0;
 }
-/* line 29, ../sass/my_style.sass */
+/* line 77, ../sass/my_style.sass */
 .letterhead .logo {
   padding-top: 8.5px;
   padding-left: 25px;
 }
-/* line 33, ../sass/my_style.sass */
+/* line 81, ../sass/my_style.sass */
 .letterhead .letterhead_banner {
   float: right;
   width: auto;
   padding-right: 25px;
 }
 
-/* line 40, ../sass/my_style.sass */
+/* line 88, ../sass/my_style.sass */
 .second_menu li.leaf {
   display: inline;
 }
-/* line 43, ../sass/my_style.sass */
+/* line 91, ../sass/my_style.sass */
 .second_menu li.leaf a:hover {
   text-decoration: none;
 }
-/* line 47, ../sass/my_style.sass */
+/* line 95, ../sass/my_style.sass */
 .second_menu li.leaf a {
   color: #444;
 }
-/* line 50, ../sass/my_style.sass */
+/* line 98, ../sass/my_style.sass */
 .second_menu li.leaf.home {
   margin: 0;
 }
-/* line 53, ../sass/my_style.sass */
+/* line 101, ../sass/my_style.sass */
 .second_menu #second_menu {
   font-family: Montserrat;
   color: #444;
@@ -72,12 +133,12 @@ li.first.leaf.facebook.mid-685::before {
   font-weight: bold;
   border-bottom: 1px solid #EAEAEA;
   margin-left: 25px;
-  margin-right: 20px;
+  margin-right: 18px;
   margin-bottom: 5px;
   padding-bottom: 5px;
 }
 
-/* line 64, ../sass/my_style.sass */
+/* line 112, ../sass/my_style.sass */
 .main_menu {
   background-color: #444;
   border-top: 5px solid #d82222;
@@ -85,15 +146,15 @@ li.first.leaf.facebook.mid-685::before {
   padding: 0;
   margim: 0;
 }
-/* line 71, ../sass/my_style.sass */
+/* line 119, ../sass/my_style.sass */
 .main_menu #main_menu {
   padding-left: 25px;
 }
-/* line 74, ../sass/my_style.sass */
+/* line 122, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf {
   display: inline;
 }
-/* line 77, ../sass/my_style.sass */
+/* line 125, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf a {
   color: white;
   text-decoration: none;
@@ -101,17 +162,17 @@ li.first.leaf.facebook.mid-685::before {
   padding: 10px;
   font-family: Montserrat;
 }
-/* line 84, ../sass/my_style.sass */
+/* line 132, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf a:hover {
   background-color: white;
   color: #444;
 }
-/* line 88, ../sass/my_style.sass */
+/* line 136, ../sass/my_style.sass */
 .main_menu .search {
   float: right;
   width: auto;
 }
-/* line 93, ../sass/my_style.sass */
+/* line 141, ../sass/my_style.sass */
 .main_menu .search #search input#edit-search-block-form--2 {
   width: 166px;
   height: 34px;
@@ -119,16 +180,16 @@ li.first.leaf.facebook.mid-685::before {
   margin-right: 3px;
 }
 
-/* line 99, ../sass/my_style.sass */
+/* line 147, ../sass/my_style.sass */
 #front_page_first {
   color: white;
 }
-/* line 102, ../sass/my_style.sass */
+/* line 150, ../sass/my_style.sass */
 #front_page_first .views-field.views-field-title {
   margin-top: -75px;
   margin-left: 10px;
 }
-/* line 106, ../sass/my_style.sass */
+/* line 154, ../sass/my_style.sass */
 #front_page_first .views-field.views-field-title a {
   font-size: 24px;
   color: white;

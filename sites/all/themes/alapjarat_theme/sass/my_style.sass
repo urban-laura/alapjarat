@@ -10,16 +10,64 @@ body
 	margin-right: auto
 
 div.panel-flexible.panels-flexible-1.clearfix
-	background-color: thistle
+	//background-color: thistle
+	background: url("paper.jpeg")
+	background-size: cover
+	background-position: center
+	
+#social_menu
+	float: right
 
-li.first.leaf.facebook.mid-685 
-	a
-		text-indent: -9999px
+	li.leaf
+		display: inline
+		padding: 0
+		margin: 0
 
+		a
+			font-size: 16px
+			margin-left: -13px
+			opacity: 0
 
-li.first.leaf.facebook.mid-685::before
-	content: "\f082"
-	font: normal normal normal 14px/1 FontAwesome
+	li.leaf.f 
+		margin-right: 6.6833px
+
+	li.leaf.t
+		margin-right: 6.6833px
+
+	li.leaf.g
+		margin-right: 4.0167px
+
+	li.leaf.y
+		margin-right: 5.7833px
+
+	li.leaf.in
+		margin-right: 2.7167px
+
+	li.leaf.p
+		margin-right: 21px
+
+	li.leaf::before
+		color: #d82222
+		font: normal normal normal 16px/1 FontAwesome
+
+	li.f::before
+		content: "\f082"
+		
+	li.t::before
+		content: "\f081"
+		
+	li.g::before
+		content: "\f0d4"
+
+	li.y::before
+		content: "\f166"
+
+	li.in::before
+		content: "\f16d"	
+
+	li.p::before
+		content: "\f0d3"
+		
 
 .letterhead
 	height: 127px
@@ -57,7 +105,7 @@ li.first.leaf.facebook.mid-685::before
 		font-weight: bold
 		border-bottom: 1px solid #EAEAEA
 		margin-left: 25px
-		margin-right: 20px
+		margin-right: 18px
 		margin-bottom: 5px
 		padding-bottom: 5px
 
