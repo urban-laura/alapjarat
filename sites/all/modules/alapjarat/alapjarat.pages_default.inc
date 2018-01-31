@@ -47,11 +47,12 @@ function alapjarat_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'children' => array(
-          0 => 3,
-          1 => 2,
-          2 => 1,
-          3 => 4,
-          4 => 5,
+          0 => 6,
+          1 => 3,
+          2 => 2,
+          3 => 1,
+          4 => 4,
+          5 => 5,
         ),
         'parent' => 'canvas',
       ),
@@ -180,6 +181,35 @@ function alapjarat_default_page_manager_handlers() {
         'class' => '',
         'hide_empty' => 0,
       ),
+      6 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'time',
+          1 => 'so',
+        ),
+        'parent' => 'main',
+        'class' => '',
+        'hide_empty' => 0,
+      ),
+      'so' => array(
+        'type' => 'region',
+        'title' => 'social menu',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '6',
+        'class' => '',
+        'hide_empty' => 0,
+      ),
+      'time' => array(
+        'type' => 'region',
+        'title' => 'time',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '6',
+        'class' => '',
+        'hide_empty' => 0,
+      ),
     ),
   );
   $display->panel_settings = array(
@@ -194,6 +224,8 @@ function alapjarat_default_page_manager_handlers() {
       'main_content' => NULL,
       'footer' => NULL,
       'footer_text' => NULL,
+      'so' => NULL,
+      'time' => NULL,
     ),
   );
   $display->cache = array();
@@ -402,6 +434,56 @@ function alapjarat_default_page_manager_handlers() {
   $pane->uuid = 'ae65dd0a-44cc-4a48-9889-283725898c83';
   $display->content['new-ae65dd0a-44cc-4a48-9889-283725898c83'] = $pane;
   $display->panels['second_menu'][0] = 'new-ae65dd0a-44cc-4a48-9889-283725898c83';
+  $pane = new stdClass();
+  $pane->pid = 'new-7483c71b-aab0-406c-b932-91688659bf75';
+  $pane->panel = 'so';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-social-menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'social_menu',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7483c71b-aab0-406c-b932-91688659bf75';
+  $display->content['new-7483c71b-aab0-406c-b932-91688659bf75'] = $pane;
+  $display->panels['so'][0] = 'new-7483c71b-aab0-406c-b932-91688659bf75';
+  $pane = new stdClass();
+  $pane->pid = 'new-b5cc256f-0f65-4bb4-a954-00c4f06893ad';
+  $pane->panel = 'time';
+  $pane->type = 'header_date';
+  $pane->subtype = 'header_date';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+    'date_format' => 'Y-m-d',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'b5cc256f-0f65-4bb4-a954-00c4f06893ad';
+  $display->content['new-b5cc256f-0f65-4bb4-a954-00c4f06893ad'] = $pane;
+  $display->panels['time'][0] = 'new-b5cc256f-0f65-4bb4-a954-00c4f06893ad';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

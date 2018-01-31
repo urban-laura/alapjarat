@@ -327,24 +327,150 @@ function alapjarat_menu_default_menu_links() {
     'weight' => -44,
     'customized' => 1,
   );
+  // Exported menu link: menu-social-menu_f:http://facebook.com/alapjarat.
+  $menu_links['menu-social-menu_f:http://facebook.com/alapjarat'] = array(
+    'menu_name' => 'menu-social-menu',
+    'link_path' => 'http://facebook.com/alapjarat',
+    'router_path' => '',
+    'link_title' => 'F',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-social-menu_f:http://facebook.com/alapjarat',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-social-menu_g:https://plus.google.com/108474613595405105501?hl=hu.
+  $menu_links['menu-social-menu_g:https://plus.google.com/108474613595405105501?hl=hu'] = array(
+    'menu_name' => 'menu-social-menu',
+    'link_path' => 'https://plus.google.com/108474613595405105501?hl=hu',
+    'router_path' => '',
+    'link_title' => 'G',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-social-menu_g:https://plus.google.com/108474613595405105501?hl=hu',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-social-menu_in:https://instagram.com/alapjarat.
+  $menu_links['menu-social-menu_in:https://instagram.com/alapjarat'] = array(
+    'menu_name' => 'menu-social-menu',
+    'link_path' => 'https://instagram.com/alapjarat',
+    'router_path' => '',
+    'link_title' => 'In',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-social-menu_in:https://instagram.com/alapjarat',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-social-menu_p:https://pinterest.com/alapjarat.
+  $menu_links['menu-social-menu_p:https://pinterest.com/alapjarat'] = array(
+    'menu_name' => 'menu-social-menu',
+    'link_path' => 'https://pinterest.com/alapjarat',
+    'router_path' => '',
+    'link_title' => 'P',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-social-menu_p:https://pinterest.com/alapjarat',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-social-menu_t:http://twitter.com/alapjaratblog.
+  $menu_links['menu-social-menu_t:http://twitter.com/alapjaratblog'] = array(
+    'menu_name' => 'menu-social-menu',
+    'link_path' => 'http://twitter.com/alapjaratblog',
+    'router_path' => '',
+    'link_title' => 'T',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-social-menu_t:http://twitter.com/alapjaratblog',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-social-menu_y:https://www.youtube.com/channel/UCueleOZ2QFAaVSHXheZlFig.
+  $menu_links['menu-social-menu_y:https://www.youtube.com/channel/UCueleOZ2QFAaVSHXheZlFig'] = array(
+    'menu_name' => 'menu-social-menu',
+    'link_path' => 'https://www.youtube.com/channel/UCueleOZ2QFAaVSHXheZlFig',
+    'router_path' => '',
+    'link_title' => 'Y',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-social-menu_y:https://www.youtube.com/channel/UCueleOZ2QFAaVSHXheZlFig',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Big world');
   t('Calculators');
   t('Communal');
+  t('F');
+  t('G');
   t('Helpful info');
   t('Home');
   t('Impress');
+  t('In');
   t('Legal notice');
   t('Media');
   t('Media offer');
+  t('P');
   t('Partners');
   t('Premium');
   t('Race');
   t('Relationship');
+  t('T');
   t('Tech');
   t('Test');
+  t('Y');
 
   return $menu_links;
 }

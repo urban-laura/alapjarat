@@ -26,6 +26,21 @@ function alapjarat_views_api($module = NULL, $api = NULL) {
 function alapjarat_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 4_small.
+  $styles['4_small'] = array(
+    'label' => '4_small 274.5x175',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 274.5,
+          'height' => 175,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: alapjarat.
   $styles['alapjarat'] = array(
     'label' => 'alapjarat',
@@ -44,7 +59,7 @@ function alapjarat_image_default_styles() {
 
   // Exported image style: alapjarat_admin.
   $styles['alapjarat_admin'] = array(
-    'label' => 'alapjarat_admin',
+    'label' => '1_big 569x360',
     'effects' => array(
       4 => array(
         'name' => 'image_scale_and_crop',
