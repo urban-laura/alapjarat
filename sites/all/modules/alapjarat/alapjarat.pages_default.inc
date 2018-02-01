@@ -189,7 +189,7 @@ function alapjarat_default_page_manager_handlers() {
           1 => 'so',
         ),
         'parent' => 'main',
-        'class' => '',
+        'class' => 'top',
         'hide_empty' => 0,
       ),
       'so' => array(
@@ -477,7 +477,10 @@ function alapjarat_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'time',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -552,6 +555,8 @@ function alapjarat_default_page_manager_pages() {
           1 => 1,
         ),
         'parent' => 'canvas',
+        'class' => 'front_page',
+        'hide_empty' => 0,
       ),
       'main-row' => array(
         'type' => 'row',
@@ -561,6 +566,8 @@ function alapjarat_default_page_manager_pages() {
           1 => 'four',
         ),
         'parent' => 'main',
+        'class' => '',
+        'hide_empty' => 0,
       ),
       'one' => array(
         'type' => 'region',
