@@ -288,6 +288,7 @@ function alapjarat_theme_id_safe($string) {
  */
 function alapjarat_theme_menu_link(array $variables) {
   $element = $variables['element'];
+ 
   $sub_menu = '';
 
   if ($element['#below']) {

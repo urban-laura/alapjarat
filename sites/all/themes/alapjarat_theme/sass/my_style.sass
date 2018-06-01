@@ -9,11 +9,20 @@ body
 	margin-left: auto
 	margin-right: auto
 
+.panels-flexible-row.panels-flexible-row-2-main-row.panels-flexible-row-first.clearfix
+	padding-bottom: 0px !important
+
 div.panel-flexible.panels-flexible-1.clearfix
 	//background-color: thistle
-	background: url("paper.jpeg")
+	//background: url("paper.jpeg")
 	background-size: cover
 	background-position: center
+
+.panels-flexible-region
+	width: auto
+
+.inside.panels-flexible-region-inside
+	padding: 0px
 
 #time
 	padding-top: 8px
@@ -22,59 +31,63 @@ div.panel-flexible.panels-flexible-1.clearfix
 	padding-left: 43px
 	padding-bottom: 0
 
-#social_menu
+.social_menu
+	width: 50%
 	float: right
-	padding-top: 8px
 
-	li.leaf
-		display: inline
-		padding: 0
-		margin: 0
+	#social_menu
+		float: right
+		padding-top: 8px
 
-		a
-			font-size: 16px
-			margin-left: -13px
-			opacity: 0
+		li.leaf
+			display: inline
+			padding: 0
+			margin: 0
 
-	li.leaf.f 
-		margin-right: 6.6833px
+			a
+				font-size: 16px
+				margin-left: -13px
+				opacity: 0
 
-	li.leaf.t
-		margin-right: 6.6833px
+		li.leaf.f 
+			margin-right: 6.6833px
 
-	li.leaf.g
-		margin-right: 4.0167px
+		li.leaf.t
+			margin-right: 6.6833px
 
-	li.leaf.y
-		margin-right: 5.7833px
+		li.leaf.g
+			margin-right: 4.0167px
 
-	li.leaf.in
-		margin-right: 2.7167px
+		li.leaf.y
+			margin-right: 5.7833px
 
-	li.leaf.p
-		margin-right: 32px
+		li.leaf.in
+			margin-right: 2.7167px
 
-	li.leaf::before
-		color: #d82222
-		font: normal normal normal 16px/1 FontAwesome
+		li.leaf.p
+			margin-right: 44px
 
-	li.f::before
-		content: "\f082"
-		
-	li.t::before
-		content: "\f081"
-		
-	li.g::before
-		content: "\f0d4"
+		li.leaf::before
+			color: #d82222
+			font: normal normal normal 16px/1 FontAwesome
 
-	li.y::before
-		content: "\f166"
+		li.f::before
+			content: "\f082"
+			
+		li.t::before
+			content: "\f081"
+			
+		li.g::before
+			content: "\f0d4"
 
-	li.in::before
-		content: "\f16d"	
+		li.y::before
+			content: "\f166"
 
-	li.p::before
-		content: "\f0d3"
+		li.in::before
+			content: "\f16d"	
+
+		li.p::before
+			content: "\f0d3"
 		
 
 .letterhead
@@ -92,6 +105,7 @@ div.panel-flexible.panels-flexible-1.clearfix
 		padding-right: 36px
 
 .second_menu
+	width: 100%
 
 	li.leaf
 		display: inline
@@ -113,7 +127,7 @@ div.panel-flexible.panels-flexible-1.clearfix
 		font-weight: bold
 		border-bottom: 1px solid #EAEAEA
 		margin-left: 42px
-		margin-right: 30px
+		margin-right: 42px
 		margin-bottom: 5px
 		margin-top: -10px
 		padding-bottom: 5px
@@ -157,14 +171,57 @@ div.panel-flexible.panels-flexible-1.clearfix
 				margin-right: 3px
 
 #front_page_first
-	color: white
+	padding-right: 10px
+	height: 360px
 
 	.views-field.views-field-title 
-		margin-top: -75px
-		margin-left: 10px
+		position: absolute
+		bottom: 70px
+		padding: 10px
 
 		a
 			font-size: 24px
 			color: white
+
+#four
+	.views-row
+		max-width: 275px
+		max-height: 175px
+
+	.views-row.views-row-2
+		margin-top: -175px
+		margin-left: 285px
+
+	.views-row.views-row-3
+		margin-top: 10px
+
+	.views-row.views-row-4
+		margin-top: -175px
+		margin-left: 285px
+
+
+.helpful_info
+	width: 67%
+	padding: 15px !important
+	border-right: 1px solid #efefef
+	border-left: 1px solid #efefef
+
+	#helpful_info_a
+		max-width: 334px
+		padding-right: 15px
+		padding-left: 15px
+		float: left
+
+	#helpful_info_b
+		max-width: 364px
+		padding-right: 15px
+		padding-left: 15px
+		float: right
+
+
+
+
+
+
 
 				
