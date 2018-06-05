@@ -3,7 +3,7 @@
 $plugin = array(
   'single' => TRUE,
   'title' => t('Header date'),
-  'description' => t('a Display of data from the root term of the given TID'),
+  'description' => t('display date in a pane in a custom format'),
   'category' => t('Custom Panes'),
   'edit form' => 'alapjarat_common_header_date_settings',
   'render callback' => 'alapjarat_common_header_date_render',

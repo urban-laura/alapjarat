@@ -8,24 +8,42 @@
   }
 }*/
 
-function alapjarat_common_preprocess_html(&$vars)
-{
+function alapjarat_common_preprocess_html(&$vars) {
 	$vars['head_title'] = implode(' | ', array(drupal_set_title('Alapjárat')));
 }
 
-function alapjarat_common_form_alter(&$form, &$form_state, $form_id)
-{
-	if($form_id == 'search_block_form')
-	{
+function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
+	if($form_id == 'search_block_form') {
 		hide($form['actions']['submit']);
 	}
 }
 
 
-function alapjarat_common_ctools_plugin_directory($owner, $plugin_type)
-{
-	if ($owner == 'ctools' && $plugin_type == 'content_types')
-	{
+function alapjarat_common_ctools_plugin_directory($owner, $plugin_type) {
+	if ($owner == 'ctools' && $plugin_type == 'content_types') {
 		return 'plugins/content_types';
 	}
+}
+
+function alapjarat_common_article_archives_menu() {
+	$output = '<ul>';
+
+	$start = date('Y-m');
+	$end = date('Y-m', strtotime('2016 October'));
+	
+	$output .= '<li>' . $start . '</li>';
+
+	$prev_month = date('Y-m', strtotime('-1 month', strtotime($start)));
+
+	
+	$c = 0;
+	while ($end !== date('Y-m', strtotime('+1 month', strtotime($prev_month)))) {
+		$output .= '<li>' . $prev_month . '</li>';
+		$prev_month = date('Y-m', strtotime('-1 month', strtotime($prev_month)));
+		$c++;
+	}
+	$output .= '<ul>';
+
+
+	return $output;
 }
