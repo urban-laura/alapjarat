@@ -307,26 +307,6 @@ function alapjarat_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-second-menu_relationship:<front>.
-  $menu_links['menu-second-menu_relationship:<front>'] = array(
-    'menu_name' => 'menu-second-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Relationship',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-second-menu_relationship:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
-    'customized' => 1,
-  );
   // Exported menu link: menu-social-menu_f:http://facebook.com/alapjarat.
   $menu_links['menu-social-menu_f:http://facebook.com/alapjarat'] = array(
     'menu_name' => 'menu-social-menu',
@@ -466,7 +446,6 @@ function alapjarat_menu_default_menu_links() {
   t('Partners');
   t('Premium');
   t('Race');
-  t('Relationship');
   t('T');
   t('Tech');
   t('Test');

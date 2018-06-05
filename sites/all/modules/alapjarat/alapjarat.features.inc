@@ -28,12 +28,12 @@ function alapjarat_image_default_styles() {
 
   // Exported image style: 4_small.
   $styles['4_small'] = array(
-    'label' => '4_small 274.5x175',
+    'label' => '4_small',
     'effects' => array(
       5 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 274.5,
+          'width' => 275,
           'height' => 175,
         ),
         'weight' => 1,
@@ -43,7 +43,7 @@ function alapjarat_image_default_styles() {
 
   // Exported image style: alapjarat.
   $styles['alapjarat'] = array(
-    'label' => 'alapjarat',
+    'label' => 'alapjarat_article',
     'effects' => array(
       3 => array(
         'name' => 'image_scale',
@@ -59,12 +59,12 @@ function alapjarat_image_default_styles() {
 
   // Exported image style: alapjarat_admin.
   $styles['alapjarat_admin'] = array(
-    'label' => '1_big 569x360',
+    'label' => '1_big',
     'effects' => array(
       4 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 569,
+          'width' => 570,
           'height' => 360,
         ),
         'weight' => 1,
