@@ -36,6 +36,11 @@ div.panel-flexible.panels-flexible-1.clearfix {
 }
 
 /* line 27, ../sass/my_style.sass */
+.panel-separator {
+  margin: 0px !important;
+}
+
+/* line 30, ../sass/my_style.sass */
 #time {
   padding-top: 8px;
   font-size: 13px;
@@ -44,121 +49,121 @@ div.panel-flexible.panels-flexible-1.clearfix {
   padding-bottom: 0;
 }
 
-/* line 34, ../sass/my_style.sass */
+/* line 37, ../sass/my_style.sass */
 .social_menu {
   width: 50%;
   float: right;
 }
-/* line 38, ../sass/my_style.sass */
+/* line 41, ../sass/my_style.sass */
 .social_menu #social_menu {
   float: right;
   padding-top: 8px;
 }
-/* line 42, ../sass/my_style.sass */
+/* line 45, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf {
   display: inline;
   padding: 0;
   margin: 0;
 }
-/* line 47, ../sass/my_style.sass */
+/* line 50, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf a {
   font-size: 16px;
   margin-left: -13px;
   opacity: 0;
 }
-/* line 52, ../sass/my_style.sass */
+/* line 55, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf.f {
   margin-right: 6.6833px;
 }
-/* line 55, ../sass/my_style.sass */
+/* line 58, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf.t {
   margin-right: 6.6833px;
 }
-/* line 58, ../sass/my_style.sass */
+/* line 61, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf.g {
   margin-right: 4.0167px;
 }
-/* line 61, ../sass/my_style.sass */
+/* line 64, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf.y {
   margin-right: 5.7833px;
 }
-/* line 64, ../sass/my_style.sass */
+/* line 67, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf.in {
   margin-right: 2.7167px;
 }
-/* line 67, ../sass/my_style.sass */
+/* line 70, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf.p {
   margin-right: 44px;
 }
-/* line 70, ../sass/my_style.sass */
+/* line 73, ../sass/my_style.sass */
 .social_menu #social_menu li.leaf::before {
   color: #d82222;
   font: normal normal normal 16px/1 FontAwesome;
 }
-/* line 74, ../sass/my_style.sass */
+/* line 77, ../sass/my_style.sass */
 .social_menu #social_menu li.f::before {
   content: "";
 }
-/* line 77, ../sass/my_style.sass */
+/* line 80, ../sass/my_style.sass */
 .social_menu #social_menu li.t::before {
   content: "";
 }
-/* line 80, ../sass/my_style.sass */
+/* line 83, ../sass/my_style.sass */
 .social_menu #social_menu li.g::before {
   content: "";
 }
-/* line 83, ../sass/my_style.sass */
+/* line 86, ../sass/my_style.sass */
 .social_menu #social_menu li.y::before {
   content: "";
 }
-/* line 86, ../sass/my_style.sass */
+/* line 89, ../sass/my_style.sass */
 .social_menu #social_menu li.in::before {
   content: "";
 }
-/* line 89, ../sass/my_style.sass */
+/* line 92, ../sass/my_style.sass */
 .social_menu #social_menu li.p::before {
   content: "";
 }
 
-/* line 93, ../sass/my_style.sass */
+/* line 96, ../sass/my_style.sass */
 .letterhead {
   height: 127px;
   padding: 0;
   margim: 0;
 }
-/* line 98, ../sass/my_style.sass */
+/* line 101, ../sass/my_style.sass */
 .letterhead .logo {
   padding-top: 8.5px;
   padding-left: 43px;
 }
-/* line 102, ../sass/my_style.sass */
+/* line 105, ../sass/my_style.sass */
 .letterhead .letterhead_banner {
   float: right;
   width: auto;
   padding-right: 36px;
 }
 
-/* line 107, ../sass/my_style.sass */
+/* line 110, ../sass/my_style.sass */
 .second_menu {
   width: 100%;
 }
-/* line 110, ../sass/my_style.sass */
+/* line 113, ../sass/my_style.sass */
 .second_menu li.leaf {
   display: inline;
 }
-/* line 113, ../sass/my_style.sass */
+/* line 116, ../sass/my_style.sass */
 .second_menu li.leaf a:hover {
   text-decoration: none;
 }
-/* line 117, ../sass/my_style.sass */
+/* line 120, ../sass/my_style.sass */
 .second_menu li.leaf a {
   color: #444;
 }
-/* line 120, ../sass/my_style.sass */
+/* line 123, ../sass/my_style.sass */
 .second_menu li.leaf.home {
   margin: 0;
 }
-/* line 123, ../sass/my_style.sass */
+/* line 126, ../sass/my_style.sass */
 .second_menu #second_menu {
   font-family: Montserrat;
   color: #444;
@@ -172,7 +177,7 @@ div.panel-flexible.panels-flexible-1.clearfix {
   padding-bottom: 5px;
 }
 
-/* line 135, ../sass/my_style.sass */
+/* line 138, ../sass/my_style.sass */
 .main_menu {
   background-color: #444;
   border-top: 5px solid #d82222;
@@ -180,15 +185,15 @@ div.panel-flexible.panels-flexible-1.clearfix {
   padding: 0;
   margim: 0;
 }
-/* line 142, ../sass/my_style.sass */
+/* line 145, ../sass/my_style.sass */
 .main_menu #main_menu {
   padding-left: 25px;
 }
-/* line 145, ../sass/my_style.sass */
+/* line 148, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf {
   display: inline;
 }
-/* line 148, ../sass/my_style.sass */
+/* line 151, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf a {
   color: white;
   text-decoration: none;
@@ -199,17 +204,17 @@ div.panel-flexible.panels-flexible-1.clearfix {
   padding-right: 10px;
   font-family: Montserrat;
 }
-/* line 158, ../sass/my_style.sass */
+/* line 161, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf a:hover {
   background-color: white;
   color: #444;
 }
-/* line 162, ../sass/my_style.sass */
+/* line 165, ../sass/my_style.sass */
 .main_menu .search {
   float: right;
   width: auto;
 }
-/* line 167, ../sass/my_style.sass */
+/* line 170, ../sass/my_style.sass */
 .main_menu .search #search input#edit-search-block-form--2 {
   width: 166px;
   height: 34px;
@@ -217,61 +222,90 @@ div.panel-flexible.panels-flexible-1.clearfix {
   margin-right: 3px;
 }
 
-/* line 173, ../sass/my_style.sass */
+/* line 177, ../sass/my_style.sass */
+.first {
+  width: 100%;
+}
+/* line 180, ../sass/my_style.sass */
+.first #one {
+  width: 50%;
+  float: left;
+}
+/* line 184, ../sass/my_style.sass */
+.first #four {
+  float: left;
+  width: 50%;
+  padding-left: 10px;
+}
+/* line 189, ../sass/my_style.sass */
+.first #four .views-row {
+  width: 50%;
+  float: left;
+}
+/* line 193, ../sass/my_style.sass */
+.first #four .views-row-1, .first #four .views-row-3 {
+  padding-right: 5px;
+}
+/* line 196, ../sass/my_style.sass */
+.first #four .views-row-2, .first #four .views-row-4 {
+  padding-left: 5px;
+}
+
+/* line 199, ../sass/my_style.sass */
 #front_page_first {
   padding-right: 10px;
   height: 360px;
 }
-/* line 177, ../sass/my_style.sass */
+/* line 203, ../sass/my_style.sass */
 #front_page_first .views-field.views-field-title {
   position: absolute;
   bottom: 70px;
   padding: 10px;
 }
-/* line 182, ../sass/my_style.sass */
+/* line 208, ../sass/my_style.sass */
 #front_page_first .views-field.views-field-title a {
   font-size: 24px;
   color: white;
 }
 
-/* line 187, ../sass/my_style.sass */
-#four .views-row {
-  max-width: 275px;
-  max-height: 175px;
-}
-/* line 191, ../sass/my_style.sass */
-#four .views-row.views-row-2 {
-  margin-top: -175px;
-  margin-left: 285px;
-}
-/* line 195, ../sass/my_style.sass */
-#four .views-row.views-row-3 {
-  margin-top: 10px;
-}
-/* line 198, ../sass/my_style.sass */
-#four .views-row.views-row-4 {
-  margin-top: -175px;
-  margin-left: 285px;
-}
-
-/* line 203, ../sass/my_style.sass */
+/* line 213, ../sass/my_style.sass */
 .helpful_info {
   width: 67%;
   padding: 15px !important;
   border-right: 1px solid #efefef;
   border-left: 1px solid #efefef;
 }
-/* line 209, ../sass/my_style.sass */
-.helpful_info #helpful_info_a {
-  max-width: 334px;
+/* line 219, ../sass/my_style.sass */
+.helpful_info #helpful_info_a, .helpful_info #helpful_info_b {
+  width: 50%;
   padding-right: 15px;
   padding-left: 15px;
   float: left;
 }
-/* line 215, ../sass/my_style.sass */
+/* line 225, ../sass/my_style.sass */
 .helpful_info #helpful_info_b {
-  max-width: 364px;
+  padding-left: 25px;
+}
+
+/* line 229, ../sass/my_style.sass */
+.big_world {
+  width: 67%;
+  padding: 15px !important;
+  border-right: 1px solid #efefef;
+  border-left: 1px solid #efefef;
+}
+/* line 236, ../sass/my_style.sass */
+.big_world #big_world_A .views-row-1, .big_world #big_world_A .views-row-2 {
+  width: 50%;
   padding-right: 15px;
   padding-left: 15px;
-  float: right;
+  float: left;
+}
+/* line 243, ../sass/my_style.sass */
+.big_world #big_world_B .views-row {
+  width: 50%;
+  float: left;
+  height: 95px;
+  padding-right: 15px;
+  padding-left: 15px;
 }

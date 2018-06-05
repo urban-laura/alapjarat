@@ -24,6 +24,9 @@ div.panel-flexible.panels-flexible-1.clearfix
 .inside.panels-flexible-region-inside
 	padding: 0px
 
+.panel-separator
+	margin: 0px !important
+
 #time
 	padding-top: 8px
 	font-size: 13px
@@ -170,6 +173,29 @@ div.panel-flexible.panels-flexible-1.clearfix
 				margin-top: 3px
 				margin-right: 3px
 
+
+.first
+	width: 100%
+
+	#one
+		width: 50%
+		float: left
+
+	#four
+		float: left
+		width: 50%
+		padding-left: 10px
+
+		.views-row
+			width: 50%
+			float: left
+
+		.views-row-1, .views-row-3
+			padding-right: 5px
+
+		.views-row-2, .views-row-4
+			padding-left: 5px
+
 #front_page_first
 	padding-right: 10px
 	height: 360px
@@ -183,22 +209,6 @@ div.panel-flexible.panels-flexible-1.clearfix
 			font-size: 24px
 			color: white
 
-#four
-	.views-row
-		max-width: 275px
-		max-height: 175px
-
-	.views-row.views-row-2
-		margin-top: -175px
-		margin-left: 285px
-
-	.views-row.views-row-3
-		margin-top: 10px
-
-	.views-row.views-row-4
-		margin-top: -175px
-		margin-left: 285px
-
 
 .helpful_info
 	width: 67%
@@ -206,18 +216,36 @@ div.panel-flexible.panels-flexible-1.clearfix
 	border-right: 1px solid #efefef
 	border-left: 1px solid #efefef
 
-	#helpful_info_a
-		max-width: 334px
+	#helpful_info_a, #helpful_info_b
+		width: 50%
 		padding-right: 15px
 		padding-left: 15px
 		float: left
 
 	#helpful_info_b
-		max-width: 364px
-		padding-right: 15px
-		padding-left: 15px
-		float: right
+		padding-left: 25px
 
+
+.big_world
+	width: 67%
+	padding: 15px !important
+	border-right: 1px solid #efefef
+	border-left: 1px solid #efefef
+
+	#big_world_A
+		.views-row-1, .views-row-2
+			width: 50%
+			padding-right: 15px
+			padding-left: 15px
+			float: left
+
+	#big_world_B
+		.views-row
+			width: 50%
+			float: left
+			height: 95px
+			padding-right: 15px
+			padding-left: 15px
 
 
 

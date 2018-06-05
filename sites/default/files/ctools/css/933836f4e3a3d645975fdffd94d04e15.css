@@ -56,12 +56,7 @@
 
 .panels-flexible-region-2-one {
   float: left;
-  width: 49.5000%;
-}
-
-.panels-flexible-region-2-four {
-  float: left;
-  width: 49.5000%;
+  width: 99.0000%;
 }
 
 .panels-flexible-row-2-main-row-inside {
@@ -79,6 +74,15 @@
 }
 
 .panels-flexible-row-2-1-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-2-big_world {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-row-2-2-inside {
   padding-right: 0px;
 }
 
