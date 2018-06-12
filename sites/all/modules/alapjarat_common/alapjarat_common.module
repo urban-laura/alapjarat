@@ -26,20 +26,26 @@ function alapjarat_common_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 function alapjarat_common_article_archives_menu() {
+	$dateformat = 'Y. F';
+
 	$output = '<ul>';
 
-	$start = date('Y-m');
-	$end = date('Y-m', strtotime('2016 October'));
-	
-	$output .= '<li>' . $start . '</li>';
+	$start = date($dateformat);
 
-	$prev_month = date('Y-m', strtotime('-1 month', strtotime($start)));
+	$archive = date('Ym', strtotime($start));
+	$end = date($dateformat, strtotime('2016 October'));
+	
+	$output .= '<li>' . l($start, 'archive/' . $archive) . '</li>';
+
+	$prev_month = date($dateformat, strtotime('-1 month', strtotime($start)));
 
 	
 	$c = 0;
-	while ($end !== date('Y-m', strtotime('+1 month', strtotime($prev_month)))) {
-		$output .= '<li>' . $prev_month . '</li>';
-		$prev_month = date('Y-m', strtotime('-1 month', strtotime($prev_month)));
+	while ($end !== date($dateformat, strtotime('+1 month', strtotime($prev_month)))) {
+		$archive = date('Ym', strtotime($prev_month));
+
+		$output .= '<li>' . l($prev_month, 'archive/' . $archive) . '</li>';
+		$prev_month = date($dateformat, strtotime('-1 month', strtotime($prev_month)));
 		$c++;
 	}
 	$output .= '<ul>';

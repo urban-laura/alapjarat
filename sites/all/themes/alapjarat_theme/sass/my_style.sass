@@ -3,11 +3,15 @@ body::before
 
 body
 	font-size: 14px
-	font-family: 'Open Sans',sans-serif
+	font-family: open sans,sans-serif
 	max-width: 1140px
 	width: auto
 	margin-left: auto
 	margin-right: auto
+
+#admin-menu-wrapper
+	a
+		color: white !important
 
 .panels-flexible-row.panels-flexible-row-2-main-row.panels-flexible-row-first.clearfix
 	padding-bottom: 0px !important
@@ -26,6 +30,12 @@ div.panel-flexible.panels-flexible-1.clearfix
 
 .panel-separator
 	margin: 0px !important
+
+a
+	color: #d82222 !important
+
+a:hover
+	text-decoration: none
 
 #time
 	padding-top: 8px
@@ -71,7 +81,7 @@ div.panel-flexible.panels-flexible-1.clearfix
 			margin-right: 44px
 
 		li.leaf::before
-			color: #d82222
+			color: #d82222 !important
 			font: normal normal normal 16px/1 FontAwesome
 
 		li.f::before
@@ -116,9 +126,8 @@ div.panel-flexible.panels-flexible-1.clearfix
 		a:hover
 			text-decoration: none
 
-		a.active
-		a
-			color: #444
+		a.active, a
+			color: #444 !important
 
 	li.leaf.home
 		margin: 0
@@ -149,7 +158,7 @@ div.panel-flexible.panels-flexible-1.clearfix
 			display: inline
 
 			a
-				color: white
+				color: white !important
 				text-decoration: none
 				line-height: 40px
 				padding-top: 11px
@@ -160,7 +169,7 @@ div.panel-flexible.panels-flexible-1.clearfix
 
 			a:hover
 				background-color: white
-				color: #444
+				color: #444 !important
 		
 	.search
 		float: right
@@ -173,13 +182,45 @@ div.panel-flexible.panels-flexible-1.clearfix
 				margin-top: 3px
 				margin-right: 3px
 
+.views-field-field-tags
+	a
+		color: white !important
+		font-size: 12px
+		padding: 2px 3px
+		background: #d82222
+
+	a:hover
+		text-decoration: none
+
 
 .first
 	width: 100%
+	margin-bottom: -71px
+	.views-field-field-image
+		background: black
+		img
+			opacity: 0.7
+
+	.views-field-created
+		color: white
+		font-size: 12px
 
 	#one
 		width: 50%
 		float: left
+		.views-field-title
+			position: absolute
+			bottom: 37px
+			margin-left: 10px
+			margin-right: 10px
+			a
+				font-size: 24px
+				color: white !important
+		.views-field-field-tags, .views-field-created
+			position: relative
+			bottom: 35px
+			float: left
+			margin-left: 10px
 
 	#four
 		float: left
@@ -196,57 +237,167 @@ div.panel-flexible.panels-flexible-1.clearfix
 		.views-row-2, .views-row-4
 			padding-left: 5px
 
-#front_page_first
-	padding-right: 10px
-	height: 360px
+		.views-row-3, .views-row-4
+			margin-top: -55px
 
-	.views-field.views-field-title 
-		position: absolute
-		bottom: 70px
-		padding: 10px
+		.views-field-title
+			position: relative
+			bottom: 80px
+			margin-left: 10px
+			margin-right: 10px
+			a
+				font-size: 16px
+				color: white !important
 
-		a
-			font-size: 24px
-			color: white
+		.views-field-field-tags, .views-field-created
+			position: relative
+			bottom: 77px
+			float: left
+			margin-left: 10px
 
-
-.helpful_info
-	width: 67%
-	padding: 15px !important
+.maincontent
 	border-right: 1px solid #efefef
 	border-left: 1px solid #efefef
+	border-bottom: 1px solid black
+	xmargin-top: -71px !important
 
-	#helpful_info_a, #helpful_info_b
-		width: 50%
-		padding-right: 15px
-		padding-left: 15px
-		float: left
-
-	#helpful_info_b
-		padding-left: 25px
-
-
-.big_world
+.main_content
 	width: 67%
-	padding: 15px !important
+	xmargin-top: -45px
 	border-right: 1px solid #efefef
-	border-left: 1px solid #efefef
 
-	#big_world_A
-		.views-row-1, .views-row-2
+	.front_page_post
+		padding: 15px !important
+
+		#helpful_info_h3, #big_world_h3, #tech_h3, #test_h3
+			a
+				font-size: 21px
+				color: #444 !important
+				font-family: montserrat,sans-serif
+				text-rendering: optimizelegibility
+				font-weight: 500
+				text-transform: uppercase
+			
+			h3
+				border-bottom: 3px solid #161616
+				margin-bottom: 10px
+				padding-bottom: 5px
+
+	 
+		#helpful_info_a, #big_world_A, #tech, #test
+			.views-field-title
+				margin-top: 15px
+				a
+					color: #d82222 !important
+					font-size: 20px
+					font-weight: bold
+
+		#helpful_info_b
+			.views-field-field-image
+				width: 45%
+				float: left
+			.views-field-title
+				a
+					color: #d82222 !important
+					font-size: 16px
+					font-family: montserrat,sans-serif
+			.views-field-field-tags, .views-field-created, .views-field-title
+				margin-left: 45%
+
+
+		#helpful_info_a, #helpful_info_b
 			width: 50%
 			padding-right: 15px
 			padding-left: 15px
 			float: left
+			.views-field-field-image
+				margin-top: 4px
 
-	#big_world_B
-		.views-row
-			width: 50%
-			float: left
-			height: 95px
-			padding-right: 15px
-			padding-left: 15px
+		#helpful_info_a
+			.views-field-field-tags
+				float: left
+				margin-right: 10px
+			.views-field-field-subtitled
+				font-size: 16px
+				margin-top: 5px
 
+		#helpful_info_b
+			padding-left: 25px
+			.views-row
+				margin-bottom: 30px
+
+
+		#big_world_A
+			.views-row
+				height: 315px
+			.views-row-1, .views-row-2
+				width: 50%
+				padding-right: 15px
+				padding-left: 15px
+				float: left
+			.views-field-field-image
+				margin-top: 4px
+			.views-field-field-tags
+				float: left
+				margin-right: 10px
+
+		#big_world_B
+			.views-row
+				width: 50%
+				float: left
+				height: 155px
+				padding-right: 15px
+				padding-left: 15px
+			.views-field-field-image
+				width: 45%
+				float: left
+				margin-top: 4px
+			.views-field-title
+				margin-left: 45%
+				a
+					color: #d82222 !important
+					font-size: 16px
+					font-family: montserrat,sans-serif
+			.views-field-field-tags
+				margin-left: 45%
+				float: left
+				margin-right: 10px
+			.views-field-created
+				float: left
+
+
+		#tech, #test
+			.views-field-field-image
+				margin-top: 4px
+			.views-field-field-tags
+				float: left
+				margin-right: 10px
+			.views-row
+				width: 50%
+				padding-right: 15px
+				padding-left: 15px
+				float: left
+				height: 305px
+
+
+.right
+	width: 33%
+	xmargin-top: -40px
+	padding: 15px !important
+
+	h3, .pane-articles-archive h2
+		font-size: 21px
+		color: #444 !important
+		font-family: montserrat,sans-serif
+		text-rendering: optimizelegibility
+		font-weight: 500
+		text-transform: uppercase
+		border-bottom: 3px solid #161616
+		margin-bottom: 10px
+		padding-bottom: 5px
+
+	.views-row
+		margin-bottom: 25px
 
 
 
