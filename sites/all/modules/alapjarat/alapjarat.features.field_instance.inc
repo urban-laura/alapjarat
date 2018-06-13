@@ -10,6 +10,62 @@
 function alapjarat_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-post-field_facebook_video'.
+  $field_instances['node-post-field_facebook_video'] = array(
+    'bundle' => 'post',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'media',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_facebook_video',
+    'label' => 'Facebook Video',
+    'required' => 0,
+    'settings' => array(
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'facebook' => 'facebook',
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-post-field_image'.
   $field_instances['node-post-field_image'] = array(
     'bundle' => 'post',
@@ -62,7 +118,7 @@ function alapjarat_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -230,7 +286,7 @@ function alapjarat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -307,7 +363,7 @@ function alapjarat_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_video',
-    'label' => 'Video',
+    'label' => 'YouTube Video',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -324,12 +380,13 @@ function alapjarat_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Category');
+  t('Facebook Video');
   t('Main image');
   t('Media');
   t('Published');
   t('Subtitled');
   t('Text');
-  t('Video');
+  t('YouTube Video');
 
   return $field_instances;
 }

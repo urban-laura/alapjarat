@@ -75,10 +75,10 @@ function alapjarat_filter_default_formats() {
     ),
   );
 
-  // Exported format: Full_ HTML.
+  // Exported format: Full_HTML.
   $formats['fullhtml'] = array(
     'format' => 'fullhtml',
-    'name' => 'Full_ HTML',
+    'name' => 'Full_HTML',
     'cache' => 1,
     'status' => 1,
     'weight' => 0,

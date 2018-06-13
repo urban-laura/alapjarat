@@ -72,6 +72,66 @@ function alapjarat_image_default_styles() {
     ),
   );
 
+  // Exported image style: big.
+  $styles['big'] = array(
+    'label' => 'Big',
+    'effects' => array(
+      6 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 334,
+          'height' => 174,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: helpful_small.
+  $styles['helpful_small'] = array(
+    'label' => 'helpful_small',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 135,
+          'height' => 70,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: right.
+  $styles['right'] = array(
+    'label' => 'right',
+    'effects' => array(
+      9 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 116,
+          'height' => 116,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: world_small.
+  $styles['world_small'] = array(
+    'label' => 'world_small',
+    'effects' => array(
+      8 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 139,
+          'height' => 73,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

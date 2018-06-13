@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Provides a stream wrapper and formatters for displaying Facebook videos.
+ */
+
+// Load all Facebook file formatters.
+require_once dirname(__FILE__) . '/includes/media_facebook_video.formatters.inc';
+
+/**
+ * Implements hook_media_internet_providers().
+ */
+function media_facebook_video_media_internet_providers() {
+  return array(
+    'MediaInternetFacebookVideoHandler' => array(
+      'title' => t('Facebook'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_stream_wrappers().
+ */
+function media_facebook_video_stream_wrappers() {
+  return array(
+    'facebook' => array(
+      'name' => t('Facebook videos'),
+      'class' => 'MediaFacebookVideoStreamWrapper',
+      'description' => t('Remote videos hosted on the Facebook video-sharing website.'),
+      'type' => STREAM_WRAPPERS_READ_VISIBLE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme().
+ */
+function media_facebook_video_theme($existing, $type, $theme, $path) {
+  return array(
+    'media_facebook_video' => array(
+      'variables' => array('uri' => NULL, 'options' => array()),
+      'file' => 'media_facebook_video.theme.inc',
+      'path' => $path . '/themes',
+      'template' => 'media-facebook-video',
+    ),
+  );
+}
+
+/**
+ * Implements hook_media_parse().
+ *
+ * @todo This hook should be deprecated. Refactor Media module to not call it
+ *   any more, since media_internet should be able to automatically route to the
+ *   appropriate handler.
+ */
+function media_facebook_video_media_parse($embed_code) {
+  $handler = new MediaInternetFacebookVideoHandler($embed_code);
+  return $handler->parse($embed_code);
+}
+
+/**
+ * Implements hook_file_mimetype_mapping_alter().
+ */
+function media_facebook_video_file_mimetype_mapping_alter(&$mapping) {
+  $mapping['mimetypes'][] = 'video/facebook';
+}
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function media_facebook_video_ctools_plugin_api($module, $api) {
+  if ($module == 'file_entity' && $api == 'file_default_displays') {
+    return array('version' => 1);
+  }
+}

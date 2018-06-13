@@ -252,7 +252,7 @@ a:hover {
 /* line 196, ../sass/my_style.sass */
 .first {
   width: 100%;
-  margin-bottom: -71px;
+  margin-bottom: -15px;
 }
 /* line 199, ../sass/my_style.sass */
 .first .views-field-field-image {
@@ -301,58 +301,60 @@ a:hover {
 .first #four .views-row {
   width: 50%;
   float: left;
+  position: relative;
 }
-/* line 234, ../sass/my_style.sass */
+/* line 235, ../sass/my_style.sass */
 .first #four .views-row-1, .first #four .views-row-3 {
   padding-right: 5px;
 }
-/* line 237, ../sass/my_style.sass */
+/* line 238, ../sass/my_style.sass */
 .first #four .views-row-2, .first #four .views-row-4 {
   padding-left: 5px;
 }
-/* line 240, ../sass/my_style.sass */
+/* line 241, ../sass/my_style.sass */
 .first #four .views-row-3, .first #four .views-row-4 {
-  margin-top: -55px;
+  margin-top: -11px;
 }
-/* line 243, ../sass/my_style.sass */
+/* line 244, ../sass/my_style.sass */
 .first #four .views-field-title {
-  position: relative;
-  bottom: 80px;
+  position: absolute;
+  bottom: 60px;
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 248, ../sass/my_style.sass */
+/* line 249, ../sass/my_style.sass */
 .first #four .views-field-title a {
   font-size: 16px;
   color: white !important;
 }
-/* line 252, ../sass/my_style.sass */
+/* line 253, ../sass/my_style.sass */
 .first #four .views-field-field-tags, .first #four .views-field-created {
   position: relative;
-  bottom: 77px;
+  bottom: 35px;
   float: left;
   margin-left: 10px;
 }
 
-/* line 258, ../sass/my_style.sass */
+/* line 259, ../sass/my_style.sass */
 .maincontent {
   border-right: 1px solid #efefef;
   border-left: 1px solid #efefef;
   border-bottom: 1px solid black;
-  xmargin-top: -71px !important;
+  margin-top: -1em !important;
+  padding-bottom: 0 !important;
 }
 
-/* line 264, ../sass/my_style.sass */
+/* line 266, ../sass/my_style.sass */
 .main_content {
   width: 67%;
-  xmargin-top: -45px;
   border-right: 1px solid #efefef;
 }
-/* line 269, ../sass/my_style.sass */
+/* line 270, ../sass/my_style.sass */
 .main_content .front_page_post {
   padding: 15px !important;
+  padding-top: 40px !important;
 }
-/* line 273, ../sass/my_style.sass */
+/* line 275, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_h3 a, .main_content .front_page_post #big_world_h3 a, .main_content .front_page_post #tech_h3 a, .main_content .front_page_post #test_h3 a {
   font-size: 21px;
   color: #444 !important;
@@ -361,87 +363,87 @@ a:hover {
   font-weight: 500;
   text-transform: uppercase;
 }
-/* line 281, ../sass/my_style.sass */
+/* line 283, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_h3 h3, .main_content .front_page_post #big_world_h3 h3, .main_content .front_page_post #tech_h3 h3, .main_content .front_page_post #test_h3 h3 {
   border-bottom: 3px solid #161616;
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
-/* line 288, ../sass/my_style.sass */
+/* line 290, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_a .views-field-title, .main_content .front_page_post #big_world_A .views-field-title, .main_content .front_page_post #tech .views-field-title, .main_content .front_page_post #test .views-field-title {
   margin-top: 15px;
 }
-/* line 290, ../sass/my_style.sass */
+/* line 292, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_a .views-field-title a, .main_content .front_page_post #big_world_A .views-field-title a, .main_content .front_page_post #tech .views-field-title a, .main_content .front_page_post #test .views-field-title a {
   color: #d82222 !important;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 296, ../sass/my_style.sass */
+/* line 298, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_b .views-field-field-image {
   width: 45%;
   float: left;
 }
-/* line 300, ../sass/my_style.sass */
+/* line 302, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_b .views-field-title a {
   color: #d82222 !important;
   font-size: 16px;
   font-family: montserrat, sans-serif;
 }
-/* line 304, ../sass/my_style.sass */
+/* line 306, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_b .views-field-field-tags, .main_content .front_page_post #helpful_info_b .views-field-created, .main_content .front_page_post #helpful_info_b .views-field-title {
   margin-left: 45%;
 }
-/* line 308, ../sass/my_style.sass */
+/* line 310, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_a, .main_content .front_page_post #helpful_info_b {
   width: 50%;
   padding-right: 15px;
   padding-left: 15px;
   float: left;
 }
-/* line 313, ../sass/my_style.sass */
+/* line 315, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_a .views-field-field-image, .main_content .front_page_post #helpful_info_b .views-field-field-image {
   margin-top: 4px;
 }
-/* line 317, ../sass/my_style.sass */
+/* line 319, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_a .views-field-field-tags {
   float: left;
   margin-right: 10px;
 }
-/* line 320, ../sass/my_style.sass */
+/* line 322, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_a .views-field-field-subtitled {
   font-size: 16px;
   margin-top: 5px;
 }
-/* line 324, ../sass/my_style.sass */
+/* line 326, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_b {
   padding-left: 25px;
 }
-/* line 326, ../sass/my_style.sass */
+/* line 328, ../sass/my_style.sass */
 .main_content .front_page_post #helpful_info_b .views-row {
   margin-bottom: 30px;
 }
-/* line 331, ../sass/my_style.sass */
+/* line 333, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_A .views-row {
   height: 315px;
 }
-/* line 333, ../sass/my_style.sass */
+/* line 335, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_A .views-row-1, .main_content .front_page_post #big_world_A .views-row-2 {
   width: 50%;
   padding-right: 15px;
   padding-left: 15px;
   float: left;
 }
-/* line 338, ../sass/my_style.sass */
+/* line 340, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_A .views-field-field-image {
   margin-top: 4px;
 }
-/* line 340, ../sass/my_style.sass */
+/* line 342, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_A .views-field-field-tags {
   float: left;
   margin-right: 10px;
 }
-/* line 345, ../sass/my_style.sass */
+/* line 347, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_B .views-row {
   width: 50%;
   float: left;
@@ -449,42 +451,42 @@ a:hover {
   padding-right: 15px;
   padding-left: 15px;
 }
-/* line 351, ../sass/my_style.sass */
+/* line 353, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_B .views-field-field-image {
   width: 45%;
   float: left;
   margin-top: 4px;
 }
-/* line 355, ../sass/my_style.sass */
+/* line 357, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_B .views-field-title {
   margin-left: 45%;
 }
-/* line 357, ../sass/my_style.sass */
+/* line 359, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_B .views-field-title a {
   color: #d82222 !important;
   font-size: 16px;
   font-family: montserrat, sans-serif;
 }
-/* line 361, ../sass/my_style.sass */
+/* line 363, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_B .views-field-field-tags {
   margin-left: 45%;
   float: left;
   margin-right: 10px;
 }
-/* line 365, ../sass/my_style.sass */
+/* line 367, ../sass/my_style.sass */
 .main_content .front_page_post #big_world_B .views-field-created {
   float: left;
 }
-/* line 370, ../sass/my_style.sass */
+/* line 372, ../sass/my_style.sass */
 .main_content .front_page_post #tech .views-field-field-image, .main_content .front_page_post #test .views-field-field-image {
   margin-top: 4px;
 }
-/* line 372, ../sass/my_style.sass */
+/* line 374, ../sass/my_style.sass */
 .main_content .front_page_post #tech .views-field-field-tags, .main_content .front_page_post #test .views-field-field-tags {
   float: left;
   margin-right: 10px;
 }
-/* line 375, ../sass/my_style.sass */
+/* line 377, ../sass/my_style.sass */
 .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
   width: 50%;
   padding-right: 15px;
@@ -493,14 +495,14 @@ a:hover {
   height: 305px;
 }
 
-/* line 383, ../sass/my_style.sass */
+/* line 385, ../sass/my_style.sass */
 .right {
   width: 33%;
-  xmargin-top: -40px;
   padding: 15px !important;
+  padding-top: 40px !important;
 }
-/* line 388, ../sass/my_style.sass */
-.right h3, .right .pane-articles-archive h2 {
+/* line 390, ../sass/my_style.sass */
+.right h3, .right .pane-articles-archive h2, .right h2.pane-title {
   font-size: 21px;
   color: #444 !important;
   font-family: montserrat, sans-serif;
@@ -511,7 +513,37 @@ a:hover {
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
-/* line 399, ../sass/my_style.sass */
-.right .views-row {
-  margin-bottom: 25px;
+/* line 402, ../sass/my_style.sass */
+.right #banner .views-row {
+  margin-bottom: 40px;
+}
+/* line 405, ../sass/my_style.sass */
+.right #event {
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+/* line 408, ../sass/my_style.sass */
+.right #event .views-row {
+  margin-bottom: 15px;
+}
+/* line 410, ../sass/my_style.sass */
+.right #event .views-field-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 413, ../sass/my_style.sass */
+.right #event .views-field-field-event-date {
+  font-size: 16px;
+}
+/* line 415, ../sass/my_style.sass */
+.right #event .views-label-field-facebook-event {
+  font-size: 16px;
+  color: #d82222;
+}
+/* line 419, ../sass/my_style.sass */
+.right #event .views-field-field-facebook-event .field-content {
+  width: 144px;
+  height: 17px;
+  margin-top: -21px;
+  opacity: 0;
 }

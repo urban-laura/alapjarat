@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Media: Facebook module.
+ */
+
+/**
+ * Empty update function.
+ */
+function media_facebook_video_update_7200() {
+  // Code removed in response to http://drupal.org/node/1911970.
+}
+
+/**
+ * Remove obsolete variables.
+ */
+function media_facebook_video_update_7201() {
+  // Create an array of variables sans 'media_facebook' prefix.
+  $variables = array('width', 'preview_uri', 'protocol');
+
+  foreach ($variables as $variable) {
+    // Remove the old variable.
+    variable_del('media_facebook_video__' . $variable);
+  }
+}

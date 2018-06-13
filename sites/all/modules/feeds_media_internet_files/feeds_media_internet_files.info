@@ -1,0 +1,18 @@
+; Basic information
+name = Feeds: Media Internet Files
+description = Updates URL to URI when mapping internet resources to file entity
+core = 7.x
+package = Feeds
+dependencies[] = "feeds"
+dependencies[] = "media"
+
+; Files
+files[] = feeds_media_internet_files.module
+
+
+; Information added by Drupal.org packaging script on 2014-07-01
+version = "7.x-1.0-beta1"
+core = "7.x"
+project = "feeds_media_internet_files"
+datestamp = "1404221632"
+

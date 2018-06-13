@@ -6,11 +6,12 @@
   if (strpos($path,'kiskutya') !== false) {
     drupal_set_title('Alapjárat');
   }
-}*/
+}
 
 function alapjarat_common_preprocess_html(&$vars) {
 	$vars['head_title'] = implode(' | ', array(drupal_set_title('Alapjárat')));
 }
+*/
 
 function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 	if($form_id == 'search_block_form') {

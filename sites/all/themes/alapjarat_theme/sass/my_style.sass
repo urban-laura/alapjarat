@@ -195,7 +195,7 @@ a:hover
 
 .first
 	width: 100%
-	margin-bottom: -71px
+	margin-bottom: -15px
 	.views-field-field-image
 		background: black
 		img
@@ -230,6 +230,7 @@ a:hover
 		.views-row
 			width: 50%
 			float: left
+			position: relative
 
 		.views-row-1, .views-row-3
 			padding-right: 5px
@@ -238,11 +239,11 @@ a:hover
 			padding-left: 5px
 
 		.views-row-3, .views-row-4
-			margin-top: -55px
+			margin-top: -11px
 
 		.views-field-title
-			position: relative
-			bottom: 80px
+			position: absolute
+			bottom: 60px
 			margin-left: 10px
 			margin-right: 10px
 			a
@@ -251,7 +252,7 @@ a:hover
 
 		.views-field-field-tags, .views-field-created
 			position: relative
-			bottom: 77px
+			bottom: 35px
 			float: left
 			margin-left: 10px
 
@@ -259,15 +260,16 @@ a:hover
 	border-right: 1px solid #efefef
 	border-left: 1px solid #efefef
 	border-bottom: 1px solid black
-	xmargin-top: -71px !important
+	margin-top: -1em !important
+	padding-bottom: 0 !important
 
 .main_content
 	width: 67%
-	xmargin-top: -45px
 	border-right: 1px solid #efefef
 
 	.front_page_post
 		padding: 15px !important
+		padding-top: 40px !important
 
 		#helpful_info_h3, #big_world_h3, #tech_h3, #test_h3
 			a
@@ -382,10 +384,10 @@ a:hover
 
 .right
 	width: 33%
-	xmargin-top: -40px
 	padding: 15px !important
+	padding-top: 40px !important
 
-	h3, .pane-articles-archive h2
+	h3, .pane-articles-archive h2, h2.pane-title
 		font-size: 21px
 		color: #444 !important
 		font-family: montserrat,sans-serif
@@ -396,8 +398,30 @@ a:hover
 		margin-bottom: 10px
 		padding-bottom: 5px
 
-	.views-row
-		margin-bottom: 25px
+	#banner
+		.views-row
+			margin-bottom: 40px
+
+	#event
+		margin-bottom: 50px
+		padding-top: 20px
+		.views-row
+			margin-bottom: 15px
+		.views-field-title
+			font-size: 16px
+			font-weight: bold
+		.views-field-field-event-date
+			font-size: 16px
+		.views-label-field-facebook-event
+			font-size: 16px
+			color: #d82222
+		.views-field-field-facebook-event
+			.field-content
+				width: 144px
+				height: 17px
+				margin-top: -21px
+				opacity: 0
+
 
 
 

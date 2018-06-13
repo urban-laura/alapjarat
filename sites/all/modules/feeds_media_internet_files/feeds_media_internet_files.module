@@ -1,0 +1,111 @@
+<?php
+
+/**
+ * @file
+ * Alters file data when saving an internet resource to a file.
+ */
+
+/**
+ * Implements hook_file_presave().
+ */
+function feeds_media_internet_files_file_presave($file) {
+
+  //if this is not coming from Feeds, do nothing
+  if (empty($file->feeds_item->url)) {  
+    return; 
+  }  
+   
+  //if this IS coming from Feeds, set uri up w/ media if possible
+  $file->uri = media_parse_to_uri($file->feeds_item->url);
+  
+  // Check to see if media_[provider] is enabled or site will return...
+  // Call to a member function get_parameters() on a non-object in 
+  // feeds_media_internet_files/feeds_media_internet_files.module on line 28
+  
+  if (empty($file->uri)) {
+    if (strstr($file->feeds_item->url, 'vimeo') && !module_exists('media_vimeo')) {
+      throw new Exception('Media Vimeo module must be enabled to handle ' . $file->feeds_item->url . '.  Import failed.');
+    }
+    
+    if (strstr($file->feeds_item->url, 'youtube') && !module_exists('media_youtube')) {
+      throw new Exception('Media YouTube module must be enabled to handle ' . $file->feeds_item->url . '.  Import failed.');
+    }
+    
+    if (strstr($file->feeds_item->url, 'cloudcast') && !module_exists('media_cloudcast')) {
+      throw new Exception('Media Cloudcast module must be enabled to handle ' . $file->feeds_item->url . '.  Import failed.');
+    }
+    
+    if (strstr($file->feeds_item->url, 'archive.org') && !module_exists('media_archive')) {
+      throw new Exception('Media Archive module must be enabled to handle ' . $file->feeds_item->url . '.  Import failed.');
+    }
+    
+  }
+  
+  // Check to see if URI already exists
+  $files = entity_load('file', FALSE, array('uri' => $file->uri));
+
+  if (@count($files)) {
+    //@TODO: Should this fail silently or with a warning?
+    //throw new Exception('Warning: ' . $file->uri . 'skipped. File already exists.');
+    watchdog('feeds', 'File existed. %uri skipped.', array('%uri' => $file->uri), WATCHDOG_NOTICE, $link = NULL);
+    unset($file);
+    throw new Exception();
+  }
+  
+  // @TODO: Need fix for Undefined $uri if an Exception is thrown
+  // https://api.drupal.org/api/drupal/includes%21file.inc/function/file_save/7
+  // Notice: Undefined property: stdClass::$uri in file_save() (line 570 of includes/file.inc).
+  
+  $wrapper = file_stream_wrapper_get_instance_by_uri($file->uri);
+  $parts = $wrapper->get_parameters();
+  $media_type = get_class($wrapper);
+
+  // if there is a title field mapped and a video element in the array, 
+  // use that for the filename
+  // @TODO: this needs to be more flexible.  Soundcloud or Flickr won't
+  // have a video element
+  
+  // If the Title field exists, use that value for the Filename too
+  // This improves the searchablity in the default Media Browsers Views
+  // Could we use approach from https://www.drupal.org/node/1540106?
+  if(isset($file->field_title[LANGUAGE_NONE][0]['value'])) {
+    $file->filename = $file->field_title[LANGUAGE_NONE][0]['value'];
+  } else {
+    // If there is no Title in the Feed, use the filename value
+    // CLOUDCAST
+    if ($media_type == 'MediaCloudcastStreamWrapper') {
+      $file->filename = check_plain($parts['video']);
+    }
+    // YOUTUBE, VIMEO, ARCHIVE, ??
+    if ($media_type == 'MediaYouTubeStreamWrapper' || $media_type == 'MediaVimeoStreamWrapper' || $media_type == 'MediaArchiveStreamWrapper') {
+      $file->filename = check_plain($parts['v']);
+    } 
+  }
+  
+  // Set other required defaults of file_entity
+  // See http://cgit.drupalcode.org/file_entity/tree/file_entity.file_api.inc#n674
+  $file->status = 1;
+
+  // Always ensure the filemime property is current.
+  if (empty($file->filemime)) {
+    $file->filemime = file_get_mimetype($file->uri);
+  }
+
+  // The file type is used as a bundle key, and therefore, must not be NULL.
+  // It defaults to FILE_TYPE_NONE when loaded via file_load(), but in case
+  // file_save() is called on a new file object, default it here too.
+  if (!isset($file->type)) {
+    $file->type = FILE_TYPE_NONE;
+  }
+
+  // If the file isn't already assigned a real type, determine what type should
+  // be assigned to it.
+  if ($file->type === FILE_TYPE_NONE) {
+    $type = file_get_type($file);
+    if (isset($type)) {
+      $file->type = $type;
+    }
+  }
+
+  return $file;
+}
