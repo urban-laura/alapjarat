@@ -65,16 +65,24 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_numberw']['id'] = 'field_numberw';
-  $handler->display->display_options['fields']['field_numberw']['table'] = 'field_data_field_numberw';
-  $handler->display->display_options['fields']['field_numberw']['field'] = 'field_numberw';
-  $handler->display->display_options['fields']['field_numberw']['label'] = 'Number';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_numberw_selector']['id'] = 'field_numberw_selector';
-  $handler->display->display_options['fields']['field_numberw_selector']['table'] = 'field_data_field_numberw';
-  $handler->display->display_options['fields']['field_numberw_selector']['field'] = 'field_numberw_selector';
-  $handler->display->display_options['fields']['field_numberw_selector']['label'] = 'Number Selector';
+  /* Field: Content: Number */
+  $handler->display->display_options['fields']['field_number']['id'] = 'field_number';
+  $handler->display->display_options['fields']['field_number']['table'] = 'field_data_field_number';
+  $handler->display->display_options['fields']['field_number']['field'] = 'field_number';
+  $handler->display->display_options['fields']['field_number']['type'] = 'weight_integer';
+  $handler->display->display_options['fields']['field_number']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Number Selector */
+  $handler->display->display_options['fields']['field_number_selector']['id'] = 'field_number_selector';
+  $handler->display->display_options['fields']['field_number_selector']['table'] = 'field_data_field_number';
+  $handler->display->display_options['fields']['field_number_selector']['field'] = 'field_number_selector';
+  $handler->display->display_options['fields']['field_number_selector']['weight_range'] = '10';
+  /* Sort criterion: Content: Number (field_number) */
+  $handler->display->display_options['sorts']['field_number_value']['id'] = 'field_number_value';
+  $handler->display->display_options['sorts']['field_number_value']['table'] = 'field_data_field_number';
+  $handler->display->display_options['sorts']['field_number_value']['field'] = 'field_number_value';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -87,23 +95,19 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'banner' => 'banner',
+    'banner_fix_' => 'banner_fix_',
   );
-  /* Filter criterion: Content: Location (field_location) */
-  $handler->display->display_options['filters']['field_location_tid']['id'] = 'field_location_tid';
-  $handler->display->display_options['filters']['field_location_tid']['table'] = 'field_data_field_location';
-  $handler->display->display_options['filters']['field_location_tid']['field'] = 'field_location_tid';
-  $handler->display->display_options['filters']['field_location_tid']['value'] = array(
-    0 => '21',
+  /* Filter criterion: Content: Location (field_locationbf) */
+  $handler->display->display_options['filters']['field_locationbf_tid']['id'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['table'] = 'field_data_field_locationbf';
+  $handler->display->display_options['filters']['field_locationbf_tid']['field'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['value'] = array(
+    0 => '27',
   );
-  $handler->display->display_options['filters']['field_location_tid']['vocabulary'] = 'banner';
+  $handler->display->display_options['filters']['field_locationbf_tid']['vocabulary'] = 'banner_fix_';
 
-  /* Display: banner1 */
-  $handler = $view->new_display('page', 'banner1', 'page');
-  $handler->display->display_options['path'] = 'admin/banner1';
-
-  /* Display: banner2 */
-  $handler = $view->new_display('page', 'banner2', 'page_1');
+  /* Display: banner2 (fix) */
+  $handler = $view->new_display('page', 'banner2 (fix)', 'page');
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -118,17 +122,21 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'banner' => 'banner',
+    'banner_fix_' => 'banner_fix_',
   );
-  /* Filter criterion: Content: Location (field_location) */
-  $handler->display->display_options['filters']['field_location_tid']['id'] = 'field_location_tid';
-  $handler->display->display_options['filters']['field_location_tid']['table'] = 'field_data_field_location';
-  $handler->display->display_options['filters']['field_location_tid']['field'] = 'field_location_tid';
-  $handler->display->display_options['filters']['field_location_tid']['value'] = array(
-    0 => '22',
+  /* Filter criterion: Content: Location (field_locationbf) */
+  $handler->display->display_options['filters']['field_locationbf_tid']['id'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['table'] = 'field_data_field_locationbf';
+  $handler->display->display_options['filters']['field_locationbf_tid']['field'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['value'] = array(
+    0 => '26',
   );
-  $handler->display->display_options['filters']['field_location_tid']['vocabulary'] = 'banner';
+  $handler->display->display_options['filters']['field_locationbf_tid']['vocabulary'] = 'banner_fix_';
   $handler->display->display_options['path'] = 'admin/banner2';
+
+  /* Display: banner4 (fix) */
+  $handler = $view->new_display('page', 'banner4 (fix)', 'page_1');
+  $handler->display->display_options['path'] = 'admin/banner4';
   $export['admin'] = $view;
 
   $view = new view();
@@ -190,7 +198,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: Content pane */
@@ -235,10 +243,10 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['field_textb']['field'] = 'field_textb';
   $handler->display->display_options['fields']['field_textb']['label'] = '';
   $handler->display->display_options['fields']['field_textb']['element_label_colon'] = FALSE;
-  /* Sort criterion: Global: Random */
-  $handler->display->display_options['sorts']['random']['id'] = 'random';
-  $handler->display->display_options['sorts']['random']['table'] = 'views';
-  $handler->display->display_options['sorts']['random']['field'] = 'random';
+  /* Sort criterion: Content: Number (field_number) */
+  $handler->display->display_options['sorts']['field_number_value']['id'] = 'field_number_value';
+  $handler->display->display_options['sorts']['field_number_value']['table'] = 'field_data_field_number';
+  $handler->display->display_options['sorts']['field_number_value']['field'] = 'field_number_value';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -264,9 +272,57 @@ function alapjarat_views_default_views() {
 
   /* Display: banner1 */
   $handler = $view->new_display('panel_pane', 'banner1', 'panel_pane_1');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
 
   /* Display: banner2 */
   $handler = $view->new_display('panel_pane', 'banner2', 'panel_pane_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Text */
+  $handler->display->display_options['fields']['field_textbf']['id'] = 'field_textbf';
+  $handler->display->display_options['fields']['field_textbf']['table'] = 'field_data_field_textbf';
+  $handler->display->display_options['fields']['field_textbf']['field'] = 'field_textbf';
+  $handler->display->display_options['fields']['field_textbf']['label'] = '';
+  $handler->display->display_options['fields']['field_textbf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'banner_fix_' => 'banner_fix_',
+  );
+  /* Filter criterion: Content: Location (field_locationbf) */
+  $handler->display->display_options['filters']['field_locationbf_tid']['id'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['table'] = 'field_data_field_locationbf';
+  $handler->display->display_options['filters']['field_locationbf_tid']['field'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['value'] = array(
+    0 => '26',
+  );
+  $handler->display->display_options['filters']['field_locationbf_tid']['vocabulary'] = 'banner_fix_';
+
+  /* Display: banner3 */
+  $handler = $view->new_display('panel_pane', 'banner3', 'panel_pane_3');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -288,9 +344,47 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['field_location_tid']['table'] = 'field_data_field_location';
   $handler->display->display_options['filters']['field_location_tid']['field'] = 'field_location_tid';
   $handler->display->display_options['filters']['field_location_tid']['value'] = array(
-    0 => '22',
+    0 => '25',
   );
   $handler->display->display_options['filters']['field_location_tid']['vocabulary'] = 'banner';
+
+  /* Display: banner4 */
+  $handler = $view->new_display('panel_pane', 'banner4', 'panel_pane_4');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '';
+  $handler->display->display_options['pager']['options']['offset'] = '';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Text */
+  $handler->display->display_options['fields']['field_textbf']['id'] = 'field_textbf';
+  $handler->display->display_options['fields']['field_textbf']['table'] = 'field_data_field_textbf';
+  $handler->display->display_options['fields']['field_textbf']['field'] = 'field_textbf';
+  $handler->display->display_options['fields']['field_textbf']['label'] = '';
+  $handler->display->display_options['fields']['field_textbf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'banner_fix_' => 'banner_fix_',
+  );
+  /* Filter criterion: Content: Location (field_locationbf) */
+  $handler->display->display_options['filters']['field_locationbf_tid']['id'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['table'] = 'field_data_field_locationbf';
+  $handler->display->display_options['filters']['field_locationbf_tid']['field'] = 'field_locationbf_tid';
+  $handler->display->display_options['filters']['field_locationbf_tid']['value'] = array(
+    0 => '27',
+  );
+  $handler->display->display_options['filters']['field_locationbf_tid']['vocabulary'] = 'banner_fix_';
   $export['banner'] = $view;
 
   $view = new view();
@@ -320,12 +414,49 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Published */
+  $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
+  $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
+  $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = 'Category';
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = ' ';
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Published date';
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y-d-m';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['timezone'] = 'Europe/Budapest';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'category',
+    'image_link' => '',
+  );
+  /* Field: Content: Subtitled */
+  $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
+  $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
+  $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
+  $handler->display->display_options['fields']['field_subtitled']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Category (field_tags) */
+  /* Contextual filter: Content: Tags (field_tags) */
   $handler->display->display_options['arguments']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['arguments']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['arguments']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -353,6 +484,38 @@ function alapjarat_views_default_views() {
       'label' => 'Content: Category (field_tags)',
     ),
   );
+
+  /* Display: Content pane 2 */
+  $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = 'Category';
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = ' ';
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_descriptioncd']['id'] = 'field_descriptioncd';
+  $handler->display->display_options['fields']['field_descriptioncd']['table'] = 'field_data_field_descriptioncd';
+  $handler->display->display_options['fields']['field_descriptioncd']['field'] = 'field_descriptioncd';
+  $handler->display->display_options['fields']['field_descriptioncd']['label'] = '';
+  $handler->display->display_options['fields']['field_descriptioncd']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Category (field_category) */
+  $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
+  $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
+  $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_category_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_category_tid']['summary_options']['items_per_page'] = '25';
   $export['category_page'] = $view;
 
   $view = new view();
@@ -470,7 +633,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Main image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -489,7 +652,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -524,7 +687,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: First */
@@ -541,7 +704,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -560,7 +723,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -594,7 +757,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -607,7 +770,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: helpful_info_B */
@@ -617,7 +780,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -636,7 +799,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -663,7 +826,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -676,7 +839,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: big_world_A */
@@ -694,7 +857,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -707,7 +870,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: big_world_B */
@@ -717,7 +880,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -736,7 +899,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -763,7 +926,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -776,7 +939,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: tech */
@@ -786,7 +949,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -805,7 +968,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -832,7 +995,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -845,7 +1008,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: test */
@@ -855,7 +1018,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main image */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -874,7 +1037,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -901,7 +1064,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -914,24 +1077,26 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'post' => 'post',
+    'a_article' => 'a_article',
   );
 
   /* Display: right */
   $handler = $view->new_display('panel_pane', 'right', 'panel_pane_9');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Recommended Articles';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Main image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image_1']['id'] = 'field_image_1';
+  $handler->display->display_options['fields']['field_image_1']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image_1']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image_1']['label'] = '';
+  $handler->display->display_options['fields']['field_image_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_1']['settings'] = array(
     'image_style' => 'right',
     'image_link' => '',
   );
@@ -940,8 +1105,6 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -1001,7 +1164,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1032,7 +1195,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1056,7 +1219,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1080,7 +1243,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1104,7 +1267,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1128,7 +1291,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1152,7 +1315,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1185,7 +1348,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Category (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';

@@ -140,10 +140,66 @@ function alapjarat_image_default_styles() {
  */
 function alapjarat_node_info() {
   $items = array(
-    'post' => array(
-      'name' => t('Post'),
+    'a_article' => array(
+      'name' => t('Alapjárat Article'),
       'base' => 'node_content',
       'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'article' => array(
+      'name' => t('Article'),
+      'base' => 'node_content',
+      'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'banner' => array(
+      'name' => t('Banner (random)'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title (invisible)'),
+      'help' => '',
+    ),
+    'banner_fix_' => array(
+      'name' => t('Banner (fix)'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title (invisible)'),
+      'help' => '',
+    ),
+    'category_description' => array(
+      'name' => t('Category description'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title (invisible)'),
+      'help' => '',
+    ),
+    'event' => array(
+      'name' => t('Event'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Event name'),
+      'help' => '',
+    ),
+    'impress' => array(
+      'name' => t('Impress'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'page' => array(
+      'name' => t('Basic page'),
+      'base' => 'node_content',
+      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

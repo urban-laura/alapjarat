@@ -210,7 +210,7 @@ function alapjarat_default_page_manager_handlers() {
           1 => 'footer_text_',
         ),
         'parent' => 'main',
-        'class' => '',
+        'class' => 'my_footer',
         'hide_empty' => 0,
       ),
       'footer_' => array(
@@ -219,7 +219,7 @@ function alapjarat_default_page_manager_handlers() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '7',
-        'class' => 'second_menu',
+        'class' => 'second_menu_footer',
         'hide_empty' => 0,
       ),
       'footer_text_' => array(
@@ -307,8 +307,8 @@ function alapjarat_default_page_manager_handlers() {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'banner',
-    'css_class' => '',
+    'css_id' => '',
+    'css_class' => 'banner',
   );
   $pane->extras = array();
   $pane->position = 0;
@@ -316,6 +316,28 @@ function alapjarat_default_page_manager_handlers() {
   $pane->uuid = '84e958b3-04f1-48af-b2c1-1218094d8726';
   $display->content['new-84e958b3-04f1-48af-b2c1-1218094d8726'] = $pane;
   $display->panels['banner_'][0] = 'new-84e958b3-04f1-48af-b2c1-1218094d8726';
+  $pane = new stdClass();
+  $pane->pid = 'new-ac4aeefe-d4a1-483f-984b-741f4a2014f7';
+  $pane->panel = 'banner_';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'banner-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'banner',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'ac4aeefe-d4a1-483f-984b-741f4a2014f7';
+  $display->content['new-ac4aeefe-d4a1-483f-984b-741f4a2014f7'] = $pane;
+  $display->panels['banner_'][1] = 'new-ac4aeefe-d4a1-483f-984b-741f4a2014f7';
   $pane = new stdClass();
   $pane->pid = 'new-9ded4e28-117d-47d8-9765-7e91a175953b';
   $pane->panel = 'banner_';
@@ -333,16 +355,16 @@ function alapjarat_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '9ded4e28-117d-47d8-9765-7e91a175953b';
   $display->content['new-9ded4e28-117d-47d8-9765-7e91a175953b'] = $pane;
-  $display->panels['banner_'][1] = 'new-9ded4e28-117d-47d8-9765-7e91a175953b';
+  $display->panels['banner_'][2] = 'new-9ded4e28-117d-47d8-9765-7e91a175953b';
   $pane = new stdClass();
-  $pane->pid = 'new-ac4aeefe-d4a1-483f-984b-741f4a2014f7';
+  $pane->pid = 'new-0ef68896-d486-4fea-b889-1404e2edf8ce';
   $pane->panel = 'banner_';
   $pane->type = 'views_panes';
-  $pane->subtype = 'banner-panel_pane_2';
+  $pane->subtype = 'banner-panel_pane_3';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array();
@@ -351,15 +373,59 @@ function alapjarat_default_page_manager_handlers() {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'banner',
+    'css_id' => '',
+    'css_class' => 'banner',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '0ef68896-d486-4fea-b889-1404e2edf8ce';
+  $display->content['new-0ef68896-d486-4fea-b889-1404e2edf8ce'] = $pane;
+  $display->panels['banner_'][3] = 'new-0ef68896-d486-4fea-b889-1404e2edf8ce';
+  $pane = new stdClass();
+  $pane->pid = 'new-c8812251-416b-419c-b50b-5e823a41e6cf';
+  $pane->panel = 'banner_';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_9';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'random_article',
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 4;
   $pane->locks = array();
-  $pane->uuid = 'ac4aeefe-d4a1-483f-984b-741f4a2014f7';
-  $display->content['new-ac4aeefe-d4a1-483f-984b-741f4a2014f7'] = $pane;
-  $display->panels['banner_'][2] = 'new-ac4aeefe-d4a1-483f-984b-741f4a2014f7';
+  $pane->uuid = 'c8812251-416b-419c-b50b-5e823a41e6cf';
+  $display->content['new-c8812251-416b-419c-b50b-5e823a41e6cf'] = $pane;
+  $display->panels['banner_'][4] = 'new-c8812251-416b-419c-b50b-5e823a41e6cf';
+  $pane = new stdClass();
+  $pane->pid = 'new-8fff074c-14ca-4caf-93df-dd8291f81609';
+  $pane->panel = 'banner_';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'banner-panel_pane_4';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'banner4',
+    'css_class' => 'banner',
+  );
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $pane->uuid = '8fff074c-14ca-4caf-93df-dd8291f81609';
+  $display->content['new-8fff074c-14ca-4caf-93df-dd8291f81609'] = $pane;
+  $display->panels['banner_'][5] = 'new-8fff074c-14ca-4caf-93df-dd8291f81609';
   $pane = new stdClass();
   $pane->pid = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane->panel = 'banner_';
@@ -377,13 +443,16 @@ function alapjarat_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'archive',
+    'css_class' => '',
+  );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 6;
   $pane->locks = array();
   $pane->uuid = '76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $display->content['new-76900dcc-6cdf-4260-a00a-3ca5a66737ff'] = $pane;
-  $display->panels['banner_'][3] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
+  $display->panels['banner_'][6] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane = new stdClass();
   $pane->pid = 'new-3a7c7032-c145-4da4-92fb-07d76d6d7557';
   $pane->panel = 'footer_';
@@ -442,7 +511,8 @@ function alapjarat_default_page_manager_handlers() {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p>&copy; Copyright 2018, alapjarat.hu &amp; <a href="https://www.ecdh.hu" target="_blank">ecdh.hu</a> | Minden jog fenntartva.</p>',
+    'body' => '<p>© Copyright 2018, alapjarat.hu &amp; <a href="https://www.ecdh.hu" target="_blank">ecdh.hu</a>Minden jog fenntartva.</p>
+',
     'format' => 'filtered_html',
     'substitute' => 1,
   );
@@ -450,7 +520,10 @@ function alapjarat_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'footer_text',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
