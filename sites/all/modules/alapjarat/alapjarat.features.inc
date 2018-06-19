@@ -87,6 +87,21 @@ function alapjarat_image_default_styles() {
     ),
   );
 
+  // Exported image style: category.
+  $styles['category'] = array(
+    'label' => 'category',
+    'effects' => array(
+      10 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 213,
+          'height' => 111,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: helpful_small.
   $styles['helpful_small'] = array(
     'label' => 'helpful_small',

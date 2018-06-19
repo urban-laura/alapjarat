@@ -82,6 +82,7 @@ features[image][] = 4_small
 features[image][] = alapjarat
 features[image][] = alapjarat_admin
 features[image][] = big
+features[image][] = category
 features[image][] = helpful_small
 features[image][] = right
 features[image][] = world_small
