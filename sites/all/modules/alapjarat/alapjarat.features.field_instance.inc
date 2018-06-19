@@ -163,7 +163,7 @@ function alapjarat_field_default_field_instances() {
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => 'image_large',
+        'insert_default' => 'image_alapjarat',
         'insert_styles' => array(
           'auto' => 0,
           'icon_link' => 0,
@@ -172,6 +172,7 @@ function alapjarat_field_default_field_instances() {
           'image_alapjarat' => 'image_alapjarat',
           'image_alapjarat_admin' => 0,
           'image_big' => 0,
+          'image_category' => 0,
           'image_helpful_small' => 0,
           'image_large' => 0,
           'image_media_thumbnail' => 0,
@@ -877,83 +878,6 @@ function alapjarat_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 41,
-    ),
-  );
-
-  // Exported field_instance: 'node-category_description-field_category'.
-  $field_instances['node-category_description-field_category'] = array(
-    'bundle' => 'category_description',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_category',
-    'label' => 'Category',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 42,
-    ),
-  );
-
-  // Exported field_instance: 'node-category_description-field_descriptioncd'.
-  $field_instances['node-category_description-field_descriptioncd'] = array(
-    'bundle' => 'category_description',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_descriptioncd',
-    'label' => 'Description',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 10,
       ),
       'type' => 'text_textarea',
       'weight' => 41,

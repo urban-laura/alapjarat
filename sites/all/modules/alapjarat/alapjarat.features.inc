@@ -48,7 +48,7 @@ function alapjarat_image_default_styles() {
       3 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 728,
+          'width' => 730,
           'height' => '',
           'upscale' => 0,
         ),
@@ -166,14 +166,6 @@ function alapjarat_node_info() {
     ),
     'banner_fix_' => array(
       'name' => t('Banner (fix)'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title (invisible)'),
-      'help' => '',
-    ),
-    'category_description' => array(
-      'name' => t('Category description'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

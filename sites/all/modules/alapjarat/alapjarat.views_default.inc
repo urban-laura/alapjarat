@@ -166,12 +166,42 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Published */
+  $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
+  $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
+  $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = 'Category';
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = ' ';
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['label'] = 'Published date';
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y-d-m';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'category',
+    'image_link' => '',
+  );
+  /* Field: Content: Subtitled */
+  $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
+  $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
+  $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
+  $handler->display->display_options['fields']['field_subtitled']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -464,6 +494,7 @@ function alapjarat_views_default_views() {
   $handler->display->display_options['arguments']['field_tags_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_tags_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_tags_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_tags_tid']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -485,37 +516,27 @@ function alapjarat_views_default_views() {
     ),
   );
 
-  /* Display: Content pane 2 */
-  $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Tags */
-  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
-  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
-  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
-  $handler->display->display_options['fields']['field_tags']['label'] = 'Category';
-  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_tags']['separator'] = ' ';
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['field_descriptioncd']['id'] = 'field_descriptioncd';
-  $handler->display->display_options['fields']['field_descriptioncd']['table'] = 'field_data_field_descriptioncd';
-  $handler->display->display_options['fields']['field_descriptioncd']['field'] = 'field_descriptioncd';
-  $handler->display->display_options['fields']['field_descriptioncd']['label'] = '';
-  $handler->display->display_options['fields']['field_descriptioncd']['element_label_colon'] = FALSE;
+  /* Display: published pane */
+  $handler = $view->new_display('panel_pane', 'published pane', 'panel_pane_2');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Category (field_category) */
-  $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_category_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_category_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Published (field_published) */
+  $handler->display->display_options['arguments']['field_published_tid']['id'] = 'field_published_tid';
+  $handler->display->display_options['arguments']['field_published_tid']['table'] = 'field_data_field_published';
+  $handler->display->display_options['arguments']['field_published_tid']['field'] = 'field_published_tid';
+  $handler->display->display_options['arguments']['field_published_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_published_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_published_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_published_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['argument_input'] = array(
+    'field_tags_tid' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 1,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Category (field_tags)',
+    ),
+  );
   $export['category_page'] = $view;
 
   $view = new view();
