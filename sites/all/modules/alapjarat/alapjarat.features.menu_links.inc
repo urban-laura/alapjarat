@@ -87,26 +87,6 @@ function alapjarat_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: main-menu_media:taxonomy/term/10.
-  $menu_links['main-menu_media:taxonomy/term/10'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'taxonomy/term/10',
-    'router_path' => 'taxonomy/term/%',
-    'link_title' => 'Media',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_media:taxonomy/term/10',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
-    'customized' => 1,
-  );
   // Exported menu link: main-menu_premium:taxonomy/term/12.
   $menu_links['main-menu_premium:taxonomy/term/12'] = array(
     'menu_name' => 'main-menu',
@@ -187,26 +167,6 @@ function alapjarat_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-second-menu_calculators:<front>.
-  $menu_links['menu-second-menu_calculators:<front>'] = array(
-    'menu_name' => 'menu-second-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Calculators',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-second-menu_calculators:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -45,
-    'customized' => 1,
-  );
   // Exported menu link: menu-second-menu_home:<front>.
   $menu_links['menu-second-menu_home:<front>'] = array(
     'menu_name' => 'menu-second-menu',
@@ -225,66 +185,6 @@ function alapjarat_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
-    'customized' => 1,
-  );
-  // Exported menu link: menu-second-menu_impress:<front>.
-  $menu_links['menu-second-menu_impress:<front>'] = array(
-    'menu_name' => 'menu-second-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Impress',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-second-menu_impress:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-  );
-  // Exported menu link: menu-second-menu_legal-notice:<front>.
-  $menu_links['menu-second-menu_legal-notice:<front>'] = array(
-    'menu_name' => 'menu-second-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Legal notice',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-second-menu_legal-notice:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-    'customized' => 1,
-  );
-  // Exported menu link: menu-second-menu_media-offer:<front>.
-  $menu_links['menu-second-menu_media-offer:<front>'] = array(
-    'menu_name' => 'menu-second-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Media offer',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-second-menu_media-offer:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: menu-second-menu_partners:<front>.
@@ -431,17 +331,12 @@ function alapjarat_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Big world');
-  t('Calculators');
   t('Communal');
   t('F');
   t('G');
   t('Helpful info');
   t('Home');
-  t('Impress');
   t('In');
-  t('Legal notice');
-  t('Media');
-  t('Media offer');
   t('P');
   t('Partners');
   t('Premium');

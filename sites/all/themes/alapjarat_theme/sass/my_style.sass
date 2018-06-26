@@ -9,8 +9,20 @@ body
 	width: auto
 	margin-left: auto
 	margin-right: auto
+	line-height: 1.42857143
 
-#admin-menu-wrapper
+h1, h2, h3, h4, h5, h6
+	font-family: montserrat,sans-serif
+	font-weight: 500
+	margin-top: 20px
+	margin-bottom: 10px
+h3
+	font-size: 24px
+h4
+	margin-top: 10px
+	font-size: 18px
+
+#admin-menu
 	a
 		color: white !important
 
@@ -48,71 +60,52 @@ a:hover
 .social_menu
 	width: 50%
 	float: right
-
 	#social_menu
 		float: right
 		padding-top: 8px
-
 		li.leaf
 			display: inline
 			padding: 0
 			margin: 0
-
 			a
 				font-size: 16px
 				margin-left: -13px
 				opacity: 0
-
 		li.leaf.f 
 			margin-right: 6.6833px
-
 		li.leaf.t
 			margin-right: 6.6833px
-
 		li.leaf.g
 			margin-right: 4.0167px
-
 		li.leaf.y
 			margin-right: 5.7833px
-
 		li.leaf.in
 			margin-right: 2.7167px
-
 		li.leaf.p
 			margin-right: 44px
-
 		li.leaf::before
 			color: #d82222 !important
 			font: normal normal normal 16px/1 FontAwesome
-
 		li.f::before
-			content: "\f082"
-			
+			content: "\f082"		
 		li.t::before
-			content: "\f081"
-			
+			content: "\f081"			
 		li.g::before
 			content: "\f0d4"
-
 		li.y::before
 			content: "\f166"
-
 		li.in::before
 			content: "\f16d"	
-
 		li.p::before
 			content: "\f0d3"
 		
-
 .letterhead
 	height: 127px
 	padding: 0
 	margim: 0
-
 	.logo
 		padding-top: 8.5px
 		padding-left: 43px
-
 	.letterhead_banner
 		float: right
 		width: auto
@@ -120,19 +113,14 @@ a:hover
 
 .second_menu
 	width: 100%
-
 	li.leaf
 		display: inline
-
 		a:hover
 			text-decoration: none
-
 		a.active, a
 			color: #444 !important
-
 	li.leaf.home
 		margin: 0
-
 	#second_menu
 		font-family: Montserrat
 		color: #444
@@ -151,13 +139,10 @@ a:hover
 	height: 45px
 	padding: 0
 	margim: 0
-
 	#main_menu
 		padding-left: 25px
-
 		li.leaf
 			display: inline
-
 			a
 				color: white !important
 				text-decoration: none
@@ -167,15 +152,12 @@ a:hover
 				padding-left: 10px
 				padding-right: 10px
 				font-family: Montserrat
-
 			a:hover
 				background-color: white
 				color: #444 !important
-		
 	.search
 		float: right
 		width: auto
-
 		#search
 			input#edit-search-block-form--2
 				width: 166px
@@ -189,10 +171,8 @@ a:hover
 		font-size: 12px
 		padding: 3px
 		background: #d82222
-
 	a:hover
 		text-decoration: none
-
 
 .first
 	width: 100%
@@ -201,61 +181,66 @@ a:hover
 		background: black
 		img
 			opacity: 0.7
-
 	.views-field-created
 		color: white
 		font-size: 12px
-
 	#one
 		width: 50%
 		float: left
+		.views-row
+			position: relative
 		.views-field-title
 			position: absolute
-			bottom: 37px
+			bottom: 40px
 			margin-left: 10px
 			margin-right: 10px
-			a
+			h1
 				font-size: 24px
-				color: white !important
+				font-family: open sans,sans-serif
+				padding: 0
+				margin: 0
+				a
+					color: white !important
 		.views-field-field-tags, .views-field-created
 			position: relative
 			bottom: 35px
 			float: left
 			margin-left: 10px
-
+		.views-field-created
+			bottom: 33px
 	#four
 		float: left
 		width: 50%
 		padding-left: 10px
-
 		.views-row
 			width: 50%
 			float: left
 			position: relative
-
 		.views-row-1, .views-row-3
 			padding-right: 5px
-
 		.views-row-2, .views-row-4
 			padding-left: 5px
-
 		.views-row-3, .views-row-4
 			margin-top: -11px
-
 		.views-field-title
 			position: absolute
 			bottom: 60px
 			margin-left: 10px
 			margin-right: 10px
-			a
+			h1
 				font-size: 16px
-				color: white !important
-
+				font-family: open sans,sans-serif
+				padding: 0
+				margin: 0
+				a
+					color: white !important
 		.views-field-field-tags, .views-field-created
 			position: relative
 			bottom: 35px
 			float: left
 			margin-left: 10px
+		.views-field-created
+			bottom: 33px
 
 .maincontent
 	border-right: 1px solid #efefef
@@ -267,11 +252,11 @@ a:hover
 .main_content
 	width: 67%
 	border-right: 1px solid #efefef
-
 	.front_page_post
 		padding: 15px !important
-		padding-top: 40px !important
-
+		padding-top: 30px !important
+		.views-field-title
+			margin-bottom: 5px
 		#helpful_info_h3, #big_world_h3, #tech_h3, #test_h3
 			a
 				font-size: 21px
@@ -280,34 +265,36 @@ a:hover
 				text-rendering: optimizelegibility
 				font-weight: 500
 				text-transform: uppercase
-			
 			h3
 				border-bottom: 3px solid #161616
 				margin-bottom: 10px
-				padding-bottom: 5px
-
-	 
+				padding-bottom: 5px 
 		#helpful_info_a, #big_world_A, #tech, #test
 			.views-field-title
 				margin-top: 15px
-				a
-					color: #d82222 !important
+				h1
 					font-size: 20px
+					font-family: open sans, sans-serif
 					font-weight: bold
-
+					margin: 0
+					padding: 0
+					a
+						color: #d82222 !important
 		#helpful_info_b
 			.views-field-field-image
 				width: 45%
 				float: left
 			.views-field-title
-				a
-					color: #d82222 !important
+				h1
 					font-size: 16px
 					font-family: montserrat,sans-serif
+					padding: 0
+					margin: 0
+					a
+						color: #d82222 !important
 			.views-field-field-tags, .views-field-created, .views-field-title
 				margin-left: 45%
-
-
+				margin-bottom: 5px
 		#helpful_info_a, #helpful_info_b
 			width: 50%
 			padding-right: 15px
@@ -315,21 +302,21 @@ a:hover
 			float: left
 			.views-field-field-image
 				margin-top: 4px
-
 		#helpful_info_a
 			.views-field-field-tags
 				float: left
 				margin-right: 10px
 			.views-field-field-subtitled
-				font-size: 16px
-				margin-top: 5px
-
+				h2
+					padding: 0
+					margin: 0
+					font-size: 16px
+					margin-top: 5px
+					font-family: open sans, sans-serif
 		#helpful_info_b
 			padding-left: 25px
 			.views-row
-				margin-bottom: 30px
-
-
+				margin-bottom: 25px
 		#big_world_A
 			.views-row
 				height: 340px
@@ -343,7 +330,6 @@ a:hover
 			.views-field-field-tags
 				float: left
 				margin-right: 10px
-
 		#big_world_B
 			.views-row
 				width: 50%
@@ -357,18 +343,19 @@ a:hover
 				margin-top: 4px
 			.views-field-title
 				margin-left: 45%
+				h1
+					font-size: 16px
+					padding: 0
+					margin: 0
 				a
 					color: #d82222 !important
-					font-size: 16px
-					font-family: montserrat,sans-serif
 			.views-field-field-tags
 				margin-left: 45%
-				float: left
-				margin-right: 10px
+				.field-content
+					float: left
+					margin-right: 10px
 			.views-field-created
 				float: left
-
-
 		#tech, #test
 			.views-field-field-image
 				margin-top: 4px
@@ -381,7 +368,6 @@ a:hover
 				padding-left: 15px
 				float: left
 				height: 305px
-
 
 .right
 	width: 33%
@@ -398,15 +384,12 @@ a:hover
 		border-bottom: 3px solid #161616
 		margin-bottom: 10px
 		padding-bottom: 5px
-
 	.banner
 		.views-row
 			margin-bottom: 40px
-
 	#banner4
 		clear: both
 		padding-top: 20px
-
 	#event
 		margin-bottom: 50px
 		padding-top: 20px
@@ -426,7 +409,8 @@ a:hover
 				height: 17px
 				margin-top: -21px
 				opacity: 0
-
+				a
+					font-size: 16px
 	#random_article
 		.views-row
 			clear: both
@@ -436,15 +420,19 @@ a:hover
 			margin-bottom: 10px
 		.views-field-title
 			margin-left: 38%
+			h1
+				font-size: 14px
+				margin: 0
+				padding: 0
+				font-family: open sans,sans-serif
+
 		.views-field-created
 			padding: 5px 0
 			margin-left: 38%
 			border-bottom: 1px solid #efefef
-
 	#archive
 		ul
 			list-style: none
-
 			li
 				padding: 10px 0
 				border-bottom: 1px solid #efefef
@@ -453,10 +441,9 @@ a:hover
 	margin-top: 10px !important
 	.clearfix
 		margin: auto
-		max-width: 1002px
+		max-width: 1005px
 	.second_menu_footer
 		width: auto
-
 		li
 			display: inline
 			padding: 0
@@ -465,11 +452,9 @@ a:hover
 		padding-right: 7px
 		border-right: solid 1px black
 		padding-left: 2.7px
-
 	.footer_text
 		padding-left: 7px
 		padding-right: 2.7px
-
 		a
 			margin-right: 7px
 
@@ -477,39 +462,55 @@ a:hover
 	margin-bottom: -21px
 
 .pane-term-name
-	margin-top: 50px
+	margin-top: 20px
 	margin-bottom: 10px
 	padding: 0px 15px
 
 .pane-term-description
-	margin: 0px 15px
+	margin-top: 15px
+	padding: 0px 15px
 	font-size: 16px
-	padding-bottom: 20px
-	border-bottom: 1px solid #eee
 	p
 		margin: 0px !important
 
-.category
-	h1, .pane-title
+.header
+	h1, .pane-title, .view-header h1, .views-field-name
 		font-size: 36px
 		font-weight: 500
 		line-height: 1.1
 		font-family: montserrat,sans-serif
 		padding: 0 !important
+		margin: 0 !important
 	.pane-title
 		float: left
 		margin-right: 10px
+	.view-header
+		margin-top: 50px
 
-#category, #archive_list
+#media_title
+	margin-top: 50px
+	padding: 0px 15px
+	.views-field-description
+		margin-top: 15px
+		font-size: 16px
+		p
+			margin: 0px !important
+
+#category, #archive_list, #media
 	padding: 0px 15px !important
 	padding-bottom: 15px !important
+	.views-row-1
+		border-top: 1px solid #eee
+		margin-top: 20px
 	.views-field-title
-		font-size: 36px
-		padding-top: 30px
-		margin-bottom: 5px
-		line-height: 40px
 		clear: both
-		font-family: montserrat,sans-serif
+		h1
+			font-size: 36px
+			margin: 0
+			padding: 0
+			padding-top: 30px
+			margin-bottom: 5px
+			line-height: 40px
 	.views-label-field-published, .views-field-field-published .field-content, .views-label-field-tags, .views-field-field-tags .field-content
 		float: left
 		padding: 10px 0px
@@ -527,6 +528,8 @@ a:hover
 		border-top: 1px solid #efefef
 		border-bottom: 1px solid #efefef
 		margin-bottom: 10px
+		.field-content
+			color: #d82222 !important
 	.views-field-field-image
 		float: left
 		padding: 0px 15px
@@ -543,6 +546,158 @@ a:hover
 			li
 				margin: 0 !important
 
+.node_pane
+	padding: 0px 15px !important
+	padding-bottom: 15px !important
+	ul, ol
+		margin-left: 45px
+	.pane-node-title
+		margin-top: 20px !important
+		margin-bottom: 15px !important
+	.pane-node-field-published
+		float: left
+		padding: 10px
+		.field-items
+			font-weight: bold
+	.field-label
+		font-weight: normal
+	.pane-node-field-tags 
+		float: left
+		padding: 10px 0px
+		.field-items
+			display: inline-flex
+		.field-item
+			margin-right: 5px
+			a
+				color: white !important
+				font-size: 12px
+				padding: 3px
+				background: #d82222
+			a:hover
+				text-decoration: none
+	.pane-node-created
+		text-align: right
+		padding: 10px
+		border-top: 1px solid #efefef
+		border-bottom: 1px solid #efefef
+		margin-bottom: 10px
+		.pane-content
+			display: inline-block
+	.pane-node-field-subtitled
+		font-family: montserrat,sans-serif
+		font-size: 30px
+		margin-top: 20px
+		margin-bottom: 13px
+		line-height: 35px
+	.pane-node-field-text
+		p
+			font-size: 16px
+		img
+			width: 100% !important
+			height: auto !important
+	.pane-social-media-links-social-media-links
+		h2
+			margin-bottom: 10px !important
+		ul
+			margin-left: 0px
+	.social-media-links
+		li
+			padding: 0 !important
+			margin-right: 5px
+
+#impress
+	padding: 0px 15px !important
+	.view-header
+		p
+			margin: 0 !important
+			font-size: 30px
+			font-family: montserrat,sans-serif
+	.pane-title
+		font-size: 36px
+		font-family: montserrat,sans-serif
+		margin-top: 20px !important
+		margin-bottom: 35px !important
+	.views-field-field-e-mail
+		background-image: url("/sites/default/files/email.png")
+		background-repeat: no-repeat
+		height: 32px
+		width: 32px
+		float: left
+		a
+			font-size: 0px
+			padding: 15px 0px
+			padding-right: 21px
+	.views-row
+		clear: both
+		padding-top: 25px
+	.views-field-title
+		color: #d82222
+		float: left
+		margin-left: 6px
+		margin-right: 9px
+	.views-field-field-status
+		margin-bottom: 10px
+	.views-field-title, .views-field-field-status
+		font-family: montserrat,sans-serif
+		font-size: 24px
+		line-height: 30px
+	.views-field-field-picture
+		float: left
+		padding-top: 10px
+		margin-right: 1.5em
+		margin-left: 25px
+	.views-field-field-description
+		padding: 10px 20px
+		font-size: 16px
+		border-left: 5px solid #eee
+
+#impress_yes
+	padding: 0px 15px !important
+	margin-bottom: 30px
+	.view-content
+		margin-left: 20px
+	h2
+		font-family: montserrat,sans-serif
+		font-size: 24px
+		margin-top: 25px !important
+		margin-bottom: 10px !important
+	.views-field-title
+		font-size: 16px
+		background-image: url("/sites/default/files/li.png")
+		background-repeat: no-repeat
+		background-position-x: left
+		background-position-y: center
+		line-height: 16px
+		margin-bottom: 10px
+		.field-content
+			margin-left: 15px
+
+.pages
+	padding: 0px 15px !important
+	ul, ol
+		margin-left: 45px
+	.views-field-title
+		font-size: 36px
+		font-weight: 500
+		line-height: 1.1
+		font-family: montserrat,sans-serif
+		margin-top: 20px !important
+		margin-bottom: 35px !important
+
+.partner
+	padding: 0px 15px !important
+	table
+		border-collapse: unset
+	img
+		max-width: none
+	.views-field-field-picturep, .views-field-field-descriptionp
+		padding: 10px
+		p
+			margin: 0 !important
+	.even, .odd
+		background-color: white
+		border: 0
+		padding: 0
 
 
 				

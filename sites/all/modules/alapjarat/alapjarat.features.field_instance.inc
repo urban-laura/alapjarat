@@ -221,9 +221,12 @@ function alapjarat_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 8,
     ),
   );
@@ -1119,7 +1122,7 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1129,12 +1132,12 @@ function alapjarat_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 33,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-impress-field_name'.
-  $field_instances['node-impress-field_name'] = array(
+  // Exported field_instance: 'node-impress-field_e_mail'.
+  $field_instances['node-impress-field_e_mail'] = array(
     'bundle' => 'impress',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1142,10 +1145,10 @@ function alapjarat_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'email',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'email_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1155,21 +1158,110 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_name',
-    'label' => 'Name',
+    'field_name' => 'field_e_mail',
+    'label' => 'E-mail',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'email',
       'settings' => array(
         'size' => 60,
       ),
-      'type' => 'text_textfield',
-      'weight' => 31,
+      'type' => 'email_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-impress-field_external_co_worker'.
+  $field_instances['node-impress-field_external_co_worker'] = array(
+    'bundle' => 'impress',
+    'default_value' => array(
+      0 => array(
+        'tid' => 32,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_external_co_worker',
+    'label' => 'External co-worker?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-impress-field_numberi'.
+  $field_instances['node-impress-field_numberi'] = array(
+    'bundle' => 'impress',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_numberi',
+    'label' => 'Number',
+    'required' => 0,
+    'settings' => array(
+      'range' => 20,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'weight',
+      'settings' => array(
+        'range' => 20,
+      ),
+      'type' => 'weight_selector',
+      'weight' => 7,
     ),
   );
 
@@ -1239,7 +1331,7 @@ function alapjarat_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 34,
+      'weight' => 5,
     ),
   );
 
@@ -1279,7 +1371,7 @@ function alapjarat_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 32,
+      'weight' => 2,
     ),
   );
 
@@ -1327,22 +1419,263 @@ function alapjarat_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-pages-field_textp'.
+  $field_instances['node-pages-field_textp'] = array(
+    'bundle' => 'pages',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_textp',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 41,
+    ),
+  );
+
+  // Exported field_instance: 'node-partners-field_descriptionp'.
+  $field_instances['node-partners-field_descriptionp'] = array(
+    'bundle' => 'partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_descriptionp',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 41,
+    ),
+  );
+
+  // Exported field_instance: 'node-partners-field_numberp'.
+  $field_instances['node-partners-field_numberp'] = array(
+    'bundle' => 'partners',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'weight',
+        'settings' => array(),
+        'type' => 'weight_integer',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_numberp',
+    'label' => 'Number',
+    'required' => 0,
+    'settings' => array(
+      'range' => 20,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'weight',
+      'settings' => array(
+        'range' => 20,
+      ),
+      'type' => 'weight_selector',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-partners-field_picturep'.
+  $field_instances['node-partners-field_picturep'] = array(
+    'bundle' => 'partners',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_picturep',
+    'label' => 'Picture',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_4_small' => 0,
+          'image_alapjarat' => 0,
+          'image_alapjarat_admin' => 0,
+          'image_big' => 0,
+          'image_category' => 0,
+          'image_helpful_small' => 0,
+          'image_impresszum' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_right' => 0,
+          'image_thumbnail' => 0,
+          'image_world_small' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-partners-field_premium_car_partner_'.
+  $field_instances['node-partners-field_premium_car_partner_'] = array(
+    'bundle' => 'partners',
+    'default_value' => array(
+      0 => array(
+        'tid' => 39,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_premium_car_partner_',
+    'label' => 'Premium car partner?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 43,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Category');
   t('Description');
+  t('E-mail');
   t('Enter a comma-separated list of words to describe your content.');
   t('Event date');
+  t('External co-worker?');
   t('Facebook Video');
   t('Facebook event');
   t('Image');
   t('Images');
   t('Location');
   t('Main image');
-  t('Name');
   t('Number');
   t('Picture');
+  t('Premium car partner?');
   t('Published');
   t('Published date');
   t('Remove date');

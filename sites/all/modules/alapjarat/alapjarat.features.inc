@@ -117,6 +117,53 @@ function alapjarat_image_default_styles() {
     ),
   );
 
+  // Exported image style: impresszum.
+  $styles['impresszum'] = array(
+    'label' => 'Impress',
+    'effects' => array(
+      11 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 130,
+          'height' => 130,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: premium_partner.
+  $styles['premium_partner'] = array(
+    'label' => 'premium_partner',
+    'effects' => array(
+      12 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 158,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: recreation_partners.
+  $styles['recreation_partners'] = array(
+    'label' => 'recreation_partners',
+    'effects' => array(
+      13 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 104,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: right.
   $styles['right'] = array(
     'label' => 'right',
@@ -200,7 +247,7 @@ function alapjarat_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Name'),
       'help' => '',
     ),
     'page' => array(
@@ -209,6 +256,22 @@ function alapjarat_node_info() {
       'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
       'has_title' => '1',
       'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'pages' => array(
+      'name' => t('Pages'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'partners' => array(
+      'name' => t('Partners'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title (invisible)'),
       'help' => '',
     ),
   );
