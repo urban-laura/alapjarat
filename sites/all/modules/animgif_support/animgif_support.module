@@ -238,6 +238,8 @@ function _animgif_support_resize_image($source, $destination, $width, $height) {
     $ret = $image->writeImages($destination, TRUE);
   }
   elseif ('gifresizer' == $active && libraries_load('gifresizer')) {
+    //TODO 
+    require_once('sites/all/libraries/gifresizer/gifresizer.php'); 
     // Use GIFResizer class, if available.
     $gr = new gifresizer();
 

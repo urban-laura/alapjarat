@@ -45,6 +45,32 @@ CKEDITOR.editorConfig = function(config) {
   config.extraPlugins = 'richcombo';
   config.extraPlugins = 'font';
   config.extraPlugins = 'justify';
+  config.extraPlugins = 'image2';
+  config.extraPlugins = 'widget';
+  config.extraPlugins = 'lineutils';
+  config.extraPlugins = 'clipboard';
+  config.extraPlugins = 'toolbar';
+  config.extraPlugins = 'widgetselection';
+
+  config.extraPlugins = '';
+  config.extraPlugins = 'wordcount';
+  config.extraPlugins = 'undo';
+  config.extraPlugins = 'notification';
+  config.extraPlugins = 'htmlwriter';
+
+CKEDITOR.config.extraPlugins = 'toolbar';
+    CKEDITOR.config.extraPlugins = 'htmlwriter';
+    CKEDITOR.config.extraPlugins = 'notification';
+    CKEDITOR.config.extraPlugins = 'wordcount';
+    CKEDITOR.config.wordcount = {
+          showParagraphs: false,
+          showWordCount: true,
+          showCharCount: true,
+          countSpacesAsChars: true,
+          countHTML: false,
+          //maxWordCount: 10,
+//          maxCharCount: 10
+    };
 
   /*
     * Append here extra CSS rules that should be applied into the editing area.

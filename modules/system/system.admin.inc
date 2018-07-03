@@ -1812,7 +1812,7 @@ function system_file_system_settings() {
     '#title' => t('Private file system path'),
     '#default_value' => variable_get('file_private_path', ''),
     '#maxlength' => 255,
-    '#description' => t('An existing local file system path for storing private files. It should be writable by Drupal and not accessible over the web. See the online handbook for <a href="@handbook">more information about securing private files</a>.', array('@handbook' => 'https://www.drupal.org/docs/7/core/modules/file/overview')),
+    '#description' => t('An existing local file system path for storing private files. It should be writable by Drupal and not accessible over the web. See the online handbook for <a href="@handbook">more information about securing private files</a>.', array('@handbook' => 'http://drupal.org/documentation/modules/file')),
     '#after_build' => array('system_check_directory'),
   );
 
@@ -2565,21 +2565,9 @@ function theme_system_admin_index($variables) {
 /**
  * Returns HTML for the status report.
  *
- * This theme function is dependent on install.inc being loaded, because
- * that's where the constants are defined.
- *
  * @param $variables
  *   An associative array containing:
- *   - requirements: An array of requirements/status items. Each requirement
- *     is an associative array containing the following elements:
- *     - title: The name of the requirement.
- *     - value: (optional) The current value (version, time, level, etc).
- *     - description: (optional) The description of the requirement.
- *     - severity: (optional) The requirement's result/severity level, one of:
- *       - REQUIREMENT_INFO: Status information.
- *       - REQUIREMENT_OK: The requirement is satisfied.
- *       - REQUIREMENT_WARNING: The requirement failed with a warning.
- *       - REQUIREMENT_ERROR: The requirement failed with an error.
+ *   - requirements: An array of requirements.
  *
  * @ingroup themeable
  */

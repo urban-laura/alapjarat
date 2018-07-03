@@ -11,16 +11,48 @@ body
 	margin-right: auto
 	line-height: 1.42857143
 
+.jb-classifier-link-wrapper + div
+	opacity: 0 !important
+	visibility: hidden !important
+
 h1, h2, h3, h4, h5, h6
 	font-family: montserrat,sans-serif
 	font-weight: 500
 	margin-top: 20px
 	margin-bottom: 10px
+	padding: 0
+h1
+	font-size: 36px
+
+h2
+	font-size: 30px
 h3
 	font-size: 24px
 h4
-	margin-top: 10px
-	font-size: 18px
+	margin-top: 10px 
+	font-size: 18px 
+
+.ckeditor_links a
+	color: white
+
+.pager
+	float: left
+	border: 1px solid #efefef
+	padding-top: 0px !important
+	li
+		a
+			margin-left: -4.3px
+
+blockquote
+	padding: 10px 20px
+	margin: 0 0 20px
+	border-left: 5px solid #C0C0C0
+	background: #F2F2F2
+	p
+		font-size: 17.5px !important
+		margin: 0
+		font-style: italic
+	
 
 #admin-menu
 	a
@@ -177,11 +209,18 @@ a:hover
 .first
 	width: 100%
 	margin-bottom: -15px
+	h3
+		font-family: open sans,sans-serif
+		margin: 0 
+		a
+			color: white !important
+	p
+		margin: 0 !important
 	.views-field-field-image
 		background: black
 		img
 			opacity: 0.7
-	.views-field-created
+	.views-field-field-published-datea
 		color: white
 		font-size: 12px
 	#one
@@ -189,24 +228,19 @@ a:hover
 		float: left
 		.views-row
 			position: relative
-		.views-field-title
+		.views-field-path
 			position: absolute
 			bottom: 40px
 			margin-left: 10px
 			margin-right: 10px
-			h1
-				font-size: 24px
-				font-family: open sans,sans-serif
-				padding: 0
-				margin: 0
-				a
-					color: white !important
-		.views-field-field-tags, .views-field-created
+			h3
+				font-size: 24px 
+		.views-field-field-tags, .views-field-field-published-datea
 			position: relative
 			bottom: 35px
 			float: left
 			margin-left: 10px
-		.views-field-created
+		.views-field-field-published-datea
 			bottom: 33px
 	#four
 		float: left
@@ -221,25 +255,20 @@ a:hover
 		.views-row-2, .views-row-4
 			padding-left: 5px
 		.views-row-3, .views-row-4
-			margin-top: -11px
-		.views-field-title
+			margin-top: -10px
+		.views-field-path
 			position: absolute
 			bottom: 60px
 			margin-left: 10px
 			margin-right: 10px
-			h1
+			h3
 				font-size: 16px
-				font-family: open sans,sans-serif
-				padding: 0
-				margin: 0
-				a
-					color: white !important
-		.views-field-field-tags, .views-field-created
+		.views-field-field-tags, .views-field-field-published-datea
 			position: relative
 			bottom: 35px
 			float: left
 			margin-left: 10px
-		.views-field-created
+		.views-field-field-published-datea
 			bottom: 33px
 
 .maincontent
@@ -255,71 +284,73 @@ a:hover
 	.front_page_post
 		padding: 15px !important
 		padding-top: 30px !important
-		.views-field-title
-			margin-bottom: 5px
-		#helpful_info_h3, #big_world_h3, #tech_h3, #test_h3
+		h3
+			font-family: open sans,sans-serif 
+			margin: 0
+			font-weight: bold
 			a
+				color: #d82222 !important
+
+		p
+			margin: 0 !important
+		.view-header
+			h3
 				font-size: 21px
-				color: #444 !important
 				font-family: montserrat,sans-serif
 				text-rendering: optimizelegibility
 				font-weight: 500
 				text-transform: uppercase
-			h3
 				border-bottom: 3px solid #161616
 				margin-bottom: 10px
 				padding-bottom: 5px 
+				a
+					color: #444 !important
+				
 		#helpful_info_a, #big_world_A, #tech, #test
-			.views-field-title
-				margin-top: 15px
-				h1
+			clear: both
+			.views-field-path
+				margin-top: 10px
+				h3
 					font-size: 20px
-					font-family: open sans, sans-serif
-					font-weight: bold
-					margin: 0
-					padding: 0
-					a
-						color: #d82222 !important
 		#helpful_info_b
 			.views-field-field-image
 				width: 45%
 				float: left
-			.views-field-title
-				h1
+			.views-field-path
+				h3
 					font-size: 16px
 					font-family: montserrat,sans-serif
-					padding: 0
-					margin: 0
-					a
-						color: #d82222 !important
-			.views-field-field-tags, .views-field-created, .views-field-title
+					font-weight: normal
+			.views-field-field-tags, .views-field-field-published-datea, .views-field-path
 				margin-left: 45%
-				margin-bottom: 5px
+				margin-bottom: 3px
 		#helpful_info_a, #helpful_info_b
 			width: 50%
-			padding-right: 15px
-			padding-left: 15px
 			float: left
 			.views-field-field-image
 				margin-top: 4px
 		#helpful_info_a
+			.view-header
+				width: 200%
+			.view-content
+				padding-right: 15px
+				padding-left: 15px
+				padding-top: 4px
 			.views-field-field-tags
 				float: left
 				margin-right: 10px
 			.views-field-field-subtitled
-				h2
-					padding: 0
-					margin: 0
-					font-size: 16px
-					margin-top: 5px
-					font-family: open sans, sans-serif
+				font-size: 16px
+				margin-top: 5px
 		#helpful_info_b
 			padding-left: 25px
+			padding-right: 15px
+			padding-top: 49px
 			.views-row
 				margin-bottom: 25px
 		#big_world_A
 			.views-row
-				height: 340px
+				height: 320px
 			.views-row-1, .views-row-2
 				width: 50%
 				padding-right: 15px
@@ -334,27 +365,26 @@ a:hover
 			.views-row
 				width: 50%
 				float: left
-				height: 155px
+				height: 150px
 				padding-right: 15px
 				padding-left: 15px
 			.views-field-field-image
 				width: 45%
 				float: left
 				margin-top: 4px
-			.views-field-title
+			.views-field-path
 				margin-left: 45%
-				h1
+				margin-bottom: 3px
+				h3
 					font-size: 16px
-					padding: 0
-					margin: 0
-				a
-					color: #d82222 !important
+					font-family: montserrat,sans-serif
+					font-weight: normal
 			.views-field-field-tags
 				margin-left: 45%
 				.field-content
 					float: left
 					margin-right: 10px
-			.views-field-created
+			.views-field-field-published-datea
 				float: left
 		#tech, #test
 			.views-field-field-image
@@ -374,11 +404,10 @@ a:hover
 	padding: 15px !important
 	padding-top: 40px !important
 
-	h3, .pane-articles-archive h2, h2.pane-title
+	.banner .views-field-title, .pane-title, .view-header h3
 		font-size: 21px
 		color: #444 !important
 		font-family: montserrat,sans-serif
-		text-rendering: optimizelegibility
 		font-weight: 500
 		text-transform: uppercase
 		border-bottom: 3px solid #161616
@@ -414,19 +443,17 @@ a:hover
 	#random_article
 		.views-row
 			clear: both
-		.views-field-field-image-1
+		.views-field-field-image
 			width: 38%
 			float: left
 			margin-bottom: 10px
-		.views-field-title
+		.views-field-path
 			margin-left: 38%
-			h1
+			h3
 				font-size: 14px
+				font-family: montserrat,sans-serif
 				margin: 0
-				padding: 0
-				font-family: open sans,sans-serif
-
-		.views-field-created
+		.views-field-field-published-datea
 			padding: 5px 0
 			margin-left: 38%
 			border-bottom: 1px solid #efefef
@@ -475,17 +502,16 @@ a:hover
 
 .header
 	h1, .pane-title, .view-header h1, .views-field-name
-		font-size: 36px
-		font-weight: 500
 		line-height: 1.1
-		font-family: montserrat,sans-serif
 		padding: 0 !important
 		margin: 0 !important
+		font-size: 36px
+		font-family: montserrat,sans-serif
 	.pane-title
 		float: left
 		margin-right: 10px
 	.view-header
-		margin-top: 50px
+		margin-top: 20px
 
 #media_title
 	margin-top: 50px
@@ -496,21 +522,23 @@ a:hover
 		p
 			margin: 0px !important
 
-#category, #archive_list, #media
+#category, #archive_list, #media, #published, #tag
 	padding: 0px 15px !important
 	padding-bottom: 15px !important
+	p
+		margin: 0 !important
 	.views-row-1
 		border-top: 1px solid #eee
 		margin-top: 20px
-	.views-field-title
+	.views-field-path
 		clear: both
-		h1
-			font-size: 36px
+		padding-top: 30px
+		margin-bottom: 5px
+		h3
 			margin: 0
-			padding: 0
-			padding-top: 30px
-			margin-bottom: 5px
-			line-height: 40px
+			font-size: 36px
+			a
+				line-height: 40px
 	.views-label-field-published, .views-field-field-published .field-content, .views-label-field-tags, .views-field-field-tags .field-content
 		float: left
 		padding: 10px 0px
@@ -522,7 +550,7 @@ a:hover
 		font-weight: bold
 	.views-label-field-tags
 		margin-right: 3px
-	.views-field-created
+	.views-field-field-published-datea
 		text-align: right
 		padding: 10px
 		border-top: 1px solid #efefef
@@ -530,6 +558,8 @@ a:hover
 		margin-bottom: 10px
 		.field-content
 			color: #d82222 !important
+			float: right
+			margin-left: 3px
 	.views-field-field-image
 		float: left
 		padding: 0px 15px
@@ -551,9 +581,18 @@ a:hover
 	padding-bottom: 15px !important
 	ul, ol
 		margin-left: 45px
-	.pane-node-title
+	figure
+		margin: 0 !important
+	figcaption
+		text-align: center
+		margin-top: 10px
+		margin-bottom: -15px
+	.pane-node-field-title2
 		margin-top: 20px !important
-		margin-bottom: 15px !important
+		h1
+			padding: 0 !important
+			p
+				margin: 0 !important
 	.pane-node-field-published
 		float: left
 		padding: 10px
@@ -575,7 +614,7 @@ a:hover
 				background: #d82222
 			a:hover
 				text-decoration: none
-	.pane-node-created
+	.pane-node-field-published-datea
 		text-align: right
 		padding: 10px
 		border-top: 1px solid #efefef
@@ -583,12 +622,12 @@ a:hover
 		margin-bottom: 10px
 		.pane-content
 			display: inline-block
+			color: #d82222 !important
 	.pane-node-field-subtitled
-		font-family: montserrat,sans-serif
-		font-size: 30px
-		margin-top: 20px
-		margin-bottom: 13px
-		line-height: 35px
+		h2
+			margin-top: 20px
+			margin-bottom: 15px
+			line-height: 35px
 	.pane-node-field-text
 		p
 			font-size: 16px
@@ -600,10 +639,20 @@ a:hover
 			margin-bottom: 10px !important
 		ul
 			margin-left: 0px
+		img
+			width: 30px
 	.social-media-links
 		li
 			padding: 0 !important
 			margin-right: 5px
+	.pane-node-field-tagsa
+		.pane-title
+			float: left
+			padding-right: 10px
+		.field-item
+			a
+				float: left
+				padding-right: 10px
 
 #impress
 	padding: 0px 15px !important
@@ -612,11 +661,12 @@ a:hover
 			margin: 0 !important
 			font-size: 30px
 			font-family: montserrat,sans-serif
-	.pane-title
-		font-size: 36px
-		font-family: montserrat,sans-serif
-		margin-top: 20px !important
-		margin-bottom: 35px !important
+	h1
+		margin-top: 20px 
+		margin-bottom: 35px 
+		padding: 0
+	h2
+		margin-bottom: 0
 	.views-field-field-e-mail
 		background-image: url("/sites/default/files/email.png")
 		background-repeat: no-repeat
@@ -657,39 +707,38 @@ a:hover
 	.view-content
 		margin-left: 20px
 	h2
-		font-family: montserrat,sans-serif
-		font-size: 24px
 		margin-top: 25px !important
 		margin-bottom: 10px !important
 	.views-field-title
 		font-size: 16px
-		background-image: url("/sites/default/files/li.png")
-		background-repeat: no-repeat
-		background-position-x: left
-		background-position-y: center
 		line-height: 16px
 		margin-bottom: 10px
 		.field-content
 			margin-left: 15px
+			display: list-item
 
 .pages
 	padding: 0px 15px !important
 	ul, ol
 		margin-left: 45px
 	.views-field-title
-		font-size: 36px
 		font-weight: 500
 		line-height: 1.1
-		font-family: montserrat,sans-serif
 		margin-top: 20px !important
 		margin-bottom: 35px !important
 
 .partner
 	padding: 0px 15px !important
+	h3
+		margin-top: 40px
 	table
 		border-collapse: unset
-	img
-		max-width: none
+	#premium
+		img
+			max-width: 158px
+	#recreation
+		img
+			max-width: 104px 
 	.views-field-field-picturep, .views-field-field-descriptionp
 		padding: 10px
 		p
