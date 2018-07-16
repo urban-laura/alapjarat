@@ -52,7 +52,10 @@ blockquote
 		font-size: 17.5px !important
 		margin: 0
 		font-style: italic
-	
+
+.youtube-embed-wrapper
+	padding-top: 0px !important
+	margin-bottom: 15px
 
 #admin-menu
 	a
@@ -220,7 +223,7 @@ a:hover
 		background: black
 		img
 			opacity: 0.7
-	.views-field-field-published-datea
+	.views-field-created
 		color: white
 		font-size: 12px
 	#one
@@ -235,12 +238,12 @@ a:hover
 			margin-right: 10px
 			h3
 				font-size: 24px 
-		.views-field-field-tags, .views-field-field-published-datea
+		.views-field-field-tags, .views-field-created
 			position: relative
 			bottom: 35px
 			float: left
 			margin-left: 10px
-		.views-field-field-published-datea
+		.views-field-created
 			bottom: 33px
 	#four
 		float: left
@@ -263,12 +266,12 @@ a:hover
 			margin-right: 10px
 			h3
 				font-size: 16px
-		.views-field-field-tags, .views-field-field-published-datea
+		.views-field-field-tags, .views-field-created
 			position: relative
 			bottom: 35px
 			float: left
 			margin-left: 10px
-		.views-field-field-published-datea
+		.views-field-created
 			bottom: 33px
 
 .maincontent
@@ -321,7 +324,7 @@ a:hover
 					font-size: 16px
 					font-family: montserrat,sans-serif
 					font-weight: normal
-			.views-field-field-tags, .views-field-field-published-datea, .views-field-path
+			.views-field-field-tags, .views-field-created, .views-field-path
 				margin-left: 45%
 				margin-bottom: 3px
 		#helpful_info_a, #helpful_info_b
@@ -384,7 +387,7 @@ a:hover
 				.field-content
 					float: left
 					margin-right: 10px
-			.views-field-field-published-datea
+			.views-field-created
 				float: left
 		#tech, #test
 			.views-field-field-image
@@ -404,21 +407,22 @@ a:hover
 	padding: 15px !important
 	padding-top: 40px !important
 
-	.banner .views-field-title, .pane-title, .view-header h3
+	.banner .views-field-field-title, .pane-title, .view-header h3
 		font-size: 21px
 		color: #444 !important
 		font-family: montserrat,sans-serif
 		font-weight: 500
 		text-transform: uppercase
-		border-bottom: 3px solid #161616
 		margin-bottom: 10px
+	.pane-title, .view-header h3
+		border-bottom: 3px solid #161616
 		padding-bottom: 5px
 	.banner
+		clear: both
 		.views-row
 			margin-bottom: 40px
-	#banner4
-		clear: both
-		padding-top: 20px
+	#banner5
+		padding-top: 30px
 	#event
 		margin-bottom: 50px
 		padding-top: 20px
@@ -453,7 +457,7 @@ a:hover
 				font-size: 14px
 				font-family: montserrat,sans-serif
 				margin: 0
-		.views-field-field-published-datea
+		.views-field-created
 			padding: 5px 0
 			margin-left: 38%
 			border-bottom: 1px solid #efefef
@@ -468,7 +472,7 @@ a:hover
 	margin-top: 10px !important
 	.clearfix
 		margin: auto
-		max-width: 1005px
+		max-width: 1010px
 	.second_menu_footer
 		width: auto
 		li
@@ -488,12 +492,12 @@ a:hover
 .panels-flexible-region-1-footer_text_
 	margin-bottom: -21px
 
-.pane-term-name
+.pane-term-name, #media_title
 	margin-top: 20px
 	margin-bottom: 10px
 	padding: 0px 15px
 
-.pane-term-description
+.pane-term-description, .views-field-description
 	margin-top: 15px
 	padding: 0px 15px
 	font-size: 16px
@@ -512,15 +516,6 @@ a:hover
 		margin-right: 10px
 	.view-header
 		margin-top: 20px
-
-#media_title
-	margin-top: 50px
-	padding: 0px 15px
-	.views-field-description
-		margin-top: 15px
-		font-size: 16px
-		p
-			margin: 0px !important
 
 #category, #archive_list, #media, #published, #tag
 	padding: 0px 15px !important
@@ -550,7 +545,7 @@ a:hover
 		font-weight: bold
 	.views-label-field-tags
 		margin-right: 3px
-	.views-field-field-published-datea
+	.views-field-created
 		text-align: right
 		padding: 10px
 		border-top: 1px solid #efefef
@@ -614,7 +609,7 @@ a:hover
 				background: #d82222
 			a:hover
 				text-decoration: none
-	.pane-node-field-published-datea
+	.pane-node-created
 		text-align: right
 		padding: 10px
 		border-top: 1px solid #efefef
@@ -717,13 +712,15 @@ a:hover
 			margin-left: 15px
 			display: list-item
 
-.pages
+div.pages
 	padding: 0px 15px !important
 	ul, ol
 		margin-left: 45px
-	.views-field-title
+	.pane-node-title
 		font-weight: 500
 		line-height: 1.1
+		font-size: 36px
+		font-family: montserrat,sans-serif
 		margin-top: 20px !important
 		margin-bottom: 35px !important
 

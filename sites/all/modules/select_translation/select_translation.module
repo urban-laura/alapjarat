@@ -1,0 +1,97 @@
+<?php
+/**
+ * @file
+ * Main module file.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function select_translation_help($section, $arg) {
+  switch ($section) {
+    case 'admin/modules#description':
+      return t('Select translation provides a views filter and a module API, allowing users to display only one of the nodes of a group of nodes representing a translation');
+  }
+  return '';
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function select_translation_views_api() {
+  return array(
+    'api' => '2.0',
+    'path' => drupal_get_path('module', 'select_translation'),
+  );
+}
+
+/**
+ * Returns the node_id representing the preferred translation of the given node.
+ *
+ * $mode can be :
+ * - default ; in which case the function will return the node in the current
+ *             language if available ; if not that in the default language ;
+ *             if that is not available then the one in the original language.
+ *
+ * - original ; in which case the function will return the node in the current
+ *              language if available ; if not that in the original language.
+ *
+ * - an array of language codes ; in which case it will return the first
+ *             available translation. In that array, the special value
+ *             'current' refers to the current language,
+ *             'default' refers to the default language, and 'original' to the
+ *             node's original language. If not match is found the version
+ *             in the original language is returned.
+ */
+function select_translation_of_node($nid, $mode = 'default') {
+  global $language;
+
+  $node = node_load($nid);
+  if (!$node || $node->tnid == 0) {
+    return $nid;
+  }
+
+  // Prepare input.
+  if (!is_array($mode)) {
+    if ($mode == 'default') {
+      $mode = array('current', 'default');
+    }
+    elseif ($mode == 'original') {
+      $mode = array('current');
+    }
+    else {
+      $mode = array($mode);
+    }
+  }
+  $mode[] = 'original';
+  $mode = array_unique($mode);
+
+  foreach ($mode as $i => $v) {
+    if ($v == 'default') {
+      $mode[$i] = language_default('language');
+    }
+    elseif ($v == 'current') {
+      $mode[$i] = $language->language;
+    }
+  }
+
+  // Try to see if we can return the right one without having to load anything
+  // more.
+  if ($mode[0] == $node->language) {
+    return $nid;
+  }
+  if ($mode[0] == 'original') {
+    return $node->tnid;
+  }
+
+  $translations = translation_node_get_translations($node->tnid);
+  foreach ($mode as $m) {
+    if ($m == 'original') {
+      return $node->tnid;
+    }
+    elseif (isset($translations[$m])) {
+      return $translations[$m]->nid;
+    }
+  }
+  return $node->tnid;
+}

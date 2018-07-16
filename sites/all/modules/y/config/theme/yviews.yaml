@@ -1,0 +1,7 @@
+yviews:
+  theme:
+    path: !path
+    file: !local file
+    variables: { function: y__views, arguments: }
+  element_info:
+    "#theme": yviews

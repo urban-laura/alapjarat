@@ -51,6 +51,7 @@ CKEDITOR.editorConfig = function(config) {
   config.extraPlugins = 'clipboard';
   config.extraPlugins = 'toolbar';
   config.extraPlugins = 'widgetselection';
+  config.extraPlugins = 'youtube';
 
   config.extraPlugins = '';
   config.extraPlugins = 'wordcount';

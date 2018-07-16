@@ -1,0 +1,18 @@
+<?php
+/**
+ * Implements hook_requirements()
+ */
+function y_requirements($phase) {
+  $requirements = array();
+
+  if ($phase == 'install') {
+    // Ensure translations do not break at install time
+    if (PHP_MAJOR_VERSION < 7) {
+      $t = get_t();
+      $requirements['PHP']['title'] = $t('PHP');
+      $requirements['PHP']['severity'] = REQUIREMENT_ERROR;
+      $requirements['PHP']['description'] = $t('Y is written for PHP 7 and above. Please upgrade your server.');
+    }
+  }
+  return $requirements;
+}

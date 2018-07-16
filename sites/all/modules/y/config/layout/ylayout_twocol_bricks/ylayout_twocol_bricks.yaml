@@ -1,0 +1,23 @@
+---
+&id ylayout_twocol_bricks:
+  definition:
+    title: !t Two column bricks
+    category: !t "Columns: 2"
+    icon: !name .png
+  properties:
+    "#theme": *id
+    "#attached":
+      css: [ !name .css ]
+  regions:
+      top: !t Top
+      left_above: !t Left above
+      right_above: !t Right above
+      middle: !t Middle
+      left_below: !t Left below
+      right_below: !t Right below
+      bottom: !t Bottom
+  theme:
+    path: !path
+    template: ylayout-twocol-bricks
+    variables: { css_id: , content: }
+...
