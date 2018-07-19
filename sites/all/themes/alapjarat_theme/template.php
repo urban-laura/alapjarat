@@ -342,3 +342,15 @@ function alapjarat_theme_menu_local_tasks(&$variables) {
 
   return $output;
 }
+
+function alapjarat_theme_page_alter(&$page)
+{
+  if (arg(0) == 'search')
+  {
+    dpm($page);
+    if (!empty($page['content']['system_main']['search_form']))
+    {
+      hide($page['content']['system_main']['search_form']);
+    }
+  }
+}
