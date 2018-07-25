@@ -1,0 +1,38 @@
+<?php
+
+function migrate_wp_schema() {
+    $schema['migrate_wp'] = array(
+        'description' => 'The table for storing imported node info.',
+        'fields' => array(
+            'id' => array(
+                'description' => 'ID',
+                'type' => 'serial',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ),
+            'title' => array(
+                'description' => 'Title',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'guid' => array(
+                'description' => 'GUID',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+            'nid' => array(
+                'description' => 'NID',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ),
+        ),
+        'primary key' => array('id'),
+    );
+    return $schema;
+}

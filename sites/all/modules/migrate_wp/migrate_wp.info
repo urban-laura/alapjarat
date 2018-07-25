@@ -1,0 +1,9 @@
+name = "Migrate from Wordpress"
+description = "Module to migrate Alapjárat WP content to Drupal 7"
+package = "Migration"
+core = 7.x
+
+;  include the files that contain your Migrate classes
+files[] = articles.inc
+files[] = taxonomy.inc
+

@@ -1,0 +1,473 @@
+<?php
+
+function migrate_wp_menu() {
+
+  $items['admin/wp-import'] = array(
+    'title' => 'import data',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('migrate_wp_form'),
+    'access arguments' => array(array('authenticated user')),
+    'menu_name' => 'management',
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function migrate_wp_form($form, &$form_state) {
+
+  global $sources;
+
+  $query = db_select('migrate_wp', 'mwp')
+  ->fields('mwp', array('nid'));
+  $result = $query->execute()->fetchAll();
+
+  if (count($result) > 0) {
+  	$form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => 'delete',
+    );
+
+    return $form;
+  }
+
+
+
+  $sources = array(
+  	'wp05' => 'wp05',
+  	'wp10'=>'wp10',
+  	'wp15' => 'wp15',
+  	'wp20' => 'wp20',
+  	'wp25' => 'wp25',
+  	'wp30'=>'wp30',
+  	'wp35' => 'wp35',
+  	'wp40' => 'wp40',
+  );
+
+  $form['source']  = array(
+  	'#type' => 'select',
+  	'#options' => array_merge(array('select'=>'select'), $sources),
+  	'#default_value' => 'wp40',
+  );
+
+  $form['source_all'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'import all',
+  );
+
+  $form['block_node_save'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'block node save',
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'import',
+  );
+
+  return $form;
+}
+
+function migrate_wp_form_submit($form, &$form_state) {
+  global $sources;
+
+  $authors = array(
+    'alapjarat' => 'Alapjárat',
+    'Erős Márk',
+    'Fülöp Norbert Attila',
+    'Gyirán Róbert',
+    'Hajas Imelda',
+    'Müller Attila',
+    'Nagy Alexander',
+    'Rupa Adrienn',
+    'tothbalazs'=>'Tóth Balázs');
+  
+  //$array = unserialize(file_get_contents('variable.data'));
+  //dpm($array);
+
+
+
+  if ($form_state['values']['submit'] == 'delete') {
+  	$query = db_select('migrate_wp', 'mwp')
+	->fields('mwp', array('nid', 'guid'));
+	
+	$results = $query->execute()->fetchAll();
+
+	$batch = array(
+		'title' => t('Deleting imported WP Content ...'),
+		'operations' => array(),
+		'init_message' => t('Deleting'),
+		'progress_message' => t('Processed @current out of @total.'),
+		'error_message' => t('An error occurred during processing'),
+		'finished' => 'migrate_wp_batch_finished',
+		'progressive' => FALSE,
+	);
+
+	foreach ($results as $result) {
+	  $batch['operations'][] = array('migrate_wp_batch_worker_delete', array($result->nid)); 
+
+	}
+
+	batch_set($batch);
+
+	batch_process();
+
+  	
+
+  	return 1;
+  }
+
+  if ($form_state['values']['source'] !== 'select') {
+  	$filename = 'sites/all/modules/migrate_wp/source/' . $form_state['values']['source'] . '.xml';
+
+  	$data = file_get_contents($filename);
+  	$data = str_replace('content:encoded', 'content', $data);
+  	$data = str_replace('dc:creator', 'creator', $data);
+  	$data = str_replace('wp:post_date', 'post_date', $data);
+  	$data = str_replace('wp:postmeta', 'postmeta', $data);
+  	$data = str_replace('wp:meta_key', 'meta_key', $data);
+  	$data = str_replace('wp:meta_value', 'meta_value', $data);
+  	
+  	$data = str_replace('wp:meta_value', 'meta_value', $data);
+    $xml = simplexml_load_string($data);
+    //$json = json_encode($xml);
+    //$array = json_decode($json,TRUE);
+
+    $fields = array('title', 'link', 'post_date', 'creator', 'guid', 'content');
+
+    $nodes = [];
+    $c = 0;
+	foreach ($xml->channel->item as $key=>$val) {
+
+	  $c++;
+	  if ($c > 9) {
+	  	//break 1;
+	  }
+
+	  $node = [];
+	  foreach ($fields as $field) {
+	    $node[$field] = ((string)$val->{$field});
+	  }
+
+	  // taxonomy
+	  $tags = [];
+	  foreach ($val->category as $key=>$cat) {
+	  	$type = (string)$cat['domain'];
+	  	if ($type == 'post_tag') {
+	    	$tags[] = (string)$cat;
+		}
+		if ($type == 'category') {
+			$category = (string)$cat;
+		}
+	  }
+	  $node['tags'] = $tags;
+	  $node['category'] = $category;
+
+
+
+
+	  $key = '';
+	  foreach ($val->postmeta as $postmeta) {
+	  	foreach ($postmeta as $item) {
+		  	if ($key == '') {
+		  		$key = (string)$item;
+		  	} else {
+ 				$value = (string)$item;
+ 				if ($key == '_aioseop_opengraph_settings') {
+ 					$meta = unserialize($value);
+ 				}
+
+ 				$key = '';
+		  	}
+	    }
+	  }
+
+
+	  if (isset($meta['aioseop_opengraph_settings_image'])) {
+	    $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
+	    //$node['main_image'] = 'http://www.kerekerdokert.hu/css/kerttervezes_u.png';
+
+	  }
+
+	  if (isset($meta['aioseop_opengraph_settings_desc'])) {
+	    $node['meta_desc'] = $meta['aioseop_opengraph_settings_desc'];
+	  }
+	  
+
+	  $node['nid'] = $c;
+
+	  $nodes[] = $node;
+
+	}
+    
+
+    /*
+    $rawFeed = file_get_contents($filename);
+    $xml = new SimpleXmlElement($rawFeed);
+    dpm($xml);
+	foreach ($xml->channel->item as $item) {
+
+	  dpm($item);
+	}
+	*/
+
+	if ($form_state['values']['block_node_save'] == 0) {
+		// Batch 
+		$batch = array(
+			'title' => t('Importing WP Content ...'),
+			'operations' => array(),
+			'init_message' => t('Importing'),
+			'progress_message' => t('Processed @current out of @total.'),
+			'error_message' => t('An error occurred during processing'),
+			'finished' => 'migrate_wp_batch_finished',
+			'progressive' => FALSE,
+		);
+
+		foreach ($nodes as $new_node) {
+		  $batch['operations'][] = array('migrate_wp_batch_worker', array($new_node)); 
+		}
+
+		batch_set($batch);
+
+		batch_process();
+	} else {
+		dpm($node);
+	}
+    
+  }
+
+  if ($form_state['values']['source_all'] == 'all') {
+    foreach ($sources as $source) {
+
+    }
+  }
+
+  
+}
+
+function migrate_wp_batch_worker($node_i, &$context) {
+
+	  $node = new stdClass();
+	  $node->type = 'a_article';
+	  node_object_prepare($node);  
+	  
+	  $node->title = $node_i['title'];
+	  $node->field_title2[LANGUAGE_NONE][0]['value'] = $node_i['title'];
+	  $node->language = LANGUAGE_NONE;
+	  $node->field_text[LANGUAGE_NONE][0]['value'] = $node_i['content'];
+	  $node->field_meta_description[LANGUAGE_NONE][0]['value'] = $node_i['meta_desc'];
+
+	  $node->field_tags['und'][0]['tid'] = migrate_wp_set_taxonomy_tid($node_i['category'], 'category');
+
+	  $tids = [];
+	  foreach ($node_i['tags'] as $tag) {
+	  	$tids[] = array('tid' => migrate_wp_set_taxonomy_tid($tag, 'tags'));
+	  }
+
+	  if (!empty($tids)) {
+	    $node->field_tagsa[LANGUAGE_NONE] = $tids;
+	  }
+
+	  if (isset($node_i['main_image'])) {
+
+	  	/*
+	  	if media files will be localized for import
+
+	  	$filepath = drupal_realpath('misc/druplicon.png');
+		  // Create managed File object and associate with Image field.
+		  $file = (object) array(
+		    'uid' => 1,
+		    'uri' => $filepath,
+		    'filemime' => file_get_mimetype($filepath),
+		    'status' => 1,
+		  );
+
+		  // We save the file to the root of the files directory.
+		  $file = file_copy($file, 'public://');
+
+		  $node->field_image[LANGUAGE_NONE][0] = (array)$file;
+	  	*/
+
+		  $image = migrate_wp_curl_get_contents($node_i['main_image']);
+		  $parts = explode('/', $node_i['main_image']);
+		  $filename = $parts[count($parts) - 1];
+	      $file = file_save_data($image, 'public://' . $filename,FILE_EXISTS_REPLACE);
+	 
+		  $node->field_image = array(
+			  'und' => array(
+			    0 => array(
+			      'fid' => $file->fid,
+			      'filename' => $file->filename,
+			      'filemime' => $file->filemime,
+			      'uid' => 1,
+			      'uri' => $file->uri,
+			      'status' => 1,
+			      'display' => 1
+			    )
+			  )
+			);
+
+
+	  }
+	    
+	  $node->status = 1;
+	  
+	  node_save($node); 
+
+	  db_insert('migrate_wp')
+	  ->fields(array(
+	  	'nid' => $node->nid,
+	  	'title' => $node_i['title'],
+	  	'guid' => $node_i['guid'],
+	  ))
+	  ->execute();
+
+    $context['results']['processed']++;
+    $context['message'] = $new_node['title'] . ' saved.';
+  
+}
+
+function migrate_wp_batch_finished($success, $results, $operations) {
+  if ($success) {
+    $message = format_plural($results['processed'], 'One node processed.', '@count nodes processed.');
+    drupal_set_message($message);
+  }
+  else {
+    $message = 'some errors';
+    drupal_set_message($message);
+  }
+  
+  drupal_set_message(l('Run again', '/wp-import'));
+  
+}
+
+function migrate_wp_check($guid) {
+	$query = db_select('migrate_wp', 'mwp')
+	->fields('mwp', array('nid', 'guid'))
+	->condition('mwp.guid', $guid, '=');
+	
+	$result = $query->execute()->fetchAll();
+
+  if (count($result) > 0) {
+  	return TRUE;
+  }
+
+  return FALSE;
+}
+
+function migrate_wp_batch_worker_delete($nid, &$context) {
+
+
+    
+
+    node_delete($nid);
+
+    db_delete('migrate_wp')
+  	->condition('nid', $nid)
+  	->execute(); 
+  	
+
+    $context['results']['processed']++;
+    $context['message'] = $context['results']['processed'] . ' deleted.';
+  
+}
+
+function migrate_wp_set_taxonomy_tid($tag = 'test', $voc = 'category') {
+	$exist = taxonomy_get_term_by_name($tag, $voc);
+
+	if (empty($exist)) {
+		$vocabulary = taxonomy_vocabulary_machine_name_load($voc);
+		$term = new stdClass();
+		$term->vid = $vocabulary->vid;
+		$term->name = $tag;
+		taxonomy_term_save($term);
+
+		return $term->tid;
+	}
+
+	return reset($exist)->tid;
+}
+
+function migrate_wp_curl_get_contents($url, $post = NULL) {
+
+
+
+  if (isset($_POST['api_url'])) {
+    $ch = curl_init($_POST['api_url']);
+  }
+  else {
+    $ch = curl_init($url);
+  }
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+
+  if (isset($_POST['params'])) {
+    $params = str_replace('|', '&', $_POST['params']);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+  }
+
+  $params = '';
+  if (isset($post)) {
+    
+    curl_setopt($ch, CURLOPT_POST, 1);
+      
+    $params = 'api=1';
+    foreach ($post as $key => $value) {       
+      $params .= '&' . $key . '=' . $value;
+    }
+    
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+  }
+
+  $data = curl_exec($ch);
+  $status=curl_getinfo($ch);
+  curl_close($ch);
+
+
+
+  if (isset($_POST['api_url']) && $status['http_code']==200) {
+    print $data;
+    return;
+  }
+  if (isset($_POST['api_url']) && $status['http_code']!==200) {
+    print 'error';
+    //print json_encode($status);
+    return;
+  }
+
+  if($status['http_code'] == 200)
+    {
+          //dpm("ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)."<br/><br/>Last data got<br/>:$data");
+
+        return $data;
+    }
+    elseif($status['http_code']==301 || $status['http_code']==302)
+    {
+        if (!$follow_allowed)
+        {
+            if (!empty($status['redirect_url']))
+            {
+                $redirURL=$status['redirect_url'];
+            }
+            else
+            {
+                preg_match('/href\=\"(.*?)\"/si',$data,$m);
+                if (!empty($m[1]))
+                {
+                    $redirURL=$m[1];
+                }
+            }
+            if(!empty($redirURL))
+            {
+                return  call_user_func( __FUNCTION__, $redirURL, $post_paramtrs);
+            }
+        }
+    }
+    //dpm("ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)."<br/><br/>Last data got<br/>:$data");
+    return;
+  
+  
+}
