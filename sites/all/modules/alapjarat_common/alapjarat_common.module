@@ -18,8 +18,8 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 	if($form_id == 'search_block_form') {
 		hide($form['actions']['submit']);
 	}
-
-	if($form_id == 'views_exposed_form') {
+	
+	if($form['#id'] == 'views-exposed-form-search-page-page') {
 		hide($form['submit']);
 	}
 }
