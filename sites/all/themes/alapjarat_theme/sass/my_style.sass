@@ -203,11 +203,14 @@ a:hover
 		float: right
 		width: auto
 		#search
-			input#edit-search-block-form--2
+			input#edit-search-block-form--2, input#edit-keys
 				width: 166px
 				height: 34px
 				margin-top: 3px
 				margin-right: 3px
+		.views-exposed-form .views-exposed-widget
+			float: right !important
+			padding: 0 !important
 
 .views-field-field-tags
 	a
@@ -513,8 +516,8 @@ a:hover
 	p
 		margin: 0px !important
 
-.header
-	h1, .pane-title, .view-header h1, .views-field-name
+.header, .view-id-search_page
+	h1, .pane-title, .view-header h1, .views-field-name, .view-header p
 		line-height: 1.1
 		padding: 0 !important
 		margin: 0 !important
@@ -526,7 +529,7 @@ a:hover
 	.view-header
 		margin-top: 20px
 
-#category, #archive_list, #media, #published, #tag, #menu_pane
+#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_page
 	padding: 0px 15px !important
 	padding-bottom: 15px !important
 	p
