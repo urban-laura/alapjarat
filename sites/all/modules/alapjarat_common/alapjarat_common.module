@@ -81,6 +81,11 @@ function alapjarat_common_article_archives_menu() {
 
 //Article
 function alapjarat_common_node_presave($node) {
+	if($node->type == 'a_article')
+	{
+		$node->title = strip_tags($node->field_title2['und'][0]['value']);
+	}
+
 	if($node->type == 'a_article' && !is_null($node->publish_on))
 	{
 		$node->sketch = 0;

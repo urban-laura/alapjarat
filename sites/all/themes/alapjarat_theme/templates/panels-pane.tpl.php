@@ -45,7 +45,6 @@
    ?>
    
   </div>
-
   <?php if ($links): ?>
     <div class="links">
       <?php print $links; ?>
