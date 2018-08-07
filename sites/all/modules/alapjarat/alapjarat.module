@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the alapjarat feature.
+ */
+
+include_once 'alapjarat.features.inc';

@@ -1,4 +1,4 @@
-name = Alapjárat Features
+name = Alapjarat Features
 core = 7.x
 package = Features
 dependencies[] = alapjarat_common
