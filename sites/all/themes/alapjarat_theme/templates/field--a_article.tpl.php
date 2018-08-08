@@ -52,7 +52,7 @@ See http://api.drupal.org/api/function/theme_field/7 for details.
 After copying this file to your theme's folder and customizing it, remove this
 HTML comment.
 -->
-
+<!--
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -60,7 +60,28 @@ HTML comment.
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v3.1&appId=658926237814717&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script>
+-->
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '658926237814717',
+      xfbml      : true,
+      version    : 'v3.1'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
@@ -76,9 +97,18 @@ HTML comment.
 	        print('<h1>');
 	    }
 	    if ($element['#field_name'] == 'field_subtitled') {
+
+	    	print('<div
+				  class="fb-like"
+				  data-share="true"
+				  data-width="450"
+				  data-show-faces="false">
+				</div>');
+
 	    	print('<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
 	    		<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Megosztás</a></div>
 	    		');
+
 	      	print('<h2>');
 
 	    }
