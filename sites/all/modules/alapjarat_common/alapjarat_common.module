@@ -111,3 +111,23 @@ function alapjarat_common_node_presave($node) {
 	}
 }
 
+function alapjarat_common_most_popular_terms() {
+	$query = db_select('field_data_field_tagsa', 't')
+	->fields('t', array('field_tagsa_tid'))
+	->groupBy('t.field_tagsa_tid')
+	->orderBy('tc', 'DESC')
+	->range(0,5);
+	$query->addExpression('COUNT(t.field_tagsa_tid)', 'tc');
+
+	$results = $query->execute();
+
+	foreach ($results as $row) {
+		$term = taxonomy_term_load($row->field_tagsa_tid);
+		$items[] = l('#' . $term->name, drupal_get_path_alias('taxonomy/term/' . $term->tid));
+	}
+
+	$variables = array('items' => $items);
+
+	return theme('item_list', array('items'=>$items));
+}
+
