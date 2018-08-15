@@ -83,6 +83,30 @@ blockquote
 	padding-top: 0px !important
 	margin-bottom: 15px
 
+.pager
+	.first
+		width: auto
+	float: left
+	border: 1px solid #ddd
+	padding-top: 0px !important
+	border-radius: 4px
+	margin-top: 40px !important
+	margin-bottom: 20px !important
+	li
+		padding: 5px 10px !important
+		display: inline-flex !important
+		border-right: solid 1px #ddd
+	li:hover
+		background: #EBE9E9
+	li.pager-first, li.pager-current.first
+		border-radius: 4px 0 0 4px
+	li.pager-current.last
+		border-radius: 0 4px 4px 0
+	li.pager-last.last
+		border-right: 0px
+	.pager-current
+		background: #d82222
+
 #admin-menu
 	a
 		color: white !important
@@ -628,6 +652,11 @@ a:hover
 
 			li
 				margin: 0 !important
+	ul.pager
+		li.pager-item, li.pager-current, li.pager-next, li.pager-last, li.pager-previous
+			margin-left: -4.3px !important
+		li.pager-current.first
+			margin-left: 0px !important
 
 .node_pane
 	padding: 0px 15px !important
@@ -814,22 +843,8 @@ div.pages
 		border: 0
 		padding: 0
 
-.pager
-	.first
-		width: auto
-	float: left
-	border: 1px solid #efefef
-	padding-top: 0px !important
-	border-radius: 4px
-	margin-top: 40px !important
-	margin-bottom: 20px !important
-	li
-		padding: 5px 10px !important
-		display: inline-flex !important
-		background: blue
-		margin-left: -4.3px !important
-		a
-			xmargin-left: -4.3px
+
+
 
 
 				
