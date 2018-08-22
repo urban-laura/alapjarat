@@ -14,6 +14,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
+  <div id="fb-root"></div>
+
+<!--Facebook-->
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v3.1&appId=658926237814717&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  
+
   <div id="skip">
     <a href="#content"><?php print t('Jump to Navigation'); ?></a>
   </div>
