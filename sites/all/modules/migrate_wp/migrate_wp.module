@@ -98,6 +98,16 @@ function migrate_wp_form_submit($form, &$form_state) {
 
   $attachments = [];
 
+  if (!taxonomy_vocabulary_machine_name_load('glossary')) {
+    $vocabulary = new stdClass();
+    $vocabulary->name = 'Glossary';
+    $vocabulary->machine_name = "glossary";
+    $vocabulary->description = t('Alapjárat technikai kifejezések belső szótár.');
+    $vocabulary->module = 'taxonomy';
+
+    taxonomy_vocabulary_save($vocabulary);
+  }
+
   if ($form_state['values']['submit'] == 'delete') {
   	$query = db_select('migrate_wp', 'mwp')
   	->fields('mwp', array('nid', 'guid'));
@@ -218,17 +228,19 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
     $node->field_text[LANGUAGE_NONE][0]['format'] = 'fullhtml';
 
     $author = taxonomy_get_term_by_name($authors[$node_i['creator']]['name']);
-    
+
     if (!empty($author)) {
       $author = reset($author);
+
     } else {
       $author = new stdClass();
-      $author->name = $authors[$node_i['creator']];
+      $author->name = $authors[$node_i['creator']['name']];
       $vocabulary = taxonomy_vocabulary_machine_name_load('published');
       $author->vid = $vocabulary->vid;
       taxonomy_term_save($author);
+
     }
-    dpm($author);
+
     $node->field_published[LANGUAGE_NONE][0]['tid'] = $author->tid;
      
 
@@ -497,8 +509,10 @@ function migrate_wp_migrated_list() {
 function xml2node($source) {
   global $attachments;
 
+  $posts = [];
+  //$posts = array(22199);
   //$posts = array(23152); // galéria
-  $posts = array(16545);
+  //$posts = array(16545);
 
   $filename = 'sites/all/modules/migrate_wp/source/' . $source . '.xml';
 
@@ -565,7 +579,7 @@ function xml2node($source) {
         continue;
       } 
     } else {
-      if ($c > 9) {
+      if ($c > 50) {
         break 1;
       }
     }
@@ -578,7 +592,7 @@ function xml2node($source) {
     //find gallery
     $pattern = '/\[gallery.*?ids="(.*?)"\]/ms';
     preg_match_all($pattern, ((string)$val->content), $gallery);
-    dpm($gallery);
+
     if (!empty($gallery[1])) {
       $gal_images = explode(',', $gallery[1][0]);
       foreach ($gal_images as $img_id) {
@@ -640,6 +654,7 @@ function xml2node($source) {
       $node['meta_desc'] = $meta['aioseop_opengraph_settings_desc'];
     }
 
+
     $nodes[] = $node;
 
   }
@@ -656,7 +671,7 @@ function migrate_wp_export_users() {
   $data = file_get_contents(drupal_get_path('module', 'migrate_wp') . '/source/wp25.xml');
   $pattern = '/<wp:author_login>(.*?)<\/wp:author_login>.*?<wp:author_email>(.*?)<\/wp:author_email>.*?<wp:author_first_name><!\[CDATA\[(.*?)\]\]><\/wp:author_first_name>.*?<wp:author_last_name><!\[CDATA\[(.*?)\]\]><\/wp:author_last_name>/ms';
   preg_match_all($pattern, $data, $user_data);
-  dpm($user_data);
+
 
   $authors = [];
   for ($c = 0; $c < count($user_data[1]); $c++) {
