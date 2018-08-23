@@ -8,3 +8,5 @@ sites/*/private
 # Server related custom paths and ignores
 alappma
 tmp
+
+.DS_Store
