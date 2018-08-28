@@ -46,9 +46,10 @@ function migrate_wp_form($form, &$form_state) {
   $result = $query->execute()->fetchAll();
 
   if (count($result) > 0) {
-  	$form['submit'] = array(
+  	$form['migrate'] = array(
       '#type' => 'submit',
       '#value' => 'delete',
+      '#submit' => array('migrate_wp_form_migrate_submit'),
     );
 
     return $form;
@@ -62,9 +63,9 @@ function migrate_wp_form($form, &$form_state) {
   	'wp15' => 'wp15',
   	'wp20' => 'wp20',
   	'wp25' => 'wp25',
-  	'wp30'=>'wp30',
-  	'wp35' => 'wp35',
-  	'wp40' => 'wp40',
+  	//'wp30'=>'wp30',
+  	//'wp35' => 'wp35',
+  	//'wp40' => 'wp40',
   );
 
   $form['source']  = array(
@@ -83,15 +84,22 @@ function migrate_wp_form($form, &$form_state) {
     '#title' => 'block node save',
   );
 
-  $form['submit'] = array(
+  $form['migrate'] = array(
     '#type' => 'submit',
     '#value' => 'import',
+    '#submit' => array('migrate_wp_form_migrate_submit'),
+  );
+
+  $form['generate_list'] = array(
+    '#type' => 'submit',
+    '#value' => 'generate list',
+    '#submit' => array('migrate_wp_form_generate_list_submit'),
   );
 
   return $form;
 }
 
-function migrate_wp_form_submit($form, &$form_state) {
+function migrate_wp_form_migrate_submit($form, &$form_state) {
   global $sources;
   global $authors;
   global $attachments;
@@ -108,7 +116,7 @@ function migrate_wp_form_submit($form, &$form_state) {
     taxonomy_vocabulary_save($vocabulary);
   }
 
-  if ($form_state['values']['submit'] == 'delete') {
+  if ($form_state['values']['migrate'] == 'delete') {
   	$query = db_select('migrate_wp', 'mwp')
   	->fields('mwp', array('nid', 'guid'));
   	
@@ -149,7 +157,7 @@ function migrate_wp_form_submit($form, &$form_state) {
 
   }
   elseif ($form_state['values']['source'] !== 'select') {
-    $import = xml2node($source);
+    $import = xml2node($source, array(16545));
     $nodes = $import['articles'];
   } 
       /*
@@ -506,10 +514,10 @@ function migrate_wp_migrated_list() {
 
 }
 
-function xml2node($source) {
+function xml2node($source, $posts = array()) {
   global $attachments;
 
-  $posts = [];
+  
   //$posts = array(22199);
   //$posts = array(23152); // galéria
   //$posts = array(16545);
@@ -528,7 +536,7 @@ function xml2node($source) {
   $data = str_replace('wp:attachment_url', 'attachment_url', $data);
   
   $data = str_replace('wp:meta_value', 'meta_value', $data);
-  $xml = simplexml_load_string($data);
+  $xml = simplexml_load_string($data, 'SimpleXMLElement', LIBXML_COMPACT | LIBXML_PARSEHUGE);
   //$json = json_encode($xml);
   //$array = json_decode($json,TRUE);
 
@@ -580,7 +588,7 @@ function xml2node($source) {
       } 
     } else {
       if ($c > 50) {
-        break 1;
+        //break 1;
       }
     }
 
@@ -609,10 +617,10 @@ function xml2node($source) {
       $type = (string)$cat['domain'];
       if ($type == 'post_tag') {
         $tags[] = (string)$cat;
-    }
-    if ($type == 'category') {
-      $category = (string)$cat;
-    }
+      }
+      if ($type == 'category') {
+        $category = (string)$cat;
+      }
     }
     $node['tags'] = $tags;
     $node['category'] = $category;
@@ -629,7 +637,11 @@ function xml2node($source) {
         } else {
           $value = (string)$item;
           if ($key == '_aioseop_opengraph_settings') {
-            $meta = unserialize($value);
+           
+            $meta = _mb_unserialize($value);
+            if ($meta == null) {
+              dpm($value);
+            }
           }
           if ($key == '_glossary_disable_for_page') {
             if ($value == 1) {
@@ -644,16 +656,19 @@ function xml2node($source) {
 
     $node['glossary_parser'] = $glossary_parser;
 
-    if (isset($meta['aioseop_opengraph_settings_image'])) {
-      $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
-      //$node['main_image'] = 'http://www.kerekerdokert.hu/css/kerttervezes_u.png';
+    if ($meta) {
+      if (isset($meta['aioseop_opengraph_settings_image'])) {
+        $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
+        //$node['main_image'] = 'http://www.kerekerdokert.hu/css/kerttervezes_u.png';
 
+      }
+
+      if (isset($meta['aioseop_opengraph_settings_desc'])) {
+        $node['meta_desc'] = $meta['aioseop_opengraph_settings_desc'];
+      }
     }
 
-    if (isset($meta['aioseop_opengraph_settings_desc'])) {
-      $node['meta_desc'] = $meta['aioseop_opengraph_settings_desc'];
-    }
-
+    $node['content'] = substr($node['content'], 0, strrpos($node['content'], '[mc4wp_form'));
 
     $nodes[] = $node;
 
@@ -679,7 +694,27 @@ function migrate_wp_export_users() {
       'email' => $user_data[2][$c],
       'name' => $user_data[4][$c] . ' ' . $user_data[3][$c],
     ); 
+
+    //---
+    $author = taxonomy_get_term_by_name($user_data[4][$c] . ' ' . $user_data[3][$c]);
+
+    if (!empty($author)) {
+      $author = reset($author);
+
+    } else {
+      $author = new stdClass();
+      $author->name = $user_data[4][$c] . ' ' . $user_data[3][$c];
+      $vocabulary = taxonomy_vocabulary_machine_name_load('published');
+      $author->vid = $vocabulary->vid;
+      taxonomy_term_save($author);
+
+    }
   }
+
+
+  
+
+
 
 }
 
@@ -702,3 +737,46 @@ function migrate_wp_find_glossary($text) {
 
   return $text;
 }
+
+
+function migrate_wp_form_generate_list_submit($form, &$form_state) {
+  global $sources;
+
+  $nodes = [];
+  foreach ($sources as $source) {
+    $import = xml2node($source);
+    $nodes = array_merge($nodes, $import['articles']);
+  }
+
+
+  $fp = fopen(drupal_get_path('module', 'migrate_wp') . '/list/list.csv', 'w');
+  fprintf($fp, "\xEF\xBB\xBF");
+  $c = 0;
+  foreach ($nodes as $node) {
+    $c++;
+    fputcsv($fp, array(
+      (string)$c,
+      $node['post_date'],
+      $node['title'],
+      $node['category'],
+      "=HYPERLINK(\"".$node['link']."\")",
+    ));
+  }
+  fclose($fp);
+  
+
+
+}
+
+function _mb_unserialize($string) {
+    $string2 = preg_replace_callback(
+        '!s:(\d+):"(.*?)";!s',
+        function($m){
+            $len = strlen($m[2]);
+            $result = "s:$len:\"{$m[2]}\";";
+            return $result;
+
+        },
+        $string);
+    return unserialize($string2);
+}  
