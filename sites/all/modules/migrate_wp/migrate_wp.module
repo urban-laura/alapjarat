@@ -150,6 +150,8 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
     $nodes = [];
     $terms = [];
     foreach ($sources as $source) {
+      //$import = xml2node($source, array(28762,7853,30653,29325));
+      //$import = xml2node($source, array(29509));
       $import = xml2node($source);
       $nodes = array_merge($nodes, $import['articles']);
       $terms = array_merge($terms, $import['glossary']);
@@ -223,7 +225,14 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
 	  node_object_prepare($node);  
 	  
 	  $node->title = $node_i['title'];
+    $node->field_subtitled[LANGUAGE_NONE][0]['value'] = $node_i['subtitle'];
+    $node->field_subtitled[LANGUAGE_NONE][0]['format'] = 'text';
+
+    $node->created = strtotime($node_i['post_date']);
+
 	  $node->field_title2[LANGUAGE_NONE][0]['value'] = $node_i['title'];
+    $node->field_title2[LANGUAGE_NONE][0]['format'] = 'text';
+
 	  $node->language = LANGUAGE_NONE;
 
     if ($node_i['glossary_parser']) {
@@ -253,6 +262,7 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
      
 
 	  $node->field_meta_description[LANGUAGE_NONE][0]['value'] = $node_i['meta_desc'];
+    $node->field_meta_description[LANGUAGE_NONE][0]['format'] = 'text';
 
 	  $node->field_tags['und'][0]['tid'] = migrate_wp_set_taxonomy_tid($node_i['category'], 'category');
 
@@ -303,8 +313,57 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
     }
 	    
 	  $node->status = 1;
+
+    $alias = rtrim(str_replace('https://www.alapjarat.hu/', '', $node_i['link']), '/');
+    $node->path = array(
+      'alias' => $alias,
+      'pathauto' => 0,    
+    );
+
+    $node->comment = 1;
+    node_save($node); 
+
+    // test - product review
+    if (isset($node_i['test'])) {
+      $node->field_test_name[LANGUAGE_NONE][0]['value'] = $node_i['test']['name'];
+      $pros = unserialize($node_i['test']['pros']);
+      
+      $c = 0;
+      foreach ($pros as $pro) {
+        if (!empty($pro)) {
+          $node->field_test_features_pro[LANGUAGE_NONE][$c]['value'] = $pro;
+          $c++;
+        }
+      }
+
+      $cons = unserialize($node_i['test']['cons']);
+      $c = 0;
+      foreach ($cons as $con) {
+        if (!empty($con)) {
+          $node->field_test_features_contra[LANGUAGE_NONE][$c]['value'] = $con;
+          $c++;
+        }
+      }
+
+      $options = unserialize($node_i['test']['options']);
+
+      foreach ($options as $option) {
+        $my_collection = entity_create('field_collection_item', array('field_name' => 'field_test_options'));
+        $my_collection->setHostEntity('node', $node);
+        $my_collection->field_option[LANGUAGE_NONE][0]['value'] = $option['name'];
+        $my_collection->field_grade[LANGUAGE_NONE][0]['value'] = $option['value'];
+        $my_collection->save();
+
+      }
+
+      node_save($node); 
+
+    }
+
 	  
-	  node_save($node); 
+
+    $path = array('source' => "node/$node->nid", 'alias' => $alias);
+    path_save($path);
 
 	  db_insert('migrate_wp')
 	  ->fields(array(
@@ -575,6 +634,8 @@ function xml2node($source, $posts = array()) {
   $c = 0;
   foreach ($xml->channel->item as $key=>$val) {
 
+
+
     if ((string)$val->post_type !== 'post') {
       continue;
     }
@@ -648,6 +709,26 @@ function xml2node($source, $posts = array()) {
               $glossary_parser = FALSE;
             }
           }
+          if ($key == 'cwp_rev_product_name') {
+            $prod_review = [];
+            $prod_review['name'] = $value;
+          }
+          if ($key == 'cwp_rev_product_image') {
+            $extra_image = $value;
+            $prod_review['image'] = $value;
+          }
+          if ($key == 'wppr_rating') {
+            $prod_review['rating'] = $value;
+          }
+          if ($key == 'wppr_pros') {
+            $prod_review['pros'] = $value;
+          }
+          if ($key == 'wppr_cons') {
+            $prod_review['cons'] = $value;
+          }
+          if ($key == 'wppr_options') {
+            $prod_review['options'] = $value;
+          }
 
           $key = '';
         }
@@ -656,11 +737,15 @@ function xml2node($source, $posts = array()) {
 
     $node['glossary_parser'] = $glossary_parser;
 
+    dpm($meta);
     if ($meta) {
       if (isset($meta['aioseop_opengraph_settings_image'])) {
         $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
         //$node['main_image'] = 'http://www.kerekerdokert.hu/css/kerttervezes_u.png';
-
+      } else {
+        if (isset($extra_image)) {
+          $node['main_image'] = $extra_image;
+        }
       }
 
       if (isset($meta['aioseop_opengraph_settings_desc'])) {
@@ -668,7 +753,20 @@ function xml2node($source, $posts = array()) {
       }
     }
 
+    if (isset($prod_review)) {
+      $node['test'] = $prod_review;
+    }
+
     $node['content'] = substr($node['content'], 0, strrpos($node['content'], '[mc4wp_form'));
+
+    $pattern = '/<h2>(.*?)<\/h2>/';
+    preg_match_all($pattern, $node['content'], $matches);
+    if (isset($matches[0])) {
+      $node['subtitle'] = $matches[1][0];
+    }
+
+    $node['content'] = preg_replace('/<h2>.*?<\/h2>/', '', $node['content']);
+    $node['content'] = preg_replace('/\[caption.*?\](<img.*?>)(.*?)\[\/caption\]/', '$1<br><figcaption>$2</figcaption><br>', $node['content']);
 
     $nodes[] = $node;
 
