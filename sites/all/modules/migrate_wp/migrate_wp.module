@@ -33,6 +33,16 @@ function migrate_wp_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['admin/wp-import-tests'] = array(
+    'title' => 'Migrate tests users',
+    'page callback' => 'migrate_wp_tests',
+    'access arguments' => array(array('authenticated user')),
+    'menu_name' => 'management',
+    'type' => MENU_CALLBACK,
+  );
+
+
+
 
   return $items;
 }
@@ -40,22 +50,6 @@ function migrate_wp_menu() {
 function migrate_wp_form($form, &$form_state) {
 
   global $sources;
-
-  $query = db_select('migrate_wp', 'mwp')
-  ->fields('mwp', array('nid'));
-  $result = $query->execute()->fetchAll();
-
-  if (count($result) > 0) {
-  	$form['migrate'] = array(
-      '#type' => 'submit',
-      '#value' => 'delete',
-      '#submit' => array('migrate_wp_form_migrate_submit'),
-    );
-
-    return $form;
-  }
-
-
 
   $sources = array(
   	'wp05' => 'wp05',
@@ -77,11 +71,29 @@ function migrate_wp_form($form, &$form_state) {
   $form['source_all'] = array(
     '#type' => 'checkbox',
     '#title' => 'import all',
+    '#default_value' => 1,
   );
 
-  $form['block_node_save'] = array(
+  $form['migrate_terms'] = array(
     '#type' => 'checkbox',
-    '#title' => 'block node save',
+    '#title' => 'terms',
+  );
+
+  $form['migrate_users'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'users',
+  );
+
+  $form['migrate_posts'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'articles',
+    '#default_value' => (isset($form_state['values']['migrate_posts'])) ? $form_state['values']['migrate_posts'] : 0,
+  );
+
+  $form['amount'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Amount per round',
+    '#default_value' => '10',
   );
 
   $form['migrate'] = array(
@@ -96,13 +108,61 @@ function migrate_wp_form($form, &$form_state) {
     '#submit' => array('migrate_wp_form_generate_list_submit'),
   );
 
+  $query = db_select('migrate_wp', 'mwp')
+  ->fields('mwp', array('nid'));
+  $result = $query->execute()->fetchAll();
+
+  if (count($result) > 0) {
+    $form['delete'] = array(
+      '#type' => 'submit',
+      '#value' => 'delete',
+      '#submit' => array('migrate_wp_form_migrate_delete_submit'),
+      '#suffix'=>'<span class="count">'.count($result).' migrated element</span>',
+    );
+  }
+
   return $form;
+}
+
+function migrate_wp_form_migrate_delete_submit($form, &$form_state) {
+  $amount = $form_state['values']['amount'];
+  $query = db_select('migrate_wp', 'mwp')
+  ->fields('mwp', array('nid', 'guid'))
+  ->orderBy('nid', 'DESC')
+  ->range(0,$amount);
+  
+  $results = $query->execute()->fetchAll();
+
+  $batch = array(
+    'title' => t('Deleting imported WP Content ...'),
+    'operations' => array(),
+    'init_message' => t('Deleting'),
+    'progress_message' => t('Processed @current out of @total.'),
+    'error_message' => t('An error occurred during processing'),
+    'finished' => 'migrate_wp_batch_finished',
+    'progressive' => FALSE,
+  );
+
+  foreach ($results as $result) {
+    $batch['operations'][] = array('migrate_wp_batch_worker_delete', array($result->nid)); 
+
+  }
+
+  batch_set($batch);
+
+  batch_process();
+
 }
 
 function migrate_wp_form_migrate_submit($form, &$form_state) {
   global $sources;
   global $authors;
   global $attachments;
+  global $refactor_categories;
+
+  if ($form_state['values']['migrate_users'] == 1) {
+    migrate_wp_export_users();
+  }
 
   $attachments = [];
 
@@ -116,63 +176,27 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
     taxonomy_vocabulary_save($vocabulary);
   }
 
-  if ($form_state['values']['migrate'] == 'delete') {
-  	$query = db_select('migrate_wp', 'mwp')
-  	->fields('mwp', array('nid', 'guid'));
-  	
-  	$results = $query->execute()->fetchAll();
-
-  	$batch = array(
-  		'title' => t('Deleting imported WP Content ...'),
-  		'operations' => array(),
-  		'init_message' => t('Deleting'),
-  		'progress_message' => t('Processed @current out of @total.'),
-  		'error_message' => t('An error occurred during processing'),
-  		'finished' => 'migrate_wp_batch_finished',
-  		'progressive' => FALSE,
-  	);
-
-  	foreach ($results as $result) {
-  	  $batch['operations'][] = array('migrate_wp_batch_worker_delete', array($result->nid)); 
-
-  	}
-
-  	batch_set($batch);
-
-  	batch_process();
-
-  	
-
-  	return 1;
-  }
-
   if ($form_state['values']['source_all'] == 1) {
     $nodes = [];
     $terms = [];
+    $counter = 0;
     foreach ($sources as $source) {
       //$import = xml2node($source, array(28762,7853,30653,29325));
       //$import = xml2node($source, array(29509));
-      $import = xml2node($source);
+      $import = xml2node($source, $form_state['values']['amount'], $counter);
       $nodes = array_merge($nodes, $import['articles']);
       $terms = array_merge($terms, $import['glossary']);
+
     }
 
   }
   elseif ($form_state['values']['source'] !== 'select') {
-    $import = xml2node($source, array(16545));
+    $import = xml2node($source, $form_state['values']['amount'], array(16545));
     $nodes = $import['articles'];
   } 
-      /*
-      $rawFeed = file_get_contents($filename);
-      $xml = new SimpleXmlElement($rawFeed);
-      dpm($xml);
-  	foreach ($xml->channel->item as $item) {
+     
 
-  	  dpm($item);
-  	}
-  	*/
 
-	if ($form_state['values']['block_node_save'] == 0) {
     // Batch for terms
     $batch = array(
       'title' => t('Importing WP Content ...'),
@@ -184,24 +208,26 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
       'progressive' => FALSE,
     );
 
-    foreach ($terms as $term) {
-      $batch['operations'][] = array('migrate_wp_batch_worker', array($term, 'term')); 
-    }	
+    if ($form_state['values']['migrate_terms'] == 1) {
+      foreach ($terms as $term) {
+        $batch['operations'][] = array('migrate_wp_batch_worker', array($term, 'term')); 
+      }	
+    }
 
-		foreach ($nodes as $new_node) {
-		  $batch['operations'][] = array('migrate_wp_batch_worker', array($new_node, 'article')); 
-		}
+    if ($form_state['values']['migrate_posts'] == 1) {
+		  foreach ($nodes as $new_node) {
+		    $batch['operations'][] = array('migrate_wp_batch_worker', array($new_node, 'article', $refactor_categories)); 
+		  }
+    }
 
 		batch_set($batch);
 
 		batch_process();
-	} else {
-		dpm($node);
-	}
+	
  
 }
 
-function migrate_wp_batch_worker($node_i, $type, &$context) {
+function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context) {
   
   global $authors;
 
@@ -218,8 +244,6 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
     }
   }
   else {
-    migrate_wp_export_users();
-
 	  $node = new stdClass();
 	  $node->type = 'a_article';
 	  node_object_prepare($node);  
@@ -244,27 +268,13 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
 	  $node->field_text[LANGUAGE_NONE][0]['value'] = $article_text;
     $node->field_text[LANGUAGE_NONE][0]['format'] = 'fullhtml';
 
-    $author = taxonomy_get_term_by_name($authors[$node_i['creator']]['name']);
-
-    if (!empty($author)) {
-      $author = reset($author);
-
-    } else {
-      $author = new stdClass();
-      $author->name = $authors[$node_i['creator']['name']];
-      $vocabulary = taxonomy_vocabulary_machine_name_load('published');
-      $author->vid = $vocabulary->vid;
-      taxonomy_term_save($author);
-
-    }
-
-    $node->field_published[LANGUAGE_NONE][0]['tid'] = $author->tid;
+    $node->field_published[LANGUAGE_NONE][0]['tid'] = $node_i['author'];
      
 
 	  $node->field_meta_description[LANGUAGE_NONE][0]['value'] = $node_i['meta_desc'];
     $node->field_meta_description[LANGUAGE_NONE][0]['format'] = 'text';
 
-	  $node->field_tags['und'][0]['tid'] = migrate_wp_set_taxonomy_tid($node_i['category'], 'category');
+	  //$node->field_tags['und'][0]['tid'] = migrate_wp_set_taxonomy_tid($node_i['category'], 'category');
 
 	  $tids = [];
 	  foreach ($node_i['tags'] as $tag) {
@@ -313,6 +323,12 @@ function migrate_wp_batch_worker($node_i, $type, &$context) {
     }
 	    
 	  $node->status = 1;
+
+    //--
+    $node->field_menu[LANGUAGE_NONE][0] = $node_i['main_heading'];
+    $node->field_secondary_menu[LANGUAGE_NONE] = $node_i['secondary_headings'];
+    $node->field_tags[LANGUAGE_NONE] = $node_i['categories'];
+    //--
 
     $alias = rtrim(str_replace('https://www.alapjarat.hu/', '', $node_i['link']), '/');
     $node->path = array(
@@ -414,7 +430,7 @@ function migrate_wp_batch_finished($success, $results, $operations) {
   }
   
   drupal_set_message(l('Run again', '/wp-import'));
-    dpm($attachments);
+
 }
 
 function migrate_wp_check($guid) {
@@ -554,14 +570,12 @@ function migrate_wp_migrated_list() {
   $result = $query->execute()->fetchAll();
   $results = $query->execute()->fetchAll();
 
-  dpm($results);
-  dpm(array_keys($results));
 
   foreach ($results as $row) {
     $nids[] = $row->nid;
   }
 
-  dpm($nids);
+
 
   //$view = views_embed_view('migrate_list', 'default', $nids);
   $view = views_get_view('migrate_list');
@@ -573,10 +587,11 @@ function migrate_wp_migrated_list() {
 
 }
 
-function xml2node($source, $posts = array()) {
+function xml2node($source, $amount, &$counter, $posts = array()) {
   global $attachments;
-
+  global $authors;
   
+  $refactor_categories = migrate_wp_refactor_categories();
   //$posts = array(22199);
   //$posts = array(23152); // galéria
   //$posts = array(16545);
@@ -598,8 +613,17 @@ function xml2node($source, $posts = array()) {
   $xml = simplexml_load_string($data, 'SimpleXMLElement', LIBXML_COMPACT | LIBXML_PARSEHUGE);
   //$json = json_encode($xml);
   //$array = json_decode($json,TRUE);
-
   $fields = array('title', 'link', 'post_id', 'post_date', 'creator', 'guid', 'content');
+
+  // get already imported items
+  $query = db_select('migrate_wp', 'mwp')
+  ->fields('mwp', array('nid', 'title'));
+  $result = $query->execute()->fetchAll();
+
+  $migrated = [];
+  foreach ($result as $row) {
+    $migrated[] = $row->title;
+  }
 
   // get attachments
   
@@ -609,11 +633,12 @@ function xml2node($source, $posts = array()) {
       continue;
     }
     $post_id = (int)$val->post_id;
-    //dpm('POSTID' . $post_id);
     $attachments[$post_id] = (string)$val->attachment_url;
   }
 
+  
   // get glossary 
+  
   $glossary = [];
   foreach ($xml->channel->item as $key=>$val) {
     
@@ -622,35 +647,36 @@ function xml2node($source, $posts = array()) {
     }
     $name = (string)$val->title;
     $content = (string)$val->content;
-    //dpm('POSTID' . $post_id);
     $glossary[] = array(
       'name' => $name,
       'description' => $content,
     );
   }
-
+  
   // get posts
   $nodes = [];
-  $c = 0;
+
   foreach ($xml->channel->item as $key=>$val) {
-
-
-
     if ((string)$val->post_type !== 'post') {
       continue;
     }
 
-    $c++;
-
     $post_id = (int)$val->post_id;
+    
+    if (in_array((string)$val->title, $migrated)) {
+      continue;
+    }
+
     if (!empty($posts)) { 
       if (!in_array($post_id, $posts)) {
         continue;
       } 
     } else {
-      if ($c > 50) {
-        //break 1;
+      
+      if ($counter > $amount-1) {
+        break 1;
       }
+      $counter++;
     }
 
     $node = [];
@@ -671,6 +697,7 @@ function xml2node($source, $posts = array()) {
       $node['gallery'] = $images;
     }
 
+    $node['author'] = $authors[(string)$val->creator]['tid'];
     
     // taxonomy
     $tags = [];
@@ -684,7 +711,11 @@ function xml2node($source, $posts = array()) {
       }
     }
     $node['tags'] = $tags;
-    $node['category'] = $category;
+    
+    // Headings and categories.
+    $node['main_heading'] = $refactor_categories[(string)$val->link]['primary_menu'];
+    $node['secondary_headings'] = $refactor_categories[(string)$val->link]['secondary_menu'];
+    $node['categories'] = $refactor_categories[(string)$val->link]['categories'];
 
 
 
@@ -737,7 +768,7 @@ function xml2node($source, $posts = array()) {
 
     $node['glossary_parser'] = $glossary_parser;
 
-    dpm($meta);
+
     if ($meta) {
       if (isset($meta['aioseop_opengraph_settings_image'])) {
         $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
@@ -757,11 +788,13 @@ function xml2node($source, $posts = array()) {
       $node['test'] = $prod_review;
     }
 
-    $node['content'] = substr($node['content'], 0, strrpos($node['content'], '[mc4wp_form'));
+    if (strrpos($node['content'], '[mc4wp_form')) {
+      $node['content'] = substr($node['content'], 0, strrpos($node['content'], '[mc4wp_form'));
+    } 
 
     $pattern = '/<h2>(.*?)<\/h2>/';
     preg_match_all($pattern, $node['content'], $matches);
-    if (isset($matches[0])) {
+    if (isset($matches[1]) && isset($matches[1][0])) {
       $node['subtitle'] = $matches[1][0];
     }
 
@@ -788,10 +821,7 @@ function migrate_wp_export_users() {
 
   $authors = [];
   for ($c = 0; $c < count($user_data[1]); $c++) {
-    $authors[$user_data[1][$c]] = array(
-      'email' => $user_data[2][$c],
-      'name' => $user_data[4][$c] . ' ' . $user_data[3][$c],
-    ); 
+    
 
     //---
     $author = taxonomy_get_term_by_name($user_data[4][$c] . ' ' . $user_data[3][$c]);
@@ -802,18 +832,19 @@ function migrate_wp_export_users() {
     } else {
       $author = new stdClass();
       $author->name = $user_data[4][$c] . ' ' . $user_data[3][$c];
+      $author->field_machine_name[LANGUAGE_NONE][0]['value'] = $user_data[1][$c];
       $vocabulary = taxonomy_vocabulary_machine_name_load('published');
       $author->vid = $vocabulary->vid;
       taxonomy_term_save($author);
 
     }
+
+    $authors[$user_data[1][$c]] = array(
+      'email' => $user_data[2][$c],
+      'name' => $user_data[4][$c] . ' ' . $user_data[3][$c],
+      'tid' => $author->tid,
+    ); 
   }
-
-
-  
-
-
-
 }
 
 function migrate_wp_find_glossary($text) {
@@ -841,8 +872,9 @@ function migrate_wp_form_generate_list_submit($form, &$form_state) {
   global $sources;
 
   $nodes = [];
+  $counter = 0;
   foreach ($sources as $source) {
-    $import = xml2node($source);
+    $import = xml2node($source, $form_state['values']['amount'], $counter);
     $nodes = array_merge($nodes, $import['articles']);
   }
 
@@ -878,3 +910,107 @@ function _mb_unserialize($string) {
         $string);
     return unserialize($string2);
 }  
+
+function migrate_wp_refactor_categories() {
+
+  $vocabulary = taxonomy_vocabulary_machine_name_load('menu');
+  $terms_menu = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
+  $menu_tids = [];
+  foreach ($terms_menu as $item) {
+    $menu_tids[$item->name] = $item->tid;
+  }
+  
+  $vocabulary = taxonomy_vocabulary_machine_name_load('category');
+  $terms_cat = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
+  $cat_tids = [];
+  foreach ($terms_cat as $item) {
+    $cat_tids[$item->name] = $item->tid;
+  }
+
+  $filename = 'sites/all/modules/migrate_wp/source/categories_refactor.csv';
+  $file = file_get_contents($filename);
+
+  $bigdata = str_getcsv($file, "\n");
+
+  $c = 0;
+  foreach ($bigdata as $row) {
+    $items = explode(';', $row);
+    $c++;
+    if ($c == 1) {
+      continue; 
+    }
+
+    if (empty($menu_tids[$items[4]])) {
+      
+    }
+
+    $secs = [];
+    $secondary = explode(',', $items[5]);
+    foreach ($secondary as $sec) {
+      if (!isset($menu_tids[$sec])) {
+        
+      } else {
+        $secs[] = array('tid'=>$menu_tids[$sec]);
+      }
+    }
+
+    $cats = [];
+    $category = explode(',', $items[6]);
+    foreach ($category as $cat) {
+      if (!isset($cat_tids[$cat])) {
+        
+      } else {
+        $cats[] = array('tid'=>$cat_tids[$cat]);
+      }
+    }
+    
+    $data[trim($items[1])] = array(
+      'primary_menu' => array('tid'=>$menu_tids[$items[4]]),
+      'secondary_menu' => $secs,
+      'categories' => $cats,
+    );
+
+
+
+  }
+
+/*  
+  print('<pre>');
+   print_r($data);
+   print('</pre>');
+   die();
+   */
+   
+   return $data;
+}
+
+
+
+function migrate_wp_tests() {
+  $filename = 'sites/all/modules/migrate_wp/source/categories_refactor.csv';
+  $file = file_get_contents($filename);
+  $bigdata = str_getcsv($file, "\n");
+
+  $c = 0;
+  foreach ($bigdata as $row) {
+    $items = explode(';', $row);
+    //dpm($items[2]);
+
+    $query = db_select('node', 'n')
+    ->fields('n', array('title'))
+    ->condition('title', $items[2])
+    ->execute()
+    ->fetchAll();
+
+    if (count($query) == 0) {
+      dpm($items[2]);
+    }
+
+    $c++;
+    if ($c > 2000) {
+      break 1;
+    }
+
+  }
+  return '1';
+}
