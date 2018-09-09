@@ -96,7 +96,6 @@ function alapjarat_common_node_presave($node) {
 	{
 		$node->sketch = 0;
 		$node->scheduled = 0;
-		$node->path['pathauto'] = 0;
 		$node->field_hiden_select['und'][0]['value'] = 0;
 	}
 
