@@ -57,7 +57,7 @@ function migrate_wp_form($form, &$form_state) {
   	'wp15' => 'wp15',
   	'wp20' => 'wp20',
   	'wp25' => 'wp25',
-  	//'wp30'=>'wp30',
+  	'wp30'=>'wp30',
   	//'wp35' => 'wp35',
   	//'wp40' => 'wp40',
   );
@@ -247,6 +247,9 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 	  $node = new stdClass();
 	  $node->type = 'a_article';
 	  node_object_prepare($node);  
+
+    watchdog('migrate_wp', 'POST ID' . $node_i['post_id']);
+    watchdog('migrate_wp', 'TITLE ' . $node_i['title']);
 	  
 	  $node->title = $node_i['title'];
     $node->field_subtitled[LANGUAGE_NONE][0]['value'] = $node_i['subtitle'];
@@ -268,7 +271,11 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 	  $node->field_text[LANGUAGE_NONE][0]['value'] = $article_text;
     $node->field_text[LANGUAGE_NONE][0]['format'] = 'fullhtml';
 
-    $node->field_published[LANGUAGE_NONE][0]['tid'] = $node_i['author'];
+    if (empty($node_i['author'])) {
+      watchdog('migrate', 'TID ERROR');
+    } else {
+      $node->field_published[LANGUAGE_NONE][0]['tid'] = $node_i['author'];
+    }
      
 
 	  $node->field_meta_description[LANGUAGE_NONE][0]['value'] = $node_i['meta_desc'];
@@ -297,7 +304,8 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 			      'uid' => 1,
 			      'uri' => $file->uri,
 			      'status' => 1,
-			      'display' => 1
+			      'display' => 1,
+            'alt' => $node_i['title'],
 			    )
 			  )
 			);
@@ -325,9 +333,15 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 	  $node->status = 1;
 
     //--
-    $node->field_menu[LANGUAGE_NONE][0] = $node_i['main_heading'];
-    $node->field_secondary_menu[LANGUAGE_NONE] = $node_i['secondary_headings'];
-    $node->field_tags[LANGUAGE_NONE] = $node_i['categories'];
+    if (!empty($node_i['main_heading'])) {
+      $node->field_menu[LANGUAGE_NONE][0] = $node_i['main_heading'];
+    }
+    if (!empty($node_i['secondary_headings'])) {
+      $node->field_secondary_menu[LANGUAGE_NONE] = $node_i['secondary_headings'];
+    }
+    if (!empty($node_i['categories'])) {
+      $node->field_tags[LANGUAGE_NONE] = $node_i['categories'];
+    }
     //--
 
     $alias = rtrim(str_replace('https://www.alapjarat.hu/', '', $node_i['link']), '/');
@@ -405,7 +419,6 @@ function migrate_wp_file_get_managed($path) {
   $file->uri = 'public://' . $uri;
   $file->status = 1;
   $file->filemime = mime_content_type('public://' . $uri);
-
   $files = file_load_multiple(array(), array('uri' => $file->uri));
   $file_exists = reset($files);
   if (!$file_exists) {
@@ -712,11 +725,11 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     }
     $node['tags'] = $tags;
     
+
     // Headings and categories.
     $node['main_heading'] = $refactor_categories[(string)$val->link]['primary_menu'];
     $node['secondary_headings'] = $refactor_categories[(string)$val->link]['secondary_menu'];
     $node['categories'] = $refactor_categories[(string)$val->link]['categories'];
-
 
 
 
