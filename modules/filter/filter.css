@@ -31,6 +31,11 @@
 }
 .text-format-wrapper .description {
   margin-top: 0.5em;
+  color: red;
+}
+
+#edit-field-menu .description {
+  color: red;
 }
 
 #filter-order tr .form-item {
