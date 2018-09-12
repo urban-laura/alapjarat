@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * alapj_rat_features.features.field_base.inc
+ * alapjarat_features.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function alapj_rat_features_field_default_field_bases() {
+function alapjarat_features_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_description'.
@@ -213,8 +213,8 @@ function alapj_rat_features_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'Publikus',
-        1 => 'Vázlat',
+        0 => 'Nyilvános',
+        1 => 'Piszkozat',
         2 => 'Ütemezve',
       ),
       'allowed_values_function' => '',
@@ -545,7 +545,7 @@ function alapj_rat_features_field_default_field_bases() {
   // Exported field_base: 'field_secondary_menu'.
   $field_bases['field_secondary_menu'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_secondary_menu',
@@ -690,27 +690,6 @@ function alapj_rat_features_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_textb0'.
-  $field_bases['field_textb0'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_textb0',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
   // Exported field_base: 'field_textp'.
   $field_bases['field_textp'] = array(
     'active' => 1,
@@ -773,6 +752,23 @@ function alapj_rat_features_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_wp_post_id'.
+  $field_bases['field_wp_post_id'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_wp_post_id',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'number_integer',
   );
 
   return $field_bases;

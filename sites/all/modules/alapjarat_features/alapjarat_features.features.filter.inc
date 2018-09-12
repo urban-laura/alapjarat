@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * alapj_rat_features.features.filter.inc
+ * alapjarat_features.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function alapj_rat_features_filter_default_formats() {
+function alapjarat_features_filter_default_formats() {
   $formats = array();
 
   // Exported format: Admin HTML.

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * alapj_rat_features.features.taxonomy.inc
+ * alapjarat_features.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function alapj_rat_features_taxonomy_default_vocabularies() {
+function alapjarat_features_taxonomy_default_vocabularies() {
   return array(
     'banner_0' => array(
       'name' => 'Banner',

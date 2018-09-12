@@ -1,29 +1,48 @@
 <?php
 /**
  * @file
- * alapjarat.features.field_instance.inc
+ * alapjarat_features.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function alapjarat_field_default_field_instances() {
+function alapjarat_features_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-a_article-field_facebook_video'.
-  $field_instances['node-a_article-field_facebook_video'] = array(
+  // Exported field_instance: 'node-a_article-field_gallery'.
+  $field_instances['node-a_article-field_gallery'] = array(
     'bundle' => 'a_article',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'mediafield',
+        'module' => 'juicebox',
         'settings' => array(
-          'file_view_mode' => 'default',
+          'apply_markup_filter' => 1,
+          'caption_source' => '',
+          'custom_parent_classes' => '',
+          'image_style' => '',
+          'incompatible_file_action' => 'show_icon_and_link',
+          'jlib_backgroundColor' => '#222222',
+          'jlib_galleryHeight' => '100%',
+          'jlib_galleryWidth' => '100%',
+          'jlib_showExpandButton' => 1,
+          'jlib_showOpenButton' => 1,
+          'jlib_showThumbsButton' => 1,
+          'jlib_textColor' => 'rgba(255,255,255,1)',
+          'jlib_thumbFrameColor' => 'rgba(255,255,255,.5)',
+          'jlib_useFullscreenExpand' => 1,
+          'jlib_useThumbDots' => 0,
+          'linkurl_source' => '',
+          'linkurl_target' => '_blank',
+          'manual_config' => '',
+          'thumb_style' => 'juicebox_square_thumbnail',
+          'title_source' => '',
         ),
-        'type' => 'media',
-        'weight' => 7,
+        'type' => 'juicebox_formatter',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -33,36 +52,116 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_facebook_video',
-    'label' => 'Facebook Video',
+    'field_name' => 'field_gallery',
+    'label' => 'Gallery',
     'required' => 0,
     'settings' => array(
-      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv weba webp webm',
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'facebook' => 'facebook',
-          'public' => 'public',
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'plupload' => 'plupload',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 0,
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
         ),
-        'allowed_types' => array(
-          'audio' => 'audio',
-          'document' => 0,
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
           'image' => 0,
-          'video' => 'video',
+          'image_4_small' => 0,
+          'image_alapjarat' => 0,
+          'image_alapjarat_admin' => 0,
+          'image_big' => 0,
+          'image_category' => 0,
+          'image_helpful_small' => 0,
+          'image_impresszum' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
+          'image_right' => 0,
+          'image_thumbnail' => 0,
+          'image_world_small' => 0,
+          'link' => 0,
         ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 'media_internet',
-          'upload' => 0,
-        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
-      'weight' => 5,
+      'type' => 'image_image',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_hiden_select'.
+  $field_instances['node-a_article-field_hiden_select'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_hiden_select',
+    'label' => 'Hiden select',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 15,
     ),
   );
 
@@ -76,7 +175,7 @@ function alapjarat_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -90,8 +189,9 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Main image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -104,21 +204,64 @@ function alapjarat_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
-        'insert_absolute' => FALSE,
-        'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
         ),
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
         'insert_styles' => array(
-          0 => 'auto',
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_4_small' => 0,
+          'image_alapjarat' => 0,
+          'image_alapjarat_admin' => 0,
+          'image_big' => 0,
+          'image_category' => 0,
+          'image_helpful_small' => 0,
+          'image_impresszum' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
+          'image_right' => 0,
+          'image_thumbnail' => 0,
+          'image_world_small' => 0,
+          'link' => 0,
         ),
         'insert_width' => '',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -132,7 +275,7 @@ function alapjarat_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -148,6 +291,7 @@ function alapjarat_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -160,6 +304,20 @@ function alapjarat_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -187,6 +345,119 @@ function alapjarat_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_menu'.
+  $field_instances['node-a_article-field_menu'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ha ezt megváltoztatja, változik az URL is!',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_menu',
+    'label' => 'Primary Heading 	',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_meta_description'.
+  $field_instances['node-a_article-field_meta_description'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_meta_description',
+    'label' => 'Meta description (300 - 320)',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 0,
+          'link' => 0,
+          'plain_text' => 0,
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -48,
+            ),
+            'filtered_html' => array(
+              'weight' => -47,
+            ),
+            'fullhtml' => array(
+              'weight' => -49,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -46,
+            ),
+            'text' => array(
+              'weight' => -50,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
       'weight' => 3,
     ),
   );
@@ -194,7 +465,11 @@ function alapjarat_field_default_field_instances() {
   // Exported field_instance: 'node-a_article-field_published'.
   $field_instances['node-a_article-field_published'] = array(
     'bundle' => 'a_article',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 14,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -215,19 +490,59 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_published',
     'label' => 'Published',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_secondary_menu'.
+  $field_instances['node-a_article-field_secondary_menu'] = array(
+    'bundle' => 'a_article',
+    'default_value' => array(
+      0 => array(
+        'tid' => 109,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_secondary_menu',
+    'label' => 'Secondary Heading 	',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 9,
     ),
   );
 
@@ -257,17 +572,52 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Subtitled',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 0,
+          'link' => 0,
+          'plain_text' => 0,
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -48,
+            ),
+            'filtered_html' => array(
+              'weight' => -47,
+            ),
+            'fullhtml' => array(
+              'weight' => -49,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -46,
+            ),
+            'text' => array(
+              'weight' => -50,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 3,
+        'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -297,6 +647,7 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Category',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -304,7 +655,49 @@ function alapjarat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_tagsa'.
+  $field_instances['node-a_article-field_tagsa'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tagsa',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'entity_translation_taxonomy_autocomplete_translate' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 11,
     ),
   );
 
@@ -334,6 +727,41 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 'fullhtml',
+          'link' => 0,
+          'plain_text' => 0,
+          'text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -8,
+            ),
+            'filtered_html' => array(
+              'weight' => -7,
+            ),
+            'fullhtml' => array(
+              'weight' => -10,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -6,
+            ),
+            'text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -344,12 +772,87 @@ function alapjarat_field_default_field_instances() {
         'rows' => 20,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-a_article-field_video'.
-  $field_instances['node-a_article-field_video'] = array(
+  // Exported field_instance: 'node-a_article-field_title2'.
+  $field_instances['node-a_article-field_title2'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ha ezt megváltoztatja, változik az URL is!',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_title2',
+    'label' => 'Title (70)',
+    'required' => 1,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 0,
+          'link' => 0,
+          'plain_text' => 0,
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -48,
+            ),
+            'filtered_html' => array(
+              'weight' => -47,
+            ),
+            'fullhtml' => array(
+              'weight' => -49,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -46,
+            ),
+            'text' => array(
+              'weight' => -50,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_wp_post_id'.
+  $field_instances['node-a_article-field_wp_post_id'] = array(
     'bundle' => 'a_article',
     'default_value' => NULL,
     'deleted' => 0,
@@ -357,20 +860,15 @@ function alapjarat_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'youtube',
+        'module' => 'number',
         'settings' => array(
-          'youtube_autohide' => FALSE,
-          'youtube_autoplay' => FALSE,
-          'youtube_controls' => FALSE,
-          'youtube_height' => NULL,
-          'youtube_iv_load_policy' => FALSE,
-          'youtube_loop' => FALSE,
-          'youtube_showinfo' => FALSE,
-          'youtube_size' => '420x315',
-          'youtube_width' => NULL,
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
         ),
-        'type' => 'youtube_video',
-        'weight' => 4,
+        'type' => 'number_integer',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -380,241 +878,29 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_video',
-    'label' => 'YouTube Video',
+    'field_name' => 'field_wp_post_id',
+    'label' => 'wp post id',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'youtube',
+      'module' => 'number',
       'settings' => array(),
-      'type' => 'youtube',
-      'weight' => 4,
+      'type' => 'number',
+      'weight' => 31,
     ),
   );
 
-  // Exported field_instance: 'node-article-body'.
-  $field_instances['node-article-body'] = array(
-    'bundle' => 'article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
-    ),
-  );
-
-  // Exported field_instance: 'node-article-field_image'.
-  $field_instances['node-article-field_image'] = array(
-    'bundle' => 'article',
-    'deleted' => 0,
-    'description' => 'Upload an image to go with this article.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'large',
-        ),
-        'type' => 'image',
-        'weight' => -1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
-        ),
-        'type' => 'image',
-        'weight' => -1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_image',
-    'label' => 'Image',
-    'required' => FALSE,
-    'settings' => array(
-      'alt_field' => TRUE,
-      'default_image' => 0,
-      'file_directory' => 'field/image',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'image',
-      'settings' => array(
-        'insert' => 0,
-        'insert_absolute' => FALSE,
-        'insert_class' => '',
-        'insert_default' => array(
-          0 => 'auto',
-        ),
-        'insert_styles' => array(
-          0 => 'auto',
-        ),
-        'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => -1,
-    ),
-  );
-
-  // Exported field_instance: 'node-article-field_tags'.
-  $field_instances['node-article-field_tags'] = array(
-    'bundle' => 'article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Enter a comma-separated list of words to describe your content.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_tags',
-    'label' => 'Tags',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => -4,
-    ),
-  );
-
-  // Exported field_instance: 'node-banner-field_image_b'.
-  $field_instances['node-banner-field_image_b'] = array(
-    'bundle' => 'banner',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_image_b',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'insert' => 1,
-        'insert_absolute' => 0,
-        'insert_class' => '',
-        'insert_default' => 'auto',
-        'insert_styles' => array(
-          'auto' => 'auto',
-          'icon_link' => 0,
-          'image' => 0,
-          'image_4_small' => 0,
-          'image_alapjarat' => 0,
-          'image_alapjarat_admin' => 0,
-          'image_big' => 0,
-          'image_helpful_small' => 0,
-          'image_large' => 0,
-          'image_medium' => 0,
-          'image_thumbnail' => 0,
-          'image_world_small' => 0,
-          'link' => 0,
-        ),
-        'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-banner-field_location'.
-  $field_instances['node-banner-field_location'] = array(
-    'bundle' => 'banner',
+  // Exported field_instance: 'node-banner0-field_fix_or_random_'.
+  $field_instances['node-banner0-field_fix_or_random_'] = array(
+    'bundle' => 'banner0',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -634,10 +920,11 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_location',
-    'label' => 'Location',
-    'required' => 0,
+    'field_name' => 'field_fix_or_random_',
+    'label' => 'Fix or Random?',
+    'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -645,13 +932,155 @@ function alapjarat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-banner-field_textb'.
-  $field_instances['node-banner-field_textb'] = array(
-    'bundle' => 'banner',
+  // Exported field_instance: 'node-banner0-field_images'.
+  $field_instances['node-banner0-field_images'] = array(
+    'bundle' => 'banner0',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_images',
+    'label' => 'Images',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'insert' => 1,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_4_small' => 0,
+          'image_alapjarat' => 0,
+          'image_alapjarat_admin' => 0,
+          'image_big' => 0,
+          'image_category' => 0,
+          'image_helpful_small' => 0,
+          'image_impresszum' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
+          'image_right' => 0,
+          'image_thumbnail' => 0,
+          'image_world_small' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-banner0-field_location0'.
+  $field_instances['node-banner0-field_location0'] = array(
+    'bundle' => 'banner0',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location0',
+    'label' => 'Location',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-banner0-field_text'.
+  $field_instances['node-banner0-field_text'] = array(
+    'bundle' => 'banner0',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -671,10 +1100,45 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_textb',
+    'field_name' => 'field_text',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 0,
+          'fullhtml' => 'fullhtml',
+          'link' => 0,
+          'plain_text' => 'plain_text',
+          'text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -49,
+            ),
+            'filtered_html' => array(
+              'weight' => -46,
+            ),
+            'fullhtml' => array(
+              'weight' => -50,
+            ),
+            'link' => array(
+              'weight' => -45,
+            ),
+            'plain_text' => array(
+              'weight' => -48,
+            ),
+            'text' => array(
+              'weight' => -47,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -685,140 +1149,22 @@ function alapjarat_field_default_field_instances() {
         'rows' => 20,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-banner_fix_-field_imagebf'.
-  $field_instances['node-banner_fix_-field_imagebf'] = array(
-    'bundle' => 'banner_fix_',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_imagebf',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'insert' => 1,
-        'insert_absolute' => 0,
-        'insert_class' => '',
-        'insert_default' => 'auto',
-        'insert_styles' => array(
-          'auto' => 'auto',
-          'icon_link' => 0,
-          'image' => 0,
-          'image_4_small' => 0,
-          'image_alapjarat' => 0,
-          'image_alapjarat_admin' => 0,
-          'image_big' => 0,
-          'image_helpful_small' => 0,
-          'image_large' => 0,
-          'image_media_thumbnail' => 0,
-          'image_medium' => 0,
-          'image_right' => 0,
-          'image_thumbnail' => 0,
-          'image_world_small' => 0,
-          'link' => 0,
-        ),
-        'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 42,
-    ),
-  );
-
-  // Exported field_instance: 'node-banner_fix_-field_locationbf'.
-  $field_instances['node-banner_fix_-field_locationbf'] = array(
-    'bundle' => 'banner_fix_',
+  // Exported field_instance: 'node-banner0-field_title'.
+  $field_instances['node-banner0-field_title'] = array(
+    'bundle' => 'banner0',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_locationbf',
-    'label' => 'Location',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 43,
-    ),
-  );
-
-  // Exported field_instance: 'node-banner_fix_-field_number'.
-  $field_instances['node-banner_fix_-field_number'] = array(
-    'bundle' => 'banner_fix_',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
+        'type' => 'text_default',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -829,61 +1175,56 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_number',
-    'label' => 'Number',
+    'field_name' => 'field_title',
+    'label' => 'Title',
     'required' => 0,
     'settings' => array(
-      'range' => 20,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'weight',
-      'settings' => array(
-        'range' => 10,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
       ),
-      'type' => 'weight_selector',
-      'weight' => 44,
-    ),
-  );
-
-  // Exported field_instance: 'node-banner_fix_-field_textbf'.
-  $field_instances['node-banner_fix_-field_textbf'] = array(
-    'bundle' => 'banner_fix_',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_textbf',
-    'label' => 'Text',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 1,
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'size' => 60,
       ),
-      'type' => 'text_textarea',
-      'weight' => 41,
+      'type' => 'text_textfield',
+      'weight' => 3,
     ),
   );
 
@@ -917,12 +1258,13 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_event_date',
     'label' => 'Event date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -968,9 +1310,10 @@ function alapjarat_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_facebook_event',
-    'label' => 'Facebook event',
-    'required' => 0,
+    'label' => 'Event',
+    'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'title_fetch' => 0,
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -1016,12 +1359,13 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_published_date',
     'label' => 'Published date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1071,12 +1415,13 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_remove_date',
     'label' => 'Remove date',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1122,6 +1467,41 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 0,
+          'link' => 'link',
+          'plain_text' => 0,
+          'text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -46,
+            ),
+            'filtered_html' => array(
+              'weight' => -45,
+            ),
+            'fullhtml' => array(
+              'weight' => -48,
+            ),
+            'link' => array(
+              'weight' => -50,
+            ),
+            'plain_text' => array(
+              'weight' => -49,
+            ),
+            'text' => array(
+              'weight' => -47,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1162,6 +1542,7 @@ function alapjarat_field_default_field_instances() {
     'label' => 'E-mail',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1175,12 +1556,12 @@ function alapjarat_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-impress-field_external_co_worker'.
-  $field_instances['node-impress-field_external_co_worker'] = array(
+  // Exported field_instance: 'node-impress-field_external_co_worker_'.
+  $field_instances['node-impress-field_external_co_worker_'] = array(
     'bundle' => 'impress',
     'default_value' => array(
       0 => array(
-        'tid' => 32,
+        'tid' => 53,
       ),
     ),
     'deleted' => 0,
@@ -1191,7 +1572,7 @@ function alapjarat_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1201,10 +1582,11 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_external_co_worker',
+    'field_name' => 'field_external_co_worker_',
     'label' => 'External co-worker?',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1212,55 +1594,6 @@ function alapjarat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-impress-field_numberi'.
-  $field_instances['node-impress-field_numberi'] = array(
-    'bundle' => 'impress',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_numberi',
-    'label' => 'Number',
-    'required' => 0,
-    'settings' => array(
-      'range' => 20,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'weight',
-      'settings' => array(
-        'range' => 20,
-      ),
-      'type' => 'weight_selector',
       'weight' => 7,
     ),
   );
@@ -1293,8 +1626,9 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Picture',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1307,6 +1641,29 @@ function alapjarat_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -1315,13 +1672,22 @@ function alapjarat_field_default_field_instances() {
           'auto' => 'auto',
           'icon_link' => 0,
           'image' => 0,
-          'image_4_small' => 0,
           'image_alapjarat' => 0,
-          'image_alapjarat_admin' => 0,
+          'image_article3' => 0,
           'image_big' => 0,
+          'image_category' => 0,
           'image_helpful_small' => 0,
+          'image_impresszum' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
           'image_large' => 0,
+          'image_media_thumbnail' => 0,
           'image_medium' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
+          'image_right' => 0,
           'image_thumbnail' => 0,
           'image_world_small' => 0,
           'link' => 0,
@@ -1361,6 +1727,7 @@ function alapjarat_field_default_field_instances() {
     'label' => 'Status',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1372,50 +1739,6 @@ function alapjarat_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-body'.
-  $field_instances['node-page-body'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
     ),
   );
 
@@ -1443,8 +1766,39 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_textp',
     'label' => 'Text',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -47,
+            ),
+            'filtered_html' => array(
+              'weight' => -46,
+            ),
+            'fullhtml' => array(
+              'weight' => -50,
+            ),
+            'plain_text' => array(
+              'weight' => -49,
+            ),
+            'text' => array(
+              'weight' => -48,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1483,8 +1837,43 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_descriptionp',
     'label' => 'Description',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -46,
+            ),
+            'filtered_html' => array(
+              'weight' => -45,
+            ),
+            'fullhtml' => array(
+              'weight' => -48,
+            ),
+            'link' => array(
+              'weight' => -50,
+            ),
+            'plain_text' => array(
+              'weight' => -49,
+            ),
+            'text' => array(
+              'weight' => -47,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1495,51 +1884,7 @@ function alapjarat_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 41,
-    ),
-  );
-
-  // Exported field_instance: 'node-partners-field_numberp'.
-  $field_instances['node-partners-field_numberp'] = array(
-    'bundle' => 'partners',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'weight',
-        'settings' => array(),
-        'type' => 'weight_integer',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_numberp',
-    'label' => 'Number',
-    'required' => 0,
-    'settings' => array(
-      'range' => 20,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'weight',
-      'settings' => array(
-        'range' => 20,
-      ),
-      'type' => 'weight_selector',
-      'weight' => 44,
+      'weight' => 3,
     ),
   );
 
@@ -1569,10 +1914,11 @@ function alapjarat_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_picturep',
     'label' => 'Picture',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1585,6 +1931,29 @@ function alapjarat_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
         'insert' => 0,
         'insert_absolute' => 0,
         'insert_class' => '',
@@ -1593,16 +1962,21 @@ function alapjarat_field_default_field_instances() {
           'auto' => 'auto',
           'icon_link' => 0,
           'image' => 0,
-          'image_4_small' => 0,
           'image_alapjarat' => 0,
-          'image_alapjarat_admin' => 0,
+          'image_article3' => 0,
           'image_big' => 0,
           'image_category' => 0,
           'image_helpful_small' => 0,
           'image_impresszum' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
           'image_large' => 0,
           'image_media_thumbnail' => 0,
           'image_medium' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
           'image_right' => 0,
           'image_thumbnail' => 0,
           'image_world_small' => 0,
@@ -1613,16 +1987,16 @@ function alapjarat_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 42,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-partners-field_premium_car_partner_'.
-  $field_instances['node-partners-field_premium_car_partner_'] = array(
+  // Exported field_instance: 'node-partners-field_premium_car_partner_1'.
+  $field_instances['node-partners-field_premium_car_partner_1'] = array(
     'bundle' => 'partners',
     'default_value' => array(
       0 => array(
-        'tid' => 39,
+        'tid' => 52,
       ),
     ),
     'deleted' => 0,
@@ -1633,7 +2007,7 @@ function alapjarat_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1643,10 +2017,11 @@ function alapjarat_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_premium_car_partner_',
+    'field_name' => 'field_premium_car_partner_1',
     'label' => 'Premium car partner?',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1654,37 +2029,40 @@ function alapjarat_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 43,
+      'weight' => 6,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Category');
   t('Description');
   t('E-mail');
-  t('Enter a comma-separated list of words to describe your content.');
+  t('Event');
   t('Event date');
   t('External co-worker?');
-  t('Facebook Video');
-  t('Facebook event');
-  t('Image');
+  t('Fix or Random?');
+  t('Gallery');
+  t('Ha ezt megváltoztatja, változik az URL is!');
+  t('Hiden select');
   t('Images');
   t('Location');
   t('Main image');
-  t('Number');
+  t('Meta description (300 - 320)');
   t('Picture');
   t('Premium car partner?');
+  t('Primary Heading 	');
   t('Published');
   t('Published date');
   t('Remove date');
+  t('Secondary Heading 	');
   t('Status');
   t('Subtitled');
   t('Tags');
   t('Text');
-  t('Upload an image to go with this article.');
-  t('YouTube Video');
+  t('Title');
+  t('Title (70)');
+  t('wp post id');
 
   return $field_instances;
 }

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * alapj_rat_features.features.ckeditor_profile.inc
+ * alapjarat_features.features.ckeditor_profile.inc
  */
 
 /**
  * Implements hook_ckeditor_profile_defaults().
  */
-function alapj_rat_features_ckeditor_profile_defaults() {
+function alapjarat_features_ckeditor_profile_defaults() {
   $data = array(
     'Advanced' => array(
       'name' => 'Advanced',

@@ -1,14 +1,20 @@
 <?php
 /**
  * @file
- * alapjarat.features.inc
+ * alapjarat_features.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function alapjarat_ctools_plugin_api($module = NULL, $api = NULL) {
+function alapjarat_features_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "captcha" && $api == "captcha") {
+    return array("version" => "1");
+  }
   if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+  if ($module == "panels_mini" && $api == "panels_default") {
     return array("version" => "1");
   }
 }
@@ -16,30 +22,41 @@ function alapjarat_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function alapjarat_views_api($module = NULL, $api = NULL) {
+function alapjarat_features_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_custom_pub_defaults().
+ */
+function alapjarat_features_custom_pub_defaults() {
+  $options = array();
+  // Exported option: scheduled
+  $options['scheduled'] = array(
+    'type' => 'scheduled',
+    'name' => t('Ütemezve'),
+    'node_types' => array(
+      'a_article' => t('Alapjárat Article'),
+    ),
+  );
+
+  // Exported option: sketch
+  $options['sketch'] = array(
+    'type' => 'sketch',
+    'name' => t('Piszkozat'),
+    'node_types' => array(
+      'a_article' => t('Alapjárat Article'),
+    ),
+  );
+
+  return $options;
 }
 
 /**
  * Implements hook_image_default_styles().
  */
-function alapjarat_image_default_styles() {
+function alapjarat_features_image_default_styles() {
   $styles = array();
-
-  // Exported image style: 4_small.
-  $styles['4_small'] = array(
-    'label' => '4_small',
-    'effects' => array(
-      5 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 275,
-          'height' => 175,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
 
   // Exported image style: alapjarat.
   $styles['alapjarat'] = array(
@@ -57,15 +74,15 @@ function alapjarat_image_default_styles() {
     ),
   );
 
-  // Exported image style: alapjarat_admin.
-  $styles['alapjarat_admin'] = array(
-    'label' => '1_big',
+  // Exported image style: article3.
+  $styles['article3'] = array(
+    'label' => 'article3',
     'effects' => array(
-      4 => array(
+      14 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 570,
-          'height' => 360,
+          'width' => 116,
+          'height' => 88,
         ),
         'weight' => 1,
       ),
@@ -89,7 +106,7 @@ function alapjarat_image_default_styles() {
 
   // Exported image style: category.
   $styles['category'] = array(
-    'label' => 'category',
+    'label' => 'pane',
     'effects' => array(
       10 => array(
         'name' => 'image_scale_and_crop',
@@ -181,7 +198,7 @@ function alapjarat_image_default_styles() {
 
   // Exported image style: world_small.
   $styles['world_small'] = array(
-    'label' => 'world_small',
+    'label' => 'actual_small',
     'effects' => array(
       8 => array(
         'name' => 'image_scale_and_crop',
@@ -200,38 +217,22 @@ function alapjarat_image_default_styles() {
 /**
  * Implements hook_node_info().
  */
-function alapjarat_node_info() {
+function alapjarat_features_node_info() {
   $items = array(
     'a_article' => array(
       'name' => t('Alapjárat Article'),
       'base' => 'node_content',
       'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
+      'has_title' => '0',
+      'title_label' => '',
       'help' => '',
     ),
-    'article' => array(
-      'name' => t('Article'),
-      'base' => 'node_content',
-      'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'banner' => array(
-      'name' => t('Banner (random)'),
+    'banner0' => array(
+      'name' => t('Banner'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title (invisible)'),
-      'help' => '',
-    ),
-    'banner_fix_' => array(
-      'name' => t('Banner (fix)'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title (invisible)'),
+      'title_label' => t('Title (invisible) '),
       'help' => '',
     ),
     'event' => array(
@@ -248,14 +249,6 @@ function alapjarat_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Name'),
-      'help' => '',
-    ),
-    'page' => array(
-      'name' => t('Basic page'),
-      'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
       'help' => '',
     ),
     'pages' => array(

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * alapj_rat_features.captcha.inc
+ * alapjarat_features.captcha.inc
  */
 
 /**
  * Implements hook_captcha_default_points().
  */
-function alapj_rat_features_captcha_default_points() {
+function alapjarat_features_captcha_default_points() {
   $export = array();
 
   $captcha = new stdClass();

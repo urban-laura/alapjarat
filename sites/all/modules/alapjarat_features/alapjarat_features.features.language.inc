@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * alapj_rat_features.features.language.inc
+ * alapjarat_features.features.language.inc
  */
 
 /**
  * Implements hook_locale_default_languages().
  */
-function alapj_rat_features_locale_default_languages() {
+function alapjarat_features_locale_default_languages() {
   $languages = array();
 
   // Exported language: en.
