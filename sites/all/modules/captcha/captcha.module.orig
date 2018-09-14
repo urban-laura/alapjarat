@@ -310,7 +310,7 @@ function captcha_element_process($element, &$form_state, $complete_form) {
  * Provide some default captchas only if defaults are not already
  * provided by other modules.
  */
-/*function captcha_captcha_default_points_alter(&$items) {
+function captcha_captcha_default_points_alter(&$items) {
   $modules = array(
     'comment' => array(
     ),
@@ -351,7 +351,6 @@ function captcha_element_process($element, &$form_state, $complete_form) {
     }
   }
 }
-*/
 
 /**
  * Theme function for a CAPTCHA element.

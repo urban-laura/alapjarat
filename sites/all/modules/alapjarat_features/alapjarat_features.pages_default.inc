@@ -239,20 +239,18 @@ function alapjarat_features_default_page_manager_handlers() {
   $display->content['new-3d39f233-a4e3-4c48-a0d9-18b6bbf669d0'] = $pane;
   $display->panels['center'][4] = 'new-3d39f233-a4e3-4c48-a0d9-18b6bbf669d0';
   $pane = new stdClass();
-  $pane->pid = 'new-ce511477-37e9-458f-a8e4-cedc92d8974c';
+  $pane->pid = 'new-9354d871-2863-49fb-8ff1-a840d9250d15';
   $pane->panel = 'center';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Facebook like and share + save',
+    'admin_title' => 'Youtube Subscriber',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<div class="fb-like" data-href="%node:url" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-<div class="fb-share-button" data-href="%node:url" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Megosztás</a></div>
-<br />
-<div class="fb-save" data-uri="%node:url" data-size="large"></div>',
+    'body' => '<script src="https://apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCueleOZ2QFAaVSHXheZlFig" data-layout="full" data-count="default"></div>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -264,9 +262,63 @@ function alapjarat_features_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
+  $pane->uuid = '9354d871-2863-49fb-8ff1-a840d9250d15';
+  $display->content['new-9354d871-2863-49fb-8ff1-a840d9250d15'] = $pane;
+  $display->panels['center'][5] = 'new-9354d871-2863-49fb-8ff1-a840d9250d15';
+  $pane = new stdClass();
+  $pane->pid = 'new-ce511477-37e9-458f-a8e4-cedc92d8974c';
+  $pane->panel = 'center';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Facebook like and share',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<div class="fb-like" data-href="%node:url" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+<br />
+<div class="fb-share-button" data-href="%node:url" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Megosztás</a></div>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
   $pane->uuid = 'ce511477-37e9-458f-a8e4-cedc92d8974c';
   $display->content['new-ce511477-37e9-458f-a8e4-cedc92d8974c'] = $pane;
-  $display->panels['center'][5] = 'new-ce511477-37e9-458f-a8e4-cedc92d8974c';
+  $display->panels['center'][6] = 'new-ce511477-37e9-458f-a8e4-cedc92d8974c';
+  $pane = new stdClass();
+  $pane->pid = 'new-2f0f4428-94ac-474b-b005-fa5bed80d385';
+  $pane->panel = 'center';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Facebook save',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<div class="fb-save" data-uri="%node:url" data-size="large"></div>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 7;
+  $pane->locks = array();
+  $pane->uuid = '2f0f4428-94ac-474b-b005-fa5bed80d385';
+  $display->content['new-2f0f4428-94ac-474b-b005-fa5bed80d385'] = $pane;
+  $display->panels['center'][7] = 'new-2f0f4428-94ac-474b-b005-fa5bed80d385';
   $pane = new stdClass();
   $pane->pid = 'new-02db2c16-7fdb-420d-91d9-67de62bc9e24';
   $pane->panel = 'center';
@@ -293,11 +345,11 @@ function alapjarat_features_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 6;
+  $pane->position = 8;
   $pane->locks = array();
   $pane->uuid = '02db2c16-7fdb-420d-91d9-67de62bc9e24';
   $display->content['new-02db2c16-7fdb-420d-91d9-67de62bc9e24'] = $pane;
-  $display->panels['center'][6] = 'new-02db2c16-7fdb-420d-91d9-67de62bc9e24';
+  $display->panels['center'][8] = 'new-02db2c16-7fdb-420d-91d9-67de62bc9e24';
   $pane = new stdClass();
   $pane->pid = 'new-b831b875-bba3-4ce1-ac46-114bbc1082ed';
   $pane->panel = 'center';
@@ -326,11 +378,11 @@ function alapjarat_features_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 7;
+  $pane->position = 9;
   $pane->locks = array();
   $pane->uuid = 'b831b875-bba3-4ce1-ac46-114bbc1082ed';
   $display->content['new-b831b875-bba3-4ce1-ac46-114bbc1082ed'] = $pane;
-  $display->panels['center'][7] = 'new-b831b875-bba3-4ce1-ac46-114bbc1082ed';
+  $display->panels['center'][9] = 'new-b831b875-bba3-4ce1-ac46-114bbc1082ed';
   $pane = new stdClass();
   $pane->pid = 'new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
   $pane->panel = 'center';
@@ -377,11 +429,11 @@ function alapjarat_features_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 8;
+  $pane->position = 10;
   $pane->locks = array();
   $pane->uuid = 'ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
   $display->content['new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0'] = $pane;
-  $display->panels['center'][8] = 'new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
+  $display->panels['center'][10] = 'new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
   $pane = new stdClass();
   $pane->pid = 'new-b51412a1-b923-4911-8a50-e7e52a3821a8';
   $pane->panel = 'center';
@@ -451,11 +503,11 @@ $.extend($.validator.messages, {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 9;
+  $pane->position = 11;
   $pane->locks = array();
   $pane->uuid = 'b51412a1-b923-4911-8a50-e7e52a3821a8';
   $display->content['new-b51412a1-b923-4911-8a50-e7e52a3821a8'] = $pane;
-  $display->panels['center'][9] = 'new-b51412a1-b923-4911-8a50-e7e52a3821a8';
+  $display->panels['center'][11] = 'new-b51412a1-b923-4911-8a50-e7e52a3821a8';
   $pane = new stdClass();
   $pane->pid = 'new-3321a608-7268-4d00-b08f-7d25bebd77b1';
   $pane->panel = 'center';
@@ -482,11 +534,11 @@ $.extend($.validator.messages, {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 10;
+  $pane->position = 12;
   $pane->locks = array();
   $pane->uuid = '3321a608-7268-4d00-b08f-7d25bebd77b1';
   $display->content['new-3321a608-7268-4d00-b08f-7d25bebd77b1'] = $pane;
-  $display->panels['center'][10] = 'new-3321a608-7268-4d00-b08f-7d25bebd77b1';
+  $display->panels['center'][12] = 'new-3321a608-7268-4d00-b08f-7d25bebd77b1';
   $pane = new stdClass();
   $pane->pid = 'new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
   $pane->panel = 'center';
@@ -508,11 +560,11 @@ $.extend($.validator.messages, {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 11;
+  $pane->position = 13;
   $pane->locks = array();
   $pane->uuid = 'ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
   $display->content['new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f'] = $pane;
-  $display->panels['center'][11] = 'new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
+  $display->panels['center'][13] = 'new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
   $pane = new stdClass();
   $pane->pid = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
   $pane->panel = 'center';
@@ -530,11 +582,11 @@ $.extend($.validator.messages, {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 12;
+  $pane->position = 14;
   $pane->locks = array();
   $pane->uuid = 'b337a832-59be-437f-a00b-c5c6636a85e3';
   $display->content['new-b337a832-59be-437f-a00b-c5c6636a85e3'] = $pane;
-  $display->panels['center'][12] = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
+  $display->panels['center'][14] = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
   $pane = new stdClass();
   $pane->pid = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
   $pane->panel = 'center';
@@ -560,11 +612,11 @@ $.extend($.validator.messages, {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 13;
+  $pane->position = 15;
   $pane->locks = array();
   $pane->uuid = '2bcc488a-ca6b-443a-ba17-88d14181e34a';
   $display->content['new-2bcc488a-ca6b-443a-ba17-88d14181e34a'] = $pane;
-  $display->panels['center'][13] = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
+  $display->panels['center'][15] = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
   $pane = new stdClass();
   $pane->pid = 'new-b1cff760-1538-4a59-b4db-5ecfb0085e6c';
   $pane->panel = 'center';
@@ -586,11 +638,11 @@ $.extend($.validator.messages, {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 14;
+  $pane->position = 16;
   $pane->locks = array();
   $pane->uuid = 'b1cff760-1538-4a59-b4db-5ecfb0085e6c';
   $display->content['new-b1cff760-1538-4a59-b4db-5ecfb0085e6c'] = $pane;
-  $display->panels['center'][14] = 'new-b1cff760-1538-4a59-b4db-5ecfb0085e6c';
+  $display->panels['center'][16] = 'new-b1cff760-1538-4a59-b4db-5ecfb0085e6c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
