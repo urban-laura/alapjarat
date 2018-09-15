@@ -49,6 +49,9 @@ function alapjarat_features_metatag_export_default() {
       'title' => array(
         'value' => '[node:field_title2] | [site:name]',
       ),
+      'description' => array(
+        'value' => '[node:field_meta_description]',
+      ),
     ),
   );
 

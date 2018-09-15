@@ -2035,6 +2035,114 @@ $.extend($.validator.messages, {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'term_view__panel_context_4a2a8b7c-b55f-4530-9a69-7c59554c9b39';
+  $handler->task = 'term_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 4;
+  $handler->conf = array(
+    'title' => 'Glossary',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => '',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'term_vocabulary',
+          'settings' => array(
+            'machine_name' => array(
+              'glossary' => 'glossary',
+            ),
+          ),
+          'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'c84b93d6-13ca-412d-b548-4840669107f0';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'term_view__panel_context_4a2a8b7c-b55f-4530-9a69-7c59554c9b39';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-3947e4d0-3308-497e-9ba8-ef7f153590f3';
+  $pane->panel = 'center';
+  $pane->type = 'term_name';
+  $pane->subtype = 'term_name';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'link' => 0,
+    'markup' => 'h1',
+    'id' => '',
+    'class' => '',
+    'context' => 'argument_term_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '3947e4d0-3308-497e-9ba8-ef7f153590f3';
+  $display->content['new-3947e4d0-3308-497e-9ba8-ef7f153590f3'] = $pane;
+  $display->panels['center'][0] = 'new-3947e4d0-3308-497e-9ba8-ef7f153590f3';
+  $pane = new stdClass();
+  $pane->pid = 'new-0822fdbb-7f10-472f-a09f-b949fe640ba3';
+  $pane->panel = 'center';
+  $pane->type = 'term_description';
+  $pane->subtype = 'term_description';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_term_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '0822fdbb-7f10-472f-a09f-b949fe640ba3';
+  $display->content['new-0822fdbb-7f10-472f-a09f-b949fe640ba3'] = $pane;
+  $display->panels['center'][1] = 'new-0822fdbb-7f10-472f-a09f-b949fe640ba3';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['term_view__panel_context_4a2a8b7c-b55f-4530-9a69-7c59554c9b39'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'term_view__panel_context_4d7dd930-5942-4877-8d5c-75b8813db990';
   $handler->task = 'term_view';
   $handler->subtask = '';

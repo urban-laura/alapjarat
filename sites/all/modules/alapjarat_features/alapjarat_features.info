@@ -152,6 +152,7 @@ features[page_manager_handlers][] = node_view__panel_context_975d7ab9-65cc-4102-
 features[page_manager_handlers][] = site_template__panel_context_d3b53892-900b-480a-b3e8-992a3d69013b
 features[page_manager_handlers][] = term_view__panel_context_0252e099-98a4-466e-8d7e-d7b18f3fd1d5
 features[page_manager_handlers][] = term_view__panel_context_45f85b32-52a3-428f-8837-e0697d77f9e5
+features[page_manager_handlers][] = term_view__panel_context_4a2a8b7c-b55f-4530-9a69-7c59554c9b39
 features[page_manager_handlers][] = term_view__panel_context_4d7dd930-5942-4877-8d5c-75b8813db990
 features[page_manager_handlers][] = term_view__panel_context_b7de97a1-6e49-4500-81c1-315983bc3fa9
 features[page_manager_pages][] = archive

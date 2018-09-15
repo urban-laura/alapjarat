@@ -787,6 +787,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
 
     $key = '';
     $thumbnail = '';
+    $meta_desc = '';
     $glossary_parser = TRUE;
     foreach ($val->postmeta as $postmeta) {
       foreach ($postmeta as $item) {
@@ -840,7 +841,6 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     if ($meta) {
       if (isset($meta['aioseop_opengraph_settings_image'])) {
         $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
-        //$node['main_image'] = 'http://www.kerekerdokert.hu/css/kerttervezes_u.png';
       } else {
         $node['main_image'] = $attachments[$thumbnail];
       }
