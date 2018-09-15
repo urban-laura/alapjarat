@@ -52,6 +52,9 @@ function alapjarat_features_metatag_export_default() {
       'description' => array(
         'value' => '[node:field_meta_description]',
       ),
+      'image_src' => array(
+        'value' => '[node:field_image]',
+      ),
     ),
   );
 
