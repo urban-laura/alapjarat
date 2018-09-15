@@ -946,7 +946,7 @@ function migrate_wp_find_glossary($text, $node = null) {
     foreach ($terms as $term) {
       $pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
       $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
-      $replace = '<a href="' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
+      $replace = '<a href="/' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
       $text = preg_replace($pattern , $replace,  $text);
     }
   }
