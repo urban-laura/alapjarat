@@ -122,6 +122,7 @@ function alapjarat_common_most_popular_terms() {
 
 	$results = $query->execute();
 
+	$items = [];
 	foreach ($results as $row) {
 		$term = taxonomy_term_load($row->field_tagsa_tid);
 		$items[] = l('#' . $term->name, drupal_get_path_alias('taxonomy/term/' . $term->tid));

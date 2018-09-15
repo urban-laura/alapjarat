@@ -10,6 +10,118 @@
 function alapjarat_features_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_collection_item-field_test_options-field_test_grade'.
+  $field_instances['field_collection_item-field_test_options-field_test_grade'] = array(
+    'bundle' => 'field_test_options',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_test_grade',
+    'label' => 'Test grade',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_test_options-field_test_option'.
+  $field_instances['field_collection_item-field_test_options-field_test_option'] = array(
+    'bundle' => 'field_test_options',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_test_option',
+    'label' => 'Test option',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-a_article-field_gallery'.
   $field_instances['node-a_article-field_gallery'] = array(
     'bundle' => 'a_article',
@@ -125,6 +237,50 @@ function alapjarat_features_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_glossary_parser'.
+  $field_instances['node-a_article-field_glossary_parser'] = array(
+    'bundle' => 'a_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Use glossary function on article.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_glossary_parser',
+    'label' => 'Glossary parser',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 24,
     ),
   );
 
@@ -354,7 +510,7 @@ function alapjarat_features_field_default_field_instances() {
     'bundle' => 'a_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Ha ezt megváltoztatja, változik az URL is!',
+    'description' => 'Ha ezt megváltoztatod, változik az URL is!',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -701,6 +857,378 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-a_article-field_test_features_contra'.
+  $field_instances['node-a_article-field_test_features_contra'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_test_features_contra',
+    'label' => 'Test features contra',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_test_features_pro'.
+  $field_instances['node-a_article-field_test_features_pro'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_test_features_pro',
+    'label' => 'Test features pro',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_test_image'.
+  $field_instances['node-a_article-field_test_image'] = array(
+    'bundle' => 'a_article',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_test_image',
+    'label' => 'Test image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'imce' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_alapjarat' => 0,
+          'image_article3' => 0,
+          'image_big' => 0,
+          'image_category' => 0,
+          'image_helpful_small' => 0,
+          'image_impresszum' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
+          'image_large' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
+          'image_right' => 0,
+          'image_thumbnail' => 0,
+          'image_world_small' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_test_name'.
+  $field_instances['node-a_article-field_test_name'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_test_name',
+    'label' => 'Test name',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_test_options'.
+  $field_instances['node-a_article-field_test_options'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_test_options',
+    'label' => 'Test options',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 21,
+    ),
+  );
+
   // Exported field_instance: 'node-a_article-field_text'.
   $field_instances['node-a_article-field_text'] = array(
     'bundle' => 'a_article',
@@ -781,7 +1309,7 @@ function alapjarat_features_field_default_field_instances() {
     'bundle' => 'a_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Ha ezt megváltoztatja, változik az URL is!',
+    'description' => 'Ha ezt megváltoztatod, változik az URL is!',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -894,7 +1422,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 31,
+      'weight' => 17,
     ),
   );
 
@@ -2043,7 +2571,8 @@ function alapjarat_features_field_default_field_instances() {
   t('External co-worker?');
   t('Fix or Random?');
   t('Gallery');
-  t('Ha ezt megváltoztatja, változik az URL is!');
+  t('Glossary parser');
+  t('Ha ezt megváltoztatod, változik az URL is!');
   t('Hiden select');
   t('Images');
   t('Location');
@@ -2059,9 +2588,17 @@ function alapjarat_features_field_default_field_instances() {
   t('Status');
   t('Subtitled');
   t('Tags');
+  t('Test features contra');
+  t('Test features pro');
+  t('Test grade');
+  t('Test image');
+  t('Test name');
+  t('Test option');
+  t('Test options');
   t('Text');
   t('Title');
   t('Title (70)');
+  t('Use glossary function on article.');
   t('wp post id');
 
   return $field_instances;

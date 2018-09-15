@@ -181,9 +181,8 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
     $terms = [];
     $counter = 0;
     foreach ($sources as $source) {
-      //$import = xml2node($source, array(28762,7853,30653,29325));
-      //$import = xml2node($source, array(29509));
       $import = xml2node($source, $form_state['values']['amount'], $counter);
+      //$import = xml2node($source, $form_state['values']['amount'], $counter, array(31093));
       $nodes = array_merge($nodes, $import['articles']);
       $terms = array_merge($terms, $import['glossary']);
 
@@ -197,32 +196,32 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
      
 
 
-    // Batch for terms
-    $batch = array(
-      'title' => t('Importing WP Content ...'),
-      'operations' => array(),
-      'init_message' => t('Importing'),
-      'progress_message' => t('Processed @current out of @total.'),
-      'error_message' => t('An error occurred during processing'),
-      'finished' => 'migrate_wp_batch_finished',
-      'progressive' => FALSE,
-    );
+  // Batch for terms
+  $batch = array(
+    'title' => t('Importing WP Content ...'),
+    'operations' => array(),
+    'init_message' => t('Importing'),
+    'progress_message' => t('Processed @current out of @total.'),
+    'error_message' => t('An error occurred during processing'),
+    'finished' => 'migrate_wp_batch_finished',
+    'progressive' => FALSE,
+  );
 
-    if ($form_state['values']['migrate_terms'] == 1) {
-      foreach ($terms as $term) {
-        $batch['operations'][] = array('migrate_wp_batch_worker', array($term, 'term')); 
-      }	
-    }
+  if ($form_state['values']['migrate_terms'] == 1) {
+    foreach ($terms as $term) {
+      $batch['operations'][] = array('migrate_wp_batch_worker', array($term, 'term')); 
+    }	
+  }
 
-    if ($form_state['values']['migrate_posts'] == 1) {
-		  foreach ($nodes as $new_node) {
-		    $batch['operations'][] = array('migrate_wp_batch_worker', array($new_node, 'article', $refactor_categories)); 
-		  }
-    }
+  if ($form_state['values']['migrate_posts'] == 1) {
+	  foreach ($nodes as $new_node) {
+	    $batch['operations'][] = array('migrate_wp_batch_worker', array($new_node, 'article', $refactor_categories)); 
+	  }
+  }
 
-		batch_set($batch);
+	batch_set($batch);
 
-		batch_process();
+	batch_process();
 	
  
 }
@@ -255,6 +254,8 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
     $node->field_subtitled[LANGUAGE_NONE][0]['value'] = $node_i['subtitle'];
     $node->field_subtitled[LANGUAGE_NONE][0]['format'] = 'text';
 
+    $node->field_wp_post_id[LANGUAGE_NONE][0]['value'] = (int)$node_i['post_id'];
+
     $node->created = strtotime($node_i['post_date']);
 
 	  $node->field_title2[LANGUAGE_NONE][0]['value'] = $node_i['title'];
@@ -263,10 +264,11 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 	  $node->language = LANGUAGE_NONE;
 
     if ($node_i['glossary_parser']) {
-      $article_text = migrate_wp_find_glossary($node_i['content']);
-    } else {
-      $article_text = $node_i['content'];
-    }
+      $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] = 1;
+    } 
+
+    $article_text = migrate_wp_embed_fb_videos($node_i['content']);
+    $article_text = migrate_wp_remove_gallery_code($article_text);
 
 	  $node->field_text[LANGUAGE_NONE][0]['value'] = $article_text;
     $node->field_text[LANGUAGE_NONE][0]['format'] = 'fullhtml';
@@ -312,7 +314,7 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 	  }
 
     if (!empty($node_i['gallery'])) {
-
+      $images = [];
       foreach ($node_i['gallery'] as $image) {
         $file = migrate_wp_file_get_managed($image);
         $images[] = array(
@@ -357,6 +359,18 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
     if (isset($node_i['test'])) {
       $node->field_test_name[LANGUAGE_NONE][0]['value'] = $node_i['test']['name'];
       $pros = unserialize($node_i['test']['pros']);
+
+      $file = migrate_wp_file_get_managed($node_i['test']['image']);
+      $image = array(
+        'fid' => $file->fid,
+        'filename' => $file->filename,
+        'filemime' => $file->filemime,
+        'uid' => 1,
+        'uri' => $file->uri,
+        'status' => 1,
+        'display' => 1,
+      );
+      $node->field_test_image[LANGUAGE_NONE][0] = $image;
       
       $c = 0;
       foreach ($pros as $pro) {
@@ -380,8 +394,8 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
       foreach ($options as $option) {
         $my_collection = entity_create('field_collection_item', array('field_name' => 'field_test_options'));
         $my_collection->setHostEntity('node', $node);
-        $my_collection->field_option[LANGUAGE_NONE][0]['value'] = $option['name'];
-        $my_collection->field_grade[LANGUAGE_NONE][0]['value'] = $option['value'];
+        $my_collection->field_test_option[LANGUAGE_NONE][0]['value'] = $option['name'];
+        $my_collection->field_test_option_grade[LANGUAGE_NONE][0]['value'] = $option['value'];
         $my_collection->save();
 
       }
@@ -389,7 +403,7 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
       node_save($node); 
 
     }
-
+    
 	  
 
     $path = array('source' => "node/$node->nid", 'alias' => $alias);
@@ -402,6 +416,33 @@ function migrate_wp_batch_worker($node_i, $type, $refactor_categories, &$context
 	  	'guid' => $node_i['guid'],
 	  ))
 	  ->execute();
+
+    if (!empty($node_i['comments'])) {
+      foreach ($node_i['comments'] as $item) {
+        $comment = new stdClass();
+        $comment->nid = $node->nid;
+        $comment->cid = 0;
+        $comment->pid = 0;
+        $comment->uid = 0;
+        $comment->mail = $item['mail'];
+        $comment->name = $item['name'];
+        $comment->hostname = $item['hostname'];
+        $comment->created = $item['created'];
+        $comment->date = $item['created'];
+        $comment->changed = $item['created'];
+        $comment->is_anonymous = 0;
+        $comment->homepage = '';
+        $comment->status = COMMENT_PUBLISHED;
+        $comment->language = LANGUAGE_NONE;
+        $comment->comment_body[$comment->language][0]['value'] = $item['body'];
+        $comment->comment_body[$comment->language][0]['format'] = 'filtered_html'; 
+        comment_submit($comment);
+        $comment->created = $item['created'];
+        $comment->date = $item['created'];
+        $comment->changed = $item['created'];
+        comment_save($comment);
+      }
+    }
 
     $context['results']['processed']++;
     $context['message'] = $new_node['title'] . ' saved.';
@@ -463,6 +504,13 @@ function migrate_wp_check($guid) {
 function migrate_wp_batch_worker_delete($nid, &$context) {
 
 
+    $node = node_load($nid);
+    $fc_items = field_get_items('node', $node, 'field_test_options');
+   
+    foreach ($fc_items as $fc_item) {
+      entity_delete_multiple('field_collection_item', array($fc_item['value']));
+    }
+   
     
 
     node_delete($nid);
@@ -470,6 +518,8 @@ function migrate_wp_batch_worker_delete($nid, &$context) {
     db_delete('migrate_wp')
   	->condition('nid', $nid)
   	->execute(); 
+
+
   	
 
     $context['results']['processed']++;
@@ -545,7 +595,7 @@ function migrate_wp_curl_get_contents($url, $post = NULL) {
 
   if($status['http_code'] == 200)
     {
-          //dpm("ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)."<br/><br/>Last data got<br/>:$data");
+          
 
         return $data;
     }
@@ -571,7 +621,7 @@ function migrate_wp_curl_get_contents($url, $post = NULL) {
             }
         }
     }
-    //dpm("ERRORCODE22 with $url!!<br/>Last status codes<b/>:".json_encode($status)."<br/><br/>Last data got<br/>:$data");
+   
     return;
   
   
@@ -617,6 +667,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
   $data = str_replace('wp:post_id', 'post_id', $data);
   $data = str_replace('wp:post_date', 'post_date', $data);
   $data = str_replace('wp:postmeta', 'postmeta', $data);
+  $data = str_replace('wp:comment', 'comment', $data);
   $data = str_replace('wp:meta_key', 'meta_key', $data);
   $data = str_replace('wp:meta_value', 'meta_value', $data);
   $data = str_replace('wp:post_type', 'post_type', $data);
@@ -702,6 +753,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     preg_match_all($pattern, ((string)$val->content), $gallery);
 
     if (!empty($gallery[1])) {
+      $images = [];
       $gal_images = explode(',', $gallery[1][0]);
       foreach ($gal_images as $img_id) {
         $images[] = $attachments[$img_id];
@@ -734,6 +786,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
 
 
     $key = '';
+    $thumbnail = '';
     $glossary_parser = TRUE;
     foreach ($val->postmeta as $postmeta) {
       foreach ($postmeta as $item) {
@@ -745,8 +798,11 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
            
             $meta = _mb_unserialize($value);
             if ($meta == null) {
-              dpm($value);
+
             }
+          }
+          if ($key == '_thumbnail_id') {
+            $thumbnail = $value;
           }
           if ($key == '_glossary_disable_for_page') {
             if ($value == 1) {
@@ -758,7 +814,6 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
             $prod_review['name'] = $value;
           }
           if ($key == 'cwp_rev_product_image') {
-            $extra_image = $value;
             $prod_review['image'] = $value;
           }
           if ($key == 'wppr_rating') {
@@ -787,14 +842,27 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
         $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
         //$node['main_image'] = 'http://www.kerekerdokert.hu/css/kerttervezes_u.png';
       } else {
-        if (isset($extra_image)) {
-          $node['main_image'] = $extra_image;
-        }
+        $node['main_image'] = $attachments[$thumbnail];
       }
 
       if (isset($meta['aioseop_opengraph_settings_desc'])) {
         $node['meta_desc'] = $meta['aioseop_opengraph_settings_desc'];
       }
+    }
+
+    $node['comments'] = array();
+    foreach ($val->comment as $comment) {
+      foreach ($comment as $item) {
+          $nrow[] = (string)$item;
+      }
+
+      $node['comments'][] = array(
+        'mail' => $nrow[2],
+        'name' => $nrow[1],
+        'hostname'=>$nrow[4],
+        'created' => strtotime($nrow[5]),
+        'body' => $nrow[7],
+      );
     }
 
     if (isset($prod_review)) {
@@ -860,22 +928,36 @@ function migrate_wp_export_users() {
   }
 }
 
-function migrate_wp_find_glossary($text) {
-  $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
-  $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
+function migrate_wp_find_glossary($text, $node = null) {
+  
+  if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
+    $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
 
-  foreach ($terms as $term) {
-    $search = "/\b(" . str_replace('/', "\/", $term->name) . ")\b/iu";
-    $replace = '<a href="/taxonomy/term/' . $term->tid . '" title="' . $term->description . '" class="glossary">$1</a>';
-    $text = preg_replace($search , $replace,  $text);
-
+    foreach ($terms as $term) {
+      $pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
+      //$search = "/\b(" . str_replace('/', "\/", $term->name) . ")\b/iu";
+      $replace = '<a href="/taxonomy/term/' . $term->tid . '" title="' . $term->description . '" class="glossary">$1</a>';
+      $text = preg_replace($pattern , $replace,  $text);
+    }
   }
 
+  return $text;
+}
 
-  
-  
-  
+function migrate_wp_remove_gallery_code($text) {
 
+  $pattern = '/\[gallery.*?ids="(.*?)"\]/iu';
+  $replace = '';
+  $text = preg_replace($pattern , $replace,  $text);
+
+  return $text;
+}
+
+function migrate_wp_embed_fb_videos($text) {
+  $search = "/https:\/\/www.facebook.com\/alapjarat\/videos\/(.*?)\//iu";
+  $replace = "<iframe src=\"https://www.facebook.com/plugins/post.php?href=https://www.facebook.com/alapjarat/videos/$1&width=500&height=889&show_text=true&appId\" width=\"500\" height=\"889\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
+  $text = preg_replace($search , $replace,  $text);
 
   return $text;
 }
@@ -1007,7 +1089,7 @@ function migrate_wp_tests() {
   $c = 0;
   foreach ($bigdata as $row) {
     $items = explode(';', $row);
-    //dpm($items[2]);
+
 
     $query = db_select('node', 'n')
     ->fields('n', array('title'))

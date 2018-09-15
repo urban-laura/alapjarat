@@ -70,7 +70,11 @@ HTML comment.
 	      	print('<h2>');
 	    }
 
-	    	print render($item); 
+	    if ($element['#field_name'] == 'field_text') {
+	    	$item = migrate_wp_find_glossary(render($item), $element['#object']);
+	    }
+
+	    print render($item); 
 
 	    if ($element['#field_name'] == 'field_subtitled') {
 	      	print('</h2>');
@@ -79,6 +83,7 @@ HTML comment.
 	    if ($element['#field_name'] == 'field_title2') {
 	        print('</h1>');
      	}
+
 
       	?></div>
 

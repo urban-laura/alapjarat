@@ -258,7 +258,10 @@ function alapjarat_features_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'youtube',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
@@ -286,7 +289,10 @@ function alapjarat_features_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'fb-like-share',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 6;
   $pane->locks = array();
@@ -312,7 +318,10 @@ function alapjarat_features_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'fb-save',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 7;
   $pane->locks = array();
