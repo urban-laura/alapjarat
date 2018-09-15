@@ -77,17 +77,25 @@ function migrate_wp_form($form, &$form_state) {
   $form['migrate_terms'] = array(
     '#type' => 'checkbox',
     '#title' => 'terms',
+    '#default_value' => 1,
   );
 
   $form['migrate_users'] = array(
     '#type' => 'checkbox',
     '#title' => 'users',
+    '#default_value' => 1,
   );
 
   $form['migrate_posts'] = array(
     '#type' => 'checkbox',
     '#title' => 'articles',
-    '#default_value' => (isset($form_state['values']['migrate_posts'])) ? $form_state['values']['migrate_posts'] : 0,
+    '#default_value' => 1,
+  );
+
+  $form['post_ids'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Post IDs',
+    '#default_value' => '30880,31844',
   );
 
   $form['amount'] = array(
@@ -179,10 +187,14 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
   if ($form_state['values']['source_all'] == 1) {
     $nodes = [];
     $terms = [];
+    $post_ids = [];
     $counter = 0;
+    if (isset($form_state['values']['post_ids'])) {
+      $post_ids = explode(',', $form_state['values']['post_ids']);
+    }
     foreach ($sources as $source) {
       $import = xml2node($source, $form_state['values']['amount'], $counter);
-      //$import = xml2node($source, $form_state['values']['amount'], $counter, array(31093));
+      $import = xml2node($source, $form_state['values']['amount'], $counter, $post_ids);
       $nodes = array_merge($nodes, $import['articles']);
       $terms = array_merge($terms, $import['glossary']);
 
@@ -789,6 +801,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     $thumbnail = '';
     $meta_desc = '';
     $glossary_parser = TRUE;
+    $prod_review = [];
     foreach ($val->postmeta as $postmeta) {
       foreach ($postmeta as $item) {
         if ($key == '') {
@@ -811,7 +824,6 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
             }
           }
           if ($key == 'cwp_rev_product_name') {
-            $prod_review = [];
             $prod_review['name'] = $value;
           }
           if ($key == 'cwp_rev_product_image') {
@@ -836,15 +848,13 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     }
 
     $node['glossary_parser'] = $glossary_parser;
-
+    $node['main_image'] = $attachments[$thumbnail];
 
     if ($meta) {
       if (isset($meta['aioseop_opengraph_settings_image'])) {
-        $node['main_image'] = $meta['aioseop_opengraph_settings_image'];
-      } else {
-        $node['main_image'] = $attachments[$thumbnail];
-      }
-
+        $node['meta_image'] = $meta['aioseop_opengraph_settings_image'];
+      } 
+      
       if (isset($meta['aioseop_opengraph_settings_desc'])) {
         $node['meta_desc'] = $meta['aioseop_opengraph_settings_desc'];
       }
@@ -865,7 +875,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
       );
     }
 
-    if (isset($prod_review)) {
+    if (!empty($prod_review)) {
       $node['test'] = $prod_review;
     }
 
@@ -883,7 +893,6 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     $node['content'] = preg_replace('/\[caption.*?\](<img.*?>)(.*?)\[\/caption\]/', '$1<br><figcaption>$2</figcaption><br>', $node['content']);
 
     $nodes[] = $node;
-
   }
 
   return array(
@@ -936,8 +945,8 @@ function migrate_wp_find_glossary($text, $node = null) {
 
     foreach ($terms as $term) {
       $pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
-      //$search = "/\b(" . str_replace('/', "\/", $term->name) . ")\b/iu";
-      $replace = '<a href="/taxonomy/term/' . $term->tid . '" title="' . $term->description . '" class="glossary">$1</a>';
+      $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
+      $replace = '<a href="' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
       $text = preg_replace($pattern , $replace,  $text);
     }
   }
