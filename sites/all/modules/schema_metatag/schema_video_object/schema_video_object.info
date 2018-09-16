@@ -1,0 +1,14 @@
+name = "Schema.org: Video Object"
+description = "Adds Schema.org/VideoObject to the JSON LD array."
+package = SEO
+core = 7.x
+dependencies[] = schema_metatag
+
+files[] = src/SchemaVideoObjectType.php
+files[] = tests/SchemaMetatagVideoObjectTest.test
+
+; Information added by Drupal.org packaging script on 2018-05-26
+version = "7.x-1.2"
+core = "7.x"
+project = "schema_metatag"
+datestamp = "1527342188"

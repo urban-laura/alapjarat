@@ -1,0 +1,14 @@
+name = "Schema.org: Person"
+description = "Adds Schema.org/Person to the JSON LD array. Creates Person."
+package = SEO
+core = 7.x
+dependencies[] = schema_metatag:schema_metatag
+
+files[] = src/SchemaPersonType.php
+files[] = tests/SchemaMetatagPersonTest.test
+
+; Information added by Drupal.org packaging script on 2018-05-26
+version = "7.x-1.2"
+core = "7.x"
+project = "schema_metatag"
+datestamp = "1527342188"

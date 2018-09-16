@@ -1,0 +1,11 @@
+name = "Schema.org Metatag Example"
+description = "Example of how to add more fields to Schema.org."
+package = SEO
+core = 7.x
+dependencies[] = schema_metatag
+
+; Information added by Drupal.org packaging script on 2018-05-26
+version = "7.x-1.2"
+core = "7.x"
+project = "schema_metatag"
+datestamp = "1527342188"
