@@ -95,7 +95,6 @@ function migrate_wp_form($form, &$form_state) {
   $form['post_ids'] = array(
     '#type' => 'textfield',
     '#title' => 'Post IDs',
-    '#default_value' => '30880,31844',
   );
 
   $form['amount'] = array(
@@ -189,7 +188,7 @@ function migrate_wp_form_migrate_submit($form, &$form_state) {
     $terms = [];
     $post_ids = [];
     $counter = 0;
-    if (isset($form_state['values']['post_ids'])) {
+    if (!empty($form_state['values']['post_ids'])) {
       $post_ids = explode(',', $form_state['values']['post_ids']);
     }
     foreach ($sources as $source) {
