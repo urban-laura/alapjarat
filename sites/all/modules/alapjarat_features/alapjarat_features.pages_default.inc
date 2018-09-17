@@ -1644,7 +1644,7 @@ $.extend($.validator.messages, {
   $pane->panel = 'search';
   $pane->type = 'block';
   $pane->subtype = 'views--exp-search_page-page';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'inherit_path' => 0,
@@ -1666,6 +1666,30 @@ $.extend($.validator.messages, {
   $pane->uuid = 'e5212a53-93b2-48f3-ba23-3334fc843c59';
   $display->content['new-e5212a53-93b2-48f3-ba23-3334fc843c59'] = $pane;
   $display->panels['search'][0] = 'new-e5212a53-93b2-48f3-ba23-3334fc843c59';
+  $pane = new stdClass();
+  $pane->pid = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
+  $pane->panel = 'search';
+  $pane->type = 'block';
+  $pane->subtype = 'views--exp-search_api_search-page';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'inherit_path' => 0,
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '86e8d848-d560-4aef-9090-0595b1b02f9f';
+  $display->content['new-86e8d848-d560-4aef-9090-0595b1b02f9f'] = $pane;
+  $display->panels['search'][1] = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
   $pane = new stdClass();
   $pane->pid = 'new-ae65dd0a-44cc-4a48-9889-283725898c83';
   $pane->panel = 'second_menu';

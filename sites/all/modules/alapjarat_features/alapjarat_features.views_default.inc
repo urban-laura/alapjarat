@@ -130,7 +130,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'admin:page_2';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -191,7 +191,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -251,7 +251,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['nid_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -306,7 +306,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -373,7 +373,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -470,7 +470,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -503,7 +503,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'pages' => 'pages',
   );
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -632,7 +632,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_location0']['field'] = 'field_location0';
   $handler->display->display_options['fields']['field_location0']['label'] = 'Elhelyezkedés';
   $handler->display->display_options['fields']['field_location0']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -690,7 +690,7 @@ function alapjarat_features_views_default_views() {
     0 => '95',
   );
   $handler->display->display_options['filters']['field_fix_or_random__tid']['vocabulary'] = 'fix_random';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1053,7 +1053,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1183,7 +1183,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -1230,7 +1230,7 @@ function alapjarat_features_views_default_views() {
     0 => '94',
   );
   $handler->display->display_options['filters']['field_fix_or_random__tid']['vocabulary'] = 'fix_random';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1370,7 +1370,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -1417,7 +1417,7 @@ function alapjarat_features_views_default_views() {
     0 => '94',
   );
   $handler->display->display_options['filters']['field_fix_or_random__tid']['vocabulary'] = 'fix_random';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1557,7 +1557,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -1604,7 +1604,7 @@ function alapjarat_features_views_default_views() {
     0 => '94',
   );
   $handler->display->display_options['filters']['field_fix_or_random__tid']['vocabulary'] = 'fix_random';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1744,7 +1744,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -1791,7 +1791,7 @@ function alapjarat_features_views_default_views() {
     0 => '94',
   );
   $handler->display->display_options['filters']['field_fix_or_random__tid']['vocabulary'] = 'fix_random';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1931,7 +1931,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Nyilvános */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
   $handler->display->display_options['fields']['status']['field'] = 'status';
@@ -1978,7 +1978,7 @@ function alapjarat_features_views_default_views() {
     0 => '94',
   );
   $handler->display->display_options['filters']['field_fix_or_random__tid']['vocabulary'] = 'fix_random';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2170,7 +2170,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['created_year_month']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2312,7 +2312,7 @@ function alapjarat_features_views_default_views() {
     'menu' => 0,
   );
   $handler->display->display_options['arguments']['similar_nid']['include_args'] = 0;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2387,7 +2387,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['field_number_value']['id'] = 'field_number_value';
   $handler->display->display_options['sorts']['field_number_value']['table'] = 'field_data_field_number';
   $handler->display->display_options['sorts']['field_number_value']['field'] = 'field_number_value';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2432,7 +2432,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2491,7 +2491,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2544,7 +2544,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2603,7 +2603,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2656,7 +2656,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2715,7 +2715,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2768,7 +2768,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2827,7 +2827,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2880,7 +2880,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2939,7 +2939,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3147,7 +3147,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['arguments']['field_tags_tid_1']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_tags_tid_1']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_tags_tid_1']['break_phrase'] = TRUE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3575,7 +3575,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['field_published_date_value']['id'] = 'field_published_date_value';
   $handler->display->display_options['sorts']['field_published_date_value']['table'] = 'field_data_field_published_date';
   $handler->display->display_options['sorts']['field_published_date_value']['field'] = 'field_published_date_value';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3707,7 +3707,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3864,7 +3864,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -3947,7 +3947,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4033,7 +4033,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4111,7 +4111,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4196,7 +4196,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4281,7 +4281,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4426,7 +4426,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4457,7 +4457,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Test';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4481,7 +4481,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Tech';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4505,7 +4505,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Big World';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4529,7 +4529,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Race';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4553,7 +4553,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Media';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4577,7 +4577,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Communal';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4610,7 +4610,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Premium';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4796,7 +4796,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4914,7 +4914,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'admin:page_5';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -4982,7 +4982,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -5069,7 +5069,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -5148,7 +5148,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_descriptionp']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -5198,6 +5198,125 @@ function alapjarat_features_views_default_views() {
     t('<h3>Prémium szabadidős partnerek</h3>'),
   );
   $export['menu'] = $view;
+
+  $view = new view();
+  $view->name = 'search_api_search';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'search_api_index_article_index';
+  $view->human_name = 'Search Api search';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Search';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Indexed Node: Title (70) */
+  $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
+  $handler->display->display_options['fields']['field_title2']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
+  $handler->display->display_options['fields']['field_title2']['label'] = '';
+  $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_title2']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_title2']['settings'] = array(
+    'trim_length' => '100',
+  );
+  /* Field: Indexed Node: Published */
+  $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
+  $handler->display->display_options['fields']['field_published']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
+  $handler->display->display_options['fields']['field_published']['label'] = '';
+  $handler->display->display_options['fields']['field_published']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_published']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_published']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_published']['bypass_access'] = 0;
+  /* Field: Indexed Node: Tags */
+  $handler->display->display_options['fields']['field_tagsa']['id'] = 'field_tagsa';
+  $handler->display->display_options['fields']['field_tagsa']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['field_tagsa']['field'] = 'field_tagsa';
+  $handler->display->display_options['fields']['field_tagsa']['label'] = '';
+  $handler->display->display_options['fields']['field_tagsa']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tagsa']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_tagsa']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_tagsa']['bypass_access'] = 0;
+  /* Field: Indexed Node: Date created */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'category',
+    'image_link' => 'content',
+  );
+  /* Field: Indexed Node: Subtitled » Text */
+  $handler->display->display_options['fields']['field_subtitled_value']['id'] = 'field_subtitled_value';
+  $handler->display->display_options['fields']['field_subtitled_value']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['field_subtitled_value']['field'] = 'field_subtitled_value';
+  $handler->display->display_options['fields']['field_subtitled_value']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitled_value']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitled_value']['link_to_entity'] = 0;
+  /* Filter criterion: Search: Fulltext search */
+  $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Fulltext search';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'search_api_views_fulltext';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'kereses';
+  $translatables['search_api_search'] = array(
+    t('Master'),
+    t('Search'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Fulltext search'),
+    t('Page'),
+  );
+  $export['search_api_search'] = $view;
 
   $view = new view();
   $view->name = 'search_page';
@@ -5281,7 +5400,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Nyilvános */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
