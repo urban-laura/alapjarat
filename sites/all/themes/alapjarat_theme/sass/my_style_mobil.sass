@@ -7,7 +7,9 @@
 		font-size: 13px
 
 	.main_content 
-		.front_page_post 
+		.front_page_post
+			.views-field-created
+				font-size: 13px 
 			#actual_A, #tech, #test 
 				.views-row
 					height: 275px
@@ -16,9 +18,11 @@
 					width: 40%
 				.views-field-path h3
 					font-size: 15px
-			#helpful_info_b
+			#helpful_info_a
 				.views-field-field-subtitled
 					font-size: 15px
+			#helpful_info_b
+				padding-left: 15px
 			#helpful_info_a, #actual_A, #tech, #test
 				.views-field-path h3
 					font-size: 18px
@@ -30,3 +34,84 @@
 @media screen and (max-width: 989px)
 	body
 		max-width: 750px
+
+	.second_menu
+		ul.menu li
+			margin: 0 !important
+
+	.letterhead 
+		.logo
+			padding-left: 0
+		.letterhead_banner
+			padding-right: 0
+
+	.main_menu
+		clear: both
+		height: auto
+		#main_menu li.leaf a
+			padding: 11px 13px
+			font-size: 14px
+		.mid-1155
+			margin-left: 43px !important
+		.search
+			margin-top: -38px
+
+	.main_content 
+		.front_page_post
+			#actual_A
+				.views-row
+					height: auto
+				.views-field-path
+					h3
+						font-size: 16px
+			#actual_B
+				.views-row
+					width: 100%
+					height: auto
+					margin-top: 15px
+				.views-field-field-image
+					width: auto
+				.views-field-path, .views-field-field-tags, .views-field-created
+					margin-left: 36%
+
+			#helpful_info_a
+				width: 100%
+				.view-content
+					padding-top: 0
+				.view-header
+					width: 100%
+					margin-top: 20px
+				.views-field-field-image
+					width: 45%
+					float: left
+				.views-field-path, .views-field-created, .views-field-field-subtitled
+					margin-left: 48%
+				.views-field-field-tags
+					margin-left: 3%
+				.views-field-path h3
+					font-size: 16px
+				.views-field-field-subtitled
+					font-size: 14px
+
+			#helpful_info_b
+				width: 100%
+				padding-top: 0
+				.views-row
+					margin-top: 15px
+				.views-field-field-image
+					width: auto
+				.views-field-path, .views-field-field-tags, .views-field-created
+					margin-left: 34%
+
+			#tech, #test
+				.views-row
+					height: 255px
+				.views-field-path h3
+					font-size: 16px
+
+	.right #random_article .views-field-created
+		font-size: 13px
+
+
+
+

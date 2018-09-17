@@ -10,35 +10,163 @@
     font-size: 13px;
   }
 
-  /* line 12, ../sass/my_style_mobil.sass */
+  /* line 11, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post .views-field-created {
+    font-size: 13px;
+  }
+  /* line 14, ../sass/my_style_mobil.sass */
   .main_content .front_page_post #actual_A .views-row, .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
     height: 275px;
   }
-  /* line 15, ../sass/my_style_mobil.sass */
+  /* line 17, ../sass/my_style_mobil.sass */
   .main_content .front_page_post #actual_B .views-field-field-image, .main_content .front_page_post #helpful_info_b .views-field-field-image {
     width: 40%;
   }
-  /* line 17, ../sass/my_style_mobil.sass */
+  /* line 19, ../sass/my_style_mobil.sass */
   .main_content .front_page_post #actual_B .views-field-path h3, .main_content .front_page_post #helpful_info_b .views-field-path h3 {
     font-size: 15px;
   }
-  /* line 20, ../sass/my_style_mobil.sass */
-  .main_content .front_page_post #helpful_info_b .views-field-field-subtitled {
+  /* line 22, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .views-field-field-subtitled {
     font-size: 15px;
   }
-  /* line 23, ../sass/my_style_mobil.sass */
+  /* line 24, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_b {
+    padding-left: 15px;
+  }
+  /* line 27, ../sass/my_style_mobil.sass */
   .main_content .front_page_post #helpful_info_a .views-field-path h3, .main_content .front_page_post #actual_A .views-field-path h3, .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3 {
     font-size: 18px;
   }
 
-  /* line 26, ../sass/my_style_mobil.sass */
+  /* line 30, ../sass/my_style_mobil.sass */
   .right #random_article .views-field-field-image {
     width: 33%;
   }
 }
 @media screen and (max-width: 989px) {
-  /* line 31, ../sass/my_style_mobil.sass */
+  /* line 35, ../sass/my_style_mobil.sass */
   body {
     max-width: 750px;
+  }
+
+  /* line 39, ../sass/my_style_mobil.sass */
+  .second_menu ul.menu li {
+    margin: 0 !important;
+  }
+
+  /* line 43, ../sass/my_style_mobil.sass */
+  .letterhead .logo {
+    padding-left: 0;
+  }
+  /* line 45, ../sass/my_style_mobil.sass */
+  .letterhead .letterhead_banner {
+    padding-right: 0;
+  }
+
+  /* line 48, ../sass/my_style_mobil.sass */
+  .main_menu {
+    clear: both;
+    height: auto;
+  }
+  /* line 51, ../sass/my_style_mobil.sass */
+  .main_menu #main_menu li.leaf a {
+    padding: 11px 13px;
+    font-size: 14px;
+  }
+  /* line 54, ../sass/my_style_mobil.sass */
+  .main_menu .mid-1155 {
+    margin-left: 43px !important;
+  }
+  /* line 56, ../sass/my_style_mobil.sass */
+  .main_menu .search {
+    margin-top: -38px;
+  }
+
+  /* line 62, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #actual_A .views-row {
+    height: auto;
+  }
+  /* line 65, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #actual_A .views-field-path h3 {
+    font-size: 16px;
+  }
+  /* line 68, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #actual_B .views-row {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+  /* line 72, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #actual_B .views-field-field-image {
+    width: auto;
+  }
+  /* line 74, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #actual_B .views-field-path, .main_content .front_page_post #actual_B .views-field-field-tags, .main_content .front_page_post #actual_B .views-field-created {
+    margin-left: 36%;
+  }
+  /* line 77, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a {
+    width: 100%;
+  }
+  /* line 79, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .view-content {
+    padding-top: 0;
+  }
+  /* line 81, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .view-header {
+    width: 100%;
+    margin-top: 20px;
+  }
+  /* line 84, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .views-field-field-image {
+    width: 45%;
+    float: left;
+  }
+  /* line 87, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .views-field-path, .main_content .front_page_post #helpful_info_a .views-field-created, .main_content .front_page_post #helpful_info_a .views-field-field-subtitled {
+    margin-left: 48%;
+  }
+  /* line 89, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .views-field-field-tags {
+    margin-left: 3%;
+  }
+  /* line 91, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .views-field-path h3 {
+    font-size: 16px;
+  }
+  /* line 93, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_a .views-field-field-subtitled {
+    font-size: 14px;
+  }
+  /* line 96, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_b {
+    width: 100%;
+    padding-top: 0;
+  }
+  /* line 99, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_b .views-row {
+    margin-top: 15px;
+  }
+  /* line 101, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_b .views-field-field-image {
+    width: auto;
+  }
+  /* line 103, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #helpful_info_b .views-field-path, .main_content .front_page_post #helpful_info_b .views-field-field-tags, .main_content .front_page_post #helpful_info_b .views-field-created {
+    margin-left: 34%;
+  }
+  /* line 107, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
+    height: 255px;
+  }
+  /* line 109, ../sass/my_style_mobil.sass */
+  .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3 {
+    font-size: 16px;
+  }
+
+  /* line 112, ../sass/my_style_mobil.sass */
+  .right #random_article .views-field-created {
+    font-size: 13px;
   }
 }
