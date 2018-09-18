@@ -663,11 +663,7 @@ function alapjarat_features_field_default_field_instances() {
   // Exported field_instance: 'node-a_article-field_secondary_menu'.
   $field_instances['node-a_article-field_secondary_menu'] = array(
     'bundle' => 'a_article',
-    'default_value' => array(
-      0 => array(
-        'tid' => 109,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(

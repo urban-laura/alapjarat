@@ -52,12 +52,12 @@ function migrate_wp_form($form, &$form_state) {
   global $sources;
 
   $sources = array(
-  	'wp05' => 'wp05',
-  	'wp10'=>'wp10',
-  	'wp15' => 'wp15',
-  	'wp20' => 'wp20',
-  	'wp25' => 'wp25',
-  	'wp30'=>'wp30',
+  	'wp0' => 'wp0',
+  	'wp1' => 'wp1',
+  	'wp2' => 'wp2',
+  	'wp3' => 'wp3',
+  	'wp4' => 'wp4',
+  	//'wp30'=>'wp30',
   	//'wp35' => 'wp35',
   	//'wp40' => 'wp40',
   );
@@ -903,7 +903,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
 function migrate_wp_export_users() {
   global $authors;
 
-  $data = file_get_contents(drupal_get_path('module', 'migrate_wp') . '/source/wp25.xml');
+  $data = file_get_contents(drupal_get_path('module', 'migrate_wp') . '/source/wp0.xml');
   $pattern = '/<wp:author_login>(.*?)<\/wp:author_login>.*?<wp:author_email>(.*?)<\/wp:author_email>.*?<wp:author_first_name><!\[CDATA\[(.*?)\]\]><\/wp:author_first_name>.*?<wp:author_last_name><!\[CDATA\[(.*?)\]\]><\/wp:author_last_name>/ms';
   preg_match_all($pattern, $data, $user_data);
 
