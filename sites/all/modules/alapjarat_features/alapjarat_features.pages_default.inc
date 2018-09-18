@@ -1683,7 +1683,10 @@ $.extend($.validator.messages, {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => 'search',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();

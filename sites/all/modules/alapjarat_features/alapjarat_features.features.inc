@@ -242,7 +242,7 @@ function alapjarat_features_node_info() {
       'help' => '',
     ),
     'event' => array(
-      'name' => t('Event'),
+      'name' => t('Esemény'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -254,15 +254,15 @@ function alapjarat_features_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Name'),
+      'title_label' => t('Név'),
       'help' => '',
     ),
     'pages' => array(
-      'name' => t('Pages'),
+      'name' => t('Oldalak'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Cím'),
       'help' => '',
     ),
     'partners' => array(

@@ -37,6 +37,32 @@ function alapjarat_features_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
+  $pane->pid = 'new-bf02116d-4627-4ee3-8264-aaca1eb77219';
+  $pane->panel = 'center';
+  $pane->type = 'block';
+  $pane->subtype = 'system-main-menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'hamb-main-menu',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'bf02116d-4627-4ee3-8264-aaca1eb77219';
+  $display->content['new-bf02116d-4627-4ee3-8264-aaca1eb77219'] = $pane;
+  $display->panels['center'][0] = 'new-bf02116d-4627-4ee3-8264-aaca1eb77219';
+  $pane = new stdClass();
   $pane->pid = 'new-f39a8e92-64dd-4c96-9c89-9a830dd8fb2b';
   $pane->panel = 'center';
   $pane->type = 'most_popular_terms';
@@ -58,11 +84,11 @@ function alapjarat_features_default_panels_mini() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = 'f39a8e92-64dd-4c96-9c89-9a830dd8fb2b';
   $display->content['new-f39a8e92-64dd-4c96-9c89-9a830dd8fb2b'] = $pane;
-  $display->panels['center'][0] = 'new-f39a8e92-64dd-4c96-9c89-9a830dd8fb2b';
+  $display->panels['center'][1] = 'new-f39a8e92-64dd-4c96-9c89-9a830dd8fb2b';
   $pane = new stdClass();
   $pane->pid = 'new-53eed9d7-1c77-431e-8af0-46fc7d4069e5';
   $pane->panel = 'center';
@@ -80,11 +106,11 @@ function alapjarat_features_default_panels_mini() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '53eed9d7-1c77-431e-8af0-46fc7d4069e5';
   $display->content['new-53eed9d7-1c77-431e-8af0-46fc7d4069e5'] = $pane;
-  $display->panels['center'][1] = 'new-53eed9d7-1c77-431e-8af0-46fc7d4069e5';
+  $display->panels['center'][2] = 'new-53eed9d7-1c77-431e-8af0-46fc7d4069e5';
   $pane = new stdClass();
   $pane->pid = 'new-746b80f3-8644-41a4-b849-7761d8135d04';
   $pane->panel = 'center';
@@ -102,11 +128,11 @@ function alapjarat_features_default_panels_mini() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '746b80f3-8644-41a4-b849-7761d8135d04';
   $display->content['new-746b80f3-8644-41a4-b849-7761d8135d04'] = $pane;
-  $display->panels['center'][2] = 'new-746b80f3-8644-41a4-b849-7761d8135d04';
+  $display->panels['center'][3] = 'new-746b80f3-8644-41a4-b849-7761d8135d04';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
