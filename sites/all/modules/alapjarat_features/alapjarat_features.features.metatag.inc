@@ -55,6 +55,24 @@ function alapjarat_features_metatag_export_default() {
       'image_src' => array(
         'value' => '[node:field_image]',
       ),
+      'og:description' => array(
+        'value' => '[node:field_meta_description]',
+      ),
+      'og:image' => array(
+        'value' => '[node:field_image]',
+      ),
+      'article:tag' => array(
+        'value' => '[node:field_tagsa]',
+      ),
+      'twitter:creator' => array(
+        'value' => '@alapjaratblog',
+      ),
+      'twitter:description' => array(
+        'value' => '[node:field_meta_description]',
+      ),
+      'twitter:image' => array(
+        'value' => '[node:field_image]',
+      ),
     ),
   );
 

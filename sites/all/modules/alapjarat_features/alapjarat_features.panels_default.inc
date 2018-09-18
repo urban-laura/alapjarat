@@ -108,7 +108,7 @@ function alapjarat_features_default_panels_mini() {
   $display->content['new-746b80f3-8644-41a4-b849-7761d8135d04'] = $pane;
   $display->panels['center'][2] = 'new-746b80f3-8644-41a4-b849-7761d8135d04';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-f39a8e92-64dd-4c96-9c89-9a830dd8fb2b';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['hamburger_menu'] = $mini;
 

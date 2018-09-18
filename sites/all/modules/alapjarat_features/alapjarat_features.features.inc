@@ -277,3 +277,151 @@ function alapjarat_features_node_info() {
   drupal_alter('node_info', $items);
   return $items;
 }
+
+/**
+ * Implements hook_default_search_api_index().
+ */
+function alapjarat_features_default_search_api_index() {
+  $items = array();
+  $items['article_index'] = entity_import('search_api_index', '{
+    "name" : "article index",
+    "machine_name" : "article_index",
+    "description" : null,
+    "server" : "mysql",
+    "item_type" : "node",
+    "options" : {
+      "datasource" : { "bundles" : [ "a_article" ] },
+      "index_directly" : 0,
+      "cron_limit" : "200",
+      "fields" : {
+        "field_text:value" : { "type" : "text" },
+        "field_title" : { "type" : "text" },
+        "search_api_language" : { "type" : "string" }
+      },
+      "data_alter_callbacks" : {
+        "search_api_alter_bundle_filter" : {
+          "status" : 0,
+          "weight" : "-10",
+          "settings" : { "default" : "1", "bundles" : [] }
+        },
+        "search_api_metatag_alter_callback" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
+        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_language_control" : {
+          "status" : 0,
+          "weight" : "0",
+          "settings" : { "lang_field" : "", "languages" : [] }
+        },
+        "search_api_alter_node_access" : { "status" : 0, "weight" : "0", "settings" : [] },
+        "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] }
+      },
+      "processors" : {
+        "search_api_case_ignore" : {
+          "status" : 0,
+          "weight" : "0",
+          "settings" : { "fields" : { "field_title" : true, "field_text:value" : true } }
+        },
+        "search_api_html_filter" : {
+          "status" : 0,
+          "weight" : "10",
+          "settings" : {
+            "fields" : { "field_title" : true, "field_text:value" : true },
+            "title" : 0,
+            "alt" : 1,
+            "tags" : "h1 = 5\\r\\nh2 = 3\\r\\nh3 = 2\\r\\nstrong = 2\\r\\nb = 2\\r\\nem = 1.5\\r\\nu = 1.5"
+          }
+        },
+        "search_api_transliteration" : {
+          "status" : 0,
+          "weight" : "15",
+          "settings" : { "fields" : { "field_title" : true, "field_text:value" : true } }
+        },
+        "search_api_tokenizer" : {
+          "status" : 0,
+          "weight" : "20",
+          "settings" : {
+            "fields" : { "field_title" : true, "field_text:value" : true },
+            "spaces" : "[^[:alnum:]]",
+            "ignorable" : "[\\u0027]"
+          }
+        },
+        "search_api_stopwords" : {
+          "status" : 0,
+          "weight" : "30",
+          "settings" : {
+            "fields" : { "field_title" : true, "field_text:value" : true },
+            "file" : "",
+            "stopwords" : "but\\r\\ndid\\r\\nthe this that those\\r\\netc"
+          }
+        },
+        "search_api_porter_stemmer" : {
+          "status" : 0,
+          "weight" : "35",
+          "settings" : {
+            "fields" : { "field_title" : true, "field_text:value" : true },
+            "exceptions" : "texan=texa"
+          }
+        },
+        "search_api_highlighting" : {
+          "status" : 1,
+          "weight" : "40",
+          "settings" : {
+            "prefix" : "\\u003Cstrong\\u003E",
+            "suffix" : "\\u003C\\/strong\\u003E",
+            "excerpt" : 1,
+            "excerpt_length" : "256",
+            "exclude_fields" : [],
+            "highlight" : "always",
+            "highlight_partial" : 0
+          }
+        }
+      }
+    },
+    "enabled" : "1",
+    "read_only" : "0",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
+
+/**
+ * Implements hook_default_search_api_server().
+ */
+function alapjarat_features_default_search_api_server() {
+  $items = array();
+  $items['mysql'] = entity_import('search_api_server', '{
+    "name" : "mysql",
+    "machine_name" : "mysql",
+    "description" : "",
+    "class" : "search_api_db_service",
+    "options" : {
+      "database" : "default:default",
+      "min_chars" : "3",
+      "partial_matches" : 1,
+      "indexes" : { "article_index" : {
+          "field_title" : {
+            "table" : "search_api_db_article_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "search_api_language" : {
+            "table" : "search_api_db_article_index",
+            "column" : "search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "field_text:value" : {
+            "table" : "search_api_db_article_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          }
+        }
+      }
+    },
+    "enabled" : "1",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
