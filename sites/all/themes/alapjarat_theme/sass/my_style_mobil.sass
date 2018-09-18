@@ -48,13 +48,16 @@
 	.main_menu
 		clear: both
 		height: auto
+		position: relative
 		#main_menu li.leaf a
-			padding: 11px 13px
+			padding: 12px 13px
 			font-size: 14px
 		.mid-1155
 			margin-left: 43px !important
 		.search
-			margin-top: -38px
+			bottom: 0px
+			right: 0px
+			position: absolute
 
 	.main_content 
 		.front_page_post
@@ -111,6 +114,136 @@
 
 	.right #random_article .views-field-created
 		font-size: 13px
+
+@media screen and (max-width: 759px)
+	.main_content, .right
+		width: 100%
+		border: 0
+
+	.right 
+		#random_article
+			.views-field-field-image
+				width: auto
+			.views-field-path, .views-field-created
+				margin-left: 132px
+
+	.main_content 
+		.front_page_post
+			#helpful_info_a
+				.views-field-field-tags
+					margin-left: 48%
+					float: none
+			#actual_B
+				.views-field-path, .views-field-field-tags, .views-field-created
+					margin-left: 155px
+			#helpful_info_b
+				.views-field-path, .views-field-field-tags, .views-field-created
+					margin-left: 151px
+
+@media screen and (max-width: 738px)
+	.main_menu
+		#main_menu li.leaf a
+			padding: 12px 11px
+			font-size: 13px
+
+@media screen and (max-width: 678px)
+	.main_menu
+		.mid-1155
+			margin-left: 0px !important
+		.mid-1157
+			margin-left: 43px !important
+		.mid-1181
+			margin-right: 21.5px !important
+
+@media screen and (max-width: 629px)
+	.letterhead
+		height: auto
+		.letterhead_banner
+			width: 0
+			height: 0
+			iframe
+				width: 0px !important
+
+@media screen and (max-width: 568px)
+	.panels-flexible-region.panels-flexible-region-new-center.panels-flexible-region-first.panels-flexible-region-last
+		width: 100%
+	.main_menu
+		.mid-1181
+			margin-right: 0 !important
+		.mid-1157
+			margin-left: 41px !important
+		#main_menu li.leaf a
+			padding: 12px 9px
+			font-size: 12px
+
+	.panels-flexible-region-first.first
+		#most_popular
+			margin-left: 0
+		#most_popular, #category_list
+			width: 30%
+		#first5
+			width: 40%
+			padding-left: 1%
+			.views-row
+				min-height: auto
+			.view-header, .view-content
+				margin-left: 0
+			.views-field-field-image
+				width: 0
+				height: 0
+			.views-field-path
+				width: auto
+				margin-left: 0px
+
+	#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_api_search
+		.views-field-path, .views-field-nid
+			padding-top: 25px
+			h3
+				font-size: 28px
+				a
+					line-height: 32px
+
+@media screen and (max-width: 499px)
+	.second_menu #second_menu
+		font-size: 0
+	.main_menu #main_menu li.leaf a
+		font-size: 0
+		padding: 0
+	.panels-flexible-region-first.first
+		a
+			font-size: 14px !important
+			font-family: montserrat, sans-serif !important
+		#hamb-main-menu
+			width: 100%
+			height: auto
+			visibility: visible
+		#first5 .views-row
+			min-height: auto
+		#most_popular, #category_list, #first5, #hamb-main-menu
+			float: none
+			width: 100%
+			padding-left: 5px
+			padding-right: 5px
+			padding-top: 15px
+			padding-bottom: 0px
+			.item-list ul
+				margin: 0 !important
+
+	.main_content
+		.front_page_post
+			#actual_A
+				.views-row-1, .views-row-2
+					width: 100%
+					padding-bottom: 10px
+			#tech, #test
+				.views-row
+					float: none
+					width: 100%
+					height: auto
+					padding-bottom: 15px
+
+
+
 
 
 

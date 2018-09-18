@@ -145,7 +145,7 @@ a:hover
 	padding-left: 43px
 	padding-bottom: 0
 
-.panels-flexible-row-inside.panels-flexible-row-1-8-inside.panels-flexible-row-inside-first
+.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first
 	background: black
 	xmargin-top: 20px
 	.panels-flexible-region-1-user
@@ -243,7 +243,7 @@ a:hover
 		width: auto
 		height: 40px
 		#search
-			input#edit-search-block-form--2, input#edit-keys
+			input#edit-search-api-views-fulltext, input#edit-keys
 				width: 166px
 				height: 34px
 				margin-top: 3px
@@ -265,13 +265,21 @@ a:hover
 .panels-flexible-region-first.first
 	width: 100%
 	background: #efefef
-	.panels-flexible-region.panels-flexible-region-24-center.panels-flexible-region-first.panels-flexible-region-last
+	.panels-flexible-region.panels-flexible-region-27-center.panels-flexible-region-first.panels-flexible-region-last
 		width: 100%
 	.view-header, #most_popular
 		font-size: 18px
 		p, .pane-title
 			margin-bottom: 5px
 			text-transform: uppercase
+	#hamb-main-menu
+		width: 0
+		height: 0
+		visibility: hidden
+		.item-list ul li, ul li.leaf
+			margin: 0 !important
+			padding: 0
+			list-style: none
 	#most_popular
 		margin-left: 2%
 	#most_popular, #category_list
@@ -322,6 +330,7 @@ a:hover
 	.front_page_post
 		padding: 15px !important
 		padding-top: 20px !important
+		width: 100%
 		h3
 			font-family: open sans,sans-serif 
 			margin: 0
@@ -450,6 +459,8 @@ a:hover
 		clear: both
 		.views-row
 			margin-bottom: 40px
+		iframe
+			width: auto
 	#banner5
 		padding-top: 30px
 	#event
@@ -506,7 +517,7 @@ a:hover
 	p
 		margin: 0px !important
 
-.header, .view-id-search_page
+.header, .view-id-search_api_search
 	h1, .pane-title, .view-header h1, .views-field-name, .view-header p
 		line-height: 1.1
 		padding: 0 !important
@@ -519,7 +530,7 @@ a:hover
 	.view-header
 		margin-top: 20px
 
-#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_page
+#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_api_search
 	padding: 0px 15px !important
 	padding-bottom: 15px !important
 	p
@@ -527,7 +538,7 @@ a:hover
 	.views-row-1
 		border-top: 1px solid #eee
 		margin-top: 20px
-	.views-field-path
+	.views-field-path, .views-field-nid
 		clear: both
 		padding-top: 30px
 		margin-bottom: 5px
