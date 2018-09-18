@@ -222,20 +222,20 @@ a:hover {
 }
 
 /* line 148, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first {
   background: black;
   xmargin-top: 20px;
 }
 /* line 151, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first .panels-flexible-region-1-user {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first .panels-flexible-region-1-user {
   float: right;
 }
 /* line 153, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #my_admin_menu, .panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #user_name {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #my_admin_menu, .panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #user_name {
   padding: 10px 5px;
 }
 /* line 155, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #my_admin_menu p, .panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #user_name p {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #my_admin_menu p, .panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #user_name p {
   color: white !important;
   margin: 0;
   background: red;
@@ -243,15 +243,15 @@ a:hover {
   padding: 0px 5px;
 }
 /* line 161, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #my_admin_menu ul li.leaf, .panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #user_name ul li.leaf {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #my_admin_menu ul li.leaf, .panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #user_name ul li.leaf {
   display: inline;
 }
 /* line 163, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #my_admin_menu ul li.leaf a, .panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #user_name ul li.leaf a {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #my_admin_menu ul li.leaf a, .panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #user_name ul li.leaf a {
   color: white !important;
 }
 /* line 165, ../sass/my_style.sass */
-.panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #my_admin_menu ul li.leaf a:hover, .panels-flexible-row-inside.panels-flexible-row-26-8-inside.panels-flexible-row-inside-first #user_name ul li.leaf a:hover {
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #my_admin_menu ul li.leaf a:hover, .panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first #user_name ul li.leaf a:hover {
   color: red !important;
 }
 
@@ -406,7 +406,7 @@ a:hover {
   background: #efefef;
 }
 /* line 268, ../sass/my_style.sass */
-.panels-flexible-region-first.first .panels-flexible-region.panels-flexible-region-27-center.panels-flexible-region-first.panels-flexible-region-last {
+.panels-flexible-region-first.first .panels-flexible-region.panels-flexible-region-new-center.panels-flexible-region-first.panels-flexible-region-last {
   width: 100%;
 }
 /* line 270, ../sass/my_style.sass */
