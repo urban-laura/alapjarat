@@ -1185,8 +1185,8 @@ $.extend($.validator.messages, {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<iframe style="overflow:hidden; border: none; height: 120px; width:620px !important;" id="frame" src="https://www.alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/" width="200" height="100" border="0" allowtransparency="true" scrolling="no" frameborder="0"></iframe>',
-    'format' => 'fullhtml',
+    'body' => '<iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="sites/default/mahbanner_600x100/" border="0" allowtransparency="true" scrolling="no" width="200" height="100" frameborder="0"></iframe>',
+    'format' => 'admin_html',
     'substitute' => 1,
   );
   $pane->cache = array();
