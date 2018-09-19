@@ -1175,10 +1175,13 @@ function migrate_wp_form_fix_migration_submit($form, &$form_state) {
 
         $node->field_quiz[LANGUAGE_NONE][0]['value'] = $matches[1][0];
         node_save($node);
-        
+        watchdog('migrate_wp', 'Quiz injected:' . $node->nid);
+        $nids[] = $node->nid;
       }
     }
   }
+
+  dpm(implode('|', $nids));
 }
 
 
