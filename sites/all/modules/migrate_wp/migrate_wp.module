@@ -950,6 +950,10 @@ function migrate_wp_find_glossary($text, $node = null) {
     }
   }
 
+  $pattern = "/www.alapjarat.hu\/wp-content\/uploads/iu";
+  $replace = "www.alapjarat.hu/sites/default/files/wp-content/uploads";
+  $text = preg_replace($pattern , $replace,  $text);
+
   return $text;
 }
 
