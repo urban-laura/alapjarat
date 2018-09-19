@@ -115,6 +115,12 @@ function migrate_wp_form($form, &$form_state) {
     '#submit' => array('migrate_wp_form_generate_list_submit'),
   );
 
+  $form['fix_migration'] = array(
+    '#type' => 'submit',
+    '#value' => 'Fix migration',
+    '#submit' => array('migrate_wp_form_fix_migration_submit'),
+  );
+
   $query = db_select('migrate_wp', 'mwp')
   ->fields('mwp', array('nid'));
   $result = $query->execute()->fetchAll();
@@ -1120,4 +1126,74 @@ function migrate_wp_tests() {
 
   }
   return '1';
+}
+
+function migrate_wp_form_fix_migration_submit($form, &$form_state) {
+  global $sources;
+   $c = 0;
+
+  foreach ($sources as $source) {
+
+    $filename = 'sites/all/modules/migrate_wp/source/' . $source . '.xml';
+
+    $data = file_get_contents($filename);
+    $data = str_replace('content:encoded', 'content', $data);
+    $data = str_replace('dc:creator', 'creator', $data);
+    $data = str_replace('wp:post_id', 'post_id', $data);
+    $data = str_replace('wp:post_date', 'post_date', $data);
+    $data = str_replace('wp:postmeta', 'postmeta', $data);
+    $data = str_replace('wp:comment', 'comment', $data);
+    $data = str_replace('wp:meta_key', 'meta_key', $data);
+    $data = str_replace('wp:meta_value', 'meta_value', $data);
+    $data = str_replace('wp:post_type', 'post_type', $data);
+    $data = str_replace('wp:attachment_url', 'attachment_url', $data);
+
+    $data = str_replace('wp:meta_value', 'meta_value', $data);
+    $xml = simplexml_load_string($data, 'SimpleXMLElement', LIBXML_COMPACT | LIBXML_PARSEHUGE);
+    //$json = json_encode($xml);
+    //$array = json_decode($json,TRUE);
+    $fields = array('title', 'link', 'post_id', 'post_date', 'creator', 'guid', 'content');
+
+    // get posts
+    $nodes = [];
+   
+    foreach ($xml->channel->item as $key=>$val) {
+      $body = ((string)$val->content);
+      $post_id = ((string)$val->post_id);
+      if (strpos($body, 'playbuzz') > 0) {
+        $c++;
+
+        $node = migrate_wp_node_by_postid($post_id);
+        $node = reset($node);
+        $pattern = '/(<script>.*?<\/div>)/msu';
+        preg_match_all($pattern, $body, $matches);
+
+        if (count($matches[1]) == 0) {
+          $pattern = '/(<script.*?>.*?<\/div>)/msu';
+          preg_match_all($pattern, $body, $matches);
+        }
+
+        $node->field_quiz[LANGUAGE_NONE][0]['value'] = $matches[1][0];
+        node_save($node);
+        
+      }
+    }
+  }
+}
+
+
+function migrate_wp_node_by_postid($post_id) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'a_article')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_wp_post_id', 'value', $post_id, '=');
+
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $news_items_nids = array_keys($result['node']);
+    $news_items = entity_load('node', $news_items_nids);
+  } 
+
+  return $news_items;
 }
