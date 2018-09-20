@@ -357,4 +357,9 @@
     height: auto;
     padding-bottom: 15px;
   }
+
+  /* line 247, ../sass/my_style_mobil.sass */
+  .right .banner iframe {
+    width: 288px;
+  }
 }
