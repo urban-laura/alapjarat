@@ -81,32 +81,27 @@ function alapjarat_common_article_archives_menu() {
 
 //Article
 function alapjarat_common_node_presave($node) {
-	if($node->type == 'a_article' && isset($node->field_title2['und']))
-	{
+	if ($node->type == 'a_article' && isset($node->field_title2['und'])) {
 		$node->title = strip_tags($node->field_title2['und'][0]['value']);
 	}
 
-	if($node->type == 'a_article' && !is_null($node->publish_on))
-	{
+	if ($node->type == 'a_article' && !is_null($node->publish_on)) {
 		$node->sketch = 0;
 		$node->scheduled = 1;
 	}
 
-	if($node->type == 'a_article' && $node->status == 1)
-	{
+	if ($node->type == 'a_article' && $node->status == 1) {
 		$node->sketch = 0;
 		$node->scheduled = 0;
 		$node->field_hiden_select['und'][0]['value'] = 0;
 	}
 
-	if($node->type == 'a_article' && $node->sketch == 1)
-	{
+	if ($node->type == 'a_article' && $node->sketch == 1) {
 		$node->field_hiden_select['und'][0]['value'] = 1;
 	}
 
 
-	if($node->type == 'a_article' && $node->scheduled == 1)
-	{
+	if ($node->type == 'a_article' && $node->scheduled == 1) {
 		$node->field_hiden_select['und'][0]['value'] = 2;
 	}
 
@@ -133,3 +128,21 @@ function alapjarat_common_most_popular_terms() {
 	return theme('item_list', array('items'=>$items));
 }
 
+function alapjarat_common_node_prepare($node) {
+  $text = $node->field_text[LANGUAGE_NONE][0]['value'];
+  $text = _alapjarat_common_nl2p($text);
+  $node->field_text[LANGUAGE_NONE][0]['value'] = $text;
+}
+
+function _alapjarat_common_nl2p($string) {
+
+  $paragraphs = '';
+
+  foreach (explode("\n\n", $string) as $line) {
+    if (trim($line)) {
+	  $paragraphs .= '<p>' . $line . '</p>';
+	}
+  }
+
+  return $paragraphs;
+}

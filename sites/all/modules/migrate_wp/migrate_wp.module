@@ -866,6 +866,7 @@ function xml2node($source, $amount, &$counter, $posts = array()) {
     }
 
     $node['comments'] = array();
+    $nrow = array();
     foreach ($val->comment as $comment) {
       foreach ($comment as $item) {
           $nrow[] = (string)$item;
