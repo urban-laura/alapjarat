@@ -335,13 +335,13 @@ function alapjarat_features_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
-        ),
-        'metatags' => array(
           'weight' => '14',
         ),
+        'metatags' => array(
+          'weight' => '15',
+        ),
         'redirect' => array(
-          'weight' => '16',
+          'weight' => '17',
         ),
       ),
       'display' => array(),

@@ -236,7 +236,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -280,7 +280,7 @@ function alapjarat_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 24,
+      'weight' => 20,
     ),
   );
 
@@ -317,7 +317,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -417,7 +417,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -539,7 +539,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -656,7 +656,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -694,7 +694,82 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_source'.
+  $field_instances['node-a_article-field_source'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_source',
+    'label' => 'Source',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 0,
+          'link' => 'link',
+          'plain_text' => 0,
+          'text' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -46,
+            ),
+            'filtered_html' => array(
+              'weight' => -45,
+            ),
+            'fullhtml' => array(
+              'weight' => -48,
+            ),
+            'link' => array(
+              'weight' => -50,
+            ),
+            'plain_text' => array(
+              'weight' => -49,
+            ),
+            'text' => array(
+              'weight' => -47,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
     ),
   );
 
@@ -807,7 +882,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -849,7 +924,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -924,7 +999,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 23,
+      'weight' => 30,
     ),
   );
 
@@ -999,7 +1074,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 22,
+      'weight' => 29,
     ),
   );
 
@@ -1102,7 +1177,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 20,
+      'weight' => 27,
     ),
   );
 
@@ -1177,7 +1252,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 26,
     ),
   );
 
@@ -1221,7 +1296,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 21,
+      'weight' => 28,
     ),
   );
 
@@ -1418,7 +1493,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -2581,6 +2656,7 @@ function alapjarat_features_field_default_field_instances() {
   t('Published date');
   t('Remove date');
   t('Secondary Heading 	');
+  t('Source');
   t('Status');
   t('Subtitled');
   t('Tags');
