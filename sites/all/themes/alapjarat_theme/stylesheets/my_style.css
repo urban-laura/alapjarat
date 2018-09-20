@@ -701,7 +701,7 @@ a:hover {
 }
 /* line 462, ../sass/my_style.sass */
 .right .banner iframe {
-  width: auto;
+  width: 100%;
 }
 /* line 464, ../sass/my_style.sass */
 .right #banner5 {
