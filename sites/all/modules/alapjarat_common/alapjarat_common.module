@@ -146,3 +146,32 @@ function _alapjarat_common_nl2p($string) {
 
   return $paragraphs;
 }
+
+function alapjarat_common_find_glossary($text, $node = null) {
+
+  if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
+    $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
+    $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
+
+    foreach ($terms as $term) {
+      $pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
+      $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
+      $replace = '<a href="/' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
+      $text = preg_replace($pattern , $replace,  $text);
+    }
+  }
+
+  $pattern = "/www.alapjarat.hu\/wp-content\/uploads/iu";
+  $replace = "www.alapjarat.hu/sites/default/files/wp-content/uploads";
+  $text = preg_replace($pattern , $replace,  $text);
+
+  return $text;
+}
+
+function alapjarat_common_embed_youtube($text) {
+  $pattern = "/<a href=\"https:\/\/www\.youtube\.com\/?watch\?v=(.*?)\".*?<\/a>/iu";
+  $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
+  $text = preg_replace($pattern, $replace,  $text);
+
+  return $text;
+}
