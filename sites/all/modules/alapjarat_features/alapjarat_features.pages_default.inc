@@ -403,7 +403,7 @@ function alapjarat_features_default_page_manager_handlers() {
     'admin_title' => 'Youtube Subscriber + text',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p>Ha videót nézni jobban szeretsz mint olvasni, ne mulaszd el lecsekkolni YouTube-csatornánkat se!</p>
+    'body' => '<p>Ha videót nézni jobban szeretsz, mint olvasni, ne mulaszd el lecsekkolni YouTube-csatornánkat se!</p>
 <script src="https://apis.google.com/js/platform.js"></script>
 <div class="g-ytsubscribe" data-channelid="UCueleOZ2QFAaVSHXheZlFig" data-layout="full" data-count="default"></div>',
     'format' => 'admin_html',
