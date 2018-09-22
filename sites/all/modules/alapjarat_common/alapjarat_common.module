@@ -130,9 +130,9 @@ function alapjarat_common_most_popular_terms() {
 
 function alapjarat_common_node_prepare($node) {
   if (!empty($node->field_wp_post_id)) {
-    $text = $node->field_text[LANGUAGE_NONE][0]['safe_value'];
-    $text = _alapjarat_common_nl2p($text);
-    $node->field_text[LANGUAGE_NONE][0]['value'] = $text;
+    //$text = $node->field_text[LANGUAGE_NONE][0]['safe_value'];
+    //$text = _alapjarat_common_nl2p($text);
+    //$node->field_text[LANGUAGE_NONE][0]['value'] = $text;
   }
 }
 
