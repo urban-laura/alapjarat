@@ -1,0 +1,16 @@
+name = ExAMPle Subtheme
+description = The ExAMPle subtheme sets custom styles on AMP pages.
+package = Custom
+core = 7.x
+base theme = amptheme
+
+regions[header]  = Header
+regions[content] = Main
+regions[footer]  = Footer
+
+; Information added by Drupal.org packaging script on 2016-07-01
+version = "7.x-1.0"
+core = "7.x"
+project = "amptheme"
+datestamp = "1467417240"
+
