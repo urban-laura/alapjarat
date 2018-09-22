@@ -129,22 +129,26 @@ function alapjarat_common_most_popular_terms() {
 }
 
 function alapjarat_common_node_prepare($node) {
-  $text = $node->field_text[LANGUAGE_NONE][0]['value'];
+  $text = $node->field_text[LANGUAGE_NONE][0]['safe_value'];
   $text = _alapjarat_common_nl2p($text);
   $node->field_text[LANGUAGE_NONE][0]['value'] = $text;
 }
 
 function _alapjarat_common_nl2p($string) {
 
-  $paragraphs = '';
+  $lines = explode("\n\n", $string);
+  if (count($lines) > 1) {
+    $paragraphs = '';
+    foreach ($lines as $line) {
+      if (trim($line)) {
+	    $paragraphs .= '<p>' . $line . '</p>';
+	  }
+    }
 
-  foreach (explode("\n\n", $string) as $line) {
-    if (trim($line)) {
-	  $paragraphs .= '<p>' . $line . '</p>';
-	}
+    return $paragraphs;
   }
 
-  return $paragraphs;
+  return $string;
 }
 
 function alapjarat_common_find_glossary($text, $node = null) {
