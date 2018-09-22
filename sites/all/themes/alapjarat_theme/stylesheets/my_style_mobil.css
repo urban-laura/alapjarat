@@ -411,4 +411,9 @@
     padding-top: 10px;
     text-align: left;
   }
+
+  /* line 285, ../sass/my_style_mobil.sass */
+  .right .banner iframe {
+    width: 280px;
+  }
 }
