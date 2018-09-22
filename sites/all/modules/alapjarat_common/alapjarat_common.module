@@ -179,5 +179,17 @@ function alapjarat_common_embed_youtube($text) {
   $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
   $text = preg_replace($pattern, $replace,  $text);
 
+  $pattern = "/\[embed\]<a href=\"https:\/\/youtu\.be\/(.*?)\[\/embed\].*?<\/a>/iu";
+  $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
+  $text = preg_replace($pattern, $replace,  $text);
+
+  return $text;
+}
+
+function alapjarat_common_embed_fb_videos($text) {
+  $search = "/<a.*?(https:\/\/www\.facebook\.com\/.*?\/videos\/.*?)\/.*?<\/a>/iu";
+  $replace = "<iframe src=\"https://www.facebook.com/plugins/video.php?href=$1&show_text=0&width=560\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\" width=\"560\" height=\"315\"></iframe>";
+  $text = preg_replace($search , $replace,  $text);
+
   return $text;
 }

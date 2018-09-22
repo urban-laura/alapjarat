@@ -78,6 +78,7 @@ HTML comment.
 	    }
 
 	    $item = alapjarat_common_embed_youtube(render($item));
+	    $item = alapjarat_common_embed_fb_videos(render($item));
 
 	    print render($item); 
 
