@@ -175,7 +175,7 @@ function alapjarat_common_find_glossary($text, $node = null) {
 }
 
 function alapjarat_common_embed_youtube($text) {
-  $pattern = "/<a href=\"https:\/\/www\.youtube\.com\/?watch\?v=(.*?)\".*?<\/a>/iu";
+  $pattern = "/<a href=\"https:\/\/www\.youtube\.com\/watch\?v=(.*?)\".*?><\/a>/iu";
   $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
   $text = preg_replace($pattern, $replace,  $text);
 
