@@ -75,10 +75,14 @@ HTML comment.
 	      if (!empty($element['#object']->field_quiz)) {
 	        $item .= $element['#object']->field_quiz[LANGUAGE_NONE][0]['value'];
 	      }
+
+	      if (!empty($element['#object']->field_wp_post_id)) {
+	        $item = alapjarat_common_embed_youtube(render($item));
+	        $item = alapjarat_common_embed_fb_videos(render($item));
+	      }
 	    }
 
-	    $item = alapjarat_common_embed_youtube(render($item));
-	    $item = alapjarat_common_embed_fb_videos(render($item));
+
 
 	    print render($item); 
 
