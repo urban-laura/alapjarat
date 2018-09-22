@@ -27,6 +27,9 @@ function alapjarat_features_metatag_export_default() {
       'shortlink' => array(
         'value' => '[site:url]',
       ),
+      'og:image' => array(
+        'value' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+      ),
     ),
   );
 

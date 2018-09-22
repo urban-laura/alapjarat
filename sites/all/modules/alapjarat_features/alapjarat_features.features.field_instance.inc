@@ -660,6 +660,81 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-a_article-field_quiz'.
+  $field_instances['node-a_article-field_quiz'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_quiz',
+    'label' => 'Quiz',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 25,
+    ),
+  );
+
   // Exported field_instance: 'node-a_article-field_secondary_menu'.
   $field_instances['node-a_article-field_secondary_menu'] = array(
     'bundle' => 'a_article',
@@ -2654,6 +2729,7 @@ function alapjarat_features_field_default_field_instances() {
   t('Primary Heading 	');
   t('Published');
   t('Published date');
+  t('Quiz');
   t('Remove date');
   t('Secondary Heading 	');
   t('Source');

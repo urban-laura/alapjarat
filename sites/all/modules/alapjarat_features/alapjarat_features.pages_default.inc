@@ -1246,7 +1246,7 @@ $.extend($.validator.messages, {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="sites/default/mahbanner_600x100/banner.html" border="0" allowtransparency="true" scrolling="no" width="200" height="100" frameborder="0"></iframe>',
+    'body' => '<iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="/wp-content/uploads/reklam/mahbanner_600x100/" border="0" allowtransparency="true" scrolling="no" width="200" height="100" frameborder="0"></iframe>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
