@@ -11,6 +11,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
