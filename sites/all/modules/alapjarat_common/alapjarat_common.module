@@ -199,8 +199,8 @@ function alapjarat_common_embed_youtube($text) {
 }
 
 function alapjarat_common_embed_fb_videos($text) {
-  $search = "/<a.*?(https:\/\/www\.facebook\.com\/.*?\/videos\/.*?)\/.*?<\/a>/iu";
-  $replace = "<iframe src=\"https://www.facebook.com/plugins/video.php?href=$1&show_text=0&width=560\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\" width=\"560\" height=\"315\"></iframe>";
+  $search = "/<a href=\"https:\/\/www\.facebook.*?(https:\/\/www\.facebook\.com\/.*?\/videos\/.*?)\/.*?<\/a>/iu";
+  $replace = "<iframe src=\"https://www.facebook.com/plugins/video.php?href=$1&show_text=0&width=560\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowTransparency=\"true\" allowFullScreen=\"true\" width=\"560\" height=\"615\"></iframe>";
   $text = preg_replace($search , $replace,  $text);
 
   return $text;
