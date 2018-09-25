@@ -175,6 +175,15 @@ function alapjarat_common_find_glossary($text, $node = null) {
 }
 
 function alapjarat_common_embed_youtube($text) {
+
+  $pattern = "/\[embed\]<a href=\"https:\/\/www\.youtube\.com\/watch\?.*?v=(.*?)\[.*?>https:\/\/www\.youtube\.com.*?<\/a>/iu";
+  $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
+  $text = preg_replace($pattern, $replace,  $text);
+
+  $pattern = "/\[embed\]<a href=\"https:\/\/www\.youtube\.com\/watch\?v=(.*?)\[.*?>https:\/\/www\.youtube\.com.*?<\/a>/iu";
+  $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
+  $text = preg_replace($pattern, $replace,  $text);
+
   $pattern = "/<a href=\"https:\/\/www\.youtube\.com\/watch\?v=(.*?)\".*?>https:\/\/www\.youtube\.com.*?<\/a>/iu";
   $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
   $text = preg_replace($pattern, $replace,  $text);
@@ -182,6 +191,9 @@ function alapjarat_common_embed_youtube($text) {
   $pattern = "/\[embed\]<a href=\"https:\/\/youtu\.be\/(.*?)\[\/embed\].*?<\/a>/iu";
   $replace = "<iframe src=\"https://www.youtube.com/embed/$1\" width=\"800\" height=\"450\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\"></iframe>";
   $text = preg_replace($pattern, $replace,  $text);
+
+  //$text = preg_replace("/<p>\s+<\/p>\n/ui", "", $text);
+
 
   return $text;
 }
