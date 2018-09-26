@@ -30,6 +30,12 @@
 	.right #random_article .views-field-field-image
 		width: 33%
 
+	.panels-flexible-region-first.first
+		#one
+			height: 306px
+		#four
+			.views-row
+				height: 148px
 
 @media screen and (max-width: 989px)
 	body
@@ -114,6 +120,28 @@
 
 	.right #random_article .views-field-created
 		font-size: 13px
+
+	.panels-flexible-region-first.first
+		#one
+			float: none
+			height: 350px
+			width: 560px
+			margin: auto
+			.views-field-path
+				bottom: 80px
+			.views-field-field-tags, .views-field-created
+				bottom: 42px
+				float: none
+			.views-field-created
+				bottom: 40px
+		#four
+			width: 560px
+			float: none
+			padding-left: 0
+			margin: auto
+			padding-top: 10px
+			.views-row
+				height: 175px
 
 @media screen and (max-width: 759px)
 	.main_content, .right
@@ -225,6 +253,15 @@
 			.pane-content
 				display: block
 
+	.panels-flexible-region-first.first
+		#one
+			height: 315px
+			width: 499px
+		#four
+			width: 499px
+			.views-row
+				height: 155px
+
 @media screen and (max-width: 499px)
 	.main_content
 		.front_page_post
@@ -236,10 +273,7 @@
 	.main_menu #main_menu li.leaf a
 		font-size: 0
 		padding: 0
-	.panels-flexible-region-first.first
-		a
-			font-size: 14px !important
-			font-family: montserrat, sans-serif !important
+	.panels-flexible-region-first.first	
 		#hamb-main-menu
 			width: 100%
 			height: auto
@@ -255,6 +289,27 @@
 			padding-bottom: 0px
 			.item-list ul
 				margin: 0 !important
+			a
+			font-size: 14px !important
+			font-family: montserrat, sans-serif !important
+			.pane-title
+				font-size: 18px !important
+		#one
+			height: 175px
+			width: 275px
+			.views-field-path
+				h3
+					font-size: 16px
+		#four
+			width: 275px
+			.views-row
+				height: 175px
+				float: none
+				width: 100%
+			.views-row-1, .views-row-3, .views-row-2, .views-row-4
+				padding: 0
+				margin: 0
+				margin-bottom: 10px
 
 	.main_content
 		.front_page_post

@@ -1246,7 +1246,21 @@ $.extend($.validator.messages, {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="/wp-content/uploads/reklam/mahbanner_600x100/" border="0" allowtransparency="true" scrolling="no" width="200" height="100" frameborder="0"></iframe>',
+    'body' => '<div class="mah" style="width: auto; height:auto; margin-top:1%; float:right; overflow:hidden;"><iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="" width="200" height="100" border="0" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
+<script>
+var frames = Array(\'https://www.alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 25000,
+\'https://www.alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 25000,
+\'https://www.alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 25000,
+\'https://www.alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 25000);
+var i = 0, len = frames.length;
+function ChangeSrc() {
+if (i >= len) { i = 0; } // start over
+document.getElementById(\'frame\').src = frames[i++];
+setTimeout(\'ChangeSrc()\', (frames[i++]*1000));
+}
+window.onload = ChangeSrc;
+</script>
+</div>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1677,6 +1691,66 @@ $.extend($.validator.messages, {
   $pane->uuid = '7b06fd4c-abe6-429a-9da9-cb639ea1b034';
   $display->content['new-7b06fd4c-abe6-429a-9da9-cb639ea1b034'] = $pane;
   $display->panels['main_content'][0] = 'new-7b06fd4c-abe6-429a-9da9-cb639ea1b034';
+  $pane = new stdClass();
+  $pane->pid = 'new-319da000-6189-42d9-828d-ae6039657b7b';
+  $pane->panel = 'main_content';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'one',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '319da000-6189-42d9-828d-ae6039657b7b';
+  $display->content['new-319da000-6189-42d9-828d-ae6039657b7b'] = $pane;
+  $display->panels['main_content'][1] = 'new-319da000-6189-42d9-828d-ae6039657b7b';
+  $pane = new stdClass();
+  $pane->pid = 'new-21b2ec35-e1c9-4a7f-95da-ed96d647cc18';
+  $pane->panel = 'main_content';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_10';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'four',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '21b2ec35-e1c9-4a7f-95da-ed96d647cc18';
+  $display->content['new-21b2ec35-e1c9-4a7f-95da-ed96d647cc18'] = $pane;
+  $display->panels['main_content'][2] = 'new-21b2ec35-e1c9-4a7f-95da-ed96d647cc18';
   $pane = new stdClass();
   $pane->pid = 'new-41b7e39e-88ed-4d21-9ddc-1f26d61fa3fb';
   $pane->panel = 'main_menu';
@@ -2923,6 +2997,7 @@ function alapjarat_features_default_page_manager_pages() {
       'settings' => array(
         'use_tail' => 0,
       ),
+      'keyword' => 'admin',
     ),
   );
   $page->conf = array(
