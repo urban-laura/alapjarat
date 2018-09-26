@@ -294,9 +294,13 @@ function alapjarat_features_default_search_api_index() {
       "index_directly" : 0,
       "cron_limit" : "200",
       "fields" : {
+        "created" : { "type" : "date" },
+        "field_published" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_published_date" : { "type" : "date" },
         "field_text:value" : { "type" : "text" },
         "field_title" : { "type" : "text" },
-        "search_api_language" : { "type" : "string" }
+        "search_api_language" : { "type" : "string" },
+        "title" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -415,6 +419,29 @@ function alapjarat_features_default_search_api_server() {
           "field_text:value" : {
             "table" : "search_api_db_article_index_text",
             "type" : "text",
+            "boost" : "1.0"
+          },
+          "title" : {
+            "table" : "search_api_db_article_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "created" : {
+            "table" : "search_api_db_article_index",
+            "column" : "created",
+            "type" : "date",
+            "boost" : "1.0"
+          },
+          "field_published" : {
+            "table" : "search_api_db_article_index",
+            "column" : "field_published",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_published_date" : {
+            "table" : "search_api_db_article_index",
+            "column" : "field_published_date",
+            "type" : "date",
             "boost" : "1.0"
           }
         }
