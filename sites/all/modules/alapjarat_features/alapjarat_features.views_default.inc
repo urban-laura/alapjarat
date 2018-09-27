@@ -3663,10 +3663,10 @@ function alapjarat_features_views_default_views() {
     'trim_length' => '14',
     'nofollow' => 1,
   );
-  /* Rendezési szempont: Tartalom: Published date (field_published_date) */
-  $handler->display->display_options['sorts']['field_published_date_value']['id'] = 'field_published_date_value';
-  $handler->display->display_options['sorts']['field_published_date_value']['table'] = 'field_data_field_published_date';
-  $handler->display->display_options['sorts']['field_published_date_value']['field'] = 'field_published_date_value';
+  /* Rendezési szempont: Tartalom: Event date (field_event_date) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   /* Szűrési feltétel: Tartalom: Nyilvános */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -3691,7 +3691,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['field_remove_date_value']['id'] = 'field_remove_date_value';
   $handler->display->display_options['filters']['field_remove_date_value']['table'] = 'field_data_field_remove_date';
   $handler->display->display_options['filters']['field_remove_date_value']['field'] = 'field_remove_date_value';
-  $handler->display->display_options['filters']['field_remove_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_remove_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_remove_date_value']['default_date'] = 'now';
 
   /* Display: Event */

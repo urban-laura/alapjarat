@@ -885,6 +885,16 @@ $.extend($.validator.messages, {
     'contexts' => array(),
     'relationships' => array(),
     'name' => '',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'amp_request',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'flexible';
@@ -1246,7 +1256,21 @@ $.extend($.validator.messages, {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="/wp-content/uploads/reklam/mahbanner_600x100/" border="0" allowtransparency="true" scrolling="no" width="200" height="100" frameborder="0"></iframe>',
+    'body' => '<div class="mah" style="width: auto; height:auto; margin-top:1%; float:right; overflow:hidden;"><iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="" width="200" height="100" border="0" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
+<script>
+var frames = Array(\'https://www.alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 25000,
+\'https://www.alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 25000,
+\'https://www.alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 25000,
+\'https://www.alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 25000);
+var i = 0, len = frames.length;
+function ChangeSrc() {
+if (i >= len) { i = 0; } // start over
+document.getElementById(\'frame\').src = frames[i++];
+setTimeout(\'ChangeSrc()\', (frames[i++]*1000));
+}
+window.onload = ChangeSrc;
+</script>
+</div>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1678,6 +1702,66 @@ $.extend($.validator.messages, {
   $display->content['new-7b06fd4c-abe6-429a-9da9-cb639ea1b034'] = $pane;
   $display->panels['main_content'][0] = 'new-7b06fd4c-abe6-429a-9da9-cb639ea1b034';
   $pane = new stdClass();
+  $pane->pid = 'new-319da000-6189-42d9-828d-ae6039657b7b';
+  $pane->panel = 'main_content';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'one',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '319da000-6189-42d9-828d-ae6039657b7b';
+  $display->content['new-319da000-6189-42d9-828d-ae6039657b7b'] = $pane;
+  $display->panels['main_content'][1] = 'new-319da000-6189-42d9-828d-ae6039657b7b';
+  $pane = new stdClass();
+  $pane->pid = 'new-21b2ec35-e1c9-4a7f-95da-ed96d647cc18';
+  $pane->panel = 'main_content';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_10';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'four',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '21b2ec35-e1c9-4a7f-95da-ed96d647cc18';
+  $display->content['new-21b2ec35-e1c9-4a7f-95da-ed96d647cc18'] = $pane;
+  $display->panels['main_content'][2] = 'new-21b2ec35-e1c9-4a7f-95da-ed96d647cc18';
+  $pane = new stdClass();
   $pane->pid = 'new-41b7e39e-88ed-4d21-9ddc-1f26d61fa3fb';
   $pane->panel = 'main_menu';
   $pane->type = 'block';
@@ -1883,6 +1967,132 @@ $.extend($.validator.messages, {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['site_template__panel_context_d3b53892-900b-480a-b3e8-992a3d69013b'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'site_template__panel_context_fcce8c2e-f1de-4cc1-b2aa-8b53d165f96c';
+  $handler->task = 'site_template';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'AMP',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => '',
+    'access' => array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'amp_request',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '1d38707d-5806-466f-a55d-5968361901fc';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'site_template__panel_context_fcce8c2e-f1de-4cc1-b2aa-8b53d165f96c';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-cb5c1f5a-fecd-45d0-953d-c1a02215fcd5';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'AMP dev message',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<strong>Alapjárat AMP Theme</strong>',
+    'format' => 'fullhtml',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'cb5c1f5a-fecd-45d0-953d-c1a02215fcd5';
+  $display->content['new-cb5c1f5a-fecd-45d0-953d-c1a02215fcd5'] = $pane;
+  $display->panels['middle'][0] = 'new-cb5c1f5a-fecd-45d0-953d-c1a02215fcd5';
+  $pane = new stdClass();
+  $pane->pid = 'new-f98a45b8-d186-4002-bfbf-8fd130fe756e';
+  $pane->panel = 'middle';
+  $pane->type = 'page_logo';
+  $pane->subtype = 'page_logo';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'f98a45b8-d186-4002-bfbf-8fd130fe756e';
+  $display->content['new-f98a45b8-d186-4002-bfbf-8fd130fe756e'] = $pane;
+  $display->panels['middle'][1] = 'new-f98a45b8-d186-4002-bfbf-8fd130fe756e';
+  $pane = new stdClass();
+  $pane->pid = 'new-7eb07ba5-13fb-408d-b6c8-e2b1c4be82b9';
+  $pane->panel = 'middle';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_title2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'title',
+    'formatter' => 'amp_text',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'node',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '7eb07ba5-13fb-408d-b6c8-e2b1c4be82b9';
+  $display->content['new-7eb07ba5-13fb-408d-b6c8-e2b1c4be82b9'] = $pane;
+  $display->panels['middle'][2] = 'new-7eb07ba5-13fb-408d-b6c8-e2b1c4be82b9';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['site_template__panel_context_fcce8c2e-f1de-4cc1-b2aa-8b53d165f96c'] = $handler;
 
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
@@ -2923,6 +3133,7 @@ function alapjarat_features_default_page_manager_pages() {
       'settings' => array(
         'use_tail' => 0,
       ),
+      'keyword' => 'admin',
     ),
   );
   $page->conf = array(

@@ -70,8 +70,8 @@
  * @ingroup themeable
  */
 ?>
-
 <div id="page-wrapper"><div id="page">
+
     <header role="banner" id="header" class="amp-header"><div class="section clearfix">
       <div class="amp-header__content">
         <div class="site-branding clearfix">

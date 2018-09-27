@@ -188,6 +188,7 @@ features[node][] = partners
 features[page_manager_handlers][] = node_view__panel_context_2c3793f9-2690-4d2a-9f62-7972906cf6c0
 features[page_manager_handlers][] = node_view__panel_context_975d7ab9-65cc-4102-83ed-c4d75a750263
 features[page_manager_handlers][] = site_template__panel_context_d3b53892-900b-480a-b3e8-992a3d69013b
+features[page_manager_handlers][] = site_template__panel_context_fcce8c2e-f1de-4cc1-b2aa-8b53d165f96c
 features[page_manager_handlers][] = term_view__panel_context_0252e099-98a4-466e-8d7e-d7b18f3fd1d5
 features[page_manager_handlers][] = term_view__panel_context_45f85b32-52a3-428f-8837-e0697d77f9e5
 features[page_manager_handlers][] = term_view__panel_context_4a2a8b7c-b55f-4530-9a69-7c59554c9b39
