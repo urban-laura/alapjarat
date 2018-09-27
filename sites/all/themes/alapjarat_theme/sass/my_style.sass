@@ -145,11 +145,10 @@ a:hover
 	padding-left: 43px
 	padding-bottom: 0
 
-.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first
-.panels-flexible-row-inside.panels-flexible-row-27-8-inside.panels-flexible-row-inside-first
+.panels-flexible-row-inside.panels-flexible-row-new-8-inside.panels-flexible-row-inside-first, .panels-flexible-row-inside.panels-flexible-row-28-8-inside.panels-flexible-row-inside-first
 	background: black
 	xmargin-top: 20px
-	.panels-flexible-region-new-user
+	.panels-flexible-region-new-user, .panels-flexible-region-28-user
 		float: right
 	#my_admin_menu, #user_name
 		padding: 10px 5px
@@ -265,7 +264,8 @@ a:hover
 
 .panels-flexible-region-first.first
 	width: 100%
-	background: #efefef
+	#mini-panel-hamburger_menu
+		background: #efefef
 	.panels-flexible-region.panels-flexible-region-new-center.panels-flexible-region-first.panels-flexible-region-last
 		width: 100%
 	.view-header, #most_popular
@@ -316,7 +316,69 @@ a:hover
 				margin: 0
 			p
 				margin: 0
-		
+	#one, #four
+		h3
+			font-family: open sans,sans-serif
+			margin: 0 
+			a
+				color: white !important
+		p
+			margin: 0 !important
+		.views-field-field-image
+			background: black
+			img
+				opacity: 0.7
+		.views-field-created
+			color: white
+			font-size: 12px
+	#one
+		width: 50%
+		float: left
+		height: 360px
+		.views-row
+			position: relative
+		.views-field-path
+			position: absolute
+			bottom: 40px
+			margin-left: 10px
+			margin-right: 10px
+			h3
+				font-size: 24px 
+		.views-field-field-tags, .views-field-created
+			position: relative
+			bottom: 35px
+			float: left
+			margin-left: 10px
+		.views-field-created
+			bottom: 33px
+	#four
+		float: left
+		width: 50%
+		padding-left: 10px
+		.views-row
+			width: 50%
+			float: left
+			position: relative
+			height: 175px
+		.views-row-1, .views-row-3
+			padding-right: 5px
+		.views-row-2, .views-row-4
+			padding-left: 5px
+		.views-row-3, .views-row-4
+			margin-top: 10px
+		.views-field-path
+			position: absolute
+			bottom: 45px
+			margin-left: 10px
+			margin-right: 10px
+			h3
+				font-size: 16px
+		.views-field-field-tags, .views-field-created
+			position: relative
+			bottom: 42px
+			margin-left: 10px
+		.views-field-created
+			bottom: 40px	
 
 .maincontent
 	border-right: 1px solid #efefef
@@ -665,6 +727,9 @@ a:hover
 			font-size: 16px !important
 			font-family: open sans, sans-serif !important
 		h3
+			margin: 0
+			padding-top: 20px
+			padding-bottom: 10px
 			span
 				font-size: 24px !important
 		h4
