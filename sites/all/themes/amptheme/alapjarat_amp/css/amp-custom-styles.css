@@ -600,6 +600,11 @@ body
   margin-bottom: -15px
 }
 
+.pane-node-field-text blockquote::before, .pane-node-field-text blockquote::after
+{
+  content: none;
+}
+
 .pane-node-field-text a
 {
   border: 0px;
