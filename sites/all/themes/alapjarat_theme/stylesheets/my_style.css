@@ -1043,8 +1043,8 @@ a:hover {
   padding: 0 15px;
 }
 /* line 676, ../sass/my_style.sass */
-.node_pane #fb-like-share p {
-  margin-bottom: 7px;
+.node_pane #fb-like-share .fb-like {
+  padding-bottom: 7px;
 }
 /* line 678, ../sass/my_style.sass */
 .node_pane #fb-save {
