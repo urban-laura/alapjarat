@@ -26,6 +26,7 @@ dependencies[] = metatag_facebook
 dependencies[] = metatag_opengraph
 dependencies[] = metatag_twitter_cards
 dependencies[] = migrate_wp
+dependencies[] = node
 dependencies[] = number
 dependencies[] = options
 dependencies[] = page_manager
