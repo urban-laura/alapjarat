@@ -91,8 +91,10 @@ blockquote
 	border-radius: 4px
 	margin-top: 40px !important
 	margin-bottom: 20px !important
+	a
+		padding: 5px 10px
 	li
-		padding: 5px 10px !important
+		padding: 0px !important
 		display: inline-flex !important
 		border-right: solid 1px #ddd
 	li:hover
@@ -105,6 +107,9 @@ blockquote
 		border-right: 0px
 	.pager-current
 		background: #d82222
+		padding: 5px 10px !important
+	.pager-ellipsis
+		padding: 5px 10px !important
 
 #admin-menu
 	a
@@ -641,7 +646,7 @@ a:hover
 			li
 				margin: 0 !important
 	ul.pager
-		li.pager-item, li.pager-current, li.pager-next, li.pager-last, li.pager-previous
+		li.pager-item, li.pager-current, li.pager-next, li.pager-last, li.pager-previous, li.pager-ellipsis
 			margin-left: -4.3px !important
 		li.pager-current.first
 			margin-left: 0px !important
