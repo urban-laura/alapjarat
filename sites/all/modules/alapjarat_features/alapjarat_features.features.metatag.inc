@@ -64,6 +64,12 @@ function alapjarat_features_metatag_export_default() {
       'og:image' => array(
         'value' => '[node:field_image]',
       ),
+      'og:image:width' => array(
+        'value' => 1200,
+      ),
+      'og:image:height' => array(
+        'value' => 630,
+      ),
       'article:tag' => array(
         'value' => '[node:field_tagsa]',
       ),
