@@ -1145,7 +1145,7 @@ a:hover {
   font-size: 18px !important;
 }
 /* line 739, ../sass/my_style.sass */
-.node_pane #alapjarat-article.pane-node-field-text ul, .node_pane #alapjarat-article.pane-node-field-text ol {
+.node_pane #alapjarat-article.pane-node-field-text ul, .node_pane #alapjarat-article.pane-node-field-text ol, .node_pane #alapjarat-article.pane-node-field-text div {
   margin-bottom: 1em;
 }
 /* line 741, ../sass/my_style.sass */
