@@ -64,6 +64,36 @@ function alapjarat_features_custom_pub_defaults() {
 function alapjarat_features_image_default_styles() {
   $styles = array();
 
+  // Exported image style: 1_big.
+  $styles['1_big'] = array(
+    'label' => '1 big',
+    'effects' => array(
+      15 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 570,
+          'height' => 360,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: 4_small.
+  $styles['4_small'] = array(
+    'label' => '4 small',
+    'effects' => array(
+      16 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 275,
+          'height' => 175,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: alapjarat.
   $styles['alapjarat'] = array(
     'label' => 'alapjarat_article',
