@@ -554,16 +554,20 @@
     padding: 0;
   }
   /* line 373, ../sass/my_style_mobil.sass */
-  .node_pane #fb-like-share .fb-like {
-    padding-bottom: 7px;
-  }
-  /* line 375, ../sass/my_style_mobil.sass */
   .node_pane #fb-save {
     padding-top: 10px;
     text-align: left;
   }
+  /* line 377, ../sass/my_style_mobil.sass */
+  .node_pane .pane-node-field-title2 h1 {
+    font-size: 30px;
+  }
+  /* line 380, ../sass/my_style_mobil.sass */
+  .node_pane .pane-node-field-subtitled h2 {
+    font-size: 24px;
+  }
 
-  /* line 381, ../sass/my_style_mobil.sass */
+  /* line 385, ../sass/my_style_mobil.sass */
   .right .banner iframe {
     width: 280px;
   }
