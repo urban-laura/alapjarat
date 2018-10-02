@@ -566,8 +566,12 @@
   .node_pane .pane-node-field-subtitled h2 {
     font-size: 24px;
   }
+  /* line 383, ../sass/my_style_mobil.sass */
+  .node_pane #alapjarat-article.pane-node-field-text h3 {
+    font-size: 22px;
+  }
 
-  /* line 385, ../sass/my_style_mobil.sass */
+  /* line 388, ../sass/my_style_mobil.sass */
   .right .banner iframe {
     width: 280px;
   }
