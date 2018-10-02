@@ -1,0 +1,143 @@
+<?php
+
+/**
+ * @file
+ * Install file.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Enable the 'check out documents' permission for authenticated users
+ * by default since this is the most common use-case.
+ */
+function content_lock_install() {
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('check out documents'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function content_lock_uninstall() {
+  variable_del('content_lock_clear');
+  variable_del('content_lock_unload_js');
+  variable_del('content_lock_unload_js_message');
+  variable_del('content_lock_unload_js_message_enable');
+  variable_del('content_lock_admin_cancelbutton');
+  variable_del('content_lock_admin_verbose');
+  variable_del('content_lock_allowed_node_types');
+  variable_del('content_lock_allowed_formats');
+}
+
+/**
+ * Implements hook_schema().
+ */
+function content_lock_schema() {
+  $schema['content_lock'] = array(
+    'description' => 'content lock module table.',
+    'fields' => array(
+      'entity_id' => array(
+        'description' => 'The primary identifier for an entity.',
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'entity_type' => array(
+        'description' => 'The type of an entity.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => 'node',
+      ),
+      'uid' => array(
+        'description' => 'User that holds the lock.',
+        'type' => 'int',
+        'size' => 'normal',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'timestamp' => array(
+        'description' => 'Time the lock occurred.',
+        'size' => 'normal',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'ajax_key' => array(
+        'description' => 'A key which AJAX requests must prevent to prevent page reloads from breaking.',
+        'size' => 'normal',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'indexes' => array(
+      'user' => array('uid'),
+    ),
+    'primary key' => array('entity_id', 'entity_type'),
+    'foreign keys' => array(
+      'uid' => array(
+        'table' => 'users',
+        'columns' => array('uid' => 'uid'),
+      ),
+    ),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function content_lock_update_6200() {
+  $ret = array();
+
+  db_add_field($ret, 'content_lock', 'ajax_key',
+    array(
+      'description' => 'A key which AJAX requests must prevent to prevent page reloads from breaking.',
+      'size' => 'normal',
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    ));
+
+  return $ret;
+}
+
+/**
+ * Add entity ID and type support.
+ */
+function content_lock_update_7200() {
+  if (!db_field_exists('content_lock', 'entity_type')) {
+    $fields['entity_type'] = array(
+      'description' => 'The type of an entity.',
+      'type' => 'varchar',
+      'length' => 255,
+      'not null' => TRUE,
+      'default' => 'node',
+    );
+    db_add_field('content_lock', 'entity_type', $fields['entity_type']);
+  }
+
+  if (db_field_exists('content_lock', 'nid')) {
+    $fields['entity_id'] = array(
+      'description' => 'The primary identifier for an entity.',
+      'type' => 'int',
+      'size' => 'normal',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0,
+    );
+    db_change_field('content_lock', 'nid', 'entity_id', $fields['entity_id']);
+  }
+
+  // Update primary keys.
+  db_drop_primary_key('content_lock');
+  db_add_primary_key('content_lock', array('entity_id', 'entity_type'));
+}
