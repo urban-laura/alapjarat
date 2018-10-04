@@ -101,7 +101,7 @@ function alapjarat_features_image_default_styles() {
       3 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 730,
+          'width' => 735,
           'height' => '',
           'upscale' => 0,
         ),

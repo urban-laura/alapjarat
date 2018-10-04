@@ -657,15 +657,15 @@ a:hover {
   color: #444 !important;
 }
 /* line 424, ../sass/my_style.sass */
-.main_content .front_page_post #helpful_info_a, .main_content .front_page_post #actual_A, .main_content .front_page_post #tech, .main_content .front_page_post #test {
+.main_content .front_page_post #helpful_info_a, .main_content .front_page_post #actual_A, .main_content .front_page_post #tech, .main_content .front_page_post #test, .main_content .front_page_post .article_4 {
   clear: both;
 }
 /* line 426, ../sass/my_style.sass */
-.main_content .front_page_post #helpful_info_a .views-field-path, .main_content .front_page_post #actual_A .views-field-path, .main_content .front_page_post #tech .views-field-path, .main_content .front_page_post #test .views-field-path {
+.main_content .front_page_post #helpful_info_a .views-field-path, .main_content .front_page_post #actual_A .views-field-path, .main_content .front_page_post #tech .views-field-path, .main_content .front_page_post #test .views-field-path, .main_content .front_page_post .article_4 .views-field-path {
   margin-top: 10px;
 }
 /* line 428, ../sass/my_style.sass */
-.main_content .front_page_post #helpful_info_a .views-field-path h3, .main_content .front_page_post #actual_A .views-field-path h3, .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3 {
+.main_content .front_page_post #helpful_info_a .views-field-path h3, .main_content .front_page_post #actual_A .views-field-path h3, .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3, .main_content .front_page_post .article_4 .views-field-path h3 {
   font-size: 20px;
 }
 /* line 431, ../sass/my_style.sass */
@@ -774,16 +774,16 @@ a:hover {
   margin-bottom: 3px;
 }
 /* line 501, ../sass/my_style.sass */
-.main_content .front_page_post #tech .views-field-field-image, .main_content .front_page_post #test .views-field-field-image {
+.main_content .front_page_post #tech .views-field-field-image, .main_content .front_page_post #test .views-field-field-image, .main_content .front_page_post .article_4 .views-field-field-image {
   margin-top: 4px;
 }
 /* line 503, ../sass/my_style.sass */
-.main_content .front_page_post #tech .views-field-field-tags, .main_content .front_page_post #test .views-field-field-tags {
+.main_content .front_page_post #tech .views-field-field-tags, .main_content .front_page_post #test .views-field-field-tags, .main_content .front_page_post .article_4 .views-field-field-tags {
   float: left;
   margin-right: 10px;
 }
 /* line 506, ../sass/my_style.sass */
-.main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
+.main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row, .main_content .front_page_post .article_4 .views-row {
   width: 50%;
   padding-right: 15px;
   padding-left: 15px;

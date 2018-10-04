@@ -18,22 +18,17 @@ function alapjarat_features_filter_default_formats() {
     'status' => 1,
     'weight' => -7,
     'filters' => array(
-      'filter_autop' => array(
-        'weight' => 0,
+      'filter_htmlcorrector' => array(
+        'weight' => -48,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_url' => array(
-        'weight' => 0,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => 10,
-        'status' => 1,
-        'settings' => array(),
       ),
     ),
   );

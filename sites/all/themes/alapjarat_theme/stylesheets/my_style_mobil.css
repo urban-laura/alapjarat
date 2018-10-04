@@ -15,7 +15,7 @@
     font-size: 13px;
   }
   /* line 14, ../sass/my_style_mobil.sass */
-  .main_content .front_page_post #actual_A .views-row, .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
+  .main_content .front_page_post #actual_A .views-row, .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row, .main_content .front_page_post .article_4 .views-row {
     height: 275px;
   }
   /* line 17, ../sass/my_style_mobil.sass */
@@ -35,7 +35,7 @@
     padding-left: 15px;
   }
   /* line 27, ../sass/my_style_mobil.sass */
-  .main_content .front_page_post #helpful_info_a .views-field-path h3, .main_content .front_page_post #actual_A .views-field-path h3, .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3 {
+  .main_content .front_page_post #helpful_info_a .views-field-path h3, .main_content .front_page_post #actual_A .views-field-path h3, .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3, .main_content .front_page_post .article_4 .views-field-path h3 {
     font-size: 18px;
   }
 
@@ -169,11 +169,11 @@
     margin-left: 34%;
   }
   /* line 116, ../sass/my_style_mobil.sass */
-  .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
+  .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row, .main_content .front_page_post .article_4 .views-row {
     height: 255px;
   }
   /* line 118, ../sass/my_style_mobil.sass */
-  .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3 {
+  .main_content .front_page_post #tech .views-field-path h3, .main_content .front_page_post #test .views-field-path h3, .main_content .front_page_post .article_4 .views-field-path h3 {
     font-size: 16px;
   }
 
@@ -540,7 +540,7 @@
     padding-bottom: 10px;
   }
   /* line 362, ../sass/my_style_mobil.sass */
-  .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row {
+  .main_content .front_page_post #tech .views-row, .main_content .front_page_post #test .views-row, .main_content .front_page_post .article_4 .views-row {
     float: none;
     width: 100%;
     height: auto;

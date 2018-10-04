@@ -913,14 +913,15 @@ $.extend($.validator.messages, {
         'width' => 100,
         'width_type' => '%',
         'children' => array(
-          0 => 8,
-          1 => 6,
-          2 => 3,
-          3 => 2,
-          4 => 1,
-          5 => 4,
-          6 => 5,
-          7 => 7,
+          0 => 9,
+          1 => 8,
+          2 => 6,
+          3 => 3,
+          4 => 2,
+          5 => 1,
+          6 => 4,
+          7 => 5,
+          8 => 7,
         ),
         'parent' => 'canvas',
       ),
@@ -1124,7 +1125,7 @@ $.extend($.validator.messages, {
         'width' => 50,
         'width_type' => '%',
         'parent' => '8',
-        'class' => '',
+        'class' => 'editor-menu',
         'hide_empty' => 0,
       ),
       'user' => array(
@@ -1133,6 +1134,25 @@ $.extend($.validator.messages, {
         'width' => 50,
         'width_type' => '%',
         'parent' => '8',
+        'class' => 'user_name',
+        'hide_empty' => 0,
+      ),
+      9 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'drupal_message',
+        ),
+        'parent' => 'main',
+        'class' => '',
+        'hide_empty' => 0,
+      ),
+      'drupal_message' => array(
+        'type' => 'region',
+        'title' => 'Drupal message',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '9',
         'class' => '',
         'hide_empty' => 0,
       ),
@@ -1157,6 +1177,7 @@ $.extend($.validator.messages, {
       'banner_' => NULL,
       'admin_menu' => NULL,
       'user' => NULL,
+      'drupal_message' => NULL,
     ),
   );
   $display->cache = array();
@@ -1258,15 +1279,15 @@ $.extend($.validator.messages, {
     'title_heading' => 'h2',
     'body' => '<div style="width: auto; height:auto; margin-top:1%; overflow:hidden;"><iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="" width="200" height="100" border="0" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
 <script>
-var frames = Array(\'https://alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 25000,
-\'https://alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 25000,
-\'https://alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 25000,
-\'https://alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 25000);
+var frames = Array(\'https://alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 50,
+\'https://alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 50,
+\'https://alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 50,
+\'https://alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 50);
 var i = 0, len = frames.length;
 function ChangeSrc() {
 if (i >= len) { i = 0; } // start over
 document.getElementById(\'frame\').src = frames[i++];
-setTimeout(\'ChangeSrc()\', (frames[i++]*1000));
+setTimeout(\'ChangeSrc()\', (frames[i++]*250));
 }
 window.onload = ChangeSrc;
 </script>
@@ -1579,6 +1600,38 @@ window.onload = ChangeSrc;
   $pane->uuid = 'a1f996d5-04d0-4fdd-8546-87c16ec60c6b';
   $display->content['new-a1f996d5-04d0-4fdd-8546-87c16ec60c6b'] = $pane;
   $display->panels['banner_'][12] = 'new-a1f996d5-04d0-4fdd-8546-87c16ec60c6b';
+  $pane = new stdClass();
+  $pane->pid = 'new-de8223ae-43c8-480e-a237-9cf0a7d05392';
+  $pane->panel = 'drupal_message';
+  $pane->type = 'page_messages';
+  $pane->subtype = 'page_messages';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'de8223ae-43c8-480e-a237-9cf0a7d05392';
+  $display->content['new-de8223ae-43c8-480e-a237-9cf0a7d05392'] = $pane;
+  $display->panels['drupal_message'][0] = 'new-de8223ae-43c8-480e-a237-9cf0a7d05392';
   $pane = new stdClass();
   $pane->pid = 'new-3a7c7032-c145-4da4-92fb-07d76d6d7557';
   $pane->panel = 'footer_';
@@ -1932,8 +1985,9 @@ window.onload = ChangeSrc;
         'name' => 'role',
         'settings' => array(
           'rids' => array(
-            0 => 4,
-            1 => 5,
+            0 => 3,
+            1 => 4,
+            2 => 5,
           ),
         ),
         'context' => 'logged-in-user',
@@ -3282,6 +3336,116 @@ function alapjarat_features_default_page_manager_pages() {
   $pane->uuid = '74c19443-0e8a-4910-9f2d-7e7397baac54';
   $display->content['new-74c19443-0e8a-4910-9f2d-7e7397baac54'] = $pane;
   $display->panels['helpfu__info_a'][5] = 'new-74c19443-0e8a-4910-9f2d-7e7397baac54';
+  $pane = new stdClass();
+  $pane->pid = 'new-3b283b5d-51f9-477f-b2e8-09afb885f957';
+  $pane->panel = 'helpfu__info_a';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_11';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'article_4',
+  );
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = '3b283b5d-51f9-477f-b2e8-09afb885f957';
+  $display->content['new-3b283b5d-51f9-477f-b2e8-09afb885f957'] = $pane;
+  $display->panels['helpfu__info_a'][6] = 'new-3b283b5d-51f9-477f-b2e8-09afb885f957';
+  $pane = new stdClass();
+  $pane->pid = 'new-e3a78746-0520-4fe2-856f-c817791bc841';
+  $pane->panel = 'helpfu__info_a';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_12';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'article_4',
+  );
+  $pane->extras = array();
+  $pane->position = 7;
+  $pane->locks = array();
+  $pane->uuid = 'e3a78746-0520-4fe2-856f-c817791bc841';
+  $display->content['new-e3a78746-0520-4fe2-856f-c817791bc841'] = $pane;
+  $display->panels['helpfu__info_a'][7] = 'new-e3a78746-0520-4fe2-856f-c817791bc841';
+  $pane = new stdClass();
+  $pane->pid = 'new-1365bb4f-d3ea-4956-81fb-93f5ac6af9b7';
+  $pane->panel = 'helpfu__info_a';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_13';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'article_4',
+  );
+  $pane->extras = array();
+  $pane->position = 8;
+  $pane->locks = array();
+  $pane->uuid = '1365bb4f-d3ea-4956-81fb-93f5ac6af9b7';
+  $display->content['new-1365bb4f-d3ea-4956-81fb-93f5ac6af9b7'] = $pane;
+  $display->panels['helpfu__info_a'][8] = 'new-1365bb4f-d3ea-4956-81fb-93f5ac6af9b7';
+  $pane = new stdClass();
+  $pane->pid = 'new-fea2ac7e-ef2b-45b2-a872-dad447734920';
+  $pane->panel = 'helpfu__info_a';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_14';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'article_4',
+  );
+  $pane->extras = array();
+  $pane->position = 9;
+  $pane->locks = array();
+  $pane->uuid = 'fea2ac7e-ef2b-45b2-a872-dad447734920';
+  $display->content['new-fea2ac7e-ef2b-45b2-a872-dad447734920'] = $pane;
+  $display->panels['helpfu__info_a'][9] = 'new-fea2ac7e-ef2b-45b2-a872-dad447734920';
+  $pane = new stdClass();
+  $pane->pid = 'new-7fdf7742-dbdb-4557-862f-58f0219c2185';
+  $pane->panel = 'helpfu__info_a';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'first-panel_pane_15';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'article_4',
+  );
+  $pane->extras = array();
+  $pane->position = 10;
+  $pane->locks = array();
+  $pane->uuid = '7fdf7742-dbdb-4557-862f-58f0219c2185';
+  $display->content['new-7fdf7742-dbdb-4557-862f-58f0219c2185'] = $pane;
+  $display->panels['helpfu__info_a'][10] = 'new-7fdf7742-dbdb-4557-862f-58f0219c2185';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
