@@ -205,9 +205,3 @@ function alapjarat_common_embed_fb_videos($text) {
 
   return $text;
 }
-
-function alapjarat_common_metatag_metatags_view_alter(&$output, $instance, $options) {
-	$og_image = $output['og:image']['#attached']['drupal_add_html_head'][0][0]['#value'];
-	$og_image = str_replace('https://alapjarat.hu', 'https://www.alapjarat.hu', $og_image);
-	$output['og:image']['#attached']['drupal_add_html_head'][0][0]['#value'] = $og_image;
-}
