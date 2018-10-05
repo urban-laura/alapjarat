@@ -168,6 +168,34 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'juicebox_formatter',
         'weight' => 6,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'juicebox',
+        'settings' => array(
+          'apply_markup_filter' => 1,
+          'caption_source' => '',
+          'custom_parent_classes' => '',
+          'image_style' => '',
+          'incompatible_file_action' => 'show_icon_and_link',
+          'jlib_backgroundColor' => '#222222',
+          'jlib_galleryHeight' => '100%',
+          'jlib_galleryWidth' => '100%',
+          'jlib_showExpandButton' => 1,
+          'jlib_showOpenButton' => 1,
+          'jlib_showThumbsButton' => 1,
+          'jlib_textColor' => 'rgba(255,255,255,1)',
+          'jlib_thumbFrameColor' => 'rgba(255,255,255,.5)',
+          'jlib_useFullscreenExpand' => 1,
+          'jlib_useThumbDots' => 0,
+          'linkurl_source' => '',
+          'linkurl_target' => '_blank',
+          'manual_config' => '',
+          'thumb_style' => 'juicebox_square_thumbnail',
+          'title_source' => '',
+        ),
+        'type' => 'juicebox_formatter',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -277,6 +305,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'list_default',
         'weight' => 19,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -322,6 +357,12 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'rss' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -359,6 +400,12 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 10,
       ),
       'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'rss' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -470,6 +517,12 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'rss' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -501,7 +554,6 @@ function alapjarat_features_field_default_field_instances() {
           'filefield_sources' => array(
             'attach' => 0,
             'clipboard' => 0,
-            'imce' => 0,
             'plupload' => 'plupload',
             'reference' => 0,
             'remote' => 0,
@@ -582,6 +634,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 8,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -621,6 +680,13 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 4,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -712,6 +778,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 1,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -751,6 +824,13 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 20,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -839,6 +919,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'i18n_taxonomy_term_reference_link',
         'weight' => 12,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -877,6 +964,13 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 20,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -965,6 +1059,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1046,6 +1147,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 0,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1084,6 +1192,13 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 5,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -1132,6 +1247,13 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 18,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 18,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -1219,6 +1341,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 17,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1293,6 +1422,16 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 15,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 15,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
@@ -1409,6 +1548,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 14,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1496,6 +1642,19 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 16,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1535,6 +1694,13 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 3,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
@@ -1623,6 +1789,13 @@ function alapjarat_features_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 7,
       ),
+      'rss' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1698,6 +1871,18 @@ function alapjarat_features_field_default_field_instances() {
         'weight' => 13,
       ),
       'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 13,
+      ),
+      'rss' => array(
         'label' => 'above',
         'module' => 'number',
         'settings' => array(
