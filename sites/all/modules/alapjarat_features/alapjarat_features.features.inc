@@ -321,15 +321,17 @@ function alapjarat_features_default_search_api_index() {
     "item_type" : "node",
     "options" : {
       "datasource" : { "bundles" : [ "a_article" ] },
-      "index_directly" : 0,
+      "index_directly" : 1,
       "cron_limit" : "200",
       "fields" : {
         "created" : { "type" : "date" },
         "field_published" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_published_date" : { "type" : "date" },
+        "field_subtitled:value" : { "type" : "text" },
         "field_text:value" : { "type" : "text" },
         "field_title" : { "type" : "text" },
         "search_api_language" : { "type" : "string" },
+        "search_api_viewed" : { "type" : "text" },
         "title" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
@@ -341,7 +343,7 @@ function alapjarat_features_default_search_api_index() {
         "search_api_metatag_alter_callback" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_url" : { "status" : 0, "weight" : "0", "settings" : [] },
         "search_api_alter_add_aggregation" : { "status" : 0, "weight" : "0", "settings" : [] },
-        "search_api_alter_add_viewed_entity" : { "status" : 0, "weight" : "0", "settings" : { "mode" : "full" } },
+        "search_api_alter_add_viewed_entity" : { "status" : 1, "weight" : "0", "settings" : { "mode" : "full" } },
         "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
         "search_api_alter_language_control" : {
           "status" : 0,
@@ -472,6 +474,16 @@ function alapjarat_features_default_search_api_server() {
             "table" : "search_api_db_article_index",
             "column" : "field_published_date",
             "type" : "date",
+            "boost" : "1.0"
+          },
+          "search_api_viewed" : {
+            "table" : "search_api_db_article_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_subtitled:value" : {
+            "table" : "search_api_db_article_index_text",
+            "type" : "text",
             "boost" : "1.0"
           }
         }
