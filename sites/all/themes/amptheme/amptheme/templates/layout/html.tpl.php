@@ -42,10 +42,12 @@
  *
  * @ingroup themeable
  */
+ global $base_url;
 ?><!doctype html>
 <html amp lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
   <head>
     <meta charset="utf-8">
+    <link rel="canonical" href="<?php print $base_url . '/' . drupal_get_path_alias(strtok(current_path(), '?')); ?>">
     <title><?php print $head_title; ?></title>
     <?php print $head; ?>
     <?php include $amptheme_path_file . '/templates/amp-css/amp-boilerplate-styles-min.inc' ?>

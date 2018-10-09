@@ -1576,3 +1576,24 @@ function _amp_get_image_information($image_url, $image_uri, $image_style_id) {
     return array();
   }
 }
+
+/**
+ * Implements hook_ctools_render_alter().
+ */
+function amp_ctools_render_alter($info, $page, $context) {
+  if (!$page || 'node_view' != $context['task']['name'] || amp_is_amp_request()) {
+    return;
+  }
+
+  // Show amphtml links on AMP-enabled nodes (handled by page manager),
+  // so search engines can find AMP.
+  foreach ($context['contexts'] as $ctools_context) {
+    if (in_array('node', $ctools_context->type) && !empty($ctools_context->data) && in_array($ctools_context->data->type, amp_get_enabled_types())) {
+        $uri = entity_uri('node', $ctools_context->data);
+        $uri['options']['query']['amp'] = NULL;
+        $uri['options']['absolute'] = TRUE;
+        drupal_add_html_head_link(array('rel' => 'amphtml', 'href' => url($uri['path'], $uri['options'])), TRUE);
+        break;
+    }
+  }
+}
