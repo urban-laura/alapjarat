@@ -23,6 +23,14 @@ function content_lock_node_form_handler(&$form, &$form_state, $form_id) {
     return;
   }
 
+  // If this node is already locked by current user, and if the form is being
+  // rebuilt, it means it is being refreshed by an AJAX callback for updating
+  // it (when uploading a file for instance). Hence: Skip acquiring a lock.
+  $already_locked = _content_lock_still_locked($user->uid, $nid);
+  if ($already_locked && isset($form_state['rebuild']) && $form_state['rebuild']) {
+    return;
+  }
+
   $destination = 'node/' . $nid;
 
   // Ensure user acquire a lock when reverting a node to an older revision.
