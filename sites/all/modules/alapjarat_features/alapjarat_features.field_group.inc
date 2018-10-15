@@ -21,7 +21,7 @@ function alapjarat_features_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Teszt',
-    'weight' => '18',
+    'weight' => '20',
     'children' => array(
       0 => 'field_test_name',
       1 => 'field_test_image',
@@ -31,13 +31,14 @@ function alapjarat_features_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Teszt',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-test field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-test field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $field_groups['group_test|node|a_article|form'] = $field_group;

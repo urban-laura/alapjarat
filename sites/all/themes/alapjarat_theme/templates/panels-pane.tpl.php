@@ -16,6 +16,13 @@
  * - $display: The complete panels display object containing all kinds of
  *   data including the contexts and all of the other panes being displayed.
  */
+if ($pane->type == 'node_created') {
+  $node = node_load($display->args[0]);
+  if ($node->created !== $node->changed && date('Y-m-d H:i', $node->changed) !== '2018-09-18 21:58') {
+    $title = t('Updated:');
+    $content = date('Y-m-d', $node->changed);
+  }
+}
 ?>
 <?php if ($pane_prefix): ?>
   <?php print $pane_prefix; ?>
