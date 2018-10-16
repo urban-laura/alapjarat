@@ -19,7 +19,6 @@ function alapjarat_common_form($form, &$form_state) {
   $form['path'] = array(
     '#type' => 'textfield', 
     '#title' => t('Article to fix (url)'), 
-    '#default_value' => 'http://alapd.vr/tech/kompresszoros-mondeo-st-lpg-vel-bizony-volt-ilyen',
   );
 
   $form['submit'] = array(
