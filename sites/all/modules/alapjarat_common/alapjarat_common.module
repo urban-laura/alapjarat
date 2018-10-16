@@ -1,18 +1,87 @@
 <?php
-/*
-function alapjarat_preprocess_page(&$vars){
- $path = $_GET['q'];
 
-  if (strpos($path,'archive') !== false) {
-    drupal_set_title('Alapjárat');
+function alapjarat_common_menu() {
+
+  $items['fix-article-images'] = array(
+    'title' => 'Fix Google images in articles',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('alapjarat_common_form'),
+    'access arguments' => array('access administration pages'),
+    'menu_name' => 'menu-admin-menu',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function alapjarat_common_form($form, &$form_state) {
+
+  $form['path'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Article to fix (url)'), 
+    '#default_value' => 'http://alapd.vr/tech/kompresszoros-mondeo-st-lpg-vel-bizony-volt-ilyen',
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Adatok kiolvasása',
+  );
+
+  
+  if (isset($form_state['storage'])) {
+    $form['output'] = array(
+      '#markup' => $form_state['storage']['changed'],
+      '#prefix' => '<div class="output">',
+      '#suffix' => '</div>',
+    );
+  }
+  
+  return $form;
+}
+
+function alapjarat_common_form_submit($form, &$form_state) {
+  $path = substr(parse_url($form_state['values']['path'], PHP_URL_PATH), 1);
+  $path = drupal_lookup_path('source', $path);
+  $node = menu_get_object("node", 1, $path);
+  $form_state['storage']['changed'] = 'No google images found.';
+  $form_state['rebuild'] = TRUE; 
+  if ($node) {
+    $new_node = clone $node;
+    $nwrapper = entity_metadata_wrapper('node', $node);
+    $text = $nwrapper->field_text->value->value();
+    preg_match_all('/<img.*?src=\"(.*?googleusercontent.*?)\"/sm', $text, $matches);
+    
+    $change = FALSE;
+    foreach ($matches[1] as $match) {
+
+      $http = str_replace('https', 'http', $match);
+      $file_info = system_retrieve_file($http, 'public://car_image.jpg', TRUE);
+      if ($file_info->fid){
+        $nwrapper->field_media[] = array('fid' => $file_info->fid, 'display' => TRUE);
+        $new_image = file_create_url($file_info->uri);
+        $text = str_replace($match, $new_image, $text);
+        $change = TRUE;
+      }
+    }
+
+    if ($change) {
+      $nwrapper->field_text->set(array('value' => $text, 'format' => 'fullhtml'));
+      $nwrapper->save();
+
+      $new_node->nid = NULL;
+      $new_node->vid = NULL;
+      $new_node->tnid = NULL;
+
+      $new_node->status = 0;
+      $new_node->field_title2[LANGUAGE_NONE][0]['value'] = 'CLONE OF ' . $new_node->title;
+      $new_node->field_title2[LANGUAGE_NONE][0]['format'] = 'text';
+
+      node_save($new_node);
+
+      $form_state['storage']['changed'] = 'Fixed.'; 
+    }
   }
 }
-
-
-function alapjarat_common_preprocess_html(&$vars) {
-	$vars['head_title'] = implode(' | ', array(drupal_set_title('Alapjárat')));
-}
-*/
 
 // Hidden
 function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
@@ -35,11 +104,10 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 		if (!empty($form['field_wp_post_id']['und'][0]['value']['#default_value'])) {
 		  $text = $form['field_text']['und'][0]['#default_value'];
 		  $form['field_text']['und'][0]['#default_value'] = alapjarat_common_autop($text);
-	    }
+	 }
 	}
 
 }
-
 
 //Archive
 function alapjarat_common_ctools_plugin_directory($owner, $plugin_type) {
