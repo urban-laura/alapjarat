@@ -6202,6 +6202,7 @@ function alapjarat_features_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
@@ -6270,6 +6271,7 @@ function alapjarat_features_views_default_views() {
 
   /* Display: published pane */
   $handler = $view->new_display('panel_pane', 'published pane', 'panel_pane_2');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
@@ -6349,6 +6351,7 @@ function alapjarat_features_views_default_views() {
 
   /* Display: tags pane */
   $handler = $view->new_display('panel_pane', 'tags pane', 'panel_pane_3');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
@@ -6427,6 +6430,7 @@ function alapjarat_features_views_default_views() {
 
   /* Display: Menu pane */
   $handler = $view->new_display('panel_pane', 'Menu pane', 'panel_pane_4');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
@@ -6568,6 +6572,582 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'feed';
   $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Aktuális */
+  $handler = $view->new_display('feed', 'Hírcsatorna Aktuális', 'feed_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '106',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'aktualis/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Autóteszt */
+  $handler = $view->new_display('feed', 'Hírcsatorna Autóteszt', 'feed_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '103',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'autoteszt/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna El mondó */
+  $handler = $view->new_display('feed', 'Hírcsatorna El mondó', 'feed_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '110',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'el-mondo/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Hasznos infók */
+  $handler = $view->new_display('feed', 'Hírcsatorna Hasznos infók', 'feed_5');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '97',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'hasznos-infok/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Közös csapatás */
+  $handler = $view->new_display('feed', 'Hírcsatorna Közös csapatás', 'feed_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '109',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'kozos-csapatas/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Rajtrács */
+  $handler = $view->new_display('feed', 'Hírcsatorna Rajtrács', 'feed_7');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '108',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'rajtracs/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Tech */
+  $handler = $view->new_display('feed', 'Hírcsatorna Tech', 'feed_8');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '102',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'tech/feed';
+  $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Hírcsatorna Tuning */
+  $handler = $view->new_display('feed', 'Hírcsatorna Tuning', 'feed_9');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => '',
+        'language' => '',
+        'category' => '',
+        'image' => '',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'field_title2',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['feed_settings'] = array(
+    'absolute_paths' => 1,
+    'feed_in_links' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'a_article' => 'a_article',
+  );
+  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
+  $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
+  $handler->display->display_options['filters']['field_menu_tid']['value'] = array(
+    0 => '105',
+  );
+  $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  $handler->display->display_options['path'] = 'tuning/feed';
+  $handler->display->display_options['sitename_title'] = 0;
   $translatables['rss'] = array(
     t('Master'),
     t('tovább'),
@@ -6588,7 +7168,6 @@ function alapjarat_features_views_default_views() {
     t('Közzétételi dátum'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Publikálta'),
     t('Közzétéve'),
@@ -6598,6 +7177,14 @@ function alapjarat_features_views_default_views() {
     t('Menu pane'),
     t('Hírcsatorna'),
     t('Alapjárat - Magyar Autós Közösség'),
+    t('Hírcsatorna Aktuális'),
+    t('Hírcsatorna Autóteszt'),
+    t('Hírcsatorna El mondó'),
+    t('Hírcsatorna Hasznos infók'),
+    t('Hírcsatorna Közös csapatás'),
+    t('Hírcsatorna Rajtrács'),
+    t('Hírcsatorna Tech'),
+    t('Hírcsatorna Tuning'),
   );
   $export['rss'] = $view;
 
