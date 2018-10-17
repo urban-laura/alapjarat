@@ -41,6 +41,10 @@
 
   <div class="pane-content">
    <?php 
+   if ($pane->subtype == 'node:field_text') {
+      $content = alapjarat_common_embed_youtube(render($content));
+      $content = alapjarat_common_embed_fb_videos(render($content));
+   }
    print render($content); 
    ?>
    
