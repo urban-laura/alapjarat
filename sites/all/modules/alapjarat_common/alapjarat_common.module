@@ -106,7 +106,7 @@ function alapjarat_common_fix_google_images($url) {
 
       //node_save($new_node);
 
-      $message = 'Fixed.'; 
+      $message = 'Fixed.';
       header("Location: " . $base_url . "/node/" . $node->nid);
       die();
     }

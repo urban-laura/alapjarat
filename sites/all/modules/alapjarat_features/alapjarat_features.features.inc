@@ -332,6 +332,7 @@ function alapjarat_features_default_search_api_index() {
         "field_title" : { "type" : "text" },
         "search_api_language" : { "type" : "string" },
         "search_api_viewed" : { "type" : "text" },
+        "status" : { "type" : "integer" },
         "title" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
@@ -484,6 +485,12 @@ function alapjarat_features_default_search_api_server() {
           "field_subtitled:value" : {
             "table" : "search_api_db_article_index_text",
             "type" : "text",
+            "boost" : "1.0"
+          },
+          "status" : {
+            "table" : "search_api_db_article_index",
+            "column" : "status",
+            "type" : "integer",
             "boost" : "1.0"
           }
         }
