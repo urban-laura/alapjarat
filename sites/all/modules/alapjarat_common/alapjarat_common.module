@@ -2,6 +2,7 @@
 
 function alapjarat_common_menu() {
 
+  /*
   $items['fix-article-images'] = array(
     'title' => 'Fix Google images in articles',
     'page callback' => 'drupal_get_form',
@@ -9,6 +10,22 @@ function alapjarat_common_menu() {
     'access arguments' => array('access administration pages'),
     'menu_name' => 'menu-admin-menu',
     'type' => MENU_NORMAL_ITEM,
+  );*/
+
+  $items['fix-article-images-list'] = array(
+    'title' => 'Fix list',
+    'page callback' => 'alapjarat_common_fix_articles_list',
+    'access arguments' => array('access administration pages'),
+    'menu_name' => 'menu-admin-menu',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['quickfix'] = array(
+    'title' => 'Fix list',
+    'page callback' => 'alapjarat_common_fix_google_images',
+    'page arguments' => array(1),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_CALLBACK,
   );
 
   return $items;
@@ -39,11 +56,22 @@ function alapjarat_common_form($form, &$form_state) {
 }
 
 function alapjarat_common_form_submit($form, &$form_state) {
-  $path = substr(parse_url($form_state['values']['path'], PHP_URL_PATH), 1);
+  $url = $form_state['values']['path'];
+  $form_state['storage']['changed'] = alapjarat_common_fix_google_images($url);
+  $form_state['rebuild'] = TRUE;
+}
+
+function alapjarat_common_fix_google_images($url) {
+  global $base_url;
+
+  if (is_numeric($url)) {
+    $url = $base_url . '/' . drupal_get_path_alias('node/' . $url);
+  }
+
+  $path = substr(parse_url($url, PHP_URL_PATH), 1);
   $path = drupal_lookup_path('source', $path);
   $node = menu_get_object("node", 1, $path);
-  $form_state['storage']['changed'] = 'No google images found.';
-  $form_state['rebuild'] = TRUE; 
+  $message = 'No google images found.';
   if ($node) {
     $new_node = clone $node;
     $nwrapper = entity_metadata_wrapper('node', $node);
@@ -51,10 +79,11 @@ function alapjarat_common_form_submit($form, &$form_state) {
     preg_match_all('/<img.*?src=\"(.*?googleusercontent.*?)\"/sm', $text, $matches);
     
     $change = FALSE;
+    $c = 0;
     foreach ($matches[1] as $match) {
-
       $http = str_replace('https', 'http', $match);
-      $file_info = system_retrieve_file($http, 'public://car_image.jpg', TRUE);
+      $c++;
+      $file_info = system_retrieve_file($http, 'public://car-image-' . $c . '.jpg', TRUE); 
       if ($file_info->fid){
         $nwrapper->field_media[] = array('fid' => $file_info->fid, 'display' => TRUE);
         $new_image = file_create_url($file_info->uri);
@@ -75,11 +104,15 @@ function alapjarat_common_form_submit($form, &$form_state) {
       $new_node->field_title2[LANGUAGE_NONE][0]['value'] = 'CLONE OF ' . $new_node->title;
       $new_node->field_title2[LANGUAGE_NONE][0]['format'] = 'text';
 
-      node_save($new_node);
+      //node_save($new_node);
 
-      $form_state['storage']['changed'] = 'Fixed.'; 
+      $message = 'Fixed.'; 
+      header("Location: " . $base_url . "/node/" . $node->nid);
+      die();
     }
   }
+
+  return $message;
 }
 
 // Hidden
@@ -456,4 +489,48 @@ function alapjarat_common_embed_fb_videos($text) {
   $text = preg_replace($search , $replace,  $text);
 
   return $text;
+}
+
+
+function alapjarat_common_fix_articles_list() {
+  global $base_url;
+
+  $search_phrase = 'googleusercontent';
+
+  $query = db_select('node', 'n');
+  $query->leftJoin('field_data_field_wp_post_id', 'wp', 'wp.entity_id = n.nid');
+  $query->leftJoin('field_data_field_text', 'wptext', 'wptext.entity_id = n.nid');
+  $query
+  ->fields('n', array('nid'))
+  ->fields('wp', array('entity_id'))
+  ->fields('wptext', array('field_text_value'))
+  ->condition('n.type', 'a_article', '=')
+  ->condition('wptext.field_text_value', '%' . db_like($search_phrase) . '%', 'LIKE')
+  ->orderBy('n.nid', 'DESC');
+  $query->isNull('wp.entity_id');
+
+  $results = $query
+  ->execute()
+  ->fetchAll();
+
+  $c = 0;
+  foreach ($results as $record) {
+    $c++;
+    $occ = substr_count($record->field_text_value, $search_phrase);
+    $row = [];
+    $row[] = $c;
+    $row[] = $record->nid;
+    $url = $base_url . '/' . drupal_get_path_alias('node/' . $record->nid);
+    $row[] = l($url, $url);
+    $row[] = $occ;
+    $row[] = l('FIX IT', '/quickfix/' . $record->nid, array('attributes' => array('target'=>'_blank')));
+    $rows[] = $row;
+
+  }
+
+  $fields = array('count', 'nid', 'path', 'G images in article', 'fix link');
+  $output = theme('table', array('header' => $fields, 'rows' => $rows));
+
+
+  return $output;
 }
