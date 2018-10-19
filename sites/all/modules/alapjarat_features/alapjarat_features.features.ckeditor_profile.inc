@@ -162,6 +162,7 @@ function alapjarat_features_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => 'config.enterMode = CKEDITOR.ENTER_BR;
 config.autoParagraph = false;
+config.allowedContent = true;
 ',
         'loadPlugins' => array(
           'button' => array(

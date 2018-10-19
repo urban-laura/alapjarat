@@ -327,13 +327,13 @@ function alapjarat_features_default_search_api_index() {
         "created" : { "type" : "date" },
         "field_published" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_published_date" : { "type" : "date" },
-        "field_subtitled:value" : { "type" : "text" },
-        "field_text:value" : { "type" : "text" },
-        "field_title" : { "type" : "text" },
+        "field_subtitled:value" : { "type" : "text", "boost" : "3.0" },
+        "field_text:value" : { "type" : "text", "boost" : "2.0" },
+        "field_title" : { "type" : "text", "boost" : "5.0" },
         "search_api_language" : { "type" : "string" },
         "search_api_viewed" : { "type" : "text" },
         "status" : { "type" : "integer" },
-        "title" : { "type" : "text" }
+        "title" : { "type" : "text", "boost" : "5.0" }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -441,7 +441,7 @@ function alapjarat_features_default_search_api_server() {
           "field_title" : {
             "table" : "search_api_db_article_index_text",
             "type" : "text",
-            "boost" : "1.0"
+            "boost" : "5.0"
           },
           "search_api_language" : {
             "table" : "search_api_db_article_index",
@@ -452,12 +452,12 @@ function alapjarat_features_default_search_api_server() {
           "field_text:value" : {
             "table" : "search_api_db_article_index_text",
             "type" : "text",
-            "boost" : "1.0"
+            "boost" : "2.0"
           },
           "title" : {
             "table" : "search_api_db_article_index_text",
             "type" : "text",
-            "boost" : "1.0"
+            "boost" : "5.0"
           },
           "created" : {
             "table" : "search_api_db_article_index",
@@ -485,7 +485,7 @@ function alapjarat_features_default_search_api_server() {
           "field_subtitled:value" : {
             "table" : "search_api_db_article_index_text",
             "type" : "text",
-            "boost" : "1.0"
+            "boost" : "3.0"
           },
           "status" : {
             "table" : "search_api_db_article_index",
