@@ -136,7 +136,9 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 		if (!empty($form['field_wp_post_id']['und'][0]['value']['#default_value'])) {
 		  $text = $form['field_text']['und'][0]['#default_value'];
 		  $form['field_text']['und'][0]['#default_value'] = alapjarat_common_autop($text);
-	 }
+	  }
+
+    $form['#attached']['js'][] = drupal_get_path('module', 'alapjarat_common') . '/alapjarat_common_aarticle_form.js';
 	}
 
 }

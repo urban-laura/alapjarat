@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.exampleModule = {
+  Drupal.behaviors.hamburger = {
     attach: function (context, settings) {
       $('#main_menu ul.menu').prepend('<img src="/sites/all/modules/alapjarat_common/images/alapjarat_hamburger.png" id="ham-menu" style="padding: 4px;cursor: pointer;">');
       $('#mini-panel-hamburger_menu').hide();
