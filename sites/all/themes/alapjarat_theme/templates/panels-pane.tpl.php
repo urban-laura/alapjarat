@@ -18,7 +18,7 @@
  */
 if ($pane->type == 'node_created') {
   $node = node_load($display->args[0]);
-  if ($node->created !== $node->changed && date('Y-m-d H:i', $node->changed) !== '2018-09-18 21:58') {
+  if ($node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18') {
     $title = t('Updated:');
     $content = date('Y-m-d', $node->changed);
   }
