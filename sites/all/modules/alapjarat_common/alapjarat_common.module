@@ -500,14 +500,11 @@ function alapjarat_common_fix_articles_list() {
   $search_phrase = '[caption';
 
   $query = db_select('node', 'n');
-  $query->leftJoin('field_data_field_wp_post_id', 'wp', 'wp.entity_id = n.nid');
-  $query->leftJoin('field_data_field_text', 'wptext', 'wptext.entity_id = n.nid');
+  $query->leftJoin('field_data_field_meta_description', 'meta', 'meta.entity_id = n.nid');
   $query
   ->fields('n', array('nid'))
-  ->fields('wp', array('entity_id'))
-  ->fields('wptext', array('field_text_value'))
   ->condition('n.type', 'a_article', '=')
-  ->condition('wptext.field_text_value', '%' . db_like($search_phrase) . '%', 'LIKE')
+  ->condition('meta.field_meta_description_value', '')
   ->orderBy('n.nid', 'DESC');
   //$query->isNull('wp.entity_id');
 
@@ -524,13 +521,13 @@ function alapjarat_common_fix_articles_list() {
     $row[] = $record->nid;
     $url = $base_url . '/' . drupal_get_path_alias('node/' . $record->nid);
     $row[] = l($url, $url);
-    $row[] = $occ;
+    //$row[] = $occ;
     //$row[] = l('FIX IT', '/quickfix/' . $record->nid, array('attributes' => array('target'=>'_blank')));
     $rows[] = $row;
 
   }
 
-  $fields = array('count', 'nid', 'path', 'G images in article', 'fix link');
+  $fields = array('count', 'nid', 'path');
   $output = theme('table', array('header' => $fields, 'rows' => $rows));
 
 
