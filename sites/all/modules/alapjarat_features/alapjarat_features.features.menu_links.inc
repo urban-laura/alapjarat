@@ -10,6 +10,29 @@
 function alapjarat_features_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: main-menu_media:taxonomy/term/5173.
+  $menu_links['main-menu_media:taxonomy/term/5173'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'taxonomy/term/5173',
+    'router_path' => 'taxonomy/term/%',
+    'link_title' => 'Media',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'main-menu_media:taxonomy/term/5173',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -44,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-admin-menu_add-content:node/add.
   $menu_links['menu-admin-menu_add-content:node/add'] = array(
     'menu_name' => 'menu-admin-menu',
@@ -274,6 +297,7 @@ function alapjarat_features_menu_default_menu_links() {
   t('Home');
   t('Impress');
   t('Log out');
+  t('Media');
   t('Metatags');
   t('Pages');
   t('Partners');

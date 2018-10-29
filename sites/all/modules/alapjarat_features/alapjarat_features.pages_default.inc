@@ -1655,6 +1655,8 @@ window.onload = ChangeSrc;
         'settings' => array(
           'rids' => array(
             0 => 3,
+            1 => 4,
+            2 => 5,
           ),
         ),
         'context' => 'logged-in-user',
