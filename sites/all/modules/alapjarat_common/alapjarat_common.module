@@ -493,6 +493,14 @@ function alapjarat_common_embed_fb_videos($text) {
   return $text;
 }
 
+function alapjarat_common_embed_instagram($text) {
+  $pattern = "/\[embed\].*?instagram.com\/p\/(.*?)\[\/embed\].*?<\/a>/iu";
+  $replace = "<blockquote class=\"embedly-card\"><h4><a href=\"https://www.instagram.com/p/$1\">BMW M8 Gran Coupé #alapjárat #genf #genfiautószalon #gims #gims2018 #bmw #m8 #grancoupé @bmw @bmwhu</a></h4></blockquote><script async src=\"//cdn.embedly.com/widgets/platform.js\" charset=\"UTF-8\"></script>";
+  $text = preg_replace($pattern, $replace,  $text);
+
+  return $text;
+}
+
 
 function alapjarat_common_fix_articles_list() {
   global $base_url;
