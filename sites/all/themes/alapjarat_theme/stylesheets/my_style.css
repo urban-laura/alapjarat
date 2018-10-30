@@ -1191,110 +1191,113 @@ a:hover {
 /* line 764, ../sass/my_style.sass */
 .node_pane #alapjarat-article.pane-node-field-text iframe {
   max-width: 100%;
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
 }
-/* line 766, ../sass/my_style.sass */
+/* line 769, ../sass/my_style.sass */
 .node_pane #youtube-text {
   margin-bottom: 1em;
 }
-/* line 768, ../sass/my_style.sass */
+/* line 771, ../sass/my_style.sass */
 .node_pane #youtube-text p {
   font-size: 15px;
   margin: 0;
   font-style: italic;
 }
-/* line 773, ../sass/my_style.sass */
+/* line 776, ../sass/my_style.sass */
 .node_pane .pane-node-field-source .pane-title {
   font-size: 16px;
 }
-/* line 775, ../sass/my_style.sass */
+/* line 778, ../sass/my_style.sass */
 .node_pane .pane-node-field-source .even {
   margin-top: 1em;
 }
-/* line 777, ../sass/my_style.sass */
+/* line 780, ../sass/my_style.sass */
 .node_pane .pane-node-field-source p {
   display: list-item;
   font-size: 16px !important;
   margin: 0;
   margin-left: 45px;
 }
-/* line 782, ../sass/my_style.sass */
+/* line 785, ../sass/my_style.sass */
 .node_pane #fb2 {
   margin-bottom: 15px;
 }
-/* line 784, ../sass/my_style.sass */
+/* line 787, ../sass/my_style.sass */
 .node_pane #fb2 p {
   margin: 0;
   font-style: italic;
 }
-/* line 788, ../sass/my_style.sass */
+/* line 791, ../sass/my_style.sass */
 .node_pane .pane-social-media-links-social-media-links h2 {
   margin-bottom: 10px !important;
 }
-/* line 790, ../sass/my_style.sass */
+/* line 793, ../sass/my_style.sass */
 .node_pane .pane-social-media-links-social-media-links ul {
   margin-left: 0px;
 }
-/* line 792, ../sass/my_style.sass */
+/* line 795, ../sass/my_style.sass */
 .node_pane .pane-social-media-links-social-media-links img {
   width: 30px;
 }
-/* line 795, ../sass/my_style.sass */
+/* line 798, ../sass/my_style.sass */
 .node_pane .social-media-links li {
   padding: 0 !important;
   margin-right: 5px;
 }
-/* line 798, ../sass/my_style.sass */
+/* line 801, ../sass/my_style.sass */
 .node_pane #article3 {
   margin-top: 25px;
 }
-/* line 800, ../sass/my_style.sass */
+/* line 803, ../sass/my_style.sass */
 .node_pane #article3 .views-row {
   width: 116px;
   float: left;
   padding: 5px;
   margin-bottom: 20px;
 }
-/* line 805, ../sass/my_style.sass */
+/* line 808, ../sass/my_style.sass */
 .node_pane #article3 .views-row img {
   margin-bottom: 10px;
 }
-/* line 807, ../sass/my_style.sass */
+/* line 810, ../sass/my_style.sass */
 .node_pane .pane-node-field-tagsa {
   clear: both;
   margin-bottom: 45px;
 }
-/* line 810, ../sass/my_style.sass */
+/* line 813, ../sass/my_style.sass */
 .node_pane .pane-node-field-tagsa .pane-title {
   float: left;
   padding-right: 10px;
 }
-/* line 814, ../sass/my_style.sass */
+/* line 817, ../sass/my_style.sass */
 .node_pane .pane-node-field-tagsa .field-item a {
   float: left;
   padding-right: 10px;
 }
 
-/* line 818, ../sass/my_style.sass */
+/* line 821, ../sass/my_style.sass */
 #impress {
   padding: 0px 15px !important;
 }
-/* line 821, ../sass/my_style.sass */
+/* line 824, ../sass/my_style.sass */
 #impress .view-header p {
   margin: 0 !important;
   font-size: 30px;
   font-family: montserrat, sans-serif;
 }
-/* line 825, ../sass/my_style.sass */
+/* line 828, ../sass/my_style.sass */
 #impress h1 {
   margin-top: 20px;
   margin-bottom: 35px;
   padding: 0;
 }
-/* line 829, ../sass/my_style.sass */
+/* line 832, ../sass/my_style.sass */
 #impress h2 {
   margin-bottom: 0;
 }
-/* line 831, ../sass/my_style.sass */
+/* line 834, ../sass/my_style.sass */
 #impress .views-field-field-e-mail {
   background-image: url("/sites/default/files/email.png");
   background-repeat: no-repeat;
@@ -1302,88 +1305,88 @@ a:hover {
   width: 32px;
   float: left;
 }
-/* line 837, ../sass/my_style.sass */
+/* line 840, ../sass/my_style.sass */
 #impress .views-field-field-e-mail a {
   font-size: 0px;
   padding: 15px 0px;
   padding-right: 21px;
 }
-/* line 841, ../sass/my_style.sass */
+/* line 844, ../sass/my_style.sass */
 #impress .views-row {
   clear: both;
   padding-top: 25px;
 }
-/* line 844, ../sass/my_style.sass */
+/* line 847, ../sass/my_style.sass */
 #impress .views-field-title {
   color: #d82222;
   float: left;
   margin-left: 6px;
   margin-right: 9px;
 }
-/* line 849, ../sass/my_style.sass */
+/* line 852, ../sass/my_style.sass */
 #impress .views-field-field-status {
   margin-bottom: 10px;
 }
-/* line 851, ../sass/my_style.sass */
+/* line 854, ../sass/my_style.sass */
 #impress .views-field-title, #impress .views-field-field-status {
   font-family: montserrat, sans-serif;
   font-size: 24px;
   line-height: 30px;
 }
-/* line 855, ../sass/my_style.sass */
+/* line 858, ../sass/my_style.sass */
 #impress .views-field-field-picture {
   float: left;
   padding-top: 10px;
   margin-right: 1.5em;
   margin-left: 25px;
 }
-/* line 860, ../sass/my_style.sass */
+/* line 863, ../sass/my_style.sass */
 #impress .views-field-field-description {
   padding: 10px 20px;
   font-size: 16px;
   border-left: 5px solid #eee;
 }
 
-/* line 865, ../sass/my_style.sass */
+/* line 868, ../sass/my_style.sass */
 #impress_yes {
   padding: 0px 15px !important;
   margin-bottom: 30px;
 }
-/* line 868, ../sass/my_style.sass */
+/* line 871, ../sass/my_style.sass */
 #impress_yes .view-content {
   margin-left: 20px;
 }
-/* line 870, ../sass/my_style.sass */
+/* line 873, ../sass/my_style.sass */
 #impress_yes h2 {
   margin-top: 25px !important;
   margin-bottom: 10px !important;
 }
-/* line 873, ../sass/my_style.sass */
+/* line 876, ../sass/my_style.sass */
 #impress_yes .views-field-title {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 10px;
 }
-/* line 877, ../sass/my_style.sass */
+/* line 880, ../sass/my_style.sass */
 #impress_yes .views-field-title .field-content {
   margin-left: 15px;
   display: list-item;
 }
 
-/* line 881, ../sass/my_style.sass */
+/* line 884, ../sass/my_style.sass */
 div.pages {
   padding: 0px 15px !important;
   margin-bottom: 30px;
 }
-/* line 884, ../sass/my_style.sass */
+/* line 887, ../sass/my_style.sass */
 div.pages ul, div.pages ol {
   margin-left: 45px;
 }
-/* line 886, ../sass/my_style.sass */
+/* line 889, ../sass/my_style.sass */
 div.pages .tabs.primary.clearfix {
   margin-left: 0;
 }
-/* line 888, ../sass/my_style.sass */
+/* line 891, ../sass/my_style.sass */
 div.pages .pane-node-title {
   font-weight: 500;
   line-height: 1.1;
@@ -1393,72 +1396,72 @@ div.pages .pane-node-title {
   margin-bottom: 35px !important;
 }
 
-/* line 896, ../sass/my_style.sass */
+/* line 899, ../sass/my_style.sass */
 .partner {
   padding: 0px 15px !important;
 }
-/* line 898, ../sass/my_style.sass */
+/* line 901, ../sass/my_style.sass */
 .partner h3 {
   margin-top: 40px;
 }
-/* line 900, ../sass/my_style.sass */
+/* line 903, ../sass/my_style.sass */
 .partner table {
   border-collapse: unset;
 }
-/* line 903, ../sass/my_style.sass */
+/* line 906, ../sass/my_style.sass */
 .partner #premium img {
   max-width: 158px;
 }
-/* line 906, ../sass/my_style.sass */
+/* line 909, ../sass/my_style.sass */
 .partner #recreation img {
   max-width: 104px;
 }
-/* line 908, ../sass/my_style.sass */
+/* line 911, ../sass/my_style.sass */
 .partner .views-field-field-picturep, .partner .views-field-field-descriptionp {
   padding: 10px;
 }
-/* line 910, ../sass/my_style.sass */
+/* line 913, ../sass/my_style.sass */
 .partner .views-field-field-picturep p, .partner .views-field-field-descriptionp p {
   margin: 0 !important;
 }
-/* line 912, ../sass/my_style.sass */
+/* line 915, ../sass/my_style.sass */
 .partner .even, .partner .odd {
   background-color: white;
   border: 0;
   padding: 0;
 }
 
-/* line 917, ../sass/my_style.sass */
+/* line 920, ../sass/my_style.sass */
 .my_footer {
   margin-top: 10px !important;
 }
-/* line 919, ../sass/my_style.sass */
+/* line 922, ../sass/my_style.sass */
 .my_footer .clearfix {
   margin: auto;
   width: -moz-fit-content;
 }
-/* line 922, ../sass/my_style.sass */
+/* line 925, ../sass/my_style.sass */
 .my_footer .second_menu_footer {
   width: auto;
 }
-/* line 924, ../sass/my_style.sass */
+/* line 927, ../sass/my_style.sass */
 .my_footer .second_menu_footer li {
   display: inline;
   padding: 0;
   margin: 0;
 }
-/* line 928, ../sass/my_style.sass */
+/* line 931, ../sass/my_style.sass */
 .my_footer a {
   padding-right: 7px;
   border-right: solid 1px black;
   padding-left: 2.7px;
 }
-/* line 932, ../sass/my_style.sass */
+/* line 935, ../sass/my_style.sass */
 .my_footer .footer_text {
   padding-left: 7px;
   padding-right: 2.7px;
 }
-/* line 935, ../sass/my_style.sass */
+/* line 938, ../sass/my_style.sass */
 .my_footer .footer_text a {
   margin-right: 7px;
 }
