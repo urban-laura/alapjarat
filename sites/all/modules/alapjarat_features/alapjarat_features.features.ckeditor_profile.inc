@@ -160,9 +160,7 @@ function alapjarat_features_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => 'config.enterMode = CKEDITOR.ENTER_BR;
-config.autoParagraph = false;
-config.allowedContent = true;
+        'js_conf' => 'config.allowedContent = true;
 ',
         'loadPlugins' => array(
           'button' => array(
