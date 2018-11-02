@@ -515,7 +515,7 @@ function alapjarat_common_fix_articles_list() {
   //->fields('text', array('field_text_value'))
   ->condition('n.type', 'a_article', '=')
   ->condition('meta.field_meta_description_value', '')
-  ->range(0, 40)
+  //->range(0, 40)
   ->orderBy('n.nid', 'DESC');
   //$query->isNull('wp.entity_id');
 
@@ -546,7 +546,7 @@ function alapjarat_common_fix_articles_list() {
     //$row[] = $occ;
     //$row[] = l('FIX IT', '/quickfix/' . $record->nid, array('attributes' => array('target'=>'_blank')));
 
-    $meta = alapjarat_common_get_meta($url);
+    //$meta = alapjarat_common_get_meta($url);
     $row[] = $meta;
     $row[] = $rew;
     $rows[] = $row;
@@ -558,7 +558,7 @@ function alapjarat_common_fix_articles_list() {
       $node_wrapper = entity_metadata_wrapper('node', $node);
       $node_wrapper->field_meta_description->set(array('value' => $meta, 'format' => 'text'));
       $nids[] = $record->nid;
-      $node_wrapper->save();
+      //$node_wrapper->save();
       //watchdog('meta_added', l($url, $url, array('attributes' => array('target'=>'_blank'))));
     }
     
