@@ -515,7 +515,7 @@ function alapjarat_common_fix_articles_list() {
   //->fields('text', array('field_text_value'))
   ->condition('n.type', 'a_article', '=')
   ->condition('meta.field_meta_description_value', '')
-  ->range(0, 50)
+  ->range(0, 40)
   ->orderBy('n.nid', 'DESC');
   //$query->isNull('wp.entity_id');
 
