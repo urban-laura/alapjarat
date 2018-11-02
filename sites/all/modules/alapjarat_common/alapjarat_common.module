@@ -509,10 +509,13 @@ function alapjarat_common_fix_articles_list() {
 
   $query = db_select('node', 'n');
   $query->leftJoin('field_data_field_meta_description', 'meta', 'meta.entity_id = n.nid');
+  $query->leftJoin('field_data_field_text', 'text', 'text.entity_id = n.nid');
   $query
-  ->fields('n', array('nid'))
+  ->fields('n', array('nid', 'title'))
+  //->fields('text', array('field_text_value'))
   ->condition('n.type', 'a_article', '=')
   ->condition('meta.field_meta_description_value', '')
+  ->range(0, 50)
   ->orderBy('n.nid', 'DESC');
   //$query->isNull('wp.entity_id');
 
@@ -521,6 +524,16 @@ function alapjarat_common_fix_articles_list() {
   ->fetchAll();
 
   $c = 0;
+  /*
+  $meta0 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp0.xml');
+  $meta1 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp1.xml');
+  $meta2 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp2.xml');
+  $meta3 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp3.xml');
+  $meta4 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp4.xml');
+  $meta = array_merge($meta0, $meta1, $meta2, $meta3, $meta4);
+  */
+
+  $rew = 1;
   foreach ($results as $record) {
     $c++;
     $occ = substr_count($record->field_text_value, $search_phrase);
@@ -528,16 +541,147 @@ function alapjarat_common_fix_articles_list() {
     $row[] = $c;
     $row[] = $record->nid;
     $url = $base_url . '/' . drupal_get_path_alias('node/' . $record->nid);
-    $row[] = l($url, $url);
+
+    $row[] = l($url, $url, array('attributes' => array('target'=>'_blank')));
     //$row[] = $occ;
     //$row[] = l('FIX IT', '/quickfix/' . $record->nid, array('attributes' => array('target'=>'_blank')));
+
+    $meta = alapjarat_common_get_meta($url);
+    $row[] = $meta;
+    $row[] = $rew;
     $rows[] = $row;
+    
+
+    if (!empty($meta)) {
+      $rew++;
+      $node = node_load($record->nid);
+      $node_wrapper = entity_metadata_wrapper('node', $node);
+      $node_wrapper->field_meta_description->set(array('value' => $meta, 'format' => 'text'));
+      $nids[] = $record->nid;
+      $node_wrapper->save();
+      //watchdog('meta_added', l($url, $url, array('attributes' => array('target'=>'_blank'))));
+    }
+    
 
   }
+
+  watchdog('changed nodes', '$nid = array(' . implode(',', $nids) . ');');
 
   $fields = array('count', 'nid', 'path');
   $output = theme('table', array('header' => $fields, 'rows' => $rows));
 
 
   return $output;
+}
+
+function alapjarat_common_get_xml($source) {
+  $data = file_get_contents($source);
+  $data = str_replace('excerpt:encoded', 'excerpt', $data);
+  
+  $data = str_replace('wp:meta_value', 'meta_value', $data);
+  $xml = simplexml_load_string($data, 'SimpleXMLElement', LIBXML_COMPACT | LIBXML_PARSEHUGE);
+
+  $metas = [];
+  foreach ($xml->channel->item as $key=>$val) {
+    $title = ((string)$val->title);
+    $meta = ((string)$val->excerpt);
+    $metas[$title] = $meta;
+  }
+
+  return $metas;
+}
+
+function alapjarat_common_get_meta($url) {
+  global $base_url;
+  $url = str_replace($base_url, 'http://wp.alapjarat.hu', $url);
+  $data = motor_curl_get_contents($url);
+
+
+  $pattern = '/<meta name="description" content="(.*?)"/ui';
+  preg_match_all($pattern, $data, $matches);
+  return $matches[1][0];
+}
+
+function motor_curl_get_contents($url, $post = NULL) {
+
+
+
+  if (isset($_POST['api_url'])) {
+    $ch = curl_init($_POST['api_url']);
+  }
+  else {
+    $ch = curl_init($url);
+  }
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+
+  if (isset($_POST['params'])) {
+    $params = str_replace('|', '&', $_POST['params']);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+  }
+
+  $params = '';
+  if (isset($post)) {
+    
+    curl_setopt($ch, CURLOPT_POST, 1);
+      
+    $params = 'api=1';
+    foreach ($post as $key => $value) {       
+      $params .= '&' . $key . '=' . $value;
+    }
+    
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+  }
+
+  $data = curl_exec($ch);
+  $status=curl_getinfo($ch);
+  curl_close($ch);
+
+
+
+  if (isset($_POST['api_url']) && $status['http_code']==200) {
+    print $data;
+    return;
+  }
+  if (isset($_POST['api_url']) && $status['http_code']!==200) {
+    print 'error';
+    //print json_encode($status);
+    return;
+  }
+
+  if($status['http_code'] == 200)
+    {
+          
+
+        return $data;
+    }
+    elseif($status['http_code']==301 || $status['http_code']==302)
+    {
+        if (!$follow_allowed)
+        {
+            if (!empty($status['redirect_url']))
+            {
+                $redirURL=$status['redirect_url'];
+            }
+            else
+            {
+                preg_match('/href\=\"(.*?)\"/si',$data,$m);
+                if (!empty($m[1]))
+                {
+                    $redirURL=$m[1];
+                }
+            }
+            if(!empty($redirURL))
+            {
+                return  call_user_func( __FUNCTION__, $redirURL, $post_paramtrs);
+            }
+        }
+    }
+   
+    return;
+  
+  
 }
