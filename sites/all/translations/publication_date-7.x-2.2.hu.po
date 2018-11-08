@@ -1,0 +1,28 @@
+# Hungarian translation of Publication Date (7.x-2.2)
+# Copyright (c) 2015 by the Hungarian translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Publication Date (7.x-2.2)\n"
+"POT-Creation-Date: 2015-03-09 08:16+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Hungarian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Node"
+msgstr "Tartalom"
+msgid "Published on"
+msgstr "Közzétéve"
+msgid "Format: %time. Leave blank to use the time of form submission."
+msgstr ""
+"Formátum: %time. Üresen hagyva a beküldés ideje lesz "
+"felhasználva."
+msgid "Date Popup Configuration"
+msgstr "Date Popup beállításai"
+msgid "Starting year"
+msgstr "Kezdőév"
+msgid "Ending year"
+msgstr "Befejező év"
