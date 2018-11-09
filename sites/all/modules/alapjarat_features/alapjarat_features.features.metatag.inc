@@ -21,20 +21,6 @@ function alapjarat_features_metatag_export_default() {
       'description' => array(
         'value' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz. Érdekességek a hazai- és nemzetközi autó eseményekről. A magyar autósok közösségi portálja.',
       ),
-      'robots' => array(
-        'value' => array(
-          'index' => 0,
-          'follow' => 0,
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
-      ),
       'canonical' => array(
         'value' => '[site:url]',
       ),
@@ -54,20 +40,6 @@ function alapjarat_features_metatag_export_default() {
     'config' => array(
       'title' => array(
         'value' => '[node:title] | [site:name]',
-      ),
-      'robots' => array(
-        'value' => array(
-          'index' => 0,
-          'follow' => 0,
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
       ),
     ),
   );

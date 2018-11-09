@@ -2092,7 +2092,6 @@ function alapjarat_features_views_default_views() {
     t('Banner3(fix)'),
     t('Banner4(fix)'),
     t('Banner5(fix)'),
-    t('- Művelet kiválasztása -'),
   );
   $export['admin'] = $view;
 
@@ -2443,7 +2442,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Sérült / hiányzó kezelő */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_textb']['id'] = 'field_textb';
   $handler->display->display_options['fields']['field_textb']['table'] = 'field_data_field_textb';
   $handler->display->display_options['fields']['field_textb']['field'] = 'field_textb';
@@ -2463,7 +2462,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Sérült / hiányzó kezelő */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_location_tid']['id'] = 'field_location_tid';
   $handler->display->display_options['filters']['field_location_tid']['table'] = 'field_data_field_location';
   $handler->display->display_options['filters']['field_location_tid']['field'] = 'field_location_tid';
@@ -3753,6 +3752,11 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['field_remove_date_value']['field'] = 'field_remove_date_value';
   $handler->display->display_options['filters']['field_remove_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_remove_date_value']['default_date'] = 'now';
+  /* Filter criterion: Content: Event date (field_event_date:delta) */
+  $handler->display->display_options['filters']['delta']['id'] = 'delta';
+  $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['delta']['field'] = 'delta';
+  $handler->display->display_options['filters']['delta']['value']['value'] = '0';
 
   /* Display: Event */
   $handler = $view->new_display('panel_pane', 'Event', 'panel_pane_1');
