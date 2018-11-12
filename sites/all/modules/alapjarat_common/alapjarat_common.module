@@ -504,36 +504,22 @@ function alapjarat_common_embed_instagram($text) {
 
 function alapjarat_common_fix_articles_list() {
   global $base_url;
-
-  $search_phrase = '[caption';
-
-  $query = db_select('node', 'n');
-  $query->leftJoin('field_data_field_meta_description', 'meta', 'meta.entity_id = n.nid');
-  $query->leftJoin('field_data_field_text', 'text', 'text.entity_id = n.nid');
+   $search_phrase = 'googleusercontent';
+   $query = db_select('node', 'n');
+  $query->leftJoin('field_data_field_wp_post_id', 'wp', 'wp.entity_id = n.nid');
+  $query->leftJoin('field_data_field_text', 'wptext', 'wptext.entity_id = n.nid');
   $query
-  ->fields('n', array('nid', 'title'))
-  //->fields('text', array('field_text_value'))
+  ->fields('n', array('nid'))
+  ->fields('wp', array('entity_id'))
+  ->fields('wptext', array('field_text_value'))
   ->condition('n.type', 'a_article', '=')
-  ->condition('meta.field_meta_description_value', '')
-  //->range(0, 40)
+  ->condition('wptext.field_text_value', '%' . db_like($search_phrase) . '%', 'LIKE')
   ->orderBy('n.nid', 'DESC');
-  //$query->isNull('wp.entity_id');
-
-  $results = $query
+  $query->isNull('wp.entity_id');
+   $results = $query
   ->execute()
   ->fetchAll();
-
-  $c = 0;
-  /*
-  $meta0 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp0.xml');
-  $meta1 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp1.xml');
-  $meta2 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp2.xml');
-  $meta3 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp3.xml');
-  $meta4 = alapjarat_common_get_xml('sites/all/modules/migrate_wp/source/wp4.xml');
-  $meta = array_merge($meta0, $meta1, $meta2, $meta3, $meta4);
-  */
-
-  $rew = 1;
+   $c = 0;
   foreach ($results as $record) {
     $c++;
     $occ = substr_count($record->field_text_value, $search_phrase);
@@ -541,37 +527,14 @@ function alapjarat_common_fix_articles_list() {
     $row[] = $c;
     $row[] = $record->nid;
     $url = $base_url . '/' . drupal_get_path_alias('node/' . $record->nid);
-
-    $row[] = l($url, $url, array('attributes' => array('target'=>'_blank')));
-    //$row[] = $occ;
-    //$row[] = l('FIX IT', '/quickfix/' . $record->nid, array('attributes' => array('target'=>'_blank')));
-
-    //$meta = alapjarat_common_get_meta($url);
-    $row[] = $meta;
-    $row[] = $rew;
+    $row[] = l($url, $url);
+    $row[] = $occ;
+    $row[] = l('FIX IT', '/quickfix/' . $record->nid, array('attributes' => array('target'=>'_blank')));
     $rows[] = $row;
-    
-
-    if (!empty($meta)) {
-      $rew++;
-      $node = node_load($record->nid);
-      $node_wrapper = entity_metadata_wrapper('node', $node);
-      $node_wrapper->field_meta_description->set(array('value' => $meta, 'format' => 'text'));
-      $nids[] = $record->nid;
-      //$node_wrapper->save();
-      //watchdog('meta_added', l($url, $url, array('attributes' => array('target'=>'_blank'))));
-    }
-    
-
-  }
-
-  watchdog('changed nodes', '$nid = array(' . implode(',', $nids) . ');');
-
-  $fields = array('count', 'nid', 'path');
+   }
+   $fields = array('count', 'nid', 'path', 'G images in article', 'fix link');
   $output = theme('table', array('header' => $fields, 'rows' => $rows));
-
-
-  return $output;
+   return $output;
 }
 
 function alapjarat_common_get_xml($source) {
