@@ -80,10 +80,11 @@ function alapjarat_common_fix_google_images($url) {
     
     $change = FALSE;
     $c = 0;
+    $rand = rand(1,100);
     foreach ($matches[1] as $match) {
       $http = str_replace('https', 'http', $match);
       $c++;
-      $file_info = system_retrieve_file($http, 'public://car-image-' . $c . '.jpg', TRUE); 
+      $file_info = system_retrieve_file($http, 'public://car-image-' . $rand . '-' . $c . '.jpg', TRUE);
       if ($file_info->fid){
         $nwrapper->field_media[] = array('fid' => $file_info->fid, 'display' => TRUE);
         $new_image = file_create_url($file_info->uri);
