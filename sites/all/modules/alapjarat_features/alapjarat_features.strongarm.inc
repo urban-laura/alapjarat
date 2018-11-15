@@ -480,9 +480,12 @@ function alapjarat_features_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'metatags' => array(
+          'weight' => '8',
+        ),
+        'redirect' => array(
           'weight' => '9',
         ),
       ),

@@ -1299,94 +1299,84 @@ a:hover {
 }
 /* line 834, ../sass/my_style.sass */
 #impress .views-field-field-e-mail {
-  background-image: url("/sites/default/files/email.png");
-  background-repeat: no-repeat;
-  height: 32px;
-  width: 32px;
   float: left;
 }
-/* line 840, ../sass/my_style.sass */
-#impress .views-field-field-e-mail a {
-  font-size: 0px;
-  padding: 15px 0px;
-  padding-right: 21px;
-}
-/* line 844, ../sass/my_style.sass */
+/* line 836, ../sass/my_style.sass */
 #impress .views-row {
   clear: both;
   padding-top: 25px;
 }
-/* line 847, ../sass/my_style.sass */
+/* line 839, ../sass/my_style.sass */
 #impress .views-field-title {
   color: #d82222;
   float: left;
   margin-left: 6px;
   margin-right: 9px;
 }
-/* line 852, ../sass/my_style.sass */
+/* line 844, ../sass/my_style.sass */
 #impress .views-field-field-status {
   margin-bottom: 10px;
 }
-/* line 854, ../sass/my_style.sass */
+/* line 846, ../sass/my_style.sass */
 #impress .views-field-title, #impress .views-field-field-status {
   font-family: montserrat, sans-serif;
   font-size: 24px;
   line-height: 30px;
 }
-/* line 858, ../sass/my_style.sass */
+/* line 850, ../sass/my_style.sass */
 #impress .views-field-field-picture {
   float: left;
   padding-top: 10px;
   margin-right: 1.5em;
   margin-left: 25px;
 }
-/* line 863, ../sass/my_style.sass */
+/* line 855, ../sass/my_style.sass */
 #impress .views-field-field-description {
   padding: 10px 20px;
   font-size: 16px;
   border-left: 5px solid #eee;
 }
 
-/* line 868, ../sass/my_style.sass */
+/* line 860, ../sass/my_style.sass */
 #impress_yes {
   padding: 0px 15px !important;
   margin-bottom: 30px;
 }
-/* line 871, ../sass/my_style.sass */
+/* line 863, ../sass/my_style.sass */
 #impress_yes .view-content {
   margin-left: 20px;
 }
-/* line 873, ../sass/my_style.sass */
+/* line 865, ../sass/my_style.sass */
 #impress_yes h2 {
   margin-top: 25px !important;
   margin-bottom: 10px !important;
 }
-/* line 876, ../sass/my_style.sass */
+/* line 868, ../sass/my_style.sass */
 #impress_yes .views-field-title {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 10px;
 }
-/* line 880, ../sass/my_style.sass */
+/* line 872, ../sass/my_style.sass */
 #impress_yes .views-field-title .field-content {
   margin-left: 15px;
   display: list-item;
 }
 
-/* line 884, ../sass/my_style.sass */
+/* line 876, ../sass/my_style.sass */
 div.pages {
   padding: 0px 15px !important;
   margin-bottom: 30px;
 }
-/* line 887, ../sass/my_style.sass */
+/* line 879, ../sass/my_style.sass */
 div.pages ul, div.pages ol {
   margin-left: 45px;
 }
-/* line 889, ../sass/my_style.sass */
+/* line 881, ../sass/my_style.sass */
 div.pages .tabs.primary.clearfix {
   margin-left: 0;
 }
-/* line 891, ../sass/my_style.sass */
+/* line 883, ../sass/my_style.sass */
 div.pages .pane-node-title {
   font-weight: 500;
   line-height: 1.1;
@@ -1396,72 +1386,72 @@ div.pages .pane-node-title {
   margin-bottom: 35px !important;
 }
 
-/* line 899, ../sass/my_style.sass */
+/* line 891, ../sass/my_style.sass */
 .partner {
   padding: 0px 15px !important;
 }
-/* line 901, ../sass/my_style.sass */
+/* line 893, ../sass/my_style.sass */
 .partner h3 {
   margin-top: 40px;
 }
-/* line 903, ../sass/my_style.sass */
+/* line 895, ../sass/my_style.sass */
 .partner table {
   border-collapse: unset;
 }
-/* line 906, ../sass/my_style.sass */
+/* line 898, ../sass/my_style.sass */
 .partner #premium img {
   max-width: 158px;
 }
-/* line 909, ../sass/my_style.sass */
+/* line 901, ../sass/my_style.sass */
 .partner #recreation img {
   max-width: 104px;
 }
-/* line 911, ../sass/my_style.sass */
+/* line 903, ../sass/my_style.sass */
 .partner .views-field-field-picturep, .partner .views-field-field-descriptionp {
   padding: 10px;
 }
-/* line 913, ../sass/my_style.sass */
+/* line 905, ../sass/my_style.sass */
 .partner .views-field-field-picturep p, .partner .views-field-field-descriptionp p {
   margin: 0 !important;
 }
-/* line 915, ../sass/my_style.sass */
+/* line 907, ../sass/my_style.sass */
 .partner .even, .partner .odd {
   background-color: white;
   border: 0;
   padding: 0;
 }
 
-/* line 920, ../sass/my_style.sass */
+/* line 912, ../sass/my_style.sass */
 .my_footer {
   margin-top: 10px !important;
 }
-/* line 922, ../sass/my_style.sass */
+/* line 914, ../sass/my_style.sass */
 .my_footer .clearfix {
   margin: auto;
   width: -moz-fit-content;
 }
-/* line 925, ../sass/my_style.sass */
+/* line 917, ../sass/my_style.sass */
 .my_footer .second_menu_footer {
   width: auto;
 }
-/* line 927, ../sass/my_style.sass */
+/* line 919, ../sass/my_style.sass */
 .my_footer .second_menu_footer li {
   display: inline;
   padding: 0;
   margin: 0;
 }
-/* line 931, ../sass/my_style.sass */
+/* line 923, ../sass/my_style.sass */
 .my_footer a {
   padding-right: 7px;
   border-right: solid 1px black;
   padding-left: 2.7px;
 }
-/* line 935, ../sass/my_style.sass */
+/* line 927, ../sass/my_style.sass */
 .my_footer .footer_text {
   padding-left: 7px;
   padding-right: 2.7px;
 }
-/* line 938, ../sass/my_style.sass */
+/* line 930, ../sass/my_style.sass */
 .my_footer .footer_text a {
   margin-right: 7px;
 }

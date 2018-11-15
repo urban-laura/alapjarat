@@ -2588,7 +2588,7 @@ function alapjarat_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -2628,7 +2628,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -2671,6 +2671,81 @@ function alapjarat_features_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-impress-field_name_link'.
+  $field_instances['node-impress-field_name_link'] = array(
+    'bundle' => 'impress',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_name_link',
+    'label' => 'Name Link',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -2773,7 +2848,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -2814,7 +2889,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -3134,6 +3209,7 @@ function alapjarat_features_field_default_field_instances() {
   t('Location');
   t('Main image');
   t('Meta description (300 - 320)');
+  t('Name Link');
   t('Picture');
   t('Premium car partner?');
   t('Primary Heading 	');
