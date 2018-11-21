@@ -17,11 +17,15 @@
  *   data including the contexts and all of the other panes being displayed.
  */
 if ($pane->type == 'node_created') {
-  $node = node_load($display->args[0]);
-  if ($node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18') {
+  $node = node_load($display->args[0]);    
+  if ($node->published_at) {
+    $content = date('Y-m-d', $node->published_at);
+  }
+  if (($node->published_at && $node->published_at !== $node->changed) || 
+  (!$node->published_at && $node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18')) {
     $title = t('Updated:');
     $content = date('Y-m-d', $node->changed);
-  }
+  } 
 }
 ?>
 <?php if ($pane_prefix): ?>
