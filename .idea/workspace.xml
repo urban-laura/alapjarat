@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css" afterDir="false" />
-    </list>
+    <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,17 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="my_style.sass" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="859" column="12" selection-start-line="859" selection-start-column="12" selection-end-line="859" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,7 +36,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="811" />
@@ -138,16 +125,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542272013543</updated>
-      <workItem from="1542272015600" duration="828000" />
+      <workItem from="1542272015600" duration="1018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="828000" />
+    <option name="totallyTimeSpent" value="1018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="811" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32971507" />
