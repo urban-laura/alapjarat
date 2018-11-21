@@ -90,11 +90,8 @@ function alapjarat_features_metatag_export_default() {
     'instance' => 'node:pages',
     'disabled' => FALSE,
     'config' => array(
-      'title' => array(
-        'value' => '[node:title] | [site:name]',
-      ),
-      'description' => array(
-        'value' => '',
+      'og:image' => array(
+        'value' => '[node:field_image]',
       ),
     ),
   );
