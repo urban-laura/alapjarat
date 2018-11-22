@@ -286,6 +286,25 @@ function alapjarat_features_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
+  // Exported menu link: menu-admin-menu_szerz-trsa:change-author-bulk.
+  $menu_links['menu-admin-menu_szerz-trsa:change-author-bulk'] = array(
+    'menu_name' => 'menu-admin-menu',
+    'link_path' => 'change-author-bulk',
+    'router_path' => 'change-author-bulk',
+    'link_title' => 'Szerző átírása',
+    'options' => array(
+      'identifier' => 'menu-admin-menu_szerz-trsa:change-author-bulk',
+    ),
+    'module' => 'system',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 0,
+    'language' => 'und',
+    'menu_links_customized' => 0,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -301,6 +320,7 @@ function alapjarat_features_menu_default_menu_links() {
   t('Metatags');
   t('Pages');
   t('Partners');
+  t('Szerző átírása');
 
   return $menu_links;
 }

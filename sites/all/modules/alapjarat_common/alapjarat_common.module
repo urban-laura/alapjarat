@@ -10,7 +10,7 @@ function alapjarat_common_menu() {
     'access arguments' => array('access administration pages'),
     'menu_name' => 'menu-admin-menu',
     'type' => MENU_NORMAL_ITEM,
-  );*/
+  );
 
   $items['fix-article-images-list'] = array(
     'title' => 'Fix list',
@@ -27,6 +27,8 @@ function alapjarat_common_menu() {
     'access arguments' => array('access administration pages'),
     'type' => MENU_CALLBACK,
   );
+
+  */
 
   return $items;
 }
