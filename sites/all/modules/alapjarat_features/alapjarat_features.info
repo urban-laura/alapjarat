@@ -185,7 +185,6 @@ features[menu_links][] = menu-admin-menu_log-out:user/logout
 features[menu_links][] = menu-admin-menu_metatags:admin/config/search/metatags
 features[menu_links][] = menu-admin-menu_pages:admin/pages
 features[menu_links][] = menu-admin-menu_partners:admin/partner
-features[menu_links][] = menu-admin-menu_szerz-trsa:change-author-bulk
 features[metatag][] = global:frontpage
 features[metatag][] = node
 features[metatag][] = node:a_article
