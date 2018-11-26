@@ -2092,6 +2092,7 @@ function alapjarat_features_views_default_views() {
     t('Banner3(fix)'),
     t('Banner4(fix)'),
     t('Banner5(fix)'),
+    t('- Művelet kiválasztása -'),
   );
   $export['admin'] = $view;
 
@@ -2442,7 +2443,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Broken/missing handler */
+  /* Field: Sérült / hiányzó kezelő */
   $handler->display->display_options['fields']['field_textb']['id'] = 'field_textb';
   $handler->display->display_options['fields']['field_textb']['table'] = 'field_data_field_textb';
   $handler->display->display_options['fields']['field_textb']['field'] = 'field_textb';
@@ -2462,7 +2463,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Broken/missing handler */
+  /* Filter criterion: Sérült / hiányzó kezelő */
   $handler->display->display_options['filters']['field_location_tid']['id'] = 'field_location_tid';
   $handler->display->display_options['filters']['field_location_tid']['table'] = 'field_data_field_location';
   $handler->display->display_options['filters']['field_location_tid']['field'] = 'field_location_tid';
@@ -3803,6 +3804,7 @@ function alapjarat_features_views_default_views() {
     t('Szerző'),
     t('Page'),
     t('more'),
+    t('- Művelet kiválasztása -'),
   );
   $export['change_author_bulk'] = $view;
 
@@ -5272,7 +5274,6 @@ function alapjarat_features_views_default_views() {
     t('term from field_menu'),
     t('<a href="[path]">[field_title2]</a>'),
     t('First 5'),
-    t('more'),
     t('Legfrissebb'),
     t('Nézettáblák'),
     t('helpful_info_A'),
@@ -6300,7 +6301,6 @@ function alapjarat_features_views_default_views() {
     t('The editorial of Alapjárat'),
     t('<a href="mailto:[field_e_mail-email]"><img src="https://alapjarat.hu/sites/default/files/email.png" alt="[field_e_mail-email]"></a>'),
     t('Impress (NO)'),
-    t('more'),
     t('<h1>Impresszum</h1> <h2>Az Alapjárat szerkesztősége</h2>'),
     t('<a href="[field_name_link]">[title]</a>'),
     t('Nézettáblák'),
