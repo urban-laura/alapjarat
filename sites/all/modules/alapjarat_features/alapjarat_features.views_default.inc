@@ -158,7 +158,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -219,7 +219,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'impress' => 'impress',
   );
-  /* Filter criterion: Tartalom: External co-worker? (field_external_co_worker_) */
+  /* Filter criterion: Content: External co-worker? (field_external_co_worker_) */
   $handler->display->display_options['filters']['field_external_co_worker__tid']['id'] = 'field_external_co_worker__tid';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['table'] = 'field_data_field_external_co_worker_';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['field'] = 'field_external_co_worker__tid';
@@ -279,7 +279,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partners' => 'partners',
   );
-  /* Filter criterion: Tartalom: Premium car partner? (field_premium_car_partner_1) */
+  /* Filter criterion: Content: Premium car partner? (field_premium_car_partner_1) */
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['id'] = 'field_premium_car_partner_1_tid';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['table'] = 'field_data_field_premium_car_partner_1';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['field'] = 'field_premium_car_partner_1_tid';
@@ -334,7 +334,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'impress' => 'impress',
   );
-  /* Filter criterion: Tartalom: External co-worker? (field_external_co_worker_) */
+  /* Filter criterion: Content: External co-worker? (field_external_co_worker_) */
   $handler->display->display_options['filters']['field_external_co_worker__tid']['id'] = 'field_external_co_worker__tid';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['table'] = 'field_data_field_external_co_worker_';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['field'] = 'field_external_co_worker__tid';
@@ -401,7 +401,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partners' => 'partners',
   );
-  /* Filter criterion: Tartalom: Premium car partner? (field_premium_car_partner_1) */
+  /* Filter criterion: Content: Premium car partner? (field_premium_car_partner_1) */
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['id'] = 'field_premium_car_partner_1_tid';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['table'] = 'field_data_field_premium_car_partner_1';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['field'] = 'field_premium_car_partner_1_tid';
@@ -642,7 +642,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Tartalom: Location */
+  /* Field: Content: Location */
   $handler->display->display_options['fields']['field_location0']['id'] = 'field_location0';
   $handler->display->display_options['fields']['field_location0']['table'] = 'field_data_field_location0';
   $handler->display->display_options['fields']['field_location0']['field'] = 'field_location0';
@@ -681,7 +681,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -698,7 +698,7 @@ function alapjarat_features_views_default_views() {
   );
   $handler->display->display_options['filters']['field_location0_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -776,14 +776,14 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = 'Útvonal';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = 'Cím';
   $handler->display->display_options['fields']['field_title2']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['alter']['text'] = '<a href=\'[path]\'>[field_title2]</a>';
-  /* Field: Tartalom: Hiden select */
+  /* Field: Content: Hiden select */
   $handler->display->display_options['fields']['field_hiden_select']['id'] = 'field_hiden_select';
   $handler->display->display_options['fields']['field_hiden_select']['table'] = 'field_data_field_hiden_select';
   $handler->display->display_options['fields']['field_hiden_select']['field'] = 'field_hiden_select';
@@ -796,19 +796,19 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y-m-d H:i';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Szerző';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Tartalom: Primary Heading 	 */
+  /* Field: Content: Primary Heading 	 */
   $handler->display->display_options['fields']['field_menu']['id'] = 'field_menu';
   $handler->display->display_options['fields']['field_menu']['table'] = 'field_data_field_menu';
   $handler->display->display_options['fields']['field_menu']['field'] = 'field_menu';
   $handler->display->display_options['fields']['field_menu']['label'] = 'Elsődleges Rovat';
   $handler->display->display_options['fields']['field_menu']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -841,7 +841,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Hiden select (field_hiden_select) */
+  /* Filter criterion: Content: Hiden select (field_hiden_select) */
   $handler->display->display_options['filters']['field_hiden_select_value']['id'] = 'field_hiden_select_value';
   $handler->display->display_options['filters']['field_hiden_select_value']['table'] = 'field_data_field_hiden_select';
   $handler->display->display_options['filters']['field_hiden_select_value']['field'] = 'field_hiden_select_value';
@@ -879,7 +879,7 @@ function alapjarat_features_views_default_views() {
     'node.created' => 'node.created',
   );
   $handler->display->display_options['filters']['date_filter']['date_method'] = 'AND';
-  /* Filter criterion: Tartalom: Published (field_published) */
+  /* Filter criterion: Content: Published (field_published) */
   $handler->display->display_options['filters']['field_published_tid']['id'] = 'field_published_tid';
   $handler->display->display_options['filters']['field_published_tid']['table'] = 'field_data_field_published';
   $handler->display->display_options['filters']['field_published_tid']['field'] = 'field_published_tid';
@@ -898,7 +898,7 @@ function alapjarat_features_views_default_views() {
   );
   $handler->display->display_options['filters']['field_published_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_published_tid']['vocabulary'] = 'published';
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -935,7 +935,7 @@ function alapjarat_features_views_default_views() {
   );
   $handler->display->display_options['filters']['field_menu_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -1030,7 +1030,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Cím';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Tartalom: Published date */
+  /* Field: Content: Published date */
   $handler->display->display_options['fields']['field_published_date']['id'] = 'field_published_date';
   $handler->display->display_options['fields']['field_published_date']['table'] = 'field_data_field_published_date';
   $handler->display->display_options['fields']['field_published_date']['field'] = 'field_published_date';
@@ -1044,7 +1044,7 @@ function alapjarat_features_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Tartalom: Remove date */
+  /* Field: Content: Remove date */
   $handler->display->display_options['fields']['field_remove_date']['id'] = 'field_remove_date';
   $handler->display->display_options['fields']['field_remove_date']['table'] = 'field_data_field_remove_date';
   $handler->display->display_options['fields']['field_remove_date']['field'] = 'field_remove_date';
@@ -1255,7 +1255,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -1279,7 +1279,7 @@ function alapjarat_features_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -1443,7 +1443,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -1467,7 +1467,7 @@ function alapjarat_features_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -1631,7 +1631,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -1655,7 +1655,7 @@ function alapjarat_features_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -1819,7 +1819,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -1843,7 +1843,7 @@ function alapjarat_features_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2007,7 +2007,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2031,7 +2031,7 @@ function alapjarat_features_views_default_views() {
     3 => 0,
     4 => 0,
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2150,7 +2150,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created_1']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created_1']['custom_date_format'] = 'Y. F';
   $handler->display->display_options['fields']['created_1']['second_date_format'] = 'long';
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -2166,13 +2166,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -2187,7 +2187,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -2198,7 +2198,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
@@ -2311,7 +2311,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<h4>Kapcsolódó írások</h4>';
   $handler->display->display_options['header']['area']['format'] = 'admin_html';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -2323,7 +2323,7 @@ function alapjarat_features_views_default_views() {
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_image']['group_column'] = 'entity_id';
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -2475,13 +2475,13 @@ function alapjarat_features_views_default_views() {
   /* Display: banner1 (random) */
   $handler = $view->new_display('panel_pane', 'banner1 (random)', 'panel_pane_5');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2508,7 +2508,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2516,7 +2516,7 @@ function alapjarat_features_views_default_views() {
     0 => '88',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2533,13 +2533,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2568,7 +2568,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2576,7 +2576,7 @@ function alapjarat_features_views_default_views() {
     0 => '88',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2589,13 +2589,13 @@ function alapjarat_features_views_default_views() {
   /* Display: banner2 (random) */
   $handler = $view->new_display('panel_pane', 'banner2 (random)', 'panel_pane_6');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2622,7 +2622,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2630,7 +2630,7 @@ function alapjarat_features_views_default_views() {
     0 => '89',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2647,13 +2647,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2682,7 +2682,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2690,7 +2690,7 @@ function alapjarat_features_views_default_views() {
     0 => '89',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2703,13 +2703,13 @@ function alapjarat_features_views_default_views() {
   /* Display: banner3 (random) */
   $handler = $view->new_display('panel_pane', 'banner3 (random)', 'panel_pane_2');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2736,7 +2736,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2744,7 +2744,7 @@ function alapjarat_features_views_default_views() {
     0 => '90',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2761,13 +2761,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2796,7 +2796,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2804,7 +2804,7 @@ function alapjarat_features_views_default_views() {
     0 => '90',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2817,13 +2817,13 @@ function alapjarat_features_views_default_views() {
   /* Display: banner4 (random) */
   $handler = $view->new_display('panel_pane', 'banner4 (random)', 'panel_pane_3');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2850,7 +2850,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2858,7 +2858,7 @@ function alapjarat_features_views_default_views() {
     0 => '91',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2875,13 +2875,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2910,7 +2910,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2918,7 +2918,7 @@ function alapjarat_features_views_default_views() {
     0 => '91',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2931,13 +2931,13 @@ function alapjarat_features_views_default_views() {
   /* Display: banner5 (random) */
   $handler = $view->new_display('panel_pane', 'banner5 (random)', 'panel_pane_4');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -2964,7 +2964,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -2972,7 +2972,7 @@ function alapjarat_features_views_default_views() {
     0 => '92',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -2989,13 +2989,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '';
   $handler->display->display_options['pager']['options']['offset'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
   $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
   $handler->display->display_options['fields']['field_title']['label'] = '';
   $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -3024,7 +3024,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -3032,7 +3032,7 @@ function alapjarat_features_views_default_views() {
     0 => '92',
   );
   $handler->display->display_options['filters']['field_location0_tid']['vocabulary'] = 'banner_0';
-  /* Filter criterion: Tartalom: Fix or Random? (field_fix_or_random_) */
+  /* Filter criterion: Content: Fix or Random? (field_fix_or_random_) */
   $handler->display->display_options['filters']['field_fix_or_random__tid']['id'] = 'field_fix_or_random__tid';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['table'] = 'field_data_field_fix_or_random_';
   $handler->display->display_options['filters']['field_fix_or_random__tid']['field'] = 'field_fix_or_random__tid';
@@ -3045,7 +3045,7 @@ function alapjarat_features_views_default_views() {
   /* Display: Banner article header */
   $handler = $view->new_display('panel_pane', 'Banner article header', 'panel_pane_11');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Text */
+  /* Field: Content: Text */
   $handler->display->display_options['fields']['field_text']['id'] = 'field_text';
   $handler->display->display_options['fields']['field_text']['table'] = 'field_data_field_text';
   $handler->display->display_options['fields']['field_text']['field'] = 'field_text';
@@ -3067,7 +3067,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'banner0' => 'banner0',
   );
-  /* Filter criterion: Tartalom: Location (field_location0) */
+  /* Filter criterion: Content: Location (field_location0) */
   $handler->display->display_options['filters']['field_location0_tid']['id'] = 'field_location0_tid';
   $handler->display->display_options['filters']['field_location0_tid']['table'] = 'field_data_field_location0';
   $handler->display->display_options['filters']['field_location0_tid']['field'] = 'field_location0_tid';
@@ -3215,13 +3215,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Nyilvános';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -3238,7 +3238,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y-d-m';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['timezone'] = 'Europe/Budapest';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3249,13 +3249,13 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => '',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -3268,7 +3268,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
-  /* Contextual filter: Tartalom: Tags (field_tags) */
+  /* Contextual filter: Content: Tags (field_tags) */
   $handler->display->display_options['arguments']['field_tags_tid_1']['id'] = 'field_tags_tid_1';
   $handler->display->display_options['arguments']['field_tags_tid_1']['table'] = 'field_data_field_tags';
   $handler->display->display_options['arguments']['field_tags_tid_1']['field'] = 'field_tags_tid';
@@ -3296,7 +3296,7 @@ function alapjarat_features_views_default_views() {
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -3312,13 +3312,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -3332,7 +3332,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3343,7 +3343,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
@@ -3364,7 +3364,7 @@ function alapjarat_features_views_default_views() {
   /* Display: published pane */
   $handler = $view->new_display('panel_pane', 'published pane', 'panel_pane_2');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -3380,13 +3380,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -3400,7 +3400,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3411,14 +3411,14 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Tartalom: Published (field_published) */
+  /* Contextual filter: Content: Published (field_published) */
   $handler->display->display_options['arguments']['field_published_tid']['id'] = 'field_published_tid';
   $handler->display->display_options['arguments']['field_published_tid']['table'] = 'field_data_field_published';
   $handler->display->display_options['arguments']['field_published_tid']['field'] = 'field_published_tid';
@@ -3443,7 +3443,7 @@ function alapjarat_features_views_default_views() {
   /* Display: tags pane */
   $handler = $view->new_display('panel_pane', 'tags pane', 'panel_pane_3');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -3459,13 +3459,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -3479,7 +3479,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3490,14 +3490,14 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Tartalom: Tags (field_tagsa) */
+  /* Contextual filter: Content: Tags (field_tagsa) */
   $handler->display->display_options['arguments']['field_tagsa_tid']['id'] = 'field_tagsa_tid';
   $handler->display->display_options['arguments']['field_tagsa_tid']['table'] = 'field_data_field_tagsa';
   $handler->display->display_options['arguments']['field_tagsa_tid']['field'] = 'field_tagsa_tid';
@@ -3521,7 +3521,7 @@ function alapjarat_features_views_default_views() {
   /* Display: Menu pane */
   $handler = $view->new_display('panel_pane', 'Menu pane', 'panel_pane_4');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -3537,13 +3537,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -3557,7 +3557,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3568,14 +3568,14 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Tartalom: Primary Heading 	 (field_menu) */
+  /* Contextual filter: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['arguments']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['arguments']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['arguments']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -3585,7 +3585,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['arguments']['field_menu_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_menu_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_menu_tid']['break_phrase'] = TRUE;
-  /* Contextual filter: Tartalom: Secondary Heading 	 (field_secondary_menu) */
+  /* Contextual filter: Content: Secondary Heading 	 (field_secondary_menu) */
   $handler->display->display_options['arguments']['field_secondary_menu_tid']['id'] = 'field_secondary_menu_tid';
   $handler->display->display_options['arguments']['field_secondary_menu_tid']['table'] = 'field_data_field_secondary_menu';
   $handler->display->display_options['arguments']['field_secondary_menu_tid']['field'] = 'field_secondary_menu_tid';
@@ -3756,7 +3756,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Published (field_published) */
+  /* Filter criterion: Content: Published (field_published) */
   $handler->display->display_options['filters']['field_published_tid']['id'] = 'field_published_tid';
   $handler->display->display_options['filters']['field_published_tid']['table'] = 'field_data_field_published';
   $handler->display->display_options['filters']['field_published_tid']['field'] = 'field_published_tid';
@@ -3855,7 +3855,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Tartalom: Event date */
+  /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -3872,7 +3872,7 @@ function alapjarat_features_views_default_views() {
   );
   $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_event_date']['separator'] = ' - ';
-  /* Field: Tartalom: Event */
+  /* Field: Content: Event */
   $handler->display->display_options['fields']['field_facebook_event']['id'] = 'field_facebook_event';
   $handler->display->display_options['fields']['field_facebook_event']['table'] = 'field_data_field_facebook_event';
   $handler->display->display_options['fields']['field_facebook_event']['field'] = 'field_facebook_event';
@@ -3885,7 +3885,7 @@ function alapjarat_features_views_default_views() {
     'trim_length' => '14',
     'nofollow' => 1,
   );
-  /* Sort criterion: Tartalom: Event date (field_event_date) */
+  /* Sort criterion: Content: Event date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -3903,19 +3903,19 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Tartalom: Published date (field_published_date) */
+  /* Filter criterion: Content: Published date (field_published_date) */
   $handler->display->display_options['filters']['field_published_date_value']['id'] = 'field_published_date_value';
   $handler->display->display_options['filters']['field_published_date_value']['table'] = 'field_data_field_published_date';
   $handler->display->display_options['filters']['field_published_date_value']['field'] = 'field_published_date_value';
   $handler->display->display_options['filters']['field_published_date_value']['operator'] = '<=';
   $handler->display->display_options['filters']['field_published_date_value']['default_date'] = 'now';
-  /* Filter criterion: Tartalom: Remove date (field_remove_date) */
+  /* Filter criterion: Content: Remove date (field_remove_date) */
   $handler->display->display_options['filters']['field_remove_date_value']['id'] = 'field_remove_date_value';
   $handler->display->display_options['filters']['field_remove_date_value']['table'] = 'field_data_field_remove_date';
   $handler->display->display_options['filters']['field_remove_date_value']['field'] = 'field_remove_date_value';
   $handler->display->display_options['filters']['field_remove_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_remove_date_value']['default_date'] = 'now';
-  /* Filter criterion: Tartalom: Event date (field_event_date:delta) */
+  /* Filter criterion: Content: Event date (field_event_date:delta) */
   $handler->display->display_options['filters']['delta']['id'] = 'delta';
   $handler->display->display_options['filters']['delta']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['filters']['delta']['field'] = 'delta';
@@ -3979,11 +3979,11 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  /* Relationship: Tartalom: Primary Heading 	 (field_menu) */
+  /* Relationship: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['relationships']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['relationships']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['relationships']['field_menu_tid']['field'] = 'field_menu_tid';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -3994,7 +3994,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'alapjarat_admin',
     'image_link' => '',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4011,7 +4011,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4064,7 +4064,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4075,7 +4075,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'helpful_small',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4092,7 +4092,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4127,12 +4127,12 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/hasznos-infok">Hasznos infók</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Tartalom: Primary Heading 	 (field_menu) */
+  /* Relationship: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['relationships']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['relationships']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['relationships']['field_menu_tid']['field'] = 'field_menu_tid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4143,7 +4143,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4159,7 +4159,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4176,7 +4176,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'front_page';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'M d, Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
@@ -4207,7 +4207,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4230,7 +4230,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4241,7 +4241,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'helpful_small',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4260,7 +4260,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['max_length'] = '75';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4294,7 +4294,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4320,7 +4320,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4331,7 +4331,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4349,7 +4349,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4383,7 +4383,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4401,7 +4401,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '2';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4412,7 +4412,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'world_small',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4430,7 +4430,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4464,7 +4464,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4489,7 +4489,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/tech">Tech</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4500,7 +4500,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4518,7 +4518,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4552,7 +4552,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4577,7 +4577,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/autoteszt">Autóteszt</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4588,7 +4588,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4606,7 +4606,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4640,7 +4640,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4667,7 +4667,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4678,7 +4678,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'right',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4719,7 +4719,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4730,7 +4730,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => '1_big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4747,7 +4747,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4775,7 +4775,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4786,7 +4786,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => '4_small',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4803,7 +4803,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4836,7 +4836,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/tuning">Tuning</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4847,7 +4847,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4865,7 +4865,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4899,7 +4899,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -4924,7 +4924,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/rajtracs">Rajtrács</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -4935,7 +4935,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -4953,7 +4953,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -4987,7 +4987,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -5012,7 +5012,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/el-mondo">El Mondó</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -5023,7 +5023,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -5041,7 +5041,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -5075,7 +5075,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -5100,7 +5100,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/kozos-csapatas">Közös csapatás</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -5111,7 +5111,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -5129,7 +5129,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -5163,7 +5163,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -5188,7 +5188,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/media">Média</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -5199,7 +5199,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'big',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -5217,7 +5217,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -5251,7 +5251,7 @@ function alapjarat_features_views_default_views() {
     'a_article' => 'a_article',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -5445,7 +5445,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5476,7 +5476,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5500,7 +5500,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5524,7 +5524,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5548,7 +5548,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5572,7 +5572,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5596,7 +5596,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5629,7 +5629,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Tartalom: Tags (field_tags) */
+  /* Filter criterion: Content: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
   $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
@@ -5794,13 +5794,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'utolsó »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Gallery */
+  /* Field: Content: Gallery */
   $handler->display->display_options['fields']['field_gallery']['id'] = 'field_gallery';
   $handler->display->display_options['fields']['field_gallery']['table'] = 'field_data_field_gallery';
   $handler->display->display_options['fields']['field_gallery']['field'] = 'field_gallery';
@@ -5850,7 +5850,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Gallery (field_gallery:alt) */
+  /* Filter criterion: Content: Gallery (field_gallery:alt) */
   $handler->display->display_options['filters']['field_gallery_alt']['id'] = 'field_gallery_alt';
   $handler->display->display_options['filters']['field_gallery_alt']['table'] = 'field_data_field_gallery';
   $handler->display->display_options['filters']['field_gallery_alt']['field'] = 'field_gallery_alt';
@@ -5925,7 +5925,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = 'The editorial of Alapjárat';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
-  /* Field: Tartalom: E-mail */
+  /* Field: Content: E-mail */
   $handler->display->display_options['fields']['field_e_mail']['id'] = 'field_e_mail';
   $handler->display->display_options['fields']['field_e_mail']['table'] = 'field_data_field_e_mail';
   $handler->display->display_options['fields']['field_e_mail']['field'] = 'field_e_mail';
@@ -5942,13 +5942,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Tartalom: Status */
+  /* Field: Content: Status */
   $handler->display->display_options['fields']['field_status']['id'] = 'field_status';
   $handler->display->display_options['fields']['field_status']['table'] = 'field_data_field_status';
   $handler->display->display_options['fields']['field_status']['field'] = 'field_status';
   $handler->display->display_options['fields']['field_status']['label'] = '';
   $handler->display->display_options['fields']['field_status']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Picture */
+  /* Field: Content: Picture */
   $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
   $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
   $handler->display->display_options['fields']['field_picture']['field'] = 'field_picture';
@@ -5959,7 +5959,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'impresszum',
     'image_link' => '',
   );
-  /* Field: Tartalom: Description */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
@@ -5985,7 +5985,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'impress' => 'impress',
   );
-  /* Filter criterion: Tartalom: External co-worker? (field_external_co_worker_) */
+  /* Filter criterion: Content: External co-worker? (field_external_co_worker_) */
   $handler->display->display_options['filters']['field_external_co_worker__tid']['id'] = 'field_external_co_worker__tid';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['table'] = 'field_data_field_external_co_worker_';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['field'] = 'field_external_co_worker__tid';
@@ -6006,14 +6006,14 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Name Link */
+  /* Field: Content: Name Link */
   $handler->display->display_options['fields']['field_name_link']['id'] = 'field_name_link';
   $handler->display->display_options['fields']['field_name_link']['table'] = 'field_data_field_name_link';
   $handler->display->display_options['fields']['field_name_link']['field'] = 'field_name_link';
   $handler->display->display_options['fields']['field_name_link']['label'] = '';
   $handler->display->display_options['fields']['field_name_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_name_link']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: E-mail */
+  /* Field: Content: E-mail */
   $handler->display->display_options['fields']['field_e_mail']['id'] = 'field_e_mail';
   $handler->display->display_options['fields']['field_e_mail']['table'] = 'field_data_field_e_mail';
   $handler->display->display_options['fields']['field_e_mail']['field'] = 'field_e_mail';
@@ -6032,13 +6032,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="[field_name_link]">[title]</a>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Tartalom: Status */
+  /* Field: Content: Status */
   $handler->display->display_options['fields']['field_status']['id'] = 'field_status';
   $handler->display->display_options['fields']['field_status']['table'] = 'field_data_field_status';
   $handler->display->display_options['fields']['field_status']['field'] = 'field_status';
   $handler->display->display_options['fields']['field_status']['label'] = '';
   $handler->display->display_options['fields']['field_status']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Picture */
+  /* Field: Content: Picture */
   $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
   $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
   $handler->display->display_options['fields']['field_picture']['field'] = 'field_picture';
@@ -6049,7 +6049,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'impresszum',
     'image_link' => '',
   );
-  /* Field: Tartalom: Description */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
   $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
   $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
@@ -6104,7 +6104,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'impress' => 'impress',
   );
-  /* Filter criterion: Tartalom: External co-worker? (field_external_co_worker_) */
+  /* Filter criterion: Content: External co-worker? (field_external_co_worker_) */
   $handler->display->display_options['filters']['field_external_co_worker__tid']['id'] = 'field_external_co_worker__tid';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['table'] = 'field_data_field_external_co_worker_';
   $handler->display->display_options['filters']['field_external_co_worker__tid']['field'] = 'field_external_co_worker__tid';
@@ -6152,7 +6152,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Picture */
+  /* Field: Content: Picture */
   $handler->display->display_options['fields']['field_picturep']['id'] = 'field_picturep';
   $handler->display->display_options['fields']['field_picturep']['table'] = 'field_data_field_picturep';
   $handler->display->display_options['fields']['field_picturep']['field'] = 'field_picturep';
@@ -6163,7 +6163,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Tartalom: Description */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['field_descriptionp']['id'] = 'field_descriptionp';
   $handler->display->display_options['fields']['field_descriptionp']['table'] = 'field_data_field_descriptionp';
   $handler->display->display_options['fields']['field_descriptionp']['field'] = 'field_descriptionp';
@@ -6192,7 +6192,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partners' => 'partners',
   );
-  /* Filter criterion: Tartalom: Premium car partner? (field_premium_car_partner_1) */
+  /* Filter criterion: Content: Premium car partner? (field_premium_car_partner_1) */
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['id'] = 'field_premium_car_partner_1_tid';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['table'] = 'field_data_field_premium_car_partner_1';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['field'] = 'field_premium_car_partner_1_tid';
@@ -6239,7 +6239,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3>Prémium szabadidős partnerek</h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Picture */
+  /* Field: Content: Picture */
   $handler->display->display_options['fields']['field_picturep']['id'] = 'field_picturep';
   $handler->display->display_options['fields']['field_picturep']['table'] = 'field_data_field_picturep';
   $handler->display->display_options['fields']['field_picturep']['field'] = 'field_picturep';
@@ -6250,7 +6250,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Tartalom: Description */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['field_descriptionp']['id'] = 'field_descriptionp';
   $handler->display->display_options['fields']['field_descriptionp']['table'] = 'field_data_field_descriptionp';
   $handler->display->display_options['fields']['field_descriptionp']['field'] = 'field_descriptionp';
@@ -6272,7 +6272,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'partners' => 'partners',
   );
-  /* Filter criterion: Tartalom: Premium car partner? (field_premium_car_partner_1) */
+  /* Filter criterion: Content: Premium car partner? (field_premium_car_partner_1) */
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['id'] = 'field_premium_car_partner_1_tid';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['table'] = 'field_data_field_premium_car_partner_1';
   $handler->display->display_options['filters']['field_premium_car_partner_1_tid']['field'] = 'field_premium_car_partner_1_tid';
@@ -6356,13 +6356,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Nyilvános';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -6379,7 +6379,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y-m-d H:i:s';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['timezone'] = 'Europe/Budapest';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -6390,14 +6390,14 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => '',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_subtitled']['type'] = 'text_plain';
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -6418,7 +6418,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['sorts']['created']['granularity'] = 'minute';
-  /* Contextual filter: Tartalom: Tags (field_tags) */
+  /* Contextual filter: Content: Tags (field_tags) */
   $handler->display->display_options['arguments']['field_tags_tid_1']['id'] = 'field_tags_tid_1';
   $handler->display->display_options['arguments']['field_tags_tid_1']['table'] = 'field_data_field_tags';
   $handler->display->display_options['arguments']['field_tags_tid_1']['field'] = 'field_tags_tid';
@@ -6447,7 +6447,7 @@ function alapjarat_features_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -6463,13 +6463,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -6483,7 +6483,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -6494,7 +6494,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
@@ -6516,7 +6516,7 @@ function alapjarat_features_views_default_views() {
   $handler = $view->new_display('panel_pane', 'published pane', 'panel_pane_2');
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -6532,13 +6532,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -6552,7 +6552,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -6563,14 +6563,14 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Tartalom: Published (field_published) */
+  /* Contextual filter: Content: Published (field_published) */
   $handler->display->display_options['arguments']['field_published_tid']['id'] = 'field_published_tid';
   $handler->display->display_options['arguments']['field_published_tid']['table'] = 'field_data_field_published';
   $handler->display->display_options['arguments']['field_published_tid']['field'] = 'field_published_tid';
@@ -6596,7 +6596,7 @@ function alapjarat_features_views_default_views() {
   $handler = $view->new_display('panel_pane', 'tags pane', 'panel_pane_3');
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -6612,13 +6612,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -6632,7 +6632,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -6643,14 +6643,14 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Tartalom: Tags (field_tagsa) */
+  /* Contextual filter: Content: Tags (field_tagsa) */
   $handler->display->display_options['arguments']['field_tagsa_tid']['id'] = 'field_tagsa_tid';
   $handler->display->display_options['arguments']['field_tagsa_tid']['table'] = 'field_data_field_tagsa';
   $handler->display->display_options['arguments']['field_tagsa_tid']['field'] = 'field_tagsa_tid';
@@ -6675,7 +6675,7 @@ function alapjarat_features_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Menu pane', 'panel_pane_4');
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -6691,13 +6691,13 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
   $handler->display->display_options['fields']['field_published']['type'] = 'taxonomy_term_reference_link';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -6711,7 +6711,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -6722,14 +6722,14 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Tartalom: Primary Heading 	 (field_menu) */
+  /* Contextual filter: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['arguments']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['arguments']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['arguments']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -6739,7 +6739,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['arguments']['field_menu_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_menu_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_menu_tid']['break_phrase'] = TRUE;
-  /* Contextual filter: Tartalom: Secondary Heading 	 (field_secondary_menu) */
+  /* Contextual filter: Content: Secondary Heading 	 (field_secondary_menu) */
   $handler->display->display_options['arguments']['field_secondary_menu_tid']['id'] = 'field_secondary_menu_tid';
   $handler->display->display_options['arguments']['field_secondary_menu_tid']['table'] = 'field_data_field_secondary_menu';
   $handler->display->display_options['arguments']['field_secondary_menu_tid']['field'] = 'field_secondary_menu_tid';
@@ -6809,7 +6809,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -6847,7 +6847,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -6885,7 +6885,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -6923,7 +6923,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -6961,7 +6961,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -6999,7 +6999,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -7037,7 +7037,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -7075,7 +7075,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'a_article' => 'a_article',
   );
-  /* Filter criterion: Tartalom: Primary Heading 	 (field_menu) */
+  /* Filter criterion: Content: Primary Heading 	 (field_menu) */
   $handler->display->display_options['filters']['field_menu_tid']['id'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['table'] = 'field_data_field_menu';
   $handler->display->display_options['filters']['field_menu_tid']['field'] = 'field_menu_tid';
@@ -7167,7 +7167,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Keresési találatok';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
-  /* Field: Indexed Tartalom: Title (70) */
+  /* Field: Indexed Node: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -7177,7 +7177,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['settings'] = array(
     'trim_length' => '100',
   );
-  /* Field: Indexed Tartalom: Node ID */
+  /* Field: Indexed Node: Node ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
@@ -7188,7 +7188,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['separator'] = '';
   $handler->display->display_options['fields']['nid']['link_to_entity'] = 0;
-  /* Field: Indexed Tartalom: Published */
+  /* Field: Indexed Node: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
@@ -7197,7 +7197,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_published']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_published']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_published']['bypass_access'] = 0;
-  /* Field: Indexed Tartalom: Tags */
+  /* Field: Indexed Node: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -7206,7 +7206,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_tags']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_tags']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_tags']['bypass_access'] = 0;
-  /* Field: Indexed Tartalom: Date created */
+  /* Field: Indexed Node: Date created */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['created']['field'] = 'created';
@@ -7215,7 +7215,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
-  /* Field: Indexed Tartalom: Image */
+  /* Field: Indexed Node: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -7233,7 +7233,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_subtitled_value']['label'] = '';
   $handler->display->display_options['fields']['field_subtitled_value']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_subtitled_value']['link_to_entity'] = 0;
-  /* Sort criterion: Indexed Tartalom: Date created */
+  /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -7243,7 +7243,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
   $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
-  /* Filter criterion: Indexed Tartalom: Status */
+  /* Filter criterion: Indexed Node: Status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -7347,7 +7347,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Keresési találatok';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
-  /* Field: Tartalom: Title (70) */
+  /* Field: Content: Title (70) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
@@ -7361,12 +7361,12 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Tartalom: Published */
+  /* Field: Content: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
   $handler->display->display_options['fields']['field_published']['field'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['label'] = 'Publikálta';
-  /* Field: Tartalom: Tags */
+  /* Field: Content: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
   $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
@@ -7379,7 +7379,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Közzétéve';
   $handler->display->display_options['fields']['created']['date_format'] = 'my';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Tartalom: Main image */
+  /* Field: Content: Main image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -7390,7 +7390,7 @@ function alapjarat_features_views_default_views() {
     'image_style' => 'category',
     'image_link' => 'content',
   );
-  /* Field: Tartalom: Subtitled */
+  /* Field: Content: Subtitled */
   $handler->display->display_options['fields']['field_subtitled']['id'] = 'field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['table'] = 'field_data_field_subtitled';
   $handler->display->display_options['fields']['field_subtitled']['field'] = 'field_subtitled';
