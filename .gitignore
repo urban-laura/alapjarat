@@ -11,4 +11,4 @@ alappma
 tmp
 
 .DS_Store
-.idea
+.idea/*
