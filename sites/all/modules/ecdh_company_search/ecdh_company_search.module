@@ -1,0 +1,172 @@
+<?php
+
+function ecdh_company_search_menu() {
+
+  $items['ecdh/cities'] = array(
+    'title' => 'List of cities of Hungary',
+    'page callback' => 'ecdh_company_search_cities',
+    'access arguments' => array('view published content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function ecdh_company_search_cities($string) {
+  $city_list = file_get_contents(drupal_get_path('module', 'ecdh_company_search') . '/cities.data');
+  $pattern = "/(^$string.*?)\t/mi";
+  preg_match_all($pattern, $city_list, $matches);
+  foreach ($matches[1] as $city) {
+    $cities[$city] = check_plain($city);
+  }
+  drupal_json_output($cities);
+}
+
+function ecdh_company_search_form($form, &$form_state) {
+
+  $form['profiles'] = array(
+    '#type' => 'select',
+    '#options' => ecdh_company_search_get_profiles(), 
+    '#title' => t('Profile'), 
+  );
+
+  $form['city'] = array(
+    '#id' => 'ecdh-city',
+    '#type' => 'textfield',
+    '#title' => t('City'),
+    '#size' => 30,
+    '#maxlength' => 60,
+    '#autocomplete_path' => 'ecdh/cities',
+    '#attributes' => array(
+      'class' => array('ecdh-company-search-form-element'),
+    ),
+    //'#default_value' => NULL,
+  );
+
+  $form['radius'] = array(
+    '#type' => 'numberfield',
+    '#title' => t('Radius'),
+    '#size' => 30,
+    '#maxlength' => 60,
+    '#min' => 0,
+    '#attributes' => array(
+      'class' => array('ecdh-company-search-form-element'),
+    ),
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('search'),
+    '#ajax' => array(
+      'callback' => 'ecdh_company_search_form_submit',
+      'wrapper' => 'company-list',
+      'method' => 'replace',
+      'effect' => 'fade',
+    ),
+    '#prefix' => '<div class="ecdh-company-search-form-submit ecdh-company-search-form-element form-item">',
+    '#suffix' => '</div>',
+  );
+
+  $form['company-list'] = array(
+    '#markup' => '<div id="company-list"></div>',
+  );
+  
+  return $form;
+}
+
+function ecdh_company_search_form_submit($form, &$form_state) {
+  // Find lat lon.
+  $city = $form_state['values']['city'];
+  $city_list = file_get_contents(drupal_get_path('module', 'ecdh_company_search') . '/cities.data');
+  $pattern = "/$city\t(.*?)\t(.*?)\t/mi";
+  preg_match_all($pattern, $city_list, $matches);
+  
+  $lat = $matches[2][0];
+  $lath = explode(':', $lat);
+  $latmin = explode('.', $lath);
+
+  $lon = $matches[1][0];
+  $lonh = explode(':', $lon);
+  $lonmin = explode('.', $lonh);
+
+  $lat = $lath[0]+((($latmin[0]*60)+($latmin[1]))/3600);
+  $lon = $lonh[0]+((($lonmin[0]*60)+($lonmin[1]))/3600);
+   
+  $url = "https://dev.ecdh.hu/api/companies?profiles[]=" . $form_state['values']['profile'];
+  if (isset($form_state['values']['city'])) {
+    $url .= "&location_coord_lat=+$lat&location_coord_lng=$lon";
+  }
+  if (isset($form_state['values']['radius'])) {
+    $url .= "&radius=" . $form_state['values']['radius'];
+  }
+  $data = _ecdh_company_search_curl_get_contents($url);
+  $data = json_decode($data, TRUE);
+
+  $header = [];
+  foreach ($data['data'] as $company) {
+    $companies[] = array(
+      array('data' => $company['select_name_with_address'], 'class' => 'ecdh-search-company-result-name'),
+      array('data' => l(t('More'), 'https://dev.ecdh.hu/hu/ceg/' . $company['id']), 'class' => 'ecdh-search-company-result-more'),
+    );
+  }
+
+  return theme('table', array('header' => $header, 'rows' => $companies));
+  
+}
+
+function ecdh_company_search_ctools_plugin_directory($owner, $plugin_type) {
+	if ($owner == 'ctools' && $plugin_type == 'content_types') {
+		return 'plugins/content_types';
+	}
+}
+
+function ecdh_company_search_get_profiles() {
+  $url = "https://dev.ecdh.hu/api/companies?profiles[]=7&location_coord_lat=+47.6980506&location_coord_lng=16.605326";
+  $url = "https://dev.ecdh.hu/api/profiles";
+  $data = _ecdh_company_search_curl_get_contents($url);
+  $data = json_decode($data, TRUE);
+  foreach ($data['data'] as $profile) {
+    $options[] = $profile['name'];
+  }
+
+  return $options;
+}
+
+function _ecdh_company_search_curl_get_contents($url) {
+
+  $ch = curl_init($url);
+
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    'Accept: application/json',
+    'TsApiKey: 12345'
+  ));
+  
+  $data = curl_exec($ch);
+  $status=curl_getinfo($ch);
+  curl_close($ch);
+
+  if($status['http_code'] == 200) {
+    return $data;
+  } elseif  ($status['http_code']==301 || $status['http_code']==302)  {
+    if (!$follow_allowed) {
+      if (!empty($status['redirect_url'])) {
+        $redirURL=$status['redirect_url'];
+      } else {
+        preg_match('/href\=\"(.*?)\"/si',$data,$m);
+        if (!empty($m[1])) {
+          $redirURL=$m[1];
+        }
+      }
+      if(!empty($redirURL)) {
+        return  call_user_func( __FUNCTION__, $redirURL, $post_paramtrs);
+      }
+    }
+  }
+  
+  return;
+
+}

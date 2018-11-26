@@ -3800,11 +3800,9 @@ function alapjarat_features_views_default_views() {
     t('‹ előző'),
     t('következő ›'),
     t('utolsó »'),
-    t('- Choose an operation -'),
+    t('- Művelet kiválasztása -'),
     t('Szerző'),
     t('Page'),
-    t('more'),
-    t('- Művelet kiválasztása -'),
   );
   $export['change_author_bulk'] = $view;
 
@@ -5274,6 +5272,7 @@ function alapjarat_features_views_default_views() {
     t('term from field_menu'),
     t('<a href="[path]">[field_title2]</a>'),
     t('First 5'),
+    t('more'),
     t('Legfrissebb'),
     t('Nézettáblák'),
     t('helpful_info_A'),
@@ -6301,6 +6300,7 @@ function alapjarat_features_views_default_views() {
     t('The editorial of Alapjárat'),
     t('<a href="mailto:[field_e_mail-email]"><img src="https://alapjarat.hu/sites/default/files/email.png" alt="[field_e_mail-email]"></a>'),
     t('Impress (NO)'),
+    t('more'),
     t('<h1>Impresszum</h1> <h2>Az Alapjárat szerkesztősége</h2>'),
     t('<a href="[field_name_link]">[title]</a>'),
     t('Nézettáblák'),

@@ -32,7 +32,7 @@ function alapjarat_common_most_popular_terms_settings($form, &$form_state) {
  * Edit form submit function.
  */
 function alapjarat_common_most_popular_terms_settings_submit($form, &$form_state) {
-  $form_state['conf']['date_format'] = $form_state['values']['date_format'];
+  $form_state['conf']['count'] = $form_state['values']['count'];
 }
 
 

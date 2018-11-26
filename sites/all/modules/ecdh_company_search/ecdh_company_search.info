@@ -1,0 +1,6 @@
+name = ecdh_company_search
+description = Alapjarat company search panel with ECDH API
+core = 7.x
+version = 7.x-1.x
+
+stylesheets[all][] = ecdh_company_search.css

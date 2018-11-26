@@ -1,0 +1,10 @@
+#ecdh-company-search-form {
+	background: #ccc;
+	padding: 20px;
+	overflow: hidden;
+}
+
+#ecdh-company-search-form .form-item {
+	float: left;
+	width: 25%;
+}
