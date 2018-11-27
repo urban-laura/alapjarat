@@ -142,7 +142,7 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 	  }
 
     $form['#attached']['js'][] = drupal_get_path('module', 'alapjarat_common') . '/alapjarat_common_aarticle_form.js';
-    $form['#attached']['js'][] = drupal_get_path('module', 'alapjarat_common') . '/alapjarat_common_aarticle_form.js';
+    $form['#attached']['js'][] = drupal_get_path('module', 'alapjarat_common') . '/alapjarat_common_event_form.js';
 	}
 
 }
