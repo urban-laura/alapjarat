@@ -127,6 +127,7 @@ function ecdh_company_search_get_profiles() {
   $url = "https://dev.ecdh.hu/api/profiles";
   $data = _ecdh_company_search_curl_get_contents($url);
   $data = json_decode($data, TRUE);
+
   foreach ($data['data'] as $profile) {
     $options[] = $profile['name'];
   }

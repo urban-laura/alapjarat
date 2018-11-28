@@ -369,6 +369,8 @@ a:hover {
       float: left;
       position: relative;
       height: 175px; }
+      .panels-flexible-region-first.first #four .views-row img {
+        height: 175px; }
     .panels-flexible-region-first.first #four .views-row-1, .panels-flexible-region-first.first #four .views-row-3 {
       padding-right: 5px; }
     .panels-flexible-region-first.first #four .views-row-2, .panels-flexible-region-first.first #four .views-row-4 {

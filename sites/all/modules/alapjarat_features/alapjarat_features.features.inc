@@ -83,11 +83,11 @@ function alapjarat_features_image_default_styles() {
   $styles['4_small'] = array(
     'label' => '4 small',
     'effects' => array(
-      16 => array(
+      1 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 275,
-          'height' => 175,
+          'width' => 550,
+          'height' => 350,
         ),
         'weight' => 1,
       ),
