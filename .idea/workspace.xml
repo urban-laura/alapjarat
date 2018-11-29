@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" afterDir="false" />
-    </list>
+    <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +51,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$form['#attached']['js'][] = drupal_get_path</find>
+      <find />
       <find>ecdh_company_search_get_profiles</find>
       <find>ecdh_company_search_get_profiles()</find>
       <find>#menu</find>
@@ -93,7 +90,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="811" />
+    <option name="height" value="793" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,12 +180,12 @@
       <workItem from="1543222258293" duration="1655000" />
       <workItem from="1543241431111" duration="153000" />
       <workItem from="1543306661332" duration="11138000" />
-      <workItem from="1543480977967" duration="1303000" />
+      <workItem from="1543480977967" duration="1724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15267000" />
+    <option name="totallyTimeSpent" value="15688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="811" extended-state="0" />
