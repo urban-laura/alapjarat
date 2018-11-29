@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style_mobil.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style_mobil.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="my_style.sass" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my_style.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="616" column="114" lean-forward="true" selection-start-line="616" selection-end-line="616" selection-end-column="114" />
+            <state relative-caret-position="140">
+              <caret line="190" column="14" lean-forward="true" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_style_mobil.sass" pinned="false" current-in-tab="true">
+      <file leaf-file-name="my_style_mobil.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="325" column="27" lean-forward="true" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="27" />
+            <state relative-caret-position="252">
+              <caret line="325" column="27" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -54,7 +59,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$form['#attached']['js'][] = drupal_get_path</find>
+      <find />
       <find>ecdh_company_search_get_profiles</find>
       <find>ecdh_company_search_get_profiles()</find>
       <find>#menu</find>
@@ -71,8 +76,8 @@
         <option value="$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common_event_form.js" />
         <option value="$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.info" />
         <option value="$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.module" />
-        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" />
         <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" />
       </list>
     </option>
   </component>
@@ -183,15 +188,15 @@
       <workItem from="1543222258293" duration="1655000" />
       <workItem from="1543241431111" duration="153000" />
       <workItem from="1543306661332" duration="11138000" />
-      <workItem from="1543480977967" duration="1916000" />
+      <workItem from="1543480977967" duration="2390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15880000" />
+    <option name="totallyTimeSpent" value="16354000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="793" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="793" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2125" />
@@ -200,7 +205,7 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32971507" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32971507" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32962447" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" />
@@ -373,17 +378,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="616" column="114" lean-forward="true" selection-start-line="616" selection-end-line="616" selection-end-column="114" />
+        <state relative-caret-position="252">
+          <caret line="325" column="27" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="325" column="27" lean-forward="true" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="27" />
+        <state relative-caret-position="140">
+          <caret line="190" column="14" lean-forward="true" selection-start-line="190" selection-start-column="14" selection-end-line="190" selection-end-column="14" />
         </state>
       </provider>
     </entry>
