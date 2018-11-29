@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html--impress.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html--impress.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html.tpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,38 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="my_style.sass" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <file leaf-file-name="html.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="196" column="10" lean-forward="true" selection-start-line="195" selection-start-column="4" selection-end-line="196" selection-end-column="10" />
+            <state relative-caret-position="315">
+              <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_style_mobil.sass" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
+      <file leaf-file-name="html--impress.tpl.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html--impress.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ecdh_company_search.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ecdh_company_search.module" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.module">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="50" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="345">
+              <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -59,6 +42,7 @@
       <find>ecdh_company_search_get_profiles()</find>
       <find>#menu</find>
       <find>slo</find>
+      <find>658926237814717</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,6 +58,8 @@
         <option value="$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.module" />
         <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" />
         <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html--impress.tpl.php" />
       </list>
     </option>
   </component>
@@ -91,7 +77,8 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="793" />
@@ -184,27 +171,29 @@
       <workItem from="1543222258293" duration="1655000" />
       <workItem from="1543241431111" duration="153000" />
       <workItem from="1543306661332" duration="11138000" />
-      <workItem from="1543480977967" duration="2803000" />
+      <workItem from="1543480977967" duration="2936000" />
+      <workItem from="1543489335173" duration="326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16767000" />
+    <option name="totallyTimeSpent" value="17226000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="793" extended-state="1" />
+    <frame x="-1" y="23" width="1440" height="793" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2125" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32971507" />
-      <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32962447" />
       <window_info anchor="bottom" id="Version Control" order="4" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2125" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -213,7 +202,6 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +211,34 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2940">
+          <caret line="196" column="10" selection-start-line="195" selection-start-column="4" selection-end-line="196" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5625">
@@ -360,6 +376,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="196" column="10" selection-start-line="195" selection-start-column="4" selection-end-line="196" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -374,17 +404,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="315">
+          <caret line="23" column="98" selection-start-line="23" selection-start-column="98" selection-end-line="23" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/html--impress.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="196" column="10" lean-forward="true" selection-start-line="195" selection-start-column="4" selection-end-line="196" selection-end-column="10" />
+        <state relative-caret-position="345">
+          <caret line="25" column="98" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
         </state>
       </provider>
     </entry>
