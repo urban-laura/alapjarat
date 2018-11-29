@@ -276,6 +276,16 @@
       .panels-flexible-region-first.first #four .views-row img {
         height: 155px; } }
 @media screen and (max-width: 499px) {
+  #category .views-field-field-published, #category .views-field-field-tags, #category .views-field-created, #archive_list .views-field-field-published, #archive_list .views-field-field-tags, #archive_list .views-field-created, #media .views-field-field-published, #media .views-field-field-tags, #media .views-field-created, #published .views-field-field-published, #published .views-field-field-tags, #published .views-field-created, #tag .views-field-field-published, #tag .views-field-field-tags, #tag .views-field-created, #menu_pane .views-field-field-published, #menu_pane .views-field-field-tags, #menu_pane .views-field-created, .view-id-search_api_search .views-field-field-published, .view-id-search_api_search .views-field-field-tags, .view-id-search_api_search .views-field-created, .view-id-glossary_list .views-field-field-published, .view-id-glossary_list .views-field-field-tags, .view-id-glossary_list .views-field-created {
+    font-size: 12px; }
+  #category .views-field-field-tags a, #archive_list .views-field-field-tags a, #media .views-field-field-tags a, #published .views-field-field-tags a, #tag .views-field-field-tags a, #menu_pane .views-field-field-tags a, .view-id-search_api_search .views-field-field-tags a, .view-id-glossary_list .views-field-field-tags a {
+    font-size: 10px; }
+
+  .node_pane .pane-node-field-published, .node_pane .pane-node-field-tags, .node_pane .pane-node-created {
+    font-size: 12px; }
+  .node_pane .pane-node-field-tags a {
+    font-size: 10px; }
+
   .main_content .front_page_post {
     padding-left: 0px !important;
     padding-right: 0px !important; }
