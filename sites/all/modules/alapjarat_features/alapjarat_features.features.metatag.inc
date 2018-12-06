@@ -27,6 +27,9 @@ function alapjarat_features_metatag_export_default() {
       'shortlink' => array(
         'value' => '[site:url]',
       ),
+      'og:description' => array(
+        'value' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz. Érdekességek a hazai- és nemzetközi autó eseményekről. A magyar autósok közösségi portálja.',
+      ),
       'og:image' => array(
         'value' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
       ),
