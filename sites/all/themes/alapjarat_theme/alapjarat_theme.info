@@ -33,6 +33,7 @@ stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 stylesheets[all][] = stylesheets/my_style.css
 stylesheets[all][] = stylesheets/my_style_mobil.css
+stylesheets[all][] = stylesheets/my_style_social.css
 
 ; Scripts
 scripts[] = js/build/scripts.js

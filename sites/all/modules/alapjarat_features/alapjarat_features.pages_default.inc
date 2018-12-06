@@ -911,6 +911,145 @@ $.extend($.validator.messages, {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'site_template__panel_context_6f6c6cf6-04a3-4e51-980e-778e0e96d8ef';
+  $handler->task = 'site_template';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 2;
+  $handler->conf = array(
+    'title' => 'Social',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => '',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'social',
+          ),
+          'context' => 'argument_string_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'amp_request',
+          'settings' => NULL,
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'd9487e91-7155-4ae2-a726-1dbc9f40d988';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'site_template__panel_context_6f6c6cf6-04a3-4e51-980e-778e0e96d8ef';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-e3d7209a-83a2-4fb2-8334-387113c13972';
+  $pane->panel = 'middle';
+  $pane->type = 'page_logo';
+  $pane->subtype = 'page_logo';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'e3d7209a-83a2-4fb2-8334-387113c13972';
+  $display->content['new-e3d7209a-83a2-4fb2-8334-387113c13972'] = $pane;
+  $display->panels['middle'][0] = 'new-e3d7209a-83a2-4fb2-8334-387113c13972';
+  $pane = new stdClass();
+  $pane->pid = 'new-7269b6bd-662d-4609-8ba1-e6782a8e9a55';
+  $pane->panel = 'middle';
+  $pane->type = 'page_slogan';
+  $pane->subtype = 'page_slogan';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '7269b6bd-662d-4609-8ba1-e6782a8e9a55';
+  $display->content['new-7269b6bd-662d-4609-8ba1-e6782a8e9a55'] = $pane;
+  $display->panels['middle'][1] = 'new-7269b6bd-662d-4609-8ba1-e6782a8e9a55';
+  $pane = new stdClass();
+  $pane->pid = 'new-4a754db5-7fbe-4d60-b970-c379d279c961';
+  $pane->panel = 'middle';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<a href="https://www.instagram.com/alapjarat">@alapjarat</a>
+
+<a href="https://alapjarat.hu">
+<button type="button">Alapjárat weboldal</button>
+</a>
+
+<a href="https://www.facebook.com/alapjarat">
+<button type="button">Alapjárat Facebook oldal</button>
+</a>
+
+<a href="https://www.youtube.com/channel/UCueleOZ2QFAaVSHXheZlFig">
+<button type="button">Alapjárat YouTube csatorna</button>
+</a>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'social-link',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '4a754db5-7fbe-4d60-b970-c379d279c961';
+  $display->content['new-4a754db5-7fbe-4d60-b970-c379d279c961'] = $pane;
+  $display->panels['middle'][2] = 'new-4a754db5-7fbe-4d60-b970-c379d279c961';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['site_template__panel_context_6f6c6cf6-04a3-4e51-980e-778e0e96d8ef'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'site_template__panel_context_d3b53892-900b-480a-b3e8-992a3d69013b';
   $handler->task = 'site_template';
   $handler->subtask = '';
@@ -932,6 +1071,15 @@ $.extend($.validator.messages, {
         0 => array(
           'name' => 'amp_request',
           'settings' => NULL,
+          'not' => TRUE,
+        ),
+        1 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'social',
+          ),
+          'context' => 'argument_string_1',
           'not' => TRUE,
         ),
       ),
@@ -1883,7 +2031,20 @@ window.onload = ChangeSrc;
   $pane->type = 'company_search';
   $pane->subtype = 'company_search';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'whatever' => NULL,
     'override_title' => 0,
@@ -2135,6 +2296,15 @@ window.onload = ChangeSrc;
           'name' => 'amp_request',
           'settings' => NULL,
           'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'social',
+          ),
+          'context' => 'argument_string_1',
+          'not' => TRUE,
         ),
       ),
     ),
