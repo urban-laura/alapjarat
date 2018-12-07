@@ -5,7 +5,7 @@ body.page-social {
 }
 /* line 5, ../sass/my_style_social.sass */
 body.page-social .pane-page-logo {
-  width: -moz-fit-content;
+  display: table;
   margin: auto;
 }
 /* line 10, ../sass/my_style_social.sass */
