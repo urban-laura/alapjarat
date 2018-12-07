@@ -148,6 +148,7 @@ features[field_instance][] = node-impress-field_name_link
 features[field_instance][] = node-impress-field_picture
 features[field_instance][] = node-impress-field_status
 features[field_instance][] = node-pages-field_image
+features[field_instance][] = node-pages-field_images
 features[field_instance][] = node-pages-field_textp
 features[field_instance][] = node-partners-field_descriptionp
 features[field_instance][] = node-partners-field_picturep
