@@ -36,6 +36,8 @@
 		#four
 			.views-row
 				height: 148px
+				img
+					height: 149px
 
 @media screen and (max-width: 989px)
 	body
@@ -48,6 +50,9 @@
 	.letterhead 
 		.logo
 			padding-left: 0
+		.pane-page-slogan
+			h1
+				padding-left: 0px
 		.letterhead_banner
 			padding-right: 0
 
@@ -126,9 +131,10 @@
 		border-left: 1px solid #efefef
 		#one
 			float: none
-			height: 350px
+			height: 354px
 			width: 560px
 			margin: auto
+			margin-top: 10px
 			.views-field-path
 				bottom: 80px
 			.views-field-field-tags, .views-field-created
@@ -136,6 +142,8 @@
 				float: none
 			.views-field-created
 				bottom: 40px
+			.views-field-field-image
+				height: 353px
 		#four
 			width: 560px
 			float: none
@@ -226,10 +234,10 @@
 				margin-left: 0px
 
 	.pane-term-name
-		padding: 0
+		padding: 0px 10px
 
 	#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_api_search, .view-id-glossary_list
-		padding: 0px 5px !important
+		padding: 0px 10px !important
 		.views-field-path, .views-field-nid
 			padding-top: 25px
 			h3
@@ -273,8 +281,8 @@
 			margin-top: 0
 
 	.node_pane
-		padding-left: 5px !important
-		padding-right: 5px !important
+		padding-left: 10px !important
+		padding-right: 10px !important
 		.pane-node-field-published
 			float: none
 			width: 100%
@@ -298,16 +306,34 @@
 		#one
 			height: 315px
 			width: 499px
+			.views-field-field-image
+				height: auto
 		#four
 			width: 499px
 			.views-row
 				height: 155px
+				img
+					height: 155px
 
 @media screen and (max-width: 499px)
+	#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_api_search, .view-id-glossary_list
+		.views-field-field-published, .views-field-field-tags, .views-field-created
+			font-size: 12px
+		.views-field-field-tags a
+			font-size: 10px
+
+	.node_pane
+		.pane-node-field-published, .pane-node-field-tags, .pane-node-created
+			font-size: 12px
+		.pane-node-field-tags a
+			font-size: 10px
+
 	.main_content
 		.front_page_post
 			padding-left: 0px !important
 			padding-right: 0px !important
+		.view-header
+			padding: 0px 10px
 
 	.second_menu #second_menu
 		font-size: 0
@@ -336,22 +362,28 @@
 			.pane-title
 				font-size: 18px !important
 		#one
-			height: 175px
-			width: 275px
-			margin-top: 10px
+			height: auto
+			width: 100%
+			padding: 0px 10px
 			.views-field-path
 				h3
 					font-size: 16px
 		#four
-			width: 275px
+			width: 100%
+			padding: 0px 10px
+			margin-top: -25px
 			.views-row
-				height: 175px
+				height: auto
 				float: none
 				width: 100%
+				img
+					height: auto
+			.views-field-path
+				bottom: 80px
 			.views-row-1, .views-row-3, .views-row-2, .views-row-4
 				padding: 0
 				margin: 0
-				margin-bottom: 10px
+				margin-top: -25px
 
 	.main_content
 		.front_page_post
@@ -378,13 +410,14 @@
 			text-align: left
 		.pane-node-field-title2
 			h1
-				font-size: 30px
+				font-size: 26px
 		.pane-node-field-subtitled
 			h2
-				font-size: 24px
+				font-size: 22px
+				line-height: 30px
 		#alapjarat-article.pane-node-field-text
 			h3
-				font-size: 22px
+				font-size: 20px
 
 	.right
 		.banner

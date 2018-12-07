@@ -1,0 +1,37 @@
+/* line 1, ../sass/my_style_social.sass */
+body.page-social {
+  max-width: 320px;
+  padding: 10px;
+}
+/* line 5, ../sass/my_style_social.sass */
+body.page-social .pane-page-logo {
+  display: table;
+  margin: auto;
+}
+/* line 10, ../sass/my_style_social.sass */
+body.page-social .pane-page-slogan h1 {
+  margin: 0px;
+  font-size: 15.5px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* line 18, ../sass/my_style_social.sass */
+body.page-social #social-link a {
+  display: block;
+  width: 100%;
+  color: #333 !important;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+/* line 28, ../sass/my_style_social.sass */
+body.page-social #social-link a button {
+  width: 100%;
+  color: white;
+  background-color: #444;
+  border: 0px;
+  border-top: solid 5px #d82222;
+  padding: 15px 0px;
+}
