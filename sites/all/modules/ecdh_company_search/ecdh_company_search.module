@@ -9,6 +9,21 @@ function ecdh_company_search_menu() {
     'type' => MENU_CALLBACK,
   );
 
+  $items['ecdh/company_search'] = array(
+    'title' => 'List of cities of Hungary',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ecdh_company_search_form'),
+    'access arguments' => array('view published content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['ecdh/test'] = array(
+    'title' => 'List of cities of Hungary',
+    'page callback' => 'ecdh_company_search_test',
+    'access arguments' => array('view published content'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -23,7 +38,6 @@ function ecdh_company_search_cities($string) {
 }
 
 function ecdh_company_search_form($form, &$form_state) {
-
   $form['profiles'] = array(
     '#type' => 'select',
     '#options' => ecdh_company_search_get_profiles(), 
@@ -75,6 +89,9 @@ function ecdh_company_search_form($form, &$form_state) {
 }
 
 function ecdh_company_search_form_submit($form, &$form_state) {
+
+  //$form_state['rebuild'] = TRUE;
+
   // Find lat lon.
   $city = $form_state['values']['city'];
   $city_list = file_get_contents(drupal_get_path('module', 'ecdh_company_search') . '/cities.data');
@@ -83,20 +100,20 @@ function ecdh_company_search_form_submit($form, &$form_state) {
   
   $lat = $matches[2][0];
   $lath = explode(':', $lat);
-  $latmin = explode('.', $lath);
+  $latmin = explode('.', $lath[1]);
 
   $lon = $matches[1][0];
   $lonh = explode(':', $lon);
-  $lonmin = explode('.', $lonh);
+  $lonmin = explode('.', $lonh[1]);
 
-  $lat = $lath[0]+((($latmin[0]*60)+($latmin[1]))/3600);
-  $lon = $lonh[0]+((($lonmin[0]*60)+($lonmin[1]))/3600);
+  $lat = $lath[0] * 1 + ((($latmin[0]*60)+($latmin[1]))/3600);
+  $lon = $lonh[0] * 1 + ((($lonmin[0]*60)+($lonmin[1]))/3600);
    
-  $url = "https://dev.ecdh.hu/api/companies?profiles[]=" . $form_state['values']['profile'];
-  if (isset($form_state['values']['city'])) {
-    $url .= "&location_coord_lat=+$lat&location_coord_lng=$lon";
+  $url = "https://dev.ecdh.hu/api/companies?profiles[]=" . $form_state['values']['profiles'];
+  if (!empty($form_state['values']['city'])) {
+    $url .= "&location_coord_lat=$lat&location_coord_lng=$lon";
   }
-  if (isset($form_state['values']['radius'])) {
+  if (!empty($form_state['values']['radius'])) {
     $url .= "&radius=" . $form_state['values']['radius'];
   }
   $data = _ecdh_company_search_curl_get_contents($url);
@@ -110,7 +127,7 @@ function ecdh_company_search_form_submit($form, &$form_state) {
     );
   }
 
-  return theme('table', array('header' => $header, 'rows' => $companies));
+  return '<div id="company-list">' . theme('table', array('header' => $header, 'rows' => $companies)) . '</div>';
   
 }
 
@@ -125,8 +142,10 @@ function ecdh_company_search_get_profiles() {
   $url = "https://dev.ecdh.hu/api/profiles";
   $data = _ecdh_company_search_curl_get_contents($url);
   $data = json_decode($data, TRUE);
+
+  $options = [];
   foreach ($data['data'] as $profile) {
-    $options[] = $profile['name'];
+    $options[$profile['id']] = $profile['name'];
   }
 
   return $options;
@@ -169,4 +188,13 @@ function _ecdh_company_search_curl_get_contents($url) {
   
   return;
 
+}
+
+function ecdh_company_search_test() {
+  $url = 'https://dev.ecdh.hu/hu/cegkereso?profiles%5B%5D=&profiles%5B%5D=2&location=Sopron%2C%20Hungary&location_coord_lat=47.68&location_coord_lng=16.583&radius=';
+  $url = 'https://dev.ecdh.hu/api/companies?profiles[]=2&location_coord_lat=47.683611111111&location_coord_lng=16.588611111111';
+  $data = _ecdh_company_search_curl_get_contents($url);
+  $data = json_decode($data, TRUE);
+
+  return 'hey!';
 }
