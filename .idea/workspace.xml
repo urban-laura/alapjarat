@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_social.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_social.sass" afterDir="false" />
-    </list>
+    <list default="true" id="06a414ca-ef5d-41d3-b01f-b9604a6f54e5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="793" />
@@ -189,15 +187,15 @@
       <workItem from="1543306661332" duration="11138000" />
       <workItem from="1543480977967" duration="2936000" />
       <workItem from="1543489335173" duration="326000" />
-      <workItem from="1544093911589" duration="2316000" />
+      <workItem from="1544093911589" duration="2452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19542000" />
+    <option name="totallyTimeSpent" value="19678000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="793" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="793" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2125" />
