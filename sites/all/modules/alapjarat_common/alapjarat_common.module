@@ -462,7 +462,9 @@ function alapjarat_common_find_glossary($text, $node = null) {
     $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
 
     foreach ($terms as $term) {
-      $pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
+      /*$pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";*/
+      // new better one
+      $pattern = "/(?!<a[^>]*?>)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<]*?<\/a>)/iu";
       $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
       $replace = '<a href="/' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
       $text = preg_replace($pattern , $replace,  $text);
