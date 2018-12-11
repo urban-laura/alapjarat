@@ -109,6 +109,7 @@ function alapjarat_features_ckeditor_profile_defaults() {
     [\'Cut\',\'Copy\',\'SelectAll\',\'Paste\',\'PasteText\',\'PasteFromWord\'],
     [\'Table\'],
     [\'Image\',\'Youtube\'],
+    [\'simplebutton\'],
     \'/\',
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\'],
     [\'Subscript\',\'Superscript\',\'RemoveFormat\'],
@@ -403,6 +404,18 @@ function alapjarat_features_ckeditor_profile_defaults() {
             'desc' => 'Plugin file: richcombo',
             'path' => '%plugin_dir%richcombo/',
             'buttons' => FALSE,
+            'default' => 'f',
+          ),
+          'simplebutton' => array(
+            'name' => 'simplebutton',
+            'desc' => 'Plugin file: simplebutton',
+            'path' => '%plugin_dir%simplebutton/',
+            'buttons' => array(
+              'simplebutton' => array(
+                'label' => 'simplebutton',
+                'icon' => 'images/simplebutton.png',
+              ),
+            ),
             'default' => 'f',
           ),
           'toolbar' => array(
