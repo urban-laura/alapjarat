@@ -53,7 +53,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$form['#attached']['js'][] = drupal_get_path</find>
+      <find />
       <find>ecdh_company_search_get_profiles</find>
       <find>ecdh_company_search_get_profiles()</find>
       <find>#menu</find>
@@ -94,7 +94,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="793" />
