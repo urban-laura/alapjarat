@@ -457,12 +457,13 @@ function alapjarat_common_autop($pee, $br = true ) {
 
 function alapjarat_common_find_glossary($text, $node = null) {
 
+  /*
   if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
     $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
     $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
 
     foreach ($terms as $term) {
-      /*$pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";*/
+      //$pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
       // new better one
       $pattern = "/(?!<a[^>]*?>)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<]*?<\/a>)/iu";
       $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
@@ -470,6 +471,7 @@ function alapjarat_common_find_glossary($text, $node = null) {
       $text = preg_replace($pattern , $replace,  $text);
     }
   }
+  */
 
   $pattern = "/www.alapjarat.hu\/wp-content\/uploads/iu";
   $replace = "www.alapjarat.hu/sites/default/files/wp-content/uploads";
