@@ -583,7 +583,9 @@ function alapjarat_features_default_page_manager_handlers() {
 <div class="mc-field-group input-group">
 <a href="/adatkezelesi-szabalyzat" target="_blank"><input type="radio" class="required" value="Elolvastam az Adatkezelési szabályzatot, és hozzájárulok, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE1" id="mce-MMERGE1-0">Elolvastam az Adatkezelési szabályzatot, és hozzájárulok, hogy az Alapjárat hírlevelet küldjön számomra.</a>
 </div>
-
+<div class="mc-field-group input-group consent">
+<input type="radio" class="required" value="Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE3" id="mce-MMERGE3-0"><label for="mce-MMERGE3-0">Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra.</label>
+</div>
 
 
 
@@ -597,7 +599,7 @@ function alapjarat_features_default_page_manager_handlers() {
     </div>
 </form>
 </div>
-<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'MMERGE1\';ftypes[1]=\'radio\'; /*
+<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[2]=\'MMERGE2\';ftypes[2]=\'text\';fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'MMERGE1\';ftypes[1]=\'radio\';fnames[3]=\'MMERGE3\';ftypes[3]=\'radio\'; /*
  * Translated default messages for the $ validation plugin.
  * Locale: HU
  */
