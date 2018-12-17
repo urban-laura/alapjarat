@@ -581,7 +581,7 @@ function alapjarat_features_default_page_manager_handlers() {
 <input type="email" value="" placeholder="Az e-mail címed"  name="EMAIL" class="required email" id="mce-EMAIL">
 </div>
 <div class="mc-field-group input-group">
-<a href="/adatkezelesi-szabalyzat" target="_blank"><input type="radio" class="required" value="Elolvastam az Adatkezelési szabályzatot, és hozzájárulok, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE1" id="mce-MMERGE1-0">Elolvastam az Adatkezelési szabályzatot, és hozzájárulok, hogy az Alapjárat hírlevelet küldjön számomra.</a>
+<a href="/adatkezelesi-szabalyzat" target="_blank"><input type="radio" class="required" value="Elfogadom az adatkezelési szabályzatot."  name="MMERGE1" id="mce-MMERGE1-0">Elfogadom az adatkezelési szabályzatot.</a>
 </div>
 <div class="mc-field-group input-group consent">
 <input type="radio" class="required" value="Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE3" id="mce-MMERGE3-0"><label for="mce-MMERGE3-0">Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra.</label>
