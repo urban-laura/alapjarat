@@ -218,13 +218,11 @@ function alapjarat_common_node_presave($node) {
   if (!empty($node->published_at)) {
     $sim = similar_text($node->field_text[LANGUAGE_NONE][0]['value'], $node->original->field_text[LANGUAGE_NONE][0]['value'], $percent);
 
+    if (empty($node->published_at)) {
+      $node->published_at = $node->created;
+    }
     if ($percent > 90) {
-      if ($node->published_at) {
-        $node->changed = $node->published_at;
-      } else {
-        $node->changed = $node->created;
-        $node->published_at = $node->created;
-      }
+      $node->changed = $node->published_at;
     }
   }
 }
