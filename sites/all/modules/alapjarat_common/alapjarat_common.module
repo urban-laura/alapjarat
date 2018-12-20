@@ -215,15 +215,13 @@ function alapjarat_common_node_presave($node) {
 	}
 
   // Show article updated only if it's content changed more than 10%.
-  if (!empty($node->published_at)) {
-    $sim = similar_text($node->field_text[LANGUAGE_NONE][0]['value'], $node->original->field_text[LANGUAGE_NONE][0]['value'], $percent);
-
-    if (empty($node->published_at)) {
-      $node->published_at = $node->created;
-    }
-    if ($percent > 90) {
+  $sim = similar_text($node->field_text[LANGUAGE_NONE][0]['value'], $node->original->field_text[LANGUAGE_NONE][0]['value'], $percent);
+  if (empty($node->published_at)) {
+    $node->published_at = $node->created;
+  }
+  
+  if ($percent > 90) {
       $node->changed = $node->published_at;
-    }
   }
 }
 
