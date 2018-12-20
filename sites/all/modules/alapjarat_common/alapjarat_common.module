@@ -223,6 +223,7 @@ function alapjarat_common_node_presave($node) {
         $node->changed = $node->published_at;
       } else {
         $node->changed = $node->created;
+        $node->published_at = $node->created;
       }
     }
   }
