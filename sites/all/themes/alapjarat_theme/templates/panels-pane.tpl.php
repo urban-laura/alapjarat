@@ -21,8 +21,7 @@ if ($pane->type == 'node_created') {
   if ($node->published_at) {
     $content = date('Y-m-d', $node->published_at);
   }
-  if (($node->published_at && $node->published_at !== $node->changed) || 
-  (!$node->published_at && $node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18')) {
+  if (($node->published_at && ($node->published_at !== $node->changed || $node->published_at !== $node->created)) || (!$node->published_at && $node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18')) {
     $title = t('Updated:');
     $content = date('Y-m-d', $node->changed);
   } 
