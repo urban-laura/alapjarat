@@ -21,10 +21,21 @@ if ($pane->type == 'node_created') {
   if ($node->published_at) {
     $content = date('Y-m-d', $node->published_at);
   }
-  if (($node->published_at && ($node->published_at !== $node->changed || $node->published_at !== $node->created)) || (!$node->published_at && $node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18')) {
+
+  // Need to be make difference between publishing and updating date in articles
+  if (($node->published_at && $node->published_at !== $node->changed) || (!$node->published_at && $node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18')) {
     $title = t('Updated:');
     $content = date('Y-m-d', $node->changed);
-  } 
+  }
+
+  // Articles before published_at field/module added not populated with this data
+  // published_at module saved this field on old articles next time article/node saved (and was already published)
+  // so if published date is the same as changed date but it's far away from created date its an update in real
+  $diff = ($node->published_at - $node->created) / 86400;
+  if ($node->published_at && $node->published_at == $node->changed && $diff > 5) {
+    $title = t('Updated:');
+  }
+
 }
 ?>
 <?php if ($pane_prefix): ?>
