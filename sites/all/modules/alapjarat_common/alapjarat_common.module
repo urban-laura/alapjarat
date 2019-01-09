@@ -2,33 +2,14 @@
 
 function alapjarat_common_menu() {
 
-  /*
-  $items['fix-article-images'] = array(
-    'title' => 'Fix Google images in articles',
+  $items['admin/config/glossary_terminate'] = array(
+    'title' => 'Glossary terminate sitewide',
+    'description' => 'Turn off glossarsy mechanism on entire site',
     'page callback' => 'drupal_get_form',
-    'page arguments' => array('alapjarat_common_form'),
-    'access arguments' => array('access administration pages'),
-    'menu_name' => 'menu-admin-menu',
+    'page arguments' => array('alapjarat_common_glossary_admin'),
+    'access arguments' => array('administer content'),
     'type' => MENU_NORMAL_ITEM,
   );
-
-  $items['fix-article-images-list'] = array(
-    'title' => 'Fix list',
-    'page callback' => 'alapjarat_common_fix_articles_list',
-    'access arguments' => array('access administration pages'),
-    'menu_name' => 'menu-admin-menu',
-    'type' => MENU_NORMAL_ITEM,
-  );
-
-  $items['quickfix'] = array(
-    'title' => 'Fix list',
-    'page callback' => 'alapjarat_common_fix_google_images',
-    'page arguments' => array(1),
-    'access arguments' => array('access administration pages'),
-    'type' => MENU_CALLBACK,
-  );
-
-  */
 
   return $items;
 }
@@ -452,23 +433,36 @@ function alapjarat_common_autop($pee, $br = true ) {
 
 }
 
+function alapjarat_common_glossary_admin() {
+  $form = array();
+
+  $form['alapjarat_common_glossary_terminate'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Terminate glossary words turn to links'),
+    '#default_value' => variable_get('alapjarat_common_glossary_terminate', 0),
+    '#description' => t("Check this box to terminate the working of glossary mechanism: turning glossary words into links in articles."),
+  );
+
+  return system_settings_form($form);
+}
+
 function alapjarat_common_find_glossary($text, $node = null) {
 
-  /*
-  if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
-    $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
-    $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
+  if (variable_get('alapjarat_common_glossary_terminate', 1) == 0) {
+    if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
+      $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
+      $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
 
-    foreach ($terms as $term) {
-      //$pattern = "/(?!<.*?)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<>]*?>)/iu";
-      // new better one
-      $pattern = "/(?!<a[^>]*?>)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<]*?<\/a>)/iu";
-      $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
-      $replace = '<a href="/' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
-      $text = preg_replace($pattern , $replace,  $text);
+      foreach ($terms as $term) {
+        $pattern = "/(?<!<a|iframe|img|figcaption)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<]*?a|iframe|figcaption>)/i";
+        $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
+        $replace = '<a href="/' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
+        preg_match_all($pattern, $text, $matches);
+        $text = preg_replace($pattern , $replace,  $text);
+      }
     }
   }
-  */
+
 
   $pattern = "/www.alapjarat.hu\/wp-content\/uploads/iu";
   $replace = "www.alapjarat.hu/sites/default/files/wp-content/uploads";
