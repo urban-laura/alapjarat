@@ -446,23 +446,207 @@ function alapjarat_common_glossary_admin() {
   return system_settings_form($form);
 }
 
-function alapjarat_common_find_glossary($text, $node = null) {
+function alapjarat_common_glossary_insertlink($format, &$text, &$terms) {
+  $multibyte_enabled = extension_loaded('mbstring');
+  if ($multibyte_enabled) {
+    $mb_prefix = 'mb_';
+  }
+  else {
+    $mb_prefix = NULL;
+  }
+  $case_sensitive = 0;
+  $findfunc = $mb_prefix . 'strpos';
+  $findtagfunc = $mb_prefix . 'strpos';
 
-  if (variable_get('alapjarat_common_glossary_terminate', 1) == 0) {
-    if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
-      $vocabulary = taxonomy_vocabulary_machine_name_load('glossary');
-      $terms = taxonomy_term_load_multiple(array(), array('vid' => $vocabulary->vid));
+  $replaceall = 1;
 
-      foreach ($terms as $term) {
-        $pattern = "/(?<!<a|iframe|img|figcaption)(\b" . str_replace('/', "\/", $term->name) . "\b)(?![^<]*?a|iframe|figcaption>)/i";
-        $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
-        $replace = '<a href="/' . $alias . '" title="' . $term->description . '" class="glossary">$1</a>';
-        preg_match_all($pattern, $text, $matches);
-        $text = preg_replace($pattern , $replace,  $text);
+  $events = array();
+
+  // Find blocking tags.
+  $open_tags = array('[no-glossary]', '<', '<a ', '[code', '<figcaption');
+  $close_tags = array('[/no-glossary]', '>', '</a>', '[/code]', '</figcaption>');
+
+  $searchtext = $case_sensitive ? $text : drupal_strtolower($text);
+  foreach ($open_tags as $i => $tag) {
+    $offset = 0;
+    while (($offset = $findtagfunc($searchtext, $tag, $offset)) !== FALSE) {
+      // Longer tags will override shorter '<' on the same offset.
+      $events[$offset] = array(
+        'type' => 'open',
+        'which' => $i,
+      );
+      $offset += drupal_strlen($tag);
+    }
+  }
+
+  // Find match candidates.
+  foreach ($terms as $i => $term) {
+    $term_name = $term['name'];
+    if (!$case_sensitive) {
+      $term_name = drupal_strtolower($term_name);
+    }
+
+    $offset = 0;
+    $first_match_found = FALSE;
+    while (($offset = $findfunc($searchtext, $term_name, $offset)) !== FALSE) {
+      $len = drupal_strlen($term_name);
+      $match = drupal_substr($text, $offset, $len);
+
+      // Only longer matches override shorter ones.
+      if (!isset($events[$offset]) || drupal_strlen($events[$offset]['match']) < drupal_strlen($match)) {
+        // Get synonym with case as in text.
+        $events[$offset] = array(
+          'type' => 'match',
+          'which' => $i,
+          'match' => $match,
+        );
+        if (!$replaceall) {
+          $first_match_found = TRUE;
+          break;
+        }
+        $offset += $len;
+      }
+      // TODO: remove this if we want different synonyms of the same term to
+      // be matched independently as 'first matches'.
+      if ($first_match_found && !$replaceall) {
+        break;
       }
     }
   }
 
+  ksort($events);
+
+  $newtext = '';
+  // Text was parsed from chars 0 to $parsed (exclusive).
+  $parsed = 0;
+
+  foreach ($events as $place => $event) {
+    // Skip events inside blocking tag (they're already copied as is).
+    if ($place < $parsed) {
+      continue;
+    }
+    // Copy plain text (with no events).
+    $newtext .= drupal_substr($text, $parsed, ($place - $parsed));
+    $parsed = $place;
+    // If a blocking tag is opened, skip to closing tag.
+    if ($event['type'] == 'open') {
+      $skip = $findtagfunc($text, $close_tags[$event['which']], $place);
+      if ($skip === FALSE) {
+        $skip = drupal_strlen($text);
+      }
+      // If the tag is [no-glossary] - remove it with the closing tag
+      // (by incrementing $parsed without copying).
+      if ($event['which'] == 0) {
+        $parsed += drupal_strlen($open_tags[$event['which']]);
+        $newtext .= drupal_substr($text, $parsed, ($skip - $parsed));
+        $parsed = $skip + drupal_strlen($close_tags[$event['which']]);
+      }
+      // Copy text without changing it.
+      else {
+        $newtext .= drupal_substr($text, $parsed, ($skip - $parsed));
+        $parsed = $skip;
+      }
+    }
+    if ($event['type'] == 'match') {
+      $matchlen = drupal_strlen($event['match']);
+      $proper_match = FALSE;
+
+      $proper_match = (alapjarat_common_glossary_is_boundary(drupal_substr($text, $place - 1, 1)) && alapjarat_common_glossary_is_boundary(drupal_substr($text, $place + $matchlen, 1)));
+          
+      if ($proper_match) {
+        $newtext .= $terms[$event['which']]['ins_before'] . $event['match'] . $terms[$event['which']]['ins_after'];
+        $parsed += $matchlen;
+      }
+    }
+  }
+
+  // Append remaining part.
+  return $newtext . drupal_substr($text, $parsed);
+}
+
+function alapjarat_common_glossary_is_boundary($char) {
+  if (extension_loaded('mbstring')) {
+    return (mb_strpos("!\"#\$%&'()*+,-./:;<=>?@[\]^_`{|}~� ��������� \t\n\r", $char) !== FALSE);
+  }
+  else {
+    return (strpos("!\"#\$%&'()*+,-./:;<=>?@[\]^_`{|}~� ��������� \t\n\r", $char) !== FALSE);
+  }
+}
+
+function alapjarat_common_glossary_parser($text) {
+  $text = ' ' . $text . ' ';
+  $terms = alapjarat_common_glossary_get_terms('fullhtml');
+  $terms_replace = array();
+
+  foreach ($terms as $term) {
+    $term_title = $term->description;
+    
+    $ins_before = $ins_after = NULL;
+    $term_class = variable_get('glossary_term_class', 'glossary-term');
+
+    $linkto = '/taxonomy/term/' . $term->tid;
+    $ins_before = '<a class="glossary-indicator" title="' . $term_title . '" href="' . $linkto . '">';
+    $ins_after = '</a>';
+
+    // Replace term with the desired new HTML code.
+    $terms_replace[] = array(
+      'name' => $term->name,
+      'ins_before' => $ins_before,
+      'ins_after' => $ins_after,
+    );
+  }
+  return alapjarat_common_glossary_insertlink($format, $text, $terms_replace);
+}
+
+function alapjarat_common_glossary_get_terms($format) {
+  static $got = array();
+  $show_all = variable_get('glossary_allow_no_description', FALSE);
+  $taxonomy_image_enabled = module_exists('taxonomy_image');
+
+  $vocab_object = taxonomy_vocabulary_machine_name_load('glossary');
+  $glossary_vid = $vocab_object->vid;
+
+
+  if (!$terms = $got[$format]) {
+    $terms = array();
+    $vids = variable_get("glossary_vids_$format", 0);
+    // Get all glossary terms.
+    // Omit terms without a description. those are usually container terms.
+    // If multilingual taxonomy is enabled only show terms in current or no
+    // language.
+    $query = db_select('taxonomy_term_data', 'td');
+    // We have to use a left join because some people don't use nodes.
+    $query->leftJoin('taxonomy_index', 'ti', 'ti.tid = td.tid');
+
+    $query->fields('td', array('tid', 'name', 'description'))
+      ->addExpression('COUNT(ti.nid)', 'nodes');
+    $query->condition('td.vid', $glossary_vid)
+      ->groupBy('td.tid')
+      ->orderBy('LENGTH(td.name)', 'DESC');
+    if (module_exists('i18ntaxonomy')) {
+      global $language;
+      $query->condition('td.language', array('', $language->language), 'IN');
+    }
+
+    $result = $query->execute();
+    while ($term = $result->fetchObject()) {
+      $term->vid = $vid;
+      $terms[] = $term;
+    }
+
+  }
+
+  return $terms;
+}
+
+
+function alapjarat_common_find_glossary($text, $node = null) {
+
+  if (variable_get('alapjarat_common_glossary_terminate', 1) == 0) {
+    if (is_null($node) || $node->field_glossary_parser[LANGUAGE_NONE][0]['value'] == 1) {
+      $text = alapjarat_common_glossary_parser($text);
+    }
+  }
 
   $pattern = "/www.alapjarat.hu\/wp-content\/uploads/iu";
   $replace = "www.alapjarat.hu/sites/default/files/wp-content/uploads";
