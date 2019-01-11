@@ -32,7 +32,7 @@ if ($pane->type == 'node_created') {
   // published_at module saved this field on old articles next time article/node saved (and was already published)
   // so if published date is the same as changed date but it's far away from created date its an update in real
   $diff = ($node->published_at - $node->created) / 86400;
-  if ($node->published_at && $node->published_at == $node->changed && $diff > 5) {
+  if ($node->published_at && $node->published_at == $node->changed && $diff > 14) {
     $title = t('Updated:');
   }
 
