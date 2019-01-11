@@ -11,6 +11,24 @@ function alapjarat_common_menu() {
     'type' => MENU_NORMAL_ITEM,
   );
 
+  $items['check-images'] = array(
+    'title' => 'check-images',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('alapjarat_common_check_images_form'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'main_menu',
+  );
+
+  $items['admin/config/check-images'] = array(
+    'title' => 'Glossary terminate sitewide',
+    'description' => 'Turn off glossarsy mechanism on entire site',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('alapjarat_common_image_check_admin'),
+    'access arguments' => array('administer content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
   return $items;
 }
 
@@ -863,5 +881,91 @@ function alapjarat_common_views_query_alter(&$view, &$query) {
     $query->add_where(1,'node.nid', $nids, 'NOT IN');
 
   }
+
+}
+
+function alapjarat_common_check_images_form($form, &$form_state) {
+  
+  $form['start'] = array(
+    '#title' => 'start',
+    '#type' => 'textfield',
+    '#default_value' => 0,
+  );
+
+  $form['amount'] = array(
+    '#title' => 'amount',
+    '#type' => 'textfield',
+    '#default_value' => 4,
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Submit',
+  );
+
+  return $form;
+}
+
+function alapjarat_common_check_images_form_submit($form, &$form_state) {
+
+  $batch = array(
+    'title' => t('Check images ...'),
+    'operations' => array(),
+    'init_message' => t('Adding fields'),
+    'progress_message' => t('Processed @current out of @total.'),
+    'error_message' => t('An error occurred during processing'),
+    'finished' => 'alapjarat_common_batch_worker_finished',
+    'progressive' => FALSE,
+  );
+
+  $from = (int)$from_state['values']['start'];
+  $to = (int)$form_state['values']['amount'];
+
+  $query = db_select('node', 'n');
+  $query
+    ->fields('n', array('nid'))
+    ->fields('t', array('field_text_value'))
+    ->condition('n.type', 'a_article', '=')
+    ->orderBy('nid', 'DESC');
+    $query->addJoin('LEFT', 'field_data_field_text', 't', 't.entity_id = n.nid');
+  $query->range($from, $to);
+
+  $result = $query->execute()->fetchAll();
+
+  foreach ($result as $row) {
+    $batch['operations'][] = array('alapjarat_common_batch_worker_check_image', array($row->nid, $row->field_text_value)); 
+  }
+
+  batch_set($batch);
+  batch_process();
+}
+
+function alapjarat_common_batch_worker_check_image($nid, $text, &$context) {
+  global $base_url;
+
+  preg_match_all('/<img.*src="([^"]+)".*>/miu', $text, $matches);
+  foreach ($matches[1] as $url) {
+    $url = $base_url . $url;
+    $check = @getimagesize($url);
+    if (!$check) {
+      $urls[] = $url;
+      $context['results'][] = $url;
+    }
+  }
+
+}
+
+function alapjarat_common_batch_worker_finished($success, $results, $operations) {
+
+  if ($success) {
+    $message = format_plural($results['processed'], 'One article checked.', '@count article checked.');
+    drupal_set_message($message);
+    drupal_set_message(implode('<br />', $results));
+  }
+  else {
+    $message = 'some errors';
+    drupal_set_message($message);
+  }
+
 
 }
