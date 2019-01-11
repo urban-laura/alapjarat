@@ -145,7 +145,7 @@ function ecdh_company_search_get_profiles() {
   $data = _ecdh_company_search_curl_get_contents($url);
   $data = json_decode($data, TRUE);
 
-  $options = [];
+  $options = ['0' => t('Select profile')];
 
   foreach ($data['data'] as $profile) {
     $options[$profile['id']] = $profile['name'];
