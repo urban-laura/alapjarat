@@ -122,6 +122,56 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-a_article-field_article_fixing'.
+  $field_instances['node-a_article-field_article_fixing'] = array(
+    'bundle' => 'a_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_article_fixing',
+    'label' => 'Article fixing',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-a_article-field_article_header_banner'.
   $field_instances['node-a_article-field_article_header_banner'] = array(
     'bundle' => 'a_article',
@@ -3543,6 +3593,7 @@ function alapjarat_features_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Article Title (H1)');
+  t('Article fixing');
   t('Article header banner');
   t('Category');
   t('Description');

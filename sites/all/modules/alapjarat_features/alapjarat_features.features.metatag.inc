@@ -70,7 +70,7 @@ function alapjarat_features_metatag_export_default() {
     'disabled' => FALSE,
     'config' => array(
       'title' => array(
-        'value' => '[node:field_titlet] | [site:name]',
+        'value' => '[node:field_title2] | [site:name]',
       ),
       'description' => array(
         'value' => '[node:field_meta_description]',
