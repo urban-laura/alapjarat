@@ -213,6 +213,11 @@ function alapjarat_common_node_presave($node) {
 		$node->field_hiden_select['und'][0]['value'] = 2;
 	}
 
+	if ($node->type == 'a_article' && !isset($node->field_titlet['und'][0]['value']) && $node->status == 1){
+        $node->field_titlet['und'][0]['value'] = $node->field_title2['und'][0]['value'];
+        $node->field_titlet['und'][0]['format'] = $node->field_title2['und'][0]['format'];
+    }
+
   // Show article updated only if it's content changed more than 10%.
   $sim = similar_text($node->field_text[LANGUAGE_NONE][0]['value'], $node->original->field_text[LANGUAGE_NONE][0]['value'], $percent);
   if (empty($node->published_at)) {

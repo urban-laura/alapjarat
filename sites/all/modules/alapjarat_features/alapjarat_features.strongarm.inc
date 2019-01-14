@@ -383,13 +383,13 @@ function alapjarat_features_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '15',
-        ),
-        'metatags' => array(
           'weight' => '16',
         ),
+        'metatags' => array(
+          'weight' => '17',
+        ),
         'redirect' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
         'xmlsitemap' => array(
           'weight' => '23',

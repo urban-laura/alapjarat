@@ -1884,7 +1884,7 @@ window.onload = ChangeSrc;
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<p>© Copyright 2018, alapjarat.hu &amp; <a href="https://www.ecdh.hu" target="_blank">ecdh.hu</a>Minden jog fenntartva.</p>
+    'body' => '<p>© Copyright 2019, alapjarat.hu &amp; <a href="https://www.ecdh.hu" target="_blank">ecdh.hu</a>Minden jog fenntartva.</p>
 ',
     'format' => 'filtered_html',
     'substitute' => 1,
