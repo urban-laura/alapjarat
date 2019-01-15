@@ -2690,6 +2690,48 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-impress-field_colleague_status'.
+  $field_instances['node-impress-field_colleague_status'] = array(
+    'bundle' => 'impress',
+    'default_value' => array(
+      0 => array(
+        'tid' => 5446,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_colleague_status',
+    'label' => 'Colleague status',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-impress-field_description'.
   $field_instances['node-impress-field_description'] = array(
     'bundle' => 'impress',
@@ -2802,48 +2844,6 @@ function alapjarat_features_field_default_field_instances() {
       ),
       'type' => 'email_textfield',
       'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-impress-field_external_co_worker_'.
-  $field_instances['node-impress-field_external_co_worker_'] = array(
-    'bundle' => 'impress',
-    'default_value' => array(
-      0 => array(
-        'tid' => 53,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_external_co_worker_',
-    'label' => 'External co-worker?',
-    'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 7,
     ),
   );
 
@@ -3596,12 +3596,12 @@ function alapjarat_features_field_default_field_instances() {
   t('Article fixing');
   t('Article header banner');
   t('Category');
+  t('Colleague status');
   t('Description');
   t('E-mail');
   t('Ennek a mezőnek a szerkesztése nem befolyásolja se a Címet, se az URL-t.');
   t('Event');
   t('Event date');
-  t('External co-worker?');
   t('Fix or Random?');
   t('Gallery');
   t('Glossary parser');

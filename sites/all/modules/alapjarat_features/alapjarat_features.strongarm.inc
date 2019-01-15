@@ -483,10 +483,10 @@ function alapjarat_features_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

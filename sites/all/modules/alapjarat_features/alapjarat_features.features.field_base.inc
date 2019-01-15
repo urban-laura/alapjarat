@@ -62,6 +62,34 @@ function alapjarat_features_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_colleague_status'.
+  $field_bases['field_colleague_status'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_colleague_status',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'collegue_status',
+          'parent' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'options_list_callback' => 'i18n_taxonomy_allowed_values',
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_description'.
   $field_bases['field_description'] = array(
     'active' => 1,
@@ -149,34 +177,6 @@ function alapjarat_features_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'datetime',
-  );
-
-  // Exported field_base: 'field_external_co_worker_'.
-  $field_bases['field_external_co_worker_'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_external_co_worker_',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'yes_no',
-          'parent' => 0,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'options_list_callback' => 'i18n_taxonomy_allowed_values',
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_facebook_event'.

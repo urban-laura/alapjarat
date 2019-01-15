@@ -3806,6 +3806,28 @@ function alapjarat_features_default_page_manager_pages() {
   $pane->uuid = '3bc58db7-e69d-4b25-a497-ed35d5b57e61';
   $display->content['new-3bc58db7-e69d-4b25-a497-ed35d5b57e61'] = $pane;
   $display->panels['center'][1] = 'new-3bc58db7-e69d-4b25-a497-ed35d5b57e61';
+  $pane = new stdClass();
+  $pane->pid = 'new-1e944404-e0ed-4281-9062-8c96e24ffff1';
+  $pane->panel = 'center';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'menu-panel_pane_3';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'impress_yes',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '1e944404-e0ed-4281-9062-8c96e24ffff1';
+  $display->content['new-1e944404-e0ed-4281-9062-8c96e24ffff1'] = $pane;
+  $display->panels['center'][2] = 'new-1e944404-e0ed-4281-9062-8c96e24ffff1';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-ddeb7f33-f6b1-4e48-9880-edf246978907';
   $handler->conf['display'] = $display;
@@ -3914,6 +3936,10 @@ function alapjarat_features_default_page_manager_pages() {
 </li>
 <li class="clearfix">
 <span class="label"><a href=\'impress/2\'>Külsős munkatárs</a></span>
+<div class="description"></div>
+</li>
+<li class="clearfix">
+<span class="label"><a href=\'impress/3\'>Volt munkatárs</a></span>
 <div class="description"></div>
 </li>
 </ul>',

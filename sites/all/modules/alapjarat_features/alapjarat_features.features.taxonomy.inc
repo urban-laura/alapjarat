@@ -63,6 +63,33 @@ function alapjarat_features_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'collegue_status' => array(
+      'name' => 'Collegue status',
+      'machine_name' => 'collegue_status',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 0,
+      'base_i18n_mode' => 0,
+      'base_language' => 'und',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'fix_random' => array(
       'name' => 'fix/random',
       'machine_name' => 'fix_random',
