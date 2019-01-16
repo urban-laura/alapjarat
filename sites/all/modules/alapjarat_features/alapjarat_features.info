@@ -341,6 +341,7 @@ features[variable][] = xmlsitemap_settings_menu_link_menu-second-menu
 features[variable][] = xmlsitemap_settings_node_a_article
 features[variable][] = xmlsitemap_settings_node_pages
 features[variable][] = xmlsitemap_settings_taxonomy_term_category
+features[variable][] = xmlsitemap_settings_taxonomy_term_glossary
 features[variable][] = xmlsitemap_settings_taxonomy_term_tags
 features[variable_realm][] = language:hu
 features[views_view][] = admin
