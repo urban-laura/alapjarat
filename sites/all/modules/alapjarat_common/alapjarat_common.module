@@ -215,6 +215,7 @@ function alapjarat_common_node_presave($node) {
 
 	if ($node->type == 'a_article' && isset($node->field_titlet['und'][0]['value'])){
         $node->metatags['und']['title']['value'] = "[node:field_titlet] | [site:name]";
+        $node->metatags['hu']['title']['value'] = "[node:field_titlet] | [site:name]";
     }
 
   // Show article updated only if it's content changed more than 10%.
