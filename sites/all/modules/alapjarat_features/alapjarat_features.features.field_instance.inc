@@ -2695,7 +2695,7 @@ function alapjarat_features_field_default_field_instances() {
     'bundle' => 'impress',
     'default_value' => array(
       0 => array(
-        'tid' => 5446,
+        'tid' => 6236,
       ),
     ),
     'deleted' => 0,
