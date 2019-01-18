@@ -903,13 +903,14 @@ function alapjarat_common_check_images_form($form, &$form_state) {
     '#value' => 'Submit',
   );
 
+  
   return $form;
 }
 
 function alapjarat_common_check_images_form_submit($form, &$form_state) {
 
   $batch = array(
-    'title' => t('Check images ...'),
+    'title' => t('In progress'),
     'operations' => array(),
     'init_message' => t('Adding fields'),
     'progress_message' => t('Processed @current out of @total.'),
@@ -918,7 +919,7 @@ function alapjarat_common_check_images_form_submit($form, &$form_state) {
     'progressive' => FALSE,
   );
 
-  $from = (int)$from_state['values']['start'];
+  $from = (int)$form_state['values']['start'];
   $to = (int)$form_state['values']['amount'];
 
   $query = db_select('node', 'n');
@@ -945,11 +946,17 @@ function alapjarat_common_batch_worker_check_image($nid, $text, &$context) {
 
   preg_match_all('/<img.*src="([^"]+)".*>/miu', $text, $matches);
   foreach ($matches[1] as $url) {
-    $url = $base_url . $url;
-    $check = @getimagesize($url);
+    //$url = $base_url . $url;
+    if (strpos($url, 'http') === FALSE) {
+      $url = 'https://alapjarat.hu' . $url;
+    } else {
+      $url = str_replace('www.alapjarat.hu', 'alapjarat.hu', $url);
+      $url = str_replace('http://alapjarat', 'https://alapjarat', $url);
+    }
+    $check = alapjarat_common_is_url_exist($url);
     if (!$check) {
       $urls[] = $url;
-      $context['results'][] = $url;
+      $context['results'][$nid][] = $url;
     }
   }
 
@@ -960,7 +967,14 @@ function alapjarat_common_batch_worker_finished($success, $results, $operations)
   if ($success) {
     $message = format_plural($results['processed'], 'One article checked.', '@count article checked.');
     drupal_set_message($message);
-    drupal_set_message(implode('<br />', $results));
+    foreach ($results as $nid => $images) {
+      $url = 'https://alapjarat.hu/' . drupal_get_path_alias('node/' . $nid);
+      drupal_set_message(l($url, $url, array('attributes' => array('target'=>'_blank'))));  
+      foreach ($images as $image) {
+        drupal_set_message($image);  
+      }
+    }
+    
   }
   else {
     $message = 'some errors';
@@ -968,4 +982,20 @@ function alapjarat_common_batch_worker_finished($success, $results, $operations)
   }
 
 
+}
+
+function alapjarat_common_is_url_exist($url){
+    $ch = curl_init($url);    
+    curl_setopt($ch, CURLOPT_NOBODY, true);
+    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+    curl_exec($ch);
+    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    if($code == 200){
+       $status = TRUE;
+    }else{
+      $status = FALSE;
+    }
+    curl_close($ch);
+   return $status;
 }
