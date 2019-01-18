@@ -1,0 +1,4 @@
+name = fix_article_top
+description = Fix article in top four articles
+core = 7.x
+version = 7.x-1.x

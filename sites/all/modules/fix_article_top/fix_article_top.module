@@ -1,0 +1,8 @@
+<?php
+
+function fix_article_top_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'fix_article_top'),
+  );
+}
