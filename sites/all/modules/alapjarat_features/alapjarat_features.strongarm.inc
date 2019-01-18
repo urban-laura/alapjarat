@@ -383,13 +383,13 @@ function alapjarat_features_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '15',
-        ),
-        'metatags' => array(
           'weight' => '16',
         ),
+        'metatags' => array(
+          'weight' => '17',
+        ),
         'redirect' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
         'xmlsitemap' => array(
           'weight' => '23',
@@ -483,10 +483,10 @@ function alapjarat_features_strongarm() {
           'weight' => '2',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -992,6 +992,16 @@ function alapjarat_features_strongarm() {
     'priority' => '0.5',
   );
   $export['xmlsitemap_settings_taxonomy_term_category'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_taxonomy_term_glossary';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.8',
+  );
+  $export['xmlsitemap_settings_taxonomy_term_glossary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

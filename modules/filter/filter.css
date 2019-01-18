@@ -29,6 +29,20 @@
   clear: left;
   padding: 0 1.5em;
 }
+
+#edit-field-title2, #edit-field-titlet, #edit-field-menu {
+  position: relative;
+}
+
+#edit-field-title2 .description, #edit-field-titlet .description, #edit-field-menu .description {
+  top: 25px;
+  position: absolute;
+}
+
+#edit-field-title2 label, #edit-field-titlet label, #edit-field-menu label {
+  padding-bottom: 20px;
+}
+
 .text-format-wrapper .description {
   margin-top: 0.5em;
   color: red;

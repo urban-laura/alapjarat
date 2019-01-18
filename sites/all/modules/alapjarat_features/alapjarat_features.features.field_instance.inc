@@ -122,6 +122,56 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-a_article-field_article_fixing'.
+  $field_instances['node-a_article-field_article_fixing'] = array(
+    'bundle' => 'a_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_article_fixing',
+    'label' => 'Article fixing',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-a_article-field_article_header_banner'.
   $field_instances['node-a_article-field_article_header_banner'] = array(
     'bundle' => 'a_article',
@@ -168,7 +218,7 @@ function alapjarat_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -326,7 +376,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -384,7 +434,7 @@ function alapjarat_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -433,7 +483,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -547,7 +597,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -661,7 +711,7 @@ function alapjarat_features_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -713,7 +763,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -802,7 +852,7 @@ function alapjarat_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -857,7 +907,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -946,7 +996,7 @@ function alapjarat_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -998,7 +1048,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -1086,7 +1136,7 @@ function alapjarat_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -1127,7 +1177,7 @@ function alapjarat_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_subtitled',
-    'label' => 'Subtitled',
+    'label' => 'Subtitled (H2)',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -1175,7 +1225,7 @@ function alapjarat_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1226,7 +1276,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -1281,7 +1331,7 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1816,7 +1866,7 @@ function alapjarat_features_field_default_field_instances() {
         'rows' => 20,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -1857,7 +1907,7 @@ function alapjarat_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_title2',
-    'label' => 'Title (70)',
+    'label' => 'Article Title (H1)',
     'required' => 1,
     'settings' => array(
       'better_formats' => array(
@@ -1906,6 +1956,87 @@ function alapjarat_features_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-a_article-field_titlet'.
+  $field_instances['node-a_article-field_titlet'] = array(
+    'bundle' => 'a_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ennek a mezőnek a szerkesztése nem befolyásolja se a Címet, se az URL-t.',
+    'display' => array(
+      'amp' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_titlet',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 0,
+          'filtered_html' => 0,
+          'fullhtml' => 0,
+          'link' => 0,
+          'plain_text' => 0,
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 1,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -47,
+            ),
+            'filtered_html' => array(
+              'weight' => -46,
+            ),
+            'fullhtml' => array(
+              'weight' => -48,
+            ),
+            'link' => array(
+              'weight' => -45,
+            ),
+            'plain_text' => array(
+              'weight' => -49,
+            ),
+            'text' => array(
+              'weight' => -50,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 3,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
     ),
   );
 
@@ -1970,7 +2101,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -2559,6 +2690,48 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-impress-field_colleague_status'.
+  $field_instances['node-impress-field_colleague_status'] = array(
+    'bundle' => 'impress',
+    'default_value' => array(
+      0 => array(
+        'tid' => 6236,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_colleague_status',
+    'label' => 'Colleague status',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-impress-field_description'.
   $field_instances['node-impress-field_description'] = array(
     'bundle' => 'impress',
@@ -2671,48 +2844,6 @@ function alapjarat_features_field_default_field_instances() {
       ),
       'type' => 'email_textfield',
       'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-impress-field_external_co_worker_'.
-  $field_instances['node-impress-field_external_co_worker_'] = array(
-    'bundle' => 'impress',
-    'default_value' => array(
-      0 => array(
-        'tid' => 53,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_external_co_worker_',
-    'label' => 'External co-worker?',
-    'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 7,
     ),
   );
 
@@ -3461,13 +3592,16 @@ function alapjarat_features_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Article Title (H1)');
+  t('Article fixing');
   t('Article header banner');
   t('Category');
+  t('Colleague status');
   t('Description');
   t('E-mail');
+  t('Ennek a mezőnek a szerkesztése nem befolyásolja se a Címet, se az URL-t.');
   t('Event');
   t('Event date');
-  t('External co-worker?');
   t('Fix or Random?');
   t('Gallery');
   t('Glossary parser');
@@ -3489,7 +3623,7 @@ function alapjarat_features_field_default_field_instances() {
   t('Source');
   t('Status');
   t('Stressed event? 	');
-  t('Subtitled');
+  t('Subtitled (H2)');
   t('Tags');
   t('Test features contra');
   t('Test features pro');
@@ -3500,7 +3634,6 @@ function alapjarat_features_field_default_field_instances() {
   t('Test options');
   t('Text');
   t('Title');
-  t('Title (70)');
   t('Use glossary function on article.');
   t('wp post id');
 
