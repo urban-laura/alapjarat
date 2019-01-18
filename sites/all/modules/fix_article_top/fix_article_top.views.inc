@@ -8,7 +8,7 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 	    ->fields('n', array('nid'))
 	    ->condition('n.status', 1)
 	    ->condition('n.type', 'a_article')
-	    ->orderBy('n.changed', 'DESC')
+	    ->orderBy('n.created', 'DESC')
 	    ->range(0,5);
 
 	    $result = $new_query->execute();
