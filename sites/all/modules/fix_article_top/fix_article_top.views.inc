@@ -15,7 +15,7 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 	    	$fixed_article[] = $row->entity_id;
 	    }
 
-	    if (count($fixed_article > 0)) {
+	    if (!empty($fixed_article)) {
 		    $new_query = db_select('node', 'n')
 		    ->fields('n', array('nid'))
 		    ->condition('n.status', 1)
@@ -31,7 +31,7 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 
 		    
 
-		    $nids[1] = $fixed_article[0]; 
+		    $nids[4] = $fixed_article[0]; 
 
 		    $query->add_where(1,'node.nid', $nids, 'IN');
 		}
