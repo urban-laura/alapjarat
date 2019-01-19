@@ -6,3 +6,22 @@ function fix_article_top_views_api() {
     'path' => drupal_get_path('module', 'fix_article_top'),
   );
 }
+
+function fix_article_exists() {
+	$fixed = db_select('field_data_field_article_fixing', 'f')
+    ->fields('f', array('entity_id'))
+    ->condition('f.field_article_fixing_value', '1')
+    ->orderBy('f.entity_id', 'DESC')
+    ->range(0,1);
+
+    $result = $fixed->execute();
+    foreach ($result as $row) {
+		$fixed_article[] = $row->entity_id;
+    }
+
+    if (!empty($fixed_article)) {
+		return $fixed_article[0];
+    } else {
+		return null;
+    }
+}

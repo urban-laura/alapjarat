@@ -4,16 +4,7 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 
 	if ($view->name == 'first' && $view->current_display == 'panel_pane_10') {
 
-		$fixed = db_select('field_data_field_article_fixing', 'f')
-	    ->fields('f', array('entity_id'))
-	    ->condition('f.field_article_fixing_value', '1')
-	    ->orderBy('f.entity_id', 'DESC')
-	    ->range(0,1);
-
-	    $result = $fixed->execute();
-	    foreach ($result as $row) {
-	    	$fixed_article[] = $row->entity_id;
-	    }
+	    $fixed_article = fix_article_exists();
 
 	    if (!empty($fixed_article)) {
 		    $new_query = db_select('node', 'n')
@@ -31,7 +22,7 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 
 		    
 
-		    $nids[4] = $fixed_article[0]; 
+		    $nids[2] = $fixed_article;
 
 		    $query->add_where(1,'node.nid', $nids, 'IN');
 		}
