@@ -7,13 +7,16 @@
  * @ingroup views_templates
  */
 
-if (!empty($fixed_article)) {
-  $o1 = $rows[1];
-  $o2 = $rows[2];
+if (module_exists('fix_article_top')) {
+	$fixed_article = fix_article_exists();
+	if (!empty($fixed_article)) {
+	  $o1 = $rows[1];
+	  $o2 = $rows[2];
 
-  $rows[1] = $rows[3];
-  $rows[2] = $o1;
-  $rows[3] = $o2;
+	  $rows[1] = $rows[3];
+	  $rows[2] = $o1;
+	  $rows[3] = $o2;
+	}
 }
 
 ?>
