@@ -131,7 +131,7 @@ function alapjarat_features_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you check this, article will be placed in the top 4x4 articles with images section - on the 2nd position (top right)',
     'display' => array(
       'amp' => array(
         'label' => 'above',
@@ -3607,6 +3607,7 @@ function alapjarat_features_field_default_field_instances() {
   t('Glossary parser');
   t('Ha ezt megváltoztatod, változik az URL is!');
   t('Hiden select');
+  t('If you check this, article will be placed in the top 4x4 articles with images section - on the 2nd position (top right)');
   t('Images');
   t('Location');
   t('Main image');
