@@ -3939,7 +3939,7 @@ function alapjarat_features_default_page_manager_pages() {
 <div class="description"></div>
 </li>
 <li class="clearfix">
-<span class="label"><a href=\'impress/3\'>Volt munkatárs</a></span>
+<span class="label"><a href=\'impress/3\'>Korábbi munkatárs</a></span>
 <div class="description"></div>
 </li>
 </ul>',
