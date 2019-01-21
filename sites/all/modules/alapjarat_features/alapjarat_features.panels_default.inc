@@ -44,10 +44,12 @@ function alapjarat_features_default_panels_mini() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Webshop link',
+    'admin_title' => 'Webshop, ECDH link',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<a href="/alapjarat-webshop">Webshop</a>',
+    'body' => '<a href="https://www.ecdh.hu/indulas-hamarosan.html">ECDH előregisztráció</a>
+<br>
+<a href="/alapjarat-webshop">Webshop</a>',
     'format' => 'admin_html',
     'substitute' => TRUE,
   );
