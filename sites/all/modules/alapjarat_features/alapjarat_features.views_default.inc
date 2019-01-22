@@ -746,6 +746,106 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ előző';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'következő ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'utolsó »';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'views_bulk_operations' => 'views_bulk_operations',
+    'path' => 'path',
+    'field_title2' => 'field_title2',
+    'field_hiden_select' => 'field_hiden_select',
+    'created' => 'created',
+    'published_at' => 'published_at',
+    'field_published' => 'field_published',
+    'field_menu' => 'field_menu',
+    'field_secondary_menu' => 'field_secondary_menu',
+    'field_tags' => 'field_tags',
+    'nid' => 'nid',
+    'nid_1' => 'nid_1',
+  );
+  $handler->display->display_options['style_options']['default'] = 'field_hiden_select';
+  $handler->display->display_options['style_options']['info'] = array(
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'path' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_title2' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_hiden_select' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'published_at' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_published' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_menu' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_secondary_menu' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_tags' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nid_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
@@ -792,10 +892,18 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
   $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = 'Közzétéve/Létrehozva';
+  $handler->display->display_options['fields']['created']['label'] = 'Létrehozva';
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y-m-d H:i';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Node: Published at */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['label'] = 'Közzétéve';
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'Y-m-d H:i';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Field: Tartalom: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
@@ -2156,18 +2264,17 @@ function alapjarat_features_views_default_views() {
     t('Article'),
     t('Útvonal'),
     t('<a href=\'[path]\'>[field_title2]</a>'),
-    t('Közzétéve/Létrehozva'),
+    t('Létrehozva'),
+    t('Közzétéve'),
     t('Szerző'),
     t('Elsődleges Rovat'),
     t('Másodlagos rovat'),
     t('Kategória'),
-    t('Közzétéve'),
     t('Elsődleges rovat'),
     t('Menu (field_menu)'),
     t('Event'),
     t('Publikálás dátuma'),
     t('Eltávolítás dátuma'),
-    t('Létrehozva'),
     t('Banner1(fix)'),
     t('Banner2(fix)'),
     t('Banner3(fix)'),
@@ -6464,6 +6571,7 @@ function alapjarat_features_views_default_views() {
     t('The editorial of Alapjárat'),
     t('<a href="mailto:[field_e_mail-email]"><img src="https://alapjarat.hu/sites/default/files/email.png" alt="[field_e_mail-email]"></a>'),
     t('Impress (Aktív)'),
+    t('more'),
     t('<h1>Impresszum</h1> <h2>Az Alapjárat szerkesztősége</h2>'),
     t('<a href="[field_name_link]">[title]</a>'),
     t('Colleague status (field_colleague_status)'),
