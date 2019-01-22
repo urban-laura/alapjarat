@@ -808,6 +808,12 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_menu']['field'] = 'field_menu';
   $handler->display->display_options['fields']['field_menu']['label'] = 'Elsődleges Rovat';
   $handler->display->display_options['fields']['field_menu']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Tartalom: Secondary Heading 	 */
+  $handler->display->display_options['fields']['field_secondary_menu']['id'] = 'field_secondary_menu';
+  $handler->display->display_options['fields']['field_secondary_menu']['table'] = 'field_data_field_secondary_menu';
+  $handler->display->display_options['fields']['field_secondary_menu']['field'] = 'field_secondary_menu';
+  $handler->display->display_options['fields']['field_secondary_menu']['label'] = 'Másodlagos rovat';
+  $handler->display->display_options['fields']['field_secondary_menu']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Tartalom: Tags */
   $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
   $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
@@ -905,7 +911,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['filters']['field_menu_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_menu_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_menu_tid']['expose']['operator_id'] = 'field_menu_tid_op';
-  $handler->display->display_options['filters']['field_menu_tid']['expose']['label'] = 'Elsődleges Menü ';
+  $handler->display->display_options['filters']['field_menu_tid']['expose']['label'] = 'Elsődleges rovat';
   $handler->display->display_options['filters']['field_menu_tid']['expose']['operator'] = 'field_menu_tid_op';
   $handler->display->display_options['filters']['field_menu_tid']['expose']['identifier'] = 'field_menu_tid';
   $handler->display->display_options['filters']['field_menu_tid']['expose']['remember_roles'] = array(
@@ -913,6 +919,7 @@ function alapjarat_features_views_default_views() {
     1 => 0,
     3 => 0,
     4 => 0,
+    5 => 0,
   );
   $handler->display->display_options['filters']['field_menu_tid']['group_info']['label'] = 'Menu (field_menu)';
   $handler->display->display_options['filters']['field_menu_tid']['group_info']['identifier'] = 'field_menu_tid';
@@ -935,6 +942,25 @@ function alapjarat_features_views_default_views() {
   );
   $handler->display->display_options['filters']['field_menu_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
+  /* Filter criterion: Tartalom: Secondary Heading 	 (field_secondary_menu) */
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['id'] = 'field_secondary_menu_tid';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['table'] = 'field_data_field_secondary_menu';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['field'] = 'field_secondary_menu_tid';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['expose']['operator_id'] = 'field_secondary_menu_tid_op';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['expose']['label'] = 'Másodlagos rovat';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['expose']['operator'] = 'field_secondary_menu_tid_op';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['expose']['identifier'] = 'field_secondary_menu_tid';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_secondary_menu_tid']['vocabulary'] = 'menu';
   /* Filter criterion: Tartalom: Tags (field_tags) */
   $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
   $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
@@ -2111,10 +2137,9 @@ function alapjarat_features_views_default_views() {
     t('következő ›'),
     t('utolsó »'),
     t('Tartalom'),
-    t('- Choose an operation -'),
+    t('- Művelet kiválasztása -'),
     t('Location (field_location0)'),
     t('Impress (1)'),
-    t('more'),
     t('Név'),
     t('<a href=\'/node/[nid]/edit\'>edit</a>'),
     t('<a href=\'/node/[nid_1]/delete\'>delete</a>'),
@@ -2134,9 +2159,10 @@ function alapjarat_features_views_default_views() {
     t('Közzétéve/Létrehozva'),
     t('Szerző'),
     t('Elsődleges Rovat'),
+    t('Másodlagos rovat'),
     t('Kategória'),
     t('Közzétéve'),
-    t('Elsődleges Menü '),
+    t('Elsődleges rovat'),
     t('Menu (field_menu)'),
     t('Event'),
     t('Publikálás dátuma'),
@@ -2148,7 +2174,6 @@ function alapjarat_features_views_default_views() {
     t('Banner4(fix)'),
     t('Banner5(fix)'),
     t('Impress (3)'),
-    t('- Művelet kiválasztása -'),
   );
   $export['admin'] = $view;
 
