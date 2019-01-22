@@ -20,15 +20,6 @@ function alapjarat_common_menu() {
     'menu_name' => 'main_menu',
   );
 
-  $items['admin/config/check-images'] = array(
-    'title' => 'Glossary terminate sitewide',
-    'description' => 'Turn off glossarsy mechanism on entire site',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('alapjarat_common_image_check_admin'),
-    'access arguments' => array('administer content'),
-    'type' => MENU_NORMAL_ITEM,
-  );
-
   return $items;
 }
 
