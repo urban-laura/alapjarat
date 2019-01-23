@@ -2245,9 +2245,10 @@ function alapjarat_features_views_default_views() {
     t('következő ›'),
     t('utolsó »'),
     t('Tartalom'),
-    t('- Művelet kiválasztása -'),
+    t('- Choose an operation -'),
     t('Location (field_location0)'),
     t('Impress (1)'),
+    t('more'),
     t('Név'),
     t('<a href=\'/node/[nid]/edit\'>edit</a>'),
     t('<a href=\'/node/[nid_1]/delete\'>delete</a>'),
@@ -2281,6 +2282,7 @@ function alapjarat_features_views_default_views() {
     t('Banner4(fix)'),
     t('Banner5(fix)'),
     t('Impress (3)'),
+    t('- Művelet kiválasztása -'),
   );
   $export['admin'] = $view;
 
@@ -7048,6 +7050,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7062,6 +7098,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7100,6 +7170,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7138,6 +7242,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7176,6 +7314,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7214,6 +7386,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7252,6 +7458,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7290,6 +7530,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7328,6 +7602,40 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['title'] = 'Alapjárat - Magyar Autós Közösség';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['style_plugin'] = 'rss_fields';
+  $handler->display->display_options['style_options']['channel'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'description' => 'Alapjárat - Magyar Autós Közösség',
+        'language' => '',
+        'category' => 'Autós hírek, videótesztek, hasznos infók a mindennapi autózáshoz.',
+        'image' => 'https://alapjarat.hu/sites/default/files/alapjarat_logo.png',
+        'copyright' => '',
+        'managingEditor' => '',
+        'webMaster' => '',
+        'generator' => '',
+        'docs' => '',
+        'cloud' => '',
+        'ttl' => '',
+        'skipHours' => '',
+        'skipDays' => '',
+      ),
+    ),
+  );
+  $handler->display->display_options['style_options']['item'] = array(
+    'core' => array(
+      'views_rss_core' => array(
+        'title' => 'title',
+        'link' => 'path',
+        'description' => 'field_subtitled',
+        'author' => 'field_published',
+        'category' => 'field_tags',
+        'comments' => '',
+        'enclosure' => 'field_image',
+        'guid' => 'path',
+        'pubDate' => 'created',
+      ),
+    ),
+  );
   $handler->display->display_options['style_options']['feed_settings'] = array(
     'absolute_paths' => 1,
     'feed_in_links' => 0,
@@ -7379,7 +7687,6 @@ function alapjarat_features_views_default_views() {
     t('Közzétételi dátum'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Publikálta'),
     t('Közzétéve'),
