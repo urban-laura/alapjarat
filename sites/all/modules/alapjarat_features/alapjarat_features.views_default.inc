@@ -6295,7 +6295,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3>Külsős munkatárs</h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3>Külsős munkatársaink</h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -6513,7 +6513,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3>Korábbi munkatárs</h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3>Korábbi munkatársaink</h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
@@ -6573,19 +6573,18 @@ function alapjarat_features_views_default_views() {
     t('The editorial of Alapjárat'),
     t('<a href="mailto:[field_e_mail-email]"><img src="https://alapjarat.hu/sites/default/files/email.png" alt="[field_e_mail-email]"></a>'),
     t('Impress (Aktív)'),
-    t('more'),
     t('<h1>Impresszum</h1> <h2>Az Alapjárat szerkesztősége</h2>'),
     t('<a href="[field_name_link]">[title]</a>'),
     t('Colleague status (field_colleague_status)'),
     t('Nézettáblák'),
     t('Impress (Külsős)'),
-    t('<h3>Külsős munkatárs</h3>'),
+    t('<h3>Külsős munkatársaink</h3>'),
     t('Partners (premium)'),
     t('<h1>Partnereink</h1> <h3>Prémium autós partnerek</h3> '),
     t('Partners (recreation)'),
     t('<h3>Prémium szabadidős partnerek</h3>'),
     t('Impress (Volt)'),
-    t('<h3>Korábbi munkatárs</h3>'),
+    t('<h3>Korábbi munkatársaink</h3>'),
   );
   $export['menu'] = $view;
 
@@ -7687,6 +7686,7 @@ function alapjarat_features_views_default_views() {
     t('Közzétételi dátum'),
     t('Mind'),
     t('Content pane'),
+    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Publikálta'),
     t('Közzétéve'),

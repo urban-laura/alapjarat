@@ -3935,11 +3935,11 @@ function alapjarat_features_default_page_manager_pages() {
 <div class="description"></div>
 </li>
 <li class="clearfix">
-<span class="label"><a href=\'impress/2\'>Külsős munkatárs</a></span>
+<span class="label"><a href=\'impress/2\'>Külsős munkatársaink</a></span>
 <div class="description"></div>
 </li>
 <li class="clearfix">
-<span class="label"><a href=\'impress/3\'>Korábbi munkatárs</a></span>
+<span class="label"><a href=\'impress/3\'>Korábbi munkatársaink</a></span>
 <div class="description"></div>
 </li>
 </ul>',
