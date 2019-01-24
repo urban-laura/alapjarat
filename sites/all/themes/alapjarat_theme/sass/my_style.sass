@@ -937,21 +937,27 @@ div.pages
 
 .my_footer
 	margin-top: 10px !important
-	.clearfix
-		margin: auto
-		width: -moz-fit-content
-	.second_menu_footer
-		width: auto
-		li
-			display: inline
-			padding: 0
-			margin: 0
 	a
 		padding-right: 7px
 		border-right: solid 1px black
 		padding-left: 2.7px
+	.second_menu_footer
+		width: fit-content
+		width: -moz-fit-content
+		margin: auto
+		float: none
+		li
+			display: inline
+			padding: 0
+			margin: 0
+		li:last-child a
+			border-right: 0px
+	.panels-flexible-region-last
+		width: fit-content
+		width: -moz-fit-content
+		margin: auto
+		float: none
 	.footer_text
-		padding-left: 7px
-		padding-right: 2.7px
+		margin-top: 5px
 		a
 			margin-right: 7px
