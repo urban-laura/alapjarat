@@ -7762,6 +7762,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
+  $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['alter']['path'] = '[url]';
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
@@ -7773,9 +7774,8 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['nid']['alter']['text'] = '<a href="/node/[nid]">[field_title2]</a>';
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<a href="[url]">[field_title2]</a>';
   $handler->display->display_options['fields']['nid']['element_type'] = 'h3';
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nid']['separator'] = '';
@@ -7888,7 +7888,7 @@ function alapjarat_features_views_default_views() {
     t('következő ›'),
     t('utolsó »'),
     t('Keresési találatok'),
-    t('<a href="/node/[nid]">[field_title2]</a>'),
+    t('<a href="[url]">[field_title2]</a>'),
     t('.'),
     t('Publikálta:'),
     t('Kategória'),
