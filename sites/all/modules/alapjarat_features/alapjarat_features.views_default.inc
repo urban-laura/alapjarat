@@ -6573,6 +6573,7 @@ function alapjarat_features_views_default_views() {
     t('The editorial of Alapjárat'),
     t('<a href="mailto:[field_e_mail-email]"><img src="https://alapjarat.hu/sites/default/files/email.png" alt="[field_e_mail-email]"></a>'),
     t('Impress (Aktív)'),
+    t('more'),
     t('<h1>Impresszum</h1> <h2>Az Alapjárat szerkesztősége</h2>'),
     t('<a href="[field_name_link]">[title]</a>'),
     t('Colleague status (field_colleague_status)'),
@@ -7686,7 +7687,6 @@ function alapjarat_features_views_default_views() {
     t('Közzétételi dátum'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Publikálta'),
     t('Közzétéve'),
@@ -7748,12 +7748,22 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Keresési találatok';
   $handler->display->display_options['header']['area']['format'] = 'plain_text';
+  /* Field: Indexed Tartalom: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_article_index';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
   /* Field: Indexed Tartalom: Article Title (H1) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
-  $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_title2']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_title2']['alter']['path'] = '[url]';
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['settings'] = array(
     'trim_length' => '100',
@@ -7763,6 +7773,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['nid']['table'] = 'search_api_index_article_index';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['nid']['alter']['text'] = '<a href="/node/[nid]">[field_title2]</a>';
   $handler->display->display_options['fields']['nid']['element_type'] = 'h3';
@@ -7883,7 +7894,6 @@ function alapjarat_features_views_default_views() {
     t('Kategória'),
     t('Közzétéve:'),
     t('Page'),
-    t('more'),
   );
   $export['search_api_search'] = $view;
 
