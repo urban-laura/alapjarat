@@ -31,18 +31,33 @@ function seo_report_export($node) {
   }
 
   $title = '<h1>First tag: ' . $first_tag . '</h1>';
-
-
   $header = ['field name', 'value', 'is tag occur'];
   
+  if ($nw->title->value()) {
+    $fields[] = ['title'] + _seo_report_emphasize_tag($first_tag, $nw->title->value());
+  } else {
+  	$fields[] = ['title', '<empty>'];	
+  }
 
-  $fields[] = ['title'] + _seo_report_emphasize_tag($first_tag, $nw->title->value());
-  $fields[] = ['title2'] + _seo_report_emphasize_tag($first_tag, $nw->field_title2->value->value());
-  $fields[] = ['subtitle'] + _seo_report_emphasize_tag($first_tag, $nw->field_subtitled->value->value());
-  $fields[] = ['meta desc'] + _seo_report_emphasize_tag($first_tag, $nw->field_meta_description->value->value());
-  $fields[] = ['source'] + _seo_report_emphasize_tag($first_tag, $nw->field_source->value->value());
+  if ($nw->field_title2->value()) {
+    $fields[] = ['title2'] + _seo_report_emphasize_tag($first_tag, $nw->field_title2->value->value());
+  }
 
-  $fields[] = ['main image alt text'] + _seo_report_emphasize_tag($first_tag, $nw->field_image->alt->value());
+  if ($nw->field_subtitled->value()) {
+    $fields[] = ['subtitle'] + _seo_report_emphasize_tag($first_tag, $nw->field_subtitled->value->value());
+  }
+
+  if ($nw->field_meta_description->value()) {
+    $fields[] = ['meta desc'] + _seo_report_emphasize_tag($first_tag, $nw->field_meta_description->value->value());
+  }
+
+  if ($nw->field_source->value()) {
+    $fields[] = ['source'] + _seo_report_emphasize_tag($first_tag, strip_tags($nw->field_source->value->value()));
+  }
+
+  if ($nw->field_image->value()) {
+    $fields[] = ['main image alt text'] + _seo_report_emphasize_tag($first_tag, $nw->field_image->alt->value());
+  } 
 
   $text = $nw->field_text->value->value();
   $pattern = '/img.*?alt="(.*?)"/mi';
@@ -52,7 +67,7 @@ function seo_report_export($node) {
   foreach ($matches[1] as $row) {
   	$fields[] = ['image ' . $c . ' alt text'] + _seo_report_emphasize_tag($first_tag, $row);
   	$c++;
-  }
+  } 
 
   return $title . theme('table', array('header' => $header, 'rows' => $fields));
 }
