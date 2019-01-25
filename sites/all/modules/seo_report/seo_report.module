@@ -1,0 +1,72 @@
+<?php
+
+/**
+* Implements hook_menu().
+*/
+function seo_report_menu() {
+  $items = array();
+
+  $items['node/%node/seo-report'] = array(
+    'access arguments' => array('access administration pages'),
+    'page callback' => 'seo_report_export',
+    'page arguments' => array(1),
+    'title' => 'SEO report',
+    'weight' => 5,
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
+
+/**
+* Page callback.
+*/
+function seo_report_export($node) {
+
+  $nw = entity_metadata_wrapper('node', $node);
+
+  foreach ($nw->field_tagsa->value() as $key => $value) {
+  	$first_tag = $value->name;
+  	break 1;
+  }
+
+  $title = '<h1>First tag: ' . $first_tag . '</h1>';
+
+
+  $header = ['field name', 'value', 'is tag occur'];
+  
+
+  $fields[] = ['title'] + _seo_report_emphasize_tag($first_tag, $nw->title->value());
+  $fields[] = ['title2'] + _seo_report_emphasize_tag($first_tag, $nw->field_title2->value->value());
+  $fields[] = ['subtitle'] + _seo_report_emphasize_tag($first_tag, $nw->field_subtitled->value->value());
+  $fields[] = ['meta desc'] + _seo_report_emphasize_tag($first_tag, $nw->field_meta_description->value->value());
+  $fields[] = ['source'] + _seo_report_emphasize_tag($first_tag, $nw->field_source->value->value());
+
+  $fields[] = ['main image alt text'] + _seo_report_emphasize_tag($first_tag, $nw->field_image->alt->value());
+
+  $text = $nw->field_text->value->value();
+  $pattern = '/img.*?alt="(.*?)"/mi';
+  preg_match_all($pattern, $text, $matches);
+
+  $c = 1;
+  foreach ($matches[1] as $row) {
+  	$fields[] = ['image ' . $c . ' alt text'] + _seo_report_emphasize_tag($first_tag, $row);
+  	$c++;
+  }
+
+  return $title . theme('table', array('header' => $header, 'rows' => $fields));
+}
+
+function _seo_report_emphasize_tag($tag, $text) {
+	$ttag = strtolower($tag);
+	$ttext = strtolower($text);
+
+	$found = strpos($ttext, $ttag);
+	if ($found === FALSE) {
+		return [0, $text, 'no'];
+	} else {
+		$start = substr($text, 0, $found);
+		$end = substr($text, $found + strlen($tag));
+		return [0, $start . '<strong>' . $tag . '</strong>' . $end, 'yes'];
+	}
+}
