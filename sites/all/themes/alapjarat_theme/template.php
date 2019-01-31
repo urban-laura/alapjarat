@@ -127,7 +127,7 @@ function alapjarat_theme_preprocess_html(&$variables) {
   foreach ($elements as $element) {
     drupal_add_html_head($element['data'], $element['name']);
   }
-  
+
 }
 
 /**
@@ -347,7 +347,6 @@ function alapjarat_theme_page_alter(&$page)
 {
   if (arg(0) == 'search')
   {
-    dpm($page);
     if (!empty($page['content']['system_main']['search_form']))
     {
       hide($page['content']['system_main']['search_form']);

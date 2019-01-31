@@ -53,6 +53,25 @@ After copying this file to your theme's folder and customizing it, remove this
 HTML comment.
 -->
 
+<?php
+	// <meta property='article:author' content='https://www.facebook.com/YOUR-NAME' />
+	$head_content = drupal_add_html_head();
+	if (!isset($head_content['article:author'])) {
+		$author = taxonomy_term_load($element['#object']->field_published[LANGUAGE_NONE][0]['tid']);
+		if (!empty($author->field_facebook_id)) {
+			$viewport = array(
+			  '#tag' => 'meta',
+			  '#attributes' => array(
+			    'name' => 'article:author',
+			    'content' => $author->field_facebook_id[LANGUAGE_NONE][0]['value'],
+			  ),
+			);
+
+			drupal_add_html_head($viewport, 'article:author');
+		}
+    }
+
+?>
 
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if (!$label_hidden): ?>

@@ -3590,8 +3590,80 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-published-field_facebook_id'.
+  $field_instances['taxonomy_term-published-field_facebook_id'] = array(
+    'bundle' => 'published',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A szerző Facebook ID-ja, ami gyakorlatilag az egyedi URL, ami a személyes oldalára mutat
+Pl. https://www.facebook.com/viktoria.koltay.1',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_facebook_id',
+    'label' => 'Facebook ID',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 100,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('A szerző Facebook ID-ja, ami gyakorlatilag az egyedi URL, ami a személyes oldalára mutat
+Pl. https://www.facebook.com/viktoria.koltay.1');
   t('Article Title (H1)');
   t('Article fixing');
   t('Article header banner');
@@ -3602,6 +3674,7 @@ function alapjarat_features_field_default_field_instances() {
   t('Ennek a mezőnek a szerkesztése nem befolyásolja se a Címet, se az URL-t.');
   t('Event');
   t('Event date');
+  t('Facebook ID');
   t('Fix or Random?');
   t('Gallery');
   t('Glossary parser');
