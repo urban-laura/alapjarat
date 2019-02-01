@@ -644,7 +644,7 @@ function alapjarat_common_glossary_get_terms($format) {
 
     $result = $query->execute();
     while ($term = $result->fetchObject()) {
-      $term->vid = $vid;
+      $term->vid = $glossary_vid;
       $terms[] = $term;
     }
 
