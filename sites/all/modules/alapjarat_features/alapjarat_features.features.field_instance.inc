@@ -385,7 +385,7 @@ function alapjarat_features_field_default_field_instances() {
     'bundle' => 'a_article',
     'default_value' => array(
       0 => array(
-        'value' => 0,
+        'value' => 1,
       ),
     ),
     'deleted' => 0,
