@@ -83,7 +83,7 @@ function seo_report_form_submit($form, &$form_state) {
   ->propertyCondition('created', strtotime($form_state['values']['from']), '>=')
   //->fieldCondition('field_news_subtitle', 'value', '%' . db_like($year) . '%', 'like') // Equal to "contains"
   //->fieldOrderBy('field_photo', 'fid', 'DESC')
-  ->range(0, 10);
+  ->range(0, 200);
   // Run the query as user 1.
   //->addMetaData('account', user_load(1));
   if (isset($form_state['values']['to'])) {
