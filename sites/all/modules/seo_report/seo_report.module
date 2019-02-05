@@ -15,13 +15,118 @@ function seo_report_menu() {
     'type' => MENU_LOCAL_TASK,
   );
 
+  $items['admin/config/create-seo-report'] = array(
+    'title' => 'Create SEO report',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('seo_report_form'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+
   return $items;
+}
+
+function seo_report_form($form, &$form_state) {
+
+  $form['from'] = array(
+    '#type' => 'date_popup',
+    '#title' => t('From'),
+    '#date_format' => 'Y-m-d',
+    '#default_value' => '2018-01-01 00:00:00',
+  );
+
+  $form['to'] = array(
+    '#type' => 'date_popup',
+    '#title' => t('To'),
+    '#date_format' => 'Y-m-d',
+    '#default_value' => 'YYYY-MM-DD 00:00:00',
+  );
+
+  $vocabulary = taxonomy_vocabulary_machine_name_load('published');
+  $terms = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
+
+  $authors = [];
+  foreach ($terms as $term) {
+    $authors[$term->tid] = $term->name;
+  }
+
+  $form['author'] = array(
+    '#type' => 'select', 
+    '#title' => t('Author'), 
+    '#options' => $authors,
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Adatok kiolvasása',
+  );
+
+  
+  if (isset($form_state['storage'])) {
+    $form['output'] = array(
+      '#markup' => $form_state['storage']['output'],
+      '#prefix' => '<div class="output">',
+      '#suffix' => '</div>',
+    );
+  }
+  
+  return $form;
+}
+
+function seo_report_form_submit($form, &$form_state) {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'a_article')
+  ->propertyCondition('status', NODE_PUBLISHED)
+  // See the comment about != NULL above.
+  ->fieldCondition('field_published', 'tid', $form_state['values']['author'])
+  ->propertyCondition('created', strtotime($form_state['values']['from']), '>=')
+  //->fieldCondition('field_news_subtitle', 'value', '%' . db_like($year) . '%', 'like') // Equal to "contains"
+  //->fieldOrderBy('field_photo', 'fid', 'DESC')
+  ->range(0, 10);
+  // Run the query as user 1.
+  //->addMetaData('account', user_load(1));
+  if (isset($form_state['values']['to'])) {
+    $query->propertyCondition('created', strtotime($form_state['values']['to']), '<=');
+  }
+
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $news_items_nids = array_keys($result['node']);
+    $news_items = entity_load('node', $news_items_nids);
+  } 
+
+  $wrong = 0;
+  foreach ($news_items as $item) {
+    $author_term = taxonomy_term_load($item->field_published[LANGUAGE_NONE][0]['tid']);
+    $author = $author_term->name;
+    
+    $report = seo_report_export($item, 0);
+    $sum = 0;
+    $points = 0;
+    foreach ($report[1] as $row) {
+      $sum ++;
+      if ($row[2] == 'yes') {
+        $points++;
+      } else {
+        $wrong++;
+      }
+    }
+
+    $fields[] = [$item->title, $author, date('Y-m-d', $item->created), $report[0], $sum . '/' . $points, l('article', 'node/' . $item->nid . '/seo-report', ['attributes' => array( 'target' => '_blank' )])];
+  }
+  $fields[] = ['','', $wrong];
+
+  $header = ['title', 'author', 'date', 'main tag', 'points', 'link'];
+  $form_state['storage']['output'] = theme('table', array('header' => $header, 'rows' => $fields));
+  $form_state['rebuild'] = TRUE;
+
 }
 
 /**
 * Page callback.
 */
-function seo_report_export($node) {
+function seo_report_export($node, $output = 1) {
 
   $nw = entity_metadata_wrapper('node', $node);
 
@@ -69,7 +174,11 @@ function seo_report_export($node) {
   	$c++;
   } 
 
-  return $title . theme('table', array('header' => $header, 'rows' => $fields));
+  if ($output == 1) {
+    return $title . theme('table', array('header' => $header, 'rows' => $fields));
+  } else {
+    return [$first_tag, $fields];
+  }
 }
 
 function _seo_report_emphasize_tag($tag, $text) {
