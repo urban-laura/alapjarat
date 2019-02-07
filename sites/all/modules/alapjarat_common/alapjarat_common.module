@@ -215,7 +215,7 @@ function alapjarat_common_node_presave($node) {
   if (empty($node->published_at)) {
     $pass_date = $node->created;
   } else {
-    $pass_date = $node->published;
+    $pass_date = $node->published_at;
   }
   
   if ($percent > 90) {

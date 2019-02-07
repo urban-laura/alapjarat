@@ -57,6 +57,7 @@
       </style>
     <?php endif; ?>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>
     <?php if (!empty($amp_skip_link)): ?>

@@ -109,6 +109,22 @@ function amptheme_preprocess_html(&$variables) {
     '#theme' => 'amp_skip_link',
     '#skiptext' => t('Skip to main content')
   );
+
+  /*
+  $content = $variables['page']['content']['system_main']['content']['#markup'];
+  if (strpos($content, '<video') !== FALSE) {
+    $script = array(
+        '#tag' => 'script',
+        '#attributes' => array(
+          'async' => '',
+          'custom-element' => 'amp-video',
+          'src' => 'https://cdn.ampproject.org/v0/amp-video-0.1.js'
+        ),
+        '#value' => '',
+       );
+       drupal_add_html_head($script, 'script');
+  }
+  */
 }
 
 /**
