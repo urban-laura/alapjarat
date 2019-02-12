@@ -1465,42 +1465,43 @@ div.pages .pane-node-title {
 /* line 938, ../sass/my_style.sass */
 .my_footer {
   margin-top: 10px !important;
+  padding: 0px 10px !important;
 }
-/* line 940, ../sass/my_style.sass */
+/* line 941, ../sass/my_style.sass */
 .my_footer a {
   padding-right: 7px;
   border-right: solid 1px black;
   padding-left: 2.7px;
 }
-/* line 944, ../sass/my_style.sass */
+/* line 945, ../sass/my_style.sass */
 .my_footer .second_menu_footer {
   width: fit-content;
   width: -moz-fit-content;
   margin: auto;
   float: none;
 }
-/* line 949, ../sass/my_style.sass */
+/* line 950, ../sass/my_style.sass */
 .my_footer .second_menu_footer li {
   display: inline;
   padding: 0;
   margin: 0;
 }
-/* line 953, ../sass/my_style.sass */
+/* line 954, ../sass/my_style.sass */
 .my_footer .second_menu_footer li:last-child a {
   border-right: 0px;
 }
-/* line 955, ../sass/my_style.sass */
+/* line 956, ../sass/my_style.sass */
 .my_footer .panels-flexible-region-last {
   width: fit-content;
   width: -moz-fit-content;
   margin: auto;
   float: none;
 }
-/* line 960, ../sass/my_style.sass */
+/* line 961, ../sass/my_style.sass */
 .my_footer .footer_text {
   margin-top: 5px;
 }
-/* line 962, ../sass/my_style.sass */
+/* line 963, ../sass/my_style.sass */
 .my_footer .footer_text a {
   margin-right: 7px;
 }
