@@ -516,6 +516,11 @@ function alapjarat_common_glossary_insertlink($format, &$text, &$terms) {
       $len = drupal_strlen($term_name);
       $match = drupal_substr($text, $offset, $len);
 
+      // Don't replace the brand name.
+      if ($match == 'Alapjárat') {
+        $offset += $len;
+        continue;
+      }
       // Only longer matches override shorter ones.
       if (!isset($events[$offset]) || drupal_strlen($events[$offset]['match']) < drupal_strlen($match)) {
         // Get synonym with case as in text.
