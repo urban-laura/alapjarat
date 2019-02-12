@@ -59,15 +59,24 @@ HTML comment.
 	if (!isset($head_content['article:author'])) {
 		$author = taxonomy_term_load($element['#object']->field_published[LANGUAGE_NONE][0]['tid']);
 		if (!empty($author->field_facebook_id)) {
-			$viewport = array(
+			$meta = array(
 			  '#tag' => 'meta',
 			  '#attributes' => array(
-			    'name' => 'article:author',
+			    'property' => 'article:author',
 			    'content' => $author->field_facebook_id[LANGUAGE_NONE][0]['value'],
 			  ),
 			);
+			drupal_add_html_head($meta, 'article:author');
 
-			drupal_add_html_head($viewport, 'article:author');
+			$meta = array(
+			  '#tag' => 'meta',
+			  '#attributes' => array(
+			    'property' => 'article:publisher',
+			    'content' => 'https://alapjarat.hu/',
+			  ),
+			);
+			drupal_add_html_head($meta, 'article:publisher');
+
 		}
     }
 

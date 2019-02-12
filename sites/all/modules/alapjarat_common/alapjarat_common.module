@@ -475,7 +475,7 @@ function alapjarat_common_glossary_insertlink($format, &$text, &$terms) {
   $findfunc = $mb_prefix . 'strpos';
   $findtagfunc = $mb_prefix . 'strpos';
 
-  $replaceall = 1;
+  $replaceall = FALSE;
 
   $events = array();
 
@@ -601,7 +601,7 @@ function alapjarat_common_glossary_parser($text) {
     $ins_before = $ins_after = NULL;
     $term_class = variable_get('glossary_term_class', 'glossary-term');
 
-    $linkto = '/taxonomy/term/' . $term->tid;
+    $linkto = drupal_get_path_alias('taxonomy/term/' . $term->tid);
     $ins_before = '<a class="glossary-indicator" title="' . $term_title . '" href="' . $linkto . '">';
     $ins_after = '</a>';
 
