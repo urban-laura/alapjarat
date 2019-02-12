@@ -20,6 +20,13 @@ function alapjarat_common_menu() {
     'menu_name' => 'main_menu',
   );
 
+  $items['fix-article-text/%'] = array(
+    'title' => 'Fix article\'s text',
+    'page callback' => 'alapjarat_common_fix_article_text',
+    'page arguments' => array(1),
+    'access arguments' => array('administer content'),
+  );
+
   return $items;
 }
 
@@ -967,18 +974,47 @@ function alapjarat_common_batch_worker_finished($success, $results, $operations)
 }
 
 function alapjarat_common_is_url_exist($url){
-    $ch = curl_init($url);    
-    curl_setopt($ch, CURLOPT_NOBODY, true);
-    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
-    curl_exec($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_NOBODY, true);
+  curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
+  curl_exec($ch);
+  $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-    if($code == 200){
-       $status = TRUE;
-    }else{
-      $status = FALSE;
-    }
-    curl_close($ch);
-   return $status;
+  if ($code == 200){
+    $status = TRUE;
+  } else {
+    $status = FALSE;
+  }
+  curl_close($ch);
+
+  return $status;
 }
 
+function alapjarat_common_fix_article_text($nid) {
+  $node = node_load($nid);
+  $node_wrapper = entity_metadata_wrapper('node', $node);
+  $body = $node_wrapper->field_text->raw();
+
+  $lastPos = 0;
+  $positions = array();
+  while (($lastPos = strpos($body['value'], 'automataváltó', $lastPos)) > 0) {
+    $emph = '...' . str_replace('automataváltó', '<strong>automataváltó</strong>', substr($body['value'], $lastPos - 80, 130)) . '...';
+    $positions[] = array(
+      'text' => $emph,
+      'pos' => $lastPos,
+    );
+    $occurance[] = $emph;
+    $lastPos = $lastPos + strlen('automataváltó');
+  }
+
+  $fixed_body = str_replace('automataváltó', 'automata váltó', $body['value']);
+  $node_wrapper->field_text->set(array('value' => $fixed_body, 'format' => 'fullhtml'));
+  $node_wrapper->save();
+
+  $output[] = implode('<br />', $occurance);
+  $output[] = '<hr />FIXED!';
+  $output[] = '<a href="/node/' . $node->nid . '" target="_blank">Link to the fixed article.</a>';
+  $output[] = '<a href="/admin-article-fix" target="_blank">Back to the list.</a>';
+
+  return implode('<br />', $output);
+}
