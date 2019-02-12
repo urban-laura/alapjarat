@@ -24,7 +24,7 @@ function alapjarat_common_menu() {
     'title' => 'Fix article\'s text',
     'page callback' => 'alapjarat_common_fix_article_text',
     'page arguments' => array(1),
-    'access arguments' => array('administer content'),
+    'access callback' => TRUE,
   );
 
   return $items;
