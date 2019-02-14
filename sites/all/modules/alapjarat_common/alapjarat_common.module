@@ -212,9 +212,29 @@ function alapjarat_common_node_presave($node) {
 	}
 
 	if ($node->type == 'a_article' && isset($node->field_titlet['und'][0]['value'])){
-        $node->metatags['und']['title']['value'] = "[node:field_titlet] | [site:name]";
-        $node->metatags['hu']['title']['value'] = "[node:field_titlet] | [site:name]";
+    $node->metatags['und']['title']['value'] = "[node:field_titlet] | [site:name]";
+    $node->metatags['hu']['title']['value'] = "[node:field_titlet] | [site:name]";
+  }
+
+  if ($node->type == 'a_article') {
+    // On articles selected first and secondary menus must be also selected in tags list(options).
+    $menuitems[] = taxonomy_term_load($node->field_menu[LANGUAGE_NONE][0]['tid']);
+    $menuitems[] = taxonomy_term_load($node->field_secondary_menu[LANGUAGE_NONE][0]['tid']);
+
+    foreach ($menuitems as $item) {
+      $tag = taxonomy_get_term_by_name($item->name, 'category');
+      if (!empty($tag)) {
+        $tag = reset($tag);
+        if (!in_array($tag->tid, $node->field_tags[LANGUAGE_NONE])) {
+          $node->field_tags[LANGUAGE_NONE][] = array('tid' => $tag->tid);
+        }
+      }
     }
+  }
+
+  if ($node->status == 1 && empty($node->published_at)) {
+    $node->published_at = $node->created;
+  }
 
   // Show article updated only if it's content changed more than 10%.
   $sim = similar_text($node->field_text[LANGUAGE_NONE][0]['value'], $node->original->field_text[LANGUAGE_NONE][0]['value'], $percent);

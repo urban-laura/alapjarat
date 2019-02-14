@@ -14,6 +14,30 @@
           });
         }
       });
+
+      var stored = {
+        menu: null,
+        secondaryMenu: null,
+      }
+      
+      function setCategory(source, store) {
+        sel = $('.node-a_article-form .field-name-field-' + source + ' select option:selected').text();
+        $('.node-a_article-form .field-name-field-tags .form-item label:contains("' + sel + '")').prev().attr('checked', 'checked').attr('disabled', 'disabled');
+        if (store[store] !== null) {
+          $('.node-a_article-form .field-name-field-tags .form-item label:contains("' + stored[store] + '")').prev().removeAttr('checked').removeAttr('readonly');
+        }
+        stored[store] = sel;
+      }
+
+      setCategory('menu', 'menu');
+      $('.node-a_article-form .field-name-field-menu select').change(function() {
+        setCategory('menu', 'menu');
+      });
+
+      setCategory('secondary-menu', 'secondaryMenu');
+      $('.node-a_article-form .field-name-field-secondary-menu select').change(function() {
+        setCategory('secondary-menu', 'secondaryMenu');
+      });
     }
   };
 }(jQuery));
