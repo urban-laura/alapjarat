@@ -1469,7 +1469,21 @@ $.extend($.validator.messages, {
     'admin_title' => '',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '<div style="width: auto; height:auto; margin-top:1%; overflow:hidden;"><iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="https://alapjarat.hu/wp-content/uploads/reklam/header_banner_rotator.html" width="200" height="100" border="0" allowtransparency="true" scrolling="no" frameborder="0"></iframe></div>',
+    'body' => '<div style="width: auto; height:auto; margin-top:1%; overflow:hidden;"><iframe style="overflow:hidden; border: none; height: 120px; width:620px;" id="frame" src="" width="200" height="100" border="0" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
+<script>
+var frames = Array(\'https://alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 50,
+\'https://alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 50,
+\'https://alapjarat.hu/wp-content/uploads/reklam/mahbanner_600x100/\', 50,
+\'https://alapjarat.hu/wp-content/uploads/reklam/MA600x100/\', 50);
+var i = 0, len = frames.length;
+function ChangeSrc() {
+if (i >= len) { i = 0; } // start over
+document.getElementById(\'frame\').src = frames[i++];
+setTimeout(\'ChangeSrc()\', (frames[i++]*250));
+}
+window.onload = ChangeSrc;
+</script>
+</div>',
     'format' => 'admin_html',
     'substitute' => 1,
   );

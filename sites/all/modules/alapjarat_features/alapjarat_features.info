@@ -338,6 +338,7 @@ features[variable][] = pathauto_taxonomy_term_menu_pattern
 features[variable][] = pathauto_taxonomy_term_published_pattern
 features[variable][] = pathauto_taxonomy_term_tags_pattern
 features[variable][] = pathauto_taxonomy_term_yes_no_pattern
+features[variable][] = scheduler_publish_touch_a_article
 features[variable][] = xmlsitemap_settings_menu_link_main-menu
 features[variable][] = xmlsitemap_settings_menu_link_menu-second-menu
 features[variable][] = xmlsitemap_settings_node_a_article
