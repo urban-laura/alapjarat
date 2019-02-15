@@ -553,7 +553,7 @@ a:hover {
   opacity: 0.7;
 }
 /* line 356, ../sass/my_style.sass */
-.panels-flexible-region-first.first #one .views-field-created, .panels-flexible-region-first.first #four .views-field-created {
+.panels-flexible-region-first.first #one .views-field-published-at, .panels-flexible-region-first.first #four .views-field-published-at {
   color: white;
   font-size: 12px;
 }
@@ -579,14 +579,14 @@ a:hover {
   font-size: 24px;
 }
 /* line 372, ../sass/my_style.sass */
-.panels-flexible-region-first.first #one .views-field-field-tags, .panels-flexible-region-first.first #one .views-field-created {
+.panels-flexible-region-first.first #one .views-field-field-tags, .panels-flexible-region-first.first #one .views-field-published-at {
   position: relative;
   bottom: 35px;
   float: left;
   margin-left: 10px;
 }
 /* line 377, ../sass/my_style.sass */
-.panels-flexible-region-first.first #one .views-field-created {
+.panels-flexible-region-first.first #one .views-field-published-at {
   bottom: 33px;
 }
 /* line 379, ../sass/my_style.sass */
@@ -630,13 +630,13 @@ a:hover {
   font-size: 16px;
 }
 /* line 403, ../sass/my_style.sass */
-.panels-flexible-region-first.first #four .views-field-field-tags, .panels-flexible-region-first.first #four .views-field-created {
+.panels-flexible-region-first.first #four .views-field-field-tags, .panels-flexible-region-first.first #four .views-field-published-at {
   position: relative;
   bottom: 42px;
   margin-left: 10px;
 }
 /* line 407, ../sass/my_style.sass */
-.panels-flexible-region-first.first #four .views-field-created {
+.panels-flexible-region-first.first #four .views-field-published-at {
   bottom: 40px;
 }
 
@@ -713,7 +713,7 @@ a:hover {
   font-weight: normal;
 }
 /* line 461, ../sass/my_style.sass */
-.main_content .front_page_post #helpful_info_b .views-field-field-tags, .main_content .front_page_post #helpful_info_b .views-field-created, .main_content .front_page_post #helpful_info_b .views-field-path {
+.main_content .front_page_post #helpful_info_b .views-field-field-tags, .main_content .front_page_post #helpful_info_b .views-field-published-at, .main_content .front_page_post #helpful_info_b .views-field-path {
   margin-left: 45%;
   margin-bottom: 3px;
 }
@@ -802,7 +802,7 @@ a:hover {
   font-weight: normal;
 }
 /* line 519, ../sass/my_style.sass */
-.main_content .front_page_post #actual_B .views-field-field-tags, .main_content .front_page_post #actual_B .views-field-created, .main_content .front_page_post #actual_B .views-field-path {
+.main_content .front_page_post #actual_B .views-field-field-tags, .main_content .front_page_post #actual_B .views-field-published-at, .main_content .front_page_post #actual_B .views-field-path {
   margin-left: 45%;
   margin-bottom: 3px;
 }
@@ -910,7 +910,7 @@ a:hover {
   margin: 0;
 }
 /* line 588, ../sass/my_style.sass */
-.right #random_article .views-field-created {
+.right #random_article .views-field-published-at {
   padding: 5px 0;
   margin-left: 38%;
   border-bottom: 1px solid #efefef;
@@ -1020,7 +1020,7 @@ a:hover {
   margin-right: 3px;
 }
 /* line 658, ../sass/my_style.sass */
-#category .views-field-created, #archive_list .views-field-created, #media .views-field-created, #published .views-field-created, #tag .views-field-created, #menu_pane .views-field-created, .view-id-search_api_search .views-field-created, .view-id-glossary_list .views-field-created {
+#category .views-field-published-at, #archive_list .views-field-published-at, #media .views-field-published-at, #published .views-field-published-at, #tag .views-field-published-at, #menu_pane .views-field-published-at, .view-id-search_api_search .views-field-published-at, .view-id-glossary_list .views-field-published-at {
   text-align: right;
   padding: 10px;
   border-top: 1px solid #efefef;
@@ -1028,7 +1028,7 @@ a:hover {
   margin-bottom: 10px;
 }
 /* line 664, ../sass/my_style.sass */
-#category .views-field-created .field-content, #archive_list .views-field-created .field-content, #media .views-field-created .field-content, #published .views-field-created .field-content, #tag .views-field-created .field-content, #menu_pane .views-field-created .field-content, .view-id-search_api_search .views-field-created .field-content, .view-id-glossary_list .views-field-created .field-content {
+#category .views-field-published-at .field-content, #archive_list .views-field-published-at .field-content, #media .views-field-published-at .field-content, #published .views-field-published-at .field-content, #tag .views-field-published-at .field-content, #menu_pane .views-field-published-at .field-content, .view-id-search_api_search .views-field-published-at .field-content, .view-id-glossary_list .views-field-published-at .field-content {
   color: #d82222 !important;
 }
 /* line 666, ../sass/my_style.sass */
