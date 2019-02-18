@@ -1,0 +1,116 @@
+/* line 7, ../sass/tabs.sass */
+div.tabs {
+  margin: 0 0 5px 0;
+}
+
+/* line 10, ../sass/tabs.sass */
+ul.primary, ul.secondary {
+  width: 100%;
+}
+
+/* line 13, ../sass/tabs.sass */
+ul.primary {
+  margin: 0;
+  padding: 0 0 0 10px;
+  border-width: 0;
+  list-style: none;
+  white-space: nowrap;
+  line-height: normal;
+  background: url(../images/optimized/tabs/tab-bar.png) repeat-x left bottom;
+}
+/* line 21, ../sass/tabs.sass */
+ul.primary li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 26, ../sass/tabs.sass */
+ul.primary li.active a, ul.primary li.active a:hover {
+  border-width: 0;
+  color: black;
+  background-color: transparent;
+  background: url(../images/optimized/tabs/tab-left.png) no-repeat left 0;
+}
+/* line 31, ../sass/tabs.sass */
+ul.primary li.active a .tab, ul.primary li.active a:hover .tab {
+  background: url(../images/optimized/tabs/tab-right.png) no-repeat right 0;
+}
+/* line 33, ../sass/tabs.sass */
+ul.primary li a {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0 0 0 5px;
+  border-width: 0;
+  font-weight: bold;
+  text-decoration: none;
+  color: #777777;
+  background-color: transparent;
+  background: url(../images/optimized/tabs/tab-left.png) no-repeat left -38px;
+}
+/* line 44, ../sass/tabs.sass */
+ul.primary li a:hover {
+  border-width: 0;
+  background-color: transparent;
+  background: url(../images/optimized/tabs/tab-left.png) no-repeat left -76px;
+}
+/* line 48, ../sass/tabs.sass */
+ul.primary li a:hover .tab {
+  background: url(../images/optimized/tabs/tab-right.png) no-repeat right -76px;
+}
+/* line 50, ../sass/tabs.sass */
+ul.primary li a .tab {
+  display: block;
+  height: 20px;
+  margin: 0;
+  padding: 4px 13px 0 6px;
+  border-width: 0;
+  line-height: 20px;
+  background: url(../images/optimized/tabs/tab-right.png) no-repeat right -38px;
+}
+
+/* line 59, ../sass/tabs.sass */
+ul.secondary {
+  margin: 0;
+  padding: 0 0 0 5px;
+  border-bottom: 1px solid silver;
+  list-style: none;
+  white-space: nowrap;
+  background: url(../images/optimized/tabs/tab-secondary-bg.png) repeat-x left bottom;
+}
+/* line 66, ../sass/tabs.sass */
+ul.secondary li {
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 5px 0;
+  border-right: none;
+}
+/* line 71, ../sass/tabs.sass */
+ul.secondary a {
+  display: block;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid silver;
+  text-decoration: none;
+  color: #777777;
+  background: url(../images/optimized/tabs/tab-secondary.png) repeat-x left -56px;
+}
+/* line 80, ../sass/tabs.sass */
+ul.secondary a .active, ul.secondary a .active:hover {
+  border: 1px solid silver;
+  color: black;
+  background: url(../images/optimized/tabs/tab-secondary.png) repeat-x left top;
+}
+/* line 84, ../sass/tabs.sass */
+ul.secondary a:hover {
+  background: url(../images/optimized/tabs/tab-secondary.png) repeat-x left bottom;
+}
+/* line 86, ../sass/tabs.sass */
+ul.secondary a .tab {
+  display: block;
+  height: 18px;
+  margin: 0;
+  padding: 3px 8px;
+  line-height: 18px;
+}

@@ -1,0 +1,50 @@
+// _forms.default.sass
+//
+// Place all default form styles here.
+// Individual form styles are saved as their own files in the format of
+//  - Example: _forms.form-id.sass
+
+label
+  font-weight: normal
+  margin-bottom: $margin/4
+
+#{$all-text-inputs},
+textarea,
+select[multiple=multiple]
+  @include appearance(none)
+  @include transition(border-color 0.1s ease-in-out)
+  box-sizing: border-box
+  background-color: white
+  border: 1px solid $grey
+  margin-bottom: $margin/2
+  padding: $padding/3
+  max-width: 100%
+
+  &:hover
+    border-color: $dark_grey
+
+  &:focus
+    border-color: black
+
+input[type="checkbox"],
+input[type="radio"]
+  display: inline
+  margin-right: $margin/4
+
+input[type="file"]
+  width: auto
+  padding-bottom: $padding/2
+
+select
+  max-width: 100%
+  width: auto
+  margin-bottom: $margin
+
+input[type="submit"]
+  background: transparent
+  border: 1px solid black
+  padding: $padding/3 $padding/2
+  @include transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out)
+  &:hover
+    background-color: black
+    color: white
