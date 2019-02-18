@@ -2,10 +2,10 @@
 Error: File to import not found or unreadable: blocks/*.
        Load paths:
          Compass::SpriteImporter
-         /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass
+         /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass
          /Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets
-        on line 14 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass/_custom.sass
-        from line 175 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass/style.sass
+        on line 14 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass/_custom.sass
+        from line 175 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass/style.sass
 
 9:   line-height: 1.5em
 10:   font-family: "Helvetica Neue", helvetica, Arial, sans-serif
@@ -20,8 +20,8 @@ Error: File to import not found or unreadable: blocks/*.
 19: a
 
 Backtrace:
-/Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass/_custom.sass:14
-/Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass/style.sass:175
+/Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass/_custom.sass:14
+/Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass/style.sass:175
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
 /Library/Ruby/Gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -75,4 +75,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: blocks/*.\A        Load paths:\A          Compass::SpriteImporter\A          /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass\A          /Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets\A         on line 14 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass/_custom.sass\A         from line 175 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme/sass/style.sass\A \A 9:   line-height: 1.5em\A 10:   font-family: \"Helvetica Neue\", helvetica, Arial, sans-serif\A 11:   letter-spacing: 0.03em\A 12: \A 13: // Links\A 14: a\A 15:   &:link, &:visited\A 16:     color: blue\A 17:     text-decoration: none\A 18: \A 19: a"; }
+  content: "Error: File to import not found or unreadable: blocks/*.\A        Load paths:\A          Compass::SpriteImporter\A          /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass\A          /Library/Ruby/Gems/2.3.0/gems/compass-core-1.0.3/stylesheets\A         on line 14 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass/_custom.sass\A         from line 175 of /Applications/AMPPS/www/alapjarat/sites/all/themes/alapjarat_theme_2019/sass/style.sass\A \A 9:   line-height: 1.5em\A 10:   font-family: \"Helvetica Neue\", helvetica, Arial, sans-serif\A 11:   letter-spacing: 0.03em\A 12: \A 13: // Links\A 14: a\A 15:   &:link, &:visited\A 16:     color: blue\A 17:     text-decoration: none\A 18: \A 19: a"; }

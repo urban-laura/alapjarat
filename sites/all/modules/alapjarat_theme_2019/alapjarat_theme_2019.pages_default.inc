@@ -36,6 +36,13 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'context' => 'argument_entity_id:node_1',
         'id' => 1,
       ),
+      1 => array(
+        'identifier' => 'Node edit form from node',
+        'keyword' => 'node_form',
+        'name' => 'node_edit_form_from_node',
+        'context' => 'argument_entity_id:node_1',
+        'id' => 1,
+      ),
     ),
     'name' => 'article_2019',
     'access' => array(
@@ -263,14 +270,14 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-fead48ef-1d12-41ce-976b-42d1543a1f11'] = $pane;
   $display->panels['center'][4] = 'new-fead48ef-1d12-41ce-976b-42d1543a1f11';
   $pane = new stdClass();
-  $pane->pid = 'new-3d39f233-a4e3-4c48-a0d9-18b6bbf669d0';
+  $pane->pid = 'new-d0cdd85e-e4c4-4699-b007-d28cb0ecd8d3';
   $pane->panel = 'center';
-  $pane->type = 'node_created';
-  $pane->subtype = 'node_created';
+  $pane->type = 'token';
+  $pane->subtype = 'node:published';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'format' => 'my',
+    'sanitize' => 1,
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
     'override_title_text' => 'Közzétéve:',
@@ -284,9 +291,9 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
-  $pane->uuid = '3d39f233-a4e3-4c48-a0d9-18b6bbf669d0';
-  $display->content['new-3d39f233-a4e3-4c48-a0d9-18b6bbf669d0'] = $pane;
-  $display->panels['center'][5] = 'new-3d39f233-a4e3-4c48-a0d9-18b6bbf669d0';
+  $pane->uuid = 'd0cdd85e-e4c4-4699-b007-d28cb0ecd8d3';
+  $display->content['new-d0cdd85e-e4c4-4699-b007-d28cb0ecd8d3'] = $pane;
+  $display->panels['center'][5] = 'new-d0cdd85e-e4c4-4699-b007-d28cb0ecd8d3';
   $pane = new stdClass();
   $pane->pid = 'new-9354d871-2863-49fb-8ff1-a840d9250d15';
   $pane->panel = 'center';
@@ -295,11 +302,13 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => 'Youtube Subscriber',
+    'admin_title' => 'Youtube Subscriber, Facebook like and share',
     'title' => '',
     'title_heading' => 'h2',
     'body' => '<script src="https://apis.google.com/js/platform.js"></script>
-<div class="g-ytsubscribe" data-channelid="UCueleOZ2QFAaVSHXheZlFig" data-layout="full" data-count="default"></div>',
+<div class="g-ytsubscribe" data-channelid="UCueleOZ2QFAaVSHXheZlFig" data-layout="default" data-count="default"></div>
+<div class="fb-like" data-href="%node:url" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+<div class="fb-share-button" data-href="%node:url" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Megosztás</a></div>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -317,37 +326,6 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->uuid = '9354d871-2863-49fb-8ff1-a840d9250d15';
   $display->content['new-9354d871-2863-49fb-8ff1-a840d9250d15'] = $pane;
   $display->panels['center'][6] = 'new-9354d871-2863-49fb-8ff1-a840d9250d15';
-  $pane = new stdClass();
-  $pane->pid = 'new-ce511477-37e9-458f-a8e4-cedc92d8974c';
-  $pane->panel = 'center';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'Facebook like and share',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<div class="fb-like" data-href="%node:url" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-<br />
-<div class="fb-share-button" data-href="%node:url" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Megosztás</a></div>',
-    'format' => 'admin_html',
-    'substitute' => 1,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => 'fb-like-share',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 7;
-  $pane->locks = array();
-  $pane->uuid = 'ce511477-37e9-458f-a8e4-cedc92d8974c';
-  $display->content['new-ce511477-37e9-458f-a8e4-cedc92d8974c'] = $pane;
-  $display->panels['center'][7] = 'new-ce511477-37e9-458f-a8e4-cedc92d8974c';
   $pane = new stdClass();
   $pane->pid = 'new-2f0f4428-94ac-474b-b005-fa5bed80d385';
   $pane->panel = 'center';
@@ -372,11 +350,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 8;
+  $pane->position = 7;
   $pane->locks = array();
   $pane->uuid = '2f0f4428-94ac-474b-b005-fa5bed80d385';
   $display->content['new-2f0f4428-94ac-474b-b005-fa5bed80d385'] = $pane;
-  $display->panels['center'][8] = 'new-2f0f4428-94ac-474b-b005-fa5bed80d385';
+  $display->panels['center'][7] = 'new-2f0f4428-94ac-474b-b005-fa5bed80d385';
   $pane = new stdClass();
   $pane->pid = 'new-02db2c16-7fdb-420d-91d9-67de62bc9e24';
   $pane->panel = 'center';
@@ -403,11 +381,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 9;
+  $pane->position = 8;
   $pane->locks = array();
   $pane->uuid = '02db2c16-7fdb-420d-91d9-67de62bc9e24';
   $display->content['new-02db2c16-7fdb-420d-91d9-67de62bc9e24'] = $pane;
-  $display->panels['center'][9] = 'new-02db2c16-7fdb-420d-91d9-67de62bc9e24';
+  $display->panels['center'][8] = 'new-02db2c16-7fdb-420d-91d9-67de62bc9e24';
   $pane = new stdClass();
   $pane->pid = 'new-7b060e40-e85c-4d4b-bab9-cbbc60db21c6';
   $pane->panel = 'center';
@@ -445,11 +423,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 10;
+  $pane->position = 9;
   $pane->locks = array();
   $pane->uuid = '7b060e40-e85c-4d4b-bab9-cbbc60db21c6';
   $display->content['new-7b060e40-e85c-4d4b-bab9-cbbc60db21c6'] = $pane;
-  $display->panels['center'][10] = 'new-7b060e40-e85c-4d4b-bab9-cbbc60db21c6';
+  $display->panels['center'][9] = 'new-7b060e40-e85c-4d4b-bab9-cbbc60db21c6';
   $pane = new stdClass();
   $pane->pid = 'new-b831b875-bba3-4ce1-ac46-114bbc1082ed';
   $pane->panel = 'center';
@@ -478,42 +456,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 11;
+  $pane->position = 10;
   $pane->locks = array();
   $pane->uuid = 'b831b875-bba3-4ce1-ac46-114bbc1082ed';
   $display->content['new-b831b875-bba3-4ce1-ac46-114bbc1082ed'] = $pane;
-  $display->panels['center'][11] = 'new-b831b875-bba3-4ce1-ac46-114bbc1082ed';
-  $pane = new stdClass();
-  $pane->pid = 'new-9102749e-8458-4fbd-8499-df7e29bc9bea';
-  $pane->panel = 'center';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'Youtube Subscriber + text',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<p>Ha videót nézni jobban szeretsz, mint olvasni, ne mulaszd el lecsekkolni YouTube-csatornánkat!</p>
-<script src="https://apis.google.com/js/platform.js"></script>
-<div class="g-ytsubscribe" data-channelid="UCueleOZ2QFAaVSHXheZlFig" data-layout="full" data-count="default"></div>',
-    'format' => 'admin_html',
-    'substitute' => 1,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => 'youtube-text',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 12;
-  $pane->locks = array();
-  $pane->uuid = '9102749e-8458-4fbd-8499-df7e29bc9bea';
-  $display->content['new-9102749e-8458-4fbd-8499-df7e29bc9bea'] = $pane;
-  $display->panels['center'][12] = 'new-9102749e-8458-4fbd-8499-df7e29bc9bea';
+  $display->panels['center'][10] = 'new-b831b875-bba3-4ce1-ac46-114bbc1082ed';
   $pane = new stdClass();
   $pane->pid = 'new-ef380c1f-a01f-40b0-b092-93c95ef8fad6';
   $pane->panel = 'center';
@@ -539,11 +486,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 13;
+  $pane->position = 11;
   $pane->locks = array();
   $pane->uuid = 'ef380c1f-a01f-40b0-b092-93c95ef8fad6';
   $display->content['new-ef380c1f-a01f-40b0-b092-93c95ef8fad6'] = $pane;
-  $display->panels['center'][13] = 'new-ef380c1f-a01f-40b0-b092-93c95ef8fad6';
+  $display->panels['center'][11] = 'new-ef380c1f-a01f-40b0-b092-93c95ef8fad6';
   $pane = new stdClass();
   $pane->pid = 'new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
   $pane->panel = 'center';
@@ -590,196 +537,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 14;
+  $pane->position = 12;
   $pane->locks = array();
   $pane->uuid = 'ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
   $display->content['new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0'] = $pane;
-  $display->panels['center'][14] = 'new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
-  $pane = new stdClass();
-  $pane->pid = 'new-b51412a1-b923-4911-8a50-e7e52a3821a8';
-  $pane->panel = 'center';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'Mailchimp',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://ecdh.us15.list-manage.com/subscribe/post?u=ba2de3b04f01f0c0af7a1d614&amp;id=d48ce2c620" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-
-
-
-
-
-<!--CSAK EHHEZ NYÚLJATOK-->
-<p>Iratkozz fel hírlevelünkre! Minden 500. feliratkozó után 5db Alapjáratos pólót sorsolunk ki.</p>
-<div class="mc-field-group">
-	<input type="text" value="" placeholder="A neved" name="MMERGE2" class="required" id="mce-MMERGE2">
-</div>
-<div class="mc-field-group">
-<input type="email" value="" placeholder="Az e-mail címed"  name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group input-group">
-<a href="/adatkezelesi-szabalyzat" target="_blank"><input type="radio" class="required" value="Elfogadom az adatkezelési szabályzatot."  name="MMERGE1" id="mce-MMERGE1-0">Elfogadom az adatkezelési szabályzatot.</a>
-</div>
-<div class="mc-field-group input-group consent">
-<input type="radio" class="required" value="Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE3" id="mce-MMERGE3-0"><label for="mce-MMERGE3-0">Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra.</label>
-</div>
-
-
-
-
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ba2de3b04f01f0c0af7a1d614_d48ce2c620" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Feliratkozás" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[2]=\'MMERGE2\';ftypes[2]=\'text\';fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'MMERGE1\';ftypes[1]=\'radio\';fnames[3]=\'MMERGE3\';ftypes[3]=\'radio\'; /*
- * Translated default messages for the $ validation plugin.
- * Locale: HU
- */
-$.extend($.validator.messages, {
-	required: "Kötelező megadni.",
-	email: "Érvényes e-mail címnek kell lennie.",
-});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->',
-    'format' => 'admin_html',
-    'substitute' => 1,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 15;
-  $pane->locks = array();
-  $pane->uuid = 'b51412a1-b923-4911-8a50-e7e52a3821a8';
-  $display->content['new-b51412a1-b923-4911-8a50-e7e52a3821a8'] = $pane;
-  $display->panels['center'][15] = 'new-b51412a1-b923-4911-8a50-e7e52a3821a8';
-  $pane = new stdClass();
-  $pane->pid = 'new-3321a608-7268-4d00-b08f-7d25bebd77b1';
-  $pane->panel = 'center';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => 'Facebook like and share',
-    'title' => '',
-    'title_heading' => 'h2',
-    'body' => '<p>Ha tetszett az írás, kérlek oszd meg a Facebookon! Köszönöm!</p>
-<div class="fb-like" data-href="%node:url" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-<div class="fb-share-button" data-href="%node:url" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Megosztás</a></div>',
-    'format' => 'admin_html',
-    'substitute' => 1,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => 'fb2',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 16;
-  $pane->locks = array();
-  $pane->uuid = '3321a608-7268-4d00-b08f-7d25bebd77b1';
-  $display->content['new-3321a608-7268-4d00-b08f-7d25bebd77b1'] = $pane;
-  $display->panels['center'][16] = 'new-3321a608-7268-4d00-b08f-7d25bebd77b1';
-  $pane = new stdClass();
-  $pane->pid = 'new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
-  $pane->panel = 'center';
-  $pane->type = 'block';
-  $pane->subtype = 'social_media_links-social-media-links';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 17;
-  $pane->locks = array();
-  $pane->uuid = 'ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
-  $display->content['new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f'] = $pane;
-  $display->panels['center'][17] = 'new-ad8fb0e9-318c-4b64-89f1-6ead3a24f52f';
-  $pane = new stdClass();
-  $pane->pid = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
-  $pane->panel = 'center';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'article3-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array();
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => 'article3',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 18;
-  $pane->locks = array();
-  $pane->uuid = 'b337a832-59be-437f-a00b-c5c6636a85e3';
-  $display->content['new-b337a832-59be-437f-a00b-c5c6636a85e3'] = $pane;
-  $display->panels['center'][18] = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
-  $pane = new stdClass();
-  $pane->pid = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
-  $pane->panel = 'center';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'node:field_tagsa';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'label' => 'title',
-    'formatter' => 'taxonomy_term_reference_link',
-    'delta_limit' => '0',
-    'delta_offset' => '0',
-    'delta_reversed' => 0,
-    'formatter_settings' => array(),
-    'context' => 'argument_entity_id:node_1',
-    'override_title' => 1,
-    'override_title_text' => 'Címkék:',
-    'override_title_heading' => 'div',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 19;
-  $pane->locks = array();
-  $pane->uuid = '2bcc488a-ca6b-443a-ba17-88d14181e34a';
-  $display->content['new-2bcc488a-ca6b-443a-ba17-88d14181e34a'] = $pane;
-  $display->panels['center'][19] = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
+  $display->panels['center'][12] = 'new-ca6aa9f1-ab4c-456b-a0fb-84efbd1618e0';
   $pane = new stdClass();
   $pane->pid = 'new-b1cff760-1538-4a59-b4db-5ecfb0085e6c';
   $pane->panel = 'center';
@@ -801,11 +563,63 @@ $.extend($.validator.messages, {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 20;
+  $pane->position = 13;
   $pane->locks = array();
   $pane->uuid = 'b1cff760-1538-4a59-b4db-5ecfb0085e6c';
   $display->content['new-b1cff760-1538-4a59-b4db-5ecfb0085e6c'] = $pane;
-  $display->panels['center'][20] = 'new-b1cff760-1538-4a59-b4db-5ecfb0085e6c';
+  $display->panels['center'][13] = 'new-b1cff760-1538-4a59-b4db-5ecfb0085e6c';
+  $pane = new stdClass();
+  $pane->pid = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
+  $pane->panel = 'center';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'article3-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'article3',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 14;
+  $pane->locks = array();
+  $pane->uuid = 'b337a832-59be-437f-a00b-c5c6636a85e3';
+  $display->content['new-b337a832-59be-437f-a00b-c5c6636a85e3'] = $pane;
+  $display->panels['center'][14] = 'new-b337a832-59be-437f-a00b-c5c6636a85e3';
+  $pane = new stdClass();
+  $pane->pid = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_tagsa';
+  $pane->shown = FALSE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'title',
+    'formatter' => 'taxonomy_term_reference_link',
+    'delta_limit' => '0',
+    'delta_offset' => '0',
+    'delta_reversed' => 0,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => 'Címkék:',
+    'override_title_heading' => 'div',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 15;
+  $pane->locks = array();
+  $pane->uuid = '2bcc488a-ca6b-443a-ba17-88d14181e34a';
+  $display->content['new-2bcc488a-ca6b-443a-ba17-88d14181e34a'] = $pane;
+  $display->panels['center'][15] = 'new-2bcc488a-ca6b-443a-ba17-88d14181e34a';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
