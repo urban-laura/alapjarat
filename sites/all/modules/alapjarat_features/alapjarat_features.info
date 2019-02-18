@@ -159,6 +159,7 @@ features[field_instance][] = node-partners-field_descriptionp
 features[field_instance][] = node-partners-field_picturep
 features[field_instance][] = node-partners-field_premium_car_partner_1
 features[field_instance][] = taxonomy_term-published-field_facebook_id
+features[field_instance][] = taxonomy_term-published-field_picture
 features[filter][] = admin_html
 features[filter][] = filtered_html
 features[filter][] = fullhtml

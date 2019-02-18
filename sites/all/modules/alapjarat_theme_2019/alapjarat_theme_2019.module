@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the alapjarat_theme_2019 feature.
+ */
+
+include_once 'alapjarat_theme_2019.features.inc';

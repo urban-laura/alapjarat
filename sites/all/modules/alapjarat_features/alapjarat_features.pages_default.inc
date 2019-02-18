@@ -41,6 +41,13 @@ function alapjarat_features_default_page_manager_handlers() {
           'context' => 'argument_entity_id:node_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
+          'not' => FALSE,
+        ),
       ),
       'logic' => 'and',
     ),
@@ -791,6 +798,13 @@ $.extend($.validator.messages, {
             ),
           ),
           'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
           'not' => FALSE,
         ),
       ),
