@@ -1,8 +1,10 @@
+@import url('https://use.typekit.net/qas2soj.css')
+
 body::before
 	background-image: none
 
 body
-	font-size: 14px
+	font-size: 18px
 	font-family: Montserrat
 	color: #333332
 	max-width: 1140px
@@ -12,16 +14,17 @@ body
 	line-height: 1.42857143
 
 h1, h2, h3, h4, h5, h6
-	font-family: montserrat,sans-serif
-	font-weight: 500
 	margin-top: 20px
 	margin-bottom: 10px
 	padding: 0
 h1
-	font-size: 36px
-
+	font-size: 40px
+	font-weight: 800
+	line-height: 50px
 h2
-	font-size: 30px
+	font-size: 20px
+	font-weight: 600
+	line-height: 30px
 h3
 	font-size: 24px
 h4
@@ -48,7 +51,7 @@ table
 		font-size: 16px
 		font-weight: bold
 		line-height: 22px
-		color: #d82222
+		color: #C72026
 	#mce-EMAIL, #mce-MMERGE2
 		width: 100%
 		max-width: 480px
@@ -72,16 +75,6 @@ table
 		width: 100%
 		padding-bottom: 0
 		min-height: auto
-
-blockquote
-	padding: 10px 20px
-	margin: 0 0 20px
-	border-left: 5px solid #C0C0C0
-	background: #F2F2F2
-	p
-		font-size: 17.5px !important
-		margin: 0
-		font-style: italic
 
 .youtube-embed-wrapper
 	padding-top: 0px !important
@@ -139,7 +132,7 @@ div.panel-flexible.panels-flexible-1.clearfix
 	margin: 0px !important
 
 a
-	color: #d82222 !important
+	color: #C72026 !important
 
 a:hover
 	text-decoration: none
@@ -694,57 +687,97 @@ a:hover
 
 #mini-panel-hamburger_menu
 	display: none
-	
+
+
+//Edit
 .node_pane
 	padding: 0px 15px !important
 	padding-bottom: 15px !important
 	width: -moz-available
 	ul, ol
 		margin-left: 45px
+	ol
+		list-style: none
+		counter-reset: li
+		li::before
+			content: counter(li)
+			color: #C72026
+			display: inline-block
+			width: 1em
+		li
+			counter-increment: li
+	//x
+	blockquote
+		padding: 31px 27px
+		margin: 0 0 20px
+		border-left: 7px solid #333332
+		background: #FCFCFC
+		p
+			font-size: 18px !important
+			margin: 0
+			font-style: italic
+	//x
 	figure
 		margin: 0 !important
+	//x
 	figcaption
-		text-align: center
-		margin-top: 10px
-		margin-bottom: -15px
-		font-size: 14px
+		margin-top: 5px
+		font-size: 16px
+		border-left: 7px solid #C72026
+		padding: 5px 27px
+		font-weight: 300
+		line-height: 24px
+		font-style: italic
+		text-align: left
+		margin-bottom: -7px
+	//x
 	#youtube
 		float: left
+		clear: both
+		height: 24px
+		margin-top: 4px
+		margin-right: 5px
+	//x
 	#fb-like-share
 		float: left
-		padding: 0 15px
-		.fb-like
-			padding-bottom: 7px
+		margin-top: 3px
+	//x
 	#fb-save
-		padding-top: 20px
+		float: right
 	.tabs.primary.clearfix
 		margin-left: 0
+	//x
 	.pane-node-field-title2
-		margin-top: 20px !important
 		h1
-			padding: 0 !important
-			clear: both
-			font-size: 40px
-			font-weight: 800
-			line-height: 50px
-			font-style: italic
+			margin: 0px
+			font-family: magistral, sans-serif
 			p
-				margin: 0 !important
+				margin: 0px
+				padding: 20px 0px
+	//x
 	.field-name-field-picture
 		float: left
 		img
 			border-radius: 20px
+			margin-right: 10px
+	//x
 	.pane-node-field-published
-		float: left
-		padding: 10px
-		display: inline-flex
 		.field-items
-			font-weight: bold
+			font-weight: 600
+			font-size: 14px
+			text-transform: uppercase
+		a
+			color: #333332 !important
+	//x
+	.pane-node-published
+		font-size: 12px
+		padding-bottom: 45px
+		.pane-content
+			display: inline-block
 	.field-label
 		font-weight: normal
-	.pane-node-field-tags 
-		float: left
-		padding: 10px 0px
+	//x
+	.pane-node-field-tags
 		.field-items
 			display: inline-flex
 		.field-item
@@ -756,38 +789,35 @@ a:hover
 				background: #C72026
 			a:hover
 				text-decoration: none
-	.pane-node-created
-		text-align: right
-		padding: 10px
-		border-top: 1px solid #efefef
-		border-bottom: 1px solid #efefef
-		margin-bottom: 10px
-		.pane-content
-			display: inline-block
-			color: #d82222 !important
+	//x
 	.pane-node-field-subtitled
 		h2
-			margin-top: 20px
-			margin-bottom: 15px
-			line-height: 35px
 			clear: both
+			margin: 0px
+			padding-top: 30px
+			padding-bottom: 40px
+
 	#alapjarat-article.pane-node-field-text
-		font-size: 16px
-		font-family: open sans, sans-serif
 		p, span, ul, ol
-			font-size: 16px !important
-			font-family: open sans, sans-serif !important
+			font-size: 18px !important
+			font-family: Montserrat !important
+		//x
 		h3
 			margin: 0
-			padding-top: 20px
-			padding-bottom: 10px
+			padding-top: 25px
+			padding-bottom: 25px
+			font-size: 30px !important
+			font-weight: 300
+			font-family: magistral, sans-serif
 			span
-				font-size: 24px !important
+				font-size: 30px !important
+				font-weight: 300
+				font-family: magistral, sans-serif
 		h4
 			span
 				margin-top: 10px 
 				font-size: 18px !important
-		ul, ol, div
+		ul, ol
 			margin-bottom: 1em
 		ul li a
 			overflow-wrap: break-word
@@ -852,6 +882,8 @@ a:hover
 			a
 				float: left
 				padding-right: 10px
+//
+
 
 #impress
 	padding: 0px 15px !important
