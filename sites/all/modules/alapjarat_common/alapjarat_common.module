@@ -125,8 +125,9 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 		hide($form['submit']);
 	}
 
-	if($form['#id'] == 'views-exposed-form-search-page-page') {
+	if($form['#id'] == 'views-exposed-form-search-api-search-page') {
 		hide($form['submit']);
+        $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search...');
 	}
 
 	if($form['#id'] == 'a-article-node-form') {
@@ -140,7 +141,6 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
 
     $form['#attached']['js'][] = drupal_get_path('module', 'alapjarat_common') . '/alapjarat_common_aarticle_form.js';
 	}
-
 }
 
 //Archive

@@ -1098,6 +1098,13 @@ $.extend($.validator.messages, {
           'context' => 'argument_string_1',
           'not' => TRUE,
         ),
+        2 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
+          'not' => FALSE,
+        ),
       ),
       'logic' => 'and',
     ),

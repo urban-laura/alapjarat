@@ -1,13 +1,16 @@
 @import url('https://use.typekit.net/qas2soj.css')
-
+//x
+html
+	background-color: #f8f8f8
+//x
 body::before
 	background-image: none
-
+//x
 body
 	font-size: 18px
 	font-family: Montserrat
 	color: #333332
-	max-width: 1140px
+	max-width: 1440px
 	width: auto
 	margin-left: auto
 	margin-right: auto
@@ -17,14 +20,6 @@ h1, h2, h3, h4, h5, h6
 	margin-top: 20px
 	margin-bottom: 10px
 	padding: 0
-h1
-	font-size: 40px
-	font-weight: 800
-	line-height: 50px
-h2
-	font-size: 20px
-	font-weight: 600
-	line-height: 30px
 h3
 	font-size: 24px
 h4
@@ -36,6 +31,11 @@ table
 
 .ckeditor_links a
 	color: white
+//x
+.views-field-field-tags
+	a
+		color: white !important
+		background: #C72026
 
 #mc_embed_signup form
 	padding: 0 !important
@@ -113,20 +113,11 @@ table
 	a
 		color: white !important
 
-.panels-flexible-row.panels-flexible-row-2-main-row.panels-flexible-row-first.clearfix
-	padding-bottom: 0px !important
-
-div.panel-flexible.panels-flexible-1.clearfix
-	//background-color: thistle
-	//background: url("paper.jpeg")
-	background-size: cover
-	background-position: center
-
 .panels-flexible-region
 	width: auto
 
-.inside.panels-flexible-region-inside
-	padding: 0px
+.inside.panels-flexible-region-inside, .panels-flexible-row
+	padding: 0px !important
 
 .panel-separator
 	margin: 0px !important
@@ -167,113 +158,67 @@ a:hover
 			color: white !important
 		a:hover
 			color: red !important
-
-.social_menu
-	width: 50%
-	float: right
-	#social_menu
-		.social-media-links
-			padding-right: 23px
-		float: right
-		padding-top: 8px
-		img
-			width: 17px
-		ul.inline li
-			padding: 0 4px
-		.email, .rss
-			img
-				width: 0
-		
+//x
 .letterhead
-	height: auto
-	padding: 0
-	margim: 0
+	background-color: #ffffff
+	.panels-flexible-row-inside
+		max-width: 1115px
+		margin: auto
+		padding: 20px 0px
 	.logo
-		padding-top: 8.5px
-		padding-left: 43px
+		width: 200px
 	.pane-page-slogan
 		h1
 			margin: 0px
-			font-size: 15.5px
+			font-size: 13px
 			text-transform: uppercase
 			text-align: center
-			padding-left: 43px
-	.letterhead_banner
-		float: right
-		width: auto
-		padding-right: 36px
-
-.second_menu
-	width: 100%
-	li.leaf
-		display: inline
-		a:hover
-			text-decoration: none
-		a.active, a
-			color: #444 !important
-	li.leaf.mid-398
-		margin: 0
-	li.leaf.mid-1961 a
-		color: #d82222 !important
-	li.leaf.mid-1965 a
-		color: blue !important
-	#second_menu
-		font-family: Montserrat
-		color: #444
-		font-size: 13px
-		font-weight: bold
-		border-bottom: 1px solid #EAEAEA
-		margin-left: 42px
-		margin-right: 42px
-		margin-bottom: 5px
-		margin-top: -5px
-		padding-bottom: 5px
-
-.main_menu
-	background-color: #444
-	border-top: 5px solid #d82222
-	height: 45px
-	padding: 0
-	margin: 0
+			font-family: magistral, sans-serif
+			font-weight: 300
+			color: #666666
+//x
+.header
+	background-color: #ffffff
+	border-top: solid 1px #e6e6e6
+	border-bottom: solid 1px #e6e6e6
+	.panels-flexible-row-inside
+		max-width: 1115px
+		margin: auto
 	#main_menu
-		padding-left: 5px
 		#ham-menu
-			padding: 5px !important
-		li.leaf
+			padding: 0px !important
+			width: 20px
+			margin-top: 17px
+			margin-right: 10px
+		li
 			display: inline
 			padding: 0
 			margin: 0
 			a
-				color: white !important
-				text-decoration: none
-				line-height: 40px
-				padding: 11px 14px
-				font-family: Montserrat
-			a:hover
-				background-color: white
-				color: #444 !important
+				color: #333332 !important
+				font-size: 14px
+				padding: 0px 7px
+				line-height: 52px
+	//x
 	.search
 		float: right
 		width: auto
-		height: 40px
 		#search
 			input#edit-search-api-views-fulltext, input#edit-keys
-				width: 166px
-				height: 34px
-				margin-top: 3px
-				margin-right: 3px
-		.views-exposed-form .views-exposed-widget
-			float: right !important
-			padding: 0 !important
-
-.views-field-field-tags
-	a
-		color: white !important
-		font-size: 12px
-		padding: 3px
-		background: #d82222
-	a:hover
-		text-decoration: none
+				width: 240px
+				height: 38px
+				background-color: #F2F2F2
+				border: 0px
+				font-size: 14px
+				font-style: italic
+				font-weight: 200
+				padding-left: 20px
+				margin: 0px
+			.views-exposed-form .views-exposed-widget, .views-exposed-widgets
+				padding: 0px
+				margin: 0px
+			#edit-search-api-views-fulltext-wrapper
+				padding: 7px 0px
 
 
 .panels-flexible-region-first.first
@@ -694,8 +639,21 @@ a:hover
 	padding: 0px 15px !important
 	padding-bottom: 15px !important
 	width: -moz-available
+	//x
 	ul, ol
-		margin-left: 45px
+		margin-left: 30px
+		li
+			margin-bottom: 15px
+			display: flex
+			min-width: 90%
+	ul
+		list-style: none
+		li::before
+			content: "●"
+			color: #C72026
+			display: inline-block
+			width: auto
+			margin-right: 20px
 	ol
 		list-style: none
 		counter-reset: li
@@ -703,7 +661,9 @@ a:hover
 			content: counter(li)
 			color: #C72026
 			display: inline-block
-			width: 1em
+			min-width: 15px
+			margin-right: 20px
+			font-weight: bold
 		li
 			counter-increment: li
 	//x
@@ -751,6 +711,9 @@ a:hover
 		h1
 			margin: 0px
 			font-family: magistral, sans-serif
+			font-size: 40px
+			font-weight: 800
+			line-height: 50px
 			p
 				margin: 0px
 				padding: 20px 0px
@@ -796,15 +759,20 @@ a:hover
 			margin: 0px
 			padding-top: 30px
 			padding-bottom: 40px
+			font-size: 20px
+			font-weight: 600
+			line-height: 30px
 
 	#alapjarat-article.pane-node-field-text
 		p, span, ul, ol
 			font-size: 18px !important
 			font-family: Montserrat !important
+		a
+			text-decoration: underline
 		//x
 		h3
 			margin: 0
-			padding-top: 25px
+			padding-top: 15px
 			padding-bottom: 25px
 			font-size: 30px !important
 			font-weight: 300
@@ -818,7 +786,7 @@ a:hover
 				margin-top: 10px 
 				font-size: 18px !important
 		ul, ol
-			margin-bottom: 1em
+			margin-bottom: 25px
 		ul li a
 			overflow-wrap: break-word
 			word-wrap: break-word
@@ -831,57 +799,83 @@ a:hover
 			display: block
 			margin: auto
 			margin-bottom: 5px
-	#youtube-text
-		margin-bottom: 1em
-		p
-			font-size: 15px
-			margin: 0
-			font-style: italic
+	//x
 	.pane-node-field-source
 		.pane-title
-			font-size: 16px
+			font-size: 18px
+			font-family: magistral, sans-serif
 		.even
-			margin-top: 1em
+			margin-top: 10px
 		p
 			display: list-item
 			font-size: 16px !important
 			margin: 0
 			margin-left: 45px
-	#fb2
-		margin-bottom: 15px
+			margin-bottom: 10px
+			font-family: magistral, sans-serif
+		a
+			margin-left: 10px
+	#article4
+		h4
+			font-size: 14px
+			text-transform: uppercase
+			border-bottom: solid 2px #333332
+			padding-bottom: 10px
+			margin-bottom: 30px
+			margin-top: 45px
 		p
 			margin: 0
-			font-style: italic
-	.pane-social-media-links-social-media-links
-		h2
-			margin-bottom: 10px !important
-		ul
-			margin-left: 0px
-		img
-			width: 30px
-	.social-media-links
-		li
-			padding: 0 !important
-			margin-right: 5px
-	#article3
-		margin-top: 25px
 		.views-row
-			width: 116px
-			float: left
-			padding: 5px
-			margin-bottom: 20px
-			img
-				margin-bottom: 10px
+			max-width: 47.5%
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 40px
+		.views-row-1, .views-row-3
+			margin-right: 3.8%
+		.views-field-published-at, .views-field-path, .views-field-field-subtitled, .views-field-field-tags
+			padding: 5px 10px
+		.views-field-published-at
+			padding-top: 5px
+			span
+				font-size: 14px
+				font-family: magistral, sans-serif
+				font-weight: 300
+			span::before
+				content: "🕓"
+				margin-right: 5px
+		.views-field-path
+			a
+				font-weight: bold
+		.views-field-field-subtitled
+			p
+				font-size: 14px
+		.views-field-field-tags
+			a
+				font-size: 12px
+				padding: 5px 7px
+	//x
 	.pane-node-field-tagsa
 		clear: both
-		margin-bottom: 45px 
+		padding-bottom: 60px
+		padding-top: 15px
 		.pane-title
 			float: left
-			padding-right: 10px
 		.field-item
 			a
 				float: left
-				padding-right: 10px
+				padding-left: 10px
+			a::before
+				content: "#"
+				font-style: italic
+		.pane-title, .field-item a
+			font-size: 16px
+			font-family: magistral, sans-serif
+	#article-banner
+		max-width: 640px
+		height: 360px
+		margin: auto
+		margin-bottom: 40px
+		background-color: #dbe0e4
 //
 
 
