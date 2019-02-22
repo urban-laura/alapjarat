@@ -41,13 +41,13 @@ function ecdh_company_search_form($form, &$form_state) {
   $form['profiles'] = array(
     '#type' => 'select',
     '#options' => ecdh_company_search_get_profiles(),
-    '#title' => t('Profile'),
+    //'#title' => t('Profile'),
   );
 
   $form['city'] = array(
     '#id' => 'ecdh-city',
     '#type' => 'textfield',
-    '#title' => t('City'),
+    //'#title' => t('City'),
     '#size' => 30,
     '#maxlength' => 60,
     '#autocomplete_path' => 'ecdh/cities',
@@ -60,7 +60,7 @@ function ecdh_company_search_form($form, &$form_state) {
 
   $form['radius'] = array(
     '#type' => 'numberfield',
-    '#title' => t('Radius'),
+    //'#title' => t('Radius'),
     '#size' => 30,
     '#maxlength' => 60,
     '#min' => 0,

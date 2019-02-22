@@ -31,6 +31,11 @@ table
 
 .ckeditor_links a
 	color: white
+
+//x
+.banner
+	margin: auto
+	background-color: #dbe0e4
 //x
 .views-field-field-tags
 	a
@@ -219,10 +224,93 @@ a:hover
 				margin: 0px
 			#edit-search-api-views-fulltext-wrapper
 				padding: 7px 0px
-
-
+//x
 .panels-flexible-region-first.first
 	width: 100%
+	.panels-flexible-region-inside-first
+		max-width: 1115px
+		margin: auto
+	#default-page-big-banner
+		max-width: 970px
+		height: 250px
+		margin: 30px auto
+	#one
+		width: 50%
+		float: left
+		position: relative
+		.views-field-path
+			width: 100%
+			position: absolute
+			bottom: 26px
+			padding: 20px
+			padding-bottom: 60px
+			background-image: repeating-linear-gradient(-45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 6px)
+			h3
+				font-family: magistral, sans-serif
+				font-size: 20px
+				font-weight: bold
+				line-height: 26px
+				margin: 0
+				a
+					color: #ffffff !important
+				p
+					margin: 0
+		.views-field-field-tags
+			margin-right: 10px
+			margin-left: 20px
+			a
+				padding: 6px 8px
+				font-size: 12px
+		.views-field-published-at
+			font-family: magistral, sans-serif
+			font-size: 14px
+			color: #ffffff
+		.views-field-field-tags, .views-field-published-at
+			position: relative
+			bottom: 50px
+			display: inline-block
+	#four
+		width: 50%
+		float: left
+		padding-left: 25px
+		.views-row
+			width: 48%
+			display: inline-block
+			vertical-align: top
+			position: relative
+		.views-row-1, .views-row-3
+			margin-right: 3%
+		.views-field-path
+			width: 100%
+			position: absolute
+			bottom: 26px
+			padding: 10px
+			padding-bottom: 37px
+			background-image: repeating-linear-gradient(-45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 6px)
+			h3
+				font-family: magistral, sans-serif
+				font-size: 14px
+				font-weight: bold
+				margin: 0
+				a
+					color: #ffffff !important
+				p
+					margin: 0
+		.views-field-field-tags
+			margin-right: 3px
+			margin-left: 10px
+			a
+				padding: 2px 3px
+				font-size: 10px
+		.views-field-published-at
+			font-family: magistral, sans-serif
+			font-size: 10px
+			color: #ffffff
+		.views-field-field-tags, .views-field-published-at
+			position: relative
+			bottom: 35px
+			display: inline-block
+//.panels-flexible-region-first.first
 	#mini-panel-hamburger_menu
 		background: #efefef
 	.panels-flexible-region.panels-flexible-region-new-center.panels-flexible-region-first.panels-flexible-region-last
@@ -279,80 +367,15 @@ a:hover
 				margin: 0
 			p
 				margin: 0
-	#one, #four
-		h3
-			font-family: open sans,sans-serif
-			margin: 0 
-			a
-				color: white !important
-		p
-			margin: 0 !important
-		.views-field-field-image
-			background: black
-			img
-				opacity: 0.7
-		.views-field-published-at
-			color: white
-			font-size: 12px
-	#one
-		width: 50%
-		float: left
-		height: 360px
-		.views-row
-			position: relative
-		.views-field-path
-			position: absolute
-			bottom: 40px
-			margin-left: 10px
-			margin-right: 10px
-			h3
-				font-size: 24px 
-		.views-field-field-tags, .views-field-published-at
-			position: relative
-			bottom: 35px
-			float: left
-			margin-left: 10px
-		.views-field-published-at
-			bottom: 33px
-	#four
-		float: left
-		width: 50%
-		padding-left: 10px
-		.views-row
-			width: 50%
-			float: left
-			position: relative
-			height: 175px
-			img
-				height: 175px
-		.views-row-1, .views-row-3
-			padding-right: 5px
-		.views-row-2, .views-row-4
-			padding-left: 5px
-		.views-row-3, .views-row-4
-			margin-top: 10px
-		.views-field-path
-			position: absolute
-			bottom: 45px
-			margin-left: 10px
-			margin-right: 10px
-			h3
-				font-size: 16px
-		.views-field-field-tags, .views-field-published-at
-			position: relative
-			bottom: 42px
-			margin-left: 10px
-		.views-field-published-at
-			bottom: 40px	
 
-.maincontent
+//.maincontent
 	border-right: 1px solid #efefef
 	border-left: 1px solid #efefef
 	border-bottom: 1px solid black
 	margin-top: -0.5em !important
 	padding-bottom: 0 !important
 
-.main_content
+//.main_content
 	width: 67%
 	border-right: 1px solid #efefef
 	.front_page_post
@@ -470,7 +493,7 @@ a:hover
 				float: left
 				height: 305px
 
-.right
+//.right
 	width: 33%
 	padding: 15px !important
 	.banner .views-field-field-title, .pane-title, .view-header h3
@@ -815,6 +838,7 @@ a:hover
 			font-family: magistral, sans-serif
 		a
 			margin-left: 10px
+	//x
 	#article4
 		h4
 			font-size: 14px
@@ -826,7 +850,7 @@ a:hover
 		p
 			margin: 0
 		.views-row
-			max-width: 47.5%
+			width: 47.5%
 			display: inline-block
 			vertical-align: top
 			margin-bottom: 40px
@@ -873,9 +897,7 @@ a:hover
 	#article-banner
 		max-width: 640px
 		height: 360px
-		margin: auto
 		margin-bottom: 40px
-		background-color: #dbe0e4
 //
 
 
