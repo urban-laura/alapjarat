@@ -14,6 +14,13 @@ function alapjarat_theme_2019_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function alapjarat_theme_2019_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function alapjarat_theme_2019_image_default_styles() {

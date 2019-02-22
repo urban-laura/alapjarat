@@ -171,11 +171,10 @@ a:hover
 		margin: auto
 		padding: 20px 0px
 	.logo
-		width: 200px
 	.pane-page-slogan
 		h1
 			margin: 0px
-			font-size: 13px
+			font-size: 13.5px
 			text-transform: uppercase
 			text-align: center
 			font-family: magistral, sans-serif
@@ -310,6 +309,106 @@ a:hover
 			position: relative
 			bottom: 35px
 			display: inline-block
+//x
+.main-center
+	width: 100%
+	background-color: #ffffff
+	.panels-flexible-row-inside
+		max-width: 1115px
+		margin: auto
+	.main-content
+		width: 67%
+		background-color: #F8F8F8
+	.right
+		width: 33%
+		padding-left: 30px
+
+.front-page
+	padding-top: 20px
+	.views-row
+		padding-bottom: 40px
+	.views-field-published-at
+		line-height: 18px
+		span
+			font-size: 14px
+			font-family: magistral, sans-serif
+			font-weight: 300
+		span::before
+			content: "🕓"
+			margin-right: 5px
+	.views-field-path
+		p
+			margin: 0px
+		h3
+			margin: 0px
+			font-size: 18px
+			font-weight: bold
+			line-height: 22px
+	.views-field-field-subtitled
+		p
+			margin: 0px
+			font-size: 14px
+			line-height: 20px
+	.views-field-field-tags
+		a
+			font-size: 12px
+			padding: 5px 7px
+	.view-header
+		clear: both
+		ul
+			border-bottom: solid 2px #333332
+			margin-bottom: 30px
+			padding-top: 30px
+		li
+			display: inline-block
+			vertical-align: top
+			a
+				color: #333332 !important
+			h3
+				padding: 0
+				margin: 0
+				text-transform: uppercase
+				font-size: 14px
+				font-weight: 600
+		li.text
+			float: right
+			font-size: 12px
+			text-decoration: initial
+			font-weight: 300
+	.helpful-info
+		.view-header
+			width: 212.7%
+	.helpful-info.small
+		padding-top: 88px
+	.a-1, .a-2
+		width: 50%
+		float: left
+	.a-1
+		padding-right: 3%
+	.a-2
+		padding-left: 3%
+	.big
+		.views-field-published-at, .views-field-path, .views-field-field-tags, .views-field-field-subtitled
+			margin-top: 10px
+	.small
+		.views-field-field-image
+			float: left
+		.views-field-published-at
+			vertical-align: top
+		.views-field-path
+			h3
+				margin: 10px 0px
+		.views-field-published-at, .views-field-path, .views-field-field-tags
+			margin-left: 155px
+	.many
+		.views-row
+			width: 47%
+			display: inline-block
+			vertical-align: top
+		.views-row-2, .views-row-4, .views-row-6, .views-row-8
+			margin-left: 5.3%
+//
+
 //.panels-flexible-region-first.first
 	#mini-panel-hamburger_menu
 		background: #efefef
@@ -368,130 +467,6 @@ a:hover
 			p
 				margin: 0
 
-//.maincontent
-	border-right: 1px solid #efefef
-	border-left: 1px solid #efefef
-	border-bottom: 1px solid black
-	margin-top: -0.5em !important
-	padding-bottom: 0 !important
-
-//.main_content
-	width: 67%
-	border-right: 1px solid #efefef
-	.front_page_post
-		padding: 15px !important
-		padding-top: 20px !important
-		width: 100%
-		h3
-			font-family: open sans,sans-serif 
-			margin: 0
-			font-weight: bold
-			a
-				color: #d82222 !important
-
-		p
-			margin: 0 !important
-		.view-header
-			h3
-				font-size: 21px
-				font-family: montserrat,sans-serif
-				text-rendering: optimizelegibility
-				font-weight: 500
-				text-transform: uppercase
-				border-bottom: 3px solid #161616
-				margin-bottom: 10px
-				padding-bottom: 5px 
-				a
-					color: #444 !important
-				
-		#helpful_info_a, #actual_A, #tech, #test, .article_4
-			clear: both
-			.views-field-path
-				margin-top: 10px
-				h3
-					font-size: 20px
-		#helpful_info_b
-			.views-field-field-image
-				width: 45%
-				float: left
-			.views-field-path
-				h3
-					font-size: 16px
-					font-family: montserrat,sans-serif
-					font-weight: normal
-			.views-field-field-tags, .views-field-published-at, .views-field-path
-				margin-left: 45%
-				margin-bottom: 3px
-		#helpful_info_a, #helpful_info_b
-			width: 50%
-			float: left
-			.views-field-field-image
-				margin-top: 4px
-		#helpful_info_a
-			.view-header
-				width: 200%
-			.view-content
-				padding-right: 15px
-				padding-left: 15px
-				padding-top: 4px
-			.views-field-field-tags
-				float: left
-				margin-right: 10px
-			.views-field-field-subtitled
-				font-size: 16px
-				margin-top: 5px
-		#helpful_info_b
-			padding-left: 25px
-			padding-right: 15px
-			padding-top: 49px
-			.views-row
-				margin-bottom: 25px
-		#actual_A
-			.views-row
-				height: 320px
-			.views-row-1, .views-row-2
-				width: 50%
-				padding-right: 15px
-				padding-left: 15px
-				float: left
-			.views-field-field-image
-				margin-top: 4px
-			.views-field-field-tags
-				float: left
-				margin-right: 10px
-		#actual_B
-			.views-row
-				width: 50%
-				float: left
-				height: 150px
-				padding-right: 15px
-				padding-left: 15px
-			.views-field-field-image
-				width: 45%
-				float: left
-				margin-top: 4px
-			.views-field-path
-				margin-left: 45%
-				margin-bottom: 3px
-				h3
-					font-size: 16px
-					font-family: montserrat,sans-serif
-					font-weight: normal
-			.views-field-field-tags, .views-field-published-at, .views-field-path
-				margin-left: 45%
-				margin-bottom: 3px
-		#tech, #test, .article_4
-			.views-field-field-image
-				margin-top: 4px
-			.views-field-field-tags
-				float: left
-				margin-right: 10px
-			.views-row
-				width: 50%
-				padding-right: 15px
-				padding-left: 15px
-				float: left
-				height: 305px
 
 //.right
 	width: 33%
