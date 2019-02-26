@@ -7,11 +7,13 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 	    $fixed_article = fix_article_exists();
 
 	    if (!empty($fixed_article)) {
-		    $new_query = db_select('node', 'n')
+		    $new_query = db_select('node', 'n');
+		    $new_query->leftJoin('publication_date', 'pd', 'pd.nid = n.nid');
+		    $new_query
 		    ->fields('n', array('nid'))
 		    ->condition('n.status', 1)
 		    ->condition('n.type', 'a_article')
-		    ->orderBy('n.created', 'DESC')
+		    ->orderBy('pd.published_at', 'DESC')
 		    ->range(0,5);
 
 		    $result = $new_query->execute();
