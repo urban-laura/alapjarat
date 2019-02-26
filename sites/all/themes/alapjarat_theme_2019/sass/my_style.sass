@@ -20,10 +20,15 @@ h1, h2, h3, h4, h5, h6
 	margin-top: 20px
 	margin-bottom: 10px
 	padding: 0
+h1
+	font-size: 36px
+
+h2
+	font-size: 30px
 h3
 	font-size: 24px
 h4
-	margin-top: 10px 
+	margin-top: 10px
 	font-size: 18px
 
 table
@@ -319,11 +324,49 @@ a:hover
 	.main-content
 		width: 67%
 		background-color: #F8F8F8
-	.right
+	.right-bar
 		width: 33%
 		padding-left: 30px
+		a
+			color: #333332 !important
+		.pane-title
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 600
+			padding-bottom: 5px
+			border-bottom: solid 2px #333332
+			display: block
+			margin-bottom: 20px
+		#archive
+			li
+				list-style: none
+				font-size: 14px
+				padding-bottom: 10px
+		#event
+			.views-row
+				padding-bottom: 20px
+			ul
+				list-style-type: none
+				padding: 2px 0px
+				padding-left: 10px
+			.No
+				border-left: solid 5px #333332
+			.Yes
+				border-left: solid 5px #C72026
+				a
+					color: #C72026 !important
+			.time
+				font-family: magistral, sans-serif
+				font-size: 14px
+			.time::before
+				content: "🕓"
+				margin-right: 5px
+			a
+				font-size: 16px
+				font-family: magistral, sans-serif
+				font-weight: 500
 
-.front-page
+.front-page, .right-bar
 	padding-top: 20px
 	.views-row
 		padding-bottom: 40px
@@ -353,6 +396,7 @@ a:hover
 		a
 			font-size: 12px
 			padding: 5px 7px
+			color: #ffffff !important
 	.view-header
 		clear: both
 		ul
@@ -508,29 +552,7 @@ a:hover
 			.field-content
 				a
 					font-size: 16px
-	#random_article
-		.views-row
-			clear: both
-		.views-field-field-image
-			width: 38%
-			float: left
-			margin-bottom: 10px
-		.views-field-path
-			margin-left: 38%
-			h3
-				font-size: 14px
-				font-family: montserrat,sans-serif
-				margin: 0
-		.views-field-published-at
-			padding: 5px 0
-			margin-left: 38%
-			border-bottom: 1px solid #efefef
-	#archive
-		ul
-			list-style: none
-			li
-				padding: 10px 0
-				border-bottom: 1px solid #efefef
+
 
 .panels-flexible-region-1-footer_text_
 	margin-bottom: -21px
@@ -945,7 +967,7 @@ div.pages
 		font-family: montserrat,sans-serif
 		margin-top: 20px !important
 		margin-bottom: 35px !important
-//Edit
+//x
 .menu-footer
 	background-color: #C72026
 	padding: 35px 0px !important
@@ -1031,3 +1053,4 @@ div.pages
 		.view-content
 			display: inline-block
 			float: right
+//

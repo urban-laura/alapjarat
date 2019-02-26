@@ -907,7 +907,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '10',
-        'class' => 'right',
+        'class' => 'right-bar',
         'hide_empty' => 0,
       ),
       'e' => array(
@@ -1541,10 +1541,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-c68ebcae-a594-4de2-9501-80b26f344c08'] = $pane;
   $display->panels['popular_tags'][0] = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
   $pane = new stdClass();
-  $pane->pid = 'new-9ded4e28-117d-47d8-9765-7e91a175953b';
+  $pane->pid = 'new-7a819861-78f3-4b68-b1b5-3e7259f5836f';
   $pane->panel = 'right';
   $pane->type = 'views_panes';
-  $pane->subtype = 'event-panel_pane_1';
+  $pane->subtype = 'event-panel_pane_2';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array();
@@ -1559,9 +1559,31 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '9ded4e28-117d-47d8-9765-7e91a175953b';
-  $display->content['new-9ded4e28-117d-47d8-9765-7e91a175953b'] = $pane;
-  $display->panels['right'][0] = 'new-9ded4e28-117d-47d8-9765-7e91a175953b';
+  $pane->uuid = '7a819861-78f3-4b68-b1b5-3e7259f5836f';
+  $display->content['new-7a819861-78f3-4b68-b1b5-3e7259f5836f'] = $pane;
+  $display->panels['right'][0] = 'new-7a819861-78f3-4b68-b1b5-3e7259f5836f';
+  $pane = new stdClass();
+  $pane->pid = 'new-58926611-b751-4330-8a43-23315fdc9b81';
+  $pane->panel = 'right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'articles_2019-panel_pane_9';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'small',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '58926611-b751-4330-8a43-23315fdc9b81';
+  $display->content['new-58926611-b751-4330-8a43-23315fdc9b81'] = $pane;
+  $display->panels['right'][1] = 'new-58926611-b751-4330-8a43-23315fdc9b81';
   $pane = new stdClass();
   $pane->pid = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane->panel = 'right';
@@ -1573,7 +1595,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'date_format' => '',
     'override_title' => 1,
     'override_title_text' => 'Archive',
-    'override_title_heading' => 'h3',
+    'override_title_heading' => 'span',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1584,11 +1606,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $display->content['new-76900dcc-6cdf-4260-a00a-3ca5a66737ff'] = $pane;
-  $display->panels['right'][1] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
+  $display->panels['right'][2] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane = new stdClass();
   $pane->pid = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
   $pane->panel = 'search';

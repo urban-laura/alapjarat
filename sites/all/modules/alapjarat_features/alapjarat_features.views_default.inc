@@ -4177,8 +4177,8 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3>Események</h3>';
-  $handler->display->display_options['header']['area']['format'] = 'fullhtml';
+  $handler->display->display_options['header']['area']['content'] = '<span class="pane-title">Események</span>';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   /* Field: Tartalom: Stressed event? 	 */
   $handler->display->display_options['fields']['field_stressed_event']['id'] = 'field_stressed_event';
   $handler->display->display_options['fields']['field_stressed_event']['table'] = 'field_data_field_stressed_event';
@@ -4266,6 +4266,69 @@ function alapjarat_features_views_default_views() {
 
   /* Display: Event */
   $handler = $view->new_display('panel_pane', 'Event', 'panel_pane_1');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h3>Események</h3>';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
+  $handler->display->display_options['pane_category']['name'] = 'Nézettáblák';
+
+  /* Display: Event (alapjarat_theme_2019) */
+  $handler = $view->new_display('panel_pane', 'Event (alapjarat_theme_2019)', 'panel_pane_2');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Tartalom: Stressed event? 	 */
+  $handler->display->display_options['fields']['field_stressed_event']['id'] = 'field_stressed_event';
+  $handler->display->display_options['fields']['field_stressed_event']['table'] = 'field_data_field_stressed_event';
+  $handler->display->display_options['fields']['field_stressed_event']['field'] = 'field_stressed_event';
+  $handler->display->display_options['fields']['field_stressed_event']['label'] = '';
+  $handler->display->display_options['fields']['field_stressed_event']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_stressed_event']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_stressed_event']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Tartalom: Event date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'custom',
+    'custom_date_format' => 'Y. F d.',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_event_date']['separator'] = ' - ';
+  /* Field: Tartalom: Event */
+  $handler->display->display_options['fields']['field_facebook_event']['id'] = 'field_facebook_event';
+  $handler->display->display_options['fields']['field_facebook_event']['table'] = 'field_data_field_facebook_event';
+  $handler->display->display_options['fields']['field_facebook_event']['field'] = 'field_facebook_event';
+  $handler->display->display_options['fields']['field_facebook_event']['label'] = '';
+  $handler->display->display_options['fields']['field_facebook_event']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_facebook_event']['alter']['text'] = '<ul class="[field_stressed_event]">
+<li class="time">[field_event_date]</li>
+<li><a href="[field_facebook_event-value]">[title]</a></li>
+</ul>';
+  $handler->display->display_options['fields']['field_facebook_event']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_facebook_event']['settings'] = array(
+    'trim_length' => '',
+    'nofollow' => 0,
+  );
   $handler->display->display_options['pane_category']['name'] = 'Nézettáblák';
   $translatables['event'] = array(
     t('Master'),
@@ -4282,12 +4345,17 @@ function alapjarat_features_views_default_views() {
     t('‹ előző'),
     t('következő ›'),
     t('utolsó »'),
-    t('<h3>Események</h3>'),
+    t('<span class="pane-title">Események</span>'),
     t('<p class="[field_stressed_event]">[title]</p>'),
     t('<a href="[field_facebook_event-value]" target="_blank">Esemény >></a>'),
     t('Event'),
-    t('more'),
+    t('<h3>Események</h3>'),
     t('Nézettáblák'),
+    t('Event (alapjarat_theme_2019)'),
+    t('<ul class="[field_stressed_event]">
+<li class="time">[field_event_date]</li>
+<li><a href="[field_facebook_event-value]">[title]</a></li>
+</ul>'),
   );
   $export['event'] = $view;
 
