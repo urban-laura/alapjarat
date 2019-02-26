@@ -1353,11 +1353,11 @@ div.pages .pane-node-title {
 }
 /* line 1015, ../sass/my_style.sass */
 .menu-footer .tel::before {
-  content: url("/sites/all/themes/alapjarat_theme_2019/picture/phone.png");
+  content: url("/sites/all/themes/alapjarat_theme_2019/images/phone.png");
 }
 /* line 1017, ../sass/my_style.sass */
 .menu-footer .mail::before {
-  content: url("/sites/all/themes/alapjarat_theme_2019/picture/email.png");
+  content: url("/sites/all/themes/alapjarat_theme_2019/images/email.png");
 }
 /* line 1019, ../sass/my_style.sass */
 .menu-footer .popular-tags {
