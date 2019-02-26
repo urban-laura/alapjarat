@@ -17,14 +17,16 @@ function fix_article_top_views_query_alter(&$view, &$query) {
 		    ->range(0,5);
 
 		    $result = $new_query->execute();
+		    $first_round = TRUE;
 		    foreach ($result as $row) {
-		    	$nids[] = $row->nid;
+		      $nids[] = $row->nid;
+		      if ($first_round) {
+		        $nids[] = $fixed_article;
+		        $first_round = FALSE;
+		      }
 		    }
-
-
 		    
-
-		    $nids[2] = $fixed_article;
+		    array_pop($nids);
 
 		    $query->add_where(1,'node.nid', $nids, 'IN');
 		}
