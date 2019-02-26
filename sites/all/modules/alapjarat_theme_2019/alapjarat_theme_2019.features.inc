@@ -127,8 +127,8 @@ function alapjarat_theme_2019_image_default_styles() {
       8 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 30,
-          'height' => 30,
+          'width' => 29,
+          'height' => 29,
           'upscale' => 0,
         ),
         'weight' => 1,

@@ -671,15 +671,15 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3>Ajánlott cikkek</h3>';
-  $handler->display->display_options['header']['area']['format'] = 'fullhtml';
+  $handler->display->display_options['header']['area']['content'] = '<span class="pane-title">Ajánlott cikkek</span>';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Main image */
@@ -690,9 +690,18 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'right',
+    'image_style' => 'small_2019',
     'image_link' => 'content',
   );
+  /* Field: Node: Published at */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['label'] = '';
+  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'front_page';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Field: Tartalom: Article Title (H1) */
   $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
@@ -709,24 +718,14 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
   $handler->display->display_options['fields']['path']['element_type'] = 'h3';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = '';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'front_page';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = 'Y. F d.';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Node: Published at */
-  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
-  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
-  $handler->display->display_options['fields']['published_at']['label'] = '';
-  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['published_at']['date_format'] = 'front_page';
-  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
+  /* Field: Tartalom: Category */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = ' ';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
@@ -1134,8 +1133,8 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['filters']['field_menu_tid']['vocabulary'] = 'menu';
   $handler->display->display_options['pane_category']['name'] = 'Nézettáblák';
 
-  /* Display: First 5 Article (alapjarat_theme_2019) */
-  $handler = $view->new_display('panel_pane', 'First 5 Article (alapjarat_theme_2019)', 'panel_pane_16');
+  /* Display: Right First 5 Article */
+  $handler = $view->new_display('panel_pane', 'Right First 5 Article', 'panel_pane_16');
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -1596,7 +1595,7 @@ function alapjarat_theme_2019_views_default_views() {
 <li class=\'text\'><a href=\'/autoteszt\'>> Összes</a></li>
 </ul>'),
     t('right'),
-    t('<h3>Ajánlott cikkek</h3>'),
+    t('<span class="pane-title">Ajánlott cikkek</span>'),
     t('One'),
     t('Four'),
     t('tuning_A'),
@@ -1614,7 +1613,7 @@ function alapjarat_theme_2019_views_default_views() {
 <li><a href=\'/el-mondo\'><h3>El Mondó</h3></a></li>
 <li class=\'text\'><a href=\'/el-mondo\'>> Összes</a></li>
 </ul>'),
-    t('First 5 Article (alapjarat_theme_2019)'),
+    t('Right First 5 Article'),
     t('Legfrissebb Híreink'),
     t('tech_B'),
     t('rajtracs_B'),
