@@ -1279,7 +1279,7 @@ div.pages .pane-node-title {
 }
 /* line 990, ../sass/my_style.sass */
 .menu-footer .tel::before, .menu-footer .mail::before {
-  vertical-align: sub;
+  vertical-align: middle;
   margin-right: 10px;
 }
 /* line 993, ../sass/my_style.sass */
@@ -1291,22 +1291,22 @@ div.pages .pane-node-title {
   content: url("/sites/default/picture/email.png");
 }
 /* line 997, ../sass/my_style.sass */
-.menu-footer .panels-flexible-region-45-popular_tags {
+.menu-footer .popular-tags {
   width: 17%;
   margin-right: 6%;
 }
 /* line 1000, ../sass/my_style.sass */
-.menu-footer .panels-flexible-region-45-calculator {
+.menu-footer .calculator {
   width: 23%;
   margin-right: 6%;
 }
 /* line 1003, ../sass/my_style.sass */
-.menu-footer .panels-flexible-region-45-car_partner {
+.menu-footer .car-partner {
   width: 27.5%;
   margin-right: 5.5%;
 }
 /* line 1006, ../sass/my_style.sass */
-.menu-footer .panels-flexible-region-45-connection {
+.menu-footer .connection {
   width: 15%;
 }
 
@@ -1327,11 +1327,11 @@ div.pages .pane-node-title {
   color: #8C181B;
 }
 /* line 1019, ../sass/my_style.sass */
-.my-footer .panels-flexible-region-45-copyright {
+.my-footer .copyright {
   width: 65%;
 }
 /* line 1021, ../sass/my_style.sass */
-.my-footer .panels-flexible-region-45-social_media_menu {
+.my-footer .social-media-menu {
   width: 35%;
 }
 /* line 1023, ../sass/my_style.sass */
