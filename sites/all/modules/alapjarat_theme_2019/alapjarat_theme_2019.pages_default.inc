@@ -947,7 +947,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => '25',
         'width_type' => '%',
         'parent' => '11',
-        'class' => '',
+        'class' => 'popular-tags',
         'hide_empty' => 0,
       ),
       'calculator' => array(
@@ -956,7 +956,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => '25',
         'width_type' => '%',
         'parent' => '11',
-        'class' => '',
+        'class' => 'calculator',
         'hide_empty' => 0,
       ),
       'car_partner' => array(
@@ -965,7 +965,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => '25',
         'width_type' => '%',
         'parent' => '11',
-        'class' => '',
+        'class' => 'car-partner',
         'hide_empty' => 0,
       ),
       'connection' => array(
@@ -974,7 +974,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => '25',
         'width_type' => '%',
         'parent' => '11',
-        'class' => '',
+        'class' => 'connection',
         'hide_empty' => 0,
       ),
       12 => array(
@@ -994,7 +994,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '12',
-        'class' => '',
+        'class' => 'copyright',
         'hide_empty' => 0,
       ),
       'social_media_menu' => array(
@@ -1003,7 +1003,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 50,
         'width_type' => '%',
         'parent' => '12',
-        'class' => '',
+        'class' => 'social-media-menu',
         'hide_empty' => 0,
       ),
     ),
