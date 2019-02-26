@@ -383,7 +383,7 @@ a:hover {
 }
 /* line 247, ../sass/my_style.sass */
 .main_menu #main_menu #ham-menu {
-  padding: 5px !important;
+  padding: 10px !important;
 }
 /* line 249, ../sass/my_style.sass */
 .main_menu #main_menu li.leaf {
