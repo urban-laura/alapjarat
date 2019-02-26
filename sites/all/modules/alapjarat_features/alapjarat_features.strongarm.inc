@@ -582,7 +582,10 @@ function alapjarat_features_strongarm() {
           'weight' => '1',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '9',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),

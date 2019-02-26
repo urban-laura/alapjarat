@@ -980,9 +980,30 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       12 => array(
         'type' => 'row',
         'contains' => 'region',
-        'children' => array(),
+        'children' => array(
+          0 => 'copyright',
+          1 => 'social_media_menu',
+        ),
         'parent' => 'main',
         'class' => 'my-footer',
+        'hide_empty' => 0,
+      ),
+      'copyright' => array(
+        'type' => 'region',
+        'title' => 'Copyright',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '12',
+        'class' => '',
+        'hide_empty' => 0,
+      ),
+      'social_media_menu' => array(
+        'type' => 'region',
+        'title' => 'Social Media Menu',
+        'width' => 50,
+        'width_type' => '%',
+        'parent' => '12',
+        'class' => '',
         'hide_empty' => 0,
       ),
     ),
@@ -1016,6 +1037,8 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       'calculator' => NULL,
       'car_partner' => NULL,
       'connection' => NULL,
+      'copyright' => NULL,
+      'social_media_menu' => NULL,
     ),
   );
   $display->cache = array();
@@ -1104,6 +1127,110 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->uuid = 'eba687b9-9c67-4cd3-a84b-0d000cff9dfb';
   $display->content['new-eba687b9-9c67-4cd3-a84b-0d000cff9dfb'] = $pane;
   $display->panels['admin_menu'][1] = 'new-eba687b9-9c67-4cd3-a84b-0d000cff9dfb';
+  $pane = new stdClass();
+  $pane->pid = 'new-1b3dae25-7117-4e5d-8eb9-dbd07df8b637';
+  $pane->panel = 'calculator';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-calculators';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'Kalkulátorok',
+    'override_title_heading' => 'span',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '1b3dae25-7117-4e5d-8eb9-dbd07df8b637';
+  $display->content['new-1b3dae25-7117-4e5d-8eb9-dbd07df8b637'] = $pane;
+  $display->panels['calculator'][0] = 'new-1b3dae25-7117-4e5d-8eb9-dbd07df8b637';
+  $pane = new stdClass();
+  $pane->pid = 'new-52e9751d-3cad-4253-9b5d-3ba082aec358';
+  $pane->panel = 'car_partner';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'menu-panel_pane_4';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'partners',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '52e9751d-3cad-4253-9b5d-3ba082aec358';
+  $display->content['new-52e9751d-3cad-4253-9b5d-3ba082aec358'] = $pane;
+  $display->panels['car_partner'][0] = 'new-52e9751d-3cad-4253-9b5d-3ba082aec358';
+  $pane = new stdClass();
+  $pane->pid = 'new-8b90915d-b332-4f16-8107-4eb10661be94';
+  $pane->panel = 'connection';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => 'Kapcsolat',
+    'title_heading' => 'span',
+    'body' => '<a href="tel:+36202995830" class="tel">+36 20 299 5830</a>
+<a href="mailto:info@alapjarat.hu" class="mail">info@alapjarat.hu</a>
+<a href="" class="link">Impresszum</a>
+<a href="" class="link">Médiaajánlat</a>
+<a href="" class="link">Jogi nyilatkozat</a>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '8b90915d-b332-4f16-8107-4eb10661be94';
+  $display->content['new-8b90915d-b332-4f16-8107-4eb10661be94'] = $pane;
+  $display->panels['connection'][0] = 'new-8b90915d-b332-4f16-8107-4eb10661be94';
+  $pane = new stdClass();
+  $pane->pid = 'new-c81fdb5b-e269-443d-9ed6-9534a92ba8d8';
+  $pane->panel = 'copyright';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<ul>
+<li class="left">© Copyright 2018, alapjarat.hu & ecdh.hu</li>
+<li class="right">1097 Budapest, Könyves Kálmán krt. 12-14</li>
+</ul>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'c81fdb5b-e269-443d-9ed6-9534a92ba8d8';
+  $display->content['new-c81fdb5b-e269-443d-9ed6-9534a92ba8d8'] = $pane;
+  $display->panels['copyright'][0] = 'new-c81fdb5b-e269-443d-9ed6-9534a92ba8d8';
   $pane = new stdClass();
   $pane->pid = 'new-de8223ae-43c8-480e-a237-9cf0a7d05392';
   $pane->panel = 'drupal_message';
@@ -1390,6 +1517,30 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-41b7e39e-88ed-4d21-9ddc-1f26d61fa3fb'] = $pane;
   $display->panels['main_menu'][0] = 'new-41b7e39e-88ed-4d21-9ddc-1f26d61fa3fb';
   $pane = new stdClass();
+  $pane->pid = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
+  $pane->panel = 'popular_tags';
+  $pane->type = 'most_popular_terms';
+  $pane->subtype = 'most_popular_terms';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'count' => '5',
+    'override_title' => 1,
+    'override_title_text' => 'Népszerű címkék',
+    'override_title_heading' => 'span',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'c68ebcae-a594-4de2-9501-80b26f344c08';
+  $display->content['new-c68ebcae-a594-4de2-9501-80b26f344c08'] = $pane;
+  $display->panels['popular_tags'][0] = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
+  $pane = new stdClass();
   $pane->pid = 'new-9ded4e28-117d-47d8-9765-7e91a175953b';
   $pane->panel = 'right';
   $pane->type = 'views_panes';
@@ -1465,6 +1616,28 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->uuid = '86e8d848-d560-4aef-9090-0595b1b02f9f';
   $display->content['new-86e8d848-d560-4aef-9090-0595b1b02f9f'] = $pane;
   $display->panels['search'][0] = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
+  $pane = new stdClass();
+  $pane->pid = 'new-1d7281d1-8f17-4e9b-982d-32261e04fc28';
+  $pane->panel = 'social_media_menu';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'menu-panel_pane_5';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'social-media',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '1d7281d1-8f17-4e9b-982d-32261e04fc28';
+  $display->content['new-1d7281d1-8f17-4e9b-982d-32261e04fc28'] = $pane;
+  $display->panels['social_media_menu'][0] = 'new-1d7281d1-8f17-4e9b-982d-32261e04fc28';
   $pane = new stdClass();
   $pane->pid = 'new-8f77f31f-7d66-4c63-b2fe-09cec42bbabd';
   $pane->panel = 'user';

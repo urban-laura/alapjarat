@@ -11,6 +11,9 @@ function alapjarat_theme_2019_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -56,6 +59,21 @@ function alapjarat_theme_2019_image_default_styles() {
     ),
   );
 
+  // Exported image style: big_2019.
+  $styles['big_2019'] = array(
+    'label' => 'big 2019',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 350,
+          'height' => 195,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: first_5_article.
   $styles['first_5_article'] = array(
     'label' => 'First 5 article',
@@ -71,5 +89,70 @@ function alapjarat_theme_2019_image_default_styles() {
     ),
   );
 
+  // Exported image style: partners_in_footer.
+  $styles['partners_in_footer'] = array(
+    'label' => 'partners in footer',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 20,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: small_2019.
+  $styles['small_2019'] = array(
+    'label' => 'small 2019',
+    'effects' => array(
+      5 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 145,
+          'height' => 85,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: social_media.
+  $styles['social_media'] = array(
+    'label' => 'Social Media',
+    'effects' => array(
+      8 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 30,
+          'height' => 30,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function alapjarat_theme_2019_node_info() {
+  $items = array(
+    'social_media_menu' => array(
+      'name' => t('Social Media Menu'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
 }

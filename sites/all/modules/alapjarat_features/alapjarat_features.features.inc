@@ -189,7 +189,7 @@ function alapjarat_features_image_default_styles() {
   $styles['premium_partner'] = array(
     'label' => 'premium_partner',
     'effects' => array(
-      12 => array(
+      6 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 158,
