@@ -415,7 +415,6 @@ function system_requirements($phase) {
       if ($updates !== FALSE) {
         $default = drupal_get_installed_schema_version($module);
         if (max($updates) > $default) {
-          watchdog('module update db', $module);
           $requirements['update']['severity'] = REQUIREMENT_ERROR;
           $requirements['update']['value'] = $t('Out of date');
           $requirements['update']['description'] = $t('Some modules have database schema updates to install. You should run the <a href="@update">database update script</a> immediately.', array('@update' => base_path() . 'update.php'));
@@ -2871,7 +2870,7 @@ function system_update_7061(&$sandbox) {
     if (!db_table_exists('system_update_7061')) {
       $table = array(
         'description' => t('Stores temporary data for system_update_7061.'),
-        'fields' => array('vid' => array('type' => 'int')),
+        'fields' => array('vid' => array('type' => 'int', 'not null' => TRUE)),
         'primary key' => array('vid'),
       );
       db_create_table('system_update_7061', $table);
