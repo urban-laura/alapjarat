@@ -438,7 +438,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '75';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '45';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   /* Field: Content: Path */
@@ -671,7 +671,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
@@ -708,6 +708,8 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '45';
+  $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';

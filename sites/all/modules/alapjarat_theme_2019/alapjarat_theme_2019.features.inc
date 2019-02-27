@@ -67,7 +67,7 @@ function alapjarat_theme_2019_image_default_styles() {
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 350,
-          'height' => 195,
+          'height' => 194,
         ),
         'weight' => 1,
       ),
@@ -112,8 +112,8 @@ function alapjarat_theme_2019_image_default_styles() {
       5 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 145,
-          'height' => 85,
+          'width' => 146,
+          'height' => 83,
         ),
         'weight' => 1,
       ),

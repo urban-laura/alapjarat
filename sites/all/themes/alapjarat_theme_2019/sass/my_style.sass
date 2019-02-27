@@ -133,10 +133,11 @@ table
 	margin: 0px !important
 
 a
-	color: #C72026 !important
+	color: #333332 !important
 
 a:hover
 	text-decoration: none
+	color: #C72026 !important
 
 #time
 	padding-top: 8px
@@ -322,13 +323,14 @@ a:hover
 		max-width: 1115px
 		margin: auto
 	.main-content
-		width: 67%
-		background-color: #F8F8F8
+		width: 65.5%
 	.right-bar
-		width: 33%
+		width: 34.5%
 		padding-left: 30px
-		a
-			color: #333332 !important
+		padding-top: 42px
+		.banner
+			width: 300px
+			height: 250px
 		.pane-title
 			font-size: 14px
 			text-transform: uppercase
@@ -337,17 +339,27 @@ a:hover
 			border-bottom: solid 2px #333332
 			display: block
 			margin-bottom: 20px
+		.panel-pane
+			margin-bottom: 40px
 		#archive
 			li
 				list-style: none
 				font-size: 14px
-				padding-bottom: 10px
+				padding-bottom: 15px
 		#event
 			.views-row
-				padding-bottom: 20px
+				padding: 10px 0px
+				background-color: #ffffff
+				margin: 0px
+				border-bottom: dashed 2px #e6e6e6
+			.views-row:last-child
+				border-bottom: 0px
+				padding-bottom: 0px
+			.views-row:first-child
+				padding-top: 0px
 			ul
 				list-style-type: none
-				padding: 2px 0px
+				padding-top: 4px
 				padding-left: 10px
 			.No
 				border-left: solid 5px #333332
@@ -369,7 +381,9 @@ a:hover
 .front-page, .right-bar
 	padding-top: 20px
 	.views-row
-		padding-bottom: 40px
+		margin-bottom: 20px
+		background-color: #F8F8F8
+		padding-bottom: 10px
 	.views-field-published-at
 		line-height: 18px
 		span
@@ -384,15 +398,18 @@ a:hover
 			margin: 0px
 		h3
 			margin: 0px
+			margin-top: 5px
 			font-size: 18px
 			font-weight: bold
-			line-height: 22px
+			line-height: 20px
 	.views-field-field-subtitled
 		p
 			margin: 0px
 			font-size: 14px
 			line-height: 20px
 	.views-field-field-tags
+		clear: both
+		padding-top: 10px
 		a
 			font-size: 12px
 			padding: 5px 7px
@@ -402,12 +419,10 @@ a:hover
 		ul
 			border-bottom: solid 2px #333332
 			margin-bottom: 30px
-			padding-top: 30px
+			padding-top: 20px
 		li
 			display: inline-block
 			vertical-align: top
-			a
-				color: #333332 !important
 			h3
 				padding: 0
 				margin: 0
@@ -421,36 +436,48 @@ a:hover
 			font-weight: 300
 	.helpful-info
 		.view-header
-			width: 212.7%
+			width: 208.5%
+			clear: both
 	.helpful-info.small
-		padding-top: 88px
+		margin-top: 88px
 	.a-1, .a-2
 		width: 50%
 		float: left
 	.a-1
-		padding-right: 3%
+		padding-right: 15px
 	.a-2
-		padding-left: 3%
+		padding-left: 15px
 	.big
+		.views-row
+			margin-bottom: 30px
 		.views-field-published-at, .views-field-path, .views-field-field-tags, .views-field-field-subtitled
+			margin: 0px 10px
 			margin-top: 10px
+		.views-field-field-tags
+			margin-top: 0px
+		.views-field-path
+			h3
+				line-height: 24px
+	.big.many
+		clear: both
 	.small
+		.views-row
+			padding: 10px
 		.views-field-field-image
 			float: left
 		.views-field-published-at
 			vertical-align: top
-		.views-field-path
-			h3
-				margin: 10px 0px
-		.views-field-published-at, .views-field-path, .views-field-field-tags
+		.views-field-published-at, .views-field-path
 			margin-left: 155px
 	.many
 		.views-row
-			width: 47%
+			width: 48%
 			display: inline-block
 			vertical-align: top
 		.views-row-2, .views-row-4, .views-row-6, .views-row-8
-			margin-left: 5.3%
+			margin-left: 11.5px
+		.views-row-1, .views-row-3, .views-row-5, .views-row-7
+			margin-right: 11.5px
 //
 
 //.panels-flexible-region-first.first
@@ -511,47 +538,6 @@ a:hover
 			p
 				margin: 0
 
-
-//.right
-	width: 33%
-	padding: 15px !important
-	.banner .views-field-field-title, .pane-title, .view-header h3
-		font-size: 21px
-		color: #444 !important
-		font-family: montserrat,sans-serif
-		font-weight: 500
-		text-transform: uppercase
-		margin-bottom: 10px
-	.pane-title, .view-header h3
-		border-bottom: 3px solid #161616
-		padding-bottom: 5px
-	.banner
-		clear: both
-		.views-row
-			margin-bottom: 40px
-		iframe
-			width: 100%
-	#banner5
-		padding-top: 30px
-	#event
-		.views-row
-			margin-bottom: 15px
-		.views-field-title
-			font-size: 16px
-			font-weight: bold
-			p
-				margin: 0px !important
-			.Yes
-				color: #d82222 !important
-		.views-field-field-event-date
-			font-size: 16px
-		.views-label-field-facebook-event
-			font-size: 16px
-			color: #d82222
-		.views-field-field-facebook-event
-			.field-content
-				a
-					font-size: 16px
 
 
 .panels-flexible-region-1-footer_text_
@@ -749,8 +735,6 @@ a:hover
 			font-weight: 600
 			font-size: 14px
 			text-transform: uppercase
-		a
-			color: #333332 !important
 	//x
 	.pane-node-published
 		font-size: 12px

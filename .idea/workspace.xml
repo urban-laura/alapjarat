@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b839818-190a-4bc6-9d79-e7dbaaaf1166" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.features.field_instance.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.features.field_instance.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.info" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.pages_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.pages_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.views_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_features/alapjarat_features.views_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_theme_2019/alapjarat_theme_2019.features.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_theme_2019/alapjarat_theme_2019.features.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_theme_2019/alapjarat_theme_2019.pages_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_theme_2019/alapjarat_theme_2019.pages_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/modules/alapjarat_theme_2019/alapjarat_theme_2019.views_default.inc" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/modules/alapjarat_theme_2019/alapjarat_theme_2019.views_default.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/sass/my_style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/sass/my_style.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/stylesheets/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/stylesheets/my_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/stylesheets/style.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="my_style.sass" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/sass/my_style.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="381" column="18" selection-start-line="381" selection-start-column="18" selection-end-line="381" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_style.sass" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="894" column="30" selection-start-line="894" selection-start-column="30" selection-end-line="894" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>edit-field-title2</find>
+      <find>.description</find>
+      <find>$old_creation_date</find>
+      <find>views-field-created</find>
+      <find>&lt;div id=&quot;content-header&quot;&gt;</find>
+      <find>a</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>views-field-published-at</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/modules/filter/filter.css" />
+        <option value="$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.cron.inc" />
+        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass" />
+        <option value="$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.module" />
+        <option value="$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/sass/my_style.sass" />
+        <option value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme/grunt/package.json" />
+      <path value="$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/grunt/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="50" />
+    <option name="y" value="23" />
+    <option name="width" value="1086" />
+    <option name="height" value="820" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="alapjarat_common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="ecdh_company_search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="publication_date" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alapjarat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="alapjarat" type="462c0819:PsiDirectoryNode" />
+              <item name="sites" type="462c0819:PsiDirectoryNode" />
+              <item name="all" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="scheduler" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b839818-190a-4bc6-9d79-e7dbaaaf1166" name="Default" comment="" />
+      <created>1545072812017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545072812017</updated>
+      <workItem from="1545072818062" duration="320000" />
+      <workItem from="1547456712012" duration="5223000" />
+      <workItem from="1548073781362" duration="284000" />
+      <workItem from="1548076699900" duration="1493000" />
+      <workItem from="1548685121029" duration="82000" />
+      <workItem from="1549445550385" duration="509000" />
+      <workItem from="1549446636458" duration="194000" />
+      <workItem from="1549628379050" duration="1167000" />
+      <workItem from="1549957934623" duration="605000" />
+      <workItem from="1550044129886" duration="2086000" />
+      <workItem from="1550149696423" duration="544000" />
+      <workItem from="1550487068969" duration="349000" />
+      <workItem from="1550487423456" duration="431000" />
+      <workItem from="1550502194058" duration="24123000" />
+      <workItem from="1550681655127" duration="16751000" />
+      <workItem from="1550822250167" duration="117000" />
+      <workItem from="1550822370334" duration="9000" />
+      <workItem from="1550822444981" duration="9088000" />
+      <workItem from="1551090120341" duration="10915000" />
+      <workItem from="1551184230384" duration="72000" />
+      <workItem from="1551184305524" duration="171000" />
+      <workItem from="1551184576089" duration="71000" />
+      <workItem from="1551184732962" duration="156000" />
+      <workItem from="1551185435423" duration="109000" />
+      <workItem from="1551185556684" duration="13000" />
+      <workItem from="1551185960990" duration="18000" />
+      <workItem from="1551188303409" duration="7040000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="81940000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="50" y="23" width="1086" height="820" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20073664" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22590">
+          <caret line="1506" selection-start-line="1506" selection-end-line="1506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="38" selection-start-line="32" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3180">
+          <caret line="212" column="37" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14265">
+          <caret line="951" column="21" selection-start-line="951" selection-start-column="21" selection-end-line="951" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22590">
+          <caret line="1506" selection-start-line="1506" selection-end-line="1506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="38" selection-start-line="32" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3165">
+          <caret line="211" column="8" selection-start-line="211" selection-start-column="8" selection-end-line="211" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14265">
+          <caret line="951" column="21" selection-start-line="951" selection-start-column="21" selection-end-line="951" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22590">
+          <caret line="1506" selection-start-line="1506" selection-end-line="1506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3120">
+          <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14265">
+          <caret line="951" column="21" lean-forward="true" selection-start-line="951" selection-start-column="21" selection-end-line="951" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22590">
+          <caret line="1506" selection-start-line="1506" selection-end-line="1506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3120">
+          <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="224" column="22" selection-start-line="223" selection-start-column="33" selection-end-line="224" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3255">
+          <caret line="217" column="5" selection-start-line="217" selection-start-column="5" selection-end-line="217" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3255">
+          <caret line="217" column="5" selection-start-line="217" selection-start-column="5" selection-end-line="217" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/filter/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.edit.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.install">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="32" column="38" selection-start-line="32" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/default/files/css/css_sBf1kvcmrGxkYaFzCDL-_m8Fa_MVX6-uUhKiCz_EdwM.css" />
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/stylesheets/my_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="1506" selection-start-line="1506" selection-end-line="1506" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.cron.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.admin.inc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="462" column="26" selection-start-line="462" selection-start-column="26" selection-end-line="462" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.views.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/scheduler/scheduler.module">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style_mobil.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4785">
+          <caret line="319" column="88" selection-start-line="319" selection-start-column="88" selection-end-line="319" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.views.inc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/ecdh_company_search/ecdh_company_search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/modules/alapjarat_common/alapjarat_common.module">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="129" column="87" selection-start-line="129" selection-start-column="78" selection-end-line="129" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme_2019/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="381" column="18" selection-start-line="381" selection-start-column="18" selection-end-line="381" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/alapjarat_theme/sass/my_style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="894" column="30" selection-start-line="894" selection-start-column="30" selection-end-line="894" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

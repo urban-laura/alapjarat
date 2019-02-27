@@ -1393,31 +1393,35 @@ a:hover {
   margin-bottom: 10px !important;
 }
 /* line 894, ../sass/my_style.sass */
+#impress_yes a {
+  color: #333 !important;
+}
+/* line 896, ../sass/my_style.sass */
 #impress_yes .views-field-title {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 10px;
 }
-/* line 898, ../sass/my_style.sass */
+/* line 900, ../sass/my_style.sass */
 #impress_yes .views-field-title .field-content {
   margin-left: 15px;
   display: list-item;
 }
 
-/* line 902, ../sass/my_style.sass */
+/* line 904, ../sass/my_style.sass */
 div.pages {
   padding: 0px 15px !important;
   margin-bottom: 30px;
 }
-/* line 905, ../sass/my_style.sass */
+/* line 907, ../sass/my_style.sass */
 div.pages ul, div.pages ol {
   margin-left: 45px;
 }
-/* line 907, ../sass/my_style.sass */
+/* line 909, ../sass/my_style.sass */
 div.pages .tabs.primary.clearfix {
   margin-left: 0;
 }
-/* line 909, ../sass/my_style.sass */
+/* line 911, ../sass/my_style.sass */
 div.pages .pane-node-title {
   font-weight: 500;
   line-height: 1.1;
@@ -1427,81 +1431,81 @@ div.pages .pane-node-title {
   margin-bottom: 35px !important;
 }
 
-/* line 917, ../sass/my_style.sass */
+/* line 919, ../sass/my_style.sass */
 .partner {
   padding: 0px 15px !important;
 }
-/* line 919, ../sass/my_style.sass */
+/* line 921, ../sass/my_style.sass */
 .partner h3 {
   margin-top: 40px;
 }
-/* line 921, ../sass/my_style.sass */
+/* line 923, ../sass/my_style.sass */
 .partner table {
   border-collapse: unset;
 }
-/* line 924, ../sass/my_style.sass */
+/* line 926, ../sass/my_style.sass */
 .partner #premium img {
   max-width: 158px;
 }
-/* line 927, ../sass/my_style.sass */
+/* line 929, ../sass/my_style.sass */
 .partner #recreation img {
   max-width: 104px;
 }
-/* line 929, ../sass/my_style.sass */
+/* line 931, ../sass/my_style.sass */
 .partner .views-field-field-picturep, .partner .views-field-field-descriptionp {
   padding: 10px;
 }
-/* line 931, ../sass/my_style.sass */
+/* line 933, ../sass/my_style.sass */
 .partner .views-field-field-picturep p, .partner .views-field-field-descriptionp p {
   margin: 0 !important;
 }
-/* line 933, ../sass/my_style.sass */
+/* line 935, ../sass/my_style.sass */
 .partner .even, .partner .odd {
   background-color: white;
   border: 0;
   padding: 0;
 }
 
-/* line 938, ../sass/my_style.sass */
+/* line 940, ../sass/my_style.sass */
 .my_footer {
   margin-top: 10px !important;
   padding: 0px 10px !important;
 }
-/* line 941, ../sass/my_style.sass */
+/* line 943, ../sass/my_style.sass */
 .my_footer a {
   padding-right: 7px;
   border-right: solid 1px black;
   padding-left: 2.7px;
 }
-/* line 945, ../sass/my_style.sass */
+/* line 947, ../sass/my_style.sass */
 .my_footer .second_menu_footer {
   width: fit-content;
   width: -moz-fit-content;
   margin: auto;
   float: none;
 }
-/* line 950, ../sass/my_style.sass */
+/* line 952, ../sass/my_style.sass */
 .my_footer .second_menu_footer li {
   display: inline;
   padding: 0;
   margin: 0;
 }
-/* line 954, ../sass/my_style.sass */
+/* line 956, ../sass/my_style.sass */
 .my_footer .second_menu_footer li:last-child a {
   border-right: 0px;
 }
-/* line 956, ../sass/my_style.sass */
+/* line 958, ../sass/my_style.sass */
 .my_footer .panels-flexible-region-last {
   width: fit-content;
   width: -moz-fit-content;
   margin: auto;
   float: none;
 }
-/* line 961, ../sass/my_style.sass */
+/* line 963, ../sass/my_style.sass */
 .my_footer .footer_text {
   margin-top: 5px;
 }
-/* line 963, ../sass/my_style.sass */
+/* line 965, ../sass/my_style.sass */
 .my_footer .footer_text a {
   margin-right: 7px;
 }

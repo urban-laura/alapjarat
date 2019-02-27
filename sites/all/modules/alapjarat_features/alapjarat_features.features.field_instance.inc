@@ -3520,117 +3520,6 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-partners-field_picture'.
-  $field_instances['node-partners-field_picture'] = array(
-    'bundle' => 'partners',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_picture',
-    'label' => 'Picture footer',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 1,
-      'default_image' => 0,
-      'entity_translation_sync' => FALSE,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(
-            'attach' => 0,
-            'clipboard' => 0,
-            'plupload' => 0,
-            'reference' => 0,
-            'remote' => 0,
-            'upload' => 'upload',
-          ),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-            'search_all_fields' => 0,
-          ),
-        ),
-        'insert' => 0,
-        'insert_absolute' => 0,
-        'insert_class' => '',
-        'insert_default' => 'auto',
-        'insert_styles' => array(
-          'auto' => 'auto',
-          'icon_link' => 0,
-          'image' => 0,
-          'image_1_big' => 0,
-          'image_4_small' => 0,
-          'image_alapjarat' => 0,
-          'image_amp_metadata_content_image_min_696px_wide' => 0,
-          'image_amp_metadata_logo_600x60' => 0,
-          'image_article3' => 0,
-          'image_article4' => 0,
-          'image_author_picture' => 0,
-          'image_big' => 0,
-          'image_big_2019' => 0,
-          'image_category' => 0,
-          'image_first_5_article' => 0,
-          'image_helpful_small' => 0,
-          'image_impresszum' => 0,
-          'image_juicebox_large' => 0,
-          'image_juicebox_medium' => 0,
-          'image_juicebox_small' => 0,
-          'image_juicebox_square_thumbnail' => 0,
-          'image_large' => 0,
-          'image_media_thumbnail' => 0,
-          'image_medium' => 0,
-          'image_premium_partner' => 0,
-          'image_recreation_partners' => 0,
-          'image_right' => 0,
-          'image_small_2019' => 0,
-          'image_thumbnail' => 0,
-          'image_world_small' => 0,
-          'link' => 0,
-        ),
-        'insert_width' => '',
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-partners-field_picturep'.
   $field_instances['node-partners-field_picturep'] = array(
     'bundle' => 'partners',
@@ -3984,7 +3873,6 @@ Pl. https://www.facebook.com/viktoria.koltay.1');
   t('Meta description (300 - 320)');
   t('Name Link');
   t('Picture');
-  t('Picture footer');
   t('Premium car partner?');
   t('Primary Heading 	');
   t('Published');
