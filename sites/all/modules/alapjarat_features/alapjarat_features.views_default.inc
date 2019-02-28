@@ -2392,6 +2392,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
   $handler->display->display_options['fields']['published_at']['label'] = 'Közzétéve';
+  $handler->display->display_options['fields']['published_at']['empty'] = '[created]';
   $handler->display->display_options['fields']['published_at']['date_format'] = 'my';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Field: Tartalom: Main image */
@@ -2482,9 +2483,9 @@ function alapjarat_features_views_default_views() {
     t('Publikálta'),
     t('Kategória'),
     t('Közzétéve'),
+    t('[created]'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('Nézettáblák'),
   );
   $export['archive_1'] = $view;
@@ -3808,6 +3809,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
   $handler->display->display_options['fields']['published_at']['label'] = 'Közzétéve';
+  $handler->display->display_options['fields']['published_at']['empty'] = '[created]';
   $handler->display->display_options['fields']['published_at']['date_format'] = 'my';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Field: Tartalom: Main image */
@@ -3894,6 +3896,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
   $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
   $handler->display->display_options['fields']['published_at']['label'] = 'Közzétéve';
+  $handler->display->display_options['fields']['published_at']['empty'] = '[created]';
   $handler->display->display_options['fields']['published_at']['date_format'] = 'my';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   /* Field: Tartalom: Main image */
@@ -3973,12 +3976,12 @@ function alapjarat_features_views_default_views() {
     t('Közzétéve'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Nézettáblák'),
     t('published pane'),
     t('Publikálta'),
     t('tags pane'),
+    t('[created]'),
     t('Menu pane'),
   );
   $export['category_page'] = $view;
