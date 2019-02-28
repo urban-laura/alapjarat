@@ -4772,6 +4772,61 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h3><a href="/aktualis">Aktuális</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'fullhtml';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Tartalom: Main image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'big',
+    'image_link' => 'content',
+  );
+  /* Field: Tartalom: Article Title (H1) */
+  $handler->display->display_options['fields']['field_title2']['id'] = 'field_title2';
+  $handler->display->display_options['fields']['field_title2']['table'] = 'field_data_field_title2';
+  $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
+  $handler->display->display_options['fields']['field_title2']['label'] = '';
+  $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_title2']['alter']['path'] = '[path]';
+  $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['path']['alter']['text'] = '<a href="[path]">[field_title2]</a>';
+  $handler->display->display_options['fields']['path']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Tartalom: Category */
+  $handler->display->display_options['fields']['field_tags']['id'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['fields']['field_tags']['field'] = 'field_tags';
+  $handler->display->display_options['fields']['field_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_tags']['separator'] = ' ';
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'M d, Y';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Node: Published at */
+  $handler->display->display_options['fields']['published_at']['id'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['table'] = 'publication_date';
+  $handler->display->display_options['fields']['published_at']['field'] = 'published_at';
+  $handler->display->display_options['fields']['published_at']['label'] = '';
+  $handler->display->display_options['fields']['published_at']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['published_at']['date_format'] = 'front_page';
+  $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
