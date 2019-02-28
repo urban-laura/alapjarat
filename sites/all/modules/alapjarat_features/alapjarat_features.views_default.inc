@@ -906,6 +906,14 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['fields']['published_at']['date_format'] = 'custom';
   $handler->display->display_options['fields']['published_at']['custom_date_format'] = 'Y-m-d H:i';
   $handler->display->display_options['fields']['published_at']['second_date_format'] = 'long';
+  /* Field: Scheduler: Publish on */
+  $handler->display->display_options['fields']['publish_on']['id'] = 'publish_on';
+  $handler->display->display_options['fields']['publish_on']['table'] = 'scheduler';
+  $handler->display->display_options['fields']['publish_on']['field'] = 'publish_on';
+  $handler->display->display_options['fields']['publish_on']['label'] = 'Időzítve';
+  $handler->display->display_options['fields']['publish_on']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['publish_on']['custom_date_format'] = 'Y-m-d H:i:s';
+  $handler->display->display_options['fields']['publish_on']['second_date_format'] = 'long';
   /* Field: Tartalom: Published */
   $handler->display->display_options['fields']['field_published']['id'] = 'field_published';
   $handler->display->display_options['fields']['field_published']['table'] = 'field_data_field_published';
@@ -2247,10 +2255,9 @@ function alapjarat_features_views_default_views() {
     t('következő ›'),
     t('utolsó »'),
     t('Tartalom'),
-    t('- Choose an operation -'),
+    t('- Művelet kiválasztása -'),
     t('Location (field_location0)'),
     t('Impress (1)'),
-    t('more'),
     t('Név'),
     t('<a href=\'/node/[nid]/edit\'>edit</a>'),
     t('<a href=\'/node/[nid_1]/delete\'>delete</a>'),
@@ -2269,6 +2276,7 @@ function alapjarat_features_views_default_views() {
     t('<a href=\'[path]\'>[field_title2]</a>'),
     t('Létrehozva'),
     t('Közzétéve'),
+    t('Időzítve'),
     t('Szerző'),
     t('Elsődleges Rovat'),
     t('Másodlagos rovat'),
@@ -2284,7 +2292,6 @@ function alapjarat_features_views_default_views() {
     t('Banner4(fix)'),
     t('Banner5(fix)'),
     t('Impress (3)'),
-    t('- Művelet kiválasztása -'),
   );
   $export['admin'] = $view;
 
