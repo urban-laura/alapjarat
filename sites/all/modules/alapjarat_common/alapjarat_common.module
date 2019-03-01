@@ -634,7 +634,7 @@ function alapjarat_common_glossary_parser($text) {
     $term_class = variable_get('glossary_term_class', 'glossary-term');
 
     $linkto = drupal_get_path_alias('taxonomy/term/' . $term->tid);
-    $ins_before = '<a class="glossary-indicator" title="' . $term_title . '" href="' . $linkto . '">';
+    $ins_before = '<a class="glossary-indicator" title="' . $term_title . '" href="/' . $linkto . '">';
     $ins_after = '</a>';
 
     // Replace term with the desired new HTML code.
