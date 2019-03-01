@@ -72,7 +72,7 @@ HTML comment.
 			  '#tag' => 'meta',
 			  '#attributes' => array(
 			    'property' => 'article:publisher',
-			    'content' => 'https://alapjarat.hu',
+			    'content' => 'https://www.facebook.com/alapjarat',
 			  ),
 			);
 			drupal_add_html_head($meta, 'article:publisher');
