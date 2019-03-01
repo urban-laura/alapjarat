@@ -96,6 +96,8 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
           0 => 'center',
         ),
         'parent' => 'main',
+        'class' => '',
+        'hide_empty' => 0,
       ),
       'center' => array(
         'type' => 'region',
@@ -103,7 +105,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'parent' => 'main-row',
-        'class' => 'node_pane',
+        'class' => 'node_pane article',
         'hide_empty' => 0,
       ),
     ),
@@ -139,7 +141,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -169,7 +174,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
@@ -199,7 +207,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
@@ -232,7 +243,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
@@ -262,7 +276,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 4;
   $pane->locks = array();
@@ -287,7 +304,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
@@ -407,7 +427,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'settings' => NULL,
     'style' => 'default',
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
   $pane->extras = array();
   $pane->position = 9;
   $pane->locks = array();
@@ -499,7 +522,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'background-none',
+  );
   $pane->extras = array();
   $pane->position = 12;
   $pane->locks = array();
@@ -550,7 +576,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'background-none',
+  );
   $pane->extras = array();
   $pane->position = 13;
   $pane->locks = array();
@@ -580,7 +609,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'background-none',
+  );
   $pane->extras = array();
   $pane->position = 14;
   $pane->locks = array();
@@ -606,7 +638,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'background-none',
+  );
   $pane->extras = array();
   $pane->position = 15;
   $pane->locks = array();
@@ -627,7 +662,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   );
   $pane->css = array(
     'css_id' => 'article4',
-    'css_class' => '',
+    'css_class' => 'background-none',
   );
   $pane->extras = array();
   $pane->position = 16;
@@ -810,7 +845,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '4',
-        'class' => 'first',
+        'class' => 'first-block',
         'hide_empty' => 0,
       ),
       5 => array(
@@ -1273,16 +1308,6 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array(
     'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 3,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
       1 => array(
         'name' => 'front',
         'settings' => NULL,
@@ -1293,8 +1318,8 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->configuration = array(
     'whatever' => NULL,
     'override_title' => 1,
-    'override_title_text' => 'Több mint 30 000  autós<br>szolgáltató közül választhatsz!',
-    'override_title_heading' => 'span',
+    'override_title_text' => '<span>Több mint 30 000</span> autós szolgáltató közül választhatsz!',
+    'override_title_heading' => 'div',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1352,6 +1377,29 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-5c3bc418-9028-4ab9-a45a-01c532d0b312'] = $pane;
   $display->panels['logo'][1] = 'new-5c3bc418-9028-4ab9-a45a-01c532d0b312';
   $pane = new stdClass();
+  $pane->pid = 'new-7b06fd4c-abe6-429a-9da9-cb639ea1b034';
+  $pane->panel = 'main_content';
+  $pane->type = 'panels_mini';
+  $pane->subtype = 'hamburger_menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7b06fd4c-abe6-429a-9da9-cb639ea1b034';
+  $display->content['new-7b06fd4c-abe6-429a-9da9-cb639ea1b034'] = $pane;
+  $display->panels['main_content'][0] = 'new-7b06fd4c-abe6-429a-9da9-cb639ea1b034';
+  $pane = new stdClass();
   $pane->pid = 'new-3a580b48-2727-47af-856f-23a6f3fc14fa';
   $pane->panel = 'main_content';
   $pane->type = 'custom';
@@ -1375,34 +1423,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => 'banner',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '3a580b48-2727-47af-856f-23a6f3fc14fa';
   $display->content['new-3a580b48-2727-47af-856f-23a6f3fc14fa'] = $pane;
-  $display->panels['main_content'][0] = 'new-3a580b48-2727-47af-856f-23a6f3fc14fa';
-  $pane = new stdClass();
-  $pane->pid = 'new-7b06fd4c-abe6-429a-9da9-cb639ea1b034';
-  $pane->panel = 'main_content';
-  $pane->type = 'panels_mini';
-  $pane->subtype = 'hamburger_menu';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '7b06fd4c-abe6-429a-9da9-cb639ea1b034';
-  $display->content['new-7b06fd4c-abe6-429a-9da9-cb639ea1b034'] = $pane;
-  $display->panels['main_content'][1] = 'new-7b06fd4c-abe6-429a-9da9-cb639ea1b034';
+  $display->panels['main_content'][1] = 'new-3a580b48-2727-47af-856f-23a6f3fc14fa';
   $pane = new stdClass();
   $pane->pid = 'new-2d81fd88-3c14-4888-831f-734edc6a598d';
   $pane->panel = 'main_content';
@@ -1541,6 +1566,36 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-c68ebcae-a594-4de2-9501-80b26f344c08'] = $pane;
   $display->panels['popular_tags'][0] = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
   $pane = new stdClass();
+  $pane->pid = 'new-4179b5a2-7bea-4d1b-b3e0-eedbdc134f30';
+  $pane->panel = 'right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'articles_2019-panel_pane_16';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'right-top-5',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '4179b5a2-7bea-4d1b-b3e0-eedbdc134f30';
+  $display->content['new-4179b5a2-7bea-4d1b-b3e0-eedbdc134f30'] = $pane;
+  $display->panels['right'][0] = 'new-4179b5a2-7bea-4d1b-b3e0-eedbdc134f30';
+  $pane = new stdClass();
   $pane->pid = 'new-2f70b553-9cf1-4809-b32b-1fbd861301b5';
   $pane->panel = 'right';
   $pane->type = 'custom';
@@ -1564,11 +1619,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => 'banner',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '2f70b553-9cf1-4809-b32b-1fbd861301b5';
   $display->content['new-2f70b553-9cf1-4809-b32b-1fbd861301b5'] = $pane;
-  $display->panels['right'][0] = 'new-2f70b553-9cf1-4809-b32b-1fbd861301b5';
+  $display->panels['right'][1] = 'new-2f70b553-9cf1-4809-b32b-1fbd861301b5';
   $pane = new stdClass();
   $pane->pid = 'new-7a819861-78f3-4b68-b1b5-3e7259f5836f';
   $pane->panel = 'right';
@@ -1586,18 +1641,31 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '7a819861-78f3-4b68-b1b5-3e7259f5836f';
   $display->content['new-7a819861-78f3-4b68-b1b5-3e7259f5836f'] = $pane;
-  $display->panels['right'][1] = 'new-7a819861-78f3-4b68-b1b5-3e7259f5836f';
+  $display->panels['right'][2] = 'new-7a819861-78f3-4b68-b1b5-3e7259f5836f';
   $pane = new stdClass();
   $pane->pid = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
   $pane->panel = 'right';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+          ),
+        ),
+        'context' => 'node',
+        'not' => TRUE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'admin_title' => 'Banner2',
     'title' => '',
@@ -1615,11 +1683,53 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => 'banner',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '09519ba1-11ea-4ed4-961a-5b15085aea52';
   $display->content['new-09519ba1-11ea-4ed4-961a-5b15085aea52'] = $pane;
-  $display->panels['right'][2] = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
+  $display->panels['right'][3] = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
+  $pane = new stdClass();
+  $pane->pid = 'new-d0b26a64-5628-4e6c-8297-998ae74afbfa';
+  $pane->panel = 'right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+          ),
+        ),
+        'context' => 'node',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'admin_title' => 'Banner2 in article',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '300x600',
+    'format' => 'plain_text',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'banner2-in-article',
+    'css_class' => 'banner',
+  );
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $pane->uuid = 'd0b26a64-5628-4e6c-8297-998ae74afbfa';
+  $display->content['new-d0b26a64-5628-4e6c-8297-998ae74afbfa'] = $pane;
+  $display->panels['right'][4] = 'new-d0b26a64-5628-4e6c-8297-998ae74afbfa';
   $pane = new stdClass();
   $pane->pid = 'new-58926611-b751-4330-8a43-23315fdc9b81';
   $pane->panel = 'right';
@@ -1637,11 +1747,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => 'small',
   );
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 5;
   $pane->locks = array();
   $pane->uuid = '58926611-b751-4330-8a43-23315fdc9b81';
   $display->content['new-58926611-b751-4330-8a43-23315fdc9b81'] = $pane;
-  $display->panels['right'][3] = 'new-58926611-b751-4330-8a43-23315fdc9b81';
+  $display->panels['right'][5] = 'new-58926611-b751-4330-8a43-23315fdc9b81';
   $pane = new stdClass();
   $pane->pid = 'new-e54b872d-fcb8-44d9-a169-223c46ac0130';
   $pane->panel = 'right';
@@ -1666,11 +1776,90 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => 'banner',
   );
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 6;
   $pane->locks = array();
   $pane->uuid = 'e54b872d-fcb8-44d9-a169-223c46ac0130';
   $display->content['new-e54b872d-fcb8-44d9-a169-223c46ac0130'] = $pane;
-  $display->panels['right'][4] = 'new-e54b872d-fcb8-44d9-a169-223c46ac0130';
+  $display->panels['right'][6] = 'new-e54b872d-fcb8-44d9-a169-223c46ac0130';
+  $pane = new stdClass();
+  $pane->pid = 'new-d4a11f2e-976c-404d-b37b-6f9c7b47e19a';
+  $pane->panel = 'right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Mailchimp',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="https://ecdh.us15.list-manage.com/subscribe/post?u=ba2de3b04f01f0c0af7a1d614&amp;id=d48ce2c620" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+
+
+
+
+
+<!--CSAK EHHEZ NYÚLJATOK-->
+<p><span>Iratkozz fel hírlevelünkre!</span> Minden 500. feliratkozó után 5db Alapjáratos pólót sorsolunk ki.</p>
+<div class="mc-field-group">
+	<input type="text" value="" placeholder="Név:" name="MMERGE2" class="required" id="mce-MMERGE2">
+</div>
+<div class="mc-field-group">
+<input type="email" value="" placeholder="E-mail cím:"  name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group input-group">
+<input type="radio" class="required" value="Elfogadom az adatkezelési szabályzatot."  name="MMERGE1" id="mce-MMERGE1-0"><label>Elfogadom az &nbsp;<a href="/adatkezelesi-szabalyzat" target="_blank"> Adatkezelési szabályzatot.</a></label>
+</div>
+<div class="mc-field-group input-group consent">
+<input type="radio" class="required" value="Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE3" id="mce-MMERGE3-0"><label for="mce-MMERGE3-0">Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra.</label>
+</div>
+
+
+
+
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ba2de3b04f01f0c0af7a1d614_d48ce2c620" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Feliratkozás" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[2]=\'MMERGE2\';ftypes[2]=\'text\';fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'MMERGE1\';ftypes[1]=\'radio\';fnames[3]=\'MMERGE3\';ftypes[3]=\'radio\'; /*
+ * Translated default messages for the $ validation plugin.
+ * Locale: HU
+ */
+$.extend($.validator.messages, {
+	required: "Kötelező megadni.",
+	email: "Érvényes e-mail címnek kell lennie.",
+});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 7;
+  $pane->locks = array();
+  $pane->uuid = 'd4a11f2e-976c-404d-b37b-6f9c7b47e19a';
+  $display->content['new-d4a11f2e-976c-404d-b37b-6f9c7b47e19a'] = $pane;
+  $display->panels['right'][7] = 'new-d4a11f2e-976c-404d-b37b-6f9c7b47e19a';
   $pane = new stdClass();
   $pane->pid = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane->panel = 'right';
@@ -1693,11 +1882,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 5;
+  $pane->position = 8;
   $pane->locks = array();
   $pane->uuid = '76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $display->content['new-76900dcc-6cdf-4260-a00a-3ca5a66737ff'] = $pane;
-  $display->panels['right'][5] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
+  $display->panels['right'][8] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane = new stdClass();
   $pane->pid = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
   $pane->panel = 'search';

@@ -76,13 +76,13 @@ function alapjarat_theme_2019_image_default_styles() {
 
   // Exported image style: first_5_article.
   $styles['first_5_article'] = array(
-    'label' => 'First 5 article',
+    'label' => 'Right First 5 article',
     'effects' => array(
       3 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 310,
-          'height' => 160,
+          'height' => 162,
         ),
         'weight' => 1,
       ),

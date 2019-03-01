@@ -48,43 +48,67 @@ table
 		background: #C72026
 
 #mc_embed_signup form
-	padding: 0 !important
-	margin: 25px 0px 20px 0px
+	background-color: #333332
+	padding: 20px !important
+	margin: 0px
+	border-radius: 5px
 	p
-		font-size: 16px
-		font-weight: bold
-		margin: 0 0 10px
-	.consent
-		min-height: auto
-		margin-bottom: 10px
-	a, .consent label
-		font-size: 16px
-		font-weight: bold
-		line-height: 22px
+		font-size: 19px
+		font-family: magistral, sans-serif
 		color: #C72026
-	#mce-EMAIL, #mce-MMERGE2
-		width: 100%
-		max-width: 480px
-		padding: 8px 16px
-		text-indent: 0
-		font-size: 16px
-	#mce-MMERGE1-0, #mce-MMERGE3-0
-		margin-right: 8px
-		height: 16px
-	#mc-embedded-subscribe
-		background-color: #d9534f !important
-		border: solid 1px #b52b27
-		border-radius: 0
-		padding: 12px 17px
-		height: auto
-		line-height: normal
+		margin: 0px
+		padding-bottom: 25px
+	span
+		font-size: 24px
+		font-weight: 500
 		color: white
-	#mc-embedded-subscribe:hover
-		background-color: #A83935 !important
+		display: block
+		padding-top: 10px
+		padding-bottom: 20px
+	#mce-EMAIL, #mce-MMERGE2
+		padding-left: 20px
+		text-indent: 0
+		font-size: 18px
+		color: #4D4D4B
+		font-style: italic
+		background-color: #2B2B2A
+		height: 61px
+		border-radius: 3px
+		border: 0px
+		margin-bottom: 20px
 	.mc-field-group
 		width: 100%
 		padding-bottom: 0
 		min-height: auto
+	label
+		color: white
+		font-size: 12px
+		display: flex !important
+		margin-bottom: 15px !important
+		line-height: 14px
+	a
+		color: #C72026 !important
+		text-decoration: underline
+	#mce-MMERGE3-0, #mce-MMERGE1-0
+		float: left
+	input[type="radio"]
+		margin-right: 10px !important
+	#mc-embedded-subscribe
+		width: 100%
+		height: 61px
+		background-color: #C72026
+		padding: 0px
+		margin: 0px
+		font-size: 20px
+		font-weight: 600
+		margin-top: 15px
+	input.mce_inline_error
+		border: solid 2px #C72026 !important
+		margin-bottom: 10px !important
+	div.mce_inline_error
+		padding: 0px !important
+		background: none !important
+		color: #C72026 !important
 
 .youtube-embed-wrapper
 	padding-top: 0px !important
@@ -132,19 +156,24 @@ table
 .panel-separator
 	margin: 0px !important
 
+body.front
+	.ecdh-api
+		padding: 15px 0px !important
+		margin-top: 20px !important
+		background-color: #C72026
+
+body.not-front
+	.first-block
+		background-color: white
+	.right-bar
+		padding-top: 14px
+
 a
 	color: #333332 !important
 
 a:hover
 	text-decoration: none
 	color: #C72026 !important
-
-#time
-	padding-top: 8px
-	font-size: 13px
-	font-weight: blod
-	padding-left: 43px
-	padding-bottom: 0
 
 .editor-menu
 	background: black
@@ -230,7 +259,7 @@ a:hover
 			#edit-search-api-views-fulltext-wrapper
 				padding: 7px 0px
 //x
-.panels-flexible-region-first.first
+.panels-flexible-region-first.first-block
 	width: 100%
 	.panels-flexible-region-inside-first
 		max-width: 1115px
@@ -327,10 +356,12 @@ a:hover
 	.right-bar
 		width: 34.5%
 		padding-left: 30px
-		padding-top: 42px
+		padding-top: 47px
 		.banner
 			width: 300px
 			height: 250px
+		#banner2-in-article
+			height: 600px
 		.pane-title
 			font-size: 14px
 			text-transform: uppercase
@@ -341,6 +372,28 @@ a:hover
 			margin-bottom: 20px
 		.panel-pane
 			margin-bottom: 40px
+		#right-top-5
+			background-color: #F7F7F7
+			border: dashed 2px #e6e6e6
+			.view-header
+				max-width: 310px
+				margin: auto
+				margin-top: -15px
+				p
+					display: inline-block
+					font-size: 14px
+					color: white
+					font-weight: 600
+					text-transform: uppercase
+					background-color: #333332
+					padding: 5px 10px
+					margin-bottom: 20px
+			.views-row
+				max-width: 310px
+				margin: auto
+				margin-bottom: 20px
+				.views-field-published-at
+					margin-top: 10px
 		#archive
 			li
 				list-style: none
@@ -359,7 +412,7 @@ a:hover
 				padding-top: 0px
 			ul
 				list-style-type: none
-				padding-top: 4px
+				padding: 0px 4px
 				padding-left: 10px
 			.No
 				border-left: solid 5px #333332
@@ -371,8 +424,9 @@ a:hover
 				font-family: magistral, sans-serif
 				font-size: 14px
 			.time::before
-				content: "🕓"
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
 				margin-right: 5px
+				vertical-align: sub
 			a
 				font-size: 16px
 				font-family: magistral, sans-serif
@@ -391,14 +445,15 @@ a:hover
 			font-family: magistral, sans-serif
 			font-weight: 300
 		span::before
-			content: "🕓"
+			content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
 			margin-right: 5px
+			vertical-align: sub
 	.views-field-path
 		p
 			margin: 0px
 		h3
 			margin: 0px
-			margin-top: 5px
+			margin-top: 3px
 			font-size: 18px
 			font-weight: bold
 			line-height: 20px
@@ -414,12 +469,13 @@ a:hover
 			font-size: 12px
 			padding: 5px 7px
 			color: #ffffff !important
+			line-height: 30px
 	.view-header
 		clear: both
 		ul
 			border-bottom: solid 2px #333332
 			margin-bottom: 30px
-			padding-top: 20px
+			padding-top: 25px
 		li
 			display: inline-block
 			vertical-align: top
@@ -448,18 +504,19 @@ a:hover
 	.a-2
 		padding-left: 15px
 	.big
-		.views-row
-			margin-bottom: 30px
 		.views-field-published-at, .views-field-path, .views-field-field-tags, .views-field-field-subtitled
 			margin: 0px 10px
 			margin-top: 10px
 		.views-field-field-tags
 			margin-top: 0px
 		.views-field-path
+			margin-top: 7px
 			h3
 				line-height: 24px
 	.big.many
 		clear: both
+		.views-row
+			margin-bottom: 30px
 	.small
 		.views-row
 			padding: 10px
@@ -641,10 +698,18 @@ a:hover
 
 
 //Edit
+.node_pane.article
+	background-color: #F8F8F8
+	padding-top: 20px
+	.panel-pane
+		padding-left: 20px
+		padding-right: 20px
 .node_pane
-	padding: 0px 15px !important
-	padding-bottom: 15px !important
-	width: -moz-available
+	.background-none
+		background-color: white
+	.background-none.panel-pane
+		padding-left: 0px
+		padding-right: 0px
 	//x
 	ul, ol
 		margin-left: 30px
@@ -738,7 +803,7 @@ a:hover
 	//x
 	.pane-node-published
 		font-size: 12px
-		padding-bottom: 45px
+		padding-bottom: 40px
 		.pane-content
 			display: inline-block
 	.field-label
@@ -773,6 +838,7 @@ a:hover
 			font-family: Montserrat !important
 		a
 			text-decoration: underline
+			color: #C72026 !important
 		//x
 		h3
 			margin: 0
@@ -805,6 +871,7 @@ a:hover
 			margin-bottom: 5px
 	//x
 	.pane-node-field-source
+		padding-top: 15px
 		.pane-title
 			font-size: 18px
 			font-family: magistral, sans-serif
@@ -815,19 +882,21 @@ a:hover
 			font-size: 16px !important
 			margin: 0
 			margin-left: 45px
-			margin-bottom: 10px
+			padding-bottom: 10px
 			font-family: magistral, sans-serif
 		a
 			margin-left: 10px
+			color: #C72026 !important
 	//x
 	#article4
 		h4
 			font-size: 14px
 			text-transform: uppercase
 			border-bottom: solid 2px #333332
+			margin: 0px
 			padding-bottom: 10px
 			margin-bottom: 30px
-			margin-top: 45px
+			padding-top: 45px
 		p
 			margin: 0
 		.views-row
@@ -846,8 +915,9 @@ a:hover
 				font-family: magistral, sans-serif
 				font-weight: 300
 			span::before
-				content: "🕓"
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
 				margin-right: 5px
+				vertical-align: sub
 		.views-field-path
 			a
 				font-weight: bold
@@ -869,6 +939,7 @@ a:hover
 			a
 				float: left
 				padding-left: 10px
+				color: #C72026 !important
 			a::before
 				content: "#"
 				font-style: italic

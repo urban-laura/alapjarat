@@ -58,7 +58,7 @@ function ecdh_company_search_form($form, &$form_state) {
     //'#default_value' => NULL,
   );
 
-  $form['radius'] = array(
+  /*$form['radius'] = array(
     '#type' => 'numberfield',
     //'#title' => t('Radius'),
     '#size' => 30,
@@ -68,7 +68,7 @@ function ecdh_company_search_form($form, &$form_state) {
       'class' => array('ecdh-company-search-form-element'),
       'placeholder' => t('Radius'),
     ),
-  );
+  );*/
 
   $form['submit'] = array(
     '#type' => 'submit',
