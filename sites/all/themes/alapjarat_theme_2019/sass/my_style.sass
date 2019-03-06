@@ -161,12 +161,18 @@ body.front
 		padding: 15px 0px !important
 		margin-top: 20px !important
 		background-color: #C72026
+	.main-center
+		background-color: white
 
 body.not-front
 	.first-block
 		background-color: white
 	.right-bar
 		padding-top: 14px
+
+body.node-type-a-article
+	.main-center
+		background-color: white
 
 a
 	color: #333332 !important
@@ -353,7 +359,6 @@ a:hover
 //x
 .main-center
 	width: 100%
-	background-color: #ffffff
 	.panels-flexible-row-inside
 		max-width: 1115px
 		margin: auto
@@ -713,6 +718,19 @@ a:hover
 .node_pane
 	.background-none
 		background-color: white
+	.view-header
+		.pane-node-title
+			border-bottom: #C72026 solid 2px
+			.pane-content
+				color: white
+				font-size: 14px
+				background-color: #C72026
+				display: inline-block
+				padding: 6px 11px
+		.pane-title-2
+			font-size: 40px
+			font-family: magistral, sans-serif
+			font-weight: bold
 	.background-none.panel-pane, #fb-like-share.panel-pane
 		padding-left: 0px
 		padding-right: 0px
@@ -958,78 +976,34 @@ a:hover
 		max-width: 640px
 		height: 360px
 		margin-bottom: 40px
+.node_pane.impress
+	.views-row
+		position: relative
+	.views-field-title
+		font-family: magistral, sans-serif
+		font-size: 30px
+		font-weight: bold
+		top: 0
+	.views-field-field-status
+		font-family: magistral, sans-serif
+		color: #C72026 !important
+		top: 35px
+	.views-field-field-description
+		//top: 75px
+	.views-field-title, .views-field-field-status, //.views-field-field-description
+		position: absolute
+		left: 285px
+	.views-field-field-e-mail
+		background-color: white
+		width: 255px
+		text-align: center
+		padding: 15px 0px
+		margin-top: 20px
+		.button
+			color: #C72026 !important
+			font-weight: 600
 //
 
-
-#impress
-	padding: 0px 15px !important
-	.view-header
-		p
-			margin: 0 !important
-			font-size: 30px
-			font-family: montserrat,sans-serif
-	h1
-		margin-top: 20px 
-		margin-bottom: 35px 
-		padding: 0
-	h2
-		margin-bottom: 0
-	.views-field-field-e-mail
-		float: left
-	.views-row
-		clear: both
-		padding-top: 25px
-	.views-field-title
-		color: #d82222
-		float: left
-		margin-left: 6px
-		margin-right: 9px
-	.views-field-field-status
-		margin-bottom: 10px
-	.views-field-title, .views-field-field-status
-		font-family: montserrat,sans-serif
-		font-size: 24px
-		line-height: 30px
-	.views-field-field-picture
-		float: left
-		padding-top: 10px
-		margin-right: 1.5em
-		margin-left: 25px
-	.views-field-field-description
-		padding: 10px 20px
-		font-size: 16px
-		border-left: 5px solid #eee
-
-#impress_yes
-	padding: 0px 15px !important
-	margin-bottom: 30px
-	.view-content
-		margin-left: 20px
-	h2
-		margin-top: 25px !important
-		margin-bottom: 10px !important
-	.views-field-title
-		font-size: 16px
-		line-height: 16px
-		margin-bottom: 10px
-		.field-content
-			margin-left: 15px
-			display: list-item
-
-div.pages
-	padding: 0px 15px !important
-	margin-bottom: 30px
-	ul, ol
-		margin-left: 45px
-	.tabs.primary.clearfix
-		margin-left: 0
-	.pane-node-title
-		font-weight: 500
-		line-height: 1.1
-		font-size: 36px
-		font-family: montserrat,sans-serif
-		margin-top: 20px !important
-		margin-bottom: 35px !important
 //x
 .menu-footer
 	background-color: #C72026

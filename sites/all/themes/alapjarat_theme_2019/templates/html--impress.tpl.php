@@ -12,7 +12,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta property="og:image" content="https://alapjarat.hu/sites/all/themes/alapjarat_theme/images/impress.jpg">
+  <meta property="og:image" content="https://alapjarat.hu/sites/all/themes/alapjarat_theme_2019/images/impress.jpg">
   <meta property="og:description" content="Az Alapjárat szerkesztősége">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
