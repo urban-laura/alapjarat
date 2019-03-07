@@ -89,6 +89,21 @@ function alapjarat_theme_2019_image_default_styles() {
     ),
   );
 
+  // Exported image style: impress_2019.
+  $styles['impress_2019'] = array(
+    'label' => 'impress 2019',
+    'effects' => array(
+      9 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 255,
+          'height' => 255,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: partners_in_footer.
   $styles['partners_in_footer'] = array(
     'label' => 'partners in footer',

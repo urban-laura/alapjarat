@@ -1,11 +1,11 @@
 @import url('https://use.typekit.net/qas2soj.css')
-//x
+
 html
 	background-color: #f8f8f8
-//x
+
+//Body
 body::before
 	background-image: none
-//x
 body
 	font-size: 18px
 	font-family: Montserrat
@@ -15,7 +15,32 @@ body
 	margin-left: auto
 	margin-right: auto
 	line-height: 1.42857143
+body.front
+	.ecdh-api
+		padding: 15px 0px !important
+		margin-top: 20px !important
+		background-color: #C72026
+	.main-center
+		background-color: white
+body.not-front
+	.first-block
+		background-color: white
+	.right-bar
+		padding-top: 14px
+body.node-type-a-article
+	.main-center
+		background-color: white
+body.page-impress, body.node-type-pages
+	.right-bar
+		padding-top: 54px
+		.views-row
+			background-color: white
+		#event .views-row
+			background: none
+		#right-top-5
+			background-color: white
 
+//Everywhere
 h1, h2, h3, h4, h5, h6
 	margin-top: 20px
 	margin-bottom: 10px
@@ -30,23 +55,37 @@ h3
 h4
 	margin-top: 10px
 	font-size: 18px
-
-table
-	margin: auto
-
+a
+	color: #333332 !important
+a:hover
+	text-decoration: none
+	color: #C72026 !important
 .ckeditor_links a
 	color: white
-
-//x
-.banner
-	margin: auto
-	background-color: #dbe0e4
-//x
-.views-field-field-tags
+#admin-menu
+	a
+		color: white !important
+.views-label-field-tags, .views-field-field-tags, .pane-node-field-tags
 	a
 		color: white !important
 		background: #C72026
+		text-decoration: none
+	a:hover
+		color: white !important
+.youtube-embed-wrapper
+	padding-top: 0px !important
+	margin-bottom: 15px
+.panels-flexible-region
+	width: auto
+.inside.panels-flexible-region-inside, .panels-flexible-row
+	padding: 0px !important
+.panel-separator
+	margin: 0px !important
+.banner
+	margin: auto
+	background-color: #dbe0e4
 
+//Mailchimp
 #mc_embed_signup form
 	background-color: #333332
 	padding: 20px !important
@@ -69,7 +108,7 @@ table
 		padding-left: 20px
 		text-indent: 0
 		font-size: 18px
-		color: #4D4D4B
+		color: #666666
 		font-style: italic
 		background-color: #2B2B2A
 		height: 61px
@@ -110,105 +149,7 @@ table
 		background: none !important
 		color: #C72026 !important
 
-.youtube-embed-wrapper
-	padding-top: 0px !important
-	margin-bottom: 15px
-
-.pager
-	.first
-		width: auto
-	float: left
-	border: 1px solid #ddd
-	padding-top: 0px !important
-	border-radius: 4px
-	margin-top: 40px !important
-	margin-bottom: 20px !important
-	a
-		padding: 5px 10px
-	li
-		padding: 0px !important
-		display: inline-flex !important
-		border-right: solid 1px #ddd
-	li:hover
-		background: #EBE9E9
-	li.pager-first, li.pager-current.first
-		border-radius: 4px 0 0 4px
-	li.pager-current.last
-		border-radius: 0 4px 4px 0
-	li.pager-last.last
-		border-right: 0px
-	.pager-current
-		background: #d82222
-		padding: 5px 10px !important
-	.pager-ellipsis
-		padding: 5px 10px !important
-
-#admin-menu
-	a
-		color: white !important
-
-.panels-flexible-region
-	width: auto
-
-.inside.panels-flexible-region-inside, .panels-flexible-row
-	padding: 0px !important
-
-.panel-separator
-	margin: 0px !important
-
-body.front
-	.ecdh-api
-		padding: 15px 0px !important
-		margin-top: 20px !important
-		background-color: #C72026
-	.main-center
-		background-color: white
-
-body.not-front
-	.first-block
-		background-color: white
-	.right-bar
-		padding-top: 14px
-
-body.node-type-a-article
-	.main-center
-		background-color: white
-
-a
-	color: #333332 !important
-
-a:hover
-	text-decoration: none
-	color: #C72026 !important
-
-.views-label-field-tags, .views-field-field-tags
-	a:hover
-		color: white !important
-
-.editor-menu
-	background: black
-	width: 86%
-.user_name
-	width: 14%
-	background: black
-#user_name
-	float: right
-#my_admin_menu, #user_name
-	padding: 10px 5px
-	p
-		color: white !important
-		margin: 0
-		background: red
-		border-radius: 10px
-		padding: 0px 5px
-		width: -moz-fit-content
-	ul li.leaf
-		display: inline
-		a
-			color: white !important
-		a:hover
-			color: red !important
-//x
+//Letterhead
 .letterhead
 	background-color: #ffffff
 	.panels-flexible-row-inside
@@ -225,7 +166,8 @@ a:hover
 			font-family: magistral, sans-serif
 			font-weight: 300
 			color: #666666
-//x
+
+//Main menu
 .header
 	background-color: #ffffff
 	border-top: solid 1px #e6e6e6
@@ -248,7 +190,6 @@ a:hover
 				font-size: 14px
 				padding: 0px 7px
 				line-height: 52px
-	//x
 	.search
 		float: right
 		width: auto
@@ -268,7 +209,8 @@ a:hover
 				margin: 0px
 			#edit-search-api-views-fulltext-wrapper
 				padding: 7px 0px
-//x
+
+//Default first block
 .panels-flexible-region-first.first-block
 	width: 100%
 	.panels-flexible-region-inside-first
@@ -308,8 +250,12 @@ a:hover
 				font-size: 12px
 		.views-field-published-at
 			font-family: magistral, sans-serif
-			font-size: 14px
+			font-size: 13px
 			color: #ffffff
+			span::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock_w.png")
+				margin-right: 5px
+				vertical-align: sub
 		.views-field-field-tags, .views-field-published-at
 			position: relative
 			bottom: 50px
@@ -323,14 +269,15 @@ a:hover
 			display: inline-block
 			vertical-align: top
 			position: relative
+			margin-bottom: 27px
 		.views-row-1, .views-row-3
 			margin-right: 3%
 		.views-field-path
 			width: 100%
 			position: absolute
-			bottom: 26px
+			bottom: 0px
 			padding: 10px
-			padding-bottom: 37px
+			padding-bottom: 55px
 			//background-image: repeating-linear-gradient(-45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 6px)
 			background: rgba(0,0,0,0.5)
 			h3
@@ -343,20 +290,26 @@ a:hover
 				p
 					margin: 0
 		.views-field-field-tags
-			margin-right: 3px
-			margin-left: 10px
+			bottom: 35px
+			margin: 0px 10px
 			a
 				padding: 2px 3px
 				font-size: 10px
 		.views-field-published-at
+			bottom: 50px
 			font-family: magistral, sans-serif
-			font-size: 10px
+			font-size: 11px
 			color: #ffffff
+			margin: 0px 10px
+			span::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock_w.png")
+				margin-right: 5px
+				vertical-align: top
 		.views-field-field-tags, .views-field-published-at
 			position: relative
-			bottom: 35px
-			display: inline-block
-//x
+			height: 0px
+
+//Main center
 .main-center
 	width: 100%
 	.panels-flexible-row-inside
@@ -364,6 +317,8 @@ a:hover
 		margin: auto
 	.main-content
 		width: 65.5%
+
+	//Right bar
 	.right-bar
 		width: 34.5%
 		padding-left: 30px
@@ -443,6 +398,7 @@ a:hover
 				font-family: magistral, sans-serif
 				font-weight: 500
 
+//Front page and Right bar
 .front-page, .right-bar
 	padding-top: 20px
 	.views-row
@@ -522,12 +478,13 @@ a:hover
 			margin-top: 0px
 		.views-field-path
 			margin-top: 7px
+			height: 46px
 			h3
 				line-height: 24px
 	.big.many
 		clear: both
 		.views-row
-			margin-bottom: 30px
+			margin-bottom: 25px
 	.small
 		.views-row
 			padding: 10px
@@ -537,6 +494,8 @@ a:hover
 			vertical-align: top
 		.views-field-published-at, .views-field-path
 			margin-left: 155px
+		.views-field-path
+			height: 57px
 	.many
 		.views-row
 			width: 48%
@@ -546,70 +505,474 @@ a:hover
 			margin-left: 11.5px
 		.views-row-1, .views-row-3, .views-row-5, .views-row-7
 			margin-right: 11.5px
-//
 
-//.panels-flexible-region-first.first
-	#mini-panel-hamburger_menu
-		background: #efefef
-	.panels-flexible-region.panels-flexible-region-new-center.panels-flexible-region-first.panels-flexible-region-last
-		width: 100%
-	.view-header, #most_popular
-		font-size: 18px
-		p, .pane-title
-			margin-bottom: 5px
-			text-transform: uppercase
-	#hamb-webshop
-		width: 0
-		height: 0
-		visibility: hidden
-	#hamb-main-menu
-		width: 0
-		height: 0
-		visibility: hidden
-		.item-list ul li, ul li.leaf
-			margin: 0 !important
-			padding: 0
-			list-style: none
-	#most_popular
-		margin-left: 2%
-	#most_popular, #category_list
-		width: 24%
-		float: left
-		padding: 15px 0
-		padding-left: 1%
-		.item-list ul li, ul li.leaf
-			margin: 0 !important
-			padding: 0
-			list-style: none
-		a
-			font-size: 16px
-			font-family: montserrat, sans-serif
-			font-weight: 500
-	#first5
-		width: 50%
-		float: left
-		padding-top: 15px
-		.view-content, .view-header
-			margin-left: 5%
-		.views-row
-			min-height: 70px
+//Article node pane
+.node_pane.article
+	background-color: #F8F8F8
+	padding-top: 20px
+	.panel-pane
+		padding-left: 20px
+		padding-right: 20px
+
+//Node pane
+.node_pane
+	.background-none
+		background-color: white
+	.view-header
+		.pane-title-2
+			font-size: 40px
+			font-family: magistral, sans-serif
+			font-weight: bold
+			padding-bottom: 20px
+	.pane-node-title
+		border-bottom: #C72026 solid 2px
+		margin-bottom: 20px
+		.pane-content
+			color: white
+			font-size: 14px
+			background-color: #C72026
+			display: inline-block
+			padding: 6px 11px
+	.background-none.panel-pane, #fb-like-share.panel-pane
+		padding-left: 0px
+		padding-right: 0px
+	#youtube.panel-pane
+		padding-right: 0px
+	ul, ol
+		margin-left: 30px
+		margin-bottom: 25px
+		li
 			margin-bottom: 15px
-		.views-field-field-image
-			width: 25%
-			float: left
-		.views-field-path
-			margin-left: 27%
-			width: 60%
-			h3
-				font-size: 16px
-				margin: 0
+			display: flex
+			min-width: 90%
 			p
-				margin: 0
+				margin: 0px
+	ul
+		list-style: none
+		li::before
+			content: "●"
+			color: #C72026
+			display: inline-block
+			width: auto
+			margin-right: 20px
+	ol
+		list-style: none
+		counter-reset: li
+		li::before
+			content: counter(li)
+			color: #C72026
+			display: inline-block
+			min-width: 15px
+			margin-right: 20px
+			font-weight: bold
+		li
+			counter-increment: li
+	h1
+		margin: 0px
+		font-family: magistral, sans-serif
+		font-size: 40px
+		font-weight: 800
+		line-height: 50px
+		p
+			margin: 0px
+			padding: 20px 0px
+	h3
+		margin: 0
+		padding-top: 15px
+		padding-bottom: 25px
+		font-size: 30px !important
+		font-weight: 300
+		font-family: magistral, sans-serif
+		span
+			font-size: 30px !important
+			font-weight: 300
+			font-family: magistral, sans-serif
+	h4
+		margin-top: 0px
+		span
+			margin-top: 0px
+			font-size: 18px !important
+	a
+		text-decoration: underline
+		color: #C72026 !important
+	blockquote
+		padding: 31px 27px
+		margin: 0 0 20px
+		border-left: 7px solid #333332
+		background: #FCFCFC
+		p
+			font-size: 18px !important
+			margin: 0
+			font-style: italic
+	figure
+		margin: 0 !important
+	figcaption
+		margin-top: 5px
+		font-size: 16px
+		border-left: 7px solid #C72026
+		padding: 5px 27px
+		font-weight: 300
+		line-height: 24px
+		font-style: italic
+		text-align: left
+		margin-bottom: -7px
+	#youtube
+		float: left
+		clear: both
+		height: 24px
+		margin-top: 4px
+		margin-right: 5px
+	#fb-like-share
+		float: left
+		margin-top: 2px
+	#fb-save
+		float: right
+	.tabs.primary.clearfix
+		margin-left: 0
+	.field-name-field-picture
+		float: left
+		img
+			border-radius: 20px
+			margin-right: 10px
+	.pane-node-field-published
+		.field-items
+			font-weight: 600
+			font-size: 14px
+			text-transform: uppercase
+			a
+				color: #333332 !important
+				text-decoration: none
+	.pane-node-published
+		font-size: 12px
+		padding-bottom: 40px
+		.pane-content
+			display: inline-block
+	.field-label
+		font-weight: normal
+	.pane-node-field-tags
+		.field-items
+			display: inline-flex
+		.field-item
+			margin-right: 6px
+			a
+				font-size: 14px
+				padding: 6px 11px
+				color: white !important
+				text-decoration: none
+			a:hover
+				text-decoration: none
+	.pane-node-field-subtitled
+		h2
+			clear: both
+			margin: 0px
+			padding-top: 30px
+			padding-bottom: 40px
+			font-size: 20px
+			font-weight: 600
+			line-height: 30px
+	#alapjarat-article.pane-node-field-text
+		p, span, ul, ol
+			font-size: 18px !important
+			font-family: Montserrat !important
+		//x
+		ul li a
+			overflow-wrap: break-word
+			word-wrap: break-word
+			word-break: break-all
+			word-break: break-word
+		img
+			padding: 5px 0
+		iframe
+			max-width: 100%
+			display: block
+			margin: auto
+			margin-bottom: 5px
+	.pane-node-field-source
+		padding-top: 15px
+		.pane-title
+			font-size: 18px
+			font-family: magistral, sans-serif
+		.even
+			margin-top: 10px
+		p
+			display: list-item
+			font-size: 16px !important
+			margin: 0
+			margin-left: 45px
+			padding-bottom: 10px
+			font-family: magistral, sans-serif
+		a
+			margin-left: 10px
+			color: #C72026 !important
+			text-decoration: none
+	#article4
+		h4
+			font-size: 14px
+			text-transform: uppercase
+			border-bottom: solid 2px #333332
+			margin: 0px
+			padding-bottom: 10px
+			margin-bottom: 30px
+			padding-top: 45px
+		p
+			margin: 0
+		.views-row
+			width: 47.5%
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 40px
+		.views-row-1, .views-row-3
+			margin-right: 3.8%
+		.views-field-published-at, .views-field-path, .views-field-field-subtitled, .views-field-field-tags
+			padding: 5px 10px
+		.views-field-published-at
+			padding-top: 5px
+			span
+				font-size: 14px
+				font-family: magistral, sans-serif
+				font-weight: 300
+			span::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
+				margin-right: 5px
+				vertical-align: sub
+		.views-field-path
+			a
+				font-weight: bold
+				text-decoration: none
+				color: #333332 !important
+			a:hover
+				text-decoration: none
+				color: #C72026 !important
+		.views-field-field-subtitled
+			p
+				font-size: 14px
+		.views-field-field-tags
+			a
+				font-size: 12px
+				padding: 5px 7px
+				color: white !important
+				text-decoration: none
+	.pane-node-field-tagsa
+		clear: both
+		padding-bottom: 60px
+		padding-top: 15px
+		.pane-title
+			float: left
+		.field-item
+			a
+				float: left
+				padding-left: 10px
+				color: #C72026 !important
+				text-decoration: none
+			a::before
+				content: "#"
+				font-style: italic
+		.pane-title, .field-item a
+			font-size: 16px
+			font-family: magistral, sans-serif
+	#article-banner
+		max-width: 640px
+		height: 360px
+		margin-bottom: 40px
+
+//Pages node pane
+.node_pane.pages
+	padding-top: 40px
+
+//Impress node pane
+.node_pane.impress
+	padding-top: 40px
+	a
+		text-decoration: none
+		color: #333332 !important
+	.view-content
+		padding-top: 55px
+	.views-row
+		padding-bottom: 75px
+		p
+			margin: 0px
+			padding-top: 15px
+		.left
+			float: left
+			padding-right: 30px
+		.views-field-nothing
+			min-height: 331px
+		.title-link
+			height: 38px
+		.title
+			font-family: magistral, sans-serif
+			font-size: 30px
+			font-weight: bold
+		.link
+			float: right
+			padding-top: 10px
+		.status
+			font-family: magistral, sans-serif
+			color: #C72026 !important
+		.e-mail
+			background-color: white
+			width: 255px
+			text-align: center
+			padding: 15px 0px
+			margin-top: 20px
+			.button
+				color: #C72026 !important
+				font-weight: 600
+	.impress-else
+		.view-header
+			font-size: 26px
+			font-family: magistral, sans-serif
+		.view-content
+			padding-top: 15px
+			padding-bottom: 55px
+		.views-row
+			padding-bottom: 0
+		.field-content
+			display: list-item
+			margin-left: 40px
+
+//Footer
+.menu-footer
+	background-color: #C72026
+	padding: 35px 0px !important
+	.panels-flexible-row-inside
+		max-width: 1115px
+		margin: auto
+	.pane-title
+		text-transform: uppercase
+		color: #ffffff
+		font-weight: bold
+		font-size: 16px
+	a
+		color: #ffffff !important
+		font-size: 14px
+	li
+		list-style: none !important
+		margin: 0 !important
+		padding: 0 !important
+		line-height: 22px
+	.pane-content
+		padding-top: 10px
+	.view-content
+		padding-top: 15px
+	#partners
+		.views-row
+			display: inline-block
+			margin-right: 15px
+			margin-bottom: 15px
+		.pane-content
+			padding-top: 0
+			img
+				opacity: 0.3
+	.link
+		display: block
+		text-transform: uppercase
+		line-height: 22px
+	.mail
+		margin-bottom: 10px
+	.mail, .tel
+		display: block
+		line-height: 23px
+	.tel::before, .mail::before
+		vertical-align: middle
+		margin-right: 10px
+	.tel::before
+		content: url("/sites/all/themes/alapjarat_theme_2019/images/phone.png")
+	.mail::before
+		content: url("/sites/all/themes/alapjarat_theme_2019/images/email.png")
+	.popular-tags
+		width: 17%
+		margin-right: 6%
+	.calculator
+		width: 23%
+		margin-right: 6%
+	.car-partner
+		width: 27.5%
+		margin-right: 5.5%
+	.connection
+		width: 15%
+.my-footer
+	background-color: #C72026
+	padding: 15px 0px !important
+	.panels-flexible-row-inside
+		max-width: 1115px
+		margin: auto
+	li
+		display: inline-block
+		font-size: 14px
+		color: #8C181B
+	.copyright
+		width: 65%
+	.social-media-menu
+		width: 35%
+	.right
+		float: right
+	.left
+		float: left
+	#social-media
+		.views-row
+			display: inline-block
+			margin-left: 10px
+		.view-content
+			display: inline-block
+			float: right
 
 
 
-.panels-flexible-region-1-footer_text_
-	margin-bottom: -21px
+.pager
+	.first
+		width: auto
+	float: left
+	border: 1px solid #ddd
+	padding-top: 0px !important
+	border-radius: 4px
+	margin-top: 40px !important
+	margin-bottom: 20px !important
+	a
+		padding: 5px 10px
+	li
+		padding: 0px !important
+		display: inline-flex !important
+		border-right: solid 1px #ddd
+	li:hover
+		background: #EBE9E9
+	li.pager-first, li.pager-current.first
+		border-radius: 4px 0 0 4px
+	li.pager-current.last
+		border-radius: 0 4px 4px 0
+	li.pager-last.last
+		border-right: 0px
+	.pager-current
+		background: #d82222
+		padding: 5px 10px !important
+	.pager-ellipsis
+		padding: 5px 10px !important
+
+
+.editor-menu
+	background: black
+	width: 86%
+.user_name
+	width: 14%
+	background: black
+#user_name
+	float: right
+#my_admin_menu, #user_name
+	padding: 10px 5px
+	p
+		color: white !important
+		margin: 0
+		background: red
+		border-radius: 10px
+		padding: 0px 5px
+		width: -moz-fit-content
+	ul li.leaf
+		display: inline
+		a
+			color: white !important
+		a:hover
+			color: red !important
+
 
 .pane-term-name, #media_title
 	margin-top: 20px
@@ -706,388 +1069,3 @@ a:hover
 
 #mini-panel-hamburger_menu
 	display: none
-
-
-//Edit
-.node_pane.article
-	background-color: #F8F8F8
-	padding-top: 20px
-	.panel-pane
-		padding-left: 20px
-		padding-right: 20px
-.node_pane
-	.background-none
-		background-color: white
-	.view-header
-		.pane-node-title
-			border-bottom: #C72026 solid 2px
-			.pane-content
-				color: white
-				font-size: 14px
-				background-color: #C72026
-				display: inline-block
-				padding: 6px 11px
-		.pane-title-2
-			font-size: 40px
-			font-family: magistral, sans-serif
-			font-weight: bold
-	.background-none.panel-pane, #fb-like-share.panel-pane
-		padding-left: 0px
-		padding-right: 0px
-	#youtube.panel-pane
-		padding-right: 0px
-	//x
-	ul, ol
-		margin-left: 30px
-		li
-			margin-bottom: 15px
-			display: flex
-			min-width: 90%
-	ul
-		list-style: none
-		li::before
-			content: "●"
-			color: #C72026
-			display: inline-block
-			width: auto
-			margin-right: 20px
-	ol
-		list-style: none
-		counter-reset: li
-		li::before
-			content: counter(li)
-			color: #C72026
-			display: inline-block
-			min-width: 15px
-			margin-right: 20px
-			font-weight: bold
-		li
-			counter-increment: li
-	//x
-	blockquote
-		padding: 31px 27px
-		margin: 0 0 20px
-		border-left: 7px solid #333332
-		background: #FCFCFC
-		p
-			font-size: 18px !important
-			margin: 0
-			font-style: italic
-	//x
-	figure
-		margin: 0 !important
-	//x
-	figcaption
-		margin-top: 5px
-		font-size: 16px
-		border-left: 7px solid #C72026
-		padding: 5px 27px
-		font-weight: 300
-		line-height: 24px
-		font-style: italic
-		text-align: left
-		margin-bottom: -7px
-	//x
-	#youtube
-		float: left
-		clear: both
-		height: 24px
-		margin-top: 4px
-		margin-right: 5px
-	//x
-	#fb-like-share
-		float: left
-		margin-top: 2px
-	//x
-	#fb-save
-		float: right
-	.tabs.primary.clearfix
-		margin-left: 0
-	//x
-	.pane-node-field-title2
-		h1
-			margin: 0px
-			font-family: magistral, sans-serif
-			font-size: 40px
-			font-weight: 800
-			line-height: 50px
-			p
-				margin: 0px
-				padding: 20px 0px
-	//x
-	.field-name-field-picture
-		float: left
-		img
-			border-radius: 20px
-			margin-right: 10px
-	//x
-	.pane-node-field-published
-		.field-items
-			font-weight: 600
-			font-size: 14px
-			text-transform: uppercase
-	//x
-	.pane-node-published
-		font-size: 12px
-		padding-bottom: 40px
-		.pane-content
-			display: inline-block
-	.field-label
-		font-weight: normal
-	//x
-	.pane-node-field-tags
-		.field-items
-			display: inline-flex
-		.field-item
-			margin-right: 6px
-			a
-				color: white !important
-				font-size: 14px
-				padding: 6px 11px
-				background: #C72026
-			a:hover
-				text-decoration: none
-	//x
-	.pane-node-field-subtitled
-		h2
-			clear: both
-			margin: 0px
-			padding-top: 30px
-			padding-bottom: 40px
-			font-size: 20px
-			font-weight: 600
-			line-height: 30px
-
-	#alapjarat-article.pane-node-field-text
-		p, span, ul, ol
-			font-size: 18px !important
-			font-family: Montserrat !important
-		a
-			text-decoration: underline
-			color: #C72026 !important
-		//x
-		h3
-			margin: 0
-			padding-top: 15px
-			padding-bottom: 25px
-			font-size: 30px !important
-			font-weight: 300
-			font-family: magistral, sans-serif
-			span
-				font-size: 30px !important
-				font-weight: 300
-				font-family: magistral, sans-serif
-		h4
-			span
-				margin-top: 10px 
-				font-size: 18px !important
-		ul, ol
-			margin-bottom: 25px
-		ul li a
-			overflow-wrap: break-word
-			word-wrap: break-word
-			word-break: break-all
-			word-break: break-word
-		img
-			padding: 5px 0
-		iframe
-			max-width: 100%
-			display: block
-			margin: auto
-			margin-bottom: 5px
-	//x
-	.pane-node-field-source
-		padding-top: 15px
-		.pane-title
-			font-size: 18px
-			font-family: magistral, sans-serif
-		.even
-			margin-top: 10px
-		p
-			display: list-item
-			font-size: 16px !important
-			margin: 0
-			margin-left: 45px
-			padding-bottom: 10px
-			font-family: magistral, sans-serif
-		a
-			margin-left: 10px
-			color: #C72026 !important
-	//x
-	#article4
-		h4
-			font-size: 14px
-			text-transform: uppercase
-			border-bottom: solid 2px #333332
-			margin: 0px
-			padding-bottom: 10px
-			margin-bottom: 30px
-			padding-top: 45px
-		p
-			margin: 0
-		.views-row
-			width: 47.5%
-			display: inline-block
-			vertical-align: top
-			margin-bottom: 40px
-		.views-row-1, .views-row-3
-			margin-right: 3.8%
-		.views-field-published-at, .views-field-path, .views-field-field-subtitled, .views-field-field-tags
-			padding: 5px 10px
-		.views-field-published-at
-			padding-top: 5px
-			span
-				font-size: 14px
-				font-family: magistral, sans-serif
-				font-weight: 300
-			span::before
-				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
-				margin-right: 5px
-				vertical-align: sub
-		.views-field-path
-			a
-				font-weight: bold
-		.views-field-field-subtitled
-			p
-				font-size: 14px
-		.views-field-field-tags
-			a
-				font-size: 12px
-				padding: 5px 7px
-	//x
-	.pane-node-field-tagsa
-		clear: both
-		padding-bottom: 60px
-		padding-top: 15px
-		.pane-title
-			float: left
-		.field-item
-			a
-				float: left
-				padding-left: 10px
-				color: #C72026 !important
-			a::before
-				content: "#"
-				font-style: italic
-		.pane-title, .field-item a
-			font-size: 16px
-			font-family: magistral, sans-serif
-	#article-banner
-		max-width: 640px
-		height: 360px
-		margin-bottom: 40px
-.node_pane.impress
-	.views-row
-		position: relative
-	.views-field-title
-		font-family: magistral, sans-serif
-		font-size: 30px
-		font-weight: bold
-		top: 0
-	.views-field-field-status
-		font-family: magistral, sans-serif
-		color: #C72026 !important
-		top: 35px
-	.views-field-field-description
-		//top: 75px
-	.views-field-title, .views-field-field-status, //.views-field-field-description
-		position: absolute
-		left: 285px
-	.views-field-field-e-mail
-		background-color: white
-		width: 255px
-		text-align: center
-		padding: 15px 0px
-		margin-top: 20px
-		.button
-			color: #C72026 !important
-			font-weight: 600
-//
-
-//x
-.menu-footer
-	background-color: #C72026
-	padding: 35px 0px !important
-	.panels-flexible-row-inside
-		max-width: 1115px
-		margin: auto
-	.pane-title
-		text-transform: uppercase
-		color: #ffffff
-		font-weight: bold
-		font-size: 16px
-	a
-		color: #ffffff !important
-		font-size: 14px
-	li
-		list-style: none !important
-		margin: 0 !important
-		padding: 0 !important
-		line-height: 22px
-	.pane-content
-		padding-top: 10px
-	.view-content
-		padding-top: 15px
-	#partners
-		.views-row
-			display: inline-block
-			margin-right: 15px
-			margin-bottom: 15px
-		.pane-content
-			padding-top: 0
-			img
-				opacity: 0.3
-	.link
-		display: block
-		text-transform: uppercase
-		line-height: 22px
-	.mail
-		margin-bottom: 10px
-	.mail, .tel
-		display: block
-		line-height: 23px
-	.tel::before, .mail::before
-		vertical-align: middle
-		margin-right: 10px
-	.tel::before
-		content: url("/sites/all/themes/alapjarat_theme_2019/images/phone.png")
-	.mail::before
-		content: url("/sites/all/themes/alapjarat_theme_2019/images/email.png")
-	.popular-tags
-		width: 17%
-		margin-right: 6%
-	.calculator
-		width: 23%
-		margin-right: 6%
-	.car-partner
-		width: 27.5%
-		margin-right: 5.5%
-	.connection
-		width: 15%
-
-.my-footer
-	background-color: #C72026
-	padding: 15px 0px !important
-	.panels-flexible-row-inside
-		max-width: 1115px
-		margin: auto
-	li
-		display: inline-block
-		font-size: 14px
-		color: #8C181B
-	.copyright
-		width: 65%
-	.social-media-menu
-		width: 35%
-	.right
-		float: right
-	.left
-		float: left
-	#social-media
-		.views-row
-			display: inline-block
-			margin-left: 10px
-		.view-content
-			display: inline-block
-			float: right
-//

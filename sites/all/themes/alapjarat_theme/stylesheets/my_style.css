@@ -1384,44 +1384,47 @@ a:hover {
   margin-bottom: 30px;
 }
 /* line 889, ../sass/my_style.sass */
-#impress_yes .view-content {
-  margin-left: 20px;
-}
-/* line 891, ../sass/my_style.sass */
-#impress_yes h2 {
+#impress_yes .view-header {
+  margin: 0 !important;
+  font-size: 30px;
+  font-family: montserrat, sans-serif;
   margin-top: 25px !important;
   margin-bottom: 10px !important;
 }
-/* line 894, ../sass/my_style.sass */
+/* line 895, ../sass/my_style.sass */
+#impress_yes .view-content {
+  margin-left: 20px;
+}
+/* line 897, ../sass/my_style.sass */
 #impress_yes a {
   color: #333 !important;
 }
-/* line 896, ../sass/my_style.sass */
+/* line 899, ../sass/my_style.sass */
 #impress_yes .views-field-title {
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 10px;
 }
-/* line 900, ../sass/my_style.sass */
+/* line 903, ../sass/my_style.sass */
 #impress_yes .views-field-title .field-content {
   margin-left: 15px;
   display: list-item;
 }
 
-/* line 904, ../sass/my_style.sass */
+/* line 907, ../sass/my_style.sass */
 div.pages {
   padding: 0px 15px !important;
   margin-bottom: 30px;
 }
-/* line 907, ../sass/my_style.sass */
+/* line 910, ../sass/my_style.sass */
 div.pages ul, div.pages ol {
   margin-left: 45px;
 }
-/* line 909, ../sass/my_style.sass */
+/* line 912, ../sass/my_style.sass */
 div.pages .tabs.primary.clearfix {
   margin-left: 0;
 }
-/* line 911, ../sass/my_style.sass */
+/* line 914, ../sass/my_style.sass */
 div.pages .pane-node-title {
   font-weight: 500;
   line-height: 1.1;
@@ -1431,81 +1434,81 @@ div.pages .pane-node-title {
   margin-bottom: 35px !important;
 }
 
-/* line 919, ../sass/my_style.sass */
+/* line 922, ../sass/my_style.sass */
 .partner {
   padding: 0px 15px !important;
 }
-/* line 921, ../sass/my_style.sass */
+/* line 924, ../sass/my_style.sass */
 .partner h3 {
   margin-top: 40px;
 }
-/* line 923, ../sass/my_style.sass */
+/* line 926, ../sass/my_style.sass */
 .partner table {
   border-collapse: unset;
 }
-/* line 926, ../sass/my_style.sass */
+/* line 929, ../sass/my_style.sass */
 .partner #premium img {
   max-width: 158px;
 }
-/* line 929, ../sass/my_style.sass */
+/* line 932, ../sass/my_style.sass */
 .partner #recreation img {
   max-width: 104px;
 }
-/* line 931, ../sass/my_style.sass */
+/* line 934, ../sass/my_style.sass */
 .partner .views-field-field-picturep, .partner .views-field-field-descriptionp {
   padding: 10px;
 }
-/* line 933, ../sass/my_style.sass */
+/* line 936, ../sass/my_style.sass */
 .partner .views-field-field-picturep p, .partner .views-field-field-descriptionp p {
   margin: 0 !important;
 }
-/* line 935, ../sass/my_style.sass */
+/* line 938, ../sass/my_style.sass */
 .partner .even, .partner .odd {
   background-color: white;
   border: 0;
   padding: 0;
 }
 
-/* line 940, ../sass/my_style.sass */
+/* line 943, ../sass/my_style.sass */
 .my_footer {
   margin-top: 10px !important;
   padding: 0px 10px !important;
 }
-/* line 943, ../sass/my_style.sass */
+/* line 946, ../sass/my_style.sass */
 .my_footer a {
   padding-right: 7px;
   border-right: solid 1px black;
   padding-left: 2.7px;
 }
-/* line 947, ../sass/my_style.sass */
+/* line 950, ../sass/my_style.sass */
 .my_footer .second_menu_footer {
   width: fit-content;
   width: -moz-fit-content;
   margin: auto;
   float: none;
 }
-/* line 952, ../sass/my_style.sass */
+/* line 955, ../sass/my_style.sass */
 .my_footer .second_menu_footer li {
   display: inline;
   padding: 0;
   margin: 0;
 }
-/* line 956, ../sass/my_style.sass */
+/* line 959, ../sass/my_style.sass */
 .my_footer .second_menu_footer li:last-child a {
   border-right: 0px;
 }
-/* line 958, ../sass/my_style.sass */
+/* line 961, ../sass/my_style.sass */
 .my_footer .panels-flexible-region-last {
   width: fit-content;
   width: -moz-fit-content;
   margin: auto;
   float: none;
 }
-/* line 963, ../sass/my_style.sass */
+/* line 966, ../sass/my_style.sass */
 .my_footer .footer_text {
   margin-top: 5px;
 }
-/* line 965, ../sass/my_style.sass */
+/* line 968, ../sass/my_style.sass */
 .my_footer .footer_text a {
   margin-right: 7px;
 }

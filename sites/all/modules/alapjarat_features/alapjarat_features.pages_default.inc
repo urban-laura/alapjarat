@@ -800,13 +800,6 @@ $.extend($.validator.messages, {
           'context' => 'argument_entity_id:node_1',
           'not' => FALSE,
         ),
-        1 => array(
-          'name' => 'theme',
-          'settings' => array(
-            'theme' => 'alapjarat_theme',
-          ),
-          'not' => FALSE,
-        ),
       ),
       'logic' => 'and',
     ),
@@ -846,7 +839,7 @@ $.extend($.validator.messages, {
         'width' => 100,
         'width_type' => '%',
         'parent' => 'main-row',
-        'class' => 'pages',
+        'class' => 'node_pane pages',
         'hide_empty' => 0,
       ),
     ),
@@ -3767,7 +3760,44 @@ function alapjarat_features_default_page_manager_pages() {
   );
   $display = new panels_display();
   $display->layout = 'flexible';
-  $display->layout_settings = array();
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Középen',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => 'node_pane impress',
+        'hide_empty' => 0,
+      ),
+    ),
+  );
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
@@ -3787,7 +3817,17 @@ function alapjarat_features_default_page_manager_pages() {
   $pane->type = 'views_panes';
   $pane->subtype = 'menu-panel_pane_1';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'theme',
+        'settings' => array(
+          'theme' => 'alapjarat_theme',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
   $pane->configuration = array();
   $pane->cache = array();
   $pane->style = array(
@@ -3804,6 +3844,35 @@ function alapjarat_features_default_page_manager_pages() {
   $display->content['new-ddeb7f33-f6b1-4e48-9880-edf246978907'] = $pane;
   $display->panels['center'][0] = 'new-ddeb7f33-f6b1-4e48-9880-edf246978907';
   $pane = new stdClass();
+  $pane->pid = 'new-019ad7dc-d7e9-481a-8ec3-5fb81654a649';
+  $pane->panel = 'center';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'menu-panel_pane_6';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'theme',
+        'settings' => array(
+          'theme' => 'alapjarat_theme_2019',
+        ),
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '019ad7dc-d7e9-481a-8ec3-5fb81654a649';
+  $display->content['new-019ad7dc-d7e9-481a-8ec3-5fb81654a649'] = $pane;
+  $display->panels['center'][1] = 'new-019ad7dc-d7e9-481a-8ec3-5fb81654a649';
+  $pane = new stdClass();
   $pane->pid = 'new-3bc58db7-e69d-4b25-a497-ed35d5b57e61';
   $pane->panel = 'center';
   $pane->type = 'views_panes';
@@ -3817,14 +3886,14 @@ function alapjarat_features_default_page_manager_pages() {
   );
   $pane->css = array(
     'css_id' => 'impress_yes',
-    'css_class' => '',
+    'css_class' => 'impress-else',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = '3bc58db7-e69d-4b25-a497-ed35d5b57e61';
   $display->content['new-3bc58db7-e69d-4b25-a497-ed35d5b57e61'] = $pane;
-  $display->panels['center'][1] = 'new-3bc58db7-e69d-4b25-a497-ed35d5b57e61';
+  $display->panels['center'][2] = 'new-3bc58db7-e69d-4b25-a497-ed35d5b57e61';
   $pane = new stdClass();
   $pane->pid = 'new-1e944404-e0ed-4281-9062-8c96e24ffff1';
   $pane->panel = 'center';
@@ -3839,14 +3908,14 @@ function alapjarat_features_default_page_manager_pages() {
   );
   $pane->css = array(
     'css_id' => 'impress_yes',
-    'css_class' => '',
+    'css_class' => 'impress-else',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = '1e944404-e0ed-4281-9062-8c96e24ffff1';
   $display->content['new-1e944404-e0ed-4281-9062-8c96e24ffff1'] = $pane;
-  $display->panels['center'][2] = 'new-1e944404-e0ed-4281-9062-8c96e24ffff1';
+  $display->panels['center'][3] = 'new-1e944404-e0ed-4281-9062-8c96e24ffff1';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-ddeb7f33-f6b1-4e48-9880-edf246978907';
   $handler->conf['display'] = $display;

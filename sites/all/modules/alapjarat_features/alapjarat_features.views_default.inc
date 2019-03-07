@@ -2255,9 +2255,10 @@ function alapjarat_features_views_default_views() {
     t('következő ›'),
     t('utolsó »'),
     t('Tartalom'),
-    t('- Művelet kiválasztása -'),
+    t('- Choose an operation -'),
     t('Location (field_location0)'),
     t('Impress (1)'),
+    t('more'),
     t('Név'),
     t('<a href=\'/node/[nid]/edit\'>edit</a>'),
     t('<a href=\'/node/[nid_1]/delete\'>delete</a>'),
@@ -2292,6 +2293,7 @@ function alapjarat_features_views_default_views() {
     t('Banner4(fix)'),
     t('Banner5(fix)'),
     t('Impress (3)'),
+    t('- Művelet kiválasztása -'),
   );
   $export['admin'] = $view;
 
@@ -2486,6 +2488,7 @@ function alapjarat_features_views_default_views() {
     t('[created]'),
     t('Mind'),
     t('Content pane'),
+    t('more'),
     t('Nézettáblák'),
   );
   $export['archive_1'] = $view;
@@ -2700,7 +2703,6 @@ function alapjarat_features_views_default_views() {
     t('<a href="[path]">[field_title2]</a>'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('Nézettáblák'),
     t('Content pane4 (alapjarat_theme_2019)'),
   );
@@ -3976,6 +3978,7 @@ function alapjarat_features_views_default_views() {
     t('Közzétéve'),
     t('Mind'),
     t('Content pane'),
+    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Nézettáblák'),
     t('published pane'),
@@ -4360,7 +4363,6 @@ function alapjarat_features_views_default_views() {
     t('<p class="[field_stressed_event]">[title]</p>'),
     t('<a href="[field_facebook_event-value]" target="_blank">Esemény >></a>'),
     t('Event'),
-    t('more'),
     t('<h3>Események</h3>'),
     t('Nézettáblák'),
     t('Event (alapjarat_theme_2019)'),
@@ -5905,7 +5907,6 @@ function alapjarat_features_views_default_views() {
     t('term from field_menu'),
     t('<a href="[path]">[field_title2]</a>'),
     t('First 5'),
-    t('more'),
     t('Legfrissebb'),
     t('Közzétéve'),
     t('Nézettáblák'),
@@ -6728,8 +6729,8 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3>Külsős munkatársaink</h3>';
-  $handler->display->display_options['header']['area']['format'] = 'fullhtml';
+  $handler->display->display_options['header']['area']['content'] = 'Külsős munkatársaink';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Link */
@@ -6955,8 +6956,8 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3>Korábbi munkatársaink</h3>';
-  $handler->display->display_options['header']['area']['format'] = 'fullhtml';
+  $handler->display->display_options['header']['area']['content'] = 'Korábbi munkatársaink';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Tartalom: Link */
@@ -7137,6 +7138,131 @@ function alapjarat_features_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['pane_category']['name'] = 'Nézettáblák';
+
+  /* Display: Impress (Aktív_2019) */
+  $handler = $view->new_display('panel_pane', 'Impress (Aktív_2019)', 'panel_pane_6');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="pane-node-title">
+<div class="pane-content">Impresszum</div>
+</div>
+<div class="pane-title-2">Az Alapjárat szerkesztősége</div>
+<img src="/sites/all/themes/alapjarat_theme_2019/images/impress_header.jpg">';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Picture */
+  $handler->display->display_options['fields']['field_picture']['id'] = 'field_picture';
+  $handler->display->display_options['fields']['field_picture']['table'] = 'field_data_field_picture';
+  $handler->display->display_options['fields']['field_picture']['field'] = 'field_picture';
+  $handler->display->display_options['fields']['field_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_picture']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_picture']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_picture']['settings'] = array(
+    'image_style' => 'impress_2019',
+    'image_link' => '',
+  );
+  /* Field: Tartalom: E-mail */
+  $handler->display->display_options['fields']['field_e_mail']['id'] = 'field_e_mail';
+  $handler->display->display_options['fields']['field_e_mail']['table'] = 'field_data_field_e_mail';
+  $handler->display->display_options['fields']['field_e_mail']['field'] = 'field_e_mail';
+  $handler->display->display_options['fields']['field_e_mail']['label'] = '';
+  $handler->display->display_options['fields']['field_e_mail']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_e_mail']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_e_mail']['alter']['text'] = '<a href="mailto:[field_e_mail-email]" class="button">Üzenet küldése</a>';
+  $handler->display->display_options['fields']['field_e_mail']['alter']['max_length'] = '2';
+  $handler->display->display_options['fields']['field_e_mail']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_e_mail']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Tartalom: Status */
+  $handler->display->display_options['fields']['field_status']['id'] = 'field_status';
+  $handler->display->display_options['fields']['field_status']['table'] = 'field_data_field_status';
+  $handler->display->display_options['fields']['field_status']['field'] = 'field_status';
+  $handler->display->display_options['fields']['field_status']['label'] = '';
+  $handler->display->display_options['fields']['field_status']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_status']['element_label_colon'] = FALSE;
+  /* Field: Tartalom: Link */
+  $handler->display->display_options['fields']['field_name_link']['id'] = 'field_name_link';
+  $handler->display->display_options['fields']['field_name_link']['table'] = 'field_data_field_name_link';
+  $handler->display->display_options['fields']['field_name_link']['field'] = 'field_name_link';
+  $handler->display->display_options['fields']['field_name_link']['label'] = '';
+  $handler->display->display_options['fields']['field_name_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_name_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_name_link']['alter']['text'] = '<a href="[field_name_link]"><img src="/sites/all/themes/alapjarat_theme_2019/images/impress_link.png"></a>';
+  $handler->display->display_options['fields']['field_name_link']['element_label_colon'] = FALSE;
+  /* Field: Tartalom: Description */
+  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
+  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
+  $handler->display->display_options['fields']['field_description']['label'] = '';
+  $handler->display->display_options['fields']['field_description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="left">
+<div class="picture">[field_picture]</div>
+<div class="e-mail">[field_e_mail]</div>
+</div>
+
+<div class="title-link">
+<span class="title">[title]</span>
+<span class="link">[field_name_link]</span>
+</div>
+
+<span class="status">[field_status]</span>
+<span>[field_description]</span>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'admin:page_2';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'impress' => 'impress',
+  );
+  /* Filter criterion: Tartalom: Colleague status (field_colleague_status) */
+  $handler->display->display_options['filters']['field_colleague_status_tid']['id'] = 'field_colleague_status_tid';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['table'] = 'field_data_field_colleague_status';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['field'] = 'field_colleague_status_tid';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['value'] = array(
+    0 => '6236',
+  );
+  $handler->display->display_options['filters']['field_colleague_status_tid']['expose']['operator_id'] = 'field_colleague_status_tid_op';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['expose']['label'] = 'Colleague status (field_colleague_status)';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['expose']['operator'] = 'field_colleague_status_tid_op';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['expose']['identifier'] = 'field_colleague_status_tid';
+  $handler->display->display_options['filters']['field_colleague_status_tid']['vocabulary'] = 'collegue_status';
+  $handler->display->display_options['pane_category']['name'] = 'Nézettáblák';
   $translatables['menu'] = array(
     t('Master'),
     t('Impress'),
@@ -7156,24 +7282,43 @@ function alapjarat_features_views_default_views() {
     t('The editorial of Alapjárat'),
     t('<a href="mailto:[field_e_mail-email]"><img src="https://alapjarat.hu/sites/default/files/email.png" alt="[field_e_mail-email]"></a>'),
     t('Impress (Aktív)'),
-    t('more'),
     t('<h1>Impresszum</h1> <h2>Az Alapjárat szerkesztősége</h2>'),
     t('<a href="[field_name_link]">[title]</a>'),
     t('Colleague status (field_colleague_status)'),
     t('Nézettáblák'),
     t('Impress (Külsős)'),
-    t('<h3>Külsős munkatársaink</h3>'),
+    t('Külsős munkatársaink'),
     t('Partners (premium)'),
     t('<h1>Partnereink</h1> <h3>Prémium autós partnerek</h3> '),
     t('Partners (recreation)'),
     t('<h3>Prémium szabadidős partnerek</h3>'),
     t('Impress (Volt)'),
-    t('<h3>Korábbi munkatársaink</h3>'),
+    t('Korábbi munkatársaink'),
     t('Partners in footer'),
     t('<span class="pane-title">Autós partnereink</span>'),
     t('<a href=\'[field_name_link]\'>[field_picturep]</a>'),
     t('Social Media Menu'),
     t('<a href=\'[field_name_link]\'>[field_picture]</a>'),
+    t('Impress (Aktív_2019)'),
+    t('<div class="pane-node-title">
+<div class="pane-content">Impresszum</div>
+</div>
+<div class="pane-title-2">Az Alapjárat szerkesztősége</div>
+<img src="/sites/all/themes/alapjarat_theme_2019/images/impress_header.jpg">'),
+    t('<a href="mailto:[field_e_mail-email]" class="button">Üzenet küldése</a>'),
+    t('<a href="[field_name_link]"><img src="/sites/all/themes/alapjarat_theme_2019/images/impress_link.png"></a>'),
+    t('<div class="left">
+<div class="picture">[field_picture]</div>
+<div class="e-mail">[field_e_mail]</div>
+</div>
+
+<div class="title-link">
+<span class="title">[title]</span>
+<span class="link">[field_name_link]</span>
+</div>
+
+<span class="status">[field_status]</span>
+<span>[field_description]</span>'),
   );
   $export['menu'] = $view;
 

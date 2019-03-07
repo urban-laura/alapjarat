@@ -1405,7 +1405,26 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+          ),
+        ),
+        'context' => 'node',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'or',
+  );
   $pane->configuration = array(
     'admin_title' => 'Default page big banner',
     'title' => '',
@@ -1736,7 +1755,20 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->type = 'views_panes';
   $pane->subtype = 'articles_2019-panel_pane_9';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'pages' => 'pages',
+          ),
+        ),
+        'context' => 'node',
+        'not' => TRUE,
+      ),
+    ),
+  );
   $pane->configuration = array();
   $pane->cache = array();
   $pane->style = array(
@@ -1758,7 +1790,20 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'pages' => 'pages',
+          ),
+        ),
+        'context' => 'node',
+        'not' => TRUE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'admin_title' => 'Banner3',
     'title' => '',
@@ -1866,7 +1911,20 @@ $.extend($.validator.messages, {
   $pane->type = 'articles_archive';
   $pane->subtype = 'articles_archive';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'pages' => 'pages',
+          ),
+        ),
+        'context' => 'node',
+        'not' => TRUE,
+      ),
+    ),
+  );
   $pane->configuration = array(
     'date_format' => '',
     'override_title' => 1,
