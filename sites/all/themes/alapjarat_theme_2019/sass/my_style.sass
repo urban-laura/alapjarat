@@ -533,6 +533,7 @@ a:hover
 			background-color: #C72026
 			display: inline-block
 			padding: 6px 11px
+			text-transform: uppercase
 	.background-none.panel-pane, #fb-like-share.panel-pane
 		padding-left: 0px
 		padding-right: 0px
@@ -831,6 +832,63 @@ a:hover
 			display: list-item
 			margin-left: 40px
 
+//Taxonomy Pane
+.taxonomy-page
+	.views-row
+		padding-top: 30px
+		padding-bottom: 20px
+		border-bottom: dashed 2px #e6e6e6
+	.pane-term-name
+		border-bottom: #C72026 solid 2px
+		margin-bottom: 20px
+		h1
+			color: white
+			font-size: 14px
+			background-color: #C72026
+			display: inline-block
+			padding: 6px 11px
+			margin: 0
+			text-transform: uppercase
+	img
+		margin-bottom: 10px
+	h3
+		font-size: 24px
+		font-family: magistral, sans-serif
+		font-weight: bold
+		margin-top: 3px
+		margin-bottom: 8px
+	.left
+		float: left
+		max-width: 255px
+		margin-right: 15px
+	.views-field-field-tags
+		a
+			font-size: 12px
+			padding: 5px 7px
+			line-height: 30px
+	.author
+		font-weight: 600
+		font-size: 14px
+		text-transform: uppercase
+		padding-right: 10px
+		vertical-align: top
+	.time
+		font-size: 14px
+		font-family: magistral, sans-serif
+		vertical-align: top
+	.time::before
+		content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
+		margin-right: 6px
+		vertical-align: sub
+	.subtitle
+		display: flex
+		p
+			margin: 0
+	.clear-both
+		clear: both
+
+
+
 //Footer
 .menu-footer
 	background-color: #C72026
@@ -919,7 +977,7 @@ a:hover
 
 
 
-.pager
+//.pager
 	.first
 		width: auto
 	float: left
@@ -974,95 +1032,7 @@ a:hover
 			color: red !important
 
 
-.pane-term-name, #media_title
-	margin-top: 20px
-	margin-bottom: 10px
-	padding: 0px 15px
 
-.pane-term-description, .views-field-description
-	margin-top: 15px
-	padding: 0px 15px
-	font-size: 16px
-	p
-		margin: 0px !important
-
-.header, .view-id-search_api_search, .view-id-glossary_list
-	h1, .pane-title, .view-header h1, .views-field-name, .view-header p
-		line-height: 1.1
-		padding: 0 !important
-		margin: 0 !important
-		font-size: 36px
-		font-family: montserrat,sans-serif
-	.pane-title
-		float: left
-		margin-right: 10px
-	.view-header
-		margin-top: 20px
-
-#article-header-banner
-	margin-bottom: 15px
-
-#category, #archive_list, #media, #published, #tag, #menu_pane, .view-id-search_api_search, .view-id-glossary_list
-	padding: 0px 15px !important
-	padding-bottom: 15px !important
-	p
-		margin: 0 !important
-	.views-row-1
-		border-top: 1px solid #eee
-		margin-top: 20px
-	.views-field-path, .views-field-nid
-		clear: both
-		padding-top: 30px
-		margin-bottom: 5px
-		h3
-			margin: 0
-			font-size: 36px
-			a
-				line-height: 40px
-	.views-label-field-published, .views-field-field-published .field-content, .views-label-field-tags, .views-field-field-tags .field-content
-		float: left
-		padding: 10px 0px
-	.views-label-field-published
-		padding-left: 10px
-	.views-field-field-published .field-content
-		margin-left: 3px
-		margin-right: 10px
-		font-weight: bold
-	.views-label-field-tags
-		margin-right: 3px
-	.views-field-published-at
-		text-align: right
-		padding: 10px
-		border-top: 1px solid #efefef
-		border-bottom: 1px solid #efefef
-		margin-bottom: 10px
-		.field-content
-			color: #d82222 !important
-	.views-field-field-image
-		float: left
-		padding: 0px 15px
-		width: 35%
-	.views-field-field-subtitled
-		margin-left: 35%
-		font-size: 16px
-		margin-top: 3px
-	.item-list
-		ul
-			padding-top: 40px
-			text-align: left
-
-			li
-				margin: 0 !important
-	ul.pager
-		li.pager-item, li.pager-current, li.pager-next, li.pager-last, li.pager-previous, li.pager-ellipsis
-			margin-left: -4.3px !important
-		li.pager-current.first
-			margin-left: 0px !important
-
-.view-id-glossary_list
-	.views-field-name
-		font-size: 16px
-		padding: 5px 0px !important
 
 #edit-submit-search-api-search
 	display: none

@@ -2712,6 +2712,13 @@ $.extend($.validator.messages, {
           'context' => 'argument_term_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
+          'not' => FALSE,
+        ),
       ),
       'logic' => 'and',
     ),
@@ -2843,6 +2850,13 @@ $.extend($.validator.messages, {
           'context' => 'argument_term_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
+          'not' => FALSE,
+        ),
       ),
     ),
   );
@@ -2949,6 +2963,13 @@ $.extend($.validator.messages, {
             ),
           ),
           'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
           'not' => FALSE,
         ),
       ),
@@ -3059,7 +3080,15 @@ $.extend($.validator.messages, {
           'context' => 'argument_term_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
+          'not' => FALSE,
+        ),
       ),
+      'logic' => 'and',
     ),
   );
   $display = new panels_display();
@@ -3165,6 +3194,13 @@ $.extend($.validator.messages, {
             ),
           ),
           'context' => 'argument_term_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'theme',
+          'settings' => array(
+            'theme' => 'alapjarat_theme',
+          ),
           'not' => FALSE,
         ),
       ),

@@ -151,6 +151,21 @@ function alapjarat_theme_2019_image_default_styles() {
     ),
   );
 
+  // Exported image style: taxonomy_page.
+  $styles['taxonomy_page'] = array(
+    'label' => 'taxonomy page',
+    'effects' => array(
+      10 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 255,
+          'height' => 140,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
