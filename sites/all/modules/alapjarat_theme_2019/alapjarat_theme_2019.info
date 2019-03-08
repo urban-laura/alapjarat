@@ -31,6 +31,7 @@ features[menu_custom][] = menu-calculators
 features[node][] = social_media_menu
 features[page_manager_handlers][] = node_view__article_2019
 features[page_manager_handlers][] = site_template__front-page-2019
+features[page_manager_pages][] = archive_2019
 features[page_manager_pages][] = front_page_2019
 features[variable][] = comment_anonymous_social_media_menu
 features[variable][] = comment_default_mode_social_media_menu
