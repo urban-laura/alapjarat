@@ -30,7 +30,7 @@ body.not-front
 body.node-type-a-article
 	.main-center
 		background-color: white
-body.page-impress, body.node-type-pages
+body.page-impress, body.node-type-pages, body.page-taxonomy, body.page-new-archive, body.page-new-kereses
 	.right-bar
 		padding-top: 54px
 		.views-row
@@ -39,6 +39,9 @@ body.page-impress, body.node-type-pages
 			background: none
 		#right-top-5
 			background-color: white
+body.node-type-pages
+	.right-bar
+		padding-top: 40px
 
 //Everywhere
 h1, h2, h3, h4, h5, h6
@@ -84,6 +87,43 @@ a:hover
 .banner
 	margin: auto
 	background-color: #dbe0e4
+
+//Display
+#edit-submit-search-api-search
+	display: none
+#mini-panel-hamburger_menu
+	display: none
+
+//Pager
+.item-list
+	.pager
+		text-align: left
+		margin: 0px
+		padding: 20px 0px
+		li
+			margin: 0px
+			padding: 0px
+			font-size: 16px
+			font-family: magistral, sans-serif
+			font-weight: 500
+			margin-right: 5px
+			a
+				background-color: white
+				line-height: 26px
+				border: solid 1px #ccccc8
+		.pager-current
+			color: white
+			background-color: #C72026
+			line-height: 28px
+		.pager-ellipsis
+			line-height: 21px
+			vertical-align: bottom
+		.pager-current, a
+			width: 30px
+			height: 30px
+			display: inline-block
+			text-align: center
+			border-radius: 3px
 
 //Mailchimp
 #mc_embed_signup form
@@ -312,6 +352,7 @@ a:hover
 //Main center
 .main-center
 	width: 100%
+	padding-bottom: 20px !important
 	.panels-flexible-row-inside
 		max-width: 1115px
 		margin: auto
@@ -338,6 +379,8 @@ a:hover
 			margin-bottom: 20px
 		.panel-pane
 			margin-bottom: 40px
+		.panel-pane:last-child
+			margin-bottom: 0px
 		#right-top-5
 			background-color: #F7F7F7
 			border: dashed 2px #e6e6e6
@@ -832,8 +875,11 @@ a:hover
 			display: list-item
 			margin-left: 40px
 
-//Taxonomy Pane
-.taxonomy-page
+//Taxonomy Pane and Archive
+.taxonomy-page, .archive, .view-search-api-search
+	padding-top: 40px !important
+	.view-content
+		padding-bottom: 20px
 	.views-row
 		padding-top: 30px
 		padding-bottom: 20px
@@ -975,38 +1021,6 @@ a:hover
 			display: inline-block
 			float: right
 
-
-
-//.pager
-	.first
-		width: auto
-	float: left
-	border: 1px solid #ddd
-	padding-top: 0px !important
-	border-radius: 4px
-	margin-top: 40px !important
-	margin-bottom: 20px !important
-	a
-		padding: 5px 10px
-	li
-		padding: 0px !important
-		display: inline-flex !important
-		border-right: solid 1px #ddd
-	li:hover
-		background: #EBE9E9
-	li.pager-first, li.pager-current.first
-		border-radius: 4px 0 0 4px
-	li.pager-current.last
-		border-radius: 0 4px 4px 0
-	li.pager-last.last
-		border-right: 0px
-	.pager-current
-		background: #d82222
-		padding: 5px 10px !important
-	.pager-ellipsis
-		padding: 5px 10px !important
-
-
 .editor-menu
 	background: black
 	width: 86%
@@ -1032,10 +1046,3 @@ a:hover
 			color: red !important
 
 
-
-
-#edit-submit-search-api-search
-	display: none
-
-#mini-panel-hamburger_menu
-	display: none

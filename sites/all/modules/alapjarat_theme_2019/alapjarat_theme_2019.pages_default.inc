@@ -1593,9 +1593,15 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->access = array(
     'plugins' => array(
       0 => array(
-        'name' => 'front',
-        'settings' => NULL,
-        'not' => TRUE,
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+            'impress' => 'impress',
+          ),
+        ),
+        'context' => 'node',
+        'not' => FALSE,
       ),
     ),
   );
@@ -1674,16 +1680,22 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->access = array(
     'plugins' => array(
       0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+      1 => array(
         'name' => 'node_type',
         'settings' => array(
           'type' => array(
-            'a_article' => 'a_article',
+            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
-        'not' => TRUE,
+        'not' => FALSE,
       ),
     ),
+    'logic' => 'and',
   );
   $pane->configuration = array(
     'admin_title' => 'Banner2',
@@ -1758,16 +1770,23 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->access = array(
     'plugins' => array(
       0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+      1 => array(
         'name' => 'node_type',
         'settings' => array(
           'type' => array(
-            'pages' => 'pages',
+            'a_article' => 'a_article',
+            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
-        'not' => TRUE,
+        'not' => FALSE,
       ),
     ),
+    'logic' => 'or',
   );
   $pane->configuration = array();
   $pane->cache = array();
@@ -1793,16 +1812,23 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->access = array(
     'plugins' => array(
       0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+      1 => array(
         'name' => 'node_type',
         'settings' => array(
           'type' => array(
-            'pages' => 'pages',
+            'a_article' => 'a_article',
+            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
-        'not' => TRUE,
+        'not' => FALSE,
       ),
     ),
+    'logic' => 'or',
   );
   $pane->configuration = array(
     'admin_title' => 'Banner3',
@@ -1914,16 +1940,23 @@ $.extend($.validator.messages, {
   $pane->access = array(
     'plugins' => array(
       0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+      1 => array(
         'name' => 'node_type',
         'settings' => array(
           'type' => array(
-            'pages' => 'pages',
+            'a_article' => 'a_article',
+            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
-        'not' => TRUE,
+        'not' => FALSE,
       ),
     ),
+    'logic' => 'or',
   );
   $pane->configuration = array(
     'date_format' => '',
