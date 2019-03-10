@@ -3427,7 +3427,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = 'Kategóriák
 ';
-  $handler->display->display_options['header']['area']['format'] = 'plain_text';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -3462,7 +3462,6 @@ function alapjarat_features_views_default_views() {
     t('Kategóriák
 '),
     t('Content pane'),
-    t('more'),
     t('Nézettáblák'),
   );
   $export['category_list'] = $view;

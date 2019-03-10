@@ -91,7 +91,7 @@ a:hover
 //Display
 #edit-submit-search-api-search
 	display: none
-#mini-panel-hamburger_menu
+#mini-panel-hamburger_menu_2019
 	display: none
 
 //Pager
@@ -218,24 +218,24 @@ a:hover
 	#main_menu
 		#ham-menu
 			padding: 0px !important
-			width: 20px
-			margin-top: 17px
-			margin-right: 10px
+			margin-right: 30px
+		a
+			color: #333332 !important
+			font-size: 14px
+			line-height: 52px
+			margin-right: 25px
+		a:hover
+			color: #C72026 !important
 		li
 			display: inline
 			padding: 0
 			margin: 0
-			a
-				color: #333332 !important
-				font-size: 14px
-				padding: 0px 7px
-				line-height: 52px
 	.search
 		float: right
 		width: auto
 		#search
 			input#edit-search-api-views-fulltext, input#edit-keys
-				width: 240px
+				width: 255px
 				height: 38px
 				background-color: #F2F2F2
 				border: 0px
@@ -256,6 +256,35 @@ a:hover
 	.panels-flexible-region-inside-first
 		max-width: 1115px
 		margin: auto
+	#mini-panel-hamburger_menu_2019
+		.panels-flexible-region-inside-first
+			position: absolute
+			z-index: 10
+			border-top: #C72026 5px solid
+			background-color: #333332
+			padding: 10px 20px !important
+			width: 385px
+			.pane-title, .view-header
+				color: white
+				font-size: 24px
+				font-family: magistral, sans-serif
+				font-weight: bold
+				border-bottom: solid 1px white
+			.view-category-list, .pane-system-main-menu
+				float: left
+			.view-category-list
+				width: 180px
+			.pane-system-main-menu
+				width: 135px
+				margin-right: 30px
+			li
+				list-style: none
+				margin: 0px
+			a
+				color: white !important
+				font-size: 16px
+				font-family: magistral, sans-serif
+				font-weight: 500
 	#default-page-big-banner
 		max-width: 970px
 		height: 250px
@@ -585,6 +614,9 @@ a:hover
 	ul, ol
 		margin-left: 30px
 		margin-bottom: 25px
+		ul, ol
+			margin-bottom: 0px
+			width: 75%
 		li
 			margin-bottom: 15px
 			display: flex

@@ -38,6 +38,7 @@ stylesheets[all][] = stylesheets/my_style_social.css
 ; Scripts
 scripts[] = js/build/scripts.js
 scripts[] = js/build/modernizr.js
+scripts[] = js/menu.js
 
 settings[alapjarat_theme_2019_tabs] = 1
 settings[alapjarat_theme_2019_breadcrumb] = 1
