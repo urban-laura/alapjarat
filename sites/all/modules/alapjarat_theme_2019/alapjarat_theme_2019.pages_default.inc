@@ -1593,17 +1593,26 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->access = array(
     'plugins' => array(
       0 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
+        'not' => FALSE,
+      ),
+      1 => array(
         'name' => 'node_type',
         'settings' => array(
           'type' => array(
             'a_article' => 'a_article',
-            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
         'not' => FALSE,
       ),
     ),
+    'logic' => 'or',
   );
   $pane->configuration = array();
   $pane->cache = array();
@@ -1685,17 +1694,16 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'not' => FALSE,
       ),
       1 => array(
-        'name' => 'node_type',
+        'name' => 'path_visibility',
         'settings' => array(
-          'type' => array(
-            'impress' => 'impress',
-          ),
+          'visibility_setting' => '1',
+          'paths' => 'impress',
         ),
-        'context' => 'node',
+        'context' => 'empty',
         'not' => FALSE,
       ),
     ),
-    'logic' => 'and',
+    'logic' => 'or',
   );
   $pane->configuration = array(
     'admin_title' => 'Banner2',
@@ -1779,10 +1787,18 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'settings' => array(
           'type' => array(
             'a_article' => 'a_article',
-            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
         'not' => FALSE,
       ),
     ),
@@ -1821,10 +1837,18 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'settings' => array(
           'type' => array(
             'a_article' => 'a_article',
-            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
         'not' => FALSE,
       ),
     ),
@@ -1949,10 +1973,18 @@ $.extend($.validator.messages, {
         'settings' => array(
           'type' => array(
             'a_article' => 'a_article',
-            'impress' => 'impress',
           ),
         ),
         'context' => 'node',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
         'not' => FALSE,
       ),
     ),
