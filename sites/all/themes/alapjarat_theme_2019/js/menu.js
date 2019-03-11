@@ -5,6 +5,7 @@
       $('#mini-panel-hamburger_menu_2019').hide();
       $('#ham-menu').click(function() {
       	$('#mini-panel-hamburger_menu_2019').slideToggle();
+      	$('#ham-menu').toggleClass("hm-active");
       });
     }
   };
