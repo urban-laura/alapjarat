@@ -95,6 +95,10 @@ a:hover
 	display: none
 #mini-panel-hamburger_menu_2019
 	display: none
+#mini-panel-mobil_menu
+	display: none
+	.pane-content
+		display: none
 
 //Pager
 .item-list
@@ -218,6 +222,18 @@ a:hover
 		max-width: 1115px
 		margin: auto
 	#main_menu
+		.pane-content
+			display: inline-block
+		#mobil-menu
+			background: url("/sites/all/modules/alapjarat_common/images/alapjarat_hamburger.png")
+			background-repeat: no-repeat
+			background-position: center
+			width: 21px
+			height: 52px
+			float: left
+			cursor: pointer
+			margin-right: 30px
+			display: none
 		#ham-menu
 			//padding: 0px !important
 			margin-right: 30px
@@ -267,6 +283,9 @@ a:hover
 	.panels-flexible-region-inside-first
 		max-width: 1115px
 		margin: auto
+	#mini-panel-mobil_menu
+		.pane-title
+			cursor: pointer
 	#mini-panel-hamburger_menu_2019
 		overflow: hidden
 		.panels-flexible-region-inside-first
@@ -585,9 +604,9 @@ a:hover
 			width: 48%
 			display: inline-block
 			vertical-align: top
-		.views-row-2, .views-row-4, .views-row-6, .views-row-8
+		.views-row-even
 			margin-left: 1.4%
-		.views-row-1, .views-row-3, .views-row-5, .views-row-7
+		.views-row-odd
 			margin-right: 1.4%
 
 //Article node pane

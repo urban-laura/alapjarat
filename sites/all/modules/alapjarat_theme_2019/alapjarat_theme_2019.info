@@ -39,6 +39,7 @@ features[page_manager_handlers][] = site_template__front-page-2019
 features[page_manager_pages][] = archive_2019
 features[page_manager_pages][] = front_page_2019
 features[panels_mini][] = hamburger_menu_2019
+features[panels_mini][] = mobil_menu
 features[variable][] = comment_anonymous_social_media_menu
 features[variable][] = comment_default_mode_social_media_menu
 features[variable][] = comment_default_per_page_social_media_menu
