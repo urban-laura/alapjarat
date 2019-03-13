@@ -84,6 +84,8 @@ a:hover
 	padding: 0px !important
 .panel-separator
 	margin: 0px !important
+.clearfix::after
+	content: ""
 .banner
 	margin: auto
 	background-color: #dbe0e4
@@ -93,6 +95,18 @@ a:hover
 	display: none
 #mini-panel-hamburger_menu_2019
 	display: none
+#mini-panel-mobil_menu
+	display: none
+	.pane-content
+		display: none
+	#category, #car-partners, #connection
+		.view-content
+			display: none
+		.pane-content
+			display: block
+	#main-menu-2019
+		.pane-content
+			display: block
 
 //Pager
 .item-list
@@ -208,6 +222,9 @@ a:hover
 			color: #666666
 
 //Main menu
+.header.menu-active
+	background-color: #333332
+	border-bottom: solid 1px #666666
 .header
 	background-color: #ffffff
 	border-top: solid 1px #e6e6e6
@@ -216,16 +233,36 @@ a:hover
 		max-width: 1115px
 		margin: auto
 	#main_menu
+		.pane-content
+			display: inline-block
+		#mobil-menu
+			background: url("/sites/all/modules/alapjarat_common/images/alapjarat_hamburger.png")
+			background-repeat: no-repeat
+			background-position: center
+			width: 21px
+			height: 52px
+			float: left
+			cursor: pointer
+			margin-right: 30px
+			display: none
 		#ham-menu
-			padding: 0px !important
 			margin-right: 30px
 		a
 			color: #333332 !important
 			font-size: 14px
 			line-height: 52px
 			margin-right: 25px
+		.hm-active
+			color: white !important
+			font-weight: bold
+			padding: 0px 5px
+			padding-top: 3px
+			padding-bottom: 18px
+			background-color: #C72026
 		a:hover
 			color: #C72026 !important
+		.hm-active:hover
+			color: #333332 !important
 		li
 			display: inline
 			padding: 0
@@ -250,6 +287,71 @@ a:hover
 			#edit-search-api-views-fulltext-wrapper
 				padding: 7px 0px
 
+//Mobile menu
+.mobile-menu
+	width: 100%
+	background-color: #333332
+	#mini-panel-mobil_menu
+		.panels-flexible-region-first
+			width: 100%
+		.pane-title
+			cursor: pointer
+		.view-header
+			cursor: pointer
+		li
+			margin: 0
+			padding: 0
+			list-style: none
+		.pane-title, .view-header, #main-menu-2019 a, #connection .link
+			display: block
+			line-height: 50px
+			font-size: 14px
+			font-weight: bold
+			border-bottom: dashed 1px #4d4d4d
+			text-transform: uppercase
+			color: white !important
+			padding-left: 25px
+		.pane-content ul
+			background-color: #272727
+			margin: 0px
+		.pane-content
+			li
+				a
+					color: white !important
+					line-height: 50px
+					font-size: 14px
+					font-weight: bold
+					padding-left: 50px
+					text-transform: uppercase
+				a::before
+					content: "-"
+					margin-right: 5px
+		.pane-content li
+			border-bottom: dashed 1px #4d4d4d
+		#main-menu-2019
+			.pane-content ul
+				background-color: transparent
+			.pane-content
+				li
+					border-bottom: 0px
+					a::before
+						content: none
+		#connection
+			a
+				text-transform: none
+			.tel::before, .mail::before
+				vertical-align: middle
+				margin-right: 10px
+			.tel::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/phone.png")
+			.mail::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/email.png")
+		.m-active
+			.pane-title, .view-header, #main-menu-2019 a, #connection a
+				color: #C72026 !important
+		.m-active.pane-title
+			color: #C72026 !important
+
 //Default first block
 .panels-flexible-region-first.first-block
 	width: 100%
@@ -257,6 +359,7 @@ a:hover
 		max-width: 1115px
 		margin: auto
 	#mini-panel-hamburger_menu_2019
+		overflow: hidden
 		.panels-flexible-region-inside-first
 			position: absolute
 			z-index: 10
@@ -280,11 +383,16 @@ a:hover
 			li
 				list-style: none
 				margin: 0px
+				padding: 0px
+			ul
+				padding-top: 10px
 			a
 				color: white !important
 				font-size: 16px
 				font-family: magistral, sans-serif
 				font-weight: 500
+			a:hover
+				color: #C72026 !important
 	#default-page-big-banner
 		max-width: 970px
 		height: 250px
@@ -394,7 +502,7 @@ a:hover
 		padding-left: 30px
 		padding-top: 47px
 		.banner
-			width: 300px
+			max-width: 300px
 			height: 250px
 		#banner2-in-article
 			height: 600px
@@ -573,10 +681,10 @@ a:hover
 			width: 48%
 			display: inline-block
 			vertical-align: top
-		.views-row-2, .views-row-4, .views-row-6, .views-row-8
-			margin-left: 11.5px
-		.views-row-1, .views-row-3, .views-row-5, .views-row-7
-			margin-right: 11.5px
+		.views-row-even
+			margin-left: 1.4%
+		.views-row-odd
+			margin-right: 1.4%
 
 //Article node pane
 .node_pane.article
@@ -850,6 +958,7 @@ a:hover
 		max-width: 640px
 		height: 360px
 		margin-bottom: 40px
+		padding: 0px
 
 //Pages node pane
 .node_pane.pages
