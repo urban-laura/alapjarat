@@ -99,6 +99,14 @@ a:hover
 	display: none
 	.pane-content
 		display: none
+	#category, #car-partners, #connection
+		.view-content
+			display: none
+		.pane-content
+			display: block
+	#main-menu-2019
+		.pane-content
+			display: block
 
 //Pager
 .item-list
@@ -214,6 +222,9 @@ a:hover
 			color: #666666
 
 //Main menu
+.header.menu-active
+	background-color: #333332
+	border-bottom: solid 1px #666666
 .header
 	background-color: #ffffff
 	border-top: solid 1px #e6e6e6
@@ -235,7 +246,6 @@ a:hover
 			margin-right: 30px
 			display: none
 		#ham-menu
-			//padding: 0px !important
 			margin-right: 30px
 		a
 			color: #333332 !important
@@ -277,15 +287,77 @@ a:hover
 			#edit-search-api-views-fulltext-wrapper
 				padding: 7px 0px
 
+//Mobile menu
+.mobile-menu
+	width: 100%
+	background-color: #333332
+	#mini-panel-mobil_menu
+		.panels-flexible-region-first
+			width: 100%
+		.pane-title
+			cursor: pointer
+		.view-header
+			cursor: pointer
+		li
+			margin: 0
+			padding: 0
+			list-style: none
+		.pane-title, .view-header, #main-menu-2019 a, #connection .link
+			display: block
+			line-height: 50px
+			font-size: 14px
+			font-weight: bold
+			border-bottom: dashed 1px #4d4d4d
+			text-transform: uppercase
+			color: white !important
+			padding-left: 25px
+		.pane-content ul
+			background-color: #272727
+			margin: 0px
+		.pane-content
+			li
+				a
+					color: white !important
+					line-height: 50px
+					font-size: 14px
+					font-weight: bold
+					padding-left: 50px
+					text-transform: uppercase
+				a::before
+					content: "-"
+					margin-right: 5px
+		.pane-content li
+			border-bottom: dashed 1px #4d4d4d
+		#main-menu-2019
+			.pane-content ul
+				background-color: transparent
+			.pane-content
+				li
+					border-bottom: 0px
+					a::before
+						content: none
+		#connection
+			a
+				text-transform: none
+			.tel::before, .mail::before
+				vertical-align: middle
+				margin-right: 10px
+			.tel::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/phone.png")
+			.mail::before
+				content: url("/sites/all/themes/alapjarat_theme_2019/images/email.png")
+		.m-active
+			.pane-title, .view-header, #main-menu-2019 a, #connection a
+				color: #C72026 !important
+		.m-active.pane-title
+			color: #C72026 !important
+
 //Default first block
 .panels-flexible-region-first.first-block
 	width: 100%
 	.panels-flexible-region-inside-first
 		max-width: 1115px
 		margin: auto
-	#mini-panel-mobil_menu
-		.pane-title
-			cursor: pointer
 	#mini-panel-hamburger_menu_2019
 		overflow: hidden
 		.panels-flexible-region-inside-first
@@ -311,11 +383,16 @@ a:hover
 			li
 				list-style: none
 				margin: 0px
+				padding: 0px
+			ul
+				padding-top: 10px
 			a
 				color: white !important
 				font-size: 16px
 				font-family: magistral, sans-serif
 				font-weight: 500
+			a:hover
+				color: #C72026 !important
 	#default-page-big-banner
 		max-width: 970px
 		height: 250px
