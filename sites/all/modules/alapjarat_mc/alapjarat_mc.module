@@ -1,0 +1,129 @@
+<?php
+
+function alapjarat_mc_menu() {
+
+  $items['media-collection/%'] = array(
+    'title' => 'check-images',
+    'page callback' => 'alapjarat_mc_media_page',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'main-menu',
+  );
+
+  return $items;
+}
+
+function alapjarat_mc_ctools_plugin_directory($owner, $plugin_type) {
+	if ($owner == 'ctools' && $plugin_type == 'content_types') {
+		return 'plugins/content_types';
+	}
+}
+
+function alapjarat_mc_collect_gallery_images() {
+  $query = db_select('field_data_field_gallery', 'fg');
+  $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
+  $query
+  ->fields('n', array('title', 'status', 'changed'))
+  ->fields('fg', array('field_gallery_fid'))
+  ->condition('n.status', 1, '=')
+  ->orderBy('n.changed', 'DESC');
+  $query->range(0,9);
+  //$query->isNull('wp.entity_id');
+  $results = $query
+  ->execute()
+  ->fetchAll();
+  
+  foreach ($results as $record) {
+    $file = file_load($record->field_gallery_fid);
+    $media[] = array(
+      'type' => 'gallery_image',
+      'title' => $record->title,
+      'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
+      'publishDate' => $record->changed,
+      'destination' => file_create_url($file->uri),
+    );
+  }
+
+  return $media;
+}
+
+function alapjarat_mc_collect_youtube_channel_videos() {
+  $apikey = 'AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34';
+  $channelid = 'UCueleOZ2QFAaVSHXheZlFig'; // alapjarat
+
+  $urltemplate = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34&channelId=###channelID###&part=snippet,id&order=date&maxResults=9";
+
+  $response = _alapjarat_mc_curl_get_contents(str_replace('###channelID###', $channelid, $urltemplate));
+
+  foreach ($response['items'] as $video) {
+    $media[] = array(
+      'type' => 'video',
+      'title' => $video['snippet']['title'],
+      'thumbnail' => $video['snippet']['thumbnails']['medium'],
+      'publishDate' => strtotime($video['snippet']['publishedAt']),
+      'destination' => 'https://www.youtube.com/watch?v=' . $video['id']['videoId'],
+    );
+  }
+
+  return $media;
+}
+
+function alapjarat_mc_merged_media() {
+	$images = alapjarat_mc_collect_gallery_images();
+	$videos = alapjarat_mc_collect_youtube_channel_videos();
+
+	$all_media = array_merge($images, $videos);
+    usort($all_media, function($a, $b) {
+      return $a['publishDate'] - $b['publishDate'];
+    });
+
+    return $all_media;
+}
+
+function alapjarat_mc_media_page($type = 'all') {
+  drupal_add_css(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.css', array('scope' => 'header'));
+  drupal_add_css(drupal_get_path('module', 'alapjarat_mc') .'/lightbox/css/lightbox.css', array('scope' => 'header'));
+  drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'external');
+  drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/lightbox/js/lightbox.js', array('scope' => 'header'));
+
+  $all_media = alapjarat_mc_merged_media();
+  foreach ($all_media as $media) {
+  	if ($media['type'] == 'gallery_image') {
+  	  $output[] = theme('alapjarat_mc_image', array('item' => $media));
+  	}
+  	if ($media['type'] == 'video') {
+  	  $output[] = theme('alapjarat_mc_video', array('item' => $media));
+  	}
+  }
+
+  $page = file_get_contents(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc_page.tpl.php');
+  $content = implode('', $output);
+
+  return str_replace('###content###', $content, $page);
+}
+
+function _alapjarat_mc_curl_get_contents($url){
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+  $data = curl_exec($ch);
+  curl_close($ch);
+  $data = json_decode($data, true);
+  return $data;
+}
+
+function alapjarat_mc_theme() {
+   return array(
+     'alapjarat_mc_image' => array(
+       'variables' => array('item' => NULL),
+       'template' => 'alapjarat_mc_image',
+     ),
+     'alapjarat_mc_video' => array(
+       'variables' => array('item' => NULL),
+       'template' => 'alapjarat_mc_video',
+     ),
+   );
+}

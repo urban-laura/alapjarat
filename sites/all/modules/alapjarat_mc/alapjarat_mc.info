@@ -1,0 +1,5 @@
+name = Alapjárat Media Collection
+description = Collect all images and Youtube videos on one platform
+core = 7.x
+version = 7.x-1.x
+

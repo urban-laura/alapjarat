@@ -1,0 +1,16 @@
+.alapjarat-mc-gallery-item {
+	float: left;
+	margin: 10px;
+	width: 320px;
+}
+
+.alapjarat-mc-gallery-item-video .play-icon{
+  background: url(/sites/all/modules/alapjarat_mc/images/Video-PLay-Icon.png);
+    display: block;
+    width: 130px;
+    height: 132px;
+    position: absolute;
+    margin: -161px 0 0 89px;
+    opacity: 0.9;
+    background-size: 130px;
+}
