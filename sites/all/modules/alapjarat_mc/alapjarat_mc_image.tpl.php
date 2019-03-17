@@ -3,4 +3,5 @@
     <div class="item-image"><?php print $item['thumbnail'];?></div>
   </a>
   <div class="item-title"><?php print $item['title'];?></div>
+  <div class="item-date"><?php print date('Y-m-d', $item['publishDate']);?></div>
 </div>

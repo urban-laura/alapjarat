@@ -11,6 +11,14 @@ function alapjarat_mc_menu() {
     'menu_name' => 'main-menu',
   );
 
+  $items['youtube-test'] = array(
+    'title' => 'check-images',
+    'page callback' => 'alapjarat_mc_youtube_test',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'main-menu',
+  );
+
   return $items;
 }
 
@@ -21,6 +29,13 @@ function alapjarat_mc_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 function alapjarat_mc_collect_gallery_images() {
+
+  if (isset($_GET['page'])) {
+    $offset = $_GET['page'] * 10;
+  } else {
+    $offset = 0;
+  }
+
   $query = db_select('field_data_field_gallery', 'fg');
   $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
   $query
@@ -28,12 +43,36 @@ function alapjarat_mc_collect_gallery_images() {
   ->fields('fg', array('field_gallery_fid'))
   ->condition('n.status', 1, '=')
   ->orderBy('n.changed', 'DESC');
-  $query->range(0,9);
+  $query->range($offset, 10);
   //$query->isNull('wp.entity_id');
   $results = $query
   ->execute()
   ->fetchAll();
   
+  foreach ($results as $record) {
+    $file = file_load($record->field_gallery_fid);
+    $media[] = array(
+      'type' => 'gallery_image',
+      'title' => $record->title,
+      'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
+      'publishDate' => $record->changed,
+      'destination' => file_create_url($file->uri),
+    );
+  }
+
+  $query = db_select('field_data_field_media', 'fg');
+  $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
+  $query
+  ->fields('n', array('title', 'status', 'changed'))
+  ->fields('fg', array('field_media_fid'))
+  ->condition('n.status', 1, '=')
+  ->orderBy('n.changed', 'DESC');
+  $query->range($offset, 10);
+  //$query->isNull('wp.entity_id');
+  $results = $query
+  ->execute()
+  ->fetchAll();
+
   foreach ($results as $record) {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
@@ -51,10 +90,22 @@ function alapjarat_mc_collect_gallery_images() {
 function alapjarat_mc_collect_youtube_channel_videos() {
   $apikey = 'AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34';
   $channelid = 'UCueleOZ2QFAaVSHXheZlFig'; // alapjarat
+  $playlistid = 'UUueleOZ2QFAaVSHXheZlFig';
 
   $urltemplate = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34&channelId=###channelID###&part=snippet,id&order=date&maxResults=9";
+  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistid&key=$apikey&maxResults=20&order=date";
 
-  $response = _alapjarat_mc_curl_get_contents(str_replace('###channelID###', $channelid, $urltemplate));
+  if (isset($_GET['npt'])) {
+    $pageToken = $_GET['npt'];
+    $urltemplate .= "&pageToken=$pageToken";
+  }
+
+  if (isset($_GET['ppt'])) {
+    $pageToken = $_GET['ppt'];
+    $urltemplate .= "&pageToken=$pageToken";
+  }
+
+  $response = _alapjarat_mc_curl_get_contents($urltemplate);
 
   foreach ($response['items'] as $video) {
     $media[] = array(
@@ -69,13 +120,38 @@ function alapjarat_mc_collect_youtube_channel_videos() {
   return $media;
 }
 
+function _alapjarat_mc_get_pager_tokens() {
+  $apikey = 'AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34';
+  $channelid = 'UCueleOZ2QFAaVSHXheZlFig'; // alapjarat
+  $playlistid = 'UUueleOZ2QFAaVSHXheZlFig';
+
+  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistid&key=$apikey&maxResults=20&order=date";
+
+  if (isset($_GET['npt'])) {
+    $pageToken = $_GET['npt'];
+    $urltemplate .= "&pageToken=$pageToken";
+  }
+
+  if (isset($_GET['ppt'])) {
+    $pageToken = $_GET['ppt'];
+    $urltemplate .= "&pageToken=$pageToken";
+  }
+
+  $response = _alapjarat_mc_curl_get_contents($urltemplate);
+
+  return array(
+    'nextPageToken' => isset($response['nextPageToken']) ? $response['nextPageToken'] : NULL,
+    'prevPageToken' => isset($response['prevPageToken']) ? $response['prevPageToken'] : NULL,
+  );
+}
+
 function alapjarat_mc_merged_media() {
 	$images = alapjarat_mc_collect_gallery_images();
 	$videos = alapjarat_mc_collect_youtube_channel_videos();
 
 	$all_media = array_merge($images, $videos);
     usort($all_media, function($a, $b) {
-      return $a['publishDate'] - $b['publishDate'];
+      return $b['publishDate'] - $a['publishDate'];
     });
 
     return $all_media;
@@ -97,10 +173,34 @@ function alapjarat_mc_media_page($type = 'all') {
   	}
   }
 
-  $page = file_get_contents(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc_page.tpl.php');
+  $page_template = file_get_contents(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc_page.tpl.php');
   $content = implode('', $output);
+  $page = str_replace('###content###', $content, $page_template);
 
-  return str_replace('###content###', $content, $page);
+  $pager_tokens = _alapjarat_mc_get_pager_tokens();
+
+  if (isset($_GET['page'])) {
+    if ($_GET['page'] > 1) {
+      $prevpage = '&page=' . ($_GET['page'] * 1 - 1);
+    } else {
+      $prevpage = '';
+    }
+    $nextpage = '&page=' . ($_GET['page'] * 1 + 1);
+  } else {
+    $nextpage = '&page=2';
+  }
+
+  if (!is_null($pager_tokens['nextPageToken'])) {
+    $next_page = '<a href="/media-collection/all?npt=' . $pager_tokens['nextPageToken'] . $nextpage . '">next</a>';
+  }
+  if (!is_null($pager_tokens['prevPageToken'])) {
+    $prev_page = '<a href="/media-collection/all?ppt=' . $pager_tokens['prevPageToken'] . $prevpage . '">prev</a>';
+  }
+  
+  $page = str_replace('###pager-next###', $next_page, $page);
+  $page = str_replace('###pager-prev###', $prev_page, $page);
+
+  return $page;
 }
 
 function _alapjarat_mc_curl_get_contents($url){
@@ -126,4 +226,22 @@ function alapjarat_mc_theme() {
        'template' => 'alapjarat_mc_video',
      ),
    );
+}
+
+function alapjarat_mc_youtube_test() {
+  $apikey = 'AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34';
+  $channelid = 'UCueleOZ2QFAaVSHXheZlFig'; // alapjarat
+  $listid = 'UUueleOZ2QFAaVSHXheZlFig';
+
+  $urltemplate = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34&channelId=###channelID###&part=snippet,id&order=date&maxResults=9";
+
+  $urltemplate = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=$channelid&key=$apikey";
+  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$listid&key=$apikey&maxResults=20";
+
+  $response = _alapjarat_mc_curl_get_contents($urltemplate);
+
+  dpm($response);
+
+
+  return 'HEY!';
 }

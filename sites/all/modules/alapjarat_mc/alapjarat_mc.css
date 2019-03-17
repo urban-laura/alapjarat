@@ -14,3 +14,7 @@
     opacity: 0.9;
     background-size: 130px;
 }
+
+#alapjarat-mc-pager {
+    clear: both;
+}

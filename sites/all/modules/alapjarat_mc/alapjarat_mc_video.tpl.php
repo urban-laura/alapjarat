@@ -6,4 +6,5 @@
     </a>
   </div>
   <div class="item-title"><?php print $item['title'];?></div>
+  <div class="item-date"><?php print date('Y-m-d', $item['publishDate']);?></div>
 </div>

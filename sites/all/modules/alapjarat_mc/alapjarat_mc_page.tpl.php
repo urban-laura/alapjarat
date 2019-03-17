@@ -13,4 +13,8 @@
 	<div id="alapjarat-mc-content">
 		###content###
 	</div>
+	<div id="alapjarat-mc-pager">
+		<div id="prev-page">###pager-prev###</div>
+		<div id="next-page">###pager-next###</div>
+	</div>
 </div>
