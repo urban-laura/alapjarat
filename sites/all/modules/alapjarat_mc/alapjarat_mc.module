@@ -83,9 +83,9 @@ function alapjarat_mc_merged_media() {
 
 function alapjarat_mc_media_page($type = 'all') {
   drupal_add_css(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.css', array('scope' => 'header'));
-  drupal_add_css(drupal_get_path('module', 'alapjarat_mc') .'/lightbox/css/lightbox.css', array('scope' => 'header'));
-  drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'external');
-  drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/lightbox/js/lightbox.js', array('scope' => 'header'));
+  //drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'external');
+  drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/colorbox/jquery.colorbox.js', array('scope' => 'header'));
+  drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.js', array('scope' => 'header'));
 
   $all_media = alapjarat_mc_merged_media();
   foreach ($all_media as $media) {
