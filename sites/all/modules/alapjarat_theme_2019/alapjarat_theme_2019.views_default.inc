@@ -247,7 +247,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -364,7 +364,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['alter']['path'] = '[path]';
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -445,7 +445,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '35';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -536,7 +536,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -627,7 +627,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -718,7 +718,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '35';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -910,7 +910,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1001,7 +1001,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1092,7 +1092,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1182,7 +1182,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['alter']['path'] = '[path]';
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '55';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1246,7 +1246,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '35';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1333,7 +1333,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '35';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1420,7 +1420,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '35';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
@@ -1512,7 +1512,7 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['fields']['field_title2']['field'] = 'field_title2';
   $handler->display->display_options['fields']['field_title2']['label'] = '';
   $handler->display->display_options['fields']['field_title2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '40';
+  $handler->display->display_options['fields']['field_title2']['alter']['max_length'] = '35';
   $handler->display->display_options['fields']['field_title2']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_title2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_title2']['type'] = 'text_plain';
