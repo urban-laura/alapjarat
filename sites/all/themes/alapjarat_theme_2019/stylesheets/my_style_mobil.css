@@ -624,97 +624,102 @@
   }
 }
 @media screen and (max-width: 450px) {
-  /* line 405, ../sass/my_style_mobil.sass */
+  /* line 404, ../sass/my_style_mobil.sass */
+  .letterhead .panels-flexible-row-inside {
+    max-width: 195px;
+  }
+
+  /* line 408, ../sass/my_style_mobil.sass */
   .mobile-menu #mini-panel-mobil_menu .pane-title, .mobile-menu #mini-panel-mobil_menu .view-header, .mobile-menu #mini-panel-mobil_menu #main-menu-2019 a, .mobile-menu #mini-panel-mobil_menu #connection .link {
     font-size: 12px;
   }
-  /* line 409, ../sass/my_style_mobil.sass */
+  /* line 412, ../sass/my_style_mobil.sass */
   .mobile-menu #mini-panel-mobil_menu .pane-content li a {
     font-size: 12px;
     padding-left: 40px;
   }
 }
 @media screen and (max-width: 400px) {
-  /* line 418, ../sass/my_style_mobil.sass */
+  /* line 421, ../sass/my_style_mobil.sass */
   .mobile-menu #mini-panel-mobil_menu .pane-content li a {
     font-size: 11px;
     padding-left: 35px;
   }
 
-  /* line 423, ../sass/my_style_mobil.sass */
+  /* line 426, ../sass/my_style_mobil.sass */
   .panels-flexible-region-first.first-block #one .views-field-path, .panels-flexible-region-first.first-block #four .views-field-path {
     padding: 10px;
     padding-bottom: 61px;
   }
-  /* line 427, ../sass/my_style_mobil.sass */
+  /* line 430, ../sass/my_style_mobil.sass */
   .panels-flexible-region-first.first-block #one .views-field-path h3, .panels-flexible-region-first.first-block #four .views-field-path h3 {
     font-size: 15px;
     line-height: 18px;
   }
-  /* line 430, ../sass/my_style_mobil.sass */
+  /* line 433, ../sass/my_style_mobil.sass */
   .panels-flexible-region-first.first-block #one .views-field-field-tags, .panels-flexible-region-first.first-block #four .views-field-field-tags {
     bottom: 36px;
     margin-left: 10px;
     margin-right: 0px;
   }
-  /* line 434, ../sass/my_style_mobil.sass */
+  /* line 437, ../sass/my_style_mobil.sass */
   .panels-flexible-region-first.first-block #one .views-field-field-tags a, .panels-flexible-region-first.first-block #four .views-field-field-tags a {
     font-size: 10px;
     padding: 3px 5px;
   }
-  /* line 437, ../sass/my_style_mobil.sass */
+  /* line 440, ../sass/my_style_mobil.sass */
   .panels-flexible-region-first.first-block #one .views-field-published-at, .panels-flexible-region-first.first-block #four .views-field-published-at {
     margin-left: 10px;
     bottom: 80px;
   }
-  /* line 441, ../sass/my_style_mobil.sass */
+  /* line 444, ../sass/my_style_mobil.sass */
   .panels-flexible-region-first.first-block #four .views-field-published-at {
     bottom: 53px;
   }
 
-  /* line 445, ../sass/my_style_mobil.sass */
+  /* line 448, ../sass/my_style_mobil.sass */
   .front-page .small .views-field-path, .front-page .small .views-field-published-at {
     margin-left: 135px;
   }
-  /* line 447, ../sass/my_style_mobil.sass */
+  /* line 450, ../sass/my_style_mobil.sass */
   .front-page .small .views-field-path {
     height: 51px;
   }
-  /* line 449, ../sass/my_style_mobil.sass */
+  /* line 452, ../sass/my_style_mobil.sass */
   .front-page .small .views-field-path h3 {
     font-size: 13px;
     line-height: 18px;
   }
-  /* line 452, ../sass/my_style_mobil.sass */
+  /* line 455, ../sass/my_style_mobil.sass */
   .front-page .small img {
     width: 125px;
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 456, ../sass/my_style_mobil.sass */
+  /* line 459, ../sass/my_style_mobil.sass */
   .header .search #search input#edit-search-api-views-fulltext, .header .search #search input#edit-keys {
     width: 219px;
   }
 }
 @media screen and (max-width: 350px) {
-  /* line 462, ../sass/my_style_mobil.sass */
+  /* line 465, ../sass/my_style_mobil.sass */
   .front-page .small .views-row {
     padding: 5px;
   }
-  /* line 464, ../sass/my_style_mobil.sass */
+  /* line 467, ../sass/my_style_mobil.sass */
   .front-page .small .views-field-path, .front-page .small .views-field-published-at {
     margin-left: 125px;
   }
-  /* line 466, ../sass/my_style_mobil.sass */
+  /* line 469, ../sass/my_style_mobil.sass */
   .front-page .small .views-field-path {
     height: 45px;
   }
-  /* line 468, ../sass/my_style_mobil.sass */
+  /* line 471, ../sass/my_style_mobil.sass */
   .front-page .small .views-field-path h3 {
     font-size: 12px;
     line-height: 16px;
   }
-  /* line 471, ../sass/my_style_mobil.sass */
+  /* line 474, ../sass/my_style_mobil.sass */
   .front-page .small img {
     width: 115px;
   }
