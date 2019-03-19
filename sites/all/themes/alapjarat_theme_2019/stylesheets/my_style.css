@@ -65,7 +65,7 @@ body.page-impress .right-bar #right-top-5, body.node-type-pages .right-bar #righ
 }
 
 /* line 43, ../sass/my_style.sass */
-body.node-type-pages .right-bar {
+body.node-type-pages .right-bar, body.page-autos-kifejezesek .right-bar {
   padding-top: 40px;
 }
 
@@ -1629,170 +1629,190 @@ a:hover {
   clear: both;
 }
 
-/* line 1086, ../sass/my_style.sass */
+/* line 1085, ../sass/my_style.sass */
+.view-glossary-list {
+  padding-top: 40px;
+}
+/* line 1087, ../sass/my_style.sass */
+.view-glossary-list .view-header {
+  border-bottom: #C72026 solid 2px;
+  margin-bottom: 20px;
+}
+/* line 1090, ../sass/my_style.sass */
+.view-glossary-list .view-header p {
+  color: white;
+  font-size: 14px;
+  background-color: #C72026;
+  display: inline-block;
+  padding: 6px 11px;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+/* line 1099, ../sass/my_style.sass */
 .menu-footer {
   background-color: #C72026;
   padding: 35px 0px !important;
 }
-/* line 1089, ../sass/my_style.sass */
+/* line 1102, ../sass/my_style.sass */
 .menu-footer .panels-flexible-row-inside {
   max-width: 1115px;
   margin: auto;
 }
-/* line 1092, ../sass/my_style.sass */
+/* line 1105, ../sass/my_style.sass */
 .menu-footer .pane-title {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
   font-size: 16px;
 }
-/* line 1097, ../sass/my_style.sass */
+/* line 1110, ../sass/my_style.sass */
 .menu-footer a {
   color: #ffffff !important;
   font-size: 14px;
 }
-/* line 1100, ../sass/my_style.sass */
+/* line 1113, ../sass/my_style.sass */
 .menu-footer li {
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
   line-height: 22px;
 }
-/* line 1105, ../sass/my_style.sass */
+/* line 1118, ../sass/my_style.sass */
 .menu-footer .pane-content {
   padding-top: 10px;
 }
-/* line 1107, ../sass/my_style.sass */
+/* line 1120, ../sass/my_style.sass */
 .menu-footer .view-content {
   padding-top: 15px;
 }
-/* line 1110, ../sass/my_style.sass */
+/* line 1123, ../sass/my_style.sass */
 .menu-footer #partners .views-row {
   display: inline-block;
   margin-right: 15px;
   margin-bottom: 15px;
 }
-/* line 1114, ../sass/my_style.sass */
+/* line 1127, ../sass/my_style.sass */
 .menu-footer #partners .pane-content {
   padding-top: 0;
 }
-/* line 1116, ../sass/my_style.sass */
+/* line 1129, ../sass/my_style.sass */
 .menu-footer #partners .pane-content img {
   opacity: 0.3;
 }
-/* line 1118, ../sass/my_style.sass */
+/* line 1131, ../sass/my_style.sass */
 .menu-footer .link {
   display: block;
   text-transform: uppercase;
   line-height: 22px;
 }
-/* line 1122, ../sass/my_style.sass */
+/* line 1135, ../sass/my_style.sass */
 .menu-footer .mail {
   margin-bottom: 10px;
 }
-/* line 1124, ../sass/my_style.sass */
+/* line 1137, ../sass/my_style.sass */
 .menu-footer .mail, .menu-footer .tel {
   display: block;
   line-height: 23px;
 }
-/* line 1127, ../sass/my_style.sass */
+/* line 1140, ../sass/my_style.sass */
 .menu-footer .tel::before, .menu-footer .mail::before {
   vertical-align: middle;
   margin-right: 10px;
 }
-/* line 1130, ../sass/my_style.sass */
+/* line 1143, ../sass/my_style.sass */
 .menu-footer .tel::before {
   content: url("/sites/all/themes/alapjarat_theme_2019/images/phone.png");
 }
-/* line 1132, ../sass/my_style.sass */
+/* line 1145, ../sass/my_style.sass */
 .menu-footer .mail::before {
   content: url("/sites/all/themes/alapjarat_theme_2019/images/email.png");
 }
-/* line 1134, ../sass/my_style.sass */
+/* line 1147, ../sass/my_style.sass */
 .menu-footer .popular-tags {
   width: 17%;
   margin-right: 6%;
 }
-/* line 1137, ../sass/my_style.sass */
+/* line 1150, ../sass/my_style.sass */
 .menu-footer .calculator {
   width: 23%;
   margin-right: 6%;
 }
-/* line 1140, ../sass/my_style.sass */
+/* line 1153, ../sass/my_style.sass */
 .menu-footer .car-partner {
   width: 27.5%;
   margin-right: 5.5%;
 }
-/* line 1143, ../sass/my_style.sass */
+/* line 1156, ../sass/my_style.sass */
 .menu-footer .connection {
   width: 15%;
 }
 
-/* line 1145, ../sass/my_style.sass */
+/* line 1158, ../sass/my_style.sass */
 .my-footer {
   background-color: #C72026;
   padding: 15px 0px !important;
 }
-/* line 1148, ../sass/my_style.sass */
+/* line 1161, ../sass/my_style.sass */
 .my-footer .panels-flexible-row-inside {
   max-width: 1115px;
   margin: auto;
 }
-/* line 1151, ../sass/my_style.sass */
+/* line 1164, ../sass/my_style.sass */
 .my-footer li {
   display: inline-block;
   font-size: 14px;
   color: #8C181B;
 }
-/* line 1155, ../sass/my_style.sass */
+/* line 1168, ../sass/my_style.sass */
 .my-footer .copyright {
   width: 65%;
 }
-/* line 1157, ../sass/my_style.sass */
+/* line 1170, ../sass/my_style.sass */
 .my-footer .social-media-menu {
   width: 35%;
 }
-/* line 1159, ../sass/my_style.sass */
+/* line 1172, ../sass/my_style.sass */
 .my-footer .right {
   float: right;
 }
-/* line 1161, ../sass/my_style.sass */
+/* line 1174, ../sass/my_style.sass */
 .my-footer .left {
   float: left;
 }
-/* line 1164, ../sass/my_style.sass */
+/* line 1177, ../sass/my_style.sass */
 .my-footer #social-media .views-row {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 1167, ../sass/my_style.sass */
+/* line 1180, ../sass/my_style.sass */
 .my-footer #social-media .view-content {
   display: inline-block;
   float: right;
 }
 
-/* line 1171, ../sass/my_style.sass */
+/* line 1184, ../sass/my_style.sass */
 .editor-menu {
   background: black;
   width: 86%;
 }
 
-/* line 1174, ../sass/my_style.sass */
+/* line 1187, ../sass/my_style.sass */
 .user_name {
   width: 14%;
   background: black;
 }
 
-/* line 1177, ../sass/my_style.sass */
+/* line 1190, ../sass/my_style.sass */
 #user_name {
   float: right;
 }
 
-/* line 1179, ../sass/my_style.sass */
+/* line 1192, ../sass/my_style.sass */
 #my_admin_menu, #user_name {
   padding: 10px 5px;
 }
-/* line 1181, ../sass/my_style.sass */
+/* line 1194, ../sass/my_style.sass */
 #my_admin_menu p, #user_name p {
   color: white !important;
   margin: 0;
@@ -1801,15 +1821,15 @@ a:hover {
   padding: 0px 5px;
   width: -moz-fit-content;
 }
-/* line 1188, ../sass/my_style.sass */
+/* line 1201, ../sass/my_style.sass */
 #my_admin_menu ul li.leaf, #user_name ul li.leaf {
   display: inline;
 }
-/* line 1190, ../sass/my_style.sass */
+/* line 1203, ../sass/my_style.sass */
 #my_admin_menu ul li.leaf a, #user_name ul li.leaf a {
   color: white !important;
 }
-/* line 1192, ../sass/my_style.sass */
+/* line 1205, ../sass/my_style.sass */
 #my_admin_menu ul li.leaf a:hover, #user_name ul li.leaf a:hover {
   color: red !important;
 }
