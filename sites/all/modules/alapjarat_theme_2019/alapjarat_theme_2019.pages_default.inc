@@ -675,7 +675,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->panel = 'center';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:field_test_options';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',

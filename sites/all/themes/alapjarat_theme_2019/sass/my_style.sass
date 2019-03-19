@@ -243,6 +243,7 @@ a:hover
 		max-width: 1115px
 		margin: auto
 	#main_menu
+		height: 52px
 		.pane-content
 			display: inline-block
 		#mobil-menu
@@ -737,10 +738,7 @@ a:hover
 			width: 75%
 		li
 			margin-bottom: 15px
-			display: flex
-			min-width: 90%
-			p
-				margin: 0px
+			display: block
 	ul
 		list-style: none
 		li::before
@@ -770,17 +768,6 @@ a:hover
 		p
 			margin: 0px
 			padding: 20px 0px
-	h3
-		margin: 0
-		padding-top: 15px
-		padding-bottom: 25px
-		font-size: 30px !important
-		font-weight: 300
-		font-family: magistral, sans-serif
-		span
-			font-size: 30px !important
-			font-weight: 300
-			font-family: magistral, sans-serif
 	h4
 		margin-top: 0px
 		span
@@ -867,7 +854,17 @@ a:hover
 		p, span, ul, ol
 			font-size: 18px !important
 			font-family: Montserrat !important
-		//x
+		h3
+			margin: 0
+			padding-top: 15px
+			padding-bottom: 25px
+			font-size: 30px !important
+			font-weight: 300
+			font-family: magistral, sans-serif
+			span
+				font-size: 30px !important
+				font-weight: 300
+				font-family: magistral, sans-serif
 		ul li a
 			overflow-wrap: break-word
 			word-wrap: break-word
@@ -951,10 +948,11 @@ a:hover
 		padding-top: 15px
 		.pane-title
 			float: left
+			padding-right: 10px
 		.field-item
 			a
 				float: left
-				padding-left: 10px
+				padding-right: 10px
 				color: #C72026 !important
 				text-decoration: none
 			a::before
@@ -1083,8 +1081,6 @@ a:hover
 			margin: 0
 	.clear-both
 		clear: both
-
-
 
 //Footer
 .menu-footer
