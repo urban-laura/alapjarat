@@ -123,6 +123,11 @@ function alapjarat_common_form_alter(&$form, &$form_state, $form_id) {
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search...');
 	}
 
+    if($form['#id'] == 'views-exposed-form-search-api-search-page-1') {
+        //hide($form['submit']);
+        $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search...');
+    }
+
 	if($form['#id'] == 'a-article-node-form') {
 		hide($form['field_hiden_select']);
 		hide($form['options']['promote']);

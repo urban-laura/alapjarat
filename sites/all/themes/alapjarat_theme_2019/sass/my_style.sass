@@ -91,15 +91,19 @@ a:hover
 	background-color: #dbe0e4
 
 //Display
-#edit-submit-search-api-search
+#mobile-logo
 	display: none
 #mini-panel-hamburger_menu_2019
+	display: none
+#search-mobile
+	display: none
+#mobile-search
 	display: none
 #mini-panel-mobil_menu
 	display: none
 	.pane-content
 		display: none
-	#category, #car-partners, #connection
+	#category, #car-partners, #connection, #glossory-list
 		.view-content
 			display: none
 		.pane-content
@@ -197,6 +201,9 @@ a:hover
 		font-size: 20px
 		font-weight: 600
 		margin-top: 15px
+		color: white
+		border: 0px
+		border-radius: 5px
 	input.mce_inline_error
 		border: solid 2px #C72026 !important
 		margin-bottom: 10px !important
@@ -234,14 +241,33 @@ a:hover
 			background: url("/sites/all/themes/alapjarat_theme_2019/images/hamburger_menu_x.png")
 			background-repeat: no-repeat
 			background-position: center
+	#mobile-search
+		background: url("/sites/all/themes/alapjarat_theme_2019/images/hamburger_menu_x.png")
+		background-repeat: no-repeat
+		background-position: center
+.header.mobile-search-active
+	#mobil-menu, .mobil-logo
+		width: 0px !important
+.header.main-menu-active
+	#mobile-search, .mobil-logo
+		width: 0px !important
 .header
 	background-color: #ffffff
 	border-top: solid 1px #e6e6e6
 	border-bottom: solid 1px #e6e6e6
 	height: 54px
+	position: relative
 	.panels-flexible-row-inside
 		max-width: 1115px
 		margin: auto
+	#mobile-search
+		background-image: url("/sites/all/themes/alapjarat_theme_2019/images/search.png")
+		background-repeat: no-repeat
+		background-position: center
+		width: 30px
+		height: 38px
+		margin: 7px 0px
+		cursor: pointer
 	#main_menu
 		height: 52px
 		.pane-content
@@ -254,7 +280,6 @@ a:hover
 			height: 52px
 			float: left
 			cursor: pointer
-			margin-right: 30px
 			display: none
 		#ham-menu
 			margin-right: 30px
@@ -278,25 +303,50 @@ a:hover
 			display: inline
 			padding: 0
 			margin: 0
-	.search
-		float: right
-		width: auto
-		#search
-			input#edit-search-api-views-fulltext, input#edit-keys
-				width: 255px
-				height: 38px
-				background-color: #F2F2F2
-				border: 0px
-				font-size: 14px
-				font-style: italic
-				font-weight: 200
-				padding-left: 20px
-				margin: 0px
-			.views-exposed-form .views-exposed-widget, .views-exposed-widgets
-				padding: 0px
-				margin: 0px
-			#edit-search-api-views-fulltext-wrapper
-				padding: 7px 0px
+	.mobil-logo
+		float: none
+		max-width: 165px
+		margin: auto
+
+//Search
+.search
+	float: right
+	width: auto
+	#search, #search-mobile
+		input#edit-search-api-views-fulltext, input#edit-keys
+			width: 255px
+			height: 38px
+			background-color: #F2F2F2
+			border: 0px
+			font-size: 14px
+			font-style: italic
+			font-weight: 200
+			padding-left: 20px
+			margin: 0px
+		.views-exposed-form .views-exposed-widget, .views-exposed-widgets
+			padding: 0px
+			margin: 0px
+		#edit-search-api-views-fulltext-wrapper
+			padding: 7px 0px
+		#edit-submit-search-api-search
+			background-image: url("/sites/all/themes/alapjarat_theme_2019/images/search.png")
+			background-repeat: no-repeat
+			background-position: center
+			background-color: #F2F2F2
+			width: 30px
+			height: 38px
+			margin: 7px 0px
+			font-size: 0px
+			border: 0px
+	#search-mobile
+		input#edit-search-api-views-fulltext, input#edit-keys
+			width: 440px
+		.views-exposed-widgets
+			max-width: 478px
+			margin: auto
+		#edit-submit-search-api-search
+			width: 38px
+			background-color: #C72026
 
 //Mobile menu
 .mobile-menu
@@ -347,6 +397,11 @@ a:hover
 					border-bottom: 0px
 					a::before
 						content: none
+		#glossory-list
+			a
+				color: white !important
+			a:hover
+				color: #C72026 !important
 		#connection
 			a
 				text-transform: none
@@ -877,6 +932,10 @@ a:hover
 			display: block
 			margin: auto
 			margin-bottom: 5px
+		.glossary-indicator
+			text-decoration-style: dotted
+			color: #333332 !important
+			cursor: help
 	.pane-node-field-source
 		padding-top: 15px
 		.pane-title
@@ -1084,6 +1143,9 @@ a:hover
 
 .view-glossary-list
 	padding-top: 40px
+	.views-row
+		line-height: 20px
+		margin-bottom: 10px
 	.view-header
 		border-bottom: #C72026 solid 2px
 		margin-bottom: 20px
@@ -1107,7 +1169,7 @@ a:hover
 		color: #ffffff
 		font-weight: bold
 		font-size: 16px
-	a
+	a, span
 		color: #ffffff !important
 		font-size: 14px
 	li
@@ -1115,6 +1177,10 @@ a:hover
 		margin: 0 !important
 		padding: 0 !important
 		line-height: 22px
+	span
+		display: block
+		margin-top: 10px
+		text-transform: uppercase
 	.pane-content
 		padding-top: 10px
 	.view-content
@@ -1133,7 +1199,7 @@ a:hover
 		text-transform: uppercase
 		line-height: 22px
 	.mail
-		margin-bottom: 10px
+		margin-bottom: 5px
 	.mail, .tel
 		display: block
 		line-height: 23px
@@ -1155,6 +1221,16 @@ a:hover
 		margin-right: 5.5%
 	.connection
 		width: 15%
+.glossory-list
+	.pane-content
+		padding-top: 0px
+	.pane-title
+		margin-top: 0px
+		a
+			font-size: 14px
+			font-weight: normal
+
+
 .my-footer
 	background-color: #C72026
 	padding: 15px 0px !important
