@@ -52,7 +52,7 @@ function alapjarat_mc_collect_gallery_images() {
   foreach ($results as $record) {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
-      'type' => 'gallery_image',
+      'type' => 'image',
       'title' => $record->title,
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
@@ -76,7 +76,7 @@ function alapjarat_mc_collect_gallery_images() {
   foreach ($results as $record) {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
-      'type' => 'gallery_image',
+      'type' => 'image',
       'title' => $record->title,
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
@@ -113,7 +113,7 @@ function alapjarat_mc_collect_youtube_channel_videos() {
       'title' => $video['snippet']['title'],
       'thumbnail' => $video['snippet']['thumbnails']['medium'],
       'publishDate' => strtotime($video['snippet']['publishedAt']),
-      'destination' => 'https://www.youtube.com/watch?v=' . $video['id']['videoId'],
+      'destination' => 'https://www.youtube.com/watch?v=' . $video['snippet']['resourceId']['videoId'],
     );
   }
 
@@ -145,27 +145,33 @@ function _alapjarat_mc_get_pager_tokens() {
   );
 }
 
-function alapjarat_mc_merged_media() {
-	$images = alapjarat_mc_collect_gallery_images();
-	$videos = alapjarat_mc_collect_youtube_channel_videos();
+function alapjarat_mc_merged_media($type = 'all') {
+  
+  $images = [];
+  if ($type == 'all' || $type == 'image') {
+    $images = alapjarat_mc_collect_gallery_images();
+  }
 
-	$all_media = array_merge($images, $videos);
-    usort($all_media, function($a, $b) {
-      return $b['publishDate'] - $a['publishDate'];
-    });
+  $videos = [];
+  if ($type == 'all' || $type == 'video') {
+    $videos = alapjarat_mc_collect_youtube_channel_videos();
+  }
 
-    return $all_media;
+  $all_media = array_merge($images, $videos);
+  usort($all_media, function($a, $b) {
+    return $b['publishDate'] - $a['publishDate'];
+  });      
+
+  return $all_media;
 }
 
 function alapjarat_mc_media_page($type = 'all') {
   drupal_add_css(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.css', array('scope' => 'header'));
-  //drupal_add_js('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', 'external');
-  drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/colorbox/jquery.colorbox.js', array('scope' => 'header'));
   drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.js', array('scope' => 'header'));
 
-  $all_media = alapjarat_mc_merged_media();
+  $all_media = alapjarat_mc_merged_media($type);
   foreach ($all_media as $media) {
-  	if ($media['type'] == 'gallery_image') {
+  	if ($media['type'] == 'image') {
   	  $output[] = theme('alapjarat_mc_image', array('item' => $media));
   	}
   	if ($media['type'] == 'video') {
@@ -191,10 +197,10 @@ function alapjarat_mc_media_page($type = 'all') {
   }
 
   if (!is_null($pager_tokens['nextPageToken'])) {
-    $next_page = '<a href="/media-collection/all?npt=' . $pager_tokens['nextPageToken'] . $nextpage . '">next</a>';
+    $next_page = '<a href="/media-collection/all?npt=' . $pager_tokens['nextPageToken'] . $nextpage . '">'. t('next') . '</a>';
   }
   if (!is_null($pager_tokens['prevPageToken'])) {
-    $prev_page = '<a href="/media-collection/all?ppt=' . $pager_tokens['prevPageToken'] . $prevpage . '">prev</a>';
+    $prev_page = '<a href="/media-collection/all?ppt=' . $pager_tokens['prevPageToken'] . $prevpage . '">' . t('previous') . '</a>';
   }
   
   $page = str_replace('###pager-next###', $next_page, $page);

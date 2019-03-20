@@ -4,17 +4,50 @@
 	width: 320px;
 }
 
-.alapjarat-mc-gallery-item-video .play-icon{
-  background: url(/sites/all/modules/alapjarat_mc/images/Video-PLay-Icon.png);
-    display: block;
-    width: 130px;
-    height: 132px;
-    position: absolute;
-    margin: -161px 0 0 89px;
-    opacity: 0.9;
-    background-size: 130px;
+.alapjarat-mc-gallery-item-video .item-title,
+.alapjarat-mc-gallery-item-image .item-title {
+    color: #fff;
+    margin: -59px 10px 0 10px;
+    background: url(./images/title-red-line.png) no-repeat;
+    position: relative;
+    padding: 10px 0 0 0;
+    display: none;
+    height: 59px;
+}
+
+.alapjarat-mc-gallery-item a.mc-video {
+  background: url(./images/icon-video-play.png) no-repeat;
+  display: block;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  margin: -154px 94px;
+  background-size: 125px;
+  z-index: 700;
+}
+
+.alapjarat-mc-gallery-item a.mc-video:hover {
+  background: url(./images/icon-video-play-small.png) no-repeat;
+  margin: -135px 0 0 128px;
+  background-size: 60px;
 }
 
 #alapjarat-mc-pager {
     clear: both;
 }
+
+.alapjarat-mc-gallery-item a.mc-image {
+   
+    width: 320px;
+    height: 181px;
+    display: block;
+    margin: -181px 0px;
+    z-index: 700;
+    position: absolute;
+}
+
+.alapjarat-mc-gallery-item a.mc-image:hover {
+   background: url(./images/icon-camera.png) no-repeat;
+    background-position: 125px 50px;
+}
+
