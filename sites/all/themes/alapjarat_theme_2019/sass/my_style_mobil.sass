@@ -156,6 +156,25 @@
 		.popular-tags, .calculator
 			display: none
 
+@media screen and (max-width: 750px)
+	.ecdh-api .panels-flexible-row-inside
+		max-width: 643px
+	#ecdh-api
+		.pane-title
+			font-size: 17px
+		span
+			font-size: 17px
+		.pane-content
+			padding-top: 10px
+		#edit-profiles, #ecdh-city
+			width: 225px
+			height: 50px
+			margin-right: 10px
+			padding-left: 10px
+		#ecdh-company-search-form .form-submit
+			height: 50px
+			width: 112px
+
 @media screen and (max-width: 710px)
 	.front-page
 		.views-field-field-tags
@@ -181,6 +200,58 @@
 					font-size: 13px
 			img
 				width: 125px
+	.node_pane
+		.view-header
+			.pane-title-2
+				font-size: 30px
+		#article4
+			.views-field-field-subtitled
+				display: none
+			.views-field-field-tags
+				line-height: 24px
+			.views-field-published-at, .views-field-path, .views-field-field-subtitled, .views-field-field-tags
+				padding: 0px
+				border-right: dashed 2px #e6e6e6
+			.views-row
+				border-bottom: dashed 2px #e6e6e6
+				margin-bottom: 25px
+			.views-field-path
+				padding-bottom: 5px
+				line-height: 24px
+	.node_pane.impress
+		.views-row
+			padding-bottom: 60px
+			.views-field-nothing
+				min-height: 180px
+			.left
+				width: 150px
+				padding-right: 20px
+			.picture
+				height: auto
+			.e-mail
+				width: 130px
+				padding: 5px 0px
+				margin-top: 10px
+				.button
+					font-size: 12px
+			.title-link
+				height: 25px
+			.title
+				font-size: 24px
+				line-height: 22px
+			.link
+				padding-top: 0px
+			p
+				padding-top: 10px
+				font-size: 16px
+
+
+@media screen and (max-width: 675px)
+	.taxonomy-page, .archive, .view-search-api-search
+		.author, .time
+			font-size: 13px
+		.left
+			max-width: 235px
 
 @media screen and (max-width: 655px)
 	.front-page
@@ -206,6 +277,33 @@
 			display: block !important
 	.menu-footer
 		display: none
+	.my-footer
+		.copyright, .social-media-menu
+			width: auto
+			display: inline-block
+		li
+			margin-bottom: 5px
+			font-size: 12px
+			display: block
+		.social-media-menu
+			float: right
+			margin-top: 10px
+	#ecdh-api
+		.pane-title
+			font-size: 16px
+		span
+			font-size: 22px
+			margin-bottom: 5px
+			display: block
+		#edit-profiles, #ecdh-city
+			width: 100%
+			margin-right: 0px
+			display: ruby
+			margin-bottom: 10px
+		#ecdh-company-search-form .form-submit
+			width: 100%
+		#ecdh-company-search-form .form-item
+			display: block
 
 @media screen and (max-width: 635px)
 	.front-page
@@ -223,8 +321,47 @@
 				margin-left: 0px
 			img
 				display: none
+	.taxonomy-page, .archive, .view-search-api-search
+		.left
+			max-width: 185px
+			margin-right: 10px
+		.author, .time
+			font-size: 12px
+		.author
+			line-height: 18px
+		h3
+			font-size: 18px
+			margin-top: 0px
 
 @media screen and (max-width: 600px)
+	.panels-flexible-region-first.first-block
+		#one, #four
+			.views-field-path
+				padding: 20px
+				padding-bottom: 55px
+				h3
+					font-size: 18px
+					line-height: 24px
+			.views-field-field-tags
+				a
+					padding: 5px
+					font-size: 11px
+			.views-field-published-at
+				font-size: 12px
+			.views-field-field-tags, .views-field-published-at
+				bottom: 45px
+		#four
+			.views-row
+				width: 100%
+			.views-row-1, .views-row-3
+				margin-right: 0px
+			.views-field-path
+				padding-bottom: 75px
+			.views-field-published-at
+				bottom: 68px
+				vertical-align: sub
+			.views-field-field-tags, .views-field-published-at
+				margin-left: 20px
 	.main-center
 		.right-bar
 			#event
@@ -244,6 +381,15 @@
 					width: 100%
 				.views-row:nth-last-child(2)
 					margin-bottom: 20px
+	.node_pane
+		#article4
+			.views-field-path
+				line-height: 22px
+				a
+					font-size: 16px
+			h4
+				margin-bottom: 20px
+
 @media screen and (max-width: 550px)
 	.front-page
 		padding-top: 15px
@@ -258,6 +404,114 @@
 			ul
 				margin-bottom: 20px
 				padding-top: 15px
+	.node_pane
+		.pane-node-title
+			.pane-content
+				font-size: 12px
+		.pane-node-field-tags
+			.field-item
+				a
+					font-size: 12px
+					padding: 4px 9px
+		.pane-node-field-published
+			padding-top: 3px
+			.field-items
+				font-size: 12px
+		.pane-node-published
+			padding-bottom: 25px
+		h1
+			font-size: 30px
+			line-height: 40px
+			p
+				padding: 15px 0px
+		#youtube
+			margin-top: 2px
+		#fb-like-share
+			margin-bottom: 10px
+			margin-top: 0px
+		#fb-save
+			float: left
+	body.page-impress
+		.right-bar
+			#right-top-5
+				.views-row
+					background-color: #F7F7F7
+	.main-center
+		.right-bar
+			#right-top-5
+				.views-row
+					max-width: 100%
+					width: 100%
+					margin-right: 0px
+					padding: 5px
+					background-color: white
+				.views-row:last-child
+					margin-bottom: 20px
+					.views-field-published-at
+						margin-top: 0px
+				.views-field-field-image
+					display: none
+				.views-field-path
+					h3
+						font-size: 16px
+				.views-field-field-tags
+					padding-top: 5px
+
+	.node_pane.impress
+		.view-content
+			padding-top: 45px
+		.views-row
+			padding-bottom: 45px
+			.views-field-nothing
+				min-height: 125px
+			.left
+				width: 80px
+				padding-right: 10px
+			.e-mail
+				width: 70px
+				padding: 5px 0px
+				margin-top: 10px
+				line-height: 13px
+			.title-link
+				height: 22px
+			.title
+				font-size: 22px
+			.link
+				width: 45px
+			.status
+				font-size: 17px
+			p
+				padding-top: 2px
+				font-size: 14px
+		.impress-else
+			.view-header
+				font-size: 22px
+			.view-content
+				padding-top: 10px
+				padding-bottom: 30px
+
+	.taxonomy-page, .archive, .view-search-api-search
+		.left
+			max-width: 135px
+			margin-right: 10px
+		.author, .time
+			font-size: 11px
+		.time::before
+			vertical-align: top
+		img
+			margin-bottom: 5px
+
+@media screen and (max-width: 520px)
+	.panels-flexible-region-first.first-block
+		#one
+			.views-field-path
+				padding-bottom: 75px
+			.views-field-published-at
+				display: block
+				margin-left: 20px
+				bottom: 94px
+			.views-field-field-tags, .views-field-published-at
+				height: 0px
 
 @media screen and (max-width: 500px)
 	.front-page
@@ -265,6 +519,36 @@
 			padding-right: 10px
 		.a-2
 			padding-left: 10px
+	.item-list
+		.pager
+			padding: 10px 0px
+			li
+				font-size: 14px
+				margin-right: 2px
+				a
+					line-height: 18px
+			.pager-current
+				line-height: 19px
+			.pager-ellipsis
+				line-height: 17px
+			.pager-current, a
+				width: 20px
+				height: 20px
+	.node_pane
+		#article4
+			.views-row
+				padding-bottom: 15px
+				width: 100%
+				margin-bottom: 15px
+			.views-row:last-child
+				border-bottom: 0px
+			.views-row-1, .views-row-3
+				margin-right: 0px
+			.views-field-field-image
+				display: none
+			.views-field-published-at, .views-field-path, .views-field-field-subtitled, .views-field-field-tags
+				border-right: 0px
+
 
 @media screen and (max-width: 485px)
 	.main-center
@@ -313,8 +597,110 @@
 			img
 				display: block
 				width: 145px
+	.node_pane
+		.view-header
+			.pane-title-2
+				font-size: 22px
+	.taxonomy-page, .archive, .view-search-api-search
+		.left
+			max-width: 130px
+		.author, .time
+			display: block
+		.time
+			margin: 2px 0px
+		h3
+			margin-bottom: 5px
+			font-size: 14px
+		.subtitle
+			font-size: 12px
+
+@media screen and (max-width: 450px)
+	.letterhead
+		.panels-flexible-row-inside
+			max-width: 200px
+	.mobile-menu
+		#mini-panel-mobil_menu
+			.pane-title, .view-header, #main-menu-2019 a, #connection .link
+				font-size: 12px
+			.pane-content
+				li
+					a
+						font-size: 12px
+						padding-left: 40px
+	.node_pane.article
+		padding-top: 10px
+		.panel-pane
+			padding-right: 10px
+			padding-left: 10px
+	.node_pane
+		ul, ol
+			margin-left: 15px
+			margin-bottom: 20px
+			li
+				margin-bottom: 10px
+			li::before
+				margin-right: 15px
+		.pane-node-field-tags
+			.field-item
+				a
+					font-size: 11px
+		h1
+			font-size: 24px
+			line-height: 30px
+		.pane-node-field-subtitle
+			h2
+				font-size: 18px
+				line-height: 24px
+		#alapjarat-article.pane-node-field-text
+			p, span, ul, ol
+				font-size: 16px !important
+			p
+				margin-bottom: 10px
+			h3
+				font-size: 20px !important
+				padding-bottom: 20px
+				span
+					font-size: 20px !important
+					padding-bottom: 20px
+		figcaption
+			font-size: 14px
+			line-height: 18px
+			padding: 5px 8px
+			margin-bottom: -9px
+		blockquote
+			padding: 15px
+
 
 @media screen and (max-width: 400px)
+	.mobile-menu
+		#mini-panel-mobil_menu
+			.pane-content
+				li
+					a
+						font-size: 11px
+						padding-left: 35px
+	.panels-flexible-region-first.first-block
+		#one, #four
+			.views-field-path
+				padding: 10px
+				padding-bottom: 61px
+			.views-field-path
+				h3
+					font-size: 15px
+					line-height: 18px
+			.views-field-field-tags
+				bottom: 36px
+				margin-left: 10px
+				margin-right: 0px
+				a
+					font-size: 10px
+					padding: 3px 5px
+			.views-field-published-at
+				margin-left: 10px
+				bottom: 80px
+		#four
+			.views-field-published-at
+				bottom: 53px
 	.front-page
 		.small
 			.views-field-path, .views-field-published-at
@@ -326,6 +712,37 @@
 					line-height: 18px
 			img
 				width: 125px
+	.right-bar
+		.views-field-field-tags
+			a
+				font-size: 11px
+				padding: 3px 5px
+	.node_pane
+		.view-header
+			.pane-title-2
+				font-size: 20px
+	.node_pane.impress
+		.view-content
+			padding-top: 25px
+		.views-row
+			padding-bottom: 35px
+			.views-field-nothing
+				min-height: 90px
+			.title-link
+				height: 18px
+			.title
+				font-size: 18px
+			.link
+				width: 35px
+			.status
+				font-size: 14px
+			p
+				padding-top: 2px
+				font-size: 14px
+
+@media screen and (max-width: 360px)
+	.header .search #search input#edit-search-api-views-fulltext, .header .search #search input#edit-keys
+		width: 219px
 
 @media screen and (max-width: 350px)
 	.front-page
@@ -333,7 +750,7 @@
 			.views-row
 				padding: 5px
 			.views-field-path, .views-field-published-at
-				margin-left: 135px
+				margin-left: 125px
 			.views-field-path
 				height: 45px
 				h3
@@ -341,7 +758,23 @@
 					line-height: 16px
 			img
 				width: 115px
-
+	.node_pane
+		#fb-like-share
+			margin-top: 5px
+		#fb-like-share.panel-pane
+			padding: 0px 10px
+	.taxonomy-page, .archive, .view-search-api-search
+		.views-row
+			padding-top: 20px
+		.left
+			max-width: 100%
+			display: contents
+			img
+				display: none
+		.author, .time
+			display: inline-block
+			padding-top: 7px
+			font-size: 12px
 
 
 

@@ -36,6 +36,7 @@ features[menu_links][] = menu-main-menu-2019_webshop:<front>
 features[node][] = social_media_menu
 features[page_manager_handlers][] = node_view__article_2019
 features[page_manager_handlers][] = site_template__front-page-2019
+features[page_manager_handlers][] = term_view__panel_context_bdf5fc45-a72f-488c-afd5-ee2e4c5cefcb
 features[page_manager_pages][] = archive_2019
 features[page_manager_pages][] = front_page_2019
 features[panels_mini][] = hamburger_menu_2019
