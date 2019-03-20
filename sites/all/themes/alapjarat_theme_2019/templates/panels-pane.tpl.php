@@ -16,7 +16,7 @@
  * - $display: The complete panels display object containing all kinds of
  *   data including the contexts and all of the other panes being displayed.
  */
-//dpm($pane);
+
 if ($pane->subtype == 'node:published') {
   $date_format = 'Y-m-d, H:i';
   $node = node_load($display->args[0]);    
