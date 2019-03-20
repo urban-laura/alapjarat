@@ -1,7 +1,6 @@
-<div class="alapjarat-mc-gallery-item gallery-item-image">
-  <a href="<?php print $item['destination']; ?>" rel="lightbox[roadtrip]">
-    <div class="item-image"><?php print $item['thumbnail'];?></div>
+<div class="alapjarat-mc-gallery-item alapjarat-mc-gallery-item-image">
+  <div class="item-image"><?php print $item['thumbnail'];?></div>
+  <a class="mc-image" href="<?php print $item['destination']; ?>" rel="lightbox[roadtrip]">
   </a>
   <div class="item-title"><?php print $item['title'];?></div>
-  <div class="item-date"><?php print date('Y-m-d', $item['publishDate']);?></div>
 </div>

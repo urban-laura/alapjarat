@@ -2,7 +2,8 @@
 
 function fix_article_top_views_query_alter(&$view, &$query) {
 
-	if ($view->name == 'first' && $view->current_display == 'panel_pane_10') {
+	if (($view->name == 'first' && $view->current_display == 'panel_pane_10') 
+		|| ($view->name == 'articles_2019' && $view->current_display == 'panel_pane_10')){
 
 	    $fixed_article = fix_article_exists();
 

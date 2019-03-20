@@ -16,16 +16,18 @@
  * - $display: The complete panels display object containing all kinds of
  *   data including the contexts and all of the other panes being displayed.
  */
-if ($pane->type == 'node_created') {
+
+if ($pane->subtype == 'node:published') {
+  $date_format = 'Y-m-d, H:i';
   $node = node_load($display->args[0]);    
   if ($node->published_at) {
-    $content = date('Y-m-d', $node->published_at);
+    $content = date($date_format, $node->published_at);
   }
 
   // Need to be make difference between publishing and updating date in articles
-  if (($node->published_at && $node->published_at !== $node->changed) || (!$node->published_at && $node->created !== $node->changed && date('Y-m-d', $node->changed) !== '2018-09-18')) {
+  if (($node->published_at && $node->published_at !== $node->changed) || (!$node->published_at && $node->created !== $node->changed && date($date_format, $node->changed) !== '2018-09-18')) {
     $title = t('Updated:');
-    $content = date('Y-m-d', $node->changed);
+    $content = date($date_format, $node->changed);
   }
 
   // Articles before published_at field/module added not populated with this data
