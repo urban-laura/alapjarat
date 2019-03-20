@@ -33,6 +33,29 @@ function alapjarat_theme_2019_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
+  // Exported menu link: menu-main-menu-2019_mdia:media-collection/all.
+  $menu_links['menu-main-menu-2019_mdia:media-collection/all'] = array(
+    'menu_name' => 'menu-main-menu-2019',
+    'link_path' => 'media-collection/all',
+    'router_path' => 'media-collection/%',
+    'link_title' => 'Média',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'alter' => TRUE,
+      'identifier' => 'menu-main-menu-2019_mdia:media-collection/all',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+    'customized' => 1,
+    'language' => 'und',
+    'menu_links_customized' => 1,
+  );
   // Exported menu link: menu-main-menu-2019_webshop:<front>.
   $menu_links['menu-main-menu-2019_webshop:<front>'] = array(
     'menu_name' => 'menu-main-menu-2019',
@@ -60,6 +83,7 @@ function alapjarat_theme_2019_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('ECDH');
+  t('Média');
   t('Webshop');
 
   return $menu_links;

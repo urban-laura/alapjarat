@@ -32,6 +32,7 @@ features[image][] = taxonomy_page
 features[menu_custom][] = menu-calculators
 features[menu_custom][] = menu-main-menu-2019
 features[menu_links][] = menu-main-menu-2019_ecdh:<front>
+features[menu_links][] = menu-main-menu-2019_mdia:media-collection/all
 features[menu_links][] = menu-main-menu-2019_webshop:<front>
 features[node][] = social_media_menu
 features[page_manager_handlers][] = node_view__article_2019
