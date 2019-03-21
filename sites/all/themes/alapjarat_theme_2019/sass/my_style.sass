@@ -30,18 +30,18 @@ body.not-front
 body.node-type-a-article
 	.main-center
 		background-color: white
-body.page-impress, body.node-type-pages, body.page-taxonomy, body.page-new-archive, body.page-new-kereses
+body.page-impress, body.node-type-pages, body.page-taxonomy, body.page-new-archive, body.page-new-kereses, body.page-autos-kifejezesek, body.page-media-collection
 	.right-bar
-		padding-top: 54px
+		padding-top: 40px
 		.views-row
 			background-color: white
 		#event .views-row
 			background: none
 		#right-top-5
 			background-color: white
-body.node-type-pages, body.page-autos-kifejezesek
+body.page-impress
 	.right-bar
-		padding-top: 40px
+		padding-top: 54px
 
 //Everywhere
 h1, h2, h3, h4, h5, h6
@@ -547,7 +547,7 @@ a:hover
 			span::before
 				content: url("/sites/all/themes/alapjarat_theme_2019/images/clock_w.png")
 				margin-right: 5px
-				vertical-align: top
+				vertical-align: sub
 		.views-field-field-tags, .views-field-published-at
 			position: relative
 			height: 0px
@@ -909,6 +909,9 @@ a:hover
 		p, span, ul, ol
 			font-size: 18px !important
 			font-family: Montserrat !important
+		a
+			span
+				color: #C72026 !important
 		h3
 			margin: 0
 			padding-top: 15px
@@ -1124,11 +1127,9 @@ a:hover
 		font-size: 14px
 		text-transform: uppercase
 		padding-right: 10px
-		vertical-align: top
 	.time
 		font-size: 14px
 		font-family: magistral, sans-serif
-		vertical-align: top
 	.time::before
 		content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
 		margin-right: 6px
