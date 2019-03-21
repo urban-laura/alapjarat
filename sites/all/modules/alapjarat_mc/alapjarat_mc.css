@@ -1,53 +1,151 @@
 .alapjarat-mc-gallery-item {
 	float: left;
-	margin: 10px;
-	width: 320px;
+	width: 160px;
+    height: 160px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .alapjarat-mc-gallery-item-video .item-title,
 .alapjarat-mc-gallery-item-image .item-title {
     color: #fff;
-    margin: -59px 10px 0 10px;
-    background: url(./images/title-red-line.png) no-repeat;
-    position: relative;
-    padding: 10px 0 0 0;
     display: none;
-    height: 59px;
+    position: absolute;
+    font-size: 14px;
+    margin: 10px;
+    border-top: solid 3px #C72026;
+    bottom: 0px;
+    padding-top: 3px;
+    z-index: 10;
 }
 
 .alapjarat-mc-gallery-item a.mc-video {
-  background: url(./images/icon-video-play.png) no-repeat;
-  display: block;
-  width: 125px;
-  height: 125px;
-  position: absolute;
-  margin: -154px 94px;
-  background-size: 125px;
-  z-index: 700;
+    background-image: url(./images/icon-video-play.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+}
+
+.alapjarat-mc-gallery-item-video img {
+    height: 160px;
 }
 
 .alapjarat-mc-gallery-item a.mc-video:hover {
-  background: url(./images/icon-video-play-small.png) no-repeat;
-  margin: -135px 0 0 128px;
-  background-size: 60px;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(./images/icon-video-play-small.png);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+#alapjarat-mc-header-menu {
+    text-align: center;
+    height: 60px;
+    margin-top: 40px;
+}
+
+#alapjarat-mc-header-menu a {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    background-color: white;
+    border: solid 1px #CCCCC8;
+    border-radius: 5px;
 }
 
 #alapjarat-mc-pager {
     clear: both;
+    text-align: center;
+}
+
+#alapjarat-mc-pager #prev-page, #alapjarat-mc-pager #next-page {
+    display: inline-block;
+}
+
+#alapjarat-mc-pager #prev-page a, #alapjarat-mc-pager #next-page a {
+    font-size: 14px;
+    padding: 5px 15px;
+    background-color: white;
+    border: solid 1px #CCCCC8;
+    border-radius: 5px;
 }
 
 .alapjarat-mc-gallery-item a.mc-image {
-   
-    width: 320px;
-    height: 181px;
+    width: 100%;
+    height: 100%;
     display: block;
-    margin: -181px 0px;
-    z-index: 700;
+    z-index: 10;
     position: absolute;
+    top: 0px;
 }
 
 .alapjarat-mc-gallery-item a.mc-image:hover {
-   background: url(./images/icon-camera.png) no-repeat;
-    background-position: 125px 50px;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(./images/icon-camera.png);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
 }
 
+@media screen and (max-width: 1145px) {
+    #alapjarat-mc-page {
+        max-width: 540px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    #alapjarat-mc-page {
+        max-width: auto;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #alapjarat-mc-page {
+        max-width: 540px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #alapjarat-mc-page {
+        max-width: 432px;
+        margin: auto;
+    }
+    .alapjarat-mc-gallery-item-video .item-title,
+    .alapjarat-mc-gallery-item-image .item-title {
+        font-size: 12px;
+    }
+    .alapjarat-mc-gallery-item {
+        height: 130px;
+        width: 130px;
+        margin-right: 7px;
+        margin-left: 7px;
+        margin-bottom: 14px;
+    }
+    .alapjarat-mc-gallery-item-video img {
+        height: 130px;
+    }
+    .alapjarat-mc-gallery-item a.mc-video:hover,
+    .alapjarat-mc-gallery-item a.mc-image:hover {
+        background-position: 50% 20%;
+    }
+}
+
+@media screen and (max-width: 482px) {
+    #alapjarat-mc-page {
+        max-width: 272px;
+        margin: auto;
+    }
+    .alapjarat-mc-gallery-item {
+        margin-right: 3px;
+        margin-left: 3px;
+        margin-bottom: 6px;
+    }
+}
