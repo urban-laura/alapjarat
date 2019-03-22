@@ -183,6 +183,22 @@ function alapjarat_mc_media_page($type = 'all') {
   $content = implode('', $output);
   $page = str_replace('###content###', $content, $page_template);
 
+  $classes_all = ['menu-item-link'];
+  $classes_image = ['menu-item-link'];
+  $classes_video = ['menu-item-link'];
+  switch (arg(1)) {
+    case 'all': $classes_all[] = 'active';
+      break;
+    case 'image': $classes_image[] = 'active';
+      break;
+    case 'video': $classes_video[] = 'active';
+      break;
+  }
+
+  $page = str_replace('###classes_all###', implode(' ', $classes_all), $page);
+  $page = str_replace('###classes_image###', implode(' ', $classes_image), $page);
+  $page = str_replace('###classes_video###', implode(' ', $classes_video), $page);
+
   $pager_tokens = _alapjarat_mc_get_pager_tokens();
 
   if (isset($_GET['page'])) {
