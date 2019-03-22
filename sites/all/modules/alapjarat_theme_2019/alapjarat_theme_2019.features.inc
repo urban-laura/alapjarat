@@ -140,7 +140,7 @@ function alapjarat_theme_2019_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => '',
-          'height' => 20,
+          'height' => 16,
           'upscale' => 1,
         ),
         'weight' => 1,
@@ -207,7 +207,7 @@ function alapjarat_theme_2019_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Cím'),
+      'title_label' => t('Title'),
       'help' => '',
     ),
   );
