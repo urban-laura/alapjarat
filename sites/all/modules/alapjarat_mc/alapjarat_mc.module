@@ -77,7 +77,7 @@ function alapjarat_mc_collect_gallery_images() {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
       'type' => 'image',
-      'title' => mb_substr($record->title, 0, 30),
+      'title' => mb_substr($record->title, 0, 30) . '...',
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
@@ -110,7 +110,7 @@ function alapjarat_mc_collect_youtube_channel_videos() {
   foreach ($response['items'] as $video) {
     $media[] = array(
       'type' => 'video',
-      'title' => mb_substr($video['snippet']['title'], 0, 30),
+      'title' => mb_substr($video['snippet']['title'], 0, 30) . '...',
       'thumbnail' => $video['snippet']['thumbnails']['medium'],
       'publishDate' => strtotime($video['snippet']['publishedAt']),
       'destination' => 'https://www.youtube.com/watch?v=' . $video['snippet']['resourceId']['videoId'],
