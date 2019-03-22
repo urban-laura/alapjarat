@@ -107,6 +107,31 @@ function alapjarat_theme_2019_image_default_styles() {
     ),
   );
 
+  // Exported image style: media_gallery_image.
+  $styles['media_gallery_image'] = array(
+    'label' => 'Media gallery image',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 320,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      2 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 320,
+          'height' => 180,
+          'anchor' => 'center-center',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: partners_in_footer.
   $styles['partners_in_footer'] = array(
     'label' => 'partners in footer',
