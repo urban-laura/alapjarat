@@ -59,6 +59,11 @@
     border-radius: 5px;
 }
 
+#alapjarat-mc-header-menu a.active {
+    background-color: #C72026;
+    font-weight: bold;
+}
+
 #alapjarat-mc-pager {
     clear: both;
     text-align: center;
