@@ -995,6 +995,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
           1 => 'calculator',
           2 => 'car_partner',
           3 => 'connection',
+          4 => 'connection_',
         ),
         'parent' => 'main',
         'class' => 'menu-footer',
@@ -1029,11 +1030,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       ),
       'connection' => array(
         'type' => 'region',
-        'title' => 'Connection',
-        'width' => '25',
+        'title' => 'Glossory',
+        'width' => 12.5,
         'width_type' => '%',
         'parent' => '11',
-        'class' => 'connection',
+        'class' => 'glossory',
         'hide_empty' => 0,
       ),
       12 => array(
@@ -1083,6 +1084,15 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'class' => '',
         'hide_empty' => 0,
       ),
+      'connection_' => array(
+        'type' => 'region',
+        'title' => 'Connection',
+        'width' => 12.5,
+        'width_type' => '%',
+        'parent' => '11',
+        'class' => 'connection',
+        'hide_empty' => 0,
+      ),
     ),
   );
   $display->panel_settings = array(
@@ -1118,6 +1128,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       'social_media_menu' => NULL,
       'search_' => NULL,
       'main_menu_' => NULL,
+      'connection_' => NULL,
     ),
   );
   $display->cache = array();
@@ -1257,6 +1268,35 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-1b3dae25-7117-4e5d-8eb9-dbd07df8b637'] = $pane;
   $display->panels['calculator'][0] = 'new-1b3dae25-7117-4e5d-8eb9-dbd07df8b637';
   $pane = new stdClass();
+  $pane->pid = 'new-0e5a4261-52ff-4b33-a346-6f140db744b8';
+  $pane->panel = 'car_partner';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => 'HIRDETÉSI LEHETŐSÉGEK',
+    'title_heading' => 'span',
+    'body' => '<a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png"></a>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'atmedia',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '0e5a4261-52ff-4b33-a346-6f140db744b8';
+  $display->content['new-0e5a4261-52ff-4b33-a346-6f140db744b8'] = $pane;
+  $display->panels['car_partner'][0] = 'new-0e5a4261-52ff-4b33-a346-6f140db744b8';
+  $pane = new stdClass();
   $pane->pid = 'new-52e9751d-3cad-4253-9b5d-3ba082aec358';
   $pane->panel = 'car_partner';
   $pane->type = 'views_panes';
@@ -1273,14 +1313,43 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '52e9751d-3cad-4253-9b5d-3ba082aec358';
   $display->content['new-52e9751d-3cad-4253-9b5d-3ba082aec358'] = $pane;
-  $display->panels['car_partner'][0] = 'new-52e9751d-3cad-4253-9b5d-3ba082aec358';
+  $display->panels['car_partner'][1] = 'new-52e9751d-3cad-4253-9b5d-3ba082aec358';
+  $pane = new stdClass();
+  $pane->pid = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
+  $pane->panel = 'connection';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'span',
+    'body' => '<span class="pane-title"><a href="/autos-kifejezesek">Autós kifejezések<a></span>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '43d08d74-7184-49e7-b630-b1219bdd569b';
+  $display->content['new-43d08d74-7184-49e7-b630-b1219bdd569b'] = $pane;
+  $display->panels['connection'][0] = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
   $pane = new stdClass();
   $pane->pid = 'new-8b90915d-b332-4f16-8107-4eb10661be94';
-  $pane->panel = 'connection';
+  $pane->panel = 'connection_';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
@@ -1308,7 +1377,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->locks = array();
   $pane->uuid = '8b90915d-b332-4f16-8107-4eb10661be94';
   $display->content['new-8b90915d-b332-4f16-8107-4eb10661be94'] = $pane;
-  $display->panels['connection'][0] = 'new-8b90915d-b332-4f16-8107-4eb10661be94';
+  $display->panels['connection_'][0] = 'new-8b90915d-b332-4f16-8107-4eb10661be94';
   $pane = new stdClass();
   $pane->pid = 'new-c81fdb5b-e269-443d-9ed6-9534a92ba8d8';
   $pane->panel = 'copyright';
@@ -1697,35 +1766,6 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->uuid = 'c68ebcae-a594-4de2-9501-80b26f344c08';
   $display->content['new-c68ebcae-a594-4de2-9501-80b26f344c08'] = $pane;
   $display->panels['popular_tags'][0] = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
-  $pane = new stdClass();
-  $pane->pid = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
-  $pane->panel = 'popular_tags';
-  $pane->type = 'custom';
-  $pane->subtype = 'custom';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'admin_title' => '',
-    'title' => '',
-    'title_heading' => 'span',
-    'body' => '<span class="pane-title"><a href="/autos-kifejezesek">Autós kifejezések<a></span>',
-    'format' => 'admin_html',
-    'substitute' => 1,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'glossory-list',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '43d08d74-7184-49e7-b630-b1219bdd569b';
-  $display->content['new-43d08d74-7184-49e7-b630-b1219bdd569b'] = $pane;
-  $display->panels['popular_tags'][1] = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
   $pane = new stdClass();
   $pane->pid = 'new-4179b5a2-7bea-4d1b-b3e0-eedbdc134f30';
   $pane->panel = 'right';

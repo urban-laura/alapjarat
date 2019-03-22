@@ -33,7 +33,7 @@
     top: 0;
 }
 
-.alapjarat-mc-gallery-item-video img {
+.alapjarat-mc-gallery-item-video img, .alapjarat-mc-gallery-item-image img {
     height: 160px;
 }
 
@@ -134,7 +134,7 @@
         margin-left: 7px;
         margin-bottom: 14px;
     }
-    .alapjarat-mc-gallery-item-video img {
+    .alapjarat-mc-gallery-item-video img, .alapjarat-mc-gallery-item-image img {
         height: 130px;
     }
     .alapjarat-mc-gallery-item a.mc-video:hover,
