@@ -22,7 +22,7 @@
 }
 
 .alapjarat-mc-gallery-item a.mc-video {
-    background-image: url(./images/icon-video-play.png);
+    background-image: url(./images/icon-video-play-1.png);
     background-repeat: no-repeat;
     background-position: center;
     display: block;
@@ -39,7 +39,7 @@
 
 .alapjarat-mc-gallery-item a.mc-video:hover {
     background-color: rgba(0,0,0,0.5);
-    background-image: url(./images/icon-video-play-small.png);
+    background-image: url(./images/icon-video-play-small-1.png);
     background-repeat: no-repeat;
     background-position: 50% 25%;
 }
@@ -87,7 +87,7 @@
 
 .alapjarat-mc-gallery-item a.mc-image:hover {
     background-color: rgba(0,0,0,0.5);
-    background-image: url(./images/icon-camera.png);
+    background-image: url(./images/icon-camera-1.png);
     background-repeat: no-repeat;
     background-position: 50% 25%;
 }
