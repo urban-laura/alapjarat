@@ -3,13 +3,4 @@ sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
 sites/*/files
-sites/default/files/*
 sites/*/private
-
-# Server related custom paths and ignores
-alappma
-tmp
-
-.DS_Store
-.idea/*
-sites/all/modules/dummyimage
