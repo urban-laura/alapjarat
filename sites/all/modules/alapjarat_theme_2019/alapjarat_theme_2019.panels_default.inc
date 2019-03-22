@@ -237,27 +237,34 @@ function alapjarat_theme_2019_default_panels_mini() {
   $display->content['new-4c66d4f6-b745-4fb1-a1c4-17bdd0737d21'] = $pane;
   $display->panels['center'][4] = 'new-4c66d4f6-b745-4fb1-a1c4-17bdd0737d21';
   $pane = new stdClass();
-  $pane->pid = 'new-1132323e-9f41-49b7-afd7-bb8022d122a2';
+  $pane->pid = 'new-b949b648-7d9e-4ed8-8100-1d0971f7734e';
   $pane->panel = 'center';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'menu-panel_pane_9';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array();
-  $pane->configuration = array();
+  $pane->configuration = array(
+    'admin_title' => 'Glossory list',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<span class="pane-title"><a href="/autos-kifejezesek">Autós kifejezések<a></span>',
+    'format' => 'admin_html',
+    'substitute' => TRUE,
+  );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'car-partners',
+    'css_id' => 'glossory-list',
     'css_class' => '',
   );
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
-  $pane->uuid = '1132323e-9f41-49b7-afd7-bb8022d122a2';
-  $display->content['new-1132323e-9f41-49b7-afd7-bb8022d122a2'] = $pane;
-  $display->panels['center'][5] = 'new-1132323e-9f41-49b7-afd7-bb8022d122a2';
+  $pane->uuid = 'b949b648-7d9e-4ed8-8100-1d0971f7734e';
+  $display->content['new-b949b648-7d9e-4ed8-8100-1d0971f7734e'] = $pane;
+  $display->panels['center'][5] = 'new-b949b648-7d9e-4ed8-8100-1d0971f7734e';
   $pane = new stdClass();
   $pane->pid = 'new-e6e0f78b-d9ca-4485-a0c1-2fda79fe0d6e';
   $pane->panel = 'center';
@@ -267,15 +274,15 @@ function alapjarat_theme_2019_default_panels_mini() {
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => '',
-    'title' => 'Kapcsolat',
+    'title' => 'Elérhetőség',
     'title_heading' => 'span',
     'body' => '<ul>
 <li><a href="tel:+36202995830" class="tel">+36 20 299 5830</a></li>
 <li><a href="mailto:info@alapjarat.hu" class="mail">info@alapjarat.hu</a></li>
 </ul>
-<a href="" class="link">Impresszum</a>
-<a href="" class="link">Médiaajánlat</a>
-<a href="" class="link">Jogi nyilatkozat</a>',
+<a href="/impresszum" class="link">Impresszum</a>
+<a href="/mediaajanlat" class="link">Médiaajánlat</a>
+<a href="/jogi-nyilatkozat" class="link">Jogi nyilatkozat</a>',
     'format' => 'admin_html',
     'substitute' => TRUE,
   );
@@ -293,6 +300,28 @@ function alapjarat_theme_2019_default_panels_mini() {
   $pane->uuid = 'e6e0f78b-d9ca-4485-a0c1-2fda79fe0d6e';
   $display->content['new-e6e0f78b-d9ca-4485-a0c1-2fda79fe0d6e'] = $pane;
   $display->panels['center'][6] = 'new-e6e0f78b-d9ca-4485-a0c1-2fda79fe0d6e';
+  $pane = new stdClass();
+  $pane->pid = 'new-1132323e-9f41-49b7-afd7-bb8022d122a2';
+  $pane->panel = 'center';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'menu-panel_pane_9';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'car-partners',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 7;
+  $pane->locks = array();
+  $pane->uuid = '1132323e-9f41-49b7-afd7-bb8022d122a2';
+  $display->content['new-1132323e-9f41-49b7-afd7-bb8022d122a2'] = $pane;
+  $display->panels['center'][7] = 'new-1132323e-9f41-49b7-afd7-bb8022d122a2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;

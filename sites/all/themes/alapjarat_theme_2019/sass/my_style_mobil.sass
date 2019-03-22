@@ -44,7 +44,7 @@
 	.menu-footer
 		.pane-title
 			font-size: 15px
-		a
+		a, span
 			font-size: 13px
 
 @media screen and (max-width: 1055px)
@@ -123,7 +123,7 @@
 			max-width: 820px
 		.pane-title
 			font-size: 14px
-		a
+		a, span
 			font-size: 12px
 		.popular-tags
 			width: 155px
@@ -133,6 +133,10 @@
 			margin-right: 30px
 		.connection
 			width: 145px
+	.glossory-list
+		.pane-title
+			a
+				font-size: 12px
 	.my-footer
 		.copyright, .social-media-menu
 			width: 50%
@@ -140,6 +144,14 @@
 			float: none
 
 @media screen and (max-width: 870px)
+	#mobile-logo, #mobile-search
+		display: block !important
+	.letterhead, #search
+		display: none
+	.search-tablet
+		position: absolute
+		top: 0px
+		right: 25px
 	#main_menu
 		#mobil-menu
 			display: block !important
@@ -524,7 +536,7 @@
 			padding: 10px 0px
 			li
 				font-size: 14px
-				margin-right: 2px
+				margin-right: 0px
 				a
 					line-height: 18px
 			.pager-current
@@ -548,6 +560,12 @@
 				display: none
 			.views-field-published-at, .views-field-path, .views-field-field-subtitled, .views-field-field-tags
 				border-right: 0px
+	.search
+		#search-mobile
+			input#edit-search-api-views-fulltext, input#edit-keys
+				width: 262px
+			.views-exposed-widgets
+				max-width: 300px
 
 
 @media screen and (max-width: 485px)

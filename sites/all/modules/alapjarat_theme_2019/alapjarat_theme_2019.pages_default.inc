@@ -798,8 +798,9 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'type' => 'row',
         'contains' => 'region',
         'children' => array(
-          0 => 'logo',
-          1 => 'banner',
+          0 => 'main_menu_',
+          1 => 'logo',
+          2 => 'banner',
         ),
         'parent' => 'main',
         'class' => 'header',
@@ -818,11 +819,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       ),
       'logo' => array(
         'type' => 'region',
-        'title' => 'main menu',
-        'width' => '80',
+        'title' => 'mobile logo',
+        'width' => 40,
         'width_type' => '%',
         'parent' => '2',
-        'class' => '',
+        'class' => 'mobil-logo',
         'hide_empty' => 0,
       ),
       'banner' => array(
@@ -831,7 +832,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => '19.999999999999996',
         'width_type' => '%',
         'parent' => '2',
-        'class' => 'search',
+        'class' => 'search search-tablet',
         'hide_empty' => 1,
       ),
       'second_menu' => array(
@@ -849,7 +850,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '1',
-        'class' => 'mobile-menu',
+        'class' => 'mobile-menu search',
         'hide_empty' => 0,
       ),
       4 => array(
@@ -1073,6 +1074,15 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'class' => '',
         'hide_empty' => 0,
       ),
+      'main_menu_' => array(
+        'type' => 'region',
+        'title' => 'main menu',
+        'width' => 40,
+        'width_type' => '%',
+        'parent' => '2',
+        'class' => '',
+        'hide_empty' => 0,
+      ),
     ),
   );
   $display->panel_settings = array(
@@ -1107,6 +1117,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       'copyright' => NULL,
       'social_media_menu' => NULL,
       'search_' => NULL,
+      'main_menu_' => NULL,
     ),
   );
   $display->cache = array();
@@ -1196,10 +1207,10 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-eba687b9-9c67-4cd3-a84b-0d000cff9dfb'] = $pane;
   $display->panels['admin_menu'][1] = 'new-eba687b9-9c67-4cd3-a84b-0d000cff9dfb';
   $pane = new stdClass();
-  $pane->pid = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
+  $pane->pid = 'new-0a89c741-3323-43d2-87d2-ab7c84bef31f';
   $pane->panel = 'banner';
   $pane->type = 'block';
-  $pane->subtype = 'views--exp-search_api_search-page';
+  $pane->subtype = 'views--exp-search_api_search-page_1';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -1219,9 +1230,9 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '86e8d848-d560-4aef-9090-0595b1b02f9f';
-  $display->content['new-86e8d848-d560-4aef-9090-0595b1b02f9f'] = $pane;
-  $display->panels['banner'][0] = 'new-86e8d848-d560-4aef-9090-0595b1b02f9f';
+  $pane->uuid = '0a89c741-3323-43d2-87d2-ab7c84bef31f';
+  $display->content['new-0a89c741-3323-43d2-87d2-ab7c84bef31f'] = $pane;
+  $display->panels['banner'][0] = 'new-0a89c741-3323-43d2-87d2-ab7c84bef31f';
   $pane = new stdClass();
   $pane->pid = 'new-1b3dae25-7117-4e5d-8eb9-dbd07df8b637';
   $pane->panel = 'calculator';
@@ -1278,11 +1289,12 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => '',
     'title' => 'Kapcsolat',
     'title_heading' => 'span',
-    'body' => '<a href="tel:+36202995830" class="tel">+36 20 299 5830</a>
+    'body' => '<a href="/impresszum" class="link">Impresszum</a>
+<a href="/mediaajanlat" class="link">Médiaajánlat</a>
+<a href="/jogi-nyilatkozat" class="link">Jogi nyilatkozat</a>
+<span>Elérhetőségek</span>
 <a href="mailto:info@alapjarat.hu" class="mail">info@alapjarat.hu</a>
-<a href="" class="link">Impresszum</a>
-<a href="" class="link">Médiaajánlat</a>
-<a href="" class="link">Jogi nyilatkozat</a>',
+<a href="tel:+36202995830" class="tel">+36 20 299 5830</a>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1309,8 +1321,8 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'title' => '',
     'title_heading' => 'h2',
     'body' => '<ul>
-<li class="left">© Copyright 2018, alapjarat.hu & ecdh.hu</li>
-<li class="right">1097 Budapest, Könyves Kálmán krt. 12-14</li>
+<li class="left">© Copyright 2019, alapjarat.hu & ecdh.hu</li>
+<li class="right">1097 Budapest, Könyves Kálmán krt. 12-14.</li>
 </ul>',
     'format' => 'admin_html',
     'substitute' => 1,
@@ -1373,6 +1385,16 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'settings' => NULL,
         'not' => FALSE,
       ),
+      2 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 3,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
     ),
   );
   $pane->configuration = array(
@@ -1396,31 +1418,27 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-64e87cc0-5355-498b-81f7-28674aa25d77'] = $pane;
   $display->panels['e'][0] = 'new-64e87cc0-5355-498b-81f7-28674aa25d77';
   $pane = new stdClass();
-  $pane->pid = 'new-7ce027aa-b14d-405f-8f72-369ef04075f3';
+  $pane->pid = 'new-d619e578-3f54-47c7-810c-d95b0b15af06';
   $pane->panel = 'logo';
-  $pane->type = 'block';
-  $pane->subtype = 'menu-menu-main-menu-2019';
+  $pane->type = 'page_logo';
+  $pane->subtype = 'page_logo';
   $pane->shown = TRUE;
   $pane->access = array();
-  $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
+  $pane->configuration = array();
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'main_menu',
+    'css_id' => 'mobile-logo',
     'css_class' => '',
   );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '7ce027aa-b14d-405f-8f72-369ef04075f3';
-  $display->content['new-7ce027aa-b14d-405f-8f72-369ef04075f3'] = $pane;
-  $display->panels['logo'][0] = 'new-7ce027aa-b14d-405f-8f72-369ef04075f3';
+  $pane->uuid = 'd619e578-3f54-47c7-810c-d95b0b15af06';
+  $display->content['new-d619e578-3f54-47c7-810c-d95b0b15af06'] = $pane;
+  $display->panels['logo'][0] = 'new-d619e578-3f54-47c7-810c-d95b0b15af06';
   $pane = new stdClass();
   $pane->pid = 'new-37cdfdeb-8191-41f4-b1dc-d7c5d10b8db7';
   $pane->panel = 'main_content';
@@ -1603,6 +1621,59 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-54c02c93-b04f-4664-85a1-78ad86eca7c6'] = $pane;
   $display->panels['main_menu'][0] = 'new-54c02c93-b04f-4664-85a1-78ad86eca7c6';
   $pane = new stdClass();
+  $pane->pid = 'new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
+  $pane->panel = 'main_menu';
+  $pane->type = 'block';
+  $pane->subtype = 'views--exp-search_api_search-page_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'inherit_path' => 0,
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'search-mobile',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
+  $display->content['new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a'] = $pane;
+  $display->panels['main_menu'][1] = 'new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
+  $pane = new stdClass();
+  $pane->pid = 'new-7ce027aa-b14d-405f-8f72-369ef04075f3';
+  $pane->panel = 'main_menu_';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-main-menu-2019';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'main_menu',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7ce027aa-b14d-405f-8f72-369ef04075f3';
+  $display->content['new-7ce027aa-b14d-405f-8f72-369ef04075f3'] = $pane;
+  $display->panels['main_menu_'][0] = 'new-7ce027aa-b14d-405f-8f72-369ef04075f3';
+  $pane = new stdClass();
   $pane->pid = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
   $pane->panel = 'popular_tags';
   $pane->type = 'most_popular_terms';
@@ -1626,6 +1697,35 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->uuid = 'c68ebcae-a594-4de2-9501-80b26f344c08';
   $display->content['new-c68ebcae-a594-4de2-9501-80b26f344c08'] = $pane;
   $display->panels['popular_tags'][0] = 'new-c68ebcae-a594-4de2-9501-80b26f344c08';
+  $pane = new stdClass();
+  $pane->pid = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
+  $pane->panel = 'popular_tags';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'span',
+    'body' => '<span class="pane-title"><a href="/autos-kifejezesek">Autós kifejezések<a></span>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'glossory-list',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '43d08d74-7184-49e7-b630-b1219bdd569b';
+  $display->content['new-43d08d74-7184-49e7-b630-b1219bdd569b'] = $pane;
+  $display->panels['popular_tags'][1] = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
   $pane = new stdClass();
   $pane->pid = 'new-4179b5a2-7bea-4d1b-b3e0-eedbdc134f30';
   $pane->panel = 'right';
@@ -2354,6 +2454,44 @@ $.extend($.validator.messages, {
   $pane->uuid = '709c7333-b3b6-4e4c-b81c-92158b54b078';
   $display->content['new-709c7333-b3b6-4e4c-b81c-92158b54b078'] = $pane;
   $display->panels['center'][4] = 'new-709c7333-b3b6-4e4c-b81c-92158b54b078';
+  $pane = new stdClass();
+  $pane->pid = 'new-40c762d0-add2-4ca2-909f-812bfaf4a72a';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field_extra';
+  $pane->subtype = 'taxonomy_term:description';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'term_vocabulary',
+        'settings' => array(
+          'machine_name' => array(
+            'glossary' => 'glossary',
+          ),
+        ),
+        'context' => 'argument_term_1',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'view_mode' => 'full',
+    'context' => 'argument_term_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $pane->uuid = '40c762d0-add2-4ca2-909f-812bfaf4a72a';
+  $display->content['new-40c762d0-add2-4ca2-909f-812bfaf4a72a'] = $pane;
+  $display->panels['center'][5] = 'new-40c762d0-add2-4ca2-909f-812bfaf4a72a';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

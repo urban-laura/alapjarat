@@ -8,11 +8,20 @@
       	$('#ham-menu').toggleClass("hm-active");
       });
 
+      $('.header .search-tablet').prepend('<div id="mobile-search"></div>');
+      $('#search-mobile').hide();
+      $('#mobile-search').click(function() {
+          $('#search-mobile').slideToggle();
+          $('.header').toggleClass("menu-active");
+          $('.header').toggleClass("mobile-search-active");
+      });
+
       $('#main_menu').prepend('<div id="mobil-menu"></div>');
       $('#mini-panel-mobil_menu').hide();
       $('#mobil-menu').click(function() {
         $('#mini-panel-mobil_menu').slideToggle();
         $('.header').toggleClass("menu-active");
+        $('.header').toggleClass("main-menu-active");
       });
 
       $('#mini-panel-mobil_menu .pane-content').hide();
@@ -22,6 +31,7 @@
       $('#category .pane-content').show();
       $('#car-partners .pane-content').show();
       $('#connection .pane-content').show();
+      $('#glossory-list .pane-content').show();
 
       $('#heading .pane-title').click(function() {
         $('#heading .pane-content').slideToggle();
