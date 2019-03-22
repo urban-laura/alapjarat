@@ -113,7 +113,7 @@ function alapjarat_mc_collect_youtube_channel_videos() {
       'title' => mb_substr($video['snippet']['title'], 0, 30) . '...',
       'thumbnail' => $video['snippet']['thumbnails']['medium'],
       'publishDate' => strtotime($video['snippet']['publishedAt']),
-      'destination' => 'https://www.youtube.com/watch?v=' . $video['snippet']['resourceId']['videoId'],
+      'destination' => 'https://www.youtube.com/embed/' . $video['snippet']['resourceId']['videoId'],
     );
   }
 
