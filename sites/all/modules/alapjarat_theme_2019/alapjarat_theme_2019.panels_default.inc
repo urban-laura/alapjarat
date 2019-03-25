@@ -273,7 +273,7 @@ function alapjarat_theme_2019_default_panels_mini() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'admin_title' => '',
+    'admin_title' => 'Elérhetőség + Hirdetési lehetőség',
     'title' => 'Elérhetőség',
     'title_heading' => 'span',
     'body' => '<ul>
@@ -282,7 +282,8 @@ function alapjarat_theme_2019_default_panels_mini() {
 </ul>
 <a href="/impresszum" class="link">Impresszum</a>
 <a href="/mediaajanlat" class="link">Médiaajánlat</a>
-<a href="/jogi-nyilatkozat" class="link">Jogi nyilatkozat</a>',
+<a href="/jogi-nyilatkozat" class="link">Jogi nyilatkozat</a>
+<a href="https://atmedia.hu/rolunk/online%20ertekesites/23" class="link">Hirdetési lehetőségek</a>',
     'format' => 'admin_html',
     'substitute' => TRUE,
   );
