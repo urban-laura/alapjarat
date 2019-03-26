@@ -1390,7 +1390,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'title' => '',
     'title_heading' => 'h2',
     'body' => '<ul>
-<li class="left">© Copyright 2019, alapjarat.hu & ecdh.hu</li>
+<li class="left">© Copyright 2019, <a href="/">alapjarat.hu</a> & <a href="https://www.ecdh.hu/">ecdh.hu</a></li>
 <li class="right">1097 Budapest, Könyves Kálmán krt. 12-14.</li>
 </ul>',
     'format' => 'admin_html',
