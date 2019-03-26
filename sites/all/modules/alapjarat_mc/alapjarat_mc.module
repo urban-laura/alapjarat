@@ -2,6 +2,15 @@
 
 function alapjarat_mc_menu() {
 
+  $items['admin/config/alapjarat_mc'] = array(
+    'title' => 'Alapjárat Media collection page settings',
+    'description' => 'Labels, titles, etc.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('alapjarat_mc_admin'),
+    'access arguments' => array('administer alapjarat_mc settings'),
+    'type' => MENU_NORMAL_ITEM,
+   );
+
   $items['media-collection/%'] = array(
     'title' => 'check-images',
     'page callback' => 'alapjarat_mc_media_page',
@@ -22,10 +31,60 @@ function alapjarat_mc_menu() {
   return $items;
 }
 
+function alapjarat_mc_admin() {
+  $form = array();
+
+  $form['mc_header_menu_item_all'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Media gallery header menu item "All"'),
+    '#default_value' => variable_get('mc_header_menu_item_all', 'All'),
+    '#description' => t("Media collection page header menu item title."),
+    '#required' => TRUE,
+  );
+
+  $form['mc_header_menu_item_image'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Media gallery header menu item "All"'),
+    '#default_value' => variable_get('mc_header_menu_item_image', 'Images'),
+    '#description' => t("Media collection page header menu item title."),
+    '#required' => TRUE,
+  );
+
+  $form['mc_header_menu_item_video'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Media gallery header menu item "All"'),
+    '#default_value' => variable_get('mc_header_menu_item_video', 'Videos'),
+    '#description' => t("Media collection page header menu item title."),
+    '#required' => TRUE,
+  );
+
+  return system_settings_form($form);
+}
+
 function alapjarat_mc_ctools_plugin_directory($owner, $plugin_type) {
 	if ($owner == 'ctools' && $plugin_type == 'content_types') {
 		return 'plugins/content_types';
 	}
+}
+
+function alapjarat_mc_get_gallery_images($gid) {
+  $query = db_select('field_data_field_gallery', 'fg');
+  $query
+  ->fields('fg', array('field_gallery_fid', 'delta'))
+  ->condition('fg.entity_id', $gid, '=')
+  ->condition('fg.delta', 0, '>')
+  ->orderBy('fg.delta', 'ASC');
+  $results = $query
+  ->execute()
+  ->fetchAll();
+
+  $images = [];
+  foreach ($results as $record) {
+    $file = file_load($record->field_gallery_fid);
+    $images[] = file_create_url($file->uri);
+  }
+
+  return $images;
 }
 
 function alapjarat_mc_collect_gallery_images() {
@@ -39,10 +98,12 @@ function alapjarat_mc_collect_gallery_images() {
   $query = db_select('field_data_field_gallery', 'fg');
   $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
   $query
-  ->fields('n', array('title', 'status', 'changed'))
-  ->fields('fg', array('field_gallery_fid'))
+  ->fields('n', array('title', 'status', 'changed', 'nid'))
+  ->fields('fg', array('field_gallery_fid', 'delta'))
   ->condition('n.status', 1, '=')
-  ->orderBy('n.changed', 'DESC');
+  ->condition('fg.delta', 0, '=')
+  ->orderBy('n.changed', 'DESC')
+  ->orderBy('fg.delta', 'ASC');
   $query->range($offset, 10);
   //$query->isNull('wp.entity_id');
   $results = $query
@@ -57,6 +118,9 @@ function alapjarat_mc_collect_gallery_images() {
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
+      'siblings' => alapjarat_mc_get_gallery_images($record->nid),
+      'groupName' => 'lightbox[g' . $record->nid . ']',
+      'content' => '/node/' . $record->nid,
     );
   }
 
@@ -81,6 +145,7 @@ function alapjarat_mc_collect_gallery_images() {
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
+      'groupName' => 'lightbox',
     );
   }
 
@@ -183,6 +248,12 @@ function alapjarat_mc_media_page($type = 'all') {
   $content = implode('', $output);
   $page = str_replace('###content###', $content, $page_template);
 
+  // Header menu items.
+  $page = str_replace('###header_menu_all###', t(variable_get('mc_header_menu_item_all', 'All')), $page);
+  $page = str_replace('###header_menu_image###', t(variable_get('mc_header_menu_item_image', 'Images')), $page);
+  $page = str_replace('###header_menu_video###', t(variable_get('mc_header_menu_item_video', 'Videos')), $page);
+
+  // Header menu active item.
   $classes_all = ['menu-item-link'];
   $classes_image = ['menu-item-link'];
   $classes_video = ['menu-item-link'];
