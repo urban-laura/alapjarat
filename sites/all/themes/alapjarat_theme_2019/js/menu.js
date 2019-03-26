@@ -3,6 +3,14 @@
     attach: function (context, settings) {
       $('#main_menu').prepend('<a id="ham-menu" style="cursor: pointer;">Hírek</a>');
       $('#mini-panel-hamburger_menu_2019').hide();
+
+      $(document).click(function(event) {
+        if (!$(event.target).hasClass('panels-flexible-region-new-center-inside') && $(event.target).attr('id') !== 'ham-menu') {
+          $('#mini-panel-hamburger_menu_2019').hide();
+          $('#ham-menu').removeClass("hm-active");
+        }
+      });
+
       $('#ham-menu').click(function() {
       	$('#mini-panel-hamburger_menu_2019').slideToggle(0);
       	$('#ham-menu').toggleClass("hm-active");
