@@ -20,14 +20,6 @@ function alapjarat_mc_menu() {
     'menu_name' => 'main-menu',
   );
 
-  $items['youtube-test'] = array(
-    'title' => 'check-images',
-    'page callback' => 'alapjarat_mc_youtube_test',
-    'access callback' => TRUE,
-    'type' => MENU_NORMAL_ITEM,
-    'menu_name' => 'main-menu',
-  );
-
   return $items;
 }
 
@@ -319,22 +311,4 @@ function alapjarat_mc_theme() {
        'template' => 'alapjarat_mc_video',
      ),
    );
-}
-
-function alapjarat_mc_youtube_test() {
-  $apikey = 'AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34';
-  $channelid = 'UCueleOZ2QFAaVSHXheZlFig'; // alapjarat
-  $listid = 'UUueleOZ2QFAaVSHXheZlFig';
-
-  $urltemplate = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34&channelId=###channelID###&part=snippet,id&order=date&maxResults=9";
-
-  $urltemplate = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=$channelid&key=$apikey";
-  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$listid&key=$apikey&maxResults=20";
-
-  $response = _alapjarat_mc_curl_get_contents($urltemplate);
-
-  dpm($response);
-
-
-  return 'HEY!';
 }
