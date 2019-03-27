@@ -17,16 +17,18 @@
  *   data including the contexts and all of the other panes being displayed.
  */
 
+$date_format = 'Y-m-d, H:i';
 if ($pane->subtype == 'node:created') {
   $node = node_load($display->args[0]);
   if ($node->published_at) {
     $content = '';
     $title = '';
+  } else {
+    $content = date($date_format, $node->created);
   }
 }
 
 if ($pane->subtype == 'node:published') {
-  $date_format = 'Y-m-d, H:i';
   $node = node_load($display->args[0]);    
   if ($node->published_at) {
     $content = date($date_format, $node->published_at);
