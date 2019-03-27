@@ -1325,12 +1325,12 @@ a:hover {
   text-decoration: none;
 }
 /* line 881, ../sass/my_style.sass */
-.node_pane .pane-node-published {
+.node_pane .pane-node-published, .node_pane .pane-node-created {
   font-size: 12px;
   padding-bottom: 35px;
 }
 /* line 884, ../sass/my_style.sass */
-.node_pane .pane-node-published .pane-content {
+.node_pane .pane-node-published .pane-content, .node_pane .pane-node-created .pane-content {
   display: inline-block;
 }
 /* line 886, ../sass/my_style.sass */
