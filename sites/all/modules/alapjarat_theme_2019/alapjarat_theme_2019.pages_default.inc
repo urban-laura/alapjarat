@@ -317,18 +317,18 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-d0cdd85e-e4c4-4699-b007-d28cb0ecd8d3'] = $pane;
   $display->panels['center'][5] = 'new-d0cdd85e-e4c4-4699-b007-d28cb0ecd8d3';
   $pane = new stdClass();
-  $pane->pid = 'new-fc7d5976-3382-44b0-ab5f-c93cd31c38d4';
+  $pane->pid = 'new-058c8cab-b5fa-422e-b641-ab28a1c99156';
   $pane->panel = 'center';
-  $pane->type = 'node_created';
-  $pane->subtype = 'node_created';
+  $pane->type = 'token';
+  $pane->subtype = 'node:created';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'format' => 'article',
+    'sanitize' => 1,
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
+    'override_title_text' => 'Közzétéve:',
+    'override_title_heading' => 'span',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -338,9 +338,9 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 6;
   $pane->locks = array();
-  $pane->uuid = 'fc7d5976-3382-44b0-ab5f-c93cd31c38d4';
-  $display->content['new-fc7d5976-3382-44b0-ab5f-c93cd31c38d4'] = $pane;
-  $display->panels['center'][6] = 'new-fc7d5976-3382-44b0-ab5f-c93cd31c38d4';
+  $pane->uuid = '058c8cab-b5fa-422e-b641-ab28a1c99156';
+  $display->content['new-058c8cab-b5fa-422e-b641-ab28a1c99156'] = $pane;
+  $display->panels['center'][6] = 'new-058c8cab-b5fa-422e-b641-ab28a1c99156';
   $pane = new stdClass();
   $pane->pid = 'new-9354d871-2863-49fb-8ff1-a840d9250d15';
   $pane->panel = 'center';

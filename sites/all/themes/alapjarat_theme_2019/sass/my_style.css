@@ -852,10 +852,10 @@ a:hover {
     .node_pane .pane-node-field-published .field-items a {
       color: #333332 !important;
       text-decoration: none; }
-  .node_pane .pane-node-published {
+  .node_pane .pane-node-published, .node_pane .pane-node-created {
     font-size: 12px;
     padding-bottom: 35px; }
-    .node_pane .pane-node-published .pane-content {
+    .node_pane .pane-node-published .pane-content, .node_pane .pane-node-created .pane-content {
       display: inline-block; }
   .node_pane .field-label {
     font-weight: normal; }
@@ -1130,7 +1130,7 @@ a:hover {
     color: #ffffff;
     font-weight: bold;
     font-size: 16px; }
-  .menu-footer a, .menu-footer span {
+  .menu-footer a, .menu-footer span, .menu-footer #random-glossory a {
     color: #ffffff !important;
     font-size: 14px; }
   .menu-footer li {
@@ -1185,6 +1185,12 @@ a:hover {
       padding-top: 0px; }
     .menu-footer .glossory a {
       font-size: 16px; }
+  .menu-footer #random-glossory a {
+    text-transform: none; }
+  .menu-footer #random-glossory .view-glossary-list {
+    padding-top: 0px; }
+    .menu-footer #random-glossory .view-glossary-list .views-row {
+      line-height: 16px; }
   .menu-footer .atmedia {
     padding-bottom: 15px; }
     .menu-footer .atmedia span {
