@@ -448,7 +448,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Banner',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '640x360',
+    'body' => '',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1348,6 +1348,28 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-43d08d74-7184-49e7-b630-b1219bdd569b'] = $pane;
   $display->panels['connection'][0] = 'new-43d08d74-7184-49e7-b630-b1219bdd569b';
   $pane = new stdClass();
+  $pane->pid = 'new-a8ab6f5b-1470-4503-afd6-7953ab18b569';
+  $pane->panel = 'connection';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'glossary_list-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array();
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'random-glossory',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'a8ab6f5b-1470-4503-afd6-7953ab18b569';
+  $display->content['new-a8ab6f5b-1470-4503-afd6-7953ab18b569'] = $pane;
+  $display->panels['connection'][1] = 'new-a8ab6f5b-1470-4503-afd6-7953ab18b569';
+  $pane = new stdClass();
   $pane->pid = 'new-8b90915d-b332-4f16-8107-4eb10661be94';
   $pane->panel = 'connection_';
   $pane->type = 'custom';
@@ -1361,7 +1383,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'body' => '<a href="/impresszum" class="link">Impresszum</a>
 <a href="/mediaajanlat" class="link">Médiaajánlat</a>
 <a href="/jogi-nyilatkozat" class="link">Jogi nyilatkozat</a>
-<span>Elérhetőségek</span>
+<a href="/kapcsolat" class="link">Elérhetőségek</a>
 <a href="mailto:info@alapjarat.hu" class="mail">info@alapjarat.hu</a>
 <a href="tel:+36202995830" class="tel">+36 20 299 5830</a>',
     'format' => 'admin_html',
@@ -1561,7 +1583,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Default page big banner',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '970x250',
+    'body' => '',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1822,7 +1844,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Banner1',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '300x250',
+    'body' => '',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1891,7 +1913,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Banner2',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '300x250',
+    'body' => '',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1933,7 +1955,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Banner2 in article',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '300x600',
+    'body' => '',
     'format' => 'plain_text',
     'substitute' => 1,
   );
@@ -2040,7 +2062,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Banner3',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '300x250',
+    'body' => '',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -2093,7 +2115,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
 <input type="email" value="" placeholder="E-mail cím:"  name="EMAIL" class="required email" id="mce-EMAIL">
 </div>
 <div class="mc-field-group input-group">
-<input type="radio" class="required" value="Elfogadom az adatkezelési szabályzatot."  name="MMERGE1" id="mce-MMERGE1-0"><label>Elfogadom az &nbsp;<a href="/adatkezelesi-szabalyzat" target="_blank"> Adatkezelési szabályzatot.</a></label>
+<input type="radio" class="required" value="Elfogadom az adatkezelési szabályzatot."  name="MMERGE1" id="mce-MMERGE1-0"><label>Elfogadom az <a href="/adatkezelesi-szabalyzat" target="_blank"> Adatkezelési szabályzatot.</a></label>
 </div>
 <div class="mc-field-group input-group consent">
 <input type="radio" class="required" value="Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra." name="MMERGE3" id="mce-MMERGE3-0"><label for="mce-MMERGE3-0">Hozzájárulok ahhoz, hogy az Alapjárat hírlevelet küldjön számomra.</label>
