@@ -21,9 +21,9 @@ $date_format = 'Y-m-d, H:i';
 if ($pane->subtype == 'node:created') {
   $node = node_load($display->args[0]);
   if ($node->published_at) {
-    $content = '';
-    $title = '';
+    $created = FALSE;
   } else {
+    $created = TRUE;
     $content = date($date_format, $node->created);
   }
 }
@@ -50,6 +50,7 @@ if ($pane->subtype == 'node:published') {
 
 }
 ?>
+<?php if ($created || $pane->subtype != 'node:created'): ?>
 <?php if ($pane_prefix): ?>
   <?php print $pane_prefix; ?>
 <?php endif; ?>
@@ -92,4 +93,5 @@ if ($pane->subtype == 'node:published') {
 </div>
 <?php if ($pane_suffix): ?>
   <?php print $pane_suffix; ?>
+<?php endif; ?>
 <?php endif; ?>
