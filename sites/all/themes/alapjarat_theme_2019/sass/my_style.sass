@@ -30,6 +30,7 @@ body.not-front
 body.node-type-a-article
 	.main-center
 		background-color: white
+		padding-top: 40px !important
 body.page-impress, body.node-type-pages, body.page-taxonomy, body.page-new-archive, body.page-new-kereses, body.page-autos-kifejezesek, body.page-media-collection
 	.right-bar
 		padding-top: 40px
@@ -88,7 +89,6 @@ a:hover
 	content: ""
 .banner
 	margin: auto
-	background-color: #dbe0e4
 
 //Display
 #mobile-logo
@@ -462,12 +462,12 @@ a:hover
 				color: #C72026 !important
 	#default-page-big-banner
 		max-width: 970px
-		height: 250px
-		margin: 30px auto
+		margin-top: 30px
 	#one
 		width: 50%
 		float: left
 		position: relative
+		margin-top: 30px
 		.views-field-path
 			width: 100%
 			position: absolute
@@ -508,6 +508,7 @@ a:hover
 		width: 50%
 		float: left
 		padding-left: 25px
+		margin-top: 30px
 		.views-row
 			width: 48%
 			display: inline-block
@@ -569,9 +570,7 @@ a:hover
 		padding-top: 47px
 		.banner
 			max-width: 300px
-			height: 250px
 		#banner2-in-article
-			height: 600px
 		.pane-title
 			font-size: 14px
 			text-transform: uppercase
@@ -920,6 +919,7 @@ a:hover
 			font-size: 30px !important
 			font-weight: 300
 			font-family: magistral, sans-serif
+			clear: both
 			span
 				font-size: 30px !important
 				font-weight: 300
@@ -1026,7 +1026,6 @@ a:hover
 			font-family: magistral, sans-serif
 	#article-banner
 		max-width: 640px
-		height: 360px
 		margin-bottom: 30px
 		padding: 0px
 
@@ -1171,7 +1170,7 @@ a:hover
 		color: #ffffff
 		font-weight: bold
 		font-size: 16px
-	a, span
+	a, span, #random-glossory a
 		color: #ffffff !important
 		font-size: 14px
 	li
@@ -1227,12 +1226,17 @@ a:hover
 			padding-top: 0px
 		a
 			font-size: 16px
+	#random-glossory
+		a
+			text-transform: none
+		.view-glossary-list
+			padding-top: 0px
+			.views-row
+				line-height: 16px
 	.atmedia
 		padding-bottom: 15px
 		span
 			padding-bottom: 10px
-
-
 
 .my-footer
 	background-color: #C72026
