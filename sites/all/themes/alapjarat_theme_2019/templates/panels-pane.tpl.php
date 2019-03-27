@@ -22,6 +22,7 @@ if ($pane->subtype == 'node:created') {
   if ($node->published_at) {
     $content = '';
     $title = '';
+    $content = date($date_format, $node->created);
   }
 }
 
