@@ -12,7 +12,7 @@ function alapjarat_mc_menu() {
    );
 
   $items['media-collection/%'] = array(
-    'title' => 'check-images',
+    'title' => 'Alapjárat Média',
     'page callback' => 'alapjarat_mc_media_page',
     'page arguments' => array(1),
     'access callback' => TRUE,
