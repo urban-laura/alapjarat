@@ -108,7 +108,7 @@ function alapjarat_mc_collect_gallery_images() {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
       'type' => 'image',
-      'title' => mb_substr($record->field_title2_value, 0, 30) . '...',
+      'title' => mb_substr(check_plain($record->field_title2_value), 0, 30) . '...',
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
@@ -137,7 +137,7 @@ function alapjarat_mc_collect_gallery_images() {
     $file = file_load($record->field_media_fid);
     $media[] = array(
       'type' => 'image',
-      'title' => mb_substr($record->field_title2_value, 0, 30) . '...',
+      'title' => mb_substr(check_plain($record->field_title2_value), 0, 30) . '...',
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
