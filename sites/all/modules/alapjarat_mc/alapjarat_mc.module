@@ -89,9 +89,11 @@ function alapjarat_mc_collect_gallery_images() {
 
   $query = db_select('field_data_field_gallery', 'fg');
   $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
+  $query->leftJoin('field_data_field_title2', 'ft', 'ft.entity_id = fg.entity_id');
   $query
   ->fields('n', array('title', 'status', 'changed', 'nid'))
   ->fields('fg', array('field_gallery_fid', 'delta'))
+  ->fields('ft', array('field_title2_value'))
   ->condition('n.status', 1, '=')
   ->condition('fg.delta', 0, '=')
   ->orderBy('n.changed', 'DESC')
@@ -106,21 +108,23 @@ function alapjarat_mc_collect_gallery_images() {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
       'type' => 'image',
-      'title' => mb_substr($record->title, 0, 30) . '...',
+      'title' => mb_substr($record->field_title2_value, 0, 30) . '...',
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
       'siblings' => alapjarat_mc_get_gallery_images($record->nid),
       'groupName' => 'lightbox[g' . $record->nid . ']',
-      'content' => '/node/' . $record->nid,
+      'content' => $record->nid,
     );
   }
 
   $query = db_select('field_data_field_media', 'fg');
   $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
+  $query->leftJoin('field_data_field_title2', 'ft', 'ft.entity_id = fg.entity_id');
   $query
   ->fields('n', array('title', 'status', 'changed'))
   ->fields('fg', array('field_media_fid'))
+  ->fields('ft', array('field_title2_value'))
   ->condition('n.status', 1, '=')
   ->orderBy('n.changed', 'DESC');
   $query->range($offset, 10);
@@ -133,11 +137,12 @@ function alapjarat_mc_collect_gallery_images() {
     $file = file_load($record->field_media_fid);
     $media[] = array(
       'type' => 'image',
-      'title' => mb_substr($record->title, 0, 30) . '...',
+      'title' => mb_substr($record->field_title2_value, 0, 30) . '...',
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
       'groupName' => 'lightbox',
+      'content' => $record->nid,
     );
   }
 
