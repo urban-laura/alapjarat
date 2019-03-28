@@ -1790,11 +1790,8 @@ function alapjarat_theme_2019_views_default_views() {
   $handler->display->display_options['sorts']['published_at']['field'] = 'published_at';
   $handler->display->display_options['sorts']['published_at']['order'] = 'DESC';
   $handler->display->display_options['sorts']['published_at']['granularity'] = 'minute';
-<<<<<<< HEAD
   /* Contextual filter: Tartalom: Category (field_tags) */
-=======
   /* Contextual filter: Tartalom: Tags (field_tags) */
->>>>>>> master
   $handler->display->display_options['arguments']['field_tags_tid_1']['id'] = 'field_tags_tid_1';
   $handler->display->display_options['arguments']['field_tags_tid_1']['table'] = 'field_data_field_tags';
   $handler->display->display_options['arguments']['field_tags_tid_1']['field'] = 'field_tags_tid';
