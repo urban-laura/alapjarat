@@ -3326,7 +3326,7 @@ function alapjarat_features_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Archive';
   $page->admin_description = '';
-  $page->path = 'archive';
+  $page->path = 'old-archive';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -3417,7 +3417,7 @@ function alapjarat_features_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Front page';
   $page->admin_description = '';
-  $page->path = 'front-page';
+  $page->path = 'front-page-old';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();

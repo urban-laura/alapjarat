@@ -2600,7 +2600,7 @@ function alapjarat_theme_2019_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Archive 2019';
   $page->admin_description = '';
-  $page->path = 'new-archive';
+  $page->path = 'archive';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
@@ -2725,7 +2725,7 @@ function alapjarat_theme_2019_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Front page 2019';
   $page->admin_description = '';
-  $page->path = 'front-page-2019';
+  $page->path = 'front-page';
   $page->access = array();
   $page->menu = array();
   $page->arguments = array();
