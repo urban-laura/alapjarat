@@ -1,7 +1,6 @@
 (function ($) {
   Drupal.behaviors.hamburger = {
     attach: function (context, settings) {
-      //$('#main_menu').prepend('<a id="ham-menu" style="cursor: pointer;">Hírek</a>');
       $('#mini-panel-hamburger_menu_2019').hide();
 
       $(document).click(function(event) {

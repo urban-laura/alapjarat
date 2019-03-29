@@ -291,7 +291,7 @@ a:hover {
       display: none; }
     .header #main_menu #ham-menu {
       margin-right: 30px; }
-    .header #main_menu a {
+    .header #main_menu a, .header #main_menu span {
       color: #333332 !important;
       font-size: 14px;
       line-height: 52px;
@@ -367,7 +367,7 @@ a:hover {
     margin: 0;
     padding: 0;
     list-style: none; }
-  .mobile-menu #mini-panel-mobil_menu .pane-title, .mobile-menu #mini-panel-mobil_menu .view-header, .mobile-menu #mini-panel-mobil_menu #main-menu-2019 a, .mobile-menu #mini-panel-mobil_menu #connection .link {
+  .mobile-menu #mini-panel-mobil_menu .pane-title, .mobile-menu #mini-panel-mobil_menu .view-header, .mobile-menu #mini-panel-mobil_menu #main-menu-2019 a, .mobile-menu #mini-panel-mobil_menu #connection .link, .mobile-menu #mini-panel-mobil_menu #ham-menu {
     display: block;
     line-height: 50px;
     font-size: 14px;
