@@ -933,9 +933,9 @@ a:hover {
       margin: 0;
       margin-left: 45px;
       padding-bottom: 10px;
-      font-family: magistral, sans-serif; }
+      font-family: magistral, sans-serif;
+      padding-left: 10px; }
     .node_pane .pane-node-field-source a {
-      margin-left: 10px;
       color: #C72026 !important;
       text-decoration: none; }
   .node_pane #article4 h4 {
