@@ -82,8 +82,8 @@
 
   #main_menu #mobil-menu {
     display: block !important; }
-  #main_menu #ham-menu {
-    display: none; }
+  #main_menu #ham-menu, #main_menu .pane-content {
+    display: none !important; }
   #main_menu ul {
     display: none; }
 
@@ -326,6 +326,13 @@
   .taxonomy-page h3, .archive h3, .view-search-api-search h3 {
     font-size: 18px;
     margin-top: 0px; } }
+@media screen and (max-width: 620px) {
+  #lightbox #outerImageContainer {
+    width: 100% !important; }
+    #lightbox #outerImageContainer #lightboxFrame {
+      width: 100% !important; }
+  #lightbox #imageDataContainer {
+    width: 100% !important; } }
 @media screen and (max-width: 600px) {
   .panels-flexible-region-first.first-block #one .views-field-path, .panels-flexible-region-first.first-block #four .views-field-path {
     padding: 20px;
@@ -568,14 +575,16 @@
     margin: 2px 0px; }
   .taxonomy-page h3, .archive h3, .view-search-api-search h3 {
     margin-bottom: 5px;
-    font-size: 14px; }
+    font-size: 14px;
+    display: flex; }
   .taxonomy-page .subtitle, .archive .subtitle, .view-search-api-search .subtitle {
-    font-size: 12px; } }
+    font-size: 12px;
+    margin-left: 140px; } }
 @media screen and (max-width: 450px) {
   .letterhead .panels-flexible-row-inside {
     max-width: 200px; }
 
-  .mobile-menu #mini-panel-mobil_menu .pane-title, .mobile-menu #mini-panel-mobil_menu .view-header, .mobile-menu #mini-panel-mobil_menu #main-menu-2019 a, .mobile-menu #mini-panel-mobil_menu #connection .link {
+  .mobile-menu #mini-panel-mobil_menu .pane-title, .mobile-menu #mini-panel-mobil_menu .view-header, .mobile-menu #mini-panel-mobil_menu #main-menu-2019 a, .mobile-menu #mini-panel-mobil_menu #connection .link, .mobile-menu #mini-panel-mobil_menu #ham-menu {
     font-size: 12px; }
   .mobile-menu #mini-panel-mobil_menu .pane-content li a {
     font-size: 12px;
