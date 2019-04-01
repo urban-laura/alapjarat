@@ -129,6 +129,12 @@ a:hover {
 #lightbox2-overlay {
   width: 100% !important; }
 
+#bottomNavClose {
+  margin-top: 10px; }
+
+#imageData #bottomNav {
+  height: 40px; }
+
 .item-list .pager {
   text-align: left;
   margin: 0px;
