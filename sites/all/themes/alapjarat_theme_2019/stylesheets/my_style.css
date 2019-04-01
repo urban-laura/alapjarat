@@ -1451,10 +1451,10 @@ a:hover {
   margin-left: 45px;
   padding-bottom: 10px;
   font-family: magistral, sans-serif;
+  padding-left: 10px;
 }
-/* line 966, ../sass/my_style.sass */
+/* line 967, ../sass/my_style.sass */
 .node_pane .pane-node-field-source a {
-  margin-left: 10px;
   color: #C72026 !important;
   text-decoration: none;
 }
