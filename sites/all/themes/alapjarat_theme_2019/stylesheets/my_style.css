@@ -212,8 +212,8 @@ a:hover {
 }
 
 /* line 120, ../sass/my_style.sass */
-#bottomNavClose {
-  margin-top: 10px;
+#bottomNavClose, .lightbox2-alt-layout-data #bottomNavClose {
+  margin-top: 0px;
 }
 
 /* line 122, ../sass/my_style.sass */
