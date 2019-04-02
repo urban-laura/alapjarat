@@ -50,7 +50,7 @@ if ($pane->subtype == 'node:published') {
 
 }
 ?>
-<?php if ($created || $pane->subtype != 'node:created'): ?>
+<?php if ($pane->subtype != 'node:created' || $created): ?>
 <?php if ($pane_prefix): ?>
   <?php print $pane_prefix; ?>
 <?php endif; ?>

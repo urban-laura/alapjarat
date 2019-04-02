@@ -488,7 +488,7 @@ function alapjarat_common_glossary_admin() {
   return system_settings_form($form);
 }
 
-function alapjarat_common_glossary_insertlink($format, &$text, &$terms) {
+function alapjarat_common_glossary_insertlink(&$text, &$terms) {
   $multibyte_enabled = extension_loaded('mbstring');
   if ($multibyte_enabled) {
     $mb_prefix = 'mb_';
@@ -642,7 +642,7 @@ function alapjarat_common_glossary_parser($text) {
       'ins_after' => $ins_after,
     );
   }
-  return alapjarat_common_glossary_insertlink($format, $text, $terms_replace);
+  return alapjarat_common_glossary_insertlink($text, $terms_replace);
 }
 
 function alapjarat_common_glossary_get_terms($format) {
@@ -653,34 +653,29 @@ function alapjarat_common_glossary_get_terms($format) {
   $vocab_object = taxonomy_vocabulary_machine_name_load('glossary');
   $glossary_vid = $vocab_object->vid;
 
+  $terms = array();
+  // Get all glossary terms.
+  // Omit terms without a description. those are usually container terms.
+  // If multilingual taxonomy is enabled only show terms in current or no
+  // language.
+  $query = db_select('taxonomy_term_data', 'td');
+  // We have to use a left join because some people don't use nodes.
+  $query->leftJoin('taxonomy_index', 'ti', 'ti.tid = td.tid');
 
-  if (!$terms = $got[$format]) {
-    $terms = array();
-    $vids = variable_get("glossary_vids_$format", 0);
-    // Get all glossary terms.
-    // Omit terms without a description. those are usually container terms.
-    // If multilingual taxonomy is enabled only show terms in current or no
-    // language.
-    $query = db_select('taxonomy_term_data', 'td');
-    // We have to use a left join because some people don't use nodes.
-    $query->leftJoin('taxonomy_index', 'ti', 'ti.tid = td.tid');
+  $query->fields('td', array('tid', 'name', 'description'))
+    ->addExpression('COUNT(ti.nid)', 'nodes');
+  $query->condition('td.vid', $glossary_vid)
+    ->groupBy('td.tid')
+    ->orderBy('LENGTH(td.name)', 'DESC');
+  if (module_exists('i18ntaxonomy')) {
+    global $language;
+    $query->condition('td.language', array('', $language->language), 'IN');
+  }
 
-    $query->fields('td', array('tid', 'name', 'description'))
-      ->addExpression('COUNT(ti.nid)', 'nodes');
-    $query->condition('td.vid', $glossary_vid)
-      ->groupBy('td.tid')
-      ->orderBy('LENGTH(td.name)', 'DESC');
-    if (module_exists('i18ntaxonomy')) {
-      global $language;
-      $query->condition('td.language', array('', $language->language), 'IN');
-    }
-
-    $result = $query->execute();
-    while ($term = $result->fetchObject()) {
-      $term->vid = $glossary_vid;
-      $terms[] = $term;
-    }
-
+  $result = $query->execute();
+  while ($term = $result->fetchObject()) {
+    $term->vid = $glossary_vid;
+    $terms[] = $term;
   }
 
   return $terms;
