@@ -13,6 +13,401 @@ function alapjarat_features_default_page_manager_handlers() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'node_view__impresszum';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 3;
+  $handler->conf = array(
+    'title' => 'Impresszum',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'impresszum',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'entity_bundle:node',
+          'settings' => array(
+            'type' => array(
+              'impress' => 'impress',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array(
+    'items' => array(
+      'canvas' => array(
+        'type' => 'row',
+        'contains' => 'column',
+        'children' => array(
+          0 => 'main',
+        ),
+        'parent' => NULL,
+      ),
+      'main' => array(
+        'type' => 'column',
+        'width' => 100,
+        'width_type' => '%',
+        'children' => array(
+          0 => 'main-row',
+        ),
+        'parent' => 'canvas',
+      ),
+      'main-row' => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'center',
+        ),
+        'parent' => 'main',
+      ),
+      'center' => array(
+        'type' => 'region',
+        'title' => 'Center',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => 'main-row',
+        'class' => 'node_pane pages',
+        'hide_empty' => 0,
+      ),
+    ),
+  );
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '33eea609-1cf5-42f5-85c5-d1dec2ee886c';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view__impresszum';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-4b75511c-9a35-40e3-986a-0b4be882ded5';
+  $pane->panel = 'center';
+  $pane->type = 'node_title';
+  $pane->subtype = 'node_title';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'link' => 0,
+    'markup' => 'none',
+    'id' => '',
+    'class' => '',
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '4b75511c-9a35-40e3-986a-0b4be882ded5';
+  $display->content['new-4b75511c-9a35-40e3-986a-0b4be882ded5'] = $pane;
+  $display->panels['center'][0] = 'new-4b75511c-9a35-40e3-986a-0b4be882ded5';
+  $pane = new stdClass();
+  $pane->pid = 'new-61537438-1ae3-4984-ae67-87563348138e';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_status';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'above',
+    'formatter' => 'text_plain',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '61537438-1ae3-4984-ae67-87563348138e';
+  $display->content['new-61537438-1ae3-4984-ae67-87563348138e'] = $pane;
+  $display->panels['center'][1] = 'new-61537438-1ae3-4984-ae67-87563348138e';
+  $pane = new stdClass();
+  $pane->pid = 'new-c25985a3-2191-4e88-85a1-919f7422f9b7';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_description';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'above',
+    'formatter' => 'text_plain',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = 'c25985a3-2191-4e88-85a1-919f7422f9b7';
+  $display->content['new-c25985a3-2191-4e88-85a1-919f7422f9b7'] = $pane;
+  $display->panels['center'][2] = 'new-c25985a3-2191-4e88-85a1-919f7422f9b7';
+  $pane = new stdClass();
+  $pane->pid = 'new-06c7750f-7845-4610-b07f-ebc48ab6e834';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_picture';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'above',
+    'formatter' => 'image',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'image_style' => 'impress_2019',
+      'image_link' => '',
+    ),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = '06c7750f-7845-4610-b07f-ebc48ab6e834';
+  $display->content['new-06c7750f-7845-4610-b07f-ebc48ab6e834'] = $pane;
+  $display->panels['center'][3] = 'new-06c7750f-7845-4610-b07f-ebc48ab6e834';
+  $pane = new stdClass();
+  $pane->pid = 'new-a0ca0777-3074-4e71-a8d4-b7837712f459';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_e_mail';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'above',
+    'formatter' => 'email_plain',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $pane->uuid = 'a0ca0777-3074-4e71-a8d4-b7837712f459';
+  $display->content['new-a0ca0777-3074-4e71-a8d4-b7837712f459'] = $pane;
+  $display->panels['center'][4] = 'new-a0ca0777-3074-4e71-a8d4-b7837712f459';
+  $pane = new stdClass();
+  $pane->pid = 'new-d3af8db8-5098-429d-bad2-fe6fbfe92067';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_name_link';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'above',
+    'formatter' => 'text_plain',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $pane->uuid = 'd3af8db8-5098-429d-bad2-fe6fbfe92067';
+  $display->content['new-d3af8db8-5098-429d-bad2-fe6fbfe92067'] = $pane;
+  $display->panels['center'][5] = 'new-d3af8db8-5098-429d-bad2-fe6fbfe92067';
+  $pane = new stdClass();
+  $pane->pid = 'new-5d53c2e7-1aba-4d84-a018-c1b80c07086f';
+  $pane->panel = 'center';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_colleague_status';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'label' => 'above',
+    'formatter' => 'taxonomy_term_reference_plain',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = '5d53c2e7-1aba-4d84-a018-c1b80c07086f';
+  $display->content['new-5d53c2e7-1aba-4d84-a018-c1b80c07086f'] = $pane;
+  $display->panels['center'][6] = 'new-5d53c2e7-1aba-4d84-a018-c1b80c07086f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['node_view__impresszum'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'node_view__panel_context_2c3793f9-2690-4d2a-9f62-7972906cf6c0';
   $handler->task = 'node_view';
   $handler->subtask = '';
