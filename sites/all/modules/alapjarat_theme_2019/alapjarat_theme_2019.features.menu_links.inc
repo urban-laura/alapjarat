@@ -14,7 +14,7 @@ function alapjarat_theme_2019_menu_default_menu_links() {
   $menu_links['menu-main-menu-2019_mdia:media-collection/all'] = array(
     'menu_name' => 'menu-main-menu-2019',
     'link_path' => 'media-collection/all',
-    'router_path' => 'media-collection/%',
+    'router_path' => 'media-collection/all',
     'link_title' => 'Média',
     'options' => array(
       'attributes' => array(

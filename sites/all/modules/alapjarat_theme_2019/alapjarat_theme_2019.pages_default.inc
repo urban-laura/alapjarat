@@ -1412,7 +1412,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
 <a href="/jogi-nyilatkozat" class="link">Jogi nyilatkozat</a>
 <a href="/kapcsolat" class="link">Elérhetőségek</a>
 <a href="mailto:info@alapjarat.hu" class="mail">info@alapjarat.hu</a>
-<a href="tel:+36202995830" class="tel">+36 20 299 5830</a>',
+<a href="tel:+36302752672" class="tel">+36 30 275 2672</a>',
     'format' => 'admin_html',
     'substitute' => 1,
   );

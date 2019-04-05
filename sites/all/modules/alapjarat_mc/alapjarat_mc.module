@@ -11,14 +11,32 @@ function alapjarat_mc_menu() {
     'type' => MENU_NORMAL_ITEM,
    );
 
-  $items['media-collection/%'] = array(
-    'title' => 'Alapjárat Média',
+  $items['media-collection/all'] = array(
+    'title' => 'Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat',
     'page callback' => 'alapjarat_mc_media_page',
     'page arguments' => array(1),
     'access callback' => TRUE,
     'type' => MENU_NORMAL_ITEM,
     'menu_name' => 'main-menu',
   );
+
+    $items['media-collection/image'] = array(
+        'title' => 'Alapjárat galéria - jó minőségű, egyedi autós képek minden mennyiségben!',
+        'page callback' => 'alapjarat_mc_media_page',
+        'page arguments' => array(1),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+        'menu_name' => 'main-menu',
+    );
+
+    $items['media-collection/video'] = array(
+        'title' => 'Alapjárat videók - autós videók új és használt autók tesztjeiről, autós eseményekről',
+        'page callback' => 'alapjarat_mc_media_page',
+        'page arguments' => array(1),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+        'menu_name' => 'main-menu',
+    );
 
   return $items;
 }
@@ -36,7 +54,7 @@ function alapjarat_mc_admin() {
 
   $form['mc_header_menu_item_image'] = array(
     '#type' => 'textfield',
-    '#title' => t('Media gallery header menu item "All"'),
+    '#title' => t('Media gallery header menu item "Images"'),
     '#default_value' => variable_get('mc_header_menu_item_image', 'Images'),
     '#description' => t("Media collection page header menu item title."),
     '#required' => TRUE,
@@ -44,7 +62,7 @@ function alapjarat_mc_admin() {
 
   $form['mc_header_menu_item_video'] = array(
     '#type' => 'textfield',
-    '#title' => t('Media gallery header menu item "All"'),
+    '#title' => t('Media gallery header menu item "Videos"'),
     '#default_value' => variable_get('mc_header_menu_item_video', 'Videos'),
     '#description' => t("Media collection page header menu item title."),
     '#required' => TRUE,
