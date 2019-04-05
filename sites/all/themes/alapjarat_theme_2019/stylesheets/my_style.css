@@ -1921,50 +1921,55 @@ a:hover {
   color: #333332 !important;
 }
 /* line 1264, ../sass/my_style.sass */
+.my-footer .copyright .atmedia {
+  display: none;
+  opacity: 0.3;
+}
+/* line 1267, ../sass/my_style.sass */
 .my-footer .social-media-menu {
   width: 35%;
 }
-/* line 1266, ../sass/my_style.sass */
+/* line 1269, ../sass/my_style.sass */
 .my-footer .right {
   float: right;
 }
-/* line 1268, ../sass/my_style.sass */
+/* line 1271, ../sass/my_style.sass */
 .my-footer .left {
   float: left;
 }
-/* line 1271, ../sass/my_style.sass */
+/* line 1274, ../sass/my_style.sass */
 .my-footer #social-media .views-row {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 1274, ../sass/my_style.sass */
+/* line 1277, ../sass/my_style.sass */
 .my-footer #social-media .view-content {
   display: inline-block;
   float: right;
 }
 
-/* line 1278, ../sass/my_style.sass */
+/* line 1281, ../sass/my_style.sass */
 .editor-menu {
   background: black;
   width: 86%;
 }
 
-/* line 1281, ../sass/my_style.sass */
+/* line 1284, ../sass/my_style.sass */
 .user_name {
   width: 14%;
   background: black;
 }
 
-/* line 1284, ../sass/my_style.sass */
+/* line 1287, ../sass/my_style.sass */
 #user_name {
   float: right;
 }
 
-/* line 1286, ../sass/my_style.sass */
+/* line 1289, ../sass/my_style.sass */
 #my_admin_menu, #user_name {
   padding: 10px 5px;
 }
-/* line 1288, ../sass/my_style.sass */
+/* line 1291, ../sass/my_style.sass */
 #my_admin_menu p, #user_name p {
   color: white !important;
   margin: 0;
@@ -1973,15 +1978,15 @@ a:hover {
   padding: 0px 5px;
   width: -moz-fit-content;
 }
-/* line 1295, ../sass/my_style.sass */
+/* line 1298, ../sass/my_style.sass */
 #my_admin_menu ul li.leaf, #user_name ul li.leaf {
   display: inline;
 }
-/* line 1297, ../sass/my_style.sass */
+/* line 1300, ../sass/my_style.sass */
 #my_admin_menu ul li.leaf a, #user_name ul li.leaf a {
   color: white !important;
 }
-/* line 1299, ../sass/my_style.sass */
+/* line 1302, ../sass/my_style.sass */
 #my_admin_menu ul li.leaf a:hover, #user_name ul li.leaf a:hover {
   color: red !important;
 }

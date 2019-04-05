@@ -1441,6 +1441,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'body' => '<ul>
 <li class="left">© Copyright 2019, <a href="/">alapjarat.hu</a> & <a href="https://www.ecdh.hu/">ecdh.hu</a></li>
 <li class="right">1097 Budapest, Könyves Kálmán krt. 12-14.</li>
+<li class=atmedia><a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png"></a></li>
 </ul>',
     'format' => 'admin_html',
     'substitute' => 1,
