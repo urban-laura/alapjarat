@@ -277,7 +277,7 @@ function alapjarat_theme_2019_default_panels_mini() {
     'title' => 'Elérhetőség',
     'title_heading' => 'span',
     'body' => '<ul>
-<li><a href="tel:+36202995830" class="tel">+36 20 299 5830</a></li>
+<li><a href="tel:+36302752672" class="tel">+36 30 275 2672</a></li>
 <li><a href="mailto:info@alapjarat.hu" class="mail">info@alapjarat.hu</a></li>
 </ul>
 <a href="/impresszum" class="link">Impresszum</a>
