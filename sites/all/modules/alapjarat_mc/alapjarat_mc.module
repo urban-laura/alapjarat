@@ -11,26 +11,8 @@ function alapjarat_mc_menu() {
     'type' => MENU_NORMAL_ITEM,
    );
 
-  $items['media-collection/all'] = array(
-    'title' => 'Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat',
-    'page callback' => 'alapjarat_mc_media_page',
-    'page arguments' => array(1),
-    'access callback' => TRUE,
-    'type' => MENU_NORMAL_ITEM,
-    'menu_name' => 'main-menu',
-  );
-
-    $items['media-collection/image'] = array(
-        'title' => 'Alapjárat galéria - jó minőségű, egyedi autós képek minden mennyiségben!',
-        'page callback' => 'alapjarat_mc_media_page',
-        'page arguments' => array(1),
-        'access callback' => TRUE,
-        'type' => MENU_NORMAL_ITEM,
-        'menu_name' => 'main-menu',
-    );
-
-    $items['media-collection/video'] = array(
-        'title' => 'Alapjárat videók - autós videók új és használt autók tesztjeiről, autós eseményekről',
+    $items['media-collection/%'] = array(
+        'title' => 'Alapjárat Média',
         'page callback' => 'alapjarat_mc_media_page',
         'page arguments' => array(1),
         'access callback' => TRUE,
