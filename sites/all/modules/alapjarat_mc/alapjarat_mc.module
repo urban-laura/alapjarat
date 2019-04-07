@@ -98,7 +98,7 @@ function alapjarat_mc_collect_gallery_images() {
   ->condition('fg.delta', 0, '=')
   ->orderBy('n.changed', 'DESC')
   ->orderBy('fg.delta', 'ASC');
-  $query->range($offset, 10);
+  $query->range($offset, 20);
   //$query->isNull('wp.entity_id');
   $results = $query
   ->execute()
@@ -118,6 +118,7 @@ function alapjarat_mc_collect_gallery_images() {
     );
   }
 
+  /*
   $query = db_select('field_data_field_media', 'fg');
   $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
   $query->leftJoin('field_data_field_title2', 'ft', 'ft.entity_id = fg.entity_id');
@@ -145,7 +146,7 @@ function alapjarat_mc_collect_gallery_images() {
       'content' => $record->nid,
     );
   }
-
+  */
   return $media;
 }
 

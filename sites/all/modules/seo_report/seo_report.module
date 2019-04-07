@@ -32,7 +32,7 @@ function seo_report_form($form, &$form_state) {
     '#type' => 'date_popup',
     '#title' => t('From'),
     '#date_format' => 'Y-m-d',
-    '#default_value' => '2018-01-01 00:00:00',
+    '#default_value' => 'YYYY-MM-DD 00:00:00',
   );
 
   $form['to'] = array(
@@ -97,6 +97,7 @@ function seo_report_form_submit($form, &$form_state) {
   } 
 
   $wrong = 0;
+  $bigsum = 0;
   foreach ($news_items as $item) {
     $author_term = taxonomy_term_load($item->field_published[LANGUAGE_NONE][0]['tid']);
     $author = $author_term->name;
@@ -106,6 +107,7 @@ function seo_report_form_submit($form, &$form_state) {
     $points = 0;
     foreach ($report[1] as $row) {
       $sum ++;
+      $bigsum ++;
       if ($row[2] == 'yes') {
         $points++;
       } else {
@@ -115,7 +117,7 @@ function seo_report_form_submit($form, &$form_state) {
 
     $fields[] = [$item->title, $author, date('Y-m-d', $item->created), $report[0], $sum . '/' . $points, l('article', 'node/' . $item->nid . '/seo-report', ['attributes' => array( 'target' => '_blank' )])];
   }
-  $fields[] = ['','', $wrong];
+  $fields[] = ['','', $bigsum . ' előfordulási lehetőségből /' . $wrong . ' alkalommal nem fordul elő'];
 
   $header = ['title', 'author', 'date', 'main tag', 'points', 'link'];
   $form_state['storage']['output'] = theme('table', array('header' => $header, 'rows' => $fields));
@@ -156,9 +158,11 @@ function seo_report_export($node, $output = 1) {
     $fields[] = ['meta desc'] + _seo_report_emphasize_tag($first_tag, $nw->field_meta_description->value->value());
   }
 
+  /*
   if ($nw->field_source->value()) {
     $fields[] = ['source'] + _seo_report_emphasize_tag($first_tag, strip_tags($nw->field_source->value->value()));
   }
+  */
 
   if ($nw->field_image->value()) {
     $fields[] = ['main image alt text'] + _seo_report_emphasize_tag($first_tag, $nw->field_image->alt->value());
