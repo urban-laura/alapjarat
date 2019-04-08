@@ -132,40 +132,45 @@ function alapjarat_seo_report_export($node, $output = 1) {
 
   $nw = entity_metadata_wrapper('node', $node);
 
+  $c = 0;
   foreach ($nw->field_tagsa->value() as $key => $value) {
-  	$first_tag = $value->name;
-  	break 1;
+  	$first_3_tag[] = $value->name;
+    $c++;
+
+    if ($c == 3) {
+      break 1;
+    }
   }
 
-  $title = '<h1>First tag: ' . $first_tag . '</h1>';
+  $title = '<h1>First 3 tag: ' . implode(',', $first_3_tag) . '</h1>';
   $header = ['field name', 'value', 'is tag occur'];
   
   if ($nw->title->value()) {
-    $fields[] = ['title'] + _alapjarat_seo_report_emphasize_tag($first_tag, $nw->title->value());
+    $fields[] = ['title'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, $nw->title->value());
   } else {
   	$fields[] = ['title', '<empty>'];	
   }
 
   if ($nw->field_title2->value()) {
-    $fields[] = ['title2'] + _alapjarat_seo_report_emphasize_tag($first_tag, $nw->field_title2->value->value());
+    $fields[] = ['title2'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, $nw->field_title2->value->value());
   }
 
   if ($nw->field_subtitled->value()) {
-    $fields[] = ['subtitle'] + _alapjarat_seo_report_emphasize_tag($first_tag, $nw->field_subtitled->value->value());
+    $fields[] = ['subtitle'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, $nw->field_subtitled->value->value());
   }
 
   if ($nw->field_meta_description->value()) {
-    $fields[] = ['meta desc'] + _alapjarat_seo_report_emphasize_tag($first_tag, $nw->field_meta_description->value->value());
+    $fields[] = ['meta desc'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, $nw->field_meta_description->value->value());
   }
 
   /*
   if ($nw->field_source->value()) {
-    $fields[] = ['source'] + _alapjarat_seo_report_emphasize_tag($first_tag, strip_tags($nw->field_source->value->value()));
+    $fields[] = ['source'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, strip_tags($nw->field_source->value->value()));
   }
   */
 
   if ($nw->field_image->value()) {
-    $fields[] = ['main image alt text'] + _alapjarat_seo_report_emphasize_tag($first_tag, $nw->field_image->alt->value());
+    $fields[] = ['main image alt text'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, $nw->field_image->alt->value());
   } 
 
   $text = $nw->field_text->value->value();
@@ -174,7 +179,7 @@ function alapjarat_seo_report_export($node, $output = 1) {
 
   $c = 1;
   foreach ($matches[1] as $row) {
-  	$fields[] = ['image ' . $c . ' alt text'] + _alapjarat_seo_report_emphasize_tag($first_tag, $row);
+    $fields[] = ['image ' . $c . ' alt text'] + _alapjarat_seo_report_emphasize_tag($first_3_tag, $row);
   	$c++;
   } 
 
@@ -185,16 +190,19 @@ function alapjarat_seo_report_export($node, $output = 1) {
   }
 }
 
-function _alapjarat_seo_report_emphasize_tag($tag, $text) {
-	$ttag = strtolower($tag);
-	$ttext = strtolower($text);
+function _alapjarat_seo_report_emphasize_tag($tags, $text) {
+  $ttext = strtolower($text);
 
-	$found = strpos($ttext, $ttag);
-	if ($found === FALSE) {
-		return [0, $text, 'no'];
-	} else {
-		$start = substr($text, 0, $found);
-		$end = substr($text, $found + strlen($tag));
-		return [0, $start . '<strong>' . $tag . '</strong>' . $end, 'yes'];
-	}
+  foreach ($tags as $tag) {
+	  $ttag = strtolower($tag);
+	  $found = strpos($ttext, $ttag);
+	  if ($found === FALSE) {
+	  } else {
+		  $start = substr($text, 0, $found);
+		  $end = substr($text, $found + strlen($tag));
+		  return [0, $start . '<strong>' . $tag . '</strong>' . $end, 'yes'];
+	  }
+  }
+
+  return [0, $text, 'no'];
 }
