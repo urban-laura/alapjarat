@@ -2582,6 +2582,45 @@ $.extend($.validator.messages, {
   $pane->uuid = '40c762d0-add2-4ca2-909f-812bfaf4a72a';
   $display->content['new-40c762d0-add2-4ca2-909f-812bfaf4a72a'] = $pane;
   $display->panels['center'][5] = 'new-40c762d0-add2-4ca2-909f-812bfaf4a72a';
+  $pane = new stdClass();
+  $pane->pid = 'new-a5db1ac2-4d2a-4086-a394-1965a6b51fd8';
+  $pane->panel = 'center';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'term_vocabulary',
+        'settings' => array(
+          'machine_name' => array(
+            'glossary' => 'glossary',
+          ),
+        ),
+        'context' => 'argument_term_1',
+        'not' => FALSE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'admin_title' => '',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<a href="/autos-kifejezesek" class="glossory-link">&lt;&lt; Ugrás az Autós kifejezések listára</a>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $pane->uuid = 'a5db1ac2-4d2a-4086-a394-1965a6b51fd8';
+  $display->content['new-a5db1ac2-4d2a-4086-a394-1965a6b51fd8'] = $pane;
+  $display->panels['center'][6] = 'new-a5db1ac2-4d2a-4086-a394-1965a6b51fd8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
