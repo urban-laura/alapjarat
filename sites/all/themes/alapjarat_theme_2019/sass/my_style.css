@@ -10,14 +10,16 @@ body {
   font-size: 18px;
   font-family: Montserrat;
   color: #333332;
-  max-width: 1440px;
+  xmax-width: 1440px;
   width: auto;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.42857143; }
 
 body.front .ecdh-api {
+  max-width: 1440px;
   padding: 15px 0px !important;
+  margin: auto;
   margin-top: 20px !important;
   background-color: #C72026; }
 body.front .main-center {
@@ -28,9 +30,11 @@ body.not-front .first-block {
 body.not-front .right-bar {
   padding-top: 14px; }
 
-body.node-type-a-article .main-center {
-  background-color: white;
-  padding-top: 40px !important; }
+body.node-type-a-article {
+  background-color: white; }
+  body.node-type-a-article .main-center {
+    background-color: white;
+    padding-top: 40px !important; }
 
 body.page-impress .right-bar, body.node-type-pages .right-bar, body.page-taxonomy .right-bar, body.page-new-archive .right-bar, body.page-new-kereses .right-bar, body.page-autos-kifejezesek .right-bar, body.page-media-collection .right-bar {
   padding-top: 40px; }
@@ -556,7 +560,9 @@ a:hover {
 
 .main-center {
   width: 100%;
-  padding-bottom: 20px !important; }
+  max-width: 1440px;
+  padding-bottom: 20px !important;
+  margin: auto !important; }
   .main-center .panels-flexible-row-inside {
     max-width: 1115px;
     margin: auto; }
