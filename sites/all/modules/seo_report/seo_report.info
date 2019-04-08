@@ -1,4 +1,0 @@
-name = SEO report
-description = Export keyword report of article for SEO analyze.
-core = 7.x
-version = 7.x-1.x
