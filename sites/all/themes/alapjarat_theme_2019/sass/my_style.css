@@ -1111,6 +1111,9 @@ a:hover {
       margin: 0; }
   .taxonomy-page .clear-both, .archive .clear-both, .view-search-api-search .clear-both {
     clear: both; }
+  .taxonomy-page .glossory-link, .archive .glossory-link, .view-search-api-search .glossory-link {
+    font-size: 14px;
+    color: #C72026 !important; }
 
 .view-glossary-list {
   padding-top: 40px; }
