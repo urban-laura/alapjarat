@@ -238,6 +238,8 @@ function _alapjarat_mc_set_meta($type) {
       ),
     );
     drupal_add_html_head($element, 'alapjarat_media');
+
+    drupal_set_title('Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat');
   }
 
   if ($type == 'image') {
