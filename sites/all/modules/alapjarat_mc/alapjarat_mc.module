@@ -11,14 +11,14 @@ function alapjarat_mc_menu() {
     'type' => MENU_NORMAL_ITEM,
    );
 
-    $items['media-collection/%'] = array(
-        'title' => 'Alapjárat Média',
-        'page callback' => 'alapjarat_mc_media_page',
-        'page arguments' => array(1),
-        'access callback' => TRUE,
-        'type' => MENU_NORMAL_ITEM,
-        'menu_name' => 'main-menu',
-    );
+  $items['media-collection/%'] = array(
+    'title' => 'Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat',
+    'page callback' => 'alapjarat_mc_media_page',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+    'menu_name' => 'main-menu',
+  );
 
   return $items;
 }
@@ -98,7 +98,7 @@ function alapjarat_mc_collect_gallery_images() {
   ->condition('fg.delta', 0, '=')
   ->orderBy('n.changed', 'DESC')
   ->orderBy('fg.delta', 'ASC');
-  $query->range($offset, 10);
+  $query->range($offset, 20);
   //$query->isNull('wp.entity_id');
   $results = $query
   ->execute()
@@ -118,6 +118,7 @@ function alapjarat_mc_collect_gallery_images() {
     );
   }
 
+  /*
   $query = db_select('field_data_field_media', 'fg');
   $query->leftJoin('node', 'n', 'n.nid = fg.entity_id');
   $query->leftJoin('field_data_field_title2', 'ft', 'ft.entity_id = fg.entity_id');
@@ -145,7 +146,7 @@ function alapjarat_mc_collect_gallery_images() {
       'content' => $record->nid,
     );
   }
-
+  */
   return $media;
 }
 
@@ -227,9 +228,50 @@ function alapjarat_mc_merged_media($type = 'all') {
   return $all_media;
 }
 
+function _alapjarat_mc_set_meta($type) {
+  if ($type == 'all') {
+    $element = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'description',
+        'content' => 'Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat',
+      ),
+    );
+    drupal_add_html_head($element, 'alapjarat_media');
+  }
+
+  if ($type == 'image') {
+    $element = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'description',
+        'content' => 'Az Alapjárat fotósai elhozzák neked a legjobb autós képeket, amelyek autós eseményeken és autóteszteken készítettek.',
+      ),
+    );
+    drupal_add_html_head($element, 'alapjarat_media');
+
+    drupal_set_title('Alapjárat galéria - jó minőségű, egyedi autós képek minden mennyiségben!');
+  }
+
+  if ($type == 'video') {
+    $element = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'description',
+        'content' => 'Nézz autós videókat az Alapjárat tesztelőitől, amelyek új és használt autók kipróbálása során készülnek. Az új kocsikról készült videók során bemutatjuk az új autó árakat, részletesen értékeljük az új autók előnyeit és hátrányait, hogy az új autó vásárlása már könnyebben menjen. A használt autók ár-érték arányaira szintén kitérünk, így a használt autó vásárlása se okozhat gondot.',
+      ),
+    );
+    drupal_add_html_head($element, 'alapjarat_media');
+
+    drupal_set_title('Alapjárat videók - autós videók új és használt autók tesztjeiről, autós eseményekről');
+  }
+}
+
 function alapjarat_mc_media_page($type = 'all') {
   drupal_add_css(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.css', array('scope' => 'header'));
   drupal_add_js(drupal_get_path('module', 'alapjarat_mc') .'/alapjarat_mc.js', array('scope' => 'header'));
+
+  _alapjarat_mc_set_meta($type);
 
   $all_media = alapjarat_mc_merged_media($type);
   foreach ($all_media as $media) {
