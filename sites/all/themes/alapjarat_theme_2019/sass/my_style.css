@@ -1226,6 +1226,10 @@ a:hover {
     .my-footer .copyright .atmedia {
       display: none;
       opacity: 0.3; }
+    .my-footer .copyright .atmedia.text {
+      color: white;
+      opacity: 1;
+      font-size: 14px; }
   .my-footer .social-media-menu {
     width: 35%; }
   .my-footer .right {
