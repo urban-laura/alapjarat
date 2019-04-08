@@ -115,11 +115,13 @@ function alapjarat_seo_report_form_submit($form, &$form_state) {
       }
     }
 
-    $fields[] = [$item->title, $author, date('Y-m-d', $item->created), $report[0], $sum . '/' . $points, l('article', 'node/' . $item->nid . '/seo-report', ['attributes' => array( 'target' => '_blank' )])];
+    $fields[] = [$item->title, $author, date('Y-m-d', $item->created), $report[0], $sum . '/' . $points,
+    l('article seo', 'node/' . $item->nid . '/seo-report', ['attributes' => array( 'target' => '_blank' )]),
+    l('article', 'node/' . $item->nid, ['attributes' => array( 'target' => '_blank' )])];
   }
   $fields[] = ['','', $bigsum . ' előfordulási lehetőségből /' . $wrong . ' alkalommal nem fordul elő'];
 
-  $header = ['title', 'author', 'date', 'main tag', 'points', 'link'];
+  $header = ['title', 'author', 'date', 'main tag', 'points', 'seo link', 'article link'];
   $form_state['storage']['output'] = theme('table', array('header' => $header, 'rows' => $fields));
   $form_state['rebuild'] = TRUE;
 
