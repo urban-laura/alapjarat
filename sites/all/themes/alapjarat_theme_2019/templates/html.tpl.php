@@ -25,7 +25,15 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  
+  <!--Atmedia measure rating -->
+  <!-- (C)2000-2019 Gemius SA - gemiusPrism  / alapjarat.hu/Fooldal -->
+  <script type="text/javascript">
+  <!--//--><![CDATA[//><!--
+  var pp_gemius_identifier = 'bVBKsU7YR6CPRTyw0Kw3JqdynA6UakvI42U90kHExgn.X7';
+  // lines below shouldn't be edited
+  function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');(function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');gt.setAttribute('defer','defer'); gt.src=l+'://gahu.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+  //--><!]]>
+  </script>
 
   <div id="skip">
     <a href="#content"><?php print t('Jump to Navigation'); ?></a>
