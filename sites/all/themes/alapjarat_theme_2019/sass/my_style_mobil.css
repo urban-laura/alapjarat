@@ -69,6 +69,10 @@
   #main-menu-2019 .kalkul-torok, #main-menu-2019 .news {
     display: none; }
 
+  .header.mobile-search-active .search {
+    width: auto !important;
+    max-width: 480px; }
+
   #mobile-logo, #mobile-search {
     display: block !important; }
 
@@ -334,8 +338,20 @@
     #lightbox #outerImageContainer #lightboxFrame {
       width: 100% !important; }
   #lightbox #imageDataContainer {
-    width: 100% !important; } }
+    width: 100% !important; }
+
+  .header.mobile-search-active .search {
+    margin: 0px; } }
 @media screen and (max-width: 600px) {
+  .header.mobile-search-active .search {
+    margin: 0px; }
+
+  .search #search-mobile input#edit-search-api-views-fulltext, .search #search-mobile input#edit-keys {
+    width: 262px; }
+  .search #search-mobile .views-exposed-widgets {
+    max-width: 300px;
+    margin: 0; }
+
   .panels-flexible-region-first.first-block #one .views-field-path, .panels-flexible-region-first.first-block #four .views-field-path {
     padding: 20px;
     padding-bottom: 55px; }
@@ -634,6 +650,11 @@
   .mobile-menu #mini-panel-mobil_menu .pane-content li a {
     font-size: 11px;
     padding-left: 35px; }
+
+  .search #search-mobile input#edit-search-api-views-fulltext, .search #search-mobile input#edit-keys {
+    width: 200px; }
+  .search #search-mobile .views-exposed-widgets {
+    max-width: 240px; }
 
   .panels-flexible-region-first.first-block #one .views-field-path, .panels-flexible-region-first.first-block #four .views-field-path {
     padding: 10px;

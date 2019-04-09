@@ -73,6 +73,10 @@
 	#main-menu-2019
 		.kalkul-torok, .news
 			display: none
+	.header.mobile-search-active
+		.search
+			width: auto !important
+			max-width: 480px
 	#mobile-logo, #mobile-search
 		display: block !important
 	.letterhead, #search
@@ -368,8 +372,21 @@
 				width: 100% !important
 		#imageDataContainer
 			width: 100% !important
+	.header.mobile-search-active
+		.search
+			margin: 0px
 
 @media screen and (max-width: 600px)
+	.header.mobile-search-active
+		.search
+			margin: 0px
+	.search
+		#search-mobile
+			input#edit-search-api-views-fulltext, input#edit-keys
+				width: 262px
+			.views-exposed-widgets
+				max-width: 300px
+				margin: 0
 	.panels-flexible-region-first.first-block
 		#one, #four
 			.views-field-path
@@ -721,6 +738,12 @@
 					a
 						font-size: 11px
 						padding-left: 35px
+	.search
+		#search-mobile
+			input#edit-search-api-views-fulltext, input#edit-keys
+				width: 200px
+			.views-exposed-widgets
+				max-width: 240px
 	.panels-flexible-region-first.first-block
 		#one, #four
 			.views-field-path

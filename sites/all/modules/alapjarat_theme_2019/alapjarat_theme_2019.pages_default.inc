@@ -850,7 +850,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 40,
         'width_type' => '%',
         'parent' => '2',
-        'class' => 'mobil-logo',
+        'class' => 'mobil-logo search',
         'hide_empty' => 0,
       ),
       'banner' => array(
@@ -877,7 +877,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'width' => 100,
         'width_type' => '%',
         'parent' => '1',
-        'class' => 'mobile-menu search',
+        'class' => 'mobile-menu',
         'hide_empty' => 0,
       ),
       4 => array(
@@ -1560,6 +1560,33 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-d619e578-3f54-47c7-810c-d95b0b15af06'] = $pane;
   $display->panels['logo'][0] = 'new-d619e578-3f54-47c7-810c-d95b0b15af06';
   $pane = new stdClass();
+  $pane->pid = 'new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
+  $pane->panel = 'logo';
+  $pane->type = 'block';
+  $pane->subtype = 'views--exp-search_api_search-page_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'inherit_path' => 0,
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => 'search-mobile',
+    'css_class' => '',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
+  $display->content['new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a'] = $pane;
+  $display->panels['logo'][1] = 'new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
+  $pane = new stdClass();
   $pane->pid = 'new-37cdfdeb-8191-41f4-b1dc-d7c5d10b8db7';
   $pane->panel = 'main_content';
   $pane->type = 'panels_mini';
@@ -1740,33 +1767,6 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->uuid = '54c02c93-b04f-4664-85a1-78ad86eca7c6';
   $display->content['new-54c02c93-b04f-4664-85a1-78ad86eca7c6'] = $pane;
   $display->panels['main_menu'][0] = 'new-54c02c93-b04f-4664-85a1-78ad86eca7c6';
-  $pane = new stdClass();
-  $pane->pid = 'new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
-  $pane->panel = 'main_menu';
-  $pane->type = 'block';
-  $pane->subtype = 'views--exp-search_api_search-page_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'inherit_path' => 0,
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => 'search-mobile',
-    'css_class' => '',
-  );
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = 'c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
-  $display->content['new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a'] = $pane;
-  $display->panels['main_menu'][1] = 'new-c7c59d39-f5ce-411f-a7fc-a0afd2bc726a';
   $pane = new stdClass();
   $pane->pid = 'new-7ce027aa-b14d-405f-8f72-369ef04075f3';
   $pane->panel = 'main_menu_';
