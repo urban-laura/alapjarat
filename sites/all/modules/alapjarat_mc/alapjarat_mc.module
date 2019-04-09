@@ -234,12 +234,12 @@ function _alapjarat_mc_set_meta($type) {
       '#tag' => 'meta',
       '#attributes' => array(
         'name' => 'description',
-        'content' => 'Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat',
+        'content' => 'Alapjárat Média rovat - tekintsd meg a legjobb autós videóinkat, amelyeket autótesztek, autós események és hírösszefoglalóink során készítettünk. Ugyanitt szuper válogatást kapsz a legsikerültebb autós képeinkről is galéria formában.',
       ),
     );
     drupal_add_html_head($element, 'alapjarat_media');
 
-    drupal_set_title('Alapjárat Média - a legjobb autós videók és autós képek galériázva | Alapjárat');
+    drupal_set_title('Alapjárat Média - a legjobb autós videók és autós képek galériázva');
   }
 
   if ($type == 'image') {
