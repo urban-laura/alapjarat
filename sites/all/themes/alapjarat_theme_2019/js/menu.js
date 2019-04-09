@@ -18,7 +18,7 @@
       $('.header .search-tablet').prepend('<div id="mobile-search"></div>');
       $('#search-mobile').hide();
       $('#mobile-search').click(function() {
-          $('#search-mobile').slideToggle();
+          $('#search-mobile').slideToggle(0);
           $('.header').toggleClass("menu-active");
           $('.header').toggleClass("mobile-search-active");
       });

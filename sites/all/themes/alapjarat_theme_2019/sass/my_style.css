@@ -266,9 +266,13 @@ a:hover {
 
 .header.mobile-search-active #mobil-menu, .header.mobile-search-active .mobil-logo, .header.mobile-search-active .mobil-logo img {
   width: 0px !important; }
+.header.mobile-search-active #mobile-logo {
+  height: 0px; }
 
 .header.main-menu-active #mobile-search, .header.main-menu-active .mobil-logo, .header.main-menu-active .mobil-logo img {
   width: 0px !important; }
+.header.main-menu-active #mobile-logo {
+  height: 0px; }
 
 .header {
   background-color: #ffffff;
