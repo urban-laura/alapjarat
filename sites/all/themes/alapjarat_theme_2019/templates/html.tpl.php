@@ -11,6 +11,22 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+
+  <!-- Atmedia -->
+  <script type="text/javascript" src="//gemhu.adocean.pl/files/js/ado.js"></script>
+  <script type="text/javascript">
+  /* (c)AdOcean 2003-2019 */
+          if(typeof ado!=="object"){ado={};ado.config=ado.preview=ado.placement=ado.master=ado.slave=function(){};}
+          ado.config({mode: "old", xml: false, consent: true, characterEncoding: true});
+          ado.preview({enabled: true});
+  </script>
+
+  <script type="text/javascript">
+  /* (c)AdOcean 2003-2019, MASTER: alapjarat.hu.osszoldal */
+  ado.master({id: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7', server: 'gemhu.adocean.pl' });
+  </script>
+  <!-- Atmedia -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
@@ -41,5 +57,14 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+
+  <!-- Atmedia -->
+  <div id="adoceangemhuyaetlpkfde"></div>
+  <script type="text/javascript">
+  /* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.extra */
+  ado.slave('adoceangemhuyaetlpkfde', {myMaster: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7' });
+  </script>
+  <!-- Atmedia -->
+  
 </body>
 </html>
