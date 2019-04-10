@@ -103,7 +103,11 @@ a:hover {
   content: ""; }
 
 .banner {
-  margin: auto; }
+  margin: auto;
+  display: none; }
+
+body.role-administrator .banner {
+  display: block; }
 
 #mobile-logo {
   display: none; }
