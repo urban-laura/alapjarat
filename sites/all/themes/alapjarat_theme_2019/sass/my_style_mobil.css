@@ -510,21 +510,6 @@
   .front-page .a-2 {
     padding-left: 10px; }
 
-  .item-list .pager {
-    padding: 10px 0px; }
-    .item-list .pager li {
-      font-size: 14px;
-      margin-right: 0px; }
-      .item-list .pager li a {
-        line-height: 18px; }
-    .item-list .pager .pager-current {
-      line-height: 19px; }
-    .item-list .pager .pager-ellipsis {
-      line-height: 17px; }
-    .item-list .pager .pager-current, .item-list .pager a {
-      width: 20px;
-      height: 20px; }
-
   .node_pane #article4 .views-row {
     padding-bottom: 15px;
     width: 100%;
@@ -713,6 +698,9 @@
   .header .search #search input#edit-search-api-views-fulltext, .header .search #search input#edit-keys {
     width: 219px; } }
 @media screen and (max-width: 350px) {
+  .item-list .pager li {
+    margin-right: 0px; }
+
   .front-page .small .views-row {
     padding: 5px; }
   .front-page .small .views-field-path, .front-page .small .views-field-published-at {

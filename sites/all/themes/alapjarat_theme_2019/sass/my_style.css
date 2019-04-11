@@ -36,13 +36,13 @@ body.node-type-a-article {
     background-color: white;
     padding-top: 40px !important; }
 
-body.page-impress .right-bar, body.node-type-pages .right-bar, body.page-taxonomy .right-bar, body.page-new-archive .right-bar, body.page-new-kereses .right-bar, body.page-autos-kifejezesek .right-bar, body.page-media-collection .right-bar {
+body.page-impress .right-bar, body.node-type-pages .right-bar, body.page-taxonomy .right-bar, body.page-archive .right-bar, body.page-kereses .right-bar, body.page-autos-kifejezesek .right-bar, body.page-media-collection .right-bar {
   padding-top: 40px; }
-  body.page-impress .right-bar .views-row, body.node-type-pages .right-bar .views-row, body.page-taxonomy .right-bar .views-row, body.page-new-archive .right-bar .views-row, body.page-new-kereses .right-bar .views-row, body.page-autos-kifejezesek .right-bar .views-row, body.page-media-collection .right-bar .views-row {
+  body.page-impress .right-bar .views-row, body.node-type-pages .right-bar .views-row, body.page-taxonomy .right-bar .views-row, body.page-archive .right-bar .views-row, body.page-kereses .right-bar .views-row, body.page-autos-kifejezesek .right-bar .views-row, body.page-media-collection .right-bar .views-row {
     background-color: white; }
-  body.page-impress .right-bar #event .views-row, body.node-type-pages .right-bar #event .views-row, body.page-taxonomy .right-bar #event .views-row, body.page-new-archive .right-bar #event .views-row, body.page-new-kereses .right-bar #event .views-row, body.page-autos-kifejezesek .right-bar #event .views-row, body.page-media-collection .right-bar #event .views-row {
+  body.page-impress .right-bar #event .views-row, body.node-type-pages .right-bar #event .views-row, body.page-taxonomy .right-bar #event .views-row, body.page-archive .right-bar #event .views-row, body.page-kereses .right-bar #event .views-row, body.page-autos-kifejezesek .right-bar #event .views-row, body.page-media-collection .right-bar #event .views-row {
     background: none; }
-  body.page-impress .right-bar #right-top-5, body.node-type-pages .right-bar #right-top-5, body.page-taxonomy .right-bar #right-top-5, body.page-new-archive .right-bar #right-top-5, body.page-new-kereses .right-bar #right-top-5, body.page-autos-kifejezesek .right-bar #right-top-5, body.page-media-collection .right-bar #right-top-5 {
+  body.page-impress .right-bar #right-top-5, body.node-type-pages .right-bar #right-top-5, body.page-taxonomy .right-bar #right-top-5, body.page-archive .right-bar #right-top-5, body.page-kereses .right-bar #right-top-5, body.page-autos-kifejezesek .right-bar #right-top-5, body.page-media-collection .right-bar #right-top-5 {
     background-color: white; }
 
 body.page-impress .right-bar {
