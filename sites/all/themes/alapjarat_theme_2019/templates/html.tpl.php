@@ -43,7 +43,7 @@
 
   <!--Atmedia measure rating -->
   <!-- (C)2000-2019 Gemius SA - gemiusPrism  / alapjarat.hu/Fooldal -->
-  <script type="text/javascript">
+  <script>
   <!--//--><![CDATA[//><!--
   var pp_gemius_identifier = 'bVBKsU7YR6CPRTyw0Kw3JqdynA6UakvI42U90kHExgn.X7';
   // lines below shouldn't be edited
@@ -60,7 +60,7 @@
 
   <!-- Atmedia -->
   <div id="adoceangemhuyaetlpkfde"></div>
-  <script type="text/javascript">
+  <script>
   /* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.extra */
   ado.slave('adoceangemhuyaetlpkfde', {myMaster: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7' });
   </script>
