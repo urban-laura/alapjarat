@@ -2311,7 +2311,7 @@ function alapjarat_features_views_default_views() {
     t('‹ előző'),
     t('következő ›'),
     t('utolsó »'),
-    t('Content'),
+    t('Tartalom'),
     t('- Choose an operation -'),
     t('Location (field_location0)'),
     t('Impress (1)'),
@@ -2320,7 +2320,7 @@ function alapjarat_features_views_default_views() {
     t('<a href=\'/node/[nid]/edit\'>edit</a>'),
     t('<a href=\'/node/[nid_1]/delete\'>delete</a>'),
     t('Partners (1)'),
-    t('Title'),
+    t('Cím'),
     t('Impress (2)'),
     t('Partners (2)'),
     t('Pages'),
@@ -2330,8 +2330,7 @@ function alapjarat_features_views_default_views() {
     t('Elhelyezkedés'),
     t('Helyszín'),
     t('Article'),
-    t('Path'),
-    t('Cím'),
+    t('Útvonal'),
     t('<a href=\'[path]\'>[field_title2]</a>'),
     t('Létrehozva'),
     t('Közzétéve'),
@@ -2352,9 +2351,7 @@ function alapjarat_features_views_default_views() {
     t('Banner5(fix)'),
     t('Impress (3)'),
     t('Partners 2019'),
-    t('Tartalom'),
     t('- Művelet kiválasztása -'),
-    t('Útvonal'),
   );
   $export['admin'] = $view;
 

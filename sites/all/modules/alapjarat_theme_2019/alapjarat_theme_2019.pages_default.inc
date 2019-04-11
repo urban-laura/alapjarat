@@ -1309,7 +1309,7 @@ ado.slave(\'adoceangemhulanmisqqjf\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.
     'admin_title' => '',
     'title' => 'HIRDETÉSI LEHETŐSÉGEK',
     'title_heading' => 'span',
-    'body' => '<a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png"></a>',
+    'body' => '<a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png" alt="atmedia"></a>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1446,7 +1446,7 @@ ado.slave(\'adoceangemhulanmisqqjf\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.
 <li class="left">© Copyright 2019, <a href="/">alapjarat.hu</a> & <a href="https://www.ecdh.hu/">ecdh.hu</a></li>
 <li class="right">1097 Budapest, Könyves Kálmán krt. 12-14.</li>
 <li class="atmedia text">HIRDETÉSI LEHETŐSÉGEK</li>
-<li class="atmedia"><a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png"></a></li>
+<li class="atmedia"><a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png" alt="atmedia"></a></li>
 </ul>',
     'format' => 'admin_html',
     'substitute' => 1,
