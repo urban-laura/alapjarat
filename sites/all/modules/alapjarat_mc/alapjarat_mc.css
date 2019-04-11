@@ -74,11 +74,13 @@
 }
 
 #alapjarat-mc-pager #prev-page a, #alapjarat-mc-pager #next-page a {
-    font-size: 14px;
-    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: magistral, sans-serif;
     background-color: white;
     border: solid 1px #CCCCC8;
-    border-radius: 5px;
+    border-radius: 3px;
+    padding: 3px 9px;
 }
 
 .alapjarat-mc-gallery-item a.mc-image {
