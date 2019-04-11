@@ -357,5 +357,5 @@ function alapjarat_theme_2019_page_alter(&$page)
 function alapjarat_theme_2019_menu_tree__menu_main_menu_2019($variables) {
   $news_item = '<li class="news extra"><span id="ham-menu" style="cursor: pointer;">' . t('News') . '</span></li>';
   $variables['tree'] = $news_item . $variables['tree'];
-  return $variables['tree'];
+  return '<ul class="menu">' . $variables['tree'] . '</ul>';
 }
