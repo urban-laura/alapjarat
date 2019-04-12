@@ -20,7 +20,7 @@
   <?php  
     if ($c == 0) { ?>
       <div id="adoceangemhulanmisqqjf"></div>
-      <script type="text/javascript">
+      <script>
       /* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.640x360_1 */
       ado.slave('adoceangemhulanmisqqjf', {myMaster: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7' });
       </script>

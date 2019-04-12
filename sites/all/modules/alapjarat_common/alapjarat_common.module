@@ -177,7 +177,7 @@ function alapjarat_common_article_archives_menu() {
 		$prev_month = date($dateformat, strtotime('-1 month', strtotime($prev_month)));
 		$c++;
 	}
-	$output .= '<ul>';
+	$output .= '</ul>';
 
 
 	return $output;
