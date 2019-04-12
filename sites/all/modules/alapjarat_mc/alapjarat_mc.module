@@ -98,7 +98,7 @@ function alapjarat_mc_collect_gallery_images() {
   ->condition('fg.delta', 0, '=')
   ->orderBy('n.changed', 'DESC')
   ->orderBy('fg.delta', 'ASC');
-  $query->range($offset, 20);
+  $query->range($offset, 18);
   //$query->isNull('wp.entity_id');
   $results = $query
   ->execute()
@@ -108,7 +108,7 @@ function alapjarat_mc_collect_gallery_images() {
     $file = file_load($record->field_gallery_fid);
     $media[] = array(
       'type' => 'image',
-      'title' => mb_substr(check_plain(strip_tags($record->field_title2_value)), 0, 30) . '...',
+      'title' => mb_substr(check_plain(strip_tags($record->field_title2_value)), 0, 50) . '...',
       'thumbnail' => theme('image_style', array('path' => $file->uri, 'style_name' => 'media_gallery_image')),
       'publishDate' => $record->changed,
       'destination' => file_create_url($file->uri),
@@ -156,7 +156,7 @@ function alapjarat_mc_collect_youtube_channel_videos() {
   $playlistid = 'UUueleOZ2QFAaVSHXheZlFig';
 
   $urltemplate = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyDuKd3sYC5jGDOZC49hnt4XtGOH8uz7p34&channelId=###channelID###&part=snippet,id&order=date&maxResults=9";
-  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistid&key=$apikey&maxResults=20&order=date";
+  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistid&key=$apikey&maxResults=18&order=date";
 
   if (isset($_GET['npt'])) {
     $pageToken = $_GET['npt'];
@@ -173,7 +173,7 @@ function alapjarat_mc_collect_youtube_channel_videos() {
   foreach ($response['items'] as $video) {
     $media[] = array(
       'type' => 'video',
-      'title' => mb_substr($video['snippet']['title'], 0, 30) . '...',
+      'title' => mb_substr($video['snippet']['title'], 0, 50) . '...',
       'thumbnail' => $video['snippet']['thumbnails']['medium'],
       'publishDate' => strtotime($video['snippet']['publishedAt']),
       'destination' => 'https://www.youtube.com/embed/' . $video['snippet']['resourceId']['videoId'],
@@ -188,7 +188,7 @@ function _alapjarat_mc_get_pager_tokens() {
   $channelid = 'UCueleOZ2QFAaVSHXheZlFig'; // alapjarat
   $playlistid = 'UUueleOZ2QFAaVSHXheZlFig';
 
-  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistid&key=$apikey&maxResults=20&order=date";
+  $urltemplate = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$playlistid&key=$apikey&maxResults=18&order=date";
 
   if (isset($_GET['npt'])) {
     $pageToken = $_GET['npt'];
