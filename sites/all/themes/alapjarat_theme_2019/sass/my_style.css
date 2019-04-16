@@ -640,7 +640,7 @@ a:hover {
       font-family: magistral, sans-serif;
       font-size: 14px; }
     .main-center .right-bar #event .time::before {
-      content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png");
+      content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.svg");
       margin-right: 5px;
       vertical-align: sub; }
     .main-center .right-bar #event a {
@@ -661,7 +661,7 @@ a:hover {
       font-family: magistral, sans-serif;
       font-weight: 300; }
     .front-page .views-field-published-at span::before, .right-bar .views-field-published-at span::before {
-      content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png");
+      content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.svg");
       margin-right: 5px;
       vertical-align: sub; }
   .front-page .views-field-path p, .right-bar .views-field-path p {
@@ -974,7 +974,7 @@ a:hover {
       font-family: magistral, sans-serif;
       font-weight: 300; }
     .node_pane #article4 .views-field-published-at span::before {
-      content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png");
+      content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.svg");
       margin-right: 5px;
       vertical-align: sub; }
   .node_pane #article4 .views-field-path a {

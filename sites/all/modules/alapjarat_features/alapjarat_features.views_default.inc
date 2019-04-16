@@ -2771,7 +2771,6 @@ function alapjarat_features_views_default_views() {
     t('<a href="[path]">[field_title2]</a>'),
     t('Mind'),
     t('Content pane'),
-    t('more'),
     t('Nézettáblák'),
     t('Content pane4 (alapjarat_theme_2019)'),
     t('[created]'),
@@ -6045,7 +6044,7 @@ function alapjarat_features_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['quantity'] = '5';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elemek száma oldalanként';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Mind -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Eltolás';
@@ -6116,7 +6115,6 @@ function alapjarat_features_views_default_views() {
     t('›'),
     t('»'),
     t('Page'),
-    t('more'),
     t('5 item'),
     t('Nézettáblák'),
   );
@@ -8593,6 +8591,7 @@ function alapjarat_features_views_default_views() {
     t('Közzétételi dátum'),
     t('Mind'),
     t('Content pane'),
+    t('more'),
     t('<a href="[path]">[field_title2]</a>'),
     t('Publikálta'),
     t('Közzétéve'),
@@ -8932,7 +8931,6 @@ function alapjarat_features_views_default_views() {
     t('Közzétéve:'),
     t('Közzétéve'),
     t('Page'),
-    t('more'),
     t('Page 2019'),
     t('«'),
     t('‹'),
