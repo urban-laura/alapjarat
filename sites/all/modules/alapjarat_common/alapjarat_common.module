@@ -293,6 +293,7 @@ function _alapjarat_common_nl2p($string) {
 
   return $string;
 }
+
 function wp_html_split( $input ) {
     return preg_split( get_html_split_regex(), $input, -1, PREG_SPLIT_DELIM_CAPTURE );
 }
@@ -453,7 +454,6 @@ function alapjarat_common_autop($pee, $br = true ) {
     $pee = preg_replace('!(</?' . $allblocks . '[^>]*>)\s*</p>!', "$1", $pee);
 
     if ( $br ) {
-        $pee = preg_replace_callback('/<(script|style).*?<\/\\1>/s', '_autop_newline_preservation_helper', $pee);
         $pee = str_replace( array( '<br>', '<br/>' ), '<br />', $pee );
         $pee = preg_replace('|(?<!<br />)\s*\n|', "<br />\n", $pee);
         $pee = str_replace('<WPPreserveNewline />', "\n", $pee);
