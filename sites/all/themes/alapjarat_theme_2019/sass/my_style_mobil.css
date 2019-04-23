@@ -635,8 +635,8 @@
     padding: 15px; } }
 @media screen and (max-width: 400px) {
   .letterhead, .header, .panels-flexible-region-first.first-block, .main-center, .menu-footer, .my-footer, #ecdh-api {
-    padding-right: 5px !important;
-    padding-left: 5px !important; }
+    padding-right: 10px !important;
+    padding-left: 10px !important; }
 
   .mobile-menu #mini-panel-mobil_menu .pane-content li a {
     font-size: 11px;
@@ -648,7 +648,7 @@
     max-width: 240px; }
 
   .search-tablet {
-    right: 5px; }
+    right: 10px; }
 
   .panels-flexible-region-first.first-block #one .views-field-path, .panels-flexible-region-first.first-block #four .views-field-path {
     padding: 10px;

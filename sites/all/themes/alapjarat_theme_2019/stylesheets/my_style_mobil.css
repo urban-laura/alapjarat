@@ -1126,8 +1126,8 @@
 @media screen and (max-width: 400px) {
   /* line 721, ../sass/my_style_mobil.sass */
   .letterhead, .header, .panels-flexible-region-first.first-block, .main-center, .menu-footer, .my-footer, #ecdh-api {
-    padding-right: 5px !important;
-    padding-left: 5px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
   }
 
   /* line 728, ../sass/my_style_mobil.sass */
@@ -1147,7 +1147,7 @@
 
   /* line 737, ../sass/my_style_mobil.sass */
   .search-tablet {
-    right: 5px;
+    right: 10px;
   }
 
   /* line 741, ../sass/my_style_mobil.sass */
