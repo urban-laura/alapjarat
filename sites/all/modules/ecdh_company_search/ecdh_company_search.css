@@ -29,6 +29,11 @@
 	text-transform: uppercase;
 }
 
+.ecdh-api .message {
+	height: 16px !important;  
+	line-height: 16px !important;
+}
+
 #edit-profiles, #ecdh-city {
 	margin: 0px;
 	background-color: #F2F2F2;

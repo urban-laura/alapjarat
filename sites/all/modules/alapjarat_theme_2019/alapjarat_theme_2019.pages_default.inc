@@ -475,7 +475,11 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => 'Banner',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '',
+    'body' => '<div id="adoceangemhulanmisqqjf"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.640x360_1 */
+ado.slave(\'adoceangemhulanmisqqjf\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1305,7 +1309,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'admin_title' => '',
     'title' => 'HIRDETÉSI LEHETŐSÉGEK',
     'title_heading' => 'span',
-    'body' => '<a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png"></a>',
+    'body' => '<a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png" alt="atmedia"></a>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1442,7 +1446,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
 <li class="left">© Copyright 2019, <a href="/">alapjarat.hu</a> & <a href="https://www.ecdh.hu/">ecdh.hu</a></li>
 <li class="right">1097 Budapest, Könyves Kálmán krt. 12-14.</li>
 <li class="atmedia text">HIRDETÉSI LEHETŐSÉGEK</li>
-<li class="atmedia"><a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png"></a></li>
+<li class="atmedia"><a href="https://atmedia.hu/rolunk/online%20ertekesites/23"><img src="/sites/all/themes/alapjarat_theme_2019/images/atmedia.png" alt="atmedia"></a></li>
 </ul>',
     'format' => 'admin_html',
     'substitute' => 1,
@@ -1616,30 +1620,18 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'front',
-        'settings' => NULL,
-        'not' => FALSE,
-      ),
-      1 => array(
-        'name' => 'node_type',
-        'settings' => array(
-          'type' => array(
-            'a_article' => 'a_article',
-          ),
-        ),
-        'context' => 'node',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'or',
   );
   $pane->configuration = array(
     'admin_title' => 'Default page big banner',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '',
+    'body' => '<div id="adoceangemhuvbeelqqftr"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.970x250 */
+ado.slave(\'adoceangemhuvbeelqqftr\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1868,12 +1860,44 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
-  $pane->access = array();
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+          ),
+        ),
+        'context' => 'node',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'or',
+  );
   $pane->configuration = array(
-    'admin_title' => 'Banner1',
+    'admin_title' => 'Banner1 (Front page & Article & Impress)',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '',
+    'body' => '<div id="adoceangemhuxbghpsegvj"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.300x250_1 */
+ado.slave(\'adoceangemhuxbghpsegvj\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1914,7 +1938,7 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $display->content['new-7a819861-78f3-4b68-b1b5-3e7259f5836f'] = $pane;
   $display->panels['right'][2] = 'new-7a819861-78f3-4b68-b1b5-3e7259f5836f';
   $pane = new stdClass();
-  $pane->pid = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
+  $pane->pid = 'new-897406d6-6976-49a1-bfa5-f7cfcf5487c7';
   $pane->panel = 'right';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
@@ -1924,25 +1948,38 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
       0 => array(
         'name' => 'front',
         'settings' => NULL,
-        'not' => FALSE,
+        'not' => TRUE,
       ),
       1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+          ),
+        ),
+        'context' => 'node',
+        'not' => TRUE,
+      ),
+      2 => array(
         'name' => 'path_visibility',
         'settings' => array(
           'visibility_setting' => '1',
           'paths' => 'impress',
         ),
         'context' => 'empty',
-        'not' => FALSE,
+        'not' => TRUE,
       ),
     ),
-    'logic' => 'or',
   );
   $pane->configuration = array(
-    'admin_title' => 'Banner2',
+    'admin_title' => 'Banner1 (Pages)',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '',
+    'body' => '<div id="adoceangemhuxbghpsegvj"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.300x250_1 */
+ado.slave(\'adoceangemhuxbghpsegvj\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -1957,18 +1994,27 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
-  $pane->uuid = '09519ba1-11ea-4ed4-961a-5b15085aea52';
-  $display->content['new-09519ba1-11ea-4ed4-961a-5b15085aea52'] = $pane;
-  $display->panels['right'][3] = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
+  $pane->uuid = '897406d6-6976-49a1-bfa5-f7cfcf5487c7';
+  $display->content['new-897406d6-6976-49a1-bfa5-f7cfcf5487c7'] = $pane;
+  $display->panels['right'][3] = 'new-897406d6-6976-49a1-bfa5-f7cfcf5487c7';
   $pane = new stdClass();
-  $pane->pid = 'new-d0b26a64-5628-4e6c-8297-998ae74afbfa';
+  $pane->pid = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
   $pane->panel = 'right';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
   $pane->shown = TRUE;
   $pane->access = array(
     'plugins' => array(
-      0 => array(
+      1 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
+        'not' => FALSE,
+      ),
+      2 => array(
         'name' => 'node_type',
         'settings' => array(
           'type' => array(
@@ -1979,13 +2025,18 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'not' => FALSE,
       ),
     ),
+    'logic' => 'or',
   );
   $pane->configuration = array(
-    'admin_title' => 'Banner2 in article',
+    'admin_title' => 'Banner2 (Article & Impress)',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '',
-    'format' => 'plain_text',
+    'body' => '<div id="adoceangemhulcdidljsgh"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.300x250_2 */
+ado.slave(\'adoceangemhulcdidljsgh\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
+    'format' => 'admin_html',
     'substitute' => 1,
   );
   $pane->cache = array();
@@ -1993,15 +2044,15 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
     'settings' => NULL,
   );
   $pane->css = array(
-    'css_id' => 'banner2-in-article',
+    'css_id' => '',
     'css_class' => 'banner',
   );
   $pane->extras = array();
   $pane->position = 4;
   $pane->locks = array();
-  $pane->uuid = 'd0b26a64-5628-4e6c-8297-998ae74afbfa';
-  $display->content['new-d0b26a64-5628-4e6c-8297-998ae74afbfa'] = $pane;
-  $display->panels['right'][4] = 'new-d0b26a64-5628-4e6c-8297-998ae74afbfa';
+  $pane->uuid = '09519ba1-11ea-4ed4-961a-5b15085aea52';
+  $display->content['new-09519ba1-11ea-4ed4-961a-5b15085aea52'] = $pane;
+  $display->panels['right'][4] = 'new-09519ba1-11ea-4ed4-961a-5b15085aea52';
   $pane = new stdClass();
   $pane->pid = 'new-58926611-b751-4330-8a43-23315fdc9b81';
   $pane->panel = 'right';
@@ -2065,33 +2116,18 @@ function alapjarat_theme_2019_default_page_manager_handlers() {
         'settings' => NULL,
         'not' => FALSE,
       ),
-      1 => array(
-        'name' => 'node_type',
-        'settings' => array(
-          'type' => array(
-            'a_article' => 'a_article',
-          ),
-        ),
-        'context' => 'node',
-        'not' => FALSE,
-      ),
-      2 => array(
-        'name' => 'path_visibility',
-        'settings' => array(
-          'visibility_setting' => '1',
-          'paths' => 'impress',
-        ),
-        'context' => 'empty',
-        'not' => FALSE,
-      ),
     ),
     'logic' => 'or',
   );
   $pane->configuration = array(
-    'admin_title' => 'Banner3',
+    'admin_title' => 'Banner2 (Front page)',
     'title' => '',
     'title_heading' => 'h2',
-    'body' => '',
+    'body' => '<div id="adoceangemhulcdidljsgh"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.300x250_2 */
+ado.slave(\'adoceangemhulcdidljsgh\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
     'format' => 'admin_html',
     'substitute' => 1,
   );
@@ -2189,6 +2225,66 @@ $.extend($.validator.messages, {
   $display->content['new-d4a11f2e-976c-404d-b37b-6f9c7b47e19a'] = $pane;
   $display->panels['right'][7] = 'new-d4a11f2e-976c-404d-b37b-6f9c7b47e19a';
   $pane = new stdClass();
+  $pane->pid = 'new-c086729d-f690-4a6b-8ace-50b3ed433769';
+  $pane->panel = 'right';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'front',
+        'settings' => NULL,
+        'not' => TRUE,
+      ),
+      1 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'a_article' => 'a_article',
+          ),
+        ),
+        'context' => 'node',
+        'not' => TRUE,
+      ),
+      2 => array(
+        'name' => 'path_visibility',
+        'settings' => array(
+          'visibility_setting' => '1',
+          'paths' => 'impress',
+        ),
+        'context' => 'empty',
+        'not' => TRUE,
+      ),
+    ),
+  );
+  $pane->configuration = array(
+    'admin_title' => 'Banner2 (Pages)',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<div id="adoceangemhulcdidljsgh"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.300x250_2 */
+ado.slave(\'adoceangemhulcdidljsgh\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
+    'format' => 'admin_html',
+    'substitute' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'banner',
+  );
+  $pane->extras = array();
+  $pane->position = 8;
+  $pane->locks = array();
+  $pane->uuid = 'c086729d-f690-4a6b-8ace-50b3ed433769';
+  $display->content['new-c086729d-f690-4a6b-8ace-50b3ed433769'] = $pane;
+  $display->panels['right'][8] = 'new-c086729d-f690-4a6b-8ace-50b3ed433769';
+  $pane = new stdClass();
   $pane->pid = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane->panel = 'right';
   $pane->type = 'articles_archive';
@@ -2238,11 +2334,11 @@ $.extend($.validator.messages, {
     'css_class' => '',
   );
   $pane->extras = array();
-  $pane->position = 8;
+  $pane->position = 9;
   $pane->locks = array();
   $pane->uuid = '76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $display->content['new-76900dcc-6cdf-4260-a00a-3ca5a66737ff'] = $pane;
-  $display->panels['right'][8] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
+  $display->panels['right'][9] = 'new-76900dcc-6cdf-4260-a00a-3ca5a66737ff';
   $pane = new stdClass();
   $pane->pid = 'new-8cdf61b2-331e-4559-aa53-586ba40ff595';
   $pane->panel = 'second_menu';
@@ -2989,6 +3085,39 @@ function alapjarat_theme_2019_default_page_manager_pages() {
   $display->content['new-072f1778-7410-407f-95f5-b7389388a3e7'] = $pane;
   $display->panels['elmondo'][0] = 'new-072f1778-7410-407f-95f5-b7389388a3e7';
   $pane = new stdClass();
+  $pane->pid = 'new-c1e967a3-07a7-48bb-9407-1dd861cbb785';
+  $pane->panel = 'helpful_info__test';
+  $pane->type = 'custom';
+  $pane->subtype = 'custom';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'admin_title' => 'Banner',
+    'title' => '',
+    'title_heading' => 'h2',
+    'body' => '<div id="adoceangemhulanmisqqjf"></div>
+<script type="text/javascript">
+/* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.640x360_1 */
+ado.slave(\'adoceangemhulanmisqqjf\', {myMaster: \'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7\' });
+</script>',
+    'format' => 'admin_html',
+    'substitute' => TRUE,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'banner',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'c1e967a3-07a7-48bb-9407-1dd861cbb785';
+  $display->content['new-c1e967a3-07a7-48bb-9407-1dd861cbb785'] = $pane;
+  $display->panels['helpful_info__test'][0] = 'new-c1e967a3-07a7-48bb-9407-1dd861cbb785';
+  $pane = new stdClass();
   $pane->pid = 'new-65ad036f-6dd9-4976-a25a-0aee8f650468';
   $pane->panel = 'helpful_info__test';
   $pane->type = 'views_panes';
@@ -3005,11 +3134,11 @@ function alapjarat_theme_2019_default_page_manager_pages() {
     'css_class' => 'big  a-1 helpful-info',
   );
   $pane->extras = array();
-  $pane->position = 0;
+  $pane->position = 1;
   $pane->locks = array();
   $pane->uuid = '65ad036f-6dd9-4976-a25a-0aee8f650468';
   $display->content['new-65ad036f-6dd9-4976-a25a-0aee8f650468'] = $pane;
-  $display->panels['helpful_info__test'][0] = 'new-65ad036f-6dd9-4976-a25a-0aee8f650468';
+  $display->panels['helpful_info__test'][1] = 'new-65ad036f-6dd9-4976-a25a-0aee8f650468';
   $pane = new stdClass();
   $pane->pid = 'new-b1f6131d-cd30-42d1-aa11-84e42c9e9033';
   $pane->panel = 'helpful_info__test';
@@ -3027,11 +3156,11 @@ function alapjarat_theme_2019_default_page_manager_pages() {
     'css_class' => 'small a-2 helpful-info',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = 'b1f6131d-cd30-42d1-aa11-84e42c9e9033';
   $display->content['new-b1f6131d-cd30-42d1-aa11-84e42c9e9033'] = $pane;
-  $display->panels['helpful_info__test'][1] = 'new-b1f6131d-cd30-42d1-aa11-84e42c9e9033';
+  $display->panels['helpful_info__test'][2] = 'new-b1f6131d-cd30-42d1-aa11-84e42c9e9033';
   $pane = new stdClass();
   $pane->pid = 'new-f9ab9876-3e84-4132-9dae-c92c4f78c5e0';
   $pane->panel = 'helpful_info__test';
@@ -3049,11 +3178,11 @@ function alapjarat_theme_2019_default_page_manager_pages() {
     'css_class' => 'big many',
   );
   $pane->extras = array();
-  $pane->position = 2;
+  $pane->position = 3;
   $pane->locks = array();
   $pane->uuid = 'f9ab9876-3e84-4132-9dae-c92c4f78c5e0';
   $display->content['new-f9ab9876-3e84-4132-9dae-c92c4f78c5e0'] = $pane;
-  $display->panels['helpful_info__test'][2] = 'new-f9ab9876-3e84-4132-9dae-c92c4f78c5e0';
+  $display->panels['helpful_info__test'][3] = 'new-f9ab9876-3e84-4132-9dae-c92c4f78c5e0';
   $pane = new stdClass();
   $pane->pid = 'new-52732c9e-e8f6-4262-b48a-f63b0ef572d1';
   $pane->panel = 'helpfu__info_a';

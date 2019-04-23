@@ -103,6 +103,7 @@ HTML comment.
 	      if (module_exists('alapjarat_common')) {
 	        $item = alapjarat_common_find_glossary(render($item), $element['#object']);
 	      }
+
 	      if (!empty($element['#object']->field_quiz)) {
 	        $item .= $element['#object']->field_quiz[LANGUAGE_NONE][0]['value'];
 	      }

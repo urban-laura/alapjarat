@@ -11,6 +11,22 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+
+  <!-- Atmedia -->
+  <script src="//gemhu.adocean.pl/files/js/ado.js"></script>
+  <script>
+  /* (c)AdOcean 2003-2019 */
+          if(typeof ado!=="object"){ado={};ado.config=ado.preview=ado.placement=ado.master=ado.slave=function(){};}
+          ado.config({mode: "old", xml: false, consent: true, characterEncoding: true});
+          ado.preview({enabled: true});
+  </script>
+
+  <script>
+  /* (c)AdOcean 2003-2019, MASTER: alapjarat.hu.osszoldal */
+  ado.master({id: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7', server: 'gemhu.adocean.pl' });
+  </script>
+  <!-- Atmedia -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
@@ -27,7 +43,7 @@
 
   <!--Atmedia measure rating -->
   <!-- (C)2000-2019 Gemius SA - gemiusPrism  / alapjarat.hu/Fooldal -->
-  <script type="text/javascript">
+  <script>
   <!--//--><![CDATA[//><!--
   var pp_gemius_identifier = 'bVBKsU7YR6CPRTyw0Kw3JqdynA6UakvI42U90kHExgn.X7';
   // lines below shouldn't be edited
@@ -41,5 +57,14 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+
+  <!-- Atmedia -->
+  <div id="adoceangemhuyaetlpkfde"></div>
+  <script>
+  /* (c)AdOcean 2003-2019, alapjarat.hu.osszoldal.extra */
+  ado.slave('adoceangemhuyaetlpkfde', {myMaster: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7' });
+  </script>
+  <!-- Atmedia -->
+  
 </body>
 </html>

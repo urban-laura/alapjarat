@@ -11,6 +11,22 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+
+  <!-- Atmedia -->
+  <script src="//gemhu.adocean.pl/files/js/ado.js"></script>
+  <script>
+  /* (c)AdOcean 2003-2019 */
+          if(typeof ado!=="object"){ado={};ado.config=ado.preview=ado.placement=ado.master=ado.slave=function(){};}
+          ado.config({mode: "old", xml: false, consent: true, characterEncoding: true});
+          ado.preview({enabled: true});
+  </script>
+
+  <script>
+  /* (c)AdOcean 2003-2019, MASTER: alapjarat.hu.osszoldal */
+  ado.master({id: 'w0D8GanBjeVLul4hdqqyvqK8n.yv.z.VJ02vJJLUHYL.M7', server: 'gemhu.adocean.pl' });
+  </script>
+  <!-- Atmedia -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta property="og:image" content="https://alapjarat.hu/sites/all/themes/alapjarat_theme_2019/images/impress.jpg">
   <meta property="og:description" content="Az Alapjárat szerkesztősége">

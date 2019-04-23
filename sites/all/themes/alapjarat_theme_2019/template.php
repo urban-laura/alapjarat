@@ -357,5 +357,27 @@ function alapjarat_theme_2019_page_alter(&$page)
 function alapjarat_theme_2019_menu_tree__menu_main_menu_2019($variables) {
   $news_item = '<li class="news extra"><span id="ham-menu" style="cursor: pointer;">' . t('News') . '</span></li>';
   $variables['tree'] = $news_item . $variables['tree'];
-  return $variables['tree'];
+  return '<ul class="menu">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Override or insert variables in the html_tag theme function.
+ */
+function alapjarat_theme_2019_process_html_tag(&$variables) {
+  $tag = &$variables['element'];
+
+  if ($tag['#tag'] == 'style' || $tag['#tag'] == 'script') {
+    // Remove redundant CDATA comments.
+    unset($tag['#value_prefix'], $tag['#value_suffix']);
+
+    // Remove redundant type attribute.
+    if (isset($tag['#attributes']['type']) && $tag['#attributes']['type'] !== 'text/ng-template') {
+      unset($tag['#attributes']['type']);
+    }
+
+    // Remove media="all" but leave others unaffected.
+    if (isset($tag['#attributes']['media']) && $tag['#attributes']['media'] === 'all') {
+      unset($tag['#attributes']['media']);
+    }
+  }
 }

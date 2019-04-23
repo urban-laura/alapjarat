@@ -263,29 +263,6 @@ function alapjarat_features_menu_default_menu_links() {
     'language' => 'und',
     'menu_links_customized' => 1,
   );
-  // Exported menu link: menu-admin-menu_partners:admin/partner.
-  $menu_links['menu-admin-menu_partners:admin/partner'] = array(
-    'menu_name' => 'menu-admin-menu',
-    'link_path' => 'admin/partner',
-    'router_path' => 'admin/%',
-    'link_title' => 'Partners',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'alter' => TRUE,
-      'identifier' => 'menu-admin-menu_partners:admin/partner',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -44,
-    'customized' => 1,
-    'language' => 'und',
-    'menu_links_customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -300,7 +277,6 @@ function alapjarat_features_menu_default_menu_links() {
   t('Media');
   t('Metatags');
   t('Pages');
-  t('Partners');
 
   return $menu_links;
 }
