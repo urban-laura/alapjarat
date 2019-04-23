@@ -624,6 +624,8 @@
     .node_pane #alapjarat-article.pane-node-field-text h3 span {
       font-size: 20px !important;
       padding-bottom: 20px; }
+  .node_pane #article4 {
+    padding: 0px; }
   .node_pane figcaption {
     font-size: 14px;
     line-height: 18px;
@@ -632,6 +634,10 @@
   .node_pane blockquote {
     padding: 15px; } }
 @media screen and (max-width: 400px) {
+  .letterhead, .header, .panels-flexible-region-first.first-block, .main-center, .menu-footer, .my-footer, #ecdh-api {
+    padding-right: 15px !important;
+    padding-left: 15px !important; }
+
   .mobile-menu #mini-panel-mobil_menu .pane-content li a {
     font-size: 11px;
     padding-left: 35px; }
