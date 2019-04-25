@@ -155,6 +155,21 @@ function alapjarat_features_image_default_styles() {
     ),
   );
 
+  // Exported image style: event.
+  $styles['event'] = array(
+    'label' => 'Event',
+    'effects' => array(
+      11 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 550,
+          'height' => 324,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: helpful_small.
   $styles['helpful_small'] = array(
     'label' => 'helpful_small',

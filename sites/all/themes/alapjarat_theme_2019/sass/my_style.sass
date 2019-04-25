@@ -25,8 +25,6 @@ body.front
 	.main-center
 		background-color: white
 body.not-front
-	.first-block
-		background-color: white
 	.right-bar
 		padding-top: 14px
 body.node-type-a-article
@@ -34,7 +32,9 @@ body.node-type-a-article
 	.main-center
 		background-color: white
 		padding-top: 40px !important
-body.page-impress, body.node-type-pages, body.page-taxonomy, body.page-archive, body.page-kereses, body.page-autos-kifejezesek, body.page-media-collection
+	.first-block
+		background-color: white
+body.page-impress, body.node-type-pages, body.page-taxonomy, body.page-archive, body.page-kereses, body.page-autos-kifejezesek, body.page-media-collection, body.page-esemenyek
 	.right-bar
 		padding-top: 40px
 		.views-row
@@ -1178,6 +1178,41 @@ a:hover
 			padding: 6px 11px
 			text-transform: uppercase
 			margin: 0px
+
+//Event list
+.page-esemenyek
+	.main-content
+		.views-row
+			width: 47.5%
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 25px
+			background-color: white
+			height: 435px
+			position: relative
+		.views-row-odd
+			margin-right: 3.8%
+		.views-field-title, .views-field-field-description
+			padding: 0px 20px
+		.views-field-title
+			line-height: 22px
+			padding: 15px 20px
+			a
+				font-weight: 600
+				font-size: 18px
+		.views-field-field-description
+			font-size: 16px
+			line-height: 21px
+		.views-field-field-event-date, .views-field-field-place
+			font-size: 14px
+			font-family: magistral, sans-serif
+			position: absolute
+			left: 20px
+		.views-field-field-place
+			bottom: 15px
+		.views-field-field-event-date
+			bottom: 40px
+
 //Footer
 .menu-footer
 	background-color: #C72026

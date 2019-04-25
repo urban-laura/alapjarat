@@ -2435,6 +2435,81 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_description'.
+  $field_instances['node-event-field_description'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_description',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_date'.
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
@@ -2487,7 +2562,7 @@ function alapjarat_features_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 42,
+      'weight' => 9,
     ),
   );
 
@@ -2532,7 +2607,198 @@ function alapjarat_features_field_default_field_instances() {
         'size' => 100,
       ),
       'type' => 'url_external',
-      'weight' => 44,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_image'.
+  $field_instances['node-event-field_image'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_image',
+    'label' => 'Main image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
+        ),
+        'insert' => 0,
+        'insert_absolute' => 0,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'icon_link' => 0,
+          'image' => 0,
+          'image_1_big' => 0,
+          'image_4_small' => 0,
+          'image_alapjarat' => 0,
+          'image_amp_metadata_content_image_min_696px_wide' => 0,
+          'image_amp_metadata_logo_600x60' => 0,
+          'image_article3' => 0,
+          'image_article4' => 0,
+          'image_author_picture' => 0,
+          'image_big' => 0,
+          'image_big_2019' => 0,
+          'image_category' => 0,
+          'image_first_5_article' => 0,
+          'image_helpful_small' => 0,
+          'image_impress_2019' => 0,
+          'image_impresszum' => 0,
+          'image_juicebox_large' => 0,
+          'image_juicebox_medium' => 0,
+          'image_juicebox_small' => 0,
+          'image_juicebox_square_thumbnail' => 0,
+          'image_large' => 0,
+          'image_media_gallery_image' => 0,
+          'image_media_thumbnail' => 0,
+          'image_medium' => 0,
+          'image_partners_in_footer' => 0,
+          'image_premium_partner' => 0,
+          'image_recreation_partners' => 0,
+          'image_right' => 0,
+          'image_small_2019' => 0,
+          'image_social_media' => 0,
+          'image_taxonomy_page' => 0,
+          'image_thumbnail' => 0,
+          'image_world_small' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_place'.
+  $field_instances['node-event-field_place'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_place',
+    'label' => 'Place',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'admin_html' => 'admin_html',
+          'filtered_html' => 'filtered_html',
+          'fullhtml' => 'fullhtml',
+          'link' => 'link',
+          'plain_text' => 'plain_text',
+          'text' => 'text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'admin_html' => array(
+              'weight' => -7,
+            ),
+            'filtered_html' => array(
+              'weight' => -6,
+            ),
+            'fullhtml' => array(
+              'weight' => -9,
+            ),
+            'link' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => -10,
+            ),
+            'text' => array(
+              'weight' => -8,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 120,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
     ),
   );
 
@@ -2588,7 +2854,7 @@ function alapjarat_features_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 41,
+      'weight' => 8,
     ),
   );
 
@@ -2644,7 +2910,7 @@ function alapjarat_features_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 43,
+      'weight' => 10,
     ),
   );
 
@@ -2686,7 +2952,7 @@ function alapjarat_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 45,
+      'weight' => 12,
     ),
   );
 
@@ -3673,6 +3939,40 @@ function alapjarat_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-category-field_title'.
+  $field_instances['taxonomy_term-category-field_title'] = array(
+    'bundle' => 'category',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_title',
+    'label' => 'Title',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-published-field_facebook_id'.
   $field_instances['taxonomy_term-published-field_facebook_id'] = array(
     'bundle' => 'published',
@@ -3873,6 +4173,7 @@ Pl. https://www.facebook.com/viktoria.koltay.1');
   t('Meta description (300 - 320)');
   t('Name Link');
   t('Picture');
+  t('Place');
   t('Premium car partner?');
   t('Primary Heading 	');
   t('Published');
