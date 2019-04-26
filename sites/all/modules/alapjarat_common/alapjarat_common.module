@@ -20,14 +20,24 @@ function alapjarat_common_menu() {
     'menu_name' => 'main_menu',
   );
 
+  $items['pop-publish-date'] = array(
+    'title' => 'Populate published date',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('alapjarat_common_form'),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
 function alapjarat_common_form($form, &$form_state) {
-
-  $form['path'] = array(
-    '#type' => 'textfield', 
-    '#title' => t('Article to fix (url)'), 
+  
+  $form['pop'] = array(
+    '#type' => 'radios',
+    '#title' => 'Todo',
+    '#options' => array('pop' => 'Populate', 'up' => 'Update'),
+    '#default_value' => 'pop',
   );
 
   $form['submit'] = array(
@@ -38,7 +48,7 @@ function alapjarat_common_form($form, &$form_state) {
   
   if (isset($form_state['storage'])) {
     $form['output'] = array(
-      '#markup' => $form_state['storage']['changed'],
+      '#markup' => $form_state['storage']['output'],
       '#prefix' => '<div class="output">',
       '#suffix' => '</div>',
     );
@@ -48,64 +58,81 @@ function alapjarat_common_form($form, &$form_state) {
 }
 
 function alapjarat_common_form_submit($form, &$form_state) {
-  $url = $form_state['values']['path'];
-  $form_state['storage']['changed'] = alapjarat_common_fix_google_images($url);
-  $form_state['rebuild'] = TRUE;
-}
+  
+  if ($form_state['values']['pop'] == 'pop') {
+  
+    $query = db_query('select nid, created from node where nid NOT IN 
+   (select nid
+    from publication_date
+   ) LIMIT 0,500');
 
-function alapjarat_common_fix_google_images($url) {
-  global $base_url;
+    $results = $query->fetchAll();  
 
-  if (is_numeric($url)) {
-    $url = $base_url . '/' . drupal_get_path_alias('node/' . $url);
+    foreach ($results as $row) {
+      $nid = db_insert('publication_date')
+      ->fields(array(
+        'nid' => $row->nid,
+        'published_at' => $row->created,
+      ))
+      ->execute();
+    }
+
+    $query = db_query('select nid, created from node where nid NOT IN 
+   (select nid
+    from publication_date
+   )');
+
+    $results = $query->fetchAll();  
+
+    $form_state['storage']['output'] = 'LEFT:' . count($results);
+    $form_state['rebuild'] = TRUE;
   }
+  
+  if ($form_state['values']['pop'] == 'up') {
+    $query = db_select('node', 'n')
+    ->fields('n', array('nid', 'created'))
+    ->fields('pd', array('published_at'))
+    ->range(0,4000);
+    $query->leftJoin('publication_date', 'pd', 'pd.nid = n.nid');
+    $results = $query->execute()->fetchAll();
 
-  $path = substr(parse_url($url, PHP_URL_PATH), 1);
-  $path = drupal_lookup_path('source', $path);
-  $node = menu_get_object("node", 1, $path);
-  $message = 'No google images found.';
-  if ($node) {
-    $new_node = clone $node;
-    $nwrapper = entity_metadata_wrapper('node', $node);
-    $text = $nwrapper->field_text->value->value();
-    preg_match_all('/<img.*?src=\"(.*?googleusercontent.*?)\"/sm', $text, $matches);
-    
-    $change = FALSE;
     $c = 0;
-    $rand = rand(1,100);
-    foreach ($matches[1] as $match) {
-      $http = str_replace('https', 'http', $match);
-      $c++;
-      $file_info = system_retrieve_file($http, 'public://car-image-' . $rand . '-' . $c . '.jpg', TRUE);
-      if ($file_info->fid){
-        $nwrapper->field_media[] = array('fid' => $file_info->fid, 'display' => TRUE);
-        $new_image = file_create_url($file_info->uri);
-        $text = str_replace($match, $new_image, $text);
-        $change = TRUE;
+    foreach ($results as $result) {
+      $pub = $result->published_at;
+      $cre = $result->created;
+      $diff = ($pub - $cre) / (60 * 60 * 24);
+      $pub_date = date('Y-m-d', $pub);
+      $cre_date = date('Y-m-d', $cre);
+      //if ($pub_date !== '2018-11-02' && $diff > 6 && $pub_date !== $cre_date) {
+      if ($diff > 12) {
+        $c++;
+        $row = [];
+        $row[] = $c;
+        $row[] = l('link', '/node/' . $result->nid);
+        $row[] = $cre_date;
+        $row[] = $pub_date;
+        $row[] = $diff;
+        $rows[] = $row;
+
+        $num_updated = db_update('publication_date')
+        ->fields(array(
+          'published_at' => $cre,
+        ))
+        ->condition('nid', $result->nid, '=')
+        ->execute();      
       }
     }
 
-    if ($change) {
-      $nwrapper->field_text->set(array('value' => $text, 'format' => 'fullhtml'));
-      $nwrapper->save();
+    $fields = array('count', 'nid', 'created', 'published');
+    $output = theme('table', array('header' => $fields, 'rows' => $rows));
 
-      $new_node->nid = NULL;
-      $new_node->vid = NULL;
-      $new_node->tnid = NULL;
-
-      $new_node->status = 0;
-      $new_node->field_title2[LANGUAGE_NONE][0]['value'] = 'CLONE OF ' . $new_node->title;
-      $new_node->field_title2[LANGUAGE_NONE][0]['format'] = 'text';
-
-      //node_save($new_node);
-
-      $message = 'Fixed.';
-      header("Location: " . $base_url . "/node/" . $node->nid);
-      die();
-    }
+    $form_state['storage']['output'] = $output;
+    $form_state['rebuild'] = TRUE;
   }
 
-  return $message;
+ 
+  
+
 }
 
 // Hidden
