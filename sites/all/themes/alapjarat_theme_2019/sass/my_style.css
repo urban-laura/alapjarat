@@ -1142,36 +1142,60 @@ a:hover {
       text-transform: uppercase;
       margin: 0px; }
 
-.page-esemenyek .main-content .views-row {
-  width: 47.5%;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 25px;
-  background-color: white;
-  height: 435px;
-  position: relative; }
-.page-esemenyek .main-content .views-row-odd {
-  margin-right: 3.8%; }
-.page-esemenyek .main-content .views-field-title, .page-esemenyek .main-content .views-field-field-description {
-  padding: 0px 20px; }
-.page-esemenyek .main-content .views-field-title {
-  line-height: 22px;
-  padding: 15px 20px; }
-  .page-esemenyek .main-content .views-field-title a {
-    font-weight: 600;
-    font-size: 18px; }
-.page-esemenyek .main-content .views-field-field-description {
-  font-size: 16px;
-  line-height: 21px; }
-.page-esemenyek .main-content .views-field-field-event-date, .page-esemenyek .main-content .views-field-field-place {
-  font-size: 14px;
-  font-family: magistral, sans-serif;
-  position: absolute;
-  left: 20px; }
-.page-esemenyek .main-content .views-field-field-place {
-  bottom: 15px; }
-.page-esemenyek .main-content .views-field-field-event-date {
-  bottom: 40px; }
+.page-esemenyek .main-content {
+  padding-top: 40px; }
+  .page-esemenyek .main-content .pane-node-title {
+    border-bottom: #C72026 solid 2px;
+    margin-bottom: 20px; }
+  .page-esemenyek .main-content .pane-content-event {
+    color: white;
+    font-size: 14px;
+    background-color: #C72026;
+    display: inline-block;
+    padding: 6px 11px;
+    text-transform: uppercase; }
+  .page-esemenyek .main-content .views-row {
+    width: 47.5%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 25px;
+    background-color: white;
+    height: 435px;
+    position: relative; }
+  .page-esemenyek .main-content .views-row-odd {
+    margin-right: 3.8%; }
+  .page-esemenyek .main-content .views-field-title, .page-esemenyek .main-content .views-field-field-description {
+    padding: 0px 20px; }
+  .page-esemenyek .main-content .views-field-title {
+    line-height: 22px;
+    padding: 15px 20px; }
+    .page-esemenyek .main-content .views-field-title a {
+      font-weight: 600;
+      font-size: 18px; }
+  .page-esemenyek .main-content .views-field-field-description {
+    font-size: 16px;
+    line-height: 21px; }
+  .page-esemenyek .main-content .views-field-field-event-date, .page-esemenyek .main-content .views-field-field-place {
+    font-size: 14px;
+    font-family: magistral, sans-serif;
+    position: absolute;
+    left: 20px; }
+  .page-esemenyek .main-content .views-field-field-place {
+    bottom: 15px; }
+    .page-esemenyek .main-content .views-field-field-place .field-content {
+      display: inline-block; }
+  .page-esemenyek .main-content .views-field-field-event-date {
+    bottom: 40px; }
+    .page-esemenyek .main-content .views-field-field-event-date .field-content {
+      display: inline-block; }
+  .page-esemenyek .main-content .views-field-field-event-date::before {
+    content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png");
+    margin-right: 3px;
+    vertical-align: sub; }
+  .page-esemenyek .main-content .views-field-field-place::before {
+    content: url("/sites/all/themes/alapjarat_theme_2019/images/local.png");
+    margin-right: 3px;
+    vertical-align: sub; }
 
 .menu-footer {
   background-color: #C72026;

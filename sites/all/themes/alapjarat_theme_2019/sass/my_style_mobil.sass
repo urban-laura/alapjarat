@@ -183,6 +183,17 @@
 		.left, .right
 			float: none
 
+@media screen and (max-width: 760px)
+	.page-esemenyek
+		.main-content
+			.views-field-title, .views-field-field-description
+				padding: 0px 10px
+			.views-field-title
+				padding: 15px 10px
+			.views-field-field-event-date, .views-field-field-place
+				left: 10px
+				font-size: 12px
+
 @media screen and (max-width: 750px)
 	.ecdh-api .panels-flexible-row-inside
 		max-width: 643px
@@ -442,6 +453,25 @@
 					font-size: 16px
 			h4
 				margin-bottom: 20px
+	.page-esemenyek
+		.main-content
+			.views-row
+				width: 100%
+				height: auto
+			.views-row-odd
+				margin-right: 0px
+			.views-field-field-description
+				font-size: 16px
+				line-height: 21px
+				padding-bottom: 15px
+			.views-field-field-event-date, .views-field-field-place
+				padding: 0px 10px
+				position: unset
+				font-size: 14px
+			.views-field-field-place
+				padding-bottom: 15px
+			.views-field-field-event-date
+				padding-bottom: 5px
 
 @media screen and (max-width: 550px)
 	.front-page
@@ -509,7 +539,6 @@
 						font-size: 16px
 				.views-field-field-tags
 					padding-top: 5px
-
 	.node_pane.impress
 		.view-content
 			padding-top: 45px
@@ -542,7 +571,10 @@
 			.view-content
 				padding-top: 10px
 				padding-bottom: 30px
-
+	.page-esemenyek
+		.main-content
+			.pane-content-event
+				font-size: 12px
 	.taxonomy-page, .archive, .view-search-api-search
 		.left
 			max-width: 135px

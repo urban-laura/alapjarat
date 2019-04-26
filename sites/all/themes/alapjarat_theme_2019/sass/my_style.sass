@@ -1182,6 +1182,17 @@ a:hover
 //Event list
 .page-esemenyek
 	.main-content
+		padding-top: 40px
+		.pane-node-title
+			border-bottom: #C72026 solid 2px
+			margin-bottom: 20px
+		.pane-content-event
+			color: white
+			font-size: 14px
+			background-color: #C72026
+			display: inline-block
+			padding: 6px 11px
+			text-transform: uppercase
 		.views-row
 			width: 47.5%
 			display: inline-block
@@ -1210,8 +1221,20 @@ a:hover
 			left: 20px
 		.views-field-field-place
 			bottom: 15px
+			.field-content
+				display: inline-block
 		.views-field-field-event-date
 			bottom: 40px
+			.field-content
+				display: inline-block
+		.views-field-field-event-date::before
+			content: url("/sites/all/themes/alapjarat_theme_2019/images/clock.png")
+			margin-right: 3px
+			vertical-align: sub
+		.views-field-field-place::before
+			content: url("/sites/all/themes/alapjarat_theme_2019/images/local.png")
+			margin-right: 3px
+			vertical-align: sub
 
 //Footer
 .menu-footer

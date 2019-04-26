@@ -2440,7 +2440,7 @@ function alapjarat_features_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Ha ezt a mezőt üresen hagyod, akkor az esemény NEM jelenik meg az események lista oldalon.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2615,7 +2615,7 @@ function alapjarat_features_field_default_field_instances() {
   $field_instances['node-event-field_image'] = array(
     'bundle' => 'event',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Ha ezt a mezőt üresen hagyod, akkor az esemény NEM jelenik meg az események lista oldalon.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2695,6 +2695,7 @@ function alapjarat_features_field_default_field_instances() {
           'image_big' => 0,
           'image_big_2019' => 0,
           'image_category' => 0,
+          'image_event' => 0,
           'image_first_5_article' => 0,
           'image_helpful_small' => 0,
           'image_impress_2019' => 0,
@@ -2732,7 +2733,7 @@ function alapjarat_features_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Ha ezt a mezőt üresen hagyod, akkor az esemény NEM jelenik meg az események lista oldalon.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -4163,6 +4164,7 @@ Pl. https://www.facebook.com/viktoria.koltay.1');
   t('Fix or Random?');
   t('Gallery');
   t('Glossary parser');
+  t('Ha ezt a mezőt üresen hagyod, akkor az esemény NEM jelenik meg az események lista oldalon.');
   t('Ha ezt megváltoztatod, változik az URL is!');
   t('Hiden select');
   t('If you check this, article will be placed in the top 4x4 articles with images section - on the 2nd position (top right)');

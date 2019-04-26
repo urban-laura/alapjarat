@@ -174,6 +174,14 @@
     width: 50%; }
   .my-footer .left, .my-footer .right {
     float: none; } }
+@media screen and (max-width: 760px) {
+  .page-esemenyek .main-content .views-field-title, .page-esemenyek .main-content .views-field-field-description {
+    padding: 0px 10px; }
+  .page-esemenyek .main-content .views-field-title {
+    padding: 15px 10px; }
+  .page-esemenyek .main-content .views-field-field-event-date, .page-esemenyek .main-content .views-field-field-place {
+    left: 10px;
+    font-size: 12px; } }
 @media screen and (max-width: 750px) {
   .ecdh-api .panels-flexible-row-inside {
     max-width: 643px; }
@@ -398,7 +406,25 @@
     .node_pane #article4 .views-field-path a {
       font-size: 16px; }
   .node_pane #article4 h4 {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  .page-esemenyek .main-content .views-row {
+    width: 100%;
+    height: auto; }
+  .page-esemenyek .main-content .views-row-odd {
+    margin-right: 0px; }
+  .page-esemenyek .main-content .views-field-field-description {
+    font-size: 16px;
+    line-height: 21px;
+    padding-bottom: 15px; }
+  .page-esemenyek .main-content .views-field-field-event-date, .page-esemenyek .main-content .views-field-field-place {
+    padding: 0px 10px;
+    position: unset;
+    font-size: 14px; }
+  .page-esemenyek .main-content .views-field-field-place {
+    padding-bottom: 15px; }
+  .page-esemenyek .main-content .views-field-field-event-date {
+    padding-bottom: 5px; } }
 @media screen and (max-width: 550px) {
   .front-page {
     padding-top: 15px; }
@@ -487,6 +513,9 @@
   .node_pane.impress .impress-else .view-content {
     padding-top: 10px;
     padding-bottom: 30px; }
+
+  .page-esemenyek .main-content .pane-content-event {
+    font-size: 12px; }
 
   .taxonomy-page .left, .archive .left, .view-search-api-search .left {
     max-width: 135px;
